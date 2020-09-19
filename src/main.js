@@ -1,19 +1,39 @@
 //import axios from "axios";
 
-var urls = ["http://ip-api.com/json",
+var urls = [
+  "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/",
+  "https://nr-gateway.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/",
+  "https://nr-clients.dev.ukrgasaws.com/",
+  "https://nr-clients.ukrgasaws.com/",
+
+  "http://ip-api.com/json",
   "https://api.npms.io/v2/search?q=vue",
   "https://jsonplaceholder.typicode.com/todos/1",
-  "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/",
-  "https://nr-clients.dev.ukrgasaws.com/"
 ];
+/*
+1- use nr-gateway.dev
+2- use nr-gateway
+3- use nr-clients.dev
+4- use nr-clients
+*/
+var modeUrl = 1;
 
-var url = urls[2];
+function getWorkUrl(mode, path) {
+  var url = urls[mode-1]+(mode>2?path:'');
+  return url;
+}
 
-Vue.component('v-select', VueSelect.VueSelect);
+
+Vue.component('v-select',   VueSelect.VueSelect);
+Vue.component('datepicker', vuejsDatepicker);
 
 new Vue({
   el: '#app',
-
+/*
+  components: {
+  	vuejsDatepicker
+  }.
+*/
   created() {
 
     // Simple GET request using fetch
@@ -34,7 +54,7 @@ new Vue({
       await const results = getData(offset)
 
     */
-    fetch(url)
+    fetch(getWorkUrl(7,''))
       .then(async response => {
         const data = await response.json();
 //alert(JSON.stringify(data));
@@ -66,7 +86,8 @@ new Vue({
       if (index.length == 5) this.sendIndex = index;
       var street = this.selectedBranch.address.split(',')[4].trim().split(' ')[1].toLowerCase();
       this.sendStreet = street;
-      if (this.sendIndex.length == 5 && this.sendStreet.length > 3) this.disabledSend = false;
+      if (this.sendIndex.length == 5 && this.sendStreet.length > 3) this.isSndAddressFindMeestDisabled = false;
+      if (this.recvIndex.length == 5 && !this.isSndAddressFindMeestDisabled) this.isRecvAddressFindMeestDisabled = false;
     },
 
     loadAddressByCityStreet: async function(vsendCityId, vsendStreet) {
@@ -76,6 +97,7 @@ new Vue({
         "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
         "x-post-pathto": "meestua/api/", "x-post-method": "address"
       };
+      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'address'+ '&' + "meestToken="+this.meestToken);
       /*
       {
         "filters": {
@@ -97,7 +119,7 @@ new Vue({
         body: JSON.stringify(filter)
       };
 
-      await fetch(urls[3], requestOptions)
+      await fetch(realUrl, requestOptions)
         .then(async response => {
           const data = await response.json();
 
@@ -169,8 +191,8 @@ new Vue({
         "x-get-params": "zipCode=" + zipCode + '&' + "meestToken="+this.meestToken
       };
       var result = {};
-
-      await fetch(this.meestUrlApi, {
+      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'zipcode'+"?"+"zipCode=" + zipCode + '&' + "meestToken="+this.meestToken);
+      await fetch(realUrl, {
           headers
         })
         .then(async response => {
@@ -210,13 +232,13 @@ new Vue({
     },
 
     createParcelMeestRequest: async function( parcel ) {
-
+      parcel.meestToken =this.meestToken;
       var headers = {
         "accept": "application/json", "Content-Type": "application/json", "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
         "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
         "x-post-pathto": "meestua/api/", "x-post-method": "parcel"
       };
-
+      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'parcel');
       var result = {};
 
 //alert("createParcelMeestRequest 1 parcel "+JSON.stringify(parcel, null, ' '));
@@ -227,13 +249,16 @@ new Vue({
         body: JSON.stringify(parcel)
       };
 
+      this.isCreateParcelMeestDisabled = true;
 //alert("createParcelMeestRequest 2 parcel "+JSON.stringify(requestOptions, null, ' '));
 
-      await fetch(this.meestUrlApi, requestOptions)
+      await fetch(realUrl, requestOptions)
         .then(async response => {
           const data = await response.json();
 //alert("createParcelMeestRequest 3 " + JSON.stringify(data));
-          result  = data;
+          result = data;
+          delete(result.data[0].sticker);
+          delete(result.data[0].stickerbin);
           if (!response.ok) {
             // get error message from body or default to response statusText
             const error = (data && data.message) || response.statusText;
@@ -247,6 +272,8 @@ new Vue({
         });
 alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
         this.parcelStickerUrl = result.data[0].stickerUrl;
+        //this.isCreateParcelMeestDisabled = false;
+        this.isGetParcelStickerDisabled = false;
         return result;
     },
 
@@ -257,8 +284,8 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
         "x-get-geturl": "https://nr-clients.dev.ukrgasaws.com/",
         "x-get-pathto": "meestua/api/", "x-get-method": "init"
       };
-
-      await fetch(this.meestUrlApi, {
+      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'init');
+      await fetch(realUrl, {
           headers
         })
         .then(async response => {
@@ -279,7 +306,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     },
 
     btnSndAddressFindMeest: async function(event) {
-      this.meestUrlApi = urls[3];
+
 //alert("1 Init token "+this.meestToken);
       await this.meestApiInit();
 //alert("2 btnSndAddressFindMeest "+this.meestToken);
@@ -327,6 +354,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
         alert('Не удалось выполнить поиск улицы по индексу '+zipCode);
         return;
       }
+      if( this.verifyForm() ) this.isCreateParcelMeestDisabled = false;
     },
 
     btnCreateParcelMeest: function(event) {
@@ -415,6 +443,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 //alert( "5 createParcelMeest " + JSON.stringify(msg, null, ' ') );
       this.createParcelMeestRequest( msg );
 
+
       return result;
     },
 
@@ -472,8 +501,9 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
         "x-get-geturl": "https://nr-clients.dev.ukrgasaws.com/",
         "x-get-pathto": "scrooge/core/", "x-get-method": "branchs"
       };
+      var realUrl = getWorkUrl(modeUrl, 'scrooge/core/'+'branchs');
       //alert('loadFetchBranchs '+urls[3]);
-      fetch(urls[3], {
+      fetch(realUrl, {
           headers
         })
         .then(async response => {
@@ -556,7 +586,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
   watch: {
     selectedBranch: function(newQuestion, oldQuestion) {
       this.sendCityes = null;
-      this.disabledRecv = true;
+      this.isRecvAddressFindMeestDisabled = true;
       this.checkSndAddressFind();
     },
     selectedSendAddres: function(newQuestion, oldQuestion) {
@@ -568,8 +598,8 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
       this.sendCityId = newQuestion;
     },
     recvIndex: function(newQuestion, oldQuestion) {
-      if(newQuestion.length == 5) this.disabledRecv = false;
-      else this.disabledRecv = true;
+      if(newQuestion.length == 5 && !this.isSndAddressFindMeestDisabled ) this.isRecvAddressFindMeestDisabled = false;
+      else this.isRecvAddressFindMeestDisabled = true;
     },
     recvEmail: function(newQuestion, oldQuestion) {
       //alert(newQuestion + ' ['+this.validEmail(this.recvEmail)+'] '+this.recvEmail);
@@ -580,7 +610,6 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
   data: {
     meestToken: null,
-    meestUrlApi: null,
 
     branchs: [{
         "code": "TOBO_0001",        "name": "Вiддiлення № 1 АБ \"УКРГАЗБАНК\" м.Київ",        "address": ",,03065, м. Київ, вул.Героїв Севастополя, 24/2,,,"      },      {
@@ -646,8 +675,10 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     recvBuilding: null,
     recvFlat: null,
 
-    disabledSend: true,
-    disabledRecv: true,
+    isSndAddressFindMeestDisabled: true,
+    isRecvAddressFindMeestDisabled: true,
+    isCreateParcelMeestDisabled: true,
+    isGetParcelStickerDisabled: true,
 
     totalVuePackages: null,
     locat: null,

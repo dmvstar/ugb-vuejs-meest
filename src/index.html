@@ -19,6 +19,7 @@
   <!--script src="https://cdn.jsdelivr.net/npm/vue@2.5/dist/vue.min.js"></script-->
   <!--script src="https://cdn.jsdelivr.net/npm/@growthbunker/vuedarkmode@latest/dist/vuedarkmode.min.js"></script-->
   <script src="https://unpkg.com/vue-select@latest"></script>
+  <script src="https://unpkg.com/vuejs-datepicker"></script>
 
   <div>
     <!--Main -->
@@ -36,7 +37,7 @@
     </div>
 
     <div id="app">
-
+      <vuejs-datepicker></vuejs-datepicker>
       <div class="form-group">
         <!--Отправитель -->
 
@@ -73,7 +74,7 @@
           <div class="col-sm-12">
             meestToken: {{meestToken}}</br>
             selectedBranch: {{selectedBranch}}</br>
-            disabledSend: {{disabledSend}}
+            isSndAddressFindMeestDisabled: {{isSndAddressFindMeestDisabled}}
             sendIndex: {{sendIndex}}
             sendStreet: {{sendStreet}}
             sendCityes: {{sendCityes}}
@@ -83,7 +84,7 @@
             sendAddressId: {{sendAddressId}}</br>
             sendAddresses: {{sendAddresses}}</br>
           </div>
-          <button v-on:click="btnSndAddressFindMeest" :disabled="disabledSend" class="form-control">Поиск адреса отправителя</button>
+          <button v-on:click="btnSndAddressFindMeest" :disabled="isSndAddressFindMeestDisabled" class="form-control">Поиск адреса отправителя</button>
           </br>
         </div>
 
@@ -143,7 +144,7 @@
             <input type="text" class="form-control" v-model="recvStreet" placeholder="Улица шаблон поиска" /><br>
           </div>
 
-          <button v-on:click="btnRecvAddressFindMeest" :disabled="disabledRecv" class="form-control">Поиск адреса получателя (по индексу)</button>
+          <button v-on:click="btnRecvAddressFindMeest" :disabled="isRecvAddressFindMeestDisabled" class="form-control">Поиск адреса получателя (по индексу)</button>
           </br>
         </div>
         <div class="col-sm-12">
@@ -229,11 +230,11 @@
         </div>
 
       </div>
-      <!--Получатель Адрес -->
+      <!--Получатель Адрес END-->
 
-
+      <!--Получатель -->
       <div class="form-group">
-        <!--Получатель -->
+
         <div class="col-sm-12">
           <label> Данные получателя:</label>
         </div>
@@ -272,11 +273,14 @@
             <input id="parcelDeliveryDate" v-model="parcelDeliveryDate" class="form-control input-group-lg reg_name" type="text" title="Дата доставки" placeholder="Дата доставки"><br>
           </div>
 
-          <button v-on:click="btnCreateParcelMeest" class="form-control">Создать заявку на посылку и вызов курьера</button>
-          <button v-on:click="btnGetParcelSticker" class="form-control">Получить стикер</button>
+
+          <button v-on:click="btnCreateParcelMeest" :disabled="isCreateParcelMeestDisabled" class="form-control">Создать заявку на посылку и вызов курьера</button>
+          <button v-on:click="btnGetParcelSticker"  :disabled="isGetParcelStickerDisabled" class="form-control">Получить стикер</button>
         </div>
 
-
+        <!--div>
+          <datepicker placeholder="Select Date"></datepicker>
+        </div-->
 
       </div>
       <!--Получатель -->
