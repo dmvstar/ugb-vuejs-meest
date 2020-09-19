@@ -79,20 +79,20 @@
           </div>
         </div>
 
+        <div class="col-sm-12" v-if="debugMode == true">
+          meestToken: {{meestToken}}</br>
+          selectedBranch: {{selectedBranch}}</br>
+          isSndAddressFindMeestDisabled: {{isSndAddressFindMeestDisabled}}
+          sendIndex: {{sendIndex}}
+          sendStreet: {{sendStreet}}
+          sendCityes: {{sendCityes}}
+          sendCity: {{sendCity}}
+          sendCityId: {{sendCityId}}
+          selectedSendCity: {{selectedSendCity}}</br>
+          sendAddressId: {{sendAddressId}}</br>
+          sendAddresses: {{sendAddresses}}</br>
+        </div>
         <div class="col-sm-12">
-          <div class="col-sm-12">
-            meestToken: {{meestToken}}</br>
-            selectedBranch: {{selectedBranch}}</br>
-            isSndAddressFindMeestDisabled: {{isSndAddressFindMeestDisabled}}
-            sendIndex: {{sendIndex}}
-            sendStreet: {{sendStreet}}
-            sendCityes: {{sendCityes}}
-            sendCity: {{sendCity}}
-            sendCityId: {{sendCityId}}
-            selectedSendCity: {{selectedSendCity}}</br>
-            sendAddressId: {{sendAddressId}}</br>
-            sendAddresses: {{sendAddresses}}</br>
-          </div>
           <button v-on:click="btnSndAddressFindMeest" :disabled="isSndAddressFindMeestDisabled" class="form-control">Поиск адреса отправителя</button>
           </br>
         </div>

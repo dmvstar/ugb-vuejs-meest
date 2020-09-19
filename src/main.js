@@ -695,7 +695,8 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
     totalVuePackages: null,
     locat: null,
-    error: null
+    error: null,
+    debugMode: true
   }
 })
 
