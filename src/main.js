@@ -16,7 +16,7 @@ var urls = [
 3- use nr-clients.dev
 4- use nr-clients
 */
-var modeUrl = 1;
+var modeUrl = 3;
 
 function getWorkUrl(mode, path) {
   var url = urls[mode-1]+(mode>2?path:'');
@@ -97,7 +97,8 @@ new Vue({
         "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
         "x-post-pathto": "meestua/api/", "x-post-method": "address"
       };
-      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'address'+ '&' + "meestToken="+this.meestToken);
+      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'address');
+//alert(realUrl);
       /*
       {
         "filters": {
@@ -109,6 +110,7 @@ new Vue({
       var result = {};
       var filter = {};
       filter.filters = {};
+      filter.meestToken = this.meestToken;
       filter.filters.cityID = vsendCityId; //this.sendCityId;
       filter.filters.addressDescr = "%" + vsendStreet + "%";
       //filter.filters.addressDescr = this.sendStreet;
@@ -192,6 +194,7 @@ new Vue({
       };
       var result = {};
       var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'zipcode'+"?"+"zipCode=" + zipCode + '&' + "meestToken="+this.meestToken);
+//alert(realUrl);
       await fetch(realUrl, {
           headers
         })
