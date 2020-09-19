@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <script src="https://unpkg.com/vue-select@latest"></script>
+  <script src="https://unpkg.com/vuejs-datepicker"></script>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <!--v-container>Hello world</v-container-->
+
+        <div class="col-sm-12 text-center">
+          <div class="col-sm-4">
+            <img className="mt-0" height="100" src="ecobank_2.png"></img>
+          </div>
+          <div class="col-sm-2">
+            <h1 className="mt-0">UGB MeestUA</h1>
+          </div>
+          <div class="col-sm-4">
+            <img className="mt-0" height="100" src="ecobank_2.png"></img>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <!--Отправитель -->
+
+          <div class="col-sm-12">
+            <h2>Отправитель</h2>
+            <label> Отделение(editable):</label>
+            <v-select label="name" :options="branchs" v-model="selectedBranch" menu-props="auto"></v-select>
+          </div>
+
+          <div class="col-sm-12">
+            <label> Адрес:</label>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-2">
+              <input type="text" v-model="sendIndex" placeholder="Индекс" class="form-control" /><br>
+            </div>
+            <div class="col-sm-3">
+              <select v-model="selectedSendCity" class="form-control">
+                <option disabled value="">Выберите один из вариантов</option>
+                <!--option>Город 1</option>
+            <option>Город 2</option-->
+                <option v-for="mode in sendCityes" v-bind:value="mode.index">
+                  {{ mode.text }}
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-7">
+              <input type="text" v-model="sendStreet" placeholder="Улица шаблон поиска" class="form-control input-group-lg reg_name" /><br>
+            </div>
+          </div>
+
+          <div class="col-sm-12" v-if="debugMode == true">
+            meestToken: {{meestToken}}</br>
+            selectedBranch: {{selectedBranch}}</br>
+            isSndAddressFindMeestDisabled: {{isSndAddressFindMeestDisabled}}
+            sendIndex: {{sendIndex}}
+            sendStreet: {{sendStreet}}
+            sendCityes: {{sendCityes}}
+            sendCity: {{sendCity}}
+            sendCityId: {{sendCityId}}
+            selectedSendCity: {{selectedSendCity}}</br>
+            sendAddressId: {{sendAddressId}}</br>
+            sendAddresses: {{sendAddresses}}</br>
+          </div>
+          <div class="col-sm-12">
+            <button v-on:click="btnSndAddressFindMeest" :disabled="isSndAddressFindMeestDisabled" class="form-control btn btn-primary">Поиск адреса отправителя</button>
+            </br>
+          </div>
+
+          <div class="col-sm-12">
+            <label> Адрес отправителя:</label>
+          </div>
+
+          <div class="col-sm-12">
+
+            <div class="col-sm-10">
+              <select v-model="selectedSendAddres" class="form-control" title="Выберите один из вариантов">
+                <option disabled value="">Выберите один из вариантов</option>
+                <option v-for="mode in sendAddresses" v-bind:value="mode.index">
+                  {{ mode.text }}
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" v-model="sendBuilding" placeholder="Дом" /><br>
+            </div>
+
+          </div>
+        </div>
+        <!--Отправитель -->
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <h2>Получатель</h2>
+            <select v-model="recvMode" class="form-control">
+              <option v-for="mode in recvModes" v-bind:value="mode.value">
+                {{ mode.text }}
+              </option>
+            </select>
+            </br>
+          </div>
+        </div>
+
+        <div class="form-group" v-if="recvMode == 'I'">
+          <!--Получатель Индекс -->
+          <div class="col-sm-12">
+            <label> Адрес (Индекс):</label>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-2">
+              <input type="text" class="form-control" v-model="recvIndex" placeholder="Индекс" maxlength="5" /><br>
+            </div>
+            <div class="col-sm-3">
+              <select v-model="selectedRecvCity" class="form-control">
+                <option disabled value="">Выберите один из вариантов</option>
+                <option v-for="mode in recvCityes" v-bind:value="mode.index">
+                  {{ mode.text }}
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="recvStreet" placeholder="Улица шаблон поиска" /><br>
+            </div>
+
+            <button v-on:click="btnRecvAddressFindMeest" :disabled="isRecvAddressFindMeestDisabled" class="form-control">Поиск адреса получателя (по индексу)</button>
+            </br>
+          </div>
+          <div class="col-sm-12">
+            <label> Адрес получателя:</label>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-5">
+              <select v-model="recvAddressId" class="form-control" title="Выберите один из вариантов">
+                <option disabled value="">Выберите один из вариантов</option>
+                <option v-for="mode in recvAddresses" v-bind:value="mode.index">
+                  {{ mode.text }}
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="recvBuilding" placeholder="Дом" /><br>
+            </div>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" v-model="recvFlat" placeholder="Квартира" /><br>
+            </div>
+          </div>
+
+        </div>
+        <!--Получатель Индекс -->
+
+        <div class="form-group" v-if="recvMode == 'A'">
+          <!--Получатель Адрес -->
+          <div class="col-sm-12">
+            <label> Адрес (Адрес):</label>
+          </div>
+
+          <div class="col-sm-12">
+
+            <div class="col-sm-3">
+              <input type="text" class="form-control" v-model="recvRegion" placeholder="Область" maxlength="5" /><br>
+            </div>
+            <div class="col-sm-2">
+              <button v-on:click="btnRecvRegionFindMeest" :disabled="false" class="form-control">Поиск</button>
+            </div>
+            <div class="col-sm-7">
+              <select v-model="recvRegionSelect" class="form-control">
+                <option disabled value="">Выберите один из вариантов</option>
+                <option v-for="mode in recvRegions" v-bind:value="mode.index">
+                  {{ mode.text }}
+                </option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-3">
+              <input type="text" class="form-control" v-model="recvDistrict" placeholder="Район" /><br>
+            </div>
+            <div class="col-sm-2">
+              <button v-on:click="btnRecvDistrictFindMeest" :disabled="false" class="form-control">Поиск</button>
+            </div>
+            <div class="col-sm-7">
+              <select v-model="recvDistrictSelect" class="form-control">
+                <option disabled value="">Выберите один из вариантов</option>
+                <option>Район 1</option>
+                <option>Район 2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-2">
+              <input type="text" class="form-control" v-model="recvCity" placeholder="Город" /><br>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" v-model="recvStreet" placeholder="Улица" /><br>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" v-model="recvBuilding" placeholder="Дом" /><br>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" v-model="recvFlat" placeholder="Квартира" /><br>
+            </div>
+            <button v-on:click="btnRecvAddressFindMeest" :disabled="true" class="form-control">Поиск адреса получателя (по адресу)</button>
+          </div>
+
+        </div>
+        <!--Получатель Адрес END-->
+
+        <!--Получатель -->
+        <div class="form-group">
+
+          <div class="col-sm-12">
+            <label> Данные получателя:</label>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-6">
+              <label for="recvLastName" class="sr-only"></label>
+              <input id="recvLastName" v-model="recvLastName" class="form-control input-group-lg reg_name" type="text" title="Введите Фамилия" placeholder="Фамилия"><br>
+            </div>
+            <div class="col-sm-3">
+              <label for="recvFirstName" class="sr-only"></label>
+              <input id="recvFirstName" v-model="recvFirstName" class="form-control input-group-lg reg_name" type="text" title="Введите Имя" placeholder="Имя">
+            </div>
+            <div class="col-sm-3">
+              <label for="recvFatherName" class="sr-only"></label>
+              <input id="recvFatherName" v-model="recvFatherName" class="form-control input-group-lg reg_name" type="text" title="Введите Отчество" placeholder="Отчество">
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="col-sm-6">
+              <label for="recvPhone" class="sr-only"></label>
+              <input id="recvPhone" v-model="recvPhone" class="form-control input-group-lg reg_name" type="text" title="Введите Номер телефона" placeholder="Номер телефона">
+            </div>
+            <div class="col-sm-6">
+              <label for="recvEmail" class="sr-only"></label>
+              <input id="recvEmail" v-model="recvEmail" class="form-control input-group-lg reg_name" type="text" title="Введите Адрес электронной почты" placeholder="Адрес электронной почты"><br>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="parcelSendingDate" class="sr-only"></label>
+              <input id="parcelSendingDate" v-model="parcelSendingDate" class="form-control input-group-lg reg_name" type="text" title="Введите Дата отправки" placeholder="Дата отправки">
+            </div>
+            <div class="col-sm-6">
+              <label for="parcelDeliveryDate" class="sr-only"></label>
+              <input id="parcelDeliveryDate" v-model="parcelDeliveryDate" class="form-control input-group-lg reg_name" type="text" title="Дата доставки" placeholder="Дата доставки"><br>
+            </div>
+
+
+            <button v-on:click="btnCreateParcelMeest" :disabled="isCreateParcelMeestDisabled" class="form-control">Создать заявку на посылку и вызов курьера</button>
+            <button v-on:click="btnGetParcelSticker" :disabled="isGetParcelStickerDisabled" class="form-control">Получить стикер</button>
+          </div>
+        </div>
+        <!--Получатель -->
+
+        <div v-if="error != null" class="notification is-danger">
+          <!--button class="delete"></button-->
+          {{error}}
+        </div>
+        <div classcol-sm-12">
+          <h3>Введенная информация</h3>
+          recvMode: {{recvMode}}
+          recvIndex: {{recvIndex}}
+          recvStreet: {{recvStreet}}
+          recvCityes: {{recvCityes}}
+          recvCity: {{recvCity}}
+          recvCityId: {{recvCityId}}
+          selectedRecvCity: {{selectedRecvCity}}</br>
+          recvAddressId: {{recvAddressId}}</br>
+          recvAddresses: {{recvAddresses}}</br>
+        </div>
+
+
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
