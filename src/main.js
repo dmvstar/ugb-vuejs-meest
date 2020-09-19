@@ -16,7 +16,7 @@ var urls = [
 3- use nr-clients.dev
 4- use nr-clients
 */
-var modeUrl = 3;
+var modeUrl = 1;
 
 function getWorkUrl(mode, path) {
   var url = urls[mode-1]+(mode>2?path:'');
@@ -26,9 +26,19 @@ function getWorkUrl(mode, path) {
 
 Vue.component('v-select',   VueSelect.VueSelect);
 Vue.component('datepicker', vuejsDatepicker);
+Vue.use(Vuetify);
 
 new Vue({
   el: '#app',
+
+  vuetify: new Vuetify({
+      theme: {
+        disable: false,
+        dark: true,
+        //themes: { dark },
+      },
+    }
+  ),
 /*
   components: {
   	vuejsDatepicker
