@@ -4,8 +4,6 @@
 <head>
   <title>UGB MeestUA</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
-  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
@@ -13,8 +11,7 @@
 </head>
 
 <body>
-  <script src="https://unpkg.com/vue-select@latest"></script>
-  <script src="https://unpkg.com/vuejs-datepicker"></script>
+
   <div id="app">
 
     <v-app>
@@ -27,7 +24,7 @@
             </v-col>
             <v-col cols="12" sm="4" align="center">
               <h1>UGB MeestUA</h1>
-              <v-switch @change="switchLigthDark()"></v-switch>
+              <v-switch @change="switchLigthDark()" label="Be on the dark side....">Be on the dark side....</v-switch>
             </v-col>
             <v-col cols="12" sm="4">
               <img height="100" src="ecobank_2.png"></img>
@@ -43,7 +40,19 @@
 
           <v-row>
             <v-col cols="12" sm="12">
-              <v-fselect label="name" :options="branchs" v-model="selectedBranch" menu-props="auto" placeholder="Отделение"></v-fselect>
+              <v-autocomplete
+              :items="branchs"
+              item-value="code"
+              item-text="name"
+              item-disabled="Выберите один из вариантов"
+              return-object
+              label="Отделение"
+              clearable="true"
+              no-data-text="Выберите один из вариантов"
+              v-model="selectedBranch"
+              menu-props="auto"
+              placeholder="Отделение">
+            </v-autocomplete>
             </v-col>
           </v-row>
 
@@ -59,7 +68,12 @@
               <v-text-field type="text" v-model="sendIndex" label="Индекс" placeholder="Индекс"  /><br>
             </v-col>
             <v-col class="d-flex" cols="12" sm="3">
-              <v-select v-model="selectedSendCity" :items="sendCityes" item-value="index" item-text="text" label="Город">
+              <v-select
+              v-model="selectedSendCity"
+              :items="sendCityes"
+              item-value="index"
+              item-text="text"
+              label="Город">
                 <option disabled value="">Выберите один из вариантов</option>
                 <option v-for="mode in sendCityes" v-bind:value="mode.index">
                   {{ mode.text }}
@@ -118,8 +132,7 @@
           <v-row>
             <v-col cols="12" sm="12">
               <h2>Получатель</h2>
-              <v-select v-model="recvMode" :items="recvModes" item-value="value" item-text="text" />
-
+              <v-select solo v-model="recvMode" :items="recvModes" item-value="value" item-text="text" />
             </v-col>
           </v-row>
 
@@ -154,8 +167,6 @@
                 <v-btn block color="primary" v-on:click="btnRecvAddressFindMeest" :disabled="isRecvAddressFindMeestDisabled" >Поиск адреса получателя (по индексу)</v-btn>
               </v-col>
             </v-row>
-
-
 
           </div>
           <!--Получатель Индекс END-->
@@ -248,6 +259,7 @@
               <label>Даты отправления:</label>
             </v-col>
           </v-row>
+
           <v-row>
             <v-col cols="12" sm="6">
               <v-text-field type="text" v-model="parcelSendingDate" placeholder="Дата отправки" label="Дата отправки" /><br>
@@ -259,10 +271,22 @@
 
           <v-row>
             <v-col cols="12" sm="6">
-              <v-date-picker placeholder="Select Date"></v-date-picker>
+              <v-date-picker v-model="parcelSendingDateP" placeholder="Дата отправки>"></v-date-picker>
             </v-col>
             <v-col cols="12" sm="6">
-              <v-date-picker placeholder="Select Date"></v-date-picker>
+              <v-date-picker v-model="parcelDeliveryDateP" placeholder="Дата доставки"></v-date-picker>
+            </v-col>
+          </v-row>
+
+
+
+
+          <v-row>
+            <v-col cols="12" sm="6">
+              <v-text-field type="text" v-model="parcelSendingDateP" placeholder="Дата отправки" label="Дата отправки" /><br>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <v-text-field type="text" v-model="parcelDeliveryDateP" placeholder="Дата доставки" label="Дата доставки" /><br>
             </v-col>
           </v-row>
 

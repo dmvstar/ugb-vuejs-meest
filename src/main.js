@@ -24,8 +24,6 @@ function getWorkUrl(mode, path) {
 }
 
 
-Vue.component('v-fselect',  VueSelect.VueSelect);
-Vue.component('v-datepicker', vuejsDatepicker);
 Vue.use(Vuetify);
 
 new Vue({
@@ -39,11 +37,7 @@ new Vue({
       },
     }
   ),
-/*
-  components: {
-  	vuejsDatepicker
-  }.
-*/
+
   created() {
 
     // Simple GET request using fetch
@@ -660,6 +654,9 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     parcelDeliveryDate: null,
     parcelSendingDate: null,
     parcelStickerUrl: null,
+
+    parcelSendingDateP: null,
+    parcelDeliveryDateP: null,
 
     sendCityes: [],
 
