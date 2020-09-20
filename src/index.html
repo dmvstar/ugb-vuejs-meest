@@ -35,7 +35,7 @@
 
     <div class="col-sm-12 text-center">
       <div class="col-sm-4">
-        <img className="mt-0" height="100" src="ecobank_2.png"></img>
+        <img className="mt-0" height="100" src="ecobank_2.png" onclick="switchLigthDark()"></img>
       </div>
       <div class="col-sm-2">
         <h1 className="mt-0">UGB MeestUA</h1>
@@ -56,7 +56,7 @@
             <div class="col-sm-12">
               <h2>Отправитель</h2>
               <label> Отделение(editable):</label>
-              <v-select label="name" :options="branchs" v-model="selectedBranch" class="input-group-lg reg_name"></v-select>
+              <v-fselect label="name" :options="branchs" v-model="selectedBranch" class="input-group-lg reg_name" placeholder="Отделение"></v-fselect>
             </div>
 
             <div class="col-sm-12">
@@ -68,10 +68,8 @@
                 <input type="text" v-model="sendIndex" placeholder="Индекс" class="form-control input-group-lg reg_name" /><br>
               </div>
               <div class="col-sm-3">
-                <select v-model="selectedSendCity" class="form-control">
+                <select v-model="selectedSendCity" class="form-control" placeholder="Город">
                   <option disabled value="">Выберите один из вариантов</option>
-                  <!--option>Город 1</option>
-              <option>Город 2</option-->
                   <option v-for="mode in sendCityes" v-bind:value="mode.index">
                     {{ mode.text }}
                   </option>
@@ -95,6 +93,7 @@
               sendAddressId: {{sendAddressId}}</br>
               sendAddresses: {{sendAddresses}}</br>
             </div>
+
             <div class="col-sm-12">
               <button v-on:click="btnSndAddressFindMeest" :disabled="isSndAddressFindMeestDisabled" class="form-control btn btn-primary">Поиск адреса отправителя</button>
               </br>

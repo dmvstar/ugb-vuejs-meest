@@ -24,8 +24,8 @@ function getWorkUrl(mode, path) {
 }
 
 
-Vue.component('v-select',   VueSelect.VueSelect);
-Vue.component('datepicker', vuejsDatepicker);
+Vue.component('v-fselect',  VueSelect.VueSelect);
+Vue.component('v-datepicker', vuejsDatepicker);
 Vue.use(Vuetify);
 
 new Vue({
@@ -178,7 +178,7 @@ new Vue({
     fillCityId: async function(zipCode){
 //alert("1 fillCityId " + zipCode );
       var result = null;
-      if(this.sendCityes == null)
+      if(this.sendCityes.length == 0)
           result = await this.loadCitiesByZipCode(zipCode);
 //alert("1 fillCityId " + zipCode + " " + JSON.stringify(result));
       if( result !== null ) {
@@ -463,9 +463,16 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     btnRecvRegionFindMeest: function(event) {
       // `this` внутри методов указывает на экземпляр Vue
       //this.sndIndex = this.selectedBranch.address;
+      //this.vuetify.theme.dark = !this.vuetify.theme.dark;
+
       alert('btnRecvRegionFindMeest, ' + this.recvRegion);
 
     },
+
+    switchLigthDark: function(event) {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+
 
     btnRecvDistrictFindMeest: function(event) {
       // `this` внутри методов указывает на экземпляр Vue
@@ -598,7 +605,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
   watch: {
     selectedBranch: function(newQuestion, oldQuestion) {
-      this.sendCityes = null;
+      this.sendCityes = [];
       this.isRecvAddressFindMeestDisabled = true;
       this.checkSndAddressFind();
     },
@@ -654,7 +661,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     parcelSendingDate: null,
     parcelStickerUrl: null,
 
-    sendCityes: null,
+    sendCityes: [],
 
     sendIndex: null,
     sendIndexId: null,
@@ -667,9 +674,10 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     sendBuilding: null,
     sendFlat: null,
 
-    sendAddresses: null,
-    recvAddresses: null,
-    recvCityes: null,
+    sendAddresses: [],
+    recvAddresses: [],
+
+    recvCityes: [],
 
     recvCity: null,
     recvCityId: null,
@@ -696,7 +704,8 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     totalVuePackages: null,
     locat: null,
     error: null,
-    debugMode: true
+
+    debugMode: false
   }
 })
 
