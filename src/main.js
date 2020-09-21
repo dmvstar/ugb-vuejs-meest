@@ -280,7 +280,13 @@ new Vue({
           this.error = error;
         });
 alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
+        this.parcelData = result.data[0];
         this.parcelStickerUrl = result.data[0].stickerUrl;
+
+        this.parcelDataId = result.data[0].parcelID;
+        this.parcelDataBarcode = result.data[0].barCode;
+        this.parcelDataPickup = result.data[0].pickup.registerNumber;
+
         //this.isCreateParcelMeestDisabled = false;
         this.isGetParcelStickerDisabled = false;
         return result;
@@ -374,12 +380,18 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     },
 
     btnGetParcelSticker: function(event) {
-//alert('1 btnCreateParcelMeest, ' + this.verifyForm());
+//alert('1 btnGetParcelSticker, ' + this.verifyForm());
       if( this.parcelStickerUrl !== null ) {
          window.open( this.parcelStickerUrl );
       }
     },
 
+    btnCancelParcelMeest: function(event) {
+alert('1 btnCancelParcelMeest, ' + this.parcelDataId);
+      if( this.parcelDataId !== null ) {
+
+      }
+    },
 
     verifyForm: function() {
       var result = true;
@@ -450,7 +462,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
 
 //alert( "5 createParcelMeest " + JSON.stringify(msg, null, ' ') );
-      this.createParcelMeestRequest( msg );
+      result = this.createParcelMeestRequest( msg );
 
 
       return result;
@@ -674,6 +686,10 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     selectedSendAddres: null,
     selectedSendCity: null,
 
+    parcelData: null,
+    parcelDataId: null,
+    parcelDataBarcode: null,
+    parcelDataPickup: null,
     parcelNumber: null,
     parcelDescription: null,
     parcelDeliveryDate: null,
@@ -728,7 +744,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     locat: null,
     error: null,
 
-    debugMode: true
+    debugMode: false
   }
 })
 
@@ -774,8 +790,6 @@ async function makeSynchronousRequest() {
   return result;
 
 }
-
-
 
 
 // `this` внутри методов указывает на экземпляр Vue

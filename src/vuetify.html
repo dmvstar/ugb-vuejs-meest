@@ -368,17 +368,22 @@
                   <td>{{parcelDeliveryDate}}</td>
                 </tr>
                 <tr>
+                  <td></td>
+                  <td>Идентификатор</td>
+                  <td>{{parcelDataId}} {{parcelDataBarcode}} {{parcelDataPickup}}</td>
+                </tr>
+                <tr>
                   <td colspan="2">Отправитель</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>Отделение</td>
-                  <td>{{selectedBranch}}</td>
+                  <td>{{selectedBranch.tobo}} {{selectedBranch.name}}</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>Адрес</td>
-                  <td>{{sendAddress}}</td>
+                  <td>{{selectedSendCity}}, {{selectedSendAddres}}</td>
                 </tr>
                 <tr>
                   <td colspan="2">Получатель<br></td>
