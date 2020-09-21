@@ -39,46 +39,7 @@ new Vue({
   ),
 
   created() {
-
-    // Simple GET request using fetch
-    /*
-    fetch("https://api.npms.io/v2/search?q=vue")
-      .then(response => response.json())
-      .then(data => (this.totalVuePackages = data.total));
-
-      you can mark your getData() function as async
-
-      async getData() {
-        return fetch('http://...'+'?start=' + offset)
-          .then(...)
-      }
-
-      then await for the returned promise completion
-
-      await const results = getData(offset)
-
-    */
-    fetch(getWorkUrl(7,''))
-      .then(async response => {
-        const data = await response.json();
-//alert(JSON.stringify(data));
-        // check for error response
-        if (!response.ok) {
-          // get error message from body or default to response statusText
-          const error = (data && data.message) || response.statusText;
-          this.error = error;
-          return Promise.reject(error);
-        }
-        this.locat = {};
-        this.locat = data;
-      })
-      .catch(error => {
-        alert('url, [' + JSON.stringify(error) + '] ');
-        this.error = error;
-      });
-
     this.loadFetchBranchs();
-
     this.init();
   },
 
@@ -389,8 +350,38 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     btnCancelParcelMeest: function(event) {
 alert('1 btnCancelParcelMeest, ' + this.parcelDataId);
       if( this.parcelDataId !== null ) {
-
+        this.cancelParcelMeest();
       }
+    },
+
+    cancelParcelMeest: function() {
+      headers = {
+        "accept": "application/json", "Content-Type": "application/json", "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+        "x-get-geturl": "https://nr-clients.dev.ukrgasaws.com/",
+        "x-get-pathto": "meestua/api/", "x-get-method": "parcel/cancel",
+        "x-get-params": "parcelId=" + this.parcelDataId + '&' + "meestToken="+this.meestToken
+      };
+      var result = {};
+      var realUrl = getWorkUrl(modeUrl, 'meestua/api/'+'parcel/cancel'+"?"+"parcelId=" + this.parcelDataId + '&' + "meestToken="+this.meestToken);
+alert("1 cancelParcelMeest" + realUrl);
+      fetch(realUrl, {
+          headers
+        })
+        .then(async response => {
+          const data = await response.json();
+alert("1 cancelParcelMeest" + JSON.stringify(data));
+          if (!response.ok) {
+            // get error message from body or default to response statusText
+            const error = (data && data.message) || response.statusText;
+            this.error = error;
+            return Promise.reject(error);
+          }
+        })
+        .catch(error => {
+          alert('E1 cancelParcelMeest, [' + JSON.stringify(error) + '] ');
+          this.error = error;
+        });
+
     },
 
     verifyForm: function() {
