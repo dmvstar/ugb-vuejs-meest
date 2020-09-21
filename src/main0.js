@@ -444,7 +444,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
         msg.parcel.recv.addressID = this.recvAddressId;
         msg.parcel.recv.building = this.recvBuilding;
         msg.parcel.recv.flat = this.recvFlat;
-        msg.parcel.recv.floor = 1;
+        msg.parcel.recv.floor = this.recvFloor;
 
 
 //alert( "5 createParcelMeest " + JSON.stringify(msg, null, ' ') );
@@ -628,17 +628,19 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
       else this.error = null;
     },
 
+    recvAddressId: function(newQuestion, oldQuestion) {
+      alert(newQuestion);
+      //alert(JSON.stringify(this.recvAddresses));
+      //this.recvAddress = recvAddresses.find(x => x.index === newQuestion).text;
+    },
+
     parcelSendingDateISO: function(newQuestion, oldQuestion) {
       this.parcelSendingDate = this.convertDateFromISO(newQuestion);
     },
     parcelDeliveryDateISO: function(newQuestion, oldQuestion) {
       this.parcelDeliveryDate = this.convertDateFromISO(newQuestion);
-    },
-    recvAddressId: function(newQuestion, oldQuestion) {
-      //alert(JSON.stringify(this.recvAddresses));
-      var t = this.recvAddresses.find(x => x.index === newQuestion).text;
-      this.recvAddress = t;
-    },
+    }
+
   },
 
   data: {
@@ -672,6 +674,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
     parcelDeliveryDate: null,
     parcelSendingDate: null,
+
     parcelStickerUrl: null,
 
     parcelSendingDateISO: null,
@@ -692,7 +695,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
     sendAddresses: [],
     recvAddresses: [],
-    recvAddress: null,
+    recvAddress: null;
 
     recvCityes: [],
 
