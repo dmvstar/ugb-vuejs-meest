@@ -90,6 +90,8 @@ new Vue({
       if (index.length == 5) this.sendIndex = index;
       var street = this.selectedBranch.address.split(',')[4].trim().split(' ')[1].toLowerCase();
       this.sendStreet = street;
+      var building = this.selectedBranch.address.split(',')[5].toLowerCase();
+      this.sendBuilding = building;
       if (this.sendIndex.length == 5 && this.sendStreet.length > 3) this.isSndAddressFindMeestDisabled = false;
       if (this.recvIndex.length == 5 && !this.isSndAddressFindMeestDisabled) this.isRecvAddressFindMeestDisabled = false;
     },
@@ -422,8 +424,8 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
       msg.parcel = {};
       msg.parcel.sendingDate = this.parcelSendingDate;//"18.09.2020";
       msg.parcel.expectedDeliveryDate = this.parcelDeliveryDate;//  "23.09.2020";
-      msg.parcel.parcelNumber = "TST-7"+ Math.floor(100000 + Math.random() * 900000);
-      msg.parcel.notation ="Отправка карты Клиенту";
+      msg.parcel.parcelNumber = this.parcelNumber;//"TST-7"+ Math.floor(100000 + Math.random() * 900000);
+      msg.parcel.notation = this.parcelDescription;//"Отправка карты Клиенту";
 //alert( "2 createParcelMeest " + JSON.stringify(msg, null, ' ') );
 
       msg.parcel.send = {};
@@ -479,6 +481,9 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
       //loadAxios();
       //this.loadData();
       //this.loadFetch();
+
+      this.parcelNumber = "TST-7"+ Math.floor(100000 + Math.random() * 900000);
+      this.parcelDescription = "Отправка карты Клиенту";
       this.sendBuilding = 1;
       this.sendFlat = 1;
 
@@ -669,7 +674,8 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     selectedSendAddres: null,
     selectedSendCity: null,
 
-
+    parcelNumber: null,
+    parcelDescription: null,
     parcelDeliveryDate: null,
     parcelSendingDate: null,
     parcelStickerUrl: null,
@@ -722,7 +728,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     locat: null,
     error: null,
 
-    debugMode: false
+    debugMode: true
   }
 })
 

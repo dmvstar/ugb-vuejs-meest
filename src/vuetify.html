@@ -286,7 +286,16 @@
           <!--Посылка -->
           <v-row>
             <v-col cols="12" sm="4">
-              <label>Даты отправления:</label>
+              <label>Информация о посылке:</label>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col cols="12" sm="6">
+              <v-text-field type="text" v-model="parcelNumber" placeholder="Номер" label="Номер" /><br>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <v-text-field type="text" v-model="parcelDescription" placeholder="Назначение" label="Назначение" /><br>
             </v-col>
           </v-row>
 
@@ -341,12 +350,12 @@
                 <tr>
                   <td width="5%"></td>
                   <td width="25%">Номер</td>
-                  <td>2</td>
+                  <td>{{parcelNumber}}</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>Назначение</td>
-                  <td>3</td>
+                  <td>{{parcelDescription}}</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -364,12 +373,12 @@
                 <tr>
                   <td></td>
                   <td>Отделение</td>
-                  <td></td>
+                  <td>{{selectedBranch}}</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>Адрес</td>
-                  <td></td>
+                  <td>{{sendAddress}}</td>
                 </tr>
                 <tr>
                   <td colspan="2">Получатель<br></td>
@@ -377,7 +386,7 @@
                 <tr>
                   <td></td>
                   <td>ФИО</td>
-                  <td></td>
+                  <td>{{recvLastName}} {{recvFirstName}} {{recvFatherName}}</td>
                 </tr>
                 <tr>
                   <td></td>
