@@ -348,9 +348,13 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
     },
 
     btnCancelParcelMeest: function(event) {
-alert('1 btnCancelParcelMeest, ' + this.parcelDataId);
+//alert('1 btnCancelParcelMeest, ' + this.parcelDataId);
+
+      this.dialogCreateParcel = true;
+
+
       if( this.parcelDataId !== null ) {
-        this.cancelParcelMeest();
+        //this.cancelParcelMeest();
       }
     },
 
@@ -734,6 +738,8 @@ alert("1 cancelParcelMeest" + JSON.stringify(data));
     totalVuePackages: null,
     locat: null,
     error: null,
+
+    dialogCreateParcel: false,
 
     debugMode: false
   }
