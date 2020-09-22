@@ -13,6 +13,11 @@
 <body>
 
   <div id="app">
+    <style>
+      table.v-simple-table thead th {
+        font-size: 20px !important;
+        }
+    </style>
 
     <v-app>
       <v-main>
@@ -20,14 +25,14 @@
 
           <v-row justify="center" align="center">
             <v-col cols="12" sm="4">
-              <img height="100" src="ecobank_2.png" @onclick="switchLigthDark()"></img>
+              <img height="100" src="https://raw.githubusercontent.com/dmvstar/vue-js-examples/master/src/ecobank_2.png" @onclick="switchLigthDark()"></img>
             </v-col>
             <v-col cols="12" sm="4" align="center">
               <h1>UGB MeestUA</h1>
               <v-switch @change="switchLigthDark()" label="Be on the dark side....">Be on the dark side....</v-switch>
             </v-col>
             <v-col cols="12" sm="4">
-              <img height="100" src="ecobank_2.png"></img>
+              <img height="100" src="https://raw.githubusercontent.com/dmvstar/vue-js-examples/master/src/ecobank_2.png"></img>
             </v-col>
           </v-row>
           <!--Отправитель -->
@@ -335,11 +340,11 @@
           <v-row>
             <v-col cols="12" sm="12">
 
-              <v-simple-table>
+              <v-simple-table class="elevation-2">
                  <template v-slot:default>
               <thead>
                 <tr>
-                  <th colspan="3">Информация для создания заявки</th>
+                  <th colspan="3" color="red">Информация для создания заявки</th>
                 </tr>
               </thead>
               <tbody>
@@ -413,26 +418,19 @@
 
 
           <v-row justify="center">
-             <v-dialog v-model="dialogCreateParcel" persistent max-width="290">
-               <!--template v-slot:activator="{ on, attrs }">
-                 <v-btn
-                   color="primary"
-                   dark
-                   v-bind="attrs"
-                   v-on="on"
-                 >
-                   Open Dialog
-                 </v-btn>
-               </template-->
+             <v-dialog v-model="dialogCreateParcel" persistent max-width="500">
+
                <v-card>
-                 <v-card-title class="headline">Use Google's location service?</v-card-title>
-                 <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+                 <v-card-title class="headline">Подтвердите отправку посылки и вызов курьера</v-card-title>
+                 <v-card-text>Проверте введенные данные и подтвердите их правильность. После создания заявки и вызова курьера отменить заявку сможет только сотрудник MeestUA.</v-card-text>
+
                  <v-card-actions>
                    <v-spacer></v-spacer>
-                   <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Disagree</v-btn>
-                   <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Agree</v-btn>
+                   <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Проверить</v-btn>
+                   <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Создать</v-btn>
                  </v-card-actions>
                </v-card>
+
              </v-dialog>
            </v-row>
 

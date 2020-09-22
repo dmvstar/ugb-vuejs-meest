@@ -1,4 +1,3 @@
-//import axios from "axios";
 
 var urls = [
   "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/",
