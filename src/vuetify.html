@@ -427,7 +427,7 @@
                  <v-card-actions>
                    <v-spacer></v-spacer>
                    <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Проверить</v-btn>
-                   <v-btn color="red darken-1" text @click="dialogCreateParcel = false">Создать</v-btn>
+                   <v-btn color="red darken-1" text @click="btnApproveCreateParcelMeest">Создать</v-btn>
                  </v-card-actions>
                </v-card>
 
@@ -441,7 +441,7 @@
               </br>
               <v-btn block color="secondary" v-on:click="btnGetParcelSticker" :disabled="isGetParcelStickerDisabled">Получить стикер</v-btn>
               </br>
-              <v-btn block color="error" v-on:click="btnCancelParcelMeest">Отменить заявку на посылку и вызов курьера</v-btn>
+              <!--v-btn block color="error" v-on:click="btnCancelParcelMeest">Отменить заявку на посылку и вызов курьера</v-btn-->
             </v-col>
           </v-row>
 

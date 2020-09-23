@@ -332,12 +332,21 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
       if( this.verifyForm() ) this.isCreateParcelMeestDisabled = false;
     },
 
-    btnCreateParcelMeest: function(event) {
-//alert('1 btnCreateParcelMeest, ' + this.verifyForm());
-      this.dialogCreateParcel = true;
+    btnApproveCreateParcelMeest: function(event) {
+      this.dialogCreateParcel = false;
       if( this.verifyForm() ) {
          this.createParcelMeest();
       }
+    },
+
+    btnCancelCreateParcelMeest: function(event) {
+      this.dialogCreateParcel = false;
+    },
+
+
+    btnCreateParcelMeest: function(event) {
+//alert('1 btnCreateParcelMeest, ' + this.verifyForm());
+      this.dialogCreateParcel = true;
     },
 
     btnGetParcelSticker: function(event) {
