@@ -334,6 +334,7 @@ alert("createParcelMeestRequest 4 " + JSON.stringify(result, null, ' '));
 
     btnCreateParcelMeest: function(event) {
 //alert('1 btnCreateParcelMeest, ' + this.verifyForm());
+      this.dialogCreateParcel = true;
       if( this.verifyForm() ) {
          this.createParcelMeest();
       }
