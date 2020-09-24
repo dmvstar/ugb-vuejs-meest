@@ -1,4 +1,4 @@
-Vue.use(Vuetify);
+//Vue.use(Vuetify);
 
 new Vue({
 
