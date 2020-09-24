@@ -10,37 +10,79 @@
 </head>
 <body>
   <div id="app">
-    <v-app>
-      <v-main>
-        <v-container>
-            <v-layout row class="text-xs-center">
-              <v-flex xs3 style="background-image: url('http://cdn.wallpapersafari.com/7/86/gqiGH7.jpg')">
-                <v-card height="500px"></v-card>
-              </v-flex>
-              <v-flex xs4 class="grey lighten-4">
-                <v-container style="position: relative;top: 13%;" class="text-xs-center">
-                  <v-card flat>
-                    <v-card-title primary-title>
-                      <h4>Login</h4>
-                    </v-card-title>
+    <template>
+      <v-app>
+        <v-main>
+          <v-container
+            class="fill-height"
+            fluid
+          >
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-col
+                cols="12"
+                sm="8"
+                md="4"
+              >
+                <v-card class="elevation-12">
+                  <v-toolbar
+                    color="primary"
+                    dark
+                    flat
+                  >
+                    <v-toolbar-title>Login form</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-btn
+                        
+                          icon
+                          large
+                          target="_blank"
+                          v-on="on"
+                        >
+                          <v-icon>mdi-code-tags</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>Source</span>
+                    </v-tooltip>
+                  </v-toolbar>
+                  <v-card-text>
                     <v-form>
-                    <v-text-field name="Username" label="Username"></v-text-field>
-                    <v-text-field name="Password" label="Password" type="password"></v-text-field>
-                    <v-card-actions>
-                      <v-btn primary large block>Login</v-btn>
-                    </v-card-actions>
+                      <v-text-field
+                        label="Login"
+                        name="login"
+                        prepend-icon="mdi-account"
+                        type="text"
+                      ></v-text-field>
+
+                      <v-text-field
+                        id="password"
+                        label="Password"
+                        name="password"
+                        prepend-icon="mdi-lock"
+                        type="password"
+                      ></v-text-field>
                     </v-form>
-                  </v-card>
-                </v-container>
-              </v-flex>
-            </v-layout>
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="primary">Login</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
           </v-container>
-      </v-main>
-    </v-app>
+        </v-main>
+      </v-app>
+    </template>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
   <script>
     new Vue({
       el: '#app',
