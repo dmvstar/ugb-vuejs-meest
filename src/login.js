@@ -1,11 +1,26 @@
+Vue.use(Vuetify);
+
 new Vue({
+
   el: '#app',
 
-  return data(){
-    user :{
+    vuetify: new Vuetify({
+      theme: {
+        disable: false,
+        dark: true,
+        //themes: { dark },
+      },
+    }
+   ),
+
+   data: {
+
+    user: {
       username: null,
       password: null
     }
 
   }
-})
+});
+
+

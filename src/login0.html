@@ -11,13 +11,12 @@
 </head>
 
 <body>
-  <div>
-    <v-app>
-      <v-main>
-        <v-container>
 
-
-   <v-layout row class="text-xs-center">
+<div id="app">
+<v-app>
+  <v-main>
+    <v-container>
+    <v-layout row class="text-xs-center">
       <v-flex xs3 style="background-image: url('http://cdn.wallpapersafari.com/7/86/gqiGH7.jpg')">
         <v-card height="500px"></v-card>
       </v-flex>
@@ -28,8 +27,8 @@
               <h4>Login</h4>
             </v-card-title>
             <v-form>
-            <v-text-field prepend-icon="person" v-model="user.username" name="user" label="Пользователь" placeholder="Введите логин по
-            <v-text-field prepend-icon="lock"   v-model="user.password" name="pass" label="Пароль" placeholder="Введите пароль" type="
+            <v-text-field prepend-icon="person" v-model="user.username" name="user" label="Пользователь" placeholder="Введите логин пользователя"></v-text-field>
+            <v-text-field prepend-icon="lock"   v-model="user.password" name="pass" label="Пароль" placeholder="Введите пароль" type="password"></v-text-field>
             <v-card-actions>
               <v-btn primary large block>Login</v-btn>
             </v-card-actions>
@@ -39,9 +38,6 @@
       </v-flex>
     </v-layout>
 
-
-
-
         </v-container>
       </v-main>
     </v-app>
@@ -49,9 +45,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-
+    
   <script type="text/javascript" src="login.js"></script>
+  <!--script src="/public/meest/ui/login.js"></script-->
 
 </body>
-
 </html>
