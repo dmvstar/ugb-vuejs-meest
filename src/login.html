@@ -28,7 +28,7 @@
               >
                 <v-card class="elevation-12">
                   <v-toolbar
-                    color="primary"
+                    color="error"
                     dark
                     flat
                   >
@@ -58,6 +58,8 @@
                         placeholder="Введите имя пользователя"
                         prepend-icon="mdi-account"
                         type="text"
+                        :rules="loginRules"
+                        required
                       ></v-text-field>
 
                       <v-text-field
@@ -73,7 +75,7 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary">Подтвердить</v-btn>
+                    <v-btn href="index.html" color="primary">Подтвердить</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-col>
@@ -98,13 +100,29 @@
           },
         }
       ),
+
+
       data:  {
         user: {
           username: null,
           password: null
+        },
+        loginRules: [
+          v => !!v || "Required",
+          v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+        ],
+        rules: {
+          required: value => !!value || "Required.",
+          min: v => (v && v.length >= 8) || "Min 8 characters"
         }
-      }
+
+      },
+
+
     })
   </script>
 </body>
 </html>
+<!--
+https://www.codeply.com/p/hBkZaWgmnk
+-->
