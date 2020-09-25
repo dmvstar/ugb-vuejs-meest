@@ -52,15 +52,19 @@
                   <v-card-text>
                     <v-form>
                       <v-text-field
-                        label="Login"
+                        label="Пользователь"
                         name="login"
+                        v-model="user.username"
+                        placeholder="Введите имя пользователя"
                         prepend-icon="mdi-account"
                         type="text"
                       ></v-text-field>
 
                       <v-text-field
                         id="password"
-                        label="Password"
+                        v-model="user.password"
+                        placeholder="Введите пароль"
+                        label="Пароль"
                         name="password"
                         prepend-icon="mdi-lock"
                         type="password"
@@ -69,7 +73,7 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary">Login</v-btn>
+                    <v-btn color="primary">Подтвердить</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-col>
