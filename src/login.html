@@ -58,7 +58,7 @@
                         placeholder="Введите имя пользователя"
                         prepend-icon="mdi-account"
                         type="text"
-                        :rules="loginRules"
+                        :rules="[loginRules.required, loginRules.min]"
                         required
                       ></v-text-field>
 
@@ -70,7 +70,7 @@
                         name="password"
                         prepend-icon="mdi-lock"
                         type="password"
-                        :rules="[rules.required, rules.min]"
+                        :rules="[passwordRules.required, passwordRules.min]"
                         min
                       ></v-text-field>
                     </v-form>
@@ -109,14 +109,20 @@
           username: null,
           password: null
         },
-        loginRules: [
+
+        emailRules: [
           v => !!v || "Required",
           v => /.+@.+\..+/.test(v) || "E-mail must be valid"
         ],
 
-        rules: {
-          required: value => !!value || "Required.",
-          min: v => (v && v.length >= 8) || "Min 8 characters"
+        loginRules: {
+          required: value => !!value || "Поле обязательно.",
+          min: v => (v && v.length >= 4) || "Мин 4 символа"
+        },
+
+        passwordRules: {
+          required: value => !!value || "Поле обязательно.",
+          min: v => (v && v.length >= 8) || "Мин 8 символа"
         }
 
       },
