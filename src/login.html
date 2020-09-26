@@ -70,6 +70,7 @@
                         name="password"
                         prepend-icon="mdi-lock"
                         type="password"
+                        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                         :rules="[passwordRules.required, passwordRules.min]"
                         min
                       ></v-text-field>
@@ -77,6 +78,7 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
+                    <v-btn color="secondary" @click="user.username='', user.password=''">Очистить</v-btn>
                     <v-btn href="index.html" color="primary">Подтвердить</v-btn>
                   </v-card-actions>
                 </v-card>
