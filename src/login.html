@@ -78,7 +78,7 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="secondary" @click="user.username='', user.password=''">Очистить</v-btn>
+                    <v-btn color="secondary" @click="user.username='', user.password='', verify=false">Очистить</v-btn>
                     <v-btn href="index.html" color="primary">Подтвердить</v-btn>
                   </v-card-actions>
                 </v-card>
@@ -96,6 +96,7 @@
   <script>
     new Vue({
       el: '#app',
+
       vuetify: new Vuetify({
           theme: {
             disable: false,
@@ -104,9 +105,24 @@
           },
         }
       ),
+      computed : {
+          user_username : function(){
+              //alert("user_username "+this.user.username);
+              return this.user.username;
+          },
+      },
 
+      watch: {
+        user_username: function(newQuestion, oldQuestion) {
+          //alert("user_username "+newQuestion);
+          this.verify = false;
+          alert("user_username "+newQuestion+" "+this.verify);
+        }
+      },
 
       data:  {
+
+        verify: true,
         user: {
           username: null,
           password: null
@@ -118,13 +134,13 @@
         ],
 
         loginRules: {
-          required: value => !!value || "Поле обязательно.",
-          min: v => (v && v.length >= 4) || "Мин 4 символа"
+          required: value => ( !!value && this.verify )   || "Поле обязательно.",
+          min: v => (this.verify && (v && v.length >= 4)) || "Мин 4 символа"
         },
 
         passwordRules: {
-          required: value => !!value || "Поле обязательно.",
-          min: v => (v && v.length >= 8) || "Мин 8 символа"
+          required: value => ( !!value && this.verify ) || "Поле обязательно.",
+          min: v => (this.verify && v && v.length >= 8) || "Мин 8 символа"
         }
 
       },
