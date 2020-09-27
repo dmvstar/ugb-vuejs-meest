@@ -134,13 +134,15 @@
         ],
 
         loginRules: {
-          required: value => ( !!value && this.verify )   || "Поле обязательно.",
-          min: v => (this.verify && (v && v.length >= 4)) || "Мин 4 символа"
+          //required: value => ( !!value && this.verify )   || "Поле обязательно.",
+          //min: v => (this.verify && (v && v.length >= 4)) || "Мин 4 символа"
+          required: value => (!!this.verify)   || "Поле обязательно.",
+          min: v => (this.verify) || "Мин 4 символа"
         },
 
         passwordRules: {
-          required: value => ( !!value && this.verify ) || "Поле обязательно.",
-          min: v => (this.verify && v && v.length >= 8) || "Мин 8 символа"
+          required: value => (!!value ) || "Поле обязательно.",
+          min: v => ( v && v.length >= 8) || "Мин 8 символа"
         }
 
       },
