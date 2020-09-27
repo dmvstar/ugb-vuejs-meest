@@ -37,12 +37,10 @@
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
                         <v-btn
-
                           icon
                           large
                           target="_blank"
-                          v-on="on"
-                        >
+                          v-on="on">
                           <v-icon>mdi-code-tags</v-icon>
                         </v-btn>
                       </template>
@@ -50,7 +48,8 @@
                     </v-tooltip>
                   </v-toolbar>
                   <v-card-text>
-                    <v-form>
+
+                    <v-form ref="form">
                       <v-text-field
                         label="Пользователь"
                         name="login"
@@ -74,16 +73,23 @@
                         :rules="[passwordRules.required, passwordRules.min]"
                         min
                       ></v-text-field>
+                      <!--
+                      :rules="[passwordRules.required, passwordRules.min]"
+                    -->
                     </v-form>
+
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="secondary" @click="user.username='', user.password='', verify=false">Очистить</v-btn>
+                    <v-btn color="secondary" @click="resetForm">Очистить</v-btn>
                     <v-btn href="index.html" color="primary">Подтвердить</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-col>
             </v-row>
+            <!--v-row>
+              {{this.verify}}
+            </v-row-->
           </v-container>
         </v-main>
       </v-app>
@@ -94,7 +100,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 
   <script>
-    new Vue({
+  new Vue({
       el: '#app',
 
       vuetify: new Vuetify({
@@ -112,37 +118,47 @@
           },
       },
 
+      methods:{
+        resetForm: function(){
+          this.$refs.form.reset();
+          this.verify = false;
+        }
+      },
+
       watch: {
         user_username: function(newQuestion, oldQuestion) {
-          //alert("user_username "+newQuestion);
-          this.verify = false;
-          alert("user_username "+newQuestion+" "+this.verify);
+          //alert("1user_username "+ newQuestion+" "+this.verify);
+          if(newQuestion && newQuestion.length>0)
+            this.verify = true;
+          //alert("user_username "+(newQuestion)+" "+this.verify);
+          //alert("2user_username "+ newQuestion+" "+this.verify);
         }
       },
 
       data:  {
 
         verify: true,
+
         user: {
           username: null,
           password: null
         },
-
+        show1: false,
         emailRules: [
           v => !!v || "Required",
           v => /.+@.+\..+/.test(v) || "E-mail must be valid"
         ],
 
         loginRules: {
-          //required: value => ( !!value && this.verify )   || "Поле обязательно.",
-          //min: v => (this.verify && (v && v.length >= 4)) || "Мин 4 символа"
-          required: value => (!!this.verify)   || "Поле обязательно.",
-          min: v => (this.verify) || "Мин 4 символа"
+          required: value => (!!value)   || "Поле обязательно.",
+          min: v => ((v && v.length >= 4)) || "Мин 4 символа"
+          //required: value => (!!this.verify)   || "Поле обязательно. "+value,
+          //min: v => (this.verify) || "Мин 4 символа"
         },
 
         passwordRules: {
-          required: value => (!!value ) || "Поле обязательно.",
-          min: v => ( v && v.length >= 8) || "Мин 8 символа"
+          required: value => (!!value) || "Поле обязательно.",
+          min: v => (v && v.length >= 8) || "Мин 8 символа"
         }
 
       },
@@ -154,4 +170,5 @@
 </html>
 <!--
 https://www.codeply.com/p/hBkZaWgmnk
+https://vuetifyjs.com/en/components/forms/#vuelidate
 -->
