@@ -68,7 +68,8 @@
                         label="Пароль"
                         name="password"
                         prepend-icon="mdi-lock"
-                        type="password"
+                        :type="show1 ? 'text' : 'password'"
+                        @click:append="show1 = !show1"
                         :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                         :rules="[passwordRules.required, passwordRules.min]"
                         min
