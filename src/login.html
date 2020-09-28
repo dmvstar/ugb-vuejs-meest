@@ -49,7 +49,10 @@
                   </v-toolbar>
                   <v-card-text>
 
-                    <v-form ref="form">
+                    <v-form
+                    v-model="valid"
+                    lazy-validation
+                    ref="form">
                       <v-text-field
                         label="Пользователь"
                         name="login"
@@ -67,6 +70,7 @@
                         placeholder="Введите пароль"
                         label="Пароль"
                         name="password"
+
                         prepend-icon="mdi-lock"
                         :type="show1 ? 'text' : 'password'"
                         @click:append="show1 = !show1"
@@ -82,8 +86,8 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="secondary" @click="resetForm">Очистить</v-btn>
-                    <v-btn href="index.html" color="primary">Подтвердить</v-btn>
+                    <v-btn class="mr-4" color="secondary" @click="resetForm">Очистить</v-btn>
+                    <v-btn class="mr-4" @click="submitForm" :disabled="!valid" color="green darken-2">Подтвердить</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-col>
@@ -123,6 +127,16 @@
         resetForm: function(){
           this.$refs.form.reset();
           this.verify = false;
+          this.valid = false;
+        },
+
+        submitForm: function(){
+          if(this.$refs.form.validate()) {
+            window.open("index.html","_self");
+          } else {
+            this.verify = false;
+            this.valid = false;
+          }
         }
       },
 
@@ -139,6 +153,7 @@
       data:  {
 
         verify: true,
+        valid: false,
 
         user: {
           username: null,
