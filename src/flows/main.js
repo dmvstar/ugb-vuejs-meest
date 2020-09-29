@@ -750,6 +750,12 @@ alert("1 cancelParcelMeest" + JSON.stringify(data));
 
     dialogCreateParcel: false,
 
+    dialog: {
+      show: false,
+      title: "",
+      info:""
+    },
+
     debugMode: false
   }
 })

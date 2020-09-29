@@ -417,22 +417,7 @@
           </v-row>
 
 
-          <v-row justify="center">
-             <v-dialog v-model="dialogCreateParcel" persistent max-width="500">
 
-               <v-card>
-                 <v-card-title class="headline">Подтвердите отправку посылки и вызов курьера</v-card-title>
-                 <v-card-text>Проверте введенные данные и подтвердите их правильность. После создания заявки и вызова курьера отменить заявку сможет только сотрудник MeestUA.</v-card-text>
-
-                 <v-card-actions>
-                   <v-spacer></v-spacer>
-                   <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Проверить</v-btn>
-                   <v-btn color="red darken-1" text @click="btnApproveCreateParcelMeest">Создать</v-btn>
-                 </v-card-actions>
-               </v-card>
-
-             </v-dialog>
-           </v-row>
 
 
           <v-row>
@@ -450,6 +435,42 @@
               {{error}}
             </v-col>
           </v-row>
+
+          <v-row justify="center">
+             <v-dialog v-model="dialogCreateParcel" persistent max-width="400">
+
+               <v-card>
+                 <v-card-title class="headline">Подтвердите отправку посылки и вызов курьера</v-card-title>
+                 <v-card-text>Проверте введенные данные и подтвердите их правильность. После создания заявки и вызова курьера отменить заявку сможет только сотрудник MeestUA.</v-card-text>
+
+                 <v-card-actions>
+                   <v-spacer></v-spacer>
+                   <v-btn color="green darken-1" text @click="dialogCreateParcel = false">Проверить</v-btn>
+                   <v-btn color="red darken-1" text @click="btnApproveCreateParcelMeest">Создать</v-btn>
+                 </v-card-actions>
+               </v-card>
+
+             </v-dialog>
+           </v-row>
+
+
+           <v-row justify="center">
+              <v-dialog v-model="dialog.show" persistent max-width="600">
+
+                <v-card>
+                  <v-card-title class="headline">{{dialog.title}}</v-card-title>
+                  <v-card-text>{{dialog.info}}</v-card-text>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="green darken-1" text @click="dialog.show = false">Закрыть</v-btn>
+                  </v-card-actions>
+                </v-card>
+
+              </v-dialog>
+            </v-row>
+
+
 
           <div v-if="example != null">
 
@@ -479,6 +500,8 @@
                 <v-text-field type="text" v-model="recvFlat" placeholder="4" label="4" /><br>
               </v-col>
             </v-row>
+
+
           </div>
 
         </v-container>

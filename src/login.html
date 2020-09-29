@@ -44,9 +44,10 @@
                           <v-icon>mdi-code-tags</v-icon>
                         </v-btn>
                       </template>
-                      <span>Source</span>
+                      <span>Справка</span>
                     </v-tooltip>
                   </v-toolbar>
+
                   <v-card-text>
 
                     <v-form
@@ -84,6 +85,13 @@
                     </v-form>
 
                   </v-card-text>
+
+
+
+                  <v-card-text color="orange" v-if="formError == true">
+                    <h3 class="mx-auto yellow--text text--darken-2">{{formMessage}}</h3>
+                  </v-card-text>
+
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn class="mr-4" color="secondary" @click="resetForm">Очистить</v-btn>
@@ -92,7 +100,12 @@
                 </v-card>
               </v-col>
             </v-row>
+
             <!--v-row>
+              <h3 class="mx-auto">Spacing</h3>
+            </v-row>
+
+            <v-row>
               {{this.verify}}
             </v-row-->
           </v-container>
@@ -132,11 +145,17 @@
 
         submitForm: function(){
           if(this.$refs.form.validate()) {
-            window.open("index.html","_self");
+            this.checkLogin();
           } else {
             this.verify = false;
             this.valid = false;
           }
+        },
+
+        checkLogin: function(){
+
+           window.open("index.html","_self");
+
         }
       },
 
@@ -152,6 +171,8 @@
 
       data:  {
 
+        formError: false,
+        formMessage: "Логин не верен",
         verify: true,
         valid: false,
 
