@@ -82,14 +82,8 @@
                       <!--
                       :rules="[passwordRules.required, passwordRules.min]"
                     -->
+                    <h3 v-if="formError == true" class="mx-auto yellow--text text--darken-2">{{formMessage}}</h3>
                     </v-form>
-
-                  </v-card-text>
-
-
-
-                  <v-card-text color="orange" v-if="formError == true">
-                    <h3 class="mx-auto yellow--text text--darken-2">{{formMessage}}</h3>
                   </v-card-text>
 
                   <v-card-actions>
@@ -100,7 +94,6 @@
                 </v-card>
               </v-col>
             </v-row>
-
             <!--v-row>
               <h3 class="mx-auto">Spacing</h3>
             </v-row>
@@ -141,6 +134,8 @@
           this.$refs.form.reset();
           this.verify = false;
           this.valid = false;
+          this.count = 0;
+          this.formError = false;
         },
 
         submitForm: function(){
@@ -154,7 +149,14 @@
 
         checkLogin: function(){
 
-           window.open("index.html","_self");
+           if(this.count==3) {
+             this.formError = false;
+             window.open("index.html","_self");
+           } else {
+             this.count++;
+             this.formError = true;
+             this.formMessage = "Логин не верен, осталось ("+(3-this.count)+") попытки."
+           }
 
         }
       },
@@ -171,6 +173,7 @@
 
       data:  {
 
+        count: 0,
         formError: false,
         formMessage: "Логин не верен",
         verify: true,
