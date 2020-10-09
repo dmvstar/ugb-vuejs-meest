@@ -171,7 +171,7 @@
         }
       },
 
-      data:  {
+      data: function () { return {
 
         count: 0,
         formError: false,
@@ -201,7 +201,7 @@
           min: v => (v && v.length >= 8) || "Мин 8 символа"
         }
 
-      },
+      }},
 
 
     })
