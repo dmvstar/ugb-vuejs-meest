@@ -8,6 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <style>
+        #documents table thead tr th {
+            font-size: +18px;
+            background: text--primary;
+        }
+        #documents table thead tr th:nth-child(1) {
+            font-size: +24px;
+            background: green;
+        }
+        #documents table thead tr th:nth-child(2) {
+            background: red;
+        }        
+    </style>
+
 </head>
 
 <body>
@@ -38,26 +53,55 @@
                                             <span>Справка</span>
                                         </v-tooltip>
                                     </v-toolbar>
-                                    <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
-                                    </v-text-field>
+                                    <v-row>
+                                        <v-col cols="12" sm="12" md="12">
+                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
+                                            </v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="4">
+                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
+                                            </v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="8">
+                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
+                                            </v-text-field>
+                                        </v-col>
+                                    </v-row>
+
                                     <v-row align="start" justify="center">
                                         <v-col cols="12" sm="12" md="12">
-                                            <v-simple-table>
+                                            <v-simple-table id="documents">
                                                 <template v-slot:default>
                                                     <thead>
                                                         <tr>
                                                             <th class="text-left">
-                                                                Name
+                                                                Документ
                                                             </th>
                                                             <th class="text-left">
-                                                                Calories
+                                                                Серия
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Номер
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Выдан
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Выдан
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Действителен
                                                             </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr v-for="item in desserts" :key="item.name">
-                                                            <td>{{ item.name }}</td>
-                                                            <td>{{ item.calories }}</td>
+                                                        <tr v-for="item in desserts" :key="item.type">
+                                                            <td>{{ item.type }}</td>
+                                                            <td>{{ item.serial }}</td>
+                                                            <td>{{ item.number }}</td>
+                                                            <td>{{ item.issued }}</td>
+                                                            <td>{{ item.issuer }}</td>
+                                                            <td>{{ item.expired }}</td>
                                                         </tr>
                                                     </tbody>
                                                 </template>
@@ -93,16 +137,28 @@
                 return {
                     desserts: [
                         {
-                            name: 'Frozen Yogurt',
-                            calories: 159,
+                            type: 'Паспорт',
+                            serial: 'АА',
+                            number: '223412',
+                            issued: '24.01.1997',
+                            issuer: 'РУ ГУ',
+                            expired: '',
                         },
                         {
-                            name: 'Ice cream sandwich',
-                            calories: 237,
+                            type: 'ИД карта',
+                            serial: '',
+                            number: '223412',
+                            issued: '24.06.2020',
+                            issued: '1276',
+                            expired: '24.06.2040',
                         },
                         {
-                            name: 'Eclair',
-                            calories: 262,
+                            type: 'Заграничный',
+                            serial: 'АА',
+                            number: '654542',
+                            issued: '24.01.2019',
+                            issued: '3422',
+                            expired: '24.01.2029',
                         }
                     ]
                 }
