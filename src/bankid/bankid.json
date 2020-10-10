@@ -1,0 +1,60 @@
+{
+  bankid: {
+    person: {
+      fields: {
+          lastName* : string,
+          firstName* : string,
+          middleName* : string,
+          іnn* : string,
+          birthDay* : string,   dd.mm.yyyy
+          sex* : string, M – чоловіча або F ‒ жіноча
+          phone : string, 380ХХХХХХХХХ
+          email : string,
+          uaResident : string
+      }
+    },
+    addresses: [{
+      type* : string, factual – фактична адреса проживання, juridical - адреса реєстрації.
+      fields: {
+        country*
+        state*
+        area*
+        city*
+        street*
+        houseNo*
+        flatNo*
+      }
+    }],
+
+    documents: [{
+      type* passport,
+        passport – паспорт;
+        idpassport – id-картка;
+        zpassport – закордонний
+        ident – посвідчення особи у відповідності до вимог законодавства України.
+      fields: {
+        typeName*
+        series*
+        number*
+        issue*
+        dateIssue*
+        dateExpiration*
+        issueCountryIso2*
+      }
+    }],
+
+    scans: [{
+      type: string
+        passport – паспорт;
+        idpassport – id-картка;
+        zpassport – закордонний
+        inn – реєстраційний номер облікової картки платника податків;
+        personalPhoto – фото особи (анфас).
+      fields: {
+        scanFile: BASE64
+        dateCreate: dd.mm.yyyy
+        extension: zip если архив
+      }
+    }]
+  }
+}
