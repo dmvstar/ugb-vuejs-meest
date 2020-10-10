@@ -1,0 +1,81 @@
+{
+    "sex": [
+        {
+            "ibancode": "M",
+            "ibanname": "Man",
+            "wbid": ""
+        },
+        {
+            "ibancode": "F",
+            "ibanname": "Woman",
+            "wbid": ""
+        }
+    ],
+    "addresses": [
+        {
+            "ibancode": "factual",
+            "ibanname": "проживання",
+            "wbid": ""
+        },
+        {
+            "ibancode": "juridical",
+            "ibanname": "реєстрації",
+            "wbid": ""
+        }
+    ],
+    "documents": [
+        {
+            "ibancode": "passport–",
+            "ibanname": "паспорт",
+            "wbid": ""
+        },
+        {
+            "ibancode": "idpassport–",
+            "ibanname": "паспорт",
+            "wbid": "404"
+        },
+        {
+            "ibancode": "passport–",
+            "ibanname": "id - картка",
+            "wbid": ""
+        },
+        {
+            "ibancode": "zpassport–",
+            "ibanname": "закордонний",
+            "wbid": ""
+        },
+        ,
+        {
+            "ibancode": "ident",
+            "ibanname": "посвідчення особи у відповідності до вимог законодавства України",
+            "wbid": ""
+        }
+    ],
+    "scans": [
+        {
+            "ibancode": "passport",
+            "ibanname": "паспорт України",
+            "wbid": ""
+        },
+        {
+            "ibancode": "idpassport",
+            "ibanname": "id - картка",
+            "wbid": "404"
+        },
+        {
+            "ibancode": "zpassport",
+            "ibanname": "закордонний",
+            "wbid": ""
+        },
+        {
+            "ibancode": "inn",
+            "ibanname": "реєстраційний номер облікової картки платника податків",
+            "wbid": ""
+        },
+        {
+            "ibancode": "personalPhoto",
+            "ibanname": "фото особи(анфас)",
+            "wbid": ""
+        }
+    ]
+}
