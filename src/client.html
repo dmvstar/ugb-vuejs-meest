@@ -14,13 +14,15 @@
             font-size: +18px;
             background: text--primary;
         }
+
         #documents table thead tr th:nth-child(1) {
             font-size: +24px;
             background: green;
         }
+
         #documents table thead tr th:nth-child(2) {
             background: red;
-        }        
+        }
     </style>
 
 </head>
@@ -55,15 +57,18 @@
                                     </v-toolbar>
                                     <v-row>
                                         <v-col cols="12" sm="12" md="12">
-                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
+                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name"
+                                                required>
                                             </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="4">
-                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
+                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name"
+                                                required>
                                             </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="8">
-                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name" required>
+                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name"
+                                                required>
                                             </v-text-field>
                                         </v-col>
                                     </v-row>
@@ -108,6 +113,52 @@
                                             </v-simple-table>
                                         </v-col>
                                     </v-row>
+
+                                    <v-row align="start" justify="center">
+                                        <v-col cols="12" sm="12" md="12">
+                                            <v-simple-table id="addresses">
+                                                <template v-slot:default>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left">
+                                                                Тип
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Страна
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Область
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Район
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Город
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Улица
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Дом
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr v-for="item in addresses" :key="item.type">
+                                                            <td>{{ item.type }}</td>
+                                                            <td>{{ item.country }}</td>
+                                                            <td>{{ item.state }}</td>
+                                                            <td>{{ item.area }}</td>
+                                                            <td>{{ item.city }}</td>
+                                                            <td>{{ item.street }}</td>
+                                                            <td>{{ item.houseNo }}</td>                          
+                                                        </tr>
+                                                    </tbody>
+                                                </template>
+                                            </v-simple-table>
+                                        </v-col>
+                                    </v-row>
+                                    
                                 </v-form>
                             </v-col>
                         </v-row>
@@ -160,6 +211,29 @@
                             issued: '3422',
                             expired: '24.01.2029',
                         }
+                    ],
+                    addresses: [
+                        {
+                            "type": "factual",
+                            "country": "UA",
+                            "state": "Київська",
+                            "area": "Київ",
+                            "city": "м. Київ",
+                            "street": "вул. Бородинского побоища",
+                            "houseNo": "44",
+                            "flatNo": "341",
+                        },
+                        {
+                            "type": "juridical",
+                            "country": "UA",
+                            "state": "Київська",
+                            "area": "Київ",
+                            "city": "м. Київ",
+                            "street": "вул. Бородинского побоища",
+                            "houseNo": "44",
+                            "flatNo": "341",
+                        }
+
                     ]
                 }
             }
