@@ -44,7 +44,7 @@
                             <v-col cols="12" sm="12" md="10">
                                 <v-form ref="client">
                                     <v-toolbar color="primary" dark flat>
-                                        <v-toolbar-title>Клиент</v-toolbar-title>
+                                        <v-toolbar-title>Клиент BankID</v-toolbar-title>
                                         <v-spacer></v-spacer>
                                         <v-tooltip bottom>
                                             <template v-slot:activator="{ on }">
@@ -57,18 +57,15 @@
                                     </v-toolbar>
                                     <v-row>
                                         <v-col cols="12" sm="12" md="12">
-                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name"
-                                                required>
+                                            <v-text-field v-model="person.lastName" :counter="50" label="Фамилия" required>
                                             </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="4">
-                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name"
-                                                required>
+                                            <v-text-field v-model="person.firstName" :counter="20" label="Имя" required>
                                             </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="8">
-                                            <v-text-field v-model="name" :counter="10" :rules="nameRules" label="Name"
-                                                required>
+                                            <v-text-field v-model="person.middleName" :counter="30" label="Отчество" required>
                                             </v-text-field>
                                         </v-col>
                                     </v-row>
@@ -145,20 +142,20 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr v-for="item in addresses" :key="item.type">
-                                                            <td>{{ item.type }}</td>
+                                                            <td>{{ addresstype(item) }}</td>
                                                             <td>{{ item.country }}</td>
                                                             <td>{{ item.state }}</td>
                                                             <td>{{ item.area }}</td>
                                                             <td>{{ item.city }}</td>
                                                             <td>{{ item.street }}</td>
-                                                            <td>{{ item.houseNo }}</td>                          
+                                                            <td>{{ item.houseNo }}-{{ item.flatNo }}</td>
                                                         </tr>
                                                     </tbody>
                                                 </template>
                                             </v-simple-table>
                                         </v-col>
                                     </v-row>
-                                    
+
                                 </v-form>
                             </v-col>
                         </v-row>
@@ -184,8 +181,52 @@
             }
             ),
 
+            methods: {
+                addresstype: function (item) {
+                    var find = item.type;
+                    var ret = this.addresses_types.find(item => item.ibancode === find);;//    'type';//+ item;
+                    return ret.ibandesc;
+                },
+            },
+
+            computed: {
+                address_type: function (item) {
+                    alert("address_type " + item);
+                    return 'type ' + item;//JSON.stringify(item);
+                },
+            },
+
             data() {
                 return {
+                   
+                    "person": {
+                        "type": "physical",
+                        "lastName": "Кукуцаполь",
+                        "firstName": "Кришна",
+                        "middleName": "Олимпиада",
+                        "іnn": "3347780927",
+                        "birthDay": "28.08.1991",
+                        "sex": "M",
+                        "phone": "380631003256",
+                        "email": "sava@mail.dot.com",
+                        "uaResident": "1",
+                    },
+
+                    "addresses_types": [
+                        {
+                            "ibancode": "factual",
+                            "ibanname": "проживання",
+                            "ibandesc": "Адрес проживання",
+                            "wbid": ""
+                        },
+                        {
+                            "ibancode": "juridical",
+                            "ibanname": "реєстрації",
+                            "ibandesc": "Адрес реєстрації",
+                            "wbid": ""
+                        }
+                    ],
+
                     desserts: [
                         {
                             type: 'Паспорт',

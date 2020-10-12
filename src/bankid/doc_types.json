@@ -1,5 +1,5 @@
 {
-    "sex": [
+    "sex_types": [
         {
             "ibancode": "M",
             "ibanname": "Man",
@@ -11,19 +11,21 @@
             "wbid": ""
         }
     ],
-    "addresses": [
+    "addresses_types": [
         {
             "ibancode": "factual",
             "ibanname": "проживання",
+            "ibandesc": "Адрес проживання",
             "wbid": ""
         },
         {
             "ibancode": "juridical",
             "ibanname": "реєстрації",
+            "ibandesc": "Адрес реєстрації",
             "wbid": ""
         }
     ],
-    "documents": [
+    "documents_types": [
         {
             "ibancode": "passport–",
             "ibanname": "паспорт",
@@ -51,7 +53,7 @@
             "wbid": ""
         }
     ],
-    "scans": [
+    "scans_types": [
         {
             "ibancode": "passport",
             "ibanname": "паспорт України",

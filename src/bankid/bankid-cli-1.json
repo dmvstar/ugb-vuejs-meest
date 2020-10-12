@@ -1,14 +1,16 @@
 {
-    "type": "physical",
-    "lastName": "Кукуцаполь",
-    "firstName": "Кришна",
-    "middleName": "Олимпиада",
-    "іnn": "3347780927",
-    "birthDay": "28.08.1991",
-    "sex": "M",
-    "phone": "380631003256",
-    "email": "sava@mail.dot.com",
-    "uaResident": "1",
+    "person": {
+        "type": "physical",
+        "lastName": "Кукуцаполь",
+        "firstName": "Кришна",
+        "middleName": "Олимпиада",
+        "іnn": "3347780927",
+        "birthDay": "28.08.1991",
+        "sex": "M",
+        "phone": "380631003256",
+        "email": "sava@mail.dot.com",
+        "uaResident": "1",
+    },
     "addresses": [
         {
             "type": "factual",
