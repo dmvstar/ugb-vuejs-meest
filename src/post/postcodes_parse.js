@@ -39,7 +39,8 @@ const file = readline.createInterface({
 // the stream 
 var count = 0;
 file.on('line', (line) => { 
- if(count > 1 && count < 100) {
+// if(count > 1 && count < 100) {
+ if(count > 1) {
   if(count === 100 ) {
     //lineReader.close();
   }
