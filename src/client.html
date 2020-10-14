@@ -159,7 +159,9 @@
                                                             <td>{{ item.dateCreate }}</td>
                                                             <td>{{ item.extension }}</td>
                                                             <td>
-                                                                <v-btn class="mx-2" fab dark small color="pink">
+                                                                <v-btn class="mx-2" 
+                                                                    @click="onButtonViewScanClick(item)"
+                                                                    fab dark small color="pink">
                                                                     <v-icon dark>mdi-account</v-icon>
                                                                 </v-btn>
                                                             </td>
@@ -350,11 +352,14 @@
                     var ret = this.addresses_types.find(item => item.ibancode === find);;//    'type';//+ item;
                     return ret.ibandesc;
                 },
+                onButtonViewScanClick: function (item) {
+                    alert( JSON.stringify(item) );
+                }
             },
 
             computed: {
                 address_type: function (item) {
-                    alert("address_type " + item);
+                    //alert("address_type " + item);
                     return 'type ' + item;//JSON.stringify(item);
                 },
             },
@@ -471,7 +476,7 @@
                             type: 'Фото',
                             dateCreate: '24.01.2019',
                             extension: '',
-                            scanFile: ''
+                            scanFile: '',                     
                         },
                     ],
 
