@@ -56,6 +56,27 @@
                                         </v-tooltip>
                                     </v-toolbar>
                                     <v-row>
+                                        <v-col cols="12" sm="4" >
+                                            <v-text-field v-model="person.іnn" :counter="10" label="ИНН" required>
+                                            </v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-select v-model="person.sex" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.sex" 
+                                            label="Пол" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.sex" 
+                                            :disabled=true
+                                            :counter="1" label="Пол" required>
+                                            </v-text-field>
+                                        </v-col>
+                                    </v-row>
+                                    <v-row>
                                         <v-col cols="12" sm="12" md="12">
                                             <v-text-field v-model="person.lastName" :counter="50" label="Фамилия" required>
                                             </v-text-field>
@@ -97,13 +118,51 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr v-for="item in desserts" :key="item.type">
+                                                        <tr v-for="item in documents" :key="item.type">
                                                             <td>{{ item.type }}</td>
                                                             <td>{{ item.serial }}</td>
                                                             <td>{{ item.number }}</td>
                                                             <td>{{ item.issued }}</td>
                                                             <td>{{ item.issuer }}</td>
                                                             <td>{{ item.expired }}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </template>
+                                            </v-simple-table>
+                                        </v-col>
+                                    </v-row>
+
+
+                                    <v-row align="start" justify="center">
+                                        <v-col cols="12" sm="12" md="12">
+                                            <v-simple-table id="scans">
+                                                <template v-slot:default>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left">
+                                                                Документ
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Дата
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Расширение
+                                                            </th>
+                                                            <th class="text-left">
+                                                                Файл
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr v-for="item in scans" :key="item.type">
+                                                            <td>{{ item.type }}</td>
+                                                            <td>{{ item.dateCreate }}</td>
+                                                            <td>{{ item.extension }}</td>
+                                                            <td>
+                                                                <v-btn class="mx-2" fab dark small color="pink">
+                                                                    <v-icon dark>mdi-account</v-icon>
+                                                                </v-btn>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </template>
@@ -155,6 +214,110 @@
                                             </v-simple-table>
                                         </v-col>
                                     </v-row>
+
+                                    <v-row>
+
+                                        <v-col cols="12" sm="6" >
+                                            <v-select v-model="person.socStatus" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.socStatus" 
+                                            label="Социальный статус" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.socStatus" 
+                                            :disabled=true
+                                            label="Социальный статус" required>
+                                            </v-text-field>
+                                        </v-col>
+
+
+                                        <v-col cols="12" sm="6" >
+                                            <v-select v-model="person.flagPEPs" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.flagPEPs" 
+                                            label="Приндлежность к ПВО" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.flagPEPs" 
+                                            :disabled=true
+                                            label="Приндлежность к ПВО" required>
+                                            </v-text-field>
+                                        </v-col>
+
+
+                                        <v-col cols="12" sm="6" >
+                                            <v-select v-model="person.flagPersonTerror" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.flagPersonTerror" 
+                                            label="Приндлежность к террористам" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.flagPersonTerror" 
+                                            :disabled=true
+                                            label="Приндлежность к террористам" required>
+                                            </v-text-field>
+                                        </v-col>
+
+
+                                        <v-col cols="12" sm="6" >
+                                            <v-select v-model="person.flagRestriction" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.flagRestriction" 
+                                            label="Присутсвует в списках СНБО" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.flagRestriction" 
+                                            :disabled=true
+                                            label="Присутсвует в списках СНБО" required>
+                                            </v-text-field>
+                                        </v-col>
+
+                                        <v-col cols="12" sm="6" >
+                                            <v-select v-model="person.flagTopLevelRisk" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.flagTopLevelRisk" 
+                                            label="Уровент риска" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.flagTopLevelRisk" 
+                                            :disabled=true
+                                            label="Уровент риска" required>
+                                            </v-text-field>
+                                        </v-col>
+
+                                        <v-col cols="12" sm="6" >
+                                            <v-select v-model="person.uaResident" 
+                                            :item-value="value" 
+                                            :item-text="text" 
+                                            :items="dict.uaResident" 
+                                            label="Резидент Украины" 
+                                            required>
+                                            </v-text-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="2" >
+                                            <v-text-field v-model="person.uaResident" 
+                                            :disabled=true
+                                            label="Резидент Украины" required>
+                                            </v-text-field>
+                                        </v-col>
+
+                                    </v-row>
+
 
                                 </v-form>
                             </v-col>
@@ -210,6 +373,12 @@
                         "phone": "380631003256",
                         "email": "sava@mail.dot.com",
                         "uaResident": "1",
+
+                        "socStatus": "",
+                        "flagPEPs": "0",
+                        "flagPersonTerror": "0",
+                        "flagRestriction": "0",
+                        "flagTopLevelRisk": "1",
                     },
 
                     "addresses_types": [
@@ -227,7 +396,7 @@
                         }
                     ],
 
-                    desserts: [
+                    documents: [
                         {
                             type: 'Паспорт',
                             serial: 'АА',
@@ -253,6 +422,7 @@
                             expired: '24.01.2029',
                         }
                     ],
+
                     addresses: [
                         {
                             "type": "factual",
@@ -275,7 +445,70 @@
                             "flatNo": "341",
                         }
 
-                    ]
+                    ],
+
+
+                    scans: [
+                        {
+                            type: 'Паспорт',
+                            dateCreate: '24.01.1997',
+                            extension: '',
+                            scanFile: ''
+                        },
+                        {
+                            type: 'ИД карта',
+                            dateCreate: '24.06.2020',
+                            extension: '',
+                            scanFile: ''
+                        },
+                        {
+                            type: 'Заграничный',
+                            dateCreate: '24.01.2019',
+                            extension: '',
+                            scanFile: ''
+                        },
+                        {
+                            type: 'Фото',
+                            dateCreate: '24.01.2019',
+                            extension: '',
+                            scanFile: ''
+                        },
+                    ],
+
+                    dict:{
+                        sex:[
+                            {value: "M", text: "Чоловічий"},
+                            {value: "F", text: "Жіночий"},
+                        ],
+                        
+                        socStatus: ["студент",
+                         "пенсіонер", 
+                         "тимчасово безробітний", 
+                         "працюючий",
+                         "нерегулярна зайнятість"],
+                        
+                        flagPEPs: [
+                            {value: "0", text: "НЕ належить до категорії PEPs"},
+                            {value: "1", text: "належить до категорії PEPs"},
+                        ],
+                        flagPersonTerror: [
+                            {value: "0", text: "НЕ включена до переліку осіб, пов’язаних зі здійсненням терористичної діяльності"},
+                            {value: "1", text: "включена до переліку осіб, пов’язаних зі здійсненням терористичної діяльності"},
+                        ],
+                        flagRestriction: [
+                            {value: "0", text: "НЕ включена до переліку осіб, щодо яких застосовані персональні санкції РНБОУ"},
+                            {value: "1", text: "включена до переліку осіб, щодо яких застосовані персональні санкції РНБОУ"},
+                        ],
+                        flagTopLevelRisk: [
+                            {value: "0", text: "НЕ призначений високий рівень ризику ПВК/ФТ"},
+                            {value: "1", text: "призначений високий рівень ризику ПВК/ФТ"},
+                        ],
+                        uaResident: [
+                            {value: "0", text: "особа НЕ є резидентом України"},
+                            {value: "1", text: "особа є резидентом України"},
+                        ]
+                        
+                    }
                 }
             }
 
