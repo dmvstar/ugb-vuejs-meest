@@ -57,8 +57,17 @@
                                     </v-toolbar>
                                     <v-row>
                                         <v-col cols="12" sm="4" >
+                                            <h3 class="red--text">Основные данные</h3>
+                                        </v-col>
+                                    </v-row>
+                                    <v-row>
+                                        <v-col cols="12" sm="4" >
                                             <v-text-field v-model="person.іnn" :counter="10" label="ИНН" required>
                                             </v-text-field>
+                                        </v-col>
+                                               <v-col cols="12" sm="4" >
+                                            <v-text-field v-model="person.birthDay" :counter="10" label="Дата рождения" required>
+                                        </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="2" >
                                             <v-select v-model="person.sex" 
@@ -88,6 +97,12 @@
                                         <v-col cols="12" sm="8">
                                             <v-text-field v-model="person.middleName" :counter="30" label="Отчество" required>
                                             </v-text-field>
+                                        </v-col>
+                                    </v-row>
+
+                                    <v-row>
+                                        <v-col cols="12" sm="4" >
+                                            <h3 class="red--text">Документы</h3>
                                         </v-col>
                                     </v-row>
 
@@ -218,6 +233,11 @@
                                     </v-row>
 
                                     <v-row>
+                                        <v-col cols="12" sm="4" >
+                                            <h3 class="red--text" >Дополнительные данные</h3>
+                                        </v-col>
+                                    </v-row>
+                                    <v-row>
 
                                         <v-col cols="12" sm="6" >
                                             <v-select v-model="person.socStatus" 
@@ -319,6 +339,16 @@
                                         </v-col>
 
                                     </v-row>
+
+                                    <v-row>
+                                        <v-col cols="12" sm="12">
+                                          <v-btn block color="primary" v-on:click="btnCheckClient" >Проверить наличие Клиента в АБС</v-btn>
+                                          </br>
+                                          <v-btn block color="secondary" v-on:click="btnCreateCliebt" :disabled="isCreateCliebtDisabled">Создать Клиента в АЬС</v-btn>
+                                          </br>                                          
+                                        </v-col>
+                                    </v-row>
+
 
 
                                 </v-form>
