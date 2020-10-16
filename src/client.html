@@ -56,38 +56,35 @@
                                         </v-tooltip>
                                     </v-toolbar>
                                     <v-row>
-                                        <v-col cols="12" sm="4" >
+                                        <v-col cols="12" sm="4">
                                             <h3 class="red--text">Основные данные</h3>
                                         </v-col>
                                     </v-row>
                                     <v-row>
-                                        <v-col cols="12" sm="4" >
+                                        <v-col cols="12" sm="4">
                                             <v-text-field v-model="person.іnn" :counter="10" label="ИНН" required>
                                             </v-text-field>
                                         </v-col>
-                                               <v-col cols="12" sm="4" >
-                                            <v-text-field v-model="person.birthDay" :counter="10" label="Дата рождения" required>
-                                        </v-text-field>
+                                        <v-col cols="12" sm="4">
+                                            <v-text-field v-model="person.birthDay" :counter="10" label="Дата рождения"
+                                                required>
+                                            </v-text-field>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-select v-model="person.sex" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.sex" 
-                                            label="Пол" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="2">
+                                            <v-select v-model="person.sex" :item-value="value" :item-text="text"
+                                                :items="dict.sex" label="Пол" required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.sex" 
-                                            :disabled=true
-                                            :counter="1" label="Пол" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.sex" :disabled=true :counter="1" label="Пол"
+                                                required>
                                             </v-text-field>
                                         </v-col>
                                     </v-row>
                                     <v-row>
                                         <v-col cols="12" sm="12" md="12">
-                                            <v-text-field v-model="person.lastName" :counter="50" label="Фамилия" required>
+                                            <v-text-field v-model="person.lastName" :counter="50" label="Фамилия"
+                                                required>
                                             </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="4">
@@ -95,13 +92,14 @@
                                             </v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="8">
-                                            <v-text-field v-model="person.middleName" :counter="30" label="Отчество" required>
+                                            <v-text-field v-model="person.middleName" :counter="30" label="Отчество"
+                                                required>
                                             </v-text-field>
                                         </v-col>
                                     </v-row>
 
                                     <v-row>
-                                        <v-col cols="12" sm="4" >
+                                        <v-col cols="12" sm="4">
                                             <h3 class="red--text">Документы</h3>
                                         </v-col>
                                     </v-row>
@@ -174,8 +172,7 @@
                                                             <td>{{ item.dateCreate }}</td>
                                                             <td>{{ item.extension }}</td>
                                                             <td>
-                                                                <v-btn class="mx-2" 
-                                                                    @click="onButtonViewScanClick(item)"
+                                                                <v-btn class="mx-2" @click="onButtonViewScanClick(item)"
                                                                     fab dark small color="pink">
                                                                     <v-icon dark>mdi-account</v-icon>
                                                                 </v-btn>
@@ -233,108 +230,81 @@
                                     </v-row>
 
                                     <v-row>
-                                        <v-col cols="12" sm="4" >
-                                            <h3 class="red--text" >Дополнительные данные</h3>
+                                        <v-col cols="12" sm="4">
+                                            <h3 class="red--text">Дополнительные данные</h3>
                                         </v-col>
                                     </v-row>
                                     <v-row>
 
-                                        <v-col cols="12" sm="6" >
-                                            <v-select v-model="person.socStatus" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.socStatus" 
-                                            label="Социальный статус" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="6">
+                                            <v-select v-model="person.socStatus" :item-value="value" :item-text="text"
+                                                :items="dict.socStatus" label="Социальный статус" required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.socStatus" 
-                                            :disabled=true
-                                            label="Социальный статус" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.socStatus" :disabled=true
+                                                label="Социальный статус" required>
                                             </v-text-field>
                                         </v-col>
 
 
-                                        <v-col cols="12" sm="6" >
-                                            <v-select v-model="person.flagPEPs" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.flagPEPs" 
-                                            label="Приндлежность к ПВО" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="6">
+                                            <v-select v-model="person.flagPEPs" :item-value="value" :item-text="text"
+                                                :items="dict.flagPEPs" label="Приндлежность к ПВО" required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.flagPEPs" 
-                                            :disabled=true
-                                            label="Приндлежность к ПВО" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.flagPEPs" :disabled=true
+                                                label="Приндлежность к ПВО" required>
                                             </v-text-field>
                                         </v-col>
 
 
-                                        <v-col cols="12" sm="6" >
-                                            <v-select v-model="person.flagPersonTerror" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.flagPersonTerror" 
-                                            label="Приндлежность к террористам" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="6">
+                                            <v-select v-model="person.flagPersonTerror" :item-value="value"
+                                                :item-text="text" :items="dict.flagPersonTerror"
+                                                label="Приндлежность к террористам" required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.flagPersonTerror" 
-                                            :disabled=true
-                                            label="Приндлежность к террористам" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.flagPersonTerror" :disabled=true
+                                                label="Приндлежность к террористам" required>
                                             </v-text-field>
                                         </v-col>
 
 
-                                        <v-col cols="12" sm="6" >
-                                            <v-select v-model="person.flagRestriction" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.flagRestriction" 
-                                            label="Присутсвует в списках СНБО" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="6">
+                                            <v-select v-model="person.flagRestriction" :item-value="value"
+                                                :item-text="text" :items="dict.flagRestriction"
+                                                label="Присутсвует в списках СНБО" required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.flagRestriction" 
-                                            :disabled=true
-                                            label="Присутсвует в списках СНБО" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.flagRestriction" :disabled=true
+                                                label="Присутсвует в списках СНБО" required>
                                             </v-text-field>
                                         </v-col>
 
-                                        <v-col cols="12" sm="6" >
-                                            <v-select v-model="person.flagTopLevelRisk" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.flagTopLevelRisk" 
-                                            label="Уровент риска" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="6">
+                                            <v-select v-model="person.flagTopLevelRisk" :item-value="value"
+                                                :item-text="text" :items="dict.flagTopLevelRisk" label="Уровент риска"
+                                                required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.flagTopLevelRisk" 
-                                            :disabled=true
-                                            label="Уровент риска" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.flagTopLevelRisk" :disabled=true
+                                                label="Уровент риска" required>
                                             </v-text-field>
                                         </v-col>
 
-                                        <v-col cols="12" sm="6" >
-                                            <v-select v-model="person.uaResident" 
-                                            :item-value="value" 
-                                            :item-text="text" 
-                                            :items="dict.uaResident" 
-                                            label="Резидент Украины" 
-                                            required>
-                                            </v-text-select>
+                                        <v-col cols="12" sm="6">
+                                            <v-select v-model="person.uaResident" :item-value="value" :item-text="text"
+                                                :items="dict.uaResident" label="Резидент Украины" required>
+                                                </v-text-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2" >
-                                            <v-text-field v-model="person.uaResident" 
-                                            :disabled=true
-                                            label="Резидент Украины" required>
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="person.uaResident" :disabled=true
+                                                label="Резидент Украины" required>
                                             </v-text-field>
                                         </v-col>
 
@@ -342,10 +312,12 @@
 
                                     <v-row>
                                         <v-col cols="12" sm="12">
-                                          <v-btn block color="primary" v-on:click="btnCheckClient" >Проверить наличие Клиента в АБС</v-btn>
-                                          </br>
-                                          <v-btn block color="secondary" v-on:click="btnCreateCliebt" :disabled="isCreateCliebtDisabled">Создать Клиента в АЬС</v-btn>
-                                          </br>                                          
+                                            <v-btn block color="primary" v-on:click="btnCheckClient">Проверить наличие
+                                                Клиента в АБС</v-btn>
+                                            </br>
+                                            <v-btn block color="secondary" v-on:click="btnCreateCliebt"
+                                                :disabled="isCreateCliebtDisabled">Создать Клиента в АЬС</v-btn>
+                                            </br>
                                         </v-col>
                                     </v-row>
 
@@ -357,22 +329,22 @@
 
                         <v-row justify="center">
                             <v-dialog v-model="dialog.show" persistent max-width="600">
-              
-                              <v-card>
-                              
-                                <!--img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" width="100%"-->
-                                <v-card-title class="headline">{{dialog.title}}</v-card-title>
-                                <img :src="face" >
-                                <v-card-text>{{dialog.text}}</v-card-text>
-              
-                                <v-card-actions>
-                                  <v-spacer></v-spacer>
-                                  <v-btn color="green darken-1" text @click="dialog.show = false">Закрыть</v-btn>
-                                </v-card-actions>
-                              </v-card>
-              
+
+                                <v-card>
+
+                                    <!--img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" width="100%"-->
+                                    <v-card-title class="headline">{{dialog.title}}</v-card-title>
+                                    <img :src="face">
+                                    <v-card-text>{{dialog.text}}</v-card-text>
+
+                                    <v-card-actions>
+                                        <v-spacer></v-spacer>
+                                        <v-btn color="green darken-1" text @click="dialog.show = false">Закрыть</v-btn>
+                                    </v-card-actions>
+                                </v-card>
+
                             </v-dialog>
-                          </v-row>
+                        </v-row>
 
 
                     </v-container>
@@ -406,7 +378,7 @@
                 onButtonViewScanClick: function (item) {
                     //alert( JSON.stringify(item) );
                     this.dialog.title = item.type;
-                    this.dialog.text = item.dateCreate +' '+ JSON.stringify(item);
+                    this.dialog.text = item.dateCreate + ' ' + JSON.stringify(item);
                     this.dialog.show = true;
                 }
             },
@@ -421,12 +393,12 @@
             data() {
                 return {
 
-                    "dialog" : {
-                        show : false,
+                    "dialog": {
+                        show: false,
                         title: "Title",
                         text: "TextText"
                     },
-                   
+
                     "person": {
                         "type": "physical",
                         "lastName": "Кукуцаполь",
@@ -536,46 +508,46 @@
                             type: 'Фото',
                             dateCreate: '24.01.2019',
                             extension: '',
-                            scanFile: '',                     
+                            scanFile: '',
                         },
                     ],
 
-                    dict:{
-                        sex:[
-                            {value: "M", text: "Чоловічий"},
-                            {value: "F", text: "Жіночий"},
+                    dict: {
+                        sex: [
+                            { value: "M", text: "Чоловічий" },
+                            { value: "F", text: "Жіночий" },
                         ],
-                        
+
                         socStatus: ["студент",
-                         "пенсіонер", 
-                         "тимчасово безробітний", 
-                         "працюючий",
-                         "нерегулярна зайнятість"],
-                        
+                            "пенсіонер",
+                            "тимчасово безробітний",
+                            "працюючий",
+                            "нерегулярна зайнятість"],
+
                         flagPEPs: [
-                            {value: "0", text: "НЕ належить до категорії PEPs"},
-                            {value: "1", text: "належить до категорії PEPs"},
+                            { value: "0", text: "НЕ належить до категорії PEPs" },
+                            { value: "1", text: "належить до категорії PEPs" },
                         ],
                         flagPersonTerror: [
-                            {value: "0", text: "НЕ включена до переліку осіб, пов’язаних зі здійсненням терористичної діяльності"},
-                            {value: "1", text: "включена до переліку осіб, пов’язаних зі здійсненням терористичної діяльності"},
+                            { value: "0", text: "НЕ включена до переліку осіб, пов’язаних зі здійсненням терористичної діяльності" },
+                            { value: "1", text: "включена до переліку осіб, пов’язаних зі здійсненням терористичної діяльності" },
                         ],
                         flagRestriction: [
-                            {value: "0", text: "НЕ включена до переліку осіб, щодо яких застосовані персональні санкції РНБОУ"},
-                            {value: "1", text: "включена до переліку осіб, щодо яких застосовані персональні санкції РНБОУ"},
+                            { value: "0", text: "НЕ включена до переліку осіб, щодо яких застосовані персональні санкції РНБОУ" },
+                            { value: "1", text: "включена до переліку осіб, щодо яких застосовані персональні санкції РНБОУ" },
                         ],
                         flagTopLevelRisk: [
-                            {value: "0", text: "НЕ призначений високий рівень ризику ПВК/ФТ"},
-                            {value: "1", text: "призначений високий рівень ризику ПВК/ФТ"},
+                            { value: "0", text: "НЕ призначений високий рівень ризику ПВК/ФТ" },
+                            { value: "1", text: "призначений високий рівень ризику ПВК/ФТ" },
                         ],
                         uaResident: [
-                            {value: "0", text: "особа НЕ є резидентом України"},
-                            {value: "1", text: "особа є резидентом України"},
+                            { value: "0", text: "особа НЕ є резидентом України" },
+                            { value: "1", text: "особа є резидентом України" },
                         ]
-                        
+
                     },
-                
-                face: "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAZgBmAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a\
+
+                    face: "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAZgBmAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a\
 HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy\
 MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAFAAMUDASIA\
 AhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAAMEBQYHAgEI/8QAQxAAAgEDAgQDBAgEBAUDBQAA\
@@ -777,8 +749,8 @@ bEAVHXk/IpCbE9aa5E3Q21C85E5F6nrg1nnEl6ZZltlbKj2nI7+Qqz6ndi1tXlft0HmewrP5HaaR\
 pG3LNk4HetWGHNmHUZOKOUYBTsfeaTlY8mO/rThWVU6b/rXa2viEM+R35K0mEZ29tJOxyOVB1Y1L\
 QWwjQKo2FGQi4Uco8u1LW91EhAc4xtUrEOIo8bV1PcJbwl27dB50nJdJGDg5YkgCo26kaQEseuw8\
 hTAi7meW4uGkkO57DsPKiuHXfpmiiwP/2Q=="
-            }
-        },
+                }
+            },
         })
     </script>
 
