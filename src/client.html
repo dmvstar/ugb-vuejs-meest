@@ -329,23 +329,18 @@
 
                         <v-row justify="center">
                             <v-dialog v-model="dialog.show" persistent max-width="600">
-
                                 <v-card>
-
                                     <!--img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" width="100%"-->
                                     <v-card-title class="headline">{{dialog.title}}</v-card-title>
                                     <img :src="face">
                                     <v-card-text>{{dialog.text}}</v-card-text>
-
                                     <v-card-actions>
                                         <v-spacer></v-spacer>
                                         <v-btn color="green darken-1" text @click="dialog.show = false">Закрыть</v-btn>
                                     </v-card-actions>
                                 </v-card>
-
                             </v-dialog>
                         </v-row>
-
 
                     </v-container>
                 </v-main>
@@ -380,6 +375,12 @@
                     this.dialog.title = item.type;
                     this.dialog.text = item.dateCreate + ' ' + JSON.stringify(item);
                     this.dialog.show = true;
+                },
+                btnCheckClient: function (item) {
+
+                },
+                btnCreateClient: function (item) {
+                    
                 }
             },
 
@@ -398,7 +399,9 @@
                         title: "Title",
                         text: "TextText"
                     },
+                    "bankid":{
 
+                    },
                     "person": {
                         "type": "physical",
                         "lastName": "Кукуцаполь",
