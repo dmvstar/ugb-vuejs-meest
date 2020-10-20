@@ -315,8 +315,8 @@
                                             <v-btn block color="primary" v-on:click="btnCheckClient">Проверить наличие
                                                 Клиента в АБС</v-btn>
                                             </br>
-                                            <v-btn block color="secondary" v-on:click="btnCreateCliebt"
-                                                :disabled="isCreateCliebtDisabled">Создать Клиента в АЬС</v-btn>
+                                            <v-btn block color="secondary" v-on:click="btnCreateClient"
+                                                :disabled="isCreateClientDisabled">Создать Клиента в АЬС</v-btn>
                                             </br>
                                         </v-col>
                                     </v-row>
@@ -352,6 +352,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 
     <script>
+
+
+
         new Vue({
             el: '#app',
 
@@ -364,17 +367,52 @@
             }
             ),
 
+            created() {
+              //this.loadPhoto();
+            },
+
             methods: {
+                loadPhoto: async function (item) {
+                    var realUrl = 'http://localhost:1880/clients/photos/random';
+                    var headers = [];
+                    await fetch(realUrl, {
+                        headers
+                        })
+                        .then(async response => {
+                        const data = await response.json();
+                        // check for error response
+                        if (!response.ok) {
+                            // get error message from body or default to response statusText
+                            const error = (data && data.message) || response.statusText;
+                            this.error = error;
+                            return Promise.reject(error);
+                        }
+                        this.face = 'data:image/jpg;base64,'+data.data;
+
+//alert('1\n'+this.face);
+
+                    this.dialog.title = item.type;
+                    this.dialog.text  = item.dateCreate + ' ' + JSON.stringify(item);
+                    this.dialog.show  = true;
+
+                        })
+                        .catch(error => {
+                        alert('url, [' + JSON.stringify(error) + '] ');
+                        this.error = error;
+                        });
+
+                },
+
                 addresstype: function (item) {
                     var find = item.type;
                     var ret = this.addresses_types.find(item => item.ibancode === find);;//    'type';//+ item;
                     return ret.ibandesc;
                 },
-                onButtonViewScanClick: function (item) {
+                onButtonViewScanClick: async function (item) {
                     //alert( JSON.stringify(item) );
-                    this.dialog.title = item.type;
-                    this.dialog.text = item.dateCreate + ' ' + JSON.stringify(item);
-                    this.dialog.show = true;
+                    await this.loadPhoto(item);
+
+
                 },
                 btnCheckClient: function (item) {
 
