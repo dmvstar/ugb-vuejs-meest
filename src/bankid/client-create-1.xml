@@ -1,0 +1,148 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header>
+      <tem:AuthSoapHeader>
+        <tem:Login>istest</tem:Login>
+         <tem:Password>gfhjk</tem:Password>
+      </tem:AuthSoapHeader>
+   </soapenv:Header>
+   
+   <soapenv:Body>
+      <tem:ModifyClientFL>
+         <tem:client>
+            <tem:Request>
+               <tem:RequestId>12547</tem:RequestId>
+               <tem:UserLogin>UKRGAS\appmb</tem:UserLogin>
+            </tem:Request>
+            <tem:ClientId>1747753</tem:ClientId>
+            <tem:SendToScrooge>1</tem:SendToScrooge>
+            <tem:Clients>
+               <tem:StateCode>3238312146</tem:StateCode>
+               <tem:Residency>1</tem:Residency>
+               <tem:Name>Шибанова Алеся Олександрівна</tem:Name>
+               <tem:Residency>1</tem:Residency>
+               <tem:Type>1</tem:Type>
+               <tem:SubType>0</tem:SubType>
+               <tem:isTechFlag>0</tem:isTechFlag>
+               <tem:IsOut>0</tem:IsOut>
+               <tem:IsPotential>0</tem:IsPotential>
+               <tem:IsPartner>false</tem:IsPartner>
+               <tem:Status>1</tem:Status>
+            </tem:Clients>
+
+            <tem:Individuals>
+               <tem:FirstName>Алеся</tem:FirstName>
+               <tem:LastName>Шибанова</tem:LastName>
+               <tem:FatherName>Олександрівна</tem:FatherName>
+               <tem:Gender>2</tem:Gender>
+               <tem:BirthDay>1988-08-29T00:00:00</tem:BirthDay>
+               <tem:BirthSurname>Селівановаффффф</tem:BirthSurname>
+               <tem:MarriageStatus>2</tem:MarriageStatus>
+                <tem:Status>1</tem:Status>
+            </tem:Individuals>
+
+            <tem:ClientNames>
+               <tem:TNames>
+                  <tem:Id>1806092</tem:Id>
+                  <tem:Lang>LAT</tem:Lang>
+                  <tem:Name>SSHYBANOVA ALESIA OLEKSANDRIVNA</tem:Name>
+                  <tem:FullName>SSHYBANOVA ALESIA OLEKSANDRIVNA</tem:FullName>
+               </tem:TNames>
+            </tem:ClientNames>
+
+            <tem:Properties>
+               <tem:TProperties>
+                  <tem:Code>FIN_STATE</tem:Code>
+                  <tem:Value>111 Відповідає</tem:Value>
+               </tem:TProperties>
+
+               <tem:TProperties>
+                  <tem:Code>CL_FATF_CHECK_RESULT</tem:Code>
+                  <tem:Value>Ой - не нашли террориста</tem:Value>
+               </tem:TProperties>
+
+               <tem:TProperties>
+                  <tem:Code>PUBLIC_PERSON_EXISTS</tem:Code>
+                  <tem:Value>4</tem:Value>
+               </tem:TProperties>
+
+               <!--tem:TProperties>
+                  <tem:Code>FindClientFL_AI</tem:Code>
+                  <tem:Value>Заполнение через сервис нового реквизита</tem:Value>
+               </tem:TProperties-->
+               
+            </tem:Properties>
+
+            <tem:Communications>
+               <tem:TCommunicationsFind>
+                  <tem:Id>2057632</tem:Id>
+                  <tem:TypeId>3</tem:TypeId>
+                  <tem:TypeCode>3</tem:TypeCode>
+                  <tem:Value>+380935594959</tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunicationsFind>
+            </tem:Communications>
+
+            <tem:Addresses>
+               <tem:TAddressesFind>
+                  <tem:Id>3330936</tem:Id>
+                  <tem:TypeId>1</tem:TypeId>
+                  <tem:TypeCode>1</tem:TypeCode>
+                  <tem:Country>804</tem:Country>
+                  <tem:PostalCode>14017</tem:PostalCode>
+                  <tem:State>Чернігівська область</tem:State>
+                  <tem:Region/>
+                  <tem:TownshipType>3508</tem:TownshipType>
+                  <tem:Town>Чернігів</tem:Town>
+                  <tem:StreetType>3510</tem:StreetType>
+                  <tem:Street>Старобілоуська</tem:Street>
+                  <tem:HouseType>3511</tem:HouseType>
+                  <tem:HouseNumber>61а</tem:HouseNumber>
+                  <tem:FlatType>3506</tem:FlatType>
+                  <tem:FlatNumber>218</tem:FlatNumber>
+                  <tem:LandlinePhoneNumber/>
+                  <tem:PropertyStatus/>
+                  <tem:Status>1</tem:Status>
+               </tem:TAddressesFind>
+            </tem:Addresses>
+
+            <tem:Identifications>
+               <tem:TIdentifications>
+                  <tem:Id>1986650</tem:Id>
+                  <tem:TypeId>55</tem:TypeId>
+                  <tem:TypeCode>55</tem:TypeCode>
+                  <tem:No>1</tem:No>
+                  <tem:Series></tem:Series>
+                  <tem:Number>1213234512</tem:Number>
+                  <tem:Registrator>5455</tem:Registrator>
+                  <tem:IssueDate>2004-12-21T00:00:00</tem:IssueDate>
+                  <tem:ExpirationDate>2024-12-21T00:00:00</tem:ExpirationDate>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+            </tem:Identifications>
+
+            <tem:Identifications>
+               <tem:TIdentifications>
+                  <tem:Id>4276193</tem:Id>
+                  <tem:TypeId>4</tem:TypeId>
+                  <tem:TypeCode>4</tem:TypeCode>
+                  <tem:No>2</tem:No>
+                  <tem:Series>НМ</tem:Series>
+                  <tem:Number>223344</tem:Number>
+                  <tem:Registrator>Новозаводським ВМ УМВС України в Чернігівській області</tem:Registrator>
+                  <tem:IssueDate>2004-12-21T00:00:00</tem:IssueDate>
+                  <tem:IsMain>false</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+            </tem:Identifications>
+            
+         </tem:client>
+      </tem:ModifyClientFL>
+   </soapenv:Body>
+</soapenv:Envelope>

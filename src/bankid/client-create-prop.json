@@ -1,0 +1,16 @@
+[
+    {
+        "code": "FIN_STATE",
+        "value": "111 Відповідає"
+    },
+    {
+        "code": "CL_FATF_CHECK_RESULT",
+        "value": "Таки не нашли и таки не террорист наверное"
+    },
+    {
+        "code": "PUBLIC_PERSON_EXISTS",
+        "value": "4"
+    }
+]
+
+
