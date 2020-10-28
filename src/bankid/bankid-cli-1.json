@@ -64,6 +64,14 @@
                 "dateCreate": "dd.mm.yyyy",
                 "extension": ""
             }
+        },
+        {
+            "type": "photo",
+            "fields": {
+                "scanFile": "BASE64",
+                "dateCreate": "dd.mm.yyyy",
+                "extension": ""
+            }
         }
     ]
 }
