@@ -25,17 +25,17 @@ INSERT INTO I_CRM_APPLICATION(
 VALUES (
 {{payload.application_id}}
  ,'{{payload.application_id_src}}'	
- ,'{{payload.src_name}}'
+ ,N'{{payload.src_name}}'
  ,'{{payload.creation_date}}' 
  ,'{{payload.statecode}}'
- ,'{{payload.surname}}'
- ,'{{payload.name}}'
- ,'{{payload.patronymic}}'
+ ,N'{{payload.surname}}'
+ ,N'{{payload.name}}'
+ ,N'{{payload.patronymic}}'
  ,'{{payload.phone}}'
  ,'{{payload.email}}' 
  ,'{{payload.doc_type}}'
  ,'{{payload.doc_series}}'	
- ,'{{payload.doc_number}}'
+ ,N'{{payload.doc_number}}'
  ,'{{payload.issue_date}}'
  ,'{{payload.income}}' 
  ,'{{payload.object_cost}}' 
@@ -44,6 +44,6 @@ VALUES (
  ,'{{payload.term}}'
  ,'{{payload.rate}}'
  ,'{{payload.schedule}}'
- ,'{{payload.contribution}}'
+ ,N'{{payload.contribution}}'
 )
 
