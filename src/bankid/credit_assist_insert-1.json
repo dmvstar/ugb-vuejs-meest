@@ -1,5 +1,5 @@
 {
-    "application_id"  : "123322232",        
+    "application_id"  : "{{application_id}}",        
     "application_id_src"  : "credit_assist",      
     "src_name"  : "Кредитный помощник",                
     "creation_date"  : "2012-08-09 21:38:06.430",           
@@ -13,12 +13,12 @@
     "doc_series"  : "СП",              
     "doc_number"  : "372345",              
     "issue_date"  : "2012-08-09",              
-    "income"  : "12000",                  
-    "object_cost"  : "140000",             
+    "income"  : "12000.00",                  
+    "object_cost"  : "140000.00",             
     "cost_currency"  : "UAH",           
-    "credit_amount"  : "100000",           
+    "credit_amount"  : "100000.00",           
     "term"  : "48",                    
-    "rate"  : "20",                    
-    "schedule"  : "",                
-    "contribution"  : ""   
+    "rate"  : "20.00",                    
+    "schedule"  : "schedule",                
+    "contribution"  : "0.00"   
 }   

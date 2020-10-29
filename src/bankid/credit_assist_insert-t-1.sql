@@ -1,0 +1,49 @@
+INSERT INTO I_CRM_APPLICATION(
+ application_id 
+ ,application_id_src
+ ,src_name
+ ,creation_date 
+ ,statecode 
+ ,surname 
+ ,name
+ ,patronymic
+ ,phone 
+ ,email 
+ ,doc_type
+ ,doc_series
+ ,doc_number
+ ,issue_date
+ ,income
+ ,object_cost 
+ ,cost_currency 
+ ,credit_amount 
+ ,term
+ ,rate
+ ,schedule
+ ,contribution
+)
+VALUES (
+{{payload.application_id}}
+ ,'{{payload.application_id_src}}'	
+ ,'{{payload.src_name}}'
+ ,'{{payload.creation_date}}' 
+ ,'{{payload.statecode}}'
+ ,'{{payload.surname}}'
+ ,'{{payload.name}}'
+ ,'{{payload.patronymic}}'
+ ,'{{payload.phone}}'
+ ,'{{payload.email}}' 
+ ,'{{payload.doc_type}}'
+ ,'{{payload.doc_series}}'	
+ ,'{{payload.doc_number}}'
+ ,'{{payload.issue_date}}'
+ ,'{{payload.income}}' 
+ ,'{{payload.object_cost}}' 
+ ,'{{payload.cost_currency}}' 
+ ,'{{payload.credit_amount}}' 
+ ,'{{payload.term}}'
+ ,'{{payload.rate}}'
+ ,'{{payload.schedule}}'
+ ,'{{payload.contribution}}'
+)
+
