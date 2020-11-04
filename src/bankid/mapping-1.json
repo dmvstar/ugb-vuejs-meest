@@ -1,0 +1,14 @@
+[
+    {
+        "bankid": {
+            "block": "person",
+            "code": "lastName"
+        },
+        "webbank": {
+            "block": "Individual",
+            "code": "LastName"
+        },
+        "dictionary": "",
+        "isneed": true
+    }
+]

@@ -10,7 +10,15 @@
         "phone": "380631003256",
         "email": "sava@mail.dot.com",
         "uaResident": "1",
-        "edication": "Вища для тесту",
+        "edication": "Вища для тесту"
+    },
+    "extends": {
+        "country_citizen": "804",
+        "marital_status": "6",
+        "work_info": "безроботный",
+        "birth_country": "804",
+        "birth_place": "Бердичув",
+        "profit_way": "2"
     },
     "addresses": [
         {
