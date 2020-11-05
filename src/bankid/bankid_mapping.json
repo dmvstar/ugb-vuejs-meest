@@ -97,18 +97,6 @@
     },
     {
         "bankid": {
-            "block": "documents",
-            "code": "typeName"
-        },
-        "webbank": {
-            "block": "",
-            "code": ""
-        },
-        "dictionary": "cfIdentificationTypes",
-        "isneed": "true"
-    },
-    {
-        "bankid": {
             "block": "person",
             "code": "socStatus"
         },
@@ -429,18 +417,6 @@
             "code": "KL_K013FO"
         },
         "dictionary": "KL_K013_FO",
-        "isneed": ""
-    },
-    {
-        "bankid": {
-            "block": "extends",
-            "code": "usa_citizien"
-        },
-        "webbank": {
-            "block": "",
-            "code": "???"
-        },
-        "dictionary": "YESNO",
         "isneed": ""
     },
     {

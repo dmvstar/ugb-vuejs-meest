@@ -8,7 +8,7 @@ const readline = require('readline');
 // but from a readable stream only. 
 const file = readline.createInterface({
   input: fs.createReadStream('mapping.csv'),
-  output: process.stdout,
+  output: null,
   terminal: true
 });
 
