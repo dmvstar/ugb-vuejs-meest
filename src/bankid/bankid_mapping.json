@@ -1,0 +1,458 @@
+[
+    {
+        "bankid": {
+            "block": "person",
+            "code": "middleName"
+        },
+        "webbank": {
+            "block": "Individual",
+            "code": "Individual.FatherName"
+        },
+        "dictionary": "",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "compile",
+            "code": "lastName+firstName+middleName"
+        },
+        "webbank": {
+            "block": "Client",
+            "code": "Name"
+        },
+        "dictionary": "",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "іnn"
+        },
+        "webbank": {
+            "block": "Client",
+            "code": "StateCode"
+        },
+        "dictionary": "",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "country_citizen"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "FATF_COUNTRY_CITIZEN"
+        },
+        "dictionary": "KL_K040.DBF",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "marital_status"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "MARITAL_STATUS"
+        },
+        "dictionary": "D08",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "sex"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "GENDER"
+        },
+        "dictionary": "D06",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "birthDay"
+        },
+        "webbank": {
+            "block": "Client",
+            "code": "BirthDay"
+        },
+        "dictionary": "",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "uaResident"
+        },
+        "webbank": {
+            "block": "Client",
+            "code": "Residency"
+        },
+        "dictionary": "KL_K030.DBF",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "documents",
+            "code": "typeName"
+        },
+        "webbank": {
+            "block": "",
+            "code": ""
+        },
+        "dictionary": "cfIdentificationTypes",
+        "isneed": "true"
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "socStatus"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "flagPEPs"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "flagPersonTerror"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "flagRestriction"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "flagTopLevelRisk"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "work_info"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "person",
+            "code": "phone"
+        },
+        "webbank": {
+            "block": "Comunications",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "birth_country"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "BIRTH_COUNTRY"
+        },
+        "dictionary": "KL_K040.DBF",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "birth_place"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": ""
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "profit_way"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PROFIT_WAY"
+        },
+        "dictionary": "PROFIT_WAY",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "profit_src"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "BANK_PRODUCT"
+        },
+        "dictionary": "FIN_DOCH",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "obsyag_nad"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "OBSYAG_NAD"
+        },
+        "dictionary": "OBSYAG_NAD_1",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "nad_k_3"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "NAD_K_3"
+        },
+        "dictionary": "NAD_K_3",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "monthsumm"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "MONTHSUMM"
+        },
+        "dictionary": "SUMA_DOHOD",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "propetyth_of_client"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PROPETYTH_OF_CLIENT"
+        },
+        "dictionary": "PROPETYTH_OF_CLIENT",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "propetyth_of_client_avto"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PROPETYTH_OF_CLIENT_AVTO"
+        },
+        "dictionary": "PROPETYTH_OF_CLIENT_AVTO",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "info_outer_acc_sel"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "INFO_OUTER_ACC_SEL"
+        },
+        "dictionary": "INFO_OUTER_ACC",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "exists_cred_out"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "EXISTS_CRED_OUT"
+        },
+        "dictionary": "YESNO",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "exists_depo_out"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "EXISTS_DEPO_OUT"
+        },
+        "dictionary": "YESNO",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "propetypap_of_clientype"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PROPETYPAP_OF_CLIENTYPE"
+        },
+        "dictionary": "PROPETYPAP_OF_CLIENTYPE",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "bank_services_manual"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "BANK_SERVICES_MANUAL"
+        },
+        "dictionary": "BANK_SERVICES_MANUAL",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "ugb_tcurelpers"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "UGB_TCURelPers"
+        },
+        "dictionary": "RF_UGB_TCURelPers",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "public_person_exists"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PUBLIC_PERSON_EXISTS"
+        },
+        "dictionary": "PUBLIC_PERSON_EXISTS",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "public_data_fact"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PUBLIC_DATA_FACT"
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "public_data_permission"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PUBLIC_DATA_PERMISSION"
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "public_data_risk"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "PUBLIC_DATA_RISK"
+        },
+        "dictionary": "",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "kl_k013fo"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "KL_K013FO"
+        },
+        "dictionary": "KL_K013_FO",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "usa_citizien"
+        },
+        "webbank": {
+            "block": "",
+            "code": "???"
+        },
+        "dictionary": "YESNO",
+        "isneed": ""
+    },
+    {
+        "bankid": {
+            "block": "extends",
+            "code": "usa_rsident"
+        },
+        "webbank": {
+            "block": "Properties",
+            "code": "Chiisaresident_USA"
+        },
+        "dictionary": "YESNO",
+        "isneed": ""
+    }
+]
