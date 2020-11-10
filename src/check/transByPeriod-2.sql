@@ -31,5 +31,13 @@ WHERE 1 = 1
 
 /*
 SELECT src,fld,val FROM nr_clients.gl_varbase WHERE fld = 'LastTransactionID'; 
-INSERT INTO gl_varbase(src,fld,val) VALUES ('CARD', 'LastTransactionID', '719300000') 
+SELECT src,fld,val FROM gl_varbase WHERE src = '{{source}}' AND fld = '{{lastTransactionID}}'; 
+
+INSERT INTO gl_varbase(src,fld,val) VALUES ('CARD', 'lastTransactionID', '719300000') 
+INSERT INTO gl_varbase(src,fld,val) VALUES ('{{source}}', '{{lastTransactionID}}', '{{value}}') 
+
+UPDATE gl_varbase SET val = '719300000' WHERE src = 'CARD' AND fld = 'lastTransactionID' 
+UPDATE gl_varbase SET val = '{{value}}' WHERE src = '{{source}}' AND fld = '{{lastTransactionID}}' 
+
 */
+
