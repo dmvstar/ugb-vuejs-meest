@@ -30,14 +30,16 @@ WHERE 1 = 1
 --ORDER BY tr.ID DESC;
 
 /*
-SELECT src,fld,val FROM nr_clients.gl_varbase WHERE fld = 'LastTransactionID'; 
-SELECT src,fld,val FROM gl_varbase WHERE src = '{{source}}' AND fld = '{{lastTransactionID}}'; 
+SELECT src,fld,val FROM nr_clients.gl_varbase WHERE src = 'CARD' AND fld = 'LastTransactionID'; 
+SELECT src,fld,val FROM gl_varbase WHERE src = '{{src}}' AND fld = '{{fld}}'; 
+GET  https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src": "CARD", "fld": "lastTransactionID" }
 
 INSERT INTO gl_varbase(src,fld,val) VALUES ('CARD', 'lastTransactionID', '719300000') 
 INSERT INTO gl_varbase(src,fld,val) VALUES ('{{src}}', '{{fld}}', '{{val}}') 
+POST https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src": "CARD", "fld": "lastTransactionID", "val": "719300000" }
 
 UPDATE gl_varbase SET val = '719300000' WHERE src = 'CARD' AND fld = 'lastTransactionID' 
 UPDATE gl_varbase SET val = '{{val}}' WHERE src = '{{src}}' AND fld = '{{fld}}' 
-
+PUT  https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src": "CARD", "fld": "lastTransactionID", "val": "719300002" }
 */
 
