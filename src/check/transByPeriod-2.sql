@@ -24,9 +24,9 @@ WHERE 1 = 1
       AND tr.TransactionAmount > 0
       AND tr.AuthorizationFlag = 1
       AND tr.ActionCode < 100
-	  AND tr.TransactionCode = 00
-	  AND tr.id > 719300000
-	  --AND tr.id > {{LastTransactionID}}
+	 AND tr.TransactionCode = 00
+	 AND tr.id > 719300000
+	 --AND tr.id > {{LastTransactionID}}
 --ORDER BY tr.ID DESC;
 
 /*
@@ -34,10 +34,10 @@ SELECT src,fld,val FROM nr_clients.gl_varbase WHERE fld = 'LastTransactionID';
 SELECT src,fld,val FROM gl_varbase WHERE src = '{{source}}' AND fld = '{{lastTransactionID}}'; 
 
 INSERT INTO gl_varbase(src,fld,val) VALUES ('CARD', 'lastTransactionID', '719300000') 
-INSERT INTO gl_varbase(src,fld,val) VALUES ('{{source}}', '{{lastTransactionID}}', '{{value}}') 
+INSERT INTO gl_varbase(src,fld,val) VALUES ('{{src}}', '{{fld}}', '{{val}}') 
 
 UPDATE gl_varbase SET val = '719300000' WHERE src = 'CARD' AND fld = 'lastTransactionID' 
-UPDATE gl_varbase SET val = '{{value}}' WHERE src = '{{source}}' AND fld = '{{lastTransactionID}}' 
+UPDATE gl_varbase SET val = '{{val}}' WHERE src = '{{src}}' AND fld = '{{fld}}' 
 
 */
 
