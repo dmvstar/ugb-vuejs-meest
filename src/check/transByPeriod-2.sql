@@ -36,10 +36,12 @@ GET  https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src": "CARD", "fl
 
 INSERT INTO gl_varbase(src,fld,val) VALUES ('CARD', 'lastTransactionID', '719300000') 
 INSERT INTO gl_varbase(src,fld,val) VALUES ('{{src}}', '{{fld}}', '{{val}}') 
-POST https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src": "CARD", "fld": "lastTransactionID", "val": "719300000" }
+POST https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src "CARD", "fld": "lastTransactionID", "val": "719300000" }
+POST https://nr-clients.dev.ukrgasaws.com/common/db/varbase/insert { "src "CARD", "fld": "lastTransactionID", "val": "719300000" }
 
 UPDATE gl_varbase SET val = '719300000' WHERE src = 'CARD' AND fld = 'lastTransactionID' 
 UPDATE gl_varbase SET val = '{{val}}' WHERE src = '{{src}}' AND fld = '{{fld}}' 
 PUT  https://nr-clients.dev.ukrgasaws.com/common/db/varbase { "src": "CARD", "fld": "lastTransactionID", "val": "719300002" }
+POST https://nr-clients.dev.ukrgasaws.com/common/db/varbase/update { "src": "CARD", "fld": "lastTransactionID", "val": "719300000" }
 */
 
