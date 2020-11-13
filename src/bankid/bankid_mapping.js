@@ -30,16 +30,20 @@ file.on('line', (line) => {
     var record = line.split(',');
     if (record[2] !== "") {
       var obj = {
+        "cnt" : record.length,
         "bankid": {
           "block": record[0],
-          "code": record[1]
+          "code": record[1],
+          "type": record[2]
         },
         "webbank": {
-          "block": record[2],
-          "code": record[3]
+          "block": record[3],
+          "code": record[4],
+          "type": record[6],
+          "default": record[7]
         },
-        "dictionary": record[4],
-        "isneed": record[5]
+        "dictionary": record[5],
+        "isneed": record[8]
       }
       ret.push(obj);
       //console.log(JSON.stringify(obj));

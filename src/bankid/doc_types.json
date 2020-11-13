@@ -3,12 +3,16 @@
         {
             "ibancode": "M",
             "ibanname": "Man",
-            "wbid": ""
+            "ibandesc": "Чоловіча",            
+            "wbid": "1",
+            "wbdesc": "Чоловіча"
         },
         {
             "ibancode": "F",
             "ibanname": "Woman",
-            "wbid": ""
+            "ibandesc": "Жіноча",
+            "wbid": "2",
+            "wbdesc": "Жіноча"
         }
     ],
     "addresses_types": [
@@ -16,68 +20,82 @@
             "ibancode": "factual",
             "ibanname": "проживання",
             "ibandesc": "Адрес проживання",
-            "wbid": ""
+            "wbid": "2",
+            "wbdesc": "Фактична адреса"
         },
         {
             "ibancode": "juridical",
             "ibanname": "реєстрації",
             "ibandesc": "Адрес реєстрації",
-            "wbid": ""
+            "wbid": "1",
+            "wbdesc": "Адреса постійного місця проживання або регістрації"
         }
     ],
     "documents_types": [
         {
-            "ibancode": "passport–",
+            "ibancode": "passport",
             "ibanname": "паспорт",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "4",
+            "wbdesc": "Паспорт громадянина України"
         },
         {
-            "ibancode": "idpassport–",
+            "ibancode": "idpassport",
             "ibanname": "паспорт",
-            "wbid": "404"
+            "ibandesc": "",
+            "wbid": "404",
+            "wbdesc": "Паспорт (Id-карта)"
         },
         {
-            "ibancode": "passport–",
-            "ibanname": "id - картка",
-            "wbid": ""
-        },
-        {
-            "ibancode": "zpassport–",
+            "ibancode": "zpassport",
             "ibanname": "закордонний",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "42",
+            "wbdesc": "Паспорт громадянина України для виїзду за кордон"
         },
-        ,
         {
             "ibancode": "ident",
             "ibanname": "посвідчення особи у відповідності до вимог законодавства України",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "48",
+            "wbdesc": "Інші документи, які видаються уповноваженими державними органами і за якими є можливість здійснення однозначної ідентифікації особи"
         }
     ],
     "scans_types": [
         {
             "ibancode": "passport",
             "ibanname": "паспорт України",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "109",
+            "wbdesc": "Паспорт громадянина України"
         },
         {
             "ibancode": "idpassport",
             "ibanname": "id - картка",
-            "wbid": "404"
+            "ibandesc": "",
+            "wbid": "109",
+            "wbdesc": "Паспорт (Id-карта)"
         },
         {
             "ibancode": "zpassport",
             "ibanname": "закордонний",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "109",
+            "wbdesc": "Паспорт громадянина України для виїзду за кордон"
         },
         {
             "ibancode": "inn",
             "ibanname": "реєстраційний номер облікової картки платника податків",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "109",
+            "wbdesc": "реєстраційний номер облікової картки платника податків"
         },
         {
             "ibancode": "personalPhoto",
             "ibanname": "фото особи(анфас)",
-            "wbid": ""
+            "ibandesc": "",
+            "wbid": "109",
+            "wbdesc": "фото особи(анфас)"
         }
     ]
 }
