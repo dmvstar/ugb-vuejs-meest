@@ -1,38 +1,35 @@
 const fs = require('fs');
 
-var bankid_client = require('./bankid-cli-1.json'); 
-var bankid_mapping = require('./bankid_mapping.json'); 
-var bankid_dicts = require('./doc_types.json'); 
+var bankid_client = require('./bankid-cli-1.json');
+var bankid_mapping = require('./bankid_mapping.json');
+var bankid_dicts = require('./doc_types.json');
 
-var bankid_transform = {}; 
-/*
-{
-    Client
-    Individual
-    Identifications
-    Addresses
-    Communications
-    Properties
-    Scans
-    Operations
+var bankid_transform = {};
+var bankid_transform_sub = [
+    {name: "Client", array: false},
+    {name: "Individuals", array: true}, // array
+    {name: "Identifications", array: true}, // array documents
+    {name: "Addresses", array: true}, // array
+    {name: "Communications", array: false},
+    {name: "Properties", array: false},
+    {name: "Scans", array: true}, // array
+    {name: "Operations", array: false}
+]
+
+for (k of bankid_transform_sub) {
+    bankid_transform[k.name] = [];
 }
-*/
-//console.log(bankid_mapping);
-bankid_transform.Client = [];
-bankid_transform.Individual = [];
-bankid_transform.Identifications = [];
-bankid_transform.Addresses = [];
-bankid_transform.Communications = [];
-bankid_transform.Properties = [];
-bankid_transform.Scans = [];
-bankid_transform.Operations = [];
-for(o of bankid_mapping) {
-    console.log(o);
+  
+
+for (o of bankid_mapping) {
+    //console.log(o);
     var item = {};
-    switch(o.webbank.block) {
-        case "Client": {
+
+    if (o.bankid.block !== 'none' && o.bankid.code !== 'none') {
+        console.log("["+o.bankid.block+"]["+o.bankid.code+"]="+bankid_client[o.bankid.block][o.bankid.code]);
+        if (bankid_client[o.bankid.block][o.bankid.code] !== undefined) {
             item = {
-                "webbank": {                    
+                "webbank": {
                     "code": o.webbank.code,
                     "type": o.webbank.type,
                     "default": o.webbank.default
@@ -44,43 +41,9 @@ for(o of bankid_mapping) {
                 },
                 "value": bankid_client[o.bankid.block][o.bankid.code]
             };
-            bankid_transform.Client.push(item);
-        } 
-        break;
-        case "Individual": {
-
-        } 
-        break;
-        case "Identifications": {
-
-        } 
-        break;
-        case "Addresses": {
-
-        } 
-        break;
-        case "Communications": {
-
-        } 
-        break;
-        case "Properties": {
-
-        } 
-        break;
-        case "Scans": {
-
-        } 
-        break;
-        case "Operations": {
-
-        } 
-        break;
+            bankid_transform[o.webbank.block].push(item);
+        }
     }
-    
-
 }
 
 console.log(bankid_transform);
-
-
-

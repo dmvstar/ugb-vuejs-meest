@@ -99,7 +99,7 @@
         "cnt": 9,
         "bankid": {
             "block": "documents",
-            "code": "typeName",
+            "code": "type",
             "type": "string"
         },
         "webbank": {
