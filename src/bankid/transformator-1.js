@@ -16,20 +16,42 @@ var bankid_transform_sub = [
     {name: "Operations", array: false}
 ]
 
+// Prepare out data
 for (k of bankid_transform_sub) {
-    bankid_transform[k.name] = [];
+    bankid_transform[k.name] = [];   
+}
+
+// Parce input data
+for (key in bankid_client) {
+    
+    if(bankid_client[key] instanceof Array){
+        console.log("["+key+"] Array");
+        for (a of bankid_client[key]) {
+            console.log(" ["+key+"] "+a+"="+JSON.stringify(a));    
+            for (o in a) {
+                console.log("  ["+key+"] "+o+"="+a[o]);    
+            }
+        }
+    }
+    else {
+        console.log("["+key+"] Object");
+        for (o in bankid_client[key]) {
+            console.log(" ["+key+"] "+o+"="+bankid_client[key][o]);    
+        }
+    }
 }
   
-
 for (o of bankid_mapping) {
     //console.log(o);
     var item = {};
 
     if (o.bankid.block !== 'none' && o.bankid.code !== 'none') {
-        console.log("["+o.bankid.block+"]["+o.bankid.code+"]="+bankid_client[o.bankid.block][o.bankid.code]);
+        console.log("["+o.webbank.block+"] ["+o.bankid.block+"]["+o.bankid.code+"]="+bankid_client[o.bankid.block][o.bankid.code]);
         if (bankid_client[o.bankid.block][o.bankid.code] !== undefined) {
+
             item = {
                 "webbank": {
+                    "block": o.webbank.block,
                     "code": o.webbank.code,
                     "type": o.webbank.type,
                     "default": o.webbank.default

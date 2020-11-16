@@ -20,8 +20,7 @@
         "birth_place": "Бердичув",
         "profit_way": "2"
     },
-    "addresses": [
-        {
+    "addresses": [{
             "type": "factual",
             "country": "UA",
             "state": "Київська",
@@ -42,8 +41,7 @@
             "flatNo": "341"
         }
     ],
-    "documents": [
-        {
+    "documents": [{
             "type": "passport",
             "typeName": "Паспорт",
             "series": "СН",
@@ -64,22 +62,19 @@
             "issueCountryIso2": "UA"
         }
     ],
-    "scans": [
-        {
+    "scans": [{
             "type": "passport",
-            "fields": {
-                "scanFile": "BASE64",
-                "dateCreate": "dd.mm.yyyy",
-                "extension": ""
-            }
+            "scanFile": "BASE64",
+            "dateCreate": "dd.mm.yyyy",
+            "extension": "jpg"
+
         },
         {
             "type": "photo",
-            "fields": {
-                "scanFile": "BASE64",
-                "dateCreate": "dd.mm.yyyy",
-                "extension": ""
-            }
+            "scanFile": "BASE64",
+            "dateCreate": "dd.mm.yyyy",
+            "extension": "jpg"
+
         }
     ]
 }
