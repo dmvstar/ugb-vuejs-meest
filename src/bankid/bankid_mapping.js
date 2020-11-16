@@ -22,12 +22,13 @@ var ret = [];
 
 file.on('line', (line) => {
   // if(count > 1 && count < 100) {
-  if (count > 1) {
-    if (count === 100) {
+  if (count >= 0) {
+    //if (count === 100) {
       //lineReader.close();
-    }
-    //console.log(count + ' '+line);
+    //}
     var record = line.split(',');
+    //console.log(count + '['+record[2]+'] '+line);
+    
     if (record[2] !== "") {
       var obj = {
         "cnt" : record.length,

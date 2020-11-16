@@ -1,7 +1,7 @@
-person,lastName,,Individual,LastName,,string,,true
-person,firstName,,Individual,Individual.FirstName,,string,,true
-person,middleName,,Individual,Individual.FatherName,,string,,true
-compile,lastName+firstName+middleName,,Client,Name,,string,,true
+person,lastName,string,Individuals,LastName,,string,,true
+person,firstName,string,Individuals,FirstName,,string,,true
+person,middleName,string,Individuals,FatherName,,string,,true
+compile,lastName+firstName+middleName,string,Client,Name,,string,,true
 ,,,,,,string,,false
 ,,,,,,string,,false
 person,іnn,string,Client,StateCode,,string,,true
@@ -10,7 +10,7 @@ extends,marital_status,int,Properties,MARITAL_STATUS,D08,int,,true
 person,sex,string,Properties,GENDER,D06,int,,true
 person,birthDay,date,Client,BirthDay,,date,,true
 person,uaResident,int,Client,Residency,KL_K030.DBF,int,,true
-documents,typeName,string,Identifications,TypeId,cfIdentificationTypes,int,,true
+documents,type,string,Identifications,TypeId,cfIdentificationTypes,int,,true
 documents,series,string,Identifications,Series,,string,,true
 documents,number,string,Identifications,Number,,string,,true
 documents,issue,string,Identifications,Registrator,,string,,true
