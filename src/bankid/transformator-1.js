@@ -104,10 +104,10 @@ for (key in bankid_client) {
         console.log("[" + key + "] Array");
         var cnt = 0;
         var amapi = [];
-                    
+        var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;            
 
         for (a of bankid_client[key]) {
-            console.log(" ["+key+"] "+a+"="+JSON.stringify(a));    
+            console.log(" ["+webbank_block+"]["+key+"] "+a+"="+JSON.stringify(a));    
             var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
             //var mapi = [...mapr];    
             var mapi = JSON.parse(JSON.stringify((mapr)));   
@@ -129,7 +129,7 @@ for (key in bankid_client) {
             cnt ++;
         }
         console.log(amapi);
-        bankid_transform_out.push(amapi);
+        bankid_transform_out[webbank_block].push(amapi);
     } else {
         console.log("[" + key + "] Object");
         for (o in bankid_client[key]) {
