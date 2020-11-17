@@ -112,7 +112,7 @@ for (key in bankid_client) {
             //var mapi = [...mapr];    
             var mapi = JSON.parse(JSON.stringify((mapr)));   
             //var mapi = mapr.slice(0);
-            //console.log(mapi);
+            console.log(mapi);
             //bankid_transform_out.push(val);
             for (o in a) {
                 console.log("  ["+cnt+"]["+key+"] "+o+"="+a[o]); 
