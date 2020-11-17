@@ -100,19 +100,25 @@ for (o of bankid_mapping) {
 // Parce input data
 for (key in bankid_client) {
 
+    var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;            
+    console.log("[" + key + "]["+webbank_block+"] Array "  +bankid_transform_out[webbank_block]);
+    console.log(bankid_transform_out[webbank_block]);
+    if (bankid_transform_out[webbank_block] === undefined)
+    bankid_transform_out[webbank_block] = [];
+
     if (bankid_client[key] instanceof Array) {
-        console.log("[" + key + "] Array");
+        
         var cnt = 0;
         var amapi = [];
-        var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;            
+        
 
         for (a of bankid_client[key]) {
-            console.log(" ["+webbank_block+"]["+key+"] "+a+"="+JSON.stringify(a));    
+            ////console.log(" ["+webbank_block+"]["+key+"] "+a+"="+JSON.stringify(a));    
             var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
             //var mapi = [...mapr];    
             var mapi = JSON.parse(JSON.stringify((mapr)));   
             //var mapi = mapr.slice(0);
-            console.log(mapi);
+            // console.log(mapi);
             //bankid_transform_out.push(val);
             for (o in a) {
                 console.log("  ["+cnt+"]["+key+"] "+o+"="+a[o]); 
@@ -128,7 +134,7 @@ for (key in bankid_client) {
             //console.log(amapi);
             cnt ++;
         }
-        console.log(amapi);
+        //console.log(amapi);
         bankid_transform_out[webbank_block].push(amapi);
     } else {
         console.log("[" + key + "] Object");
@@ -145,7 +151,7 @@ for (key in bankid_client) {
     }
 }
 
-console.log(bankid_transform_out);
+console.log( JSON.stringify(bankid_transform_out) );
 
 
 /*
