@@ -4,7 +4,7 @@ var bankid_client = require('./bankid-cli-1.json');
 var bankid_mapping = require('./bankid_mapping.json');
 var bankid_dicts = require('./doc_types.json');
 
-var bankid_transform_out = {};
+var bankid_transform_out = [];
 var bankid_transform_web = [{
         name: "Client",
         isarray: false,
@@ -102,12 +102,31 @@ for (key in bankid_client) {
 
     if (bankid_client[key] instanceof Array) {
         console.log("[" + key + "] Array");
+        var cnt = 0;
+        var amapi = [];
         for (a of bankid_client[key]) {
             //console.log(" ["+key+"] "+a+"="+JSON.stringify(a));    
+            var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
+            //var mapi = [...mapr];    
+            var mapi = JSON.parse(JSON.stringify((mapr)));   
+            //var mapi = mapr.slice(0);
+            //console.log(mapi);
+            //bankid_transform_out.push(val);
             for (o in a) {
-                console.log("  ["+key+"] "+o+"="+a[o]);    
+                console.log("  ["+cnt+"]["+key+"] "+o+"="+a[o]); 
+                var val = mapi.find(x => x.bankid.code === o);
+                if (val !== undefined) {
+                    val.value = a[o];
+                    //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
+                    //console.log(val);
+                }   
             }
+            console.log(mapi);
+            amapi.push(mapi);
+            //console.log(amapi);
+            cnt ++;
         }
+        console.log(amapi);
     } else {
         console.log("[" + key + "] Object");
         for (o in bankid_client[key]) {
@@ -117,6 +136,7 @@ for (key in bankid_client) {
                 val.value = bankid_client[key][o];
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 console.log(val);
+                bankid_transform_out.push(val);
             }
         }
     }
