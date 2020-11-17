@@ -94,7 +94,7 @@ for (o of bankid_mapping) {
     }
 }
 
-console.log(bankid_transform_bid);
+//console.log(bankid_transform_bid);
 //console.log(bankid_transform_web);
 
 // Parce input data
@@ -104,8 +104,10 @@ for (key in bankid_client) {
         console.log("[" + key + "] Array");
         var cnt = 0;
         var amapi = [];
+                    
+
         for (a of bankid_client[key]) {
-            //console.log(" ["+key+"] "+a+"="+JSON.stringify(a));    
+            console.log(" ["+key+"] "+a+"="+JSON.stringify(a));    
             var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
             //var mapi = [...mapr];    
             var mapi = JSON.parse(JSON.stringify((mapr)));   
@@ -121,12 +123,13 @@ for (key in bankid_client) {
                     //console.log(val);
                 }   
             }
-            console.log(mapi);
+            //console.log(mapi);
             amapi.push(mapi);
             //console.log(amapi);
             cnt ++;
         }
         console.log(amapi);
+        bankid_transform_out.push(amapi);
     } else {
         console.log("[" + key + "] Object");
         for (o in bankid_client[key]) {
@@ -135,14 +138,14 @@ for (key in bankid_client) {
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
-                console.log(val);
-                bankid_transform_out.push(val);
+                //console.log(val);
+                bankid_transform_out[val.webbank.block].push(val);
             }
         }
     }
 }
 
-
+console.log(bankid_transform_out);
 
 
 /*
