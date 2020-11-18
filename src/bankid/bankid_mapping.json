@@ -1,8 +1,8 @@
 [
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "lastName",
       "type": "string"
     },
@@ -16,9 +16,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "firstName",
       "type": "string"
     },
@@ -32,9 +32,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "middleName",
       "type": "string"
     },
@@ -48,9 +48,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "calculate",
+      "sorce": "person",
       "code": "lastName+firstName+middleName",
       "type": "string"
     },
@@ -64,9 +64,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "іnn",
       "type": "string"
     },
@@ -80,9 +80,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "country_citizen",
       "type": "int"
     },
@@ -96,9 +96,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "marital_status",
       "type": "int"
     },
@@ -112,9 +112,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "sex",
       "type": "string"
     },
@@ -128,9 +128,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "birthDay",
       "type": "date"
     },
@@ -144,9 +144,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "uaResident",
       "type": "int"
     },
@@ -160,9 +160,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "type",
       "type": "string"
     },
@@ -176,9 +176,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "series",
       "type": "string"
     },
@@ -192,9 +192,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "number",
       "type": "string"
     },
@@ -208,9 +208,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "issue",
       "type": "string"
     },
@@ -224,9 +224,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "dateIssue",
       "type": "date"
     },
@@ -240,9 +240,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "dateExpiration",
       "type": "date"
     },
@@ -256,9 +256,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "documents",
+      "sorce": "",
       "code": "issueCountryIso2",
       "type": "string"
     },
@@ -272,9 +272,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "none",
+      "sorce": "",
       "code": "none",
       "type": "none"
     },
@@ -288,9 +288,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "none",
+      "sorce": "",
       "code": "none",
       "type": "none"
     },
@@ -304,9 +304,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "type",
       "type": "string"
     },
@@ -320,9 +320,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "country",
       "type": "string"
     },
@@ -336,9 +336,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "state",
       "type": "string"
     },
@@ -352,9 +352,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "area",
       "type": "string"
     },
@@ -368,9 +368,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "city",
       "type": "string"
     },
@@ -384,9 +384,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "street",
       "type": "string"
     },
@@ -400,9 +400,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "houseNo",
       "type": "string"
     },
@@ -416,9 +416,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "addresses",
+      "sorce": "",
       "code": "flatNo",
       "type": "string"
     },
@@ -432,16 +432,9 @@
     "isneed": "true"
   },
   {
-    "cnt": 1,
-    "bankid": {
-      "block": ""
-    },
-    "webbank": {}
-  },
-  {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "socStatus",
       "type": "string"
     },
@@ -455,9 +448,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "flagPEPs",
       "type": "int"
     },
@@ -471,9 +464,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "flagPersonTerror",
       "type": "int"
     },
@@ -487,9 +480,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "flagRestriction",
       "type": "int"
     },
@@ -503,9 +496,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "flagTopLevelRisk",
       "type": "int"
     },
@@ -519,9 +512,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "scans",
+      "sorce": "",
       "code": "type",
       "type": "string"
     },
@@ -535,9 +528,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "scans",
+      "sorce": "",
       "code": "scanFile",
       "type": "string"
     },
@@ -551,9 +544,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "scans",
+      "sorce": "",
       "code": "dateCreate",
       "type": "date"
     },
@@ -567,9 +560,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "scans",
+      "sorce": "",
       "code": "extension",
       "type": "string"
     },
@@ -583,9 +576,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "work_info",
       "type": "string"
     },
@@ -599,9 +592,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "person",
+      "sorce": "",
       "code": "phone",
       "type": "string"
     },
@@ -615,9 +608,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "birth_country",
       "type": "string"
     },
@@ -631,9 +624,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "birth_place",
       "type": "string"
     },
@@ -647,9 +640,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "profit_way",
       "type": "int"
     },
@@ -663,9 +656,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "profit_src",
       "type": "int"
     },
@@ -679,9 +672,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "obsyag_nad",
       "type": "int"
     },
@@ -695,9 +688,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "nad_k_3",
       "type": "int"
     },
@@ -711,9 +704,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "monthsumm",
       "type": "int"
     },
@@ -727,9 +720,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "propetyth_of_client",
       "type": "int"
     },
@@ -743,9 +736,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "propetyth_of_client_avto",
       "type": "int"
     },
@@ -759,9 +752,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "info_outer_acc_sel",
       "type": "int"
     },
@@ -775,9 +768,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "exists_cred_out",
       "type": "int"
     },
@@ -791,9 +784,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "exists_depo_out",
       "type": "int"
     },
@@ -807,9 +800,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "propetypap_of_clientype",
       "type": "int"
     },
@@ -823,9 +816,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "bank_services_manual",
       "type": "int"
     },
@@ -839,9 +832,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "ugb_tcurelpers",
       "type": "int"
     },
@@ -855,9 +848,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "public_person_exists",
       "type": "int"
     },
@@ -871,9 +864,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "public_data_fact",
       "type": "date"
     },
@@ -887,9 +880,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "public_data_permission",
       "type": "date"
     },
@@ -903,9 +896,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "public_data_risk",
       "type": "date"
     },
@@ -919,9 +912,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "data_zax_per",
       "type": "operation"
     },
@@ -935,9 +928,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "kl_k013fo",
       "type": "int"
     },
@@ -951,9 +944,9 @@
     "isneed": ""
   },
   {
-    "cnt": 9,
     "bankid": {
       "block": "extends",
+      "sorce": "",
       "code": "usa_chiisares",
       "type": "int"
     },

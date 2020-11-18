@@ -1,0 +1,4 @@
+                <tem:TProperties>
+                  <tem:Code>{{Code}}</tem:Code>
+                  <tem:Value>{{Value}}</tem:Value>
+                </tem:TProperties>

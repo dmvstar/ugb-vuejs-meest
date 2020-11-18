@@ -28,23 +28,24 @@ file.on('line', (line) => {
     //}
     var record = line.split(',');
     //console.log(count + '['+record[2]+'] '+line);
-    
+    //"cnt" : record.length,
     if (record[2] !== "") {
       var obj = {
-        "cnt" : record.length,
+        
         "bankid": {
           "block": record[0],
-          "code": record[1],
-          "type": record[2]
+          "sorce": record[1],
+          "code": record[2],
+          "type": record[3]
         },
         "webbank": {
-          "block": record[3],
-          "code": record[4],
-          "type": record[6],
-          "default": record[7]
+          "block": record[4],
+          "code": record[5],
+          "type": record[7],
+          "default": record[8]
         },
-        "dictionary": record[5],
-        "isneed": record[8]
+        "dictionary": record[6],
+        "isneed": record[9]
       }
       ret.push(obj);
       //console.log(JSON.stringify(obj));

@@ -11,8 +11,8 @@ var bankid_transform_web = [{
         mapping: []
     },
     {
-        name: "Individuals",
-        isarray: true,
+        name: "Individuals", 
+        isarray: false,
         mapping: []
     }, // array
     {
@@ -101,11 +101,12 @@ for (o of bankid_mapping) {
 for (key in bankid_client) {
 
     var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;            
-    console.log("[" + key + "]["+webbank_block+"] Array ");
-    console.log(bankid_transform_out[webbank_block]);
+
 
     if (bankid_client[key] instanceof Array) {
-        
+        console.log("[" + key + "]["+webbank_block+"] Array ");
+        //console.log(bankid_transform_out[webbank_block]);
+
         var cnt = 0;
         var amapi = [];
         ////console.log(" ["+webbank_block+"]["+key+"] "+a+"="+JSON.stringify(a));    
@@ -135,15 +136,17 @@ for (key in bankid_client) {
             cnt ++;
         }
         //console.log(amapi);
-        console.log(amapi.length);
+        //console.log(amapi.length);
         bankid_transform_out[webbank_block] = amapi;
     } else {
         console.log("[" + key + "] Object");
         for (o in bankid_client[key]) {
             var mapi = bankid_transform_bid.find(x => x.name === key).mapping;
             var val = mapi.find(x => x.bankid.code === o);
+            //console.log(" [" + key + "][" + o + "]");// val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
+                console.log("  [" + key + "][" + o + "]="+val.value+"-"+val.webbank.default);
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 //console.log(val);
                 bankid_transform_out[val.webbank.block].push(val);
@@ -151,22 +154,59 @@ for (key in bankid_client) {
         }
     }
 }
-
+/*
 console.log( "bankid_transform_out=");
 console.log( bankid_transform_out );
 console.log( "----------------------------------");
 console.log( bankid_transform_out.Scans[0] );
 console.log( bankid_transform_out.Addresses[0] );
 console.log( bankid_transform_out.Addresses[1] );
+*/
 
-
-var calcm =  bankid_transform_bid.find(x => x.name === 'calculate').mapping;
+// Calculate field from bankid
+var calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
+console.log("calcm --------------------------------------------");
 console.log(calcm);
-var bankid_src = 'person';
-var webbank_src = bankid_transform_out.Clent;
-console.log(webbank_src);
-for(a of calcm) {
-    console.log(a.bankid.code);
+console.log("calcm --------------------------------------------");
 
-}
+var webbank_src = bankid_transform_out.Individuals;
+
+
+console.log("webbank_src --------------------------------------------");
+console.log(webbank_src);
+console.log("webbank_src --------------------------------------------");
+
+for(item of calcm) {
+    console.log(item); // x.name === a.source !!!! persons
+    var bankid_src  = bankid_transform_bid.find(x => x.name === 'person').mapping;
+    console.log("bankid_src --------------------------------------------");
+    console.log(bankid_src);
     
+    var fields = item.bankid.code.split('+');
+    var calculate = "";
+    for(f of fields) {        
+        var n = bankid_src.find(x => x.bankid.block === 'person' && x.bankid.code === f)
+        console.log("  bankid_fld "+f+" "+n.value + JSON.stringify(n));
+        calculate += n.value +" ";
+        calculate = calculate;
+    }
+    item.value = calculate.trimRight();
+    var wkey = item.webbank.block;
+    var wfld = item.webbank.code;
+    
+    var wblock = bankid_transform_out[wkey];//.find(x => x.webbank.block === wkey && x.webbank.code === wfld)
+    wblock.push(item);
+    console.log("bankid_src ["+wkey+"]["+wfld+"] ");
+    console.log(wblock);
+    console.log("bankid_src --------------------------------------------");
+}
+
+calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
+console.log("calcm --------------------------------------------");
+console.log(calcm);
+console.log("calcm --------------------------------------------");
+/*
+console.log( "bankid_transform_out=");
+console.log( bankid_transform_out );
+console.log( "----------------------------------");
+*/
