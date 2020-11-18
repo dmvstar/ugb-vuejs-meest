@@ -50,7 +50,7 @@
   {
     "cnt": 9,
     "bankid": {
-      "block": "compile",
+      "block": "calculate",
       "code": "lastName+firstName+middleName",
       "type": "string"
     },
@@ -158,13 +158,6 @@
     },
     "dictionary": "KL_K030.DBF",
     "isneed": "true"
-  },
-  {
-    "cnt": 1,
-    "bankid": {
-      "block": ""
-    },
-    "webbank": {}
   },
   {
     "cnt": 9,
@@ -279,13 +272,6 @@
     "isneed": "true"
   },
   {
-    "cnt": 1,
-    "bankid": {
-      "block": ""
-    },
-    "webbank": {}
-  },
-  {
     "cnt": 9,
     "bankid": {
       "block": "none",
@@ -347,7 +333,7 @@
       "default": ""
     },
     "dictionary": "",
-    "isneed": ""
+    "isneed": "true"
   },
   {
     "cnt": 9,
@@ -363,7 +349,7 @@
       "default": ""
     },
     "dictionary": "",
-    "isneed": ""
+    "isneed": "true"
   },
   {
     "cnt": 9,
@@ -379,7 +365,7 @@
       "default": ""
     },
     "dictionary": "",
-    "isneed": ""
+    "isneed": "true"
   },
   {
     "cnt": 9,
@@ -395,7 +381,7 @@
       "default": ""
     },
     "dictionary": "",
-    "isneed": ""
+    "isneed": "true"
   },
   {
     "cnt": 9,
@@ -411,7 +397,7 @@
       "default": ""
     },
     "dictionary": "",
-    "isneed": ""
+    "isneed": "true"
   },
   {
     "cnt": 9,
@@ -427,7 +413,7 @@
       "default": ""
     },
     "dictionary": "",
-    "isneed": ""
+    "isneed": "true"
   },
   {
     "cnt": 9,
@@ -443,14 +429,135 @@
       "default": ""
     },
     "dictionary": "",
+    "isneed": "true"
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "type",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "TypeCode",
+      "type": "int",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": "true"
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "country",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Country",
+      "type": "int",
+      "default": ""
+    },
+    "dictionary": "",
     "isneed": ""
   },
   {
-    "cnt": 1,
+    "cnt": 9,
     "bankid": {
-      "block": ""
+      "block": "none",
+      "code": "state",
+      "type": "string"
     },
-    "webbank": {}
+    "webbank": {
+      "block": "Addresses",
+      "code": "State",
+      "type": "string",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": ""
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "area",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Region",
+      "type": "string",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": ""
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "city",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Town ",
+      "type": "string",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": ""
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "street",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Street ",
+      "type": "string",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": ""
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "houseNo",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "HouseNumber ",
+      "type": "string",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": ""
+  },
+  {
+    "cnt": 9,
+    "bankid": {
+      "block": "none",
+      "code": "flatNo",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "FlatNumber ",
+      "type": "string",
+      "default": ""
+    },
+    "dictionary": "",
+    "isneed": ""
   },
   {
     "cnt": 9,

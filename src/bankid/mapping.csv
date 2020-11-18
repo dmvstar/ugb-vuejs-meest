@@ -1,7 +1,7 @@
 person,lastName,string,Individuals,LastName,,string,,true
 person,firstName,string,Individuals,FirstName,,string,,true
 person,middleName,string,Individuals,FatherName,,string,,true
-compile,lastName+firstName+middleName,string,Client,Name,,string,,true
+calculate,lastName+firstName+middleName,string,Client,Name,,string,,true
 ,,,,,,string,,false
 ,,,,,,string,,false
 person,іnn,string,Client,StateCode,,string,,true
@@ -10,7 +10,6 @@ extends,marital_status,int,Properties,MARITAL_STATUS,D08,int,,true
 person,sex,string,Properties,GENDER,D06,int,,true
 person,birthDay,date,Client,BirthDay,,date,,true
 person,uaResident,int,Client,Residency,KL_K030.DBF,int,,true
-
 documents,type,string,Identifications,TypeId,cfIdentificationTypes,int,,true
 documents,series,string,Identifications,Series,,string,,true
 documents,number,string,Identifications,Number,,string,,true
@@ -18,24 +17,35 @@ documents,issue,string,Identifications,Registrator,,string,,true
 documents,dateIssue,date,Identifications,IssueDate,,date,,true
 documents,dateExpiration,date,Identifications,ExpirationDate,,date,,true
 documents,issueCountryIso2,string,Identifications,CountryCode,,string,,true
-
 none,none,none,Identifications,Checked,,int,0,true
 none,none,none,Identifications,IsMain,,int,0,true
 ,,,,,,,,false
 addresses,type,string,Addresses,TypeCode,,int,,true
-addresses,country,string,Addresses,Country,,int,,
-,,,Addresses,PostalCode,,string,,
-addresses,state,string,Addresses,State,,string,,
-addresses,area,string,Addresses,Region,,string,,
-addresses,city,string,Addresses,Town ,,string,,
-,,,Addresses,TownshipType,,int,,
-addresses,street,string,Addresses,Street ,,string,,
-,,,Addresses,StreetType,,int,,
-addresses,houseNo,string,Addresses,HouseNumber ,,string,,
-,,,Addresses,HouseType,,int,,
-addresses,flatNo,string,Addresses,FlatNumber ,,string,,
-,,,Addresses,FlatType,,int,,
-
+addresses,country,string,Addresses,Country,,int,,true
+,,,Addresses,PostalCode,,string,,true
+addresses,state,string,Addresses,State,,string,,true
+addresses,area,string,Addresses,Region,,string,,true
+addresses,city,string,Addresses,Town ,,string,,true
+",,,Addresses,TownshipType,TownshipType,int,3508	м.	мiсто,true"
+addresses,street,string,Addresses,Street ,,string,,true
+",,,Addresses,StreetType,StreetType,int,3510	вул.	вулиця,true"
+addresses,houseNo,string,Addresses,HouseNumber ,,string,,true
+",,,Addresses,HouseType,HouseType,int,3511	буд.	будинок,true"
+addresses,flatNo,string,Addresses,FlatNumber ,,string,,true
+",,,Addresses,FlatType,FlatType,int,3506	кв.	квартира,true"
+none,type,string,Addresses,TypeCode,,int,,true
+none,country,string,Addresses,Country,,int,,
+none,,,Addresses,PostalCode,,string,,
+none,state,string,Addresses,State,,string,,
+none,area,string,Addresses,Region,,string,,
+none,city,string,Addresses,Town ,,string,,
+none,,,Addresses,TownshipType,,int,,
+none,street,string,Addresses,Street ,,string,,
+none,,,Addresses,StreetType,,int,,
+none,houseNo,string,Addresses,HouseNumber ,,string,,
+none,,,Addresses,HouseType,,int,,
+none,flatNo,string,Addresses,FlatNumber ,,string,,
+none,,,Addresses,FlatType,,int,,
 person,socStatus,string,Properties,,,int,,
 person,flagPEPs,int,Properties,,,int,,
 person,flagPersonTerror,int,Properties,,,int,,
