@@ -10,6 +10,7 @@ extends,marital_status,int,Properties,MARITAL_STATUS,D08,int,,true
 person,sex,string,Properties,GENDER,D06,int,,true
 person,birthDay,date,Client,BirthDay,,date,,true
 person,uaResident,int,Client,Residency,KL_K030.DBF,int,,true
+
 documents,type,string,Identifications,TypeId,cfIdentificationTypes,int,,true
 documents,series,string,Identifications,Series,,string,,true
 documents,number,string,Identifications,Number,,string,,true
@@ -17,6 +18,7 @@ documents,issue,string,Identifications,Registrator,,string,,true
 documents,dateIssue,date,Identifications,IssueDate,,date,,true
 documents,dateExpiration,date,Identifications,ExpirationDate,,date,,true
 documents,issueCountryIso2,string,Identifications,CountryCode,,string,,true
+
 none,none,none,Identifications,Checked,,int,0,true
 none,none,none,Identifications,IsMain,,int,0,true
 ,,,,,,,,false
@@ -33,19 +35,7 @@ addresses,houseNo,string,Addresses,HouseNumber ,,string,,
 ,,,Addresses,HouseType,,int,,
 addresses,flatNo,string,Addresses,FlatNumber ,,string,,
 ,,,Addresses,FlatType,,int,,
-addresses,type,string,Addresses,TypeCode,,int,,true
-addresses,country,string,Addresses,Country,,int,,
-,,,Addresses,PostalCode,,string,,
-addresses,state,string,Addresses,State,,string,,
-addresses,area,string,Addresses,Region,,string,,
-addresses,city,string,Addresses,Town ,,string,,
-,,,Addresses,TownshipType,,int,,
-addresses,street,string,Addresses,Street ,,string,,
-,,,Addresses,StreetType,,int,,
-addresses,houseNo,string,Addresses,HouseNumber ,,string,,
-,,,Addresses,HouseType,,int,,
-addresses,flatNo,string,Addresses,FlatNumber ,,string,,
-,,,Addresses,FlatType,,int,,
+
 person,socStatus,string,Properties,,,int,,
 person,flagPEPs,int,Properties,,,int,,
 person,flagPersonTerror,int,Properties,,,int,,

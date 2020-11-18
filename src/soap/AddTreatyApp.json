@@ -1,0 +1,38 @@
+{
+    "TreatyId": 16281109,
+    "StateId": 49,
+    "DayDate": {
+        "Year": "2020",
+        "Month": "11",
+        "Day": "17"
+    },
+    "No": 9,
+    "OrgDate": {
+        "Year": "2020",
+        "Month": "11",
+        "Day": "17"
+    },
+    "DateFrom": {
+        "Year": "2020",
+        "Month": "11",
+        "Day": "17"
+    },
+    "DateInto": {
+        "Year": "2099",
+        "Month": "11",
+        "Day": "17"
+    },
+    "Code": "CA-001Code",
+    "CrncyAmount": 7000.0000,
+    "Share": 0,
+    "Provision": 0,
+    "Risk": 0,
+    "DurationKind": 1,
+    "PawnKind": 0,
+    "CreditGrade": "",
+    "AmountId": 34294853,
+    "Info": "Change  SUM",
+    "Rate": 0,
+    "ProcessFlag": 1,
+    "Status": 1
+}
