@@ -23,7 +23,7 @@
         "Day": "17"
     },
     "Code": "CA-001Code",
-    "CrncyAmount": 7000.0000,
+    "CrncyAmount": "7000.0000",
     "Share": 0,
     "Provision": 0,
     "Risk": 0,

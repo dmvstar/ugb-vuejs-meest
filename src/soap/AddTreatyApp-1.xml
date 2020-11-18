@@ -1,0 +1,91 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AddTreatyApp>
+         <tem:treatyApp>
+
+            <tem:TreatyId>
+               <tem:Value>16281109</tem:Value>
+            </tem:TreatyId>
+			
+            <tem:StateId>
+               <tem:Value>49</tem:Value> <!-- 455(Activating3DS) или 466 (Deactivating3DS) -->
+            </tem:StateId>
+			
+            <tem:DayDate>
+               <tem:Year>2020</tem:Year>
+               <tem:Month>11</tem:Month>
+               <tem:Day>17</tem:Day>
+            </tem:DayDate>
+			
+            <tem:No>
+               <tem:Value>9</tem:Value>
+            </tem:No>
+			
+            <tem:OrgDate>
+                <tem:Year>2020</tem:Year>
+               <tem:Month>11</tem:Month>
+               <tem:Day>17</tem:Day>
+            </tem:OrgDate>
+            <tem:DateFrom>
+               <tem:Year>2020</tem:Year>
+               <tem:Month>11</tem:Month>
+               <tem:Day>17</tem:Day>
+            </tem:DateFrom>
+            
+            <tem:DateInto>
+               <tem:Year>2099</tem:Year>
+               <tem:Month>01</tem:Month>
+               <tem:Day>01</tem:Day>
+            </tem:DateInto>
+			
+            <tem:Code>CA-001</tem:Code>
+			
+           <tem:CrncyAmount>
+               <tem:Value>7000.0000</tem:Value>
+            </tem:CrncyAmount>
+			
+            <tem:Share>
+               <tem:Value>0</tem:Value>
+            </tem:Share>
+			
+            <tem:Provision>
+               <tem:Value>0</tem:Value>
+            </tem:Provision>
+			
+            <tem:Risk>
+               <tem:Value>0</tem:Value>
+            </tem:Risk>
+			
+            <tem:DurationKind>
+               <tem:Value>1</tem:Value>
+            </tem:DurationKind>
+			
+            <tem:PawnKind>
+               <tem:Value>0</tem:Value>
+            </tem:PawnKind>
+			
+            <tem:CreditGrade></tem:CreditGrade>
+
+            <tem:AmountId>
+               <tem:Value>34294853</tem:Value>
+            </tem:AmountId>
+            
+            <tem:Info>Change SUM</tem:Info>
+            
+            <tem:Rate>
+               <tem:Value>0</tem:Value>
+            </tem:Rate>
+
+            <tem:ProcessFlag>
+               <tem:Value>1</tem:Value>
+            </tem:ProcessFlag>
+            
+            <tem:Status>
+               <tem:Value>1</tem:Value>
+            </tem:Status>
+			
+         </tem:treatyApp>
+      </tem:AddTreatyApp>
+   </soapenv:Body>
+</soapenv:Envelope>
