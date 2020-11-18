@@ -26,26 +26,14 @@ addresses,country,string,Addresses,Country,,int,,true
 addresses,state,string,Addresses,State,,string,,true
 addresses,area,string,Addresses,Region,,string,,true
 addresses,city,string,Addresses,Town ,,string,,true
-",,,Addresses,TownshipType,TownshipType,int,3508	м.	мiсто,true"
+,,,Addresses,TownshipType,TownshipType,int,3508;м;мiсто,true
 addresses,street,string,Addresses,Street ,,string,,true
-",,,Addresses,StreetType,StreetType,int,3510	вул.	вулиця,true"
+,,,Addresses,StreetType,StreetType,int,3510;вул.;вулиця,true
 addresses,houseNo,string,Addresses,HouseNumber ,,string,,true
-",,,Addresses,HouseType,HouseType,int,3511	буд.	будинок,true"
+,,,Addresses,HouseType,HouseType,int,3511;буд.;будинок,true
 addresses,flatNo,string,Addresses,FlatNumber ,,string,,true
-",,,Addresses,FlatType,FlatType,int,3506	кв.	квартира,true"
-none,type,string,Addresses,TypeCode,,int,,true
-none,country,string,Addresses,Country,,int,,
-none,,,Addresses,PostalCode,,string,,
-none,state,string,Addresses,State,,string,,
-none,area,string,Addresses,Region,,string,,
-none,city,string,Addresses,Town ,,string,,
-none,,,Addresses,TownshipType,,int,,
-none,street,string,Addresses,Street ,,string,,
-none,,,Addresses,StreetType,,int,,
-none,houseNo,string,Addresses,HouseNumber ,,string,,
-none,,,Addresses,HouseType,,int,,
-none,flatNo,string,Addresses,FlatNumber ,,string,,
-none,,,Addresses,FlatType,,int,,
+,,,Addresses,FlatType,FlatType,int,3506; кв.;квартира,true
+
 person,socStatus,string,Properties,,,int,,
 person,flagPEPs,int,Properties,,,int,,
 person,flagPersonTerror,int,Properties,,,int,,
