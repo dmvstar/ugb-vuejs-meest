@@ -165,16 +165,11 @@ console.log( bankid_transform_out.Addresses[1] );
 
 // Calculate field from bankid
 var calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
+/*
 console.log("calcm --------------------------------------------");
 console.log(calcm);
 console.log("calcm --------------------------------------------");
-
-var webbank_src = bankid_transform_out.Individuals;
-
-
-console.log("webbank_src --------------------------------------------");
-console.log(webbank_src);
-console.log("webbank_src --------------------------------------------");
+*/
 
 for(item of calcm) {
     console.log(item); // x.name === a.source !!!! persons
@@ -186,7 +181,7 @@ for(item of calcm) {
     var calculate = "";
     for(f of fields) {        
         var n = bankid_src.find(x => x.bankid.block === 'person' && x.bankid.code === f)
-        console.log("  bankid_fld "+f+" "+n.value + JSON.stringify(n));
+        //console.log("  bankid_fld "+f+" "+n.value + JSON.stringify(n));
         calculate += n.value +" ";
         calculate = calculate;
     }
@@ -196,11 +191,14 @@ for(item of calcm) {
     
     var wblock = bankid_transform_out[wkey];//.find(x => x.webbank.block === wkey && x.webbank.code === wfld)
     wblock.push(item);
-    console.log("bankid_src ["+wkey+"]["+wfld+"] ");
+    wblock = bankid_transform_out[wkey];
+    console.log("bankid_transform_out ["+wkey+"]["+wfld+"] ");
     console.log(wblock);
-    console.log("bankid_src --------------------------------------------");
+    console.log("bankid_transform_out --------------------------------------------");
 }
 
+
+/*
 calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
 console.log("calcm --------------------------------------------");
 console.log(calcm);
@@ -210,3 +208,41 @@ console.log( "bankid_transform_out=");
 console.log( bankid_transform_out );
 console.log( "----------------------------------");
 */
+/*
+const math = require(mathjs);
+var a='Hello', b='world';
+var r = math.evaluate(a + ' ' +b);
+console.log("evaluate --------------------------------------------");
+console.log(r);
+console.log("evaluate --------------------------------------------");
+*/
+
+console.log("bankid_transform_out --------------------------------------------");
+var fill_data = {};
+for(item of bankid_transform_out.Client) {    
+    fill_data[item.webbank.code] = item.value;
+}
+var client_data = bankid_transform_out.Client;
+
+console.log(fill_data);
+console.log("bankid_transform_out --------------------------------------------");
+const data = fs.readFileSync('./client-create-Clients.xml', 
+            {encoding:'utf8', flag:'r'}); 
+console.log(data); 
+
+var mustache = require("mustache");
+
+var view = {
+  title: "Joe",
+  calc: function () {
+    return 2 + 4;
+  }
+};
+ 
+var output = mustache.render("{{title}} spends {{calc}}", view);
+console.log(output);
+
+output = mustache.render(data, fill_data);
+console.log(output);
+
+
