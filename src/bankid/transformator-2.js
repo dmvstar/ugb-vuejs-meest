@@ -224,6 +224,45 @@ for(item of bankid_transform_out.Client) {
 }
 var client_data = bankid_transform_out.Client;
 
+const client_xml_files = {
+    top: "./client-create-top.xml",
+
+    client_top : './client-create-Empty.xml',
+    client_man : './client-create-Clients.xml',
+    client_bot : './client-create-Empty.xml',
+
+    props_top : './client-create-Props-top.xml',
+    props_man : './client-create-Props.xml',
+    props_bot : './client-create-Props-bot.xml',
+
+    bot: "./client-create-bot.xml"
+}
+const client_xml = {
+    top: null,
+
+    client_top : null,
+    client_man : null,
+    client_bot : null,
+
+    props_top : null,
+    props_man : null,
+    props_bot : null,
+
+    bot:null
+}
+
+client_xml.top = fs.readFileSync(client_xml_files.top, {encoding:'utf8', flag:'r'});
+client_xml.client_top = fs.readFileSync(client_xml_files.client_top, {encoding:'utf8', flag:'r'});
+client_xml.client_man = fs.readFileSync(client_xml_files.client_man, {encoding:'utf8', flag:'r'});
+client_xml.client_bot = fs.readFileSync(client_xml_files.client_bot, {encoding:'utf8', flag:'r'});
+
+client_xml.props_top = fs.readFileSync(client_xml_files.props_top, {encoding:'utf8', flag:'r'});
+client_xml.props_man = fs.readFileSync(client_xml_files.props_man, {encoding:'utf8', flag:'r'});
+client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, {encoding:'utf8', flag:'r'});
+
+
+client_xml.bot = fs.readFileSync(client_xml_files.bot, {encoding:'utf8', flag:'r'});
+
 console.log(fill_data);
 console.log("bankid_transform_out --------------------------------------------");
 const data = fs.readFileSync('./client-create-Clients.xml', 
@@ -242,7 +281,12 @@ var view = {
 var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
 
-output = mustache.render(data, fill_data);
+output = client_xml.top;
+output += client_xml.client_top;
+output += mustache.render(client_xml.client_man, fill_data);
+output += client_xml.client_bot;
+output += client_xml.bot;
+
 console.log(output);
 
 
