@@ -34,18 +34,19 @@ file.on('line', (line) => {
         
         "bankid": {
           "block": record[0],
-          "sorce": record[1],
+          "source": record[1],
           "code": record[2],
-          "type": record[3]
+          "maps": record[3],
+          "type": record[4]
         },
         "webbank": {
-          "block": record[4],
-          "code": record[5],
-          "type": record[7],
-          "default": record[8]
-        },
-        "dictionary": record[6],
-        "isneed": record[9]
+          "block": record[5],
+          "code": record[6],
+          "type": record[8],
+          "default": record[9],
+          "dict": record[7],
+          "isneed": record[10]
+        }       
       }
       ret.push(obj);
       //console.log(JSON.stringify(obj));

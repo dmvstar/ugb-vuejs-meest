@@ -233,37 +233,45 @@ for (item of bankid_transform_out.Properties) {
     if (item.webbank.code !== '') {
         console.log(item);
         fill_data.props[i] = {};
-        fill_data.props[i].Code = item.webbank.code;
+        fill_data.props[i].Refs  = item.bankid.maps;
+        fill_data.props[i].Code  = item.webbank.code;
+        fill_data.props[i].Dict  = item.webbank.dict;
         fill_data.props[i].Value = item.value;
+
+        if (item.bankid.maps !== undefined) {
+            fill_data.props[i].Value = 
+                get_reftrans(bankid_dicts, item.bankid.maps, item.value);
+        }
+
         i++;
     }
 }
 
 var client_data = bankid_transform_out.Client;
 const client_xml_files = {
-    top: "./client-xml/client-create-top.xml",
+    top: "./data/client-create-top.xml",
 
-    client_top: './client-xml/client-create-Empty.xml',
-    client_man: './client-xml/client-create-Clients.xml',
-    client_bot: './client-xml/client-create-Empty.xml',
+    client_top: './data/client-create-Empty.xml',
+    client_man: './data/client-create-Clients.xml',
+    client_bot: './data/client-create-Empty.xml',
 
-    indiv_top: './client-xml/client-create-Empty.xml',
-    indiv_man: './client-xml/client-create-Indiv.xml',
-    indiv_bot: './client-xml/client-create-Empty.xml',
+    indiv_top: './data/client-create-Empty.xml',
+    indiv_man: './data/client-create-Indiv.xml',
+    indiv_bot: './data/client-create-Empty.xml',
 
-    props_top: './client-xml/client-create-Props-top.xml',
-    props_man: './client-xml/client-create-Props.xml',
-    props_bot: './client-xml/client-create-Props-bot.xml',
+    props_top: './data/client-create-Props-top.xml',
+    props_man: './data/client-create-Props.xml',
+    props_bot: './data/client-create-Props-bot.xml',
 
-    ident_top: './client-xml/client-create-Empty.xml',
-    ident_man: './client-xml/client-create-Ident.xml',
-    ident_bot: './client-xml/client-create-Empty.xml',
+    ident_top: './data/client-create-Empty.xml',
+    ident_man: './data/client-create-Ident.xml',
+    ident_bot: './data/client-create-Empty.xml',
 
-    addre_top: './client-xml/client-create-Addre-top.xml',
-    addre_man: './client-xml/client-create-Addre.xml',
-    addre_bot: './client-xml/client-create-Addre-bot.xml',
+    addre_top: './data/client-create-Addre-top.xml',
+    addre_man: './data/client-create-Addre.xml',
+    addre_bot: './data/client-create-Addre-bot.xml',
 
-    bot: "./client-xml/client-create-bot.xml"
+    bot: "./data/client-create-bot.xml"
 }
 const client_xml = {
     top: null,
@@ -352,3 +360,8 @@ output += client_xml.bot;
 console.log(output);
 // MAIN TRANSFORMATOR
 
+function get_reftrans(refmaps, idrefcode, idvalue) {
+    var ret = idvalue;
+
+    return ret;
+}

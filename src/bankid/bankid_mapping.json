@@ -2,961 +2,1174 @@
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "lastName",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Individuals",
       "code": "LastName",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "firstName",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Individuals",
       "code": "FirstName",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "middleName",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Individuals",
       "code": "FatherName",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "calculate",
-      "sorce": "person",
+      "source": "person",
       "code": "lastName+firstName+middleName",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Client",
       "code": "Name",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "іnn",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Client",
       "code": "StateCode",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "country_citizen",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "FATF_COUNTRY_CITIZEN",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "KL_K040.DBF",
-    "isneed": "true"
+      "default": "",
+      "dict": "KL_K040.DBF",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "marital_status",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "MARITAL_STATUS",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "D08",
-    "isneed": "true"
+      "default": "",
+      "dict": "D08",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "sex",
+      "maps": "sex",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Individuals",
+      "code": "GENDER",
+      "type": "int",
+      "default": "",
+      "dict": "D06",
+      "isneed": "true"
+    }
+  },
+  {
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "sex",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Properties",
       "code": "GENDER",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "D06",
-    "isneed": "true"
+      "default": "",
+      "dict": "D06",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "birthDay",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
-      "block": "Client",
+      "block": "Individuals",
       "code": "BirthDay",
       "type": "date",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "uaResident",
+      "maps": "resident",
       "type": "int"
     },
     "webbank": {
       "block": "Client",
       "code": "Residency",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "KL_K030.DBF",
-    "isneed": "true"
+      "default": "",
+      "dict": "KL_K030.DBF",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "type",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Identifications",
       "code": "TypeId",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "cfIdentificationTypes",
-    "isneed": "true"
+      "default": "",
+      "dict": "cfIdentificationTypes",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "series",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Identifications",
       "code": "Series",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "number",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Identifications",
       "code": "Number",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "issue",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Identifications",
       "code": "Registrator",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "dateIssue",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
       "block": "Identifications",
       "code": "IssueDate",
       "type": "date",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "dateExpiration",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
       "block": "Identifications",
       "code": "ExpirationDate",
       "type": "date",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "documents",
-      "sorce": "",
+      "source": "",
       "code": "issueCountryIso2",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Identifications",
       "code": "CountryCode",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "none",
-      "sorce": "",
+      "source": "",
       "code": "none",
+      "maps": "",
       "type": "none"
     },
     "webbank": {
       "block": "Identifications",
       "code": "Checked",
       "type": "int",
-      "default": "0"
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "0",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "none",
-      "sorce": "",
+      "source": "",
       "code": "none",
+      "maps": "",
       "type": "none"
     },
     "webbank": {
       "block": "Identifications",
       "code": "IsMain",
       "type": "int",
-      "default": "0"
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "0",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "type",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "TypeCode",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "country",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "Country",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "state",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "State",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "area",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "Region",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "city",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "Town ",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "street",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "Street ",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "houseNo",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "HouseNumber ",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": "true"
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
   },
   {
     "bankid": {
       "block": "addresses",
-      "sorce": "",
+      "source": "",
       "code": "flatNo",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Addresses",
       "code": "FlatNumber ",
       "type": "string",
-      "default": ""
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "type",
+      "maps": "",
+      "type": "string"
     },
-    "dictionary": "",
-    "isneed": "true"
+    "webbank": {
+      "block": "Addresses",
+      "code": "TypeCode",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": "true"
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "country",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Country",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "state",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "State",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "area",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Region",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "city",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Town ",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "street",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "Street ",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "houseNo",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "HouseNumber ",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "none",
+      "source": "",
+      "code": "flatNo",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Addresses",
+      "code": "FlatNumber ",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "socStatus",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Properties",
       "code": "",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "flagPEPs",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "flagPersonTerror",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "flagRestriction",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "flagTopLevelRisk",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "scans",
-      "sorce": "",
+      "source": "",
       "code": "type",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Scans",
       "code": "name",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "scans",
-    "isneed": ""
+      "default": "",
+      "dict": "scans",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "scans",
-      "sorce": "",
+      "source": "",
       "code": "scanFile",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Scans",
       "code": "content",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "scans",
-      "sorce": "",
+      "source": "",
       "code": "dateCreate",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
       "block": "Scans",
       "code": "tmestamp",
       "type": "dete",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "scans",
-      "sorce": "",
+      "source": "",
       "code": "extension",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Scans",
       "code": "comment",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "work_info",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Properties",
       "code": "",
       "type": "",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "person",
-      "sorce": "",
+      "source": "",
       "code": "phone",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Communications",
       "code": "Value",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "birth_country",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Properties",
       "code": "BIRTH_COUNTRY",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "KL_K040.DBF",
-    "isneed": ""
+      "default": "",
+      "dict": "KL_K040.DBF",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "birth_place",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
       "block": "Properties",
       "code": "BIRTH_PLACE",
       "type": "string",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "profit_way",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "PROFIT_WAY",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "PROFIT_WAY",
-    "isneed": ""
+      "default": "",
+      "dict": "PROFIT_WAY",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "profit_src",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "BANK_PRODUCT",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "FIN_DOCH",
-    "isneed": ""
+      "default": "",
+      "dict": "FIN_DOCH",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "obsyag_nad",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "OBSYAG_NAD",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "OBSYAG_NAD_1",
-    "isneed": ""
+      "default": "",
+      "dict": "OBSYAG_NAD_1",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "nad_k_3",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "NAD_K_3",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "NAD_K_3",
-    "isneed": ""
+      "default": "",
+      "dict": "NAD_K_3",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "monthsumm",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "MONTHSUMM",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "SUMA_DOHOD",
-    "isneed": ""
+      "default": "",
+      "dict": "SUMA_DOHOD",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "propetyth_of_client",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "PROPETYTH_OF_CLIENT",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "PROPETYTH_OF_CLIENT",
-    "isneed": ""
+      "default": "",
+      "dict": "PROPETYTH_OF_CLIENT",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "propetyth_of_client_avto",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "PROPETYTH_OF_CLIENT_AVTO",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "PROPETYTH_OF_CLIENT_AVTO",
-    "isneed": ""
+      "default": "",
+      "dict": "PROPETYTH_OF_CLIENT_AVTO",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "info_outer_acc_sel",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "INFO_OUTER_ACC_SEL",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "INFO_OUTER_ACC",
-    "isneed": ""
+      "default": "",
+      "dict": "INFO_OUTER_ACC",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "exists_cred_out",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "EXISTS_CRED_OUT",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "YESNO",
-    "isneed": ""
+      "default": "",
+      "dict": "YESNO",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "exists_depo_out",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "EXISTS_DEPO_OUT",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "YESNO",
-    "isneed": ""
+      "default": "",
+      "dict": "YESNO",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "propetypap_of_clientype",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "PROPETYPAP_OF_CLIENTYPE",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "PROPETYPAP_OF_CLIENTYPE",
-    "isneed": ""
+      "default": "",
+      "dict": "PROPETYPAP_OF_CLIENTYPE",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "bank_services_manual",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "BANK_SERVICES_MANUAL",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "BANK_SERVICES_MANUAL",
-    "isneed": ""
+      "default": "",
+      "dict": "BANK_SERVICES_MANUAL",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "ugb_tcurelpers",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "UGB_TCURelPers",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "RF_UGB_TCURelPers",
-    "isneed": ""
+      "default": "",
+      "dict": "RF_UGB_TCURelPers",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "public_person_exists",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "PUBLIC_PERSON_EXISTS",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "PUBLIC_PERSON_EXISTS",
-    "isneed": ""
+      "default": "",
+      "dict": "PUBLIC_PERSON_EXISTS",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "public_data_fact",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
       "block": "Properties",
       "code": "PUBLIC_DATA_FACT",
       "type": "date",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "public_data_permission",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
       "block": "Properties",
       "code": "PUBLIC_DATA_PERMISSION",
       "type": "date",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "public_data_risk",
+      "maps": "",
       "type": "date"
     },
     "webbank": {
       "block": "Properties",
       "code": "PUBLIC_DATA_RISK",
       "type": "date",
-      "default": ""
-    },
-    "dictionary": "",
-    "isneed": ""
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "data_zax_per",
+      "maps": "",
       "type": "operation"
     },
     "webbank": {
       "block": "Operations",
       "code": "DATA_ZAX_PER",
       "type": "operation",
-      "default": ""
-    },
-    "dictionary": "operation",
-    "isneed": ""
+      "default": "",
+      "dict": "operation",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "kl_k013fo",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "KL_K013FO",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "KL_K013_FO",
-    "isneed": ""
+      "default": "",
+      "dict": "KL_K013_FO",
+      "isneed": ""
+    }
   },
   {
     "bankid": {
       "block": "extends",
-      "sorce": "",
+      "source": "",
       "code": "usa_chiisares",
+      "maps": "",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
       "code": "Chiisaresident_USA",
       "type": "int",
-      "default": ""
-    },
-    "dictionary": "YESNO",
-    "isneed": ""
+      "default": "",
+      "dict": "YESNO",
+      "isneed": ""
+    }
   }
 ]
