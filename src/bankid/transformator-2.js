@@ -265,9 +265,7 @@ client_xml.bot = fs.readFileSync(client_xml_files.bot, {encoding:'utf8', flag:'r
 
 console.log(fill_data);
 console.log("bankid_transform_out --------------------------------------------");
-const data = fs.readFileSync('./client-create-Clients.xml', 
-            {encoding:'utf8', flag:'r'}); 
-console.log(data); 
+
 
 var mustache = require("mustache");
 
