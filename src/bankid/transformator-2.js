@@ -247,7 +247,6 @@ const client_xml_files = {
     client_man: './client-xml/client-create-Clients.xml',
     client_bot: './client-xml/client-create-Empty.xml',
 
-
     indiv_top: './client-xml/client-create-Empty.xml',
     indiv_man: './client-xml/client-create-Indiv.xml',
     indiv_bot: './client-xml/client-create-Empty.xml',
@@ -255,6 +254,14 @@ const client_xml_files = {
     props_top: './client-xml/client-create-Props-top.xml',
     props_man: './client-xml/client-create-Props.xml',
     props_bot: './client-xml/client-create-Props-bot.xml',
+
+    ident_top: './client-xml/client-create-Empty.xml',
+    ident_man: './client-xml/client-create-Ident.xml',
+    ident_bot: './client-xml/client-create-Empty.xml',
+
+    addre_top: './client-xml/client-create-Addre-top.xml',
+    addre_man: './client-xml/client-create-Addre.xml',
+    addre_bot: './client-xml/client-create-Addre-bot.xml',
 
     bot: "./client-xml/client-create-bot.xml"
 }
@@ -273,6 +280,14 @@ const client_xml = {
     props_man: null,
     props_bot: null,
 
+    ident_top: null,
+    ident_man: null,
+    ident_bot: null,
+
+    addre_top: null,
+    addre_man: null,
+    addre_bot: null,
+
     bot: null
 }
 
@@ -289,6 +304,14 @@ client_xml.indiv_bot = fs.readFileSync(client_xml_files.indiv_bot, { encoding: '
 client_xml.props_top = fs.readFileSync(client_xml_files.props_top, { encoding: 'utf8', flag: 'r' });
 client_xml.props_man = fs.readFileSync(client_xml_files.props_man, { encoding: 'utf8', flag: 'r' });
 client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, { encoding: 'utf8', flag: 'r' });
+
+client_xml.ident_top = fs.readFileSync(client_xml_files.ident_top, { encoding: 'utf8', flag: 'r' });
+client_xml.ident_man = fs.readFileSync(client_xml_files.ident_man, { encoding: 'utf8', flag: 'r' });
+client_xml.ident_bot = fs.readFileSync(client_xml_files.ident_bot, { encoding: 'utf8', flag: 'r' });
+
+client_xml.addre_top = fs.readFileSync(client_xml_files.addre_top, { encoding: 'utf8', flag: 'r' });
+client_xml.addre_man = fs.readFileSync(client_xml_files.addre_man, { encoding: 'utf8', flag: 'r' });
+client_xml.addre_bot = fs.readFileSync(client_xml_files.addre_bot, { encoding: 'utf8', flag: 'r' });
 
 client_xml.bot = fs.readFileSync(client_xml_files.bot, { encoding: 'utf8', flag: 'r' });
 
