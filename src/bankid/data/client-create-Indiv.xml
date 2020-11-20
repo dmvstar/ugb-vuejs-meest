@@ -1,0 +1,11 @@
+            
+            <tem:Individuals>
+               <tem:FirstName>{{FirstName}}</tem:FirstName>
+               <tem:LastName>{{LastName}}</tem:LastName>
+               <tem:FatherName>{{FatherName}}</tem:FatherName>
+               <tem:Gender>{{GENDER}}</tem:Gender>
+               <tem:BirthDay>{{BirthDay}}</tem:BirthDay>
+               <tem:BirthSurname>{{BirthSurname}}</tem:BirthSurname>
+               <tem:MarriageStatus>{{MarriageStatus}}</tem:MarriageStatus>
+               <tem:Status>1</tem:Status>
+            </tem:Individuals>
