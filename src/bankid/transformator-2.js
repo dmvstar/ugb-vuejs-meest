@@ -6,77 +6,77 @@ var bankid_dicts = require('./doc_types.json');
 
 var bankid_transform_out = {};
 var bankid_transform_web = [{
-        name: "Client",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "Individuals", 
-        isarray: false,
-        mapping: []
-    }, // array
-    {
-        name: "Identifications",
-        isarray: true,
-        mapping: []
-    }, // array documents
-    {
-        name: "Addresses",
-        isarray: true,
-        mapping: []
-    }, // array
-    {
-        name: "Communications",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "Properties",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "Scans",
-        isarray: true,
-        mapping: []
-    }, // array
-    {
-        name: "Operations",
-        isarray: false,
-        mapping: []
-    }
+    name: "Client",
+    isarray: false,
+    mapping: []
+},
+{
+    name: "Individuals",
+    isarray: false,
+    mapping: []
+}, // array
+{
+    name: "Identifications",
+    isarray: true,
+    mapping: []
+}, // array documents
+{
+    name: "Addresses",
+    isarray: true,
+    mapping: []
+}, // array
+{
+    name: "Communications",
+    isarray: false,
+    mapping: []
+},
+{
+    name: "Properties",
+    isarray: false,
+    mapping: []
+},
+{
+    name: "Scans",
+    isarray: true,
+    mapping: []
+}, // array
+{
+    name: "Operations",
+    isarray: false,
+    mapping: []
+}
 ]
 
 var bankid_transform_bid = [{
-        name: "person",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "addresses",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "documents",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "scans",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "extends",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "calculate",
-        isarray: false,
-        mapping: []
-    },
+    name: "person",
+    isarray: false,
+    mapping: []
+},
+{
+    name: "addresses",
+    isarray: true,
+    mapping: []
+},
+{
+    name: "documents",
+    isarray: true,
+    mapping: []
+},
+{
+    name: "scans",
+    isarray: true,
+    mapping: []
+},
+{
+    name: "extends",
+    isarray: true,
+    mapping: []
+},
+{
+    name: "calculate",
+    isarray: false,
+    mapping: []
+},
 ]
 
 // Prepare out data
@@ -100,40 +100,40 @@ for (o of bankid_mapping) {
 // Parce input data
 for (key in bankid_client) {
 
-    var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;            
+    var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;
 
 
     if (bankid_client[key] instanceof Array) {
-        console.log("[" + key + "]["+webbank_block+"] Array ");
+        console.log("[" + key + "][" + webbank_block + "] Array ");
         //console.log(bankid_transform_out[webbank_block]);
 
         var cnt = 0;
         var amapi = [];
         ////console.log(" ["+webbank_block+"]["+key+"] "+a+"="+JSON.stringify(a));    
         var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
-       
-        for (a of bankid_client[key]) {  
+
+        for (a of bankid_client[key]) {
             var mapi = JSON.parse(JSON.stringify((mapr)));
             //var mapi = mapr.slice(0);
             // console.log("mapi++++++++++++++++++++");
             // console.log(mapi);
             // console.log("mapi++++++++++++++++++++");
-             //bankid_transform_out.push(val);
+            //bankid_transform_out.push(val);
             for (o in a) {
-                console.log("  ["+cnt+"]["+key+"] "+o+"="+a[o]); 
+                console.log("  [" + cnt + "][" + key + "] " + o + "=" + a[o]);
                 var val = mapi.find(x => x.bankid.code === o);
                 if (val !== undefined) {
                     val.value = a[o];
                     //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                     //console.log(val);
-                }   
+                }
             }
             // console.log("mapi--------------------");
             // console.log(mapi);
             // console.log("mapi--------------------");
             amapi.push(mapi);
-            
-            cnt ++;
+
+            cnt++;
         }
         //console.log(amapi);
         //console.log(amapi.length);
@@ -146,7 +146,7 @@ for (key in bankid_client) {
             //console.log(" [" + key + "][" + o + "]");// val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
-                console.log("  [" + key + "][" + o + "]="+val.value+"-"+val.webbank.default);
+                console.log("  [" + key + "][" + o + "]=" + val.value + "-" + val.webbank.default);
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 //console.log(val);
                 bankid_transform_out[val.webbank.block].push(val);
@@ -171,28 +171,28 @@ console.log(calcm);
 console.log("calcm --------------------------------------------");
 */
 
-for(item of calcm) {
+for (item of calcm) {
     console.log(item); // x.name === a.source !!!! persons
-    var bankid_src  = bankid_transform_bid.find(x => x.name === 'person').mapping;
+    var bankid_src = bankid_transform_bid.find(x => x.name === 'person').mapping;
     console.log("bankid_src --------------------------------------------");
     console.log(bankid_src);
-    
+
     var fields = item.bankid.code.split('+');
     var calculate = "";
-    for(f of fields) {        
+    for (f of fields) {
         var n = bankid_src.find(x => x.bankid.block === 'person' && x.bankid.code === f)
         //console.log("  bankid_fld "+f+" "+n.value + JSON.stringify(n));
-        calculate += n.value +" ";
+        calculate += n.value + " ";
         calculate = calculate;
     }
     item.value = calculate.trimRight();
     var wkey = item.webbank.block;
     var wfld = item.webbank.code;
-    
+
     var wblock = bankid_transform_out[wkey];//.find(x => x.webbank.block === wkey && x.webbank.code === wfld)
     wblock.push(item);
     wblock = bankid_transform_out[wkey];
-    console.log("bankid_transform_out ["+wkey+"]["+wfld+"] ");
+    console.log("bankid_transform_out [" + wkey + "][" + wfld + "] ");
     console.log(wblock);
     console.log("bankid_transform_out --------------------------------------------");
 }
@@ -219,70 +219,110 @@ console.log("evaluate --------------------------------------------");
 
 console.log("bankid_transform_out --------------------------------------------");
 var fill_data = {};
-for(item of bankid_transform_out.Client) {    
-    fill_data[item.webbank.code] = item.value;
+fill_data.client = {}
+for (item of bankid_transform_out.Client) {
+    fill_data.client[item.webbank.code] = item.value;
 }
+fill_data.indiv = {}
+for (item of bankid_transform_out.Individuals) {
+    fill_data.indiv[item.webbank.code] = item.value;
+}
+fill_data.props = [];
+var i = 0;
+for (item of bankid_transform_out.Properties) {
+    if (item.webbank.code !== '') {
+        console.log(item);
+        fill_data.props[i] = {};
+        fill_data.props[i].Code = item.webbank.code;
+        fill_data.props[i].Value = item.value;
+        i++;
+    }
+}
+
 var client_data = bankid_transform_out.Client;
-
 const client_xml_files = {
-    top: "./client-create-top.xml",
+    top: "./client-xml/client-create-top.xml",
 
-    client_top : './client-create-Empty.xml',
-    client_man : './client-create-Clients.xml',
-    client_bot : './client-create-Empty.xml',
+    client_top: './client-xml/client-create-Empty.xml',
+    client_man: './client-xml/client-create-Clients.xml',
+    client_bot: './client-xml/client-create-Empty.xml',
 
-    props_top : './client-create-Props-top.xml',
-    props_man : './client-create-Props.xml',
-    props_bot : './client-create-Props-bot.xml',
 
-    bot: "./client-create-bot.xml"
+    indiv_top: './client-xml/client-create-Empty.xml',
+    indiv_man: './client-xml/client-create-Indiv.xml',
+    indiv_bot: './client-xml/client-create-Empty.xml',
+
+    props_top: './client-xml/client-create-Props-top.xml',
+    props_man: './client-xml/client-create-Props.xml',
+    props_bot: './client-xml/client-create-Props-bot.xml',
+
+    bot: "./client-xml/client-create-bot.xml"
 }
 const client_xml = {
     top: null,
 
-    client_top : null,
-    client_man : null,
-    client_bot : null,
+    client_top: null,
+    client_man: null,
+    client_bot: null,
 
-    props_top : null,
-    props_man : null,
-    props_bot : null,
+    indiv_top: null,
+    indiv_man: null,
+    indiv_bot: null,
 
-    bot:null
+    props_top: null,
+    props_man: null,
+    props_bot: null,
+
+    bot: null
 }
 
-client_xml.top = fs.readFileSync(client_xml_files.top, {encoding:'utf8', flag:'r'});
-client_xml.client_top = fs.readFileSync(client_xml_files.client_top, {encoding:'utf8', flag:'r'});
-client_xml.client_man = fs.readFileSync(client_xml_files.client_man, {encoding:'utf8', flag:'r'});
-client_xml.client_bot = fs.readFileSync(client_xml_files.client_bot, {encoding:'utf8', flag:'r'});
+client_xml.top = fs.readFileSync(client_xml_files.top, { encoding: 'utf8', flag: 'r' });
 
-client_xml.props_top = fs.readFileSync(client_xml_files.props_top, {encoding:'utf8', flag:'r'});
-client_xml.props_man = fs.readFileSync(client_xml_files.props_man, {encoding:'utf8', flag:'r'});
-client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, {encoding:'utf8', flag:'r'});
+client_xml.client_top = fs.readFileSync(client_xml_files.client_top, { encoding: 'utf8', flag: 'r' });
+client_xml.client_man = fs.readFileSync(client_xml_files.client_man, { encoding: 'utf8', flag: 'r' });
+client_xml.client_bot = fs.readFileSync(client_xml_files.client_bot, { encoding: 'utf8', flag: 'r' });
 
+client_xml.indiv_top = fs.readFileSync(client_xml_files.indiv_top, { encoding: 'utf8', flag: 'r' });
+client_xml.indiv_man = fs.readFileSync(client_xml_files.indiv_man, { encoding: 'utf8', flag: 'r' });
+client_xml.indiv_bot = fs.readFileSync(client_xml_files.indiv_bot, { encoding: 'utf8', flag: 'r' });
 
-client_xml.bot = fs.readFileSync(client_xml_files.bot, {encoding:'utf8', flag:'r'});
+client_xml.props_top = fs.readFileSync(client_xml_files.props_top, { encoding: 'utf8', flag: 'r' });
+client_xml.props_man = fs.readFileSync(client_xml_files.props_man, { encoding: 'utf8', flag: 'r' });
+client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, { encoding: 'utf8', flag: 'r' });
+
+client_xml.bot = fs.readFileSync(client_xml_files.bot, { encoding: 'utf8', flag: 'r' });
 
 console.log(fill_data);
+
 console.log("bankid_transform_out --------------------------------------------");
 
 
 var mustache = require("mustache");
 
 var view = {
-  title: "Joe",
-  calc: function () {
-    return 2 + 4;
-  }
+    title: "Joe",
+    calc: function () {
+        return 2 + 4;
+    }
 };
- 
+
 var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
 
 output = client_xml.top;
 output += client_xml.client_top;
-output += mustache.render(client_xml.client_man, fill_data);
+output += mustache.render(client_xml.client_man, fill_data.client);
 output += client_xml.client_bot;
+
+output += client_xml.indiv_top;
+output += mustache.render(client_xml.indiv_man, fill_data.indiv);
+output += client_xml.indiv_bot;
+
+output += client_xml.props_top;
+for (prop of fill_data.props) {
+    output += mustache.render(client_xml.props_man, prop);
+}
+output += client_xml.props_bot;
 output += client_xml.bot;
 
 console.log(output);
