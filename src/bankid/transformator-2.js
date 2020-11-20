@@ -2,7 +2,7 @@ const fs = require('fs');
 
 var bankid_client = require('./bankid-cli-1.json');
 var bankid_mapping = require('./bankid_mapping.json');
-var bankid_dicts = require('./doc_types.json');
+var bankid_dicts = require('./dicts_mapping.json');
 
 var bankid_transform_out = {};
 var bankid_transform_web = [{
@@ -308,7 +308,7 @@ var view = {
 
 var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
-
+// MAIN TRANSFORMATOR
 output = client_xml.top;
 output += client_xml.client_top;
 output += mustache.render(client_xml.client_man, fill_data.client);
@@ -326,5 +326,5 @@ output += client_xml.props_bot;
 output += client_xml.bot;
 
 console.log(output);
-
+// MAIN TRANSFORMATOR
 

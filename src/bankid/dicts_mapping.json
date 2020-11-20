@@ -1,5 +1,21 @@
 {
-    "sex_types": [
+    "resident": [
+        {
+            "ibancode": "1",
+            "ibanname": "uaResident",
+            "ibandesc": "Резидент",            
+            "wbid": "1",
+            "wbdesc": "Резидент"
+        },
+        {
+            "ibancode": "0",
+            "ibanname": "uaResident",
+            "ibandesc": "Не Резидент",
+            "wbid": "1",
+            "wbdesc": "Не Резидент"
+        }
+    ],
+    "sex": [
         {
             "ibancode": "M",
             "ibanname": "Man",
@@ -15,7 +31,7 @@
             "wbdesc": "Жіноча"
         }
     ],
-    "addresses_types": [
+    "addresses": [
         {
             "ibancode": "factual",
             "ibanname": "проживання",
@@ -31,7 +47,7 @@
             "wbdesc": "Адреса постійного місця проживання або регістрації"
         }
     ],
-    "documents_types": [
+    "documents": [
         {
             "ibancode": "passport",
             "ibanname": "паспорт",
@@ -61,7 +77,7 @@
             "wbdesc": "Інші документи, які видаються уповноваженими державними органами і за якими є можливість здійснення однозначної ідентифікації особи"
         }
     ],
-    "scans_types": [
+    "scans": [
         {
             "ibancode": "passport",
             "ibanname": "паспорт України",
