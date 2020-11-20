@@ -331,6 +331,7 @@ var view = {
 
 var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
+
 // MAIN TRANSFORMATOR
 output = client_xml.top;
 output += client_xml.client_top;
