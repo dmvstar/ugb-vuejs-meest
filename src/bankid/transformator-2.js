@@ -231,14 +231,18 @@ for (item of bankid_transform_out.Individuals) {
 }
 var i = 0;
 fill_data.ident = [];
-for (item of bankid_transform_out.Identification) {
+for (item of bankid_transform_out.Identifications) {
+    fill_data.ident[i] = {};
     console.log(item);
+    for (o of item) { 
+        fill_data.ident[i][o.webbank.code] = o.value;
+    }
+    i++;
 }
 fill_data.props = [];
 i = 0;
 for (item of bankid_transform_out.Properties) {
     if (item.webbank.code !== '') {
-        console.log(item);
         fill_data.props[i] = {};
         fill_data.props[i].Refs  = item.bankid.maps;
         fill_data.props[i].Code  = item.webbank.code;
