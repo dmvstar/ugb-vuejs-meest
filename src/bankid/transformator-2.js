@@ -221,16 +221,21 @@ console.log("evaluate --------------------------------------------");
 
 console.log("bankid_transform_out --------------------------------------------");
 var fill_data = {};
-fill_data.client = {}
+fill_data.client = {};
 for (item of bankid_transform_out.Client) {
     fill_data.client[item.webbank.code] = item.value;
 }
-fill_data.indiv = {}
+fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
     fill_data.indiv[item.webbank.code] = item.value;
 }
-fill_data.props = [];
 var i = 0;
+fill_data.ident = [];
+for (item of bankid_transform_out.Identification) {
+    console.log(item);
+}
+fill_data.props = [];
+i = 0;
 for (item of bankid_transform_out.Properties) {
     if (item.webbank.code !== '') {
         console.log(item);
