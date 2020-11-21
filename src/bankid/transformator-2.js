@@ -192,9 +192,11 @@ for (item of calcm) {
     var wblock = bankid_transform_out[wkey];//.find(x => x.webbank.block === wkey && x.webbank.code === wfld)
     wblock.push(item);
     wblock = bankid_transform_out[wkey];
+    /*
     console.log("bankid_transform_out [" + wkey + "][" + wfld + "] ");
     console.log(wblock);
     console.log("bankid_transform_out --------------------------------------------");
+    */
 }
 
 
@@ -275,27 +277,11 @@ const client_xml_files = {
 }
 const client_xml = {
     top: null,
-
-    client_top: null,
-    client_man: null,
-    client_bot: null,
-
-    indiv_top: null,
-    indiv_man: null,
-    indiv_bot: null,
-
-    props_top: null,
-    props_man: null,
-    props_bot: null,
-
-    ident_top: null,
-    ident_man: null,
-    ident_bot: null,
-
-    addre_top: null,
-    addre_man: null,
-    addre_bot: null,
-
+    client_top: null,    client_man: null,    client_bot: null,
+    indiv_top: null,    indiv_man: null,    indiv_bot: null,
+    props_top: null,    props_man: null,    props_bot: null,
+    ident_top: null,    ident_man: null,    ident_bot: null,
+    addre_top: null,    addre_man: null,    addre_bot: null,
     bot: null
 }
 
@@ -323,10 +309,11 @@ client_xml.addre_bot = fs.readFileSync(client_xml_files.addre_bot, { encoding: '
 
 client_xml.bot = fs.readFileSync(client_xml_files.bot, { encoding: 'utf8', flag: 'r' });
 
+console.log("fill_data --------------------------------------------");
+
 console.log(fill_data);
 
-console.log("bankid_transform_out --------------------------------------------");
-
+console.log("fill_data --------------------------------------------");
 
 var mustache = require("mustache");
 
@@ -340,28 +327,37 @@ var view = {
 var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
 
-// MAIN TRANSFORMATOR
+// MAIN TRANSFORMATOR --------------------------------------
 output = client_xml.top;
 output += client_xml.client_top;
 output += mustache.render(client_xml.client_man, fill_data.client);
 output += client_xml.client_bot;
-
 output += client_xml.indiv_top;
 output += mustache.render(client_xml.indiv_man, fill_data.indiv);
 output += client_xml.indiv_bot;
-
+// documents
+/*
+output += client_xml.ident_top;
+for (prop of fill_data.ident_man) {
+    output += mustache.render(client_xml.props_man, prop);
+}
+output += client_xml.ident_bot;
+*/
 output += client_xml.props_top;
 for (prop of fill_data.props) {
     output += mustache.render(client_xml.props_man, prop);
 }
 output += client_xml.props_bot;
+
 output += client_xml.bot;
 
 console.log(output);
-// MAIN TRANSFORMATOR
+// MAIN TRANSFORMATOR --------------------------------------
 
+// FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
 
     return ret;
 }
+// FUNCTIONS -----------------------------------------------
