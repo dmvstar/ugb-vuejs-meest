@@ -2,8 +2,7 @@
             <tem:Clients>
                <tem:StateCode>{{StateCode}}</tem:StateCode>
                <tem:Residency>{{Residency}}</tem:Residency>
-               <tem:Name>{{Name}}</tem:Name>
-               
+               <tem:Name>{{Name}}</tem:Name>               
                <tem:Type>1</tem:Type>
                <tem:SubType>0</tem:SubType>
                <tem:isTechFlag>0</tem:isTechFlag>
