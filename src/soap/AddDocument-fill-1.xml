@@ -1,0 +1,55 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:scr="http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AddDocument>
+         <tem:documentParams>
+            <scr:ActionId>402</scr:ActionId>
+            <scr:BranchId>1</scr:BranchId>
+            <scr:Code>add-t-1223</scr:Code>
+            
+            <scr:CreditCode>26204052897013</scr:CreditCode>
+            <scr:CreditCodeIBAN>UA563348510000026203405289701</scr:CreditCodeIBAN>
+            <scr:CreditInit>26204052897013</scr:CreditInit>
+            <scr:CreditName>Такач Крістіан</scr:CreditName>
+            <scr:CreditState>2761526695</scr:CreditState>
+            
+            <scr:CrncyAmount>121.20</scr:CrncyAmount>
+            <scr:Ctrls>?</scr:Ctrls>
+            <scr:CurrencyTag></scr:CurrencyTag>
+            <scr:DayDate>2020-04-27</scr:DayDate>
+            
+            <scr:DebitCode>26009244450862.980</scr:DebitCode>
+            <scr:DebitCodeIBAN>UA243204780000026002924445086</scr:DebitCodeIBAN>
+            <scr:DebitInit>26009244450862</scr:DebitInit>
+            <scr:DebitName>ТОВ "ПОРТ-СОЛАР"</scr:DebitName>
+            <scr:DebitState>40986357</scr:DebitState>
+            
+            <!--scr:EndDate>0</scr:EndDate>
+            <scr:ExtDate>0</scr:ExtDate-->
+            <scr:Info>0</scr:Info>
+            <scr:Kind>1</scr:Kind>
+            <scr:MainAmount>121.20</scr:MainAmount>
+            <scr:MasterId>0</scr:MasterId>
+            <scr:Note>Example add document by service</scr:Note>
+            
+            <scr:OrgDate>2020-04-27</scr:OrgDate>
+            <!--scr:OtherId>?</scr:OtherId>
+            <scr:OtherType>?</scr:OtherType>
+            <scr:OutsideSign>cid:846187817719</scr:OutsideSign-->
+            <scr:OutsideSignType>0</scr:OutsideSignType>
+            <scr:PayDate>2020-04-27</scr:PayDate>
+            <scr:ProcessFlag>0</scr:ProcessFlag>
+            <scr:Purpose>Поповнення рахунку Такач Крістіан..,2761526695, з/п за Січень 2020р. без ПДВ</scr:Purpose>
+            
+            <!--scr:SignNBU></scr:SignNBU-->
+            <scr:SourceCode>320478</scr:SourceCode>
+            <!--scr:SourceType>?</scr:SourceType>
+            <scr:SystemId>808</scr:SystemId-->
+            <scr:SystemId>808</scr:SystemId>
+
+            <scr:TargetCode>334851</scr:TargetCode>
+            <!--scr:TargetType>?</scr:TargetType-->
+         </tem:documentParams>
+      </tem:AddDocument>
+   </soapenv:Body>
+</soapenv:Envelope>

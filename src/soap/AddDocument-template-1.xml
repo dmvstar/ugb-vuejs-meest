@@ -1,0 +1,48 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:scr="http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AddDocument>
+         <tem:documentParams>
+            <scr:ActionId>{{payload.ActionId}}</scr:ActionId>
+            <scr:BranchId>{{payload.BranchId}}</scr:BranchId>
+            <scr:Code>{{payload.Code}}</scr:Code>
+            
+            <scr:CreditCode>{{payload.CreditCode}}</scr:CreditCode>
+            <scr:CreditCodeIBAN>{{payload.CreditCodeIBAN}}</scr:CreditCodeIBAN>
+            <scr:CreditInit>{{payload.CreditInit}}</scr:CreditInit>
+            <scr:CreditName>{{payload.CreditName}}</scr:CreditName>
+            <scr:CreditState>{{payload.CreditState}}</scr:CreditState>
+            
+            <scr:CrncyAmount>{{payload.CrncyAmount}}</scr:CrncyAmount>
+            <scr:Ctrls>{{payload.Ctrls}}</scr:Ctrls>
+            <scr:CurrencyTag>{{payload.CurrencyTag}}</scr:CurrencyTag>
+            <scr:DayDate>{{payload.DayDate}}</scr:DayDate>
+            
+            <scr:DebitCode>{{payload.DebitCode}}</scr:DebitCode>
+            <scr:DebitCodeIBAN>{{payload.DebitCodeIBAN}}</scr:DebitCodeIBAN>
+            <scr:DebitInit>{{payload.DebitInit}}</scr:DebitInit>
+            <scr:DebitName>{{payload.DebitName}}</scr:DebitName>
+            <scr:DebitState>{{payload.DebitState}}</scr:DebitState>
+            
+            <scr:Info>{{payload.Info}}</scr:Info>
+            <scr:Kind>{{payload.Kind}}</scr:Kind>
+            <scr:MainAmount>{{payload.MainAmount}}</scr:MainAmount>
+            <scr:MasterId>{{payload.MasterId}}</scr:MasterId>
+            <scr:Note>{{payload.Note}}</scr:Note>
+            
+            <scr:OrgDate>{{payload.OrgDate}}</scr:OrgDate>
+
+            <scr:OutsideSign>{{payload.OutsideSign}}</scr:OutsideSign>
+            <scr:OutsideSignType>{{payload.OutsideSignType}}</scr:OutsideSignType>
+            <scr:PayDate>{{payload.PayDate}}</scr:PayDate>
+            <scr:ProcessFlag>{{payload.ProcessFlag}}</scr:ProcessFlag>
+            <scr:Purpose>{{payload.Purpose}}</scr:Purpose>
+            
+            <scr:SourceCode>{{payload.SourceCode}}</scr:SourceCode>
+            <scr:SystemId>808</scr:SystemId>
+            <scr:TargetCode>{{payload.TargetCode}}</scr:TargetCode>
+
+         </tem:documentParams>
+      </tem:AddDocument>
+   </soapenv:Body>
+</soapenv:Envelope>

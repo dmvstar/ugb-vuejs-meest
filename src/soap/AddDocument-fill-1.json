@@ -1,0 +1,40 @@
+{
+    "ActionId": 402,
+    "BranchId": 1,
+    "Code": "add-t-1223",
+
+    "CreditCode": "26204052897013",
+    "CreditCodeIBAN": "UA563348510000026203405289701",
+    "CreditInit": "26204052897013",
+    "CreditName": "Такач Крістіан",
+    "CreditState": "2761526695",
+
+    "CrncyAmount": 121.20,
+    "Ctrls": "",
+    "CurrencyTag": "",
+    "DayDate": "2020-04-27",
+
+    "DebitCode": "26009244450862.980",
+    "DebitCodeIBAN": "UA243204780000026002924445086",
+    "DebitInit": "26009244450862",
+    "DebitName": "ТОВ ПОРТ-СОЛАР",
+    "DebitState": "40986357",
+
+    "ExtDate": "0",
+    "Info": "0",
+    "Kind": "1",
+    "MainAmount": "121.20",
+    "MasterId": "0",
+    "Note": "Example add document by service",
+    "OrgDate": "2020-04-27",
+
+    "OutsideSign": "",
+    "OutsideSignType": "0",
+    "PayDate": "2020-04-27",
+    "ProcessFlag": "0",
+    "Purpose": "Поповнення рахунку Такач Крістіан..,2761526695, з/п за Січень 2020р. без ПДВ",
+
+    "SourceCode": "320478",
+    "SystemId": 808,
+    "TargetCode": "334851"
+}
