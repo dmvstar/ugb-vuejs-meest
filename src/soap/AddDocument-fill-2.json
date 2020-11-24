@@ -1,0 +1,40 @@
+{
+    "ActionId": 701,
+    "BranchId": 1,
+    "Code": "nr-add-t-1223",
+
+    "CreditCode": "26306133453509.980", 
+    "CreditCodeIBAN": "UA393204780000026306133453509",
+    "CreditInit": "26306133453509",
+    "CreditName": "Скрибка Катерина Вадимівна",
+    "CreditState": "3521107044",
+
+    "CrncyAmount": "2000.00",
+    "Ctrls": "",
+    "CurrencyTag": "",
+    "DayDate": "2020-11-24",
+    
+    "DebitCode": "26202130296669.100101.980", 
+    "DebitCodeIBAN": "UA673204780000026202130296669",
+    "DebitInit": "26202130296669",
+    "DebitName": "Скрибка Катерина Вадимівна",
+    "DebitState": "3521107044",
+
+    "ExtDate": "0",
+    "Info": "0",
+    "Kind": "1",
+    "MainAmount": "121.20",
+    "MasterId": "0",
+    "Note": "Поповнення депозиту сервис NR",
+    "OrgDate": "2020-11-24",
+
+    "OutsideSign": "",
+    "OutsideSignType": "0",
+    "PayDate": "2020-11-24",
+    "ProcessFlag": "3",
+    "Purpose": "Поповнення депозиту Скрибка Катерина Вадимівна",
+
+    "SourceCode": "320478",
+    "SystemId": 808,
+    "TargetCode": "320478"
+}
