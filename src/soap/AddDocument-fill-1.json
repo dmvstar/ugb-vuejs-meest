@@ -12,7 +12,7 @@
     "CrncyAmount": 121.20,
     "Ctrls": "",
     "CurrencyTag": "",
-    "DayDate": "2020-04-27",
+    "DayDate": "2020-11-24",
 
     "DebitCode": "26009244450862.980",
     "DebitCodeIBAN": "UA243204780000026002924445086",
@@ -26,11 +26,11 @@
     "MainAmount": "121.20",
     "MasterId": "0",
     "Note": "Example add document by service",
-    "OrgDate": "2020-04-27",
+    "OrgDate": "2020-11-24",
 
     "OutsideSign": "",
     "OutsideSignType": "0",
-    "PayDate": "2020-04-27",
+    "PayDate": "2020-11-24",
     "ProcessFlag": "0",
     "Purpose": "Поповнення рахунку Такач Крістіан..,2761526695, з/п за Січень 2020р. без ПДВ",
 
