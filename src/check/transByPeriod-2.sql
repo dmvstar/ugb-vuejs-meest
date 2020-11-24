@@ -24,10 +24,18 @@ WHERE 1 = 1
       AND tr.TransactionAmount > 0
       AND tr.AuthorizationFlag = 1
       AND tr.ActionCode < 100
-	 AND tr.TransactionCode = 00
-	 AND tr.id > 719300000
-	 --AND tr.id > {{LastTransactionID}}
+	  AND tr.TransactionCode = 00
+	  AND tr.id > 719300000
+	  AND tr.Created >= DATEADD(MINUTE,-1,getdate())
+	  --AND tr.id > {{LastTransactionID}}
 --ORDER BY tr.ID DESC;
+
+--SELECT getdate() ,DATEADD(MINUTE,-10,getdate() )
+
+/*
+SELECT src,fld,val FROM nr_clients.gl_varbase WHERE fld = 'LastTransactionID'; 
+INSERT INTO gl_varbase(src,fld,val) VALUES ('CARD', 'LastTransactionID', '719300000') 
+*/
 
 /*
 SELECT src,fld,val FROM nr_clients.gl_varbase WHERE src = 'CARD' AND fld = 'LastTransactionID'; 
