@@ -4,14 +4,14 @@
             "ibancode": "1",
             "ibanname": "uaResident",
             "ibandesc": "Резидент",            
-            "wbid": "1",
+            "wbid": "4",
             "wbdesc": "Резидент"
         },
         {
             "ibancode": "0",
             "ibanname": "uaResident",
             "ibandesc": "Не Резидент",
-            "wbid": "1",
+            "wbid": "2",
             "wbdesc": "Не Резидент"
         }
     ],

@@ -143,10 +143,10 @@ for (key in bankid_client) {
         for (o in bankid_client[key]) {
             var mapi = bankid_transform_bid.find(x => x.name === key).mapping;
             var val = mapi.find(x => x.bankid.code === o);
-            //console.log(" [" + key + "][" + o + "]");// val=" + JSON.stringify(val));
+            console.log(" [" + key + "][" + o + "]");// val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
-                console.log("  [" + key + "][" + o + "]=" + val.value + "-" + val.webbank.default);
+                console.log("  [" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 //console.log(val);
                 bankid_transform_out[val.webbank.block].push(val);
@@ -223,7 +223,14 @@ console.log("bankid_transform_out --------------------------------------------")
 var fill_data = {};
 fill_data.client = {};
 for (item of bankid_transform_out.Client) {
-    fill_data.client[item.webbank.code] = item.value;
+    console.log('!!!!!!!-----------'+JSON.stringify(item.bankid)); 
+    if (item.bankid.maps !== undefined && item.bankid.maps !== "" ) {     
+        console.log('!!!!!!!-----------'+item.bankid.maps);      
+        console.log(item.bankid.maps);              
+        fill_data.client[item.webbank.code] = 
+            get_reftrans(bankid_dicts, item.bankid.maps, item.value);
+    } else
+         fill_data.client[item.webbank.code] = item.value;
 }
 fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
@@ -249,7 +256,9 @@ for (item of bankid_transform_out.Properties) {
         fill_data.props[i].Dict  = item.webbank.dict;
         fill_data.props[i].Value = item.value;
 
-        if (item.bankid.maps !== undefined) {
+        if (item.bankid.maps !== undefined && item.bankid.maps.lenght > 0 ) {     
+            console.log('!!!!!!!-----------'+item.bankid.maps);      
+            console.log(item.bankid.maps);              
             fill_data.props[i].Value = 
                 get_reftrans(bankid_dicts, item.bankid.maps, item.value);
         }
@@ -366,7 +375,16 @@ console.log(output);
 // FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
-
+    console.log('get_reftrans '+refmaps +'-'+idrefcode+'-'+idvalue);
+    for( o of refmaps[idrefcode])
+    { 
+        console.log(' get_reftrans'+ JSON.stringify(o));
+        if(o.ibancode === idvalue) {
+            console.log(' get_reftrans wbid '+o.wbid);
+            break;
+        }
+    }
+        
     return ret;
 }
 // FUNCTIONS -----------------------------------------------
