@@ -234,8 +234,17 @@ for (item of bankid_transform_out.Client) {
 }
 fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
-    fill_data.indiv[item.webbank.code] = item.value;
+
+    var value = item.value;
+    console.log('-----------Individuals '+value);
+    console.log(item);
+    if(item.bankid.maps !== undefined && item.bankid.maps !== '')
+        value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
+    console.log('-----------Individuals '+value);
+    fill_data.indiv[item.webbank.code] = value; //item.value;
+
 }
+
 var i = 0;
 fill_data.ident = [];
 for (item of bankid_transform_out.Identifications) {
@@ -375,16 +384,19 @@ console.log(output);
 // FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
-    console.log('get_reftrans '+refmaps +'-'+idrefcode+'-'+idvalue);
+    console.log('get_reftrans '+refmaps +'-'+idrefcode+'-'+ret);
+
     for( o of refmaps[idrefcode])
     { 
         console.log(' get_reftrans'+ JSON.stringify(o));
         if(o.ibancode === idvalue) {
-            console.log(' get_reftrans wbid '+o.wbid);
+            //console.log(' 1get_reftrans wbid '+o.wbid);
+            ret = o.wbid;
+            //console.log(' 2get_reftrans wbid '+ ret);
             break;
         }
     }
-        
+    console.log(' get_reftrans wbid '+ ret);    
     return ret;
 }
 // FUNCTIONS -----------------------------------------------
