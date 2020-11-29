@@ -7,11 +7,11 @@
    </soapenv:Header>
    
    <soapenv:Body>
-      <tem:ModifyClientFL>
+      <tem:CreateClientFL>
          <tem:client>
             <tem:Request>
                <tem:RequestId>12547</tem:RequestId>
                <tem:UserLogin>UKRGAS\appmb</tem:UserLogin>
             </tem:Request>
-            <tem:ClientId>1747753</tem:ClientId>
+            <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>

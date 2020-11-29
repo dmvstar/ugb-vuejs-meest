@@ -223,9 +223,9 @@ console.log("bankid_transform_out --------------------------------------------")
 var fill_data = {};
 fill_data.client = {};
 for (item of bankid_transform_out.Client) {
-    console.log('!!!!!!!-----------'+JSON.stringify(item.bankid)); 
+    //console.log('!!!!!!!-----------'+JSON.stringify(item.bankid)); 
     if (item.bankid.maps !== undefined && item.bankid.maps !== "" ) {     
-        console.log('!!!!!!!-----------'+item.bankid.maps);      
+        //console.log('!!!!!!!-----------'+item.bankid.maps);      
         console.log(item.bankid.maps);              
         fill_data.client[item.webbank.code] = 
             get_reftrans(bankid_dicts, item.bankid.maps, item.value);
@@ -236,11 +236,11 @@ fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
 
     var value = item.value;
-    console.log('-----------Individuals '+value);
+    console.log('-----------Individuals IN '+value);
     console.log(item);
     if(item.bankid.maps !== undefined && item.bankid.maps !== '')
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
-    console.log('-----------Individuals '+value);
+    console.log('-----------Individuals OUT '+value);
     fill_data.indiv[item.webbank.code] = value; //item.value;
 
 }
@@ -266,7 +266,7 @@ for (item of bankid_transform_out.Properties) {
         fill_data.props[i].Value = item.value;
 
         if (item.bankid.maps !== undefined && item.bankid.maps.lenght > 0 ) {     
-            console.log('!!!!!!!-----------'+item.bankid.maps);      
+            //console.log('!!!!!!!-----------'+item.bankid.maps);      
             console.log(item.bankid.maps);              
             fill_data.props[i].Value = 
                 get_reftrans(bankid_dicts, item.bankid.maps, item.value);
@@ -379,24 +379,21 @@ output += client_xml.props_bot;
 output += client_xml.bot;
 
 console.log(output);
-// MAIN TRANSFORMATOR --------------------------------------
+// MAIN TRANSFORMATOR END-----------------------------------
 
 // FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
-    console.log('get_reftrans '+refmaps +'-'+idrefcode+'-'+ret);
 
     for( o of refmaps[idrefcode])
     { 
-        console.log(' get_reftrans'+ JSON.stringify(o));
+        //console.log(' get_reftrans'+ JSON.stringify(o));
         if(o.ibancode === idvalue) {
-            //console.log(' 1get_reftrans wbid '+o.wbid);
             ret = o.wbid;
-            //console.log(' 2get_reftrans wbid '+ ret);
             break;
         }
     }
-    console.log(' get_reftrans wbid '+ ret);    
+ 
     return ret;
 }
 // FUNCTIONS -----------------------------------------------
