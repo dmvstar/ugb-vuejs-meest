@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AddTreatyAmount>
+         <tem:treatyAmount>
+            <tem:TreatyId>
+               <tem:Value>14946945</tem:Value>
+            </tem:TreatyId>
+            <tem:AmountId>
+               <tem:Value>21183236</tem:Value>
+            </tem:AmountId>
+            <tem:Kind>
+               <tem:Value>3000242</tem:Value>
+            </tem:Kind>            
+            <tem:DayDate>
+               <tem:Year>2020</tem:Year>
+               <tem:Month>12</tem:Month>
+               <tem:Day>02</tem:Day>
+            </tem:DayDate>  
+         </tem:treatyAmount>
+      </tem:AddTreatyAmount>
+   </soapenv:Body>
+</soapenv:Envelope>

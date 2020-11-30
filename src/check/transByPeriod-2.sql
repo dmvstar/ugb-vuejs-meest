@@ -1,35 +1,42 @@
-SELECT  tr.id
-			, t.ClientId AS recepient_id
-            , tr.Pan AS FLD_002 -- PAN
-            , '' + TransactionCode + FromAccountType + ToAccountType AS FLD_003
-            , tr.TransactionAmount AS FLD_004
-            , FORMAT(tr.TransactionDate, 'yyyyMMddHHmmssffff') AS FLD_007
-            , tr.Stan AS FLD_011
-            , FORMAT(tr.TransactionDate, 'yyyyMMddHHmmssffff') AS FLD_012
-            , tr.AcceptorCode AS FLD_026 -- MCC
+SELECT tr.id
+     , t.ClientId AS recepient_id
+     , tr.Pan AS FLD_002 -- PAN
+     , '' + TransactionCode + FromAccountType + ToAccountType AS FLD_003
+     , tr.TransactionAmount AS FLD_004
+     , FORMAT(tr.TransactionDate, 'yyyyMMddHHmmssffff') AS FLD_007
+     , tr.Stan AS FLD_011
+     , FORMAT(tr.TransactionDate, 'yyyyMMddHHmmssffff') AS FLD_012
+     , tr.AcceptorCode AS FLD_026 -- MCC
 
-            , RetrievalData AS FLD_037
-            , ApprovalCode AS FLD_038
-            , TerminalId AS FLD_041
-            , AcceptorId AS FLD_042
-            , AcceptorCountry AS FLD_043
-			--, tr.*
+     , RetrievalData AS FLD_037
+     , ApprovalCode AS FLD_038
+     , TerminalId AS FLD_041
+     , AcceptorId AS FLD_042
+     , AcceptorCountry AS FLD_043
+     , IIF(tr.TransactionAmount > 0
+           AND tr.AuthorizationFlag = 1
+           AND tr.ActionCode < 100
+           AND tr.TransactionCode = 00
+           AND tr.AcceptorCountry = 'UA', 'true', 'false') AS isCheck
+--, tr.*
 FROM Transactions tr(NOLOCK)
      LEFT JOIN TreatyCards tc(NOLOCK) ON tc.CardId = tr.CardIdCode
      LEFT JOIN Treaty t(NOLOCK) ON t.Id = tc.TreatyId
+
 /*
      LEFT JOIN Amounts a(NOLOCK) ON a.Id = t.AmountId
 */
+
 WHERE 1 = 1
       AND tr.TransactionAmount > 0
       AND tr.AuthorizationFlag = 1
       AND tr.ActionCode < 100
-	  AND tr.TransactionCode = 00
-	  AND tr.id > 719300000
-	  AND tr.Created >= DATEADD(MINUTE,-1,getdate())
-	  --AND tr.id > {{LastTransactionID}}
+      AND tr.TransactionCode = 00
+      AND tr.AcceptorCountry = 'UA'
+      AND tr.id > 719300000;
+--AND tr.Created >= DATEADD(MINUTE,-1,getdate())
+--AND tr.id > {{LastTransactionID}}
 --ORDER BY tr.ID DESC;
-
 --SELECT getdate() ,DATEADD(MINUTE,-10,getdate() )
 
 /*
