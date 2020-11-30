@@ -1,17 +1,14 @@
             
             <tem:Identifications>
                <tem:TIdentifications>
-                  <tem:Id>{{Id}}</tem:Id>
                   <tem:TypeId>{{TypeId}}</tem:TypeId>
-                  <tem:TypeCode>{{TypeCode}}</tem:TypeCode>
-                  <tem:No>{{No}}</tem:No>
                   <tem:Series>{{Series}}</tem:Series>
                   <tem:Number>{{Number}}</tem:Number>
                   <tem:Registrator>{{Registrator}}</tem:Registrator>
                   <tem:IssueDate>{{IssueDate}}</tem:IssueDate>
                   <tem:ExpirationDate>{{ExpirationDate}}</tem:ExpirationDate>
-                  <tem:IsMain>{{IsMain}}</tem:IsMain>
-                  <tem:Checked>{{Checked}}</tem:Checked>
-                  <tem:Status>{{Status}}</tem:Status>
+                  <tem:IsMain>false</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
                </tem:TIdentifications>
             </tem:Identifications>

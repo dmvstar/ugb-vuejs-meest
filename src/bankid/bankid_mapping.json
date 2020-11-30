@@ -191,7 +191,7 @@
       "block": "documents",
       "source": "",
       "code": "type",
-      "maps": "",
+      "maps": "documents",
       "type": "string"
     },
     "webbank": {

@@ -240,6 +240,8 @@ for (item of bankid_transform_out.Individuals) {
     console.log(item);
     if(item.bankid.maps !== undefined && item.bankid.maps !== '')
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
+    if(item.bankid.type === 'date')
+        value = trans_date( value );
     console.log('-----------Individuals OUT '+value);
     fill_data.indiv[item.webbank.code] = value; //item.value;
 
@@ -248,10 +250,17 @@ for (item of bankid_transform_out.Individuals) {
 var i = 0;
 fill_data.ident = [];
 for (item of bankid_transform_out.Identifications) {
-    fill_data.ident[i] = {};
-    console.log(item);
+    fill_data.ident[i] = {};   
+    
     for (o of item) { 
-        fill_data.ident[i][o.webbank.code] = o.value;
+        var code = o.webbank.code;   
+        var value = o.value;
+        if(o.bankid.type === 'date')
+            value = trans_date( value );
+        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0 ) {  
+            value = get_reftrans(bankid_dicts, o.bankid.maps, value);
+        }
+        fill_data.ident[i][code] = value;
     }
     i++;
 }
@@ -265,9 +274,7 @@ for (item of bankid_transform_out.Properties) {
         fill_data.props[i].Dict  = item.webbank.dict;
         fill_data.props[i].Value = item.value;
 
-        if (item.bankid.maps !== undefined && item.bankid.maps.lenght > 0 ) {     
-            //console.log('!!!!!!!-----------'+item.bankid.maps);      
-            console.log(item.bankid.maps);              
+        if (item.bankid.maps !== undefined && item.bankid.maps.length > 0 ) {     
             fill_data.props[i].Value = 
                 get_reftrans(bankid_dicts, item.bankid.maps, item.value);
         }
@@ -363,13 +370,12 @@ output += client_xml.indiv_top;
 output += mustache.render(client_xml.indiv_man, fill_data.indiv);
 output += client_xml.indiv_bot;
 // documents
-/*
 output += client_xml.ident_top;
-for (prop of fill_data.ident_man) {
-    output += mustache.render(client_xml.props_man, prop);
+for (prop of fill_data.ident) {
+    output += mustache.render(client_xml.ident_man, prop);
 }
 output += client_xml.ident_bot;
-*/
+// props
 output += client_xml.props_top;
 for (prop of fill_data.props) {
     output += mustache.render(client_xml.props_man, prop);
@@ -394,6 +400,17 @@ function get_reftrans(refmaps, idrefcode, idvalue) {
         }
     }
  
+    return ret;
+}
+
+function trans_date(date){
+    var ret = date;
+    // from DD.MM.YYYY
+    // to 1982-05-03T00:00:00
+    if(date.length > 0) {
+        var parts = date.split('.');
+        ret = parts[2]+'-'+parts[1]+'-'+parts[0]+'T00:00:00';
+    }
     return ret;
 }
 // FUNCTIONS -----------------------------------------------
