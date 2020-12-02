@@ -6,6 +6,7 @@
                <tem:Gender>{{GENDER}}</tem:Gender>
                <tem:BirthDay>{{BirthDay}}</tem:BirthDay>
                <tem:BirthSurname>{{BirthSurname}}</tem:BirthSurname>
-               <tem:MarriageStatus>{{MarriageStatus}}</tem:MarriageStatus>
+               <!--tem:MarriageStatus>{{MarriageStatus}}</tem:MarriageStatus-->
+               <tem:MarriageStatus>6</tem:MarriageStatus>
                <tem:Status>1</tem:Status>
             </tem:Individuals>

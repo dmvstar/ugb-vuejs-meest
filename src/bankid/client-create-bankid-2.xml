@@ -1,0 +1,130 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header>
+      <tem:AuthSoapHeader>
+        <tem:Login>istest</tem:Login>
+         <tem:Password>gfhjk</tem:Password>
+      </tem:AuthSoapHeader>
+   </soapenv:Header>
+   
+   <soapenv:Body>
+      <tem:CreateClientFL>
+         <tem:client>
+            <tem:Request>
+               <tem:RequestId>12547</tem:RequestId>
+               <tem:UserLogin>UKRGAS\appmb</tem:UserLogin>
+            </tem:Request>
+            <!--tem:ClientId>1747753</tem:ClientId-->
+            <tem:SendToScrooge>1</tem:SendToScrooge>
+            <tem:Clients>
+               <tem:StateCode>3347780927</tem:StateCode>
+               <tem:Residency>4</tem:Residency>
+               <tem:Name>Кукуцаполь Кришна Олимпиада</tem:Name>               
+               <tem:Type>1</tem:Type>
+               <tem:SubType>0</tem:SubType>
+               <tem:isTechFlag>0</tem:isTechFlag>
+               <tem:IsOut>0</tem:IsOut>
+               <tem:IsPotential>0</tem:IsPotential>
+               <tem:IsPartner>false</tem:IsPartner>
+               <tem:Status>1</tem:Status>
+            </tem:Clients>            
+            <tem:Individuals>
+               <tem:FirstName>Кришна</tem:FirstName>
+               <tem:LastName>Кукуцаполь</tem:LastName>
+               <tem:FatherName>Олимпиада</tem:FatherName>
+               <tem:Gender>1</tem:Gender>
+               <tem:BirthDay>1991-08-28T00:00:00</tem:BirthDay>
+               <tem:BirthSurname></tem:BirthSurname>
+                  <tem:MarriageStatus>6</tem:MarriageStatus>
+               <tem:Status>1</tem:Status>
+            </tem:Individuals>            
+            <tem:Identifications>
+               <tem:TIdentifications>
+                  <tem:TypeId>4</tem:TypeId>
+                  <tem:Series>СН</tem:Series>
+                  <tem:Number>432311</tem:Number>
+                  <tem:Registrator>Святошинське РУ ГУ МВС у м.Києві</tem:Registrator>
+                  <tem:IssueDate>1997-10-01T00:00:00</tem:IssueDate>
+                     <tem:ExpirationDate>2099-01-01T00:00:00</tem:ExpirationDate>
+                  <tem:IsMain>false</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+            </tem:Identifications>            
+            <tem:Identifications>
+               <tem:TIdentifications>
+                  <tem:TypeId>404</tem:TypeId>
+                  <tem:Series></tem:Series>
+                  <tem:Number>3425654326</tem:Number>
+                  <tem:Registrator>1456</tem:Registrator>
+                  <tem:IssueDate>2020-10-01T00:00:00</tem:IssueDate>
+                  <tem:ExpirationDate>2040-10-01T00:00:00</tem:ExpirationDate>
+                  <tem:IsMain>false</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+            </tem:Identifications>            
+            <tem:Properties>
+                <tem:TProperties>
+                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>MARITAL_STATUS</tem:Code>
+                  <tem:Value>6</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>BIRTH_COUNTRY</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>BIRTH_PLACE</tem:Code>
+                  <tem:Value>Бердичув</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>PROFIT_WAY</tem:Code>
+                  <tem:Value>2</tem:Value>
+                </tem:TProperties>
+            </tem:Properties>         
+         </tem:client>
+      </tem:CreateClientFL>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <CreateClientFLResponse xmlns="http://tempuri.org/">
+         <CreateClientFLResult>
+            <ResponseId>12547</ResponseId>
+            <RequestId>12547</RequestId>
+            <Result>1</Result>
+            <HasErrors>true</HasErrors>
+            <Errors>
+               <ErrorOperation>
+                  <Code>1053</Code>
+                  <Text>Тип идентификационого с кодом (IdentificationTypes) документа [] не найден!</Text>
+                  <isError>true</isError>
+                  <ExceptMessage/>
+               </ErrorOperation>
+               <ErrorOperation>
+                  <Code>1056</Code>
+                  <Text>Код доп реквизита Code [MARITAL_STATUS] не найден.</Text>
+                  <isError>true</isError>
+                  <ExceptMessage/>
+               </ErrorOperation>
+               <ErrorOperation>
+                  <Code>1059</Code>
+                  <Text>Клиент clientId:[3321993] не синхронизирован с АБС, т.к. были ошибки при добавилении клиента</Text>
+                  <isError>true</isError>
+                  <ExceptMessage/>
+               </ErrorOperation>
+            </Errors>
+            <Client>
+               <ClientId>3321993</ClientId>
+               <ClientPushABS>false</ClientPushABS>
+            </Client>
+         </CreateClientFLResult>
+      </CreateClientFLResponse>
+   </soap:Body>
+</soap:Envelope>

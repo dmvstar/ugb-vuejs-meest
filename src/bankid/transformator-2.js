@@ -199,7 +199,6 @@ for (item of calcm) {
     */
 }
 
-
 /*
 calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
 console.log("calcm --------------------------------------------");
@@ -221,6 +220,7 @@ console.log("evaluate --------------------------------------------");
 
 console.log("bankid_transform_out --------------------------------------------");
 var fill_data = {};
+// Клиент
 fill_data.client = {};
 for (item of bankid_transform_out.Client) {
     //console.log('!!!!!!!-----------'+JSON.stringify(item.bankid)); 
@@ -232,26 +232,26 @@ for (item of bankid_transform_out.Client) {
     } else
          fill_data.client[item.webbank.code] = item.value;
 }
+// Персональные данные
 fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
 
     var value = item.value;
-    console.log('-----------Individuals IN '+value);
+    //console.log('-----------Individuals IN '+value);
     console.log(item);
     if(item.bankid.maps !== undefined && item.bankid.maps !== '')
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     if(item.bankid.type === 'date')
         value = trans_date( value );
-    console.log('-----------Individuals OUT '+value);
+    //console.log('-----------Individuals OUT '+value);
     fill_data.indiv[item.webbank.code] = value; //item.value;
-
 }
 
 var i = 0;
+// Документы
 fill_data.ident = [];
 for (item of bankid_transform_out.Identifications) {
-    fill_data.ident[i] = {};   
-    
+    fill_data.ident[i] = {};    
     for (o of item) { 
         var code = o.webbank.code;   
         var value = o.value;
@@ -261,9 +261,13 @@ for (item of bankid_transform_out.Identifications) {
             value = get_reftrans(bankid_dicts, o.bankid.maps, value);
         }
         fill_data.ident[i][code] = value;
+        if(fill_data.ident[i]['ExpirationDate'] === '') {
+            fill_data.ident[i]['ExpirationDate'] = '2099-01-01T00:00:00';
+        };
     }
     i++;
 }
+// Реквизиты
 fill_data.props = [];
 i = 0;
 for (item of bankid_transform_out.Properties) {
@@ -385,6 +389,13 @@ output += client_xml.props_bot;
 output += client_xml.bot;
 
 console.log(output);
+
+fs.writeFileSync("client-create-bankid-3.xml", output); 
+
+console.log(generateIPN());
+console.log(generateIPN());
+console.log(generateIPN());
+
 // MAIN TRANSFORMATOR END-----------------------------------
 
 // FUNCTIONS -----------------------------------------------
@@ -413,4 +424,40 @@ function trans_date(date){
     }
     return ret;
 }
+
+function getIPNKey(data){
+    var aMulti = [  -1,  5,  7,  9,  4,  6,  10,  5,  7,  0];
+    var key = data.length;
+    if(data.length == 10) {
+      var sum = 0;
+      for(var i=0;i<aMulti.length;i++) {
+        var o = data[i]*aMulti[i];
+        sum += o;
+      }
+    }
+    var msum = sum - ( Math.trunc(sum / 11) * 11);
+    return msum<10?msum:0;
+}
+function excelDateToJSDate(serialDate) {
+    var e0date = new Date(0); // epoch "zero" date
+    var offset = e0date.getTimezoneOffset(); // tz offset in min
+    var dateOut = new Date(Math.round((serialDate - 25568)*86400*1000));
+    return dateOut.toJSON();
+}
+function generateIPN(){
+
+    var requestAmo;
+    var requestSex;
+    var requestDat;
+    var requestKey;
+
+    requestDat = Math.floor(Math.random() * 20000)+20000;
+    requestAmo = Math.floor(Math.random() * 100)+100;
+    requestSex = Math.floor(Math.random() * 10-1)+1;
+    requestKey = Math.floor(Math.random() * 10-1)+1;
+    var dataPre = ''+requestDat+requestAmo+requestSex+requestKey;
+    var dataOk = dataPre.substr(0,9) + getIPNKey(dataPre);
+    return dataOk;
+}
+  
 // FUNCTIONS -----------------------------------------------
