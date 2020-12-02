@@ -8,77 +8,77 @@ bankid_client.person.inn = generateIPN();
 
 var bankid_transform_out = {};
 var bankid_transform_web = [{
-    name: "Client",
-    isarray: false,
-    mapping: []
-},
-{
-    name: "Individuals",
-    isarray: false,
-    mapping: []
-}, // array
-{
-    name: "Identifications",
-    isarray: true,
-    mapping: []
-}, // array documents
-{
-    name: "Addresses",
-    isarray: true,
-    mapping: []
-}, // array
-{
-    name: "Communications",
-    isarray: false,
-    mapping: []
-},
-{
-    name: "Properties",
-    isarray: false,
-    mapping: []
-},
-{
-    name: "Scans",
-    isarray: true,
-    mapping: []
-}, // array
-{
-    name: "Operations",
-    isarray: false,
-    mapping: []
-}
+        name: "Client",
+        isarray: false,
+        mapping: []
+    },
+    {
+        name: "Individuals",
+        isarray: false,
+        mapping: []
+    }, // array
+    {
+        name: "Identifications",
+        isarray: true,
+        mapping: []
+    }, // array documents
+    {
+        name: "Addresses",
+        isarray: true,
+        mapping: []
+    }, // array
+    {
+        name: "Communications",
+        isarray: false,
+        mapping: []
+    },
+    {
+        name: "Properties",
+        isarray: false,
+        mapping: []
+    },
+    {
+        name: "Scans",
+        isarray: true,
+        mapping: []
+    }, // array
+    {
+        name: "Operations",
+        isarray: false,
+        mapping: []
+    }
 ]
 
 var bankid_transform_bid = [{
-    name: "person",
-    isarray: false,
-    mapping: []
-},
-{
-    name: "addresses",
-    isarray: true,
-    mapping: []
-},
-{
-    name: "documents",
-    isarray: true,
-    mapping: []
-},
-{
-    name: "scans",
-    isarray: true,
-    mapping: []
-},
-{
-    name: "extends",
-    isarray: true,
-    mapping: []
-},
-{
-    name: "calculate",
-    isarray: false,
-    mapping: []
-},
+        name: "person",
+        isarray: false,
+        mapping: []
+    },
+    {
+        name: "addresses",
+        isarray: true,
+        mapping: []
+    },
+    {
+        name: "documents",
+        isarray: true,
+        mapping: []
+    },
+    {
+        name: "scans",
+        isarray: true,
+        mapping: []
+    },
+    {
+        name: "extends",
+        isarray: true,
+        mapping: []
+    },
+    {
+        name: "calculate",
+        isarray: false,
+        mapping: []
+    },
 ]
 
 // Prepare out data
@@ -145,7 +145,7 @@ for (key in bankid_client) {
         for (o in bankid_client[key]) {
             var mapi = bankid_transform_bid.find(x => x.name === key).mapping;
             var val = mapi.find(x => x.bankid.code === o);
-            console.log(" [" + key + "][" + o + "]");// val=" + JSON.stringify(val));
+            console.log(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
                 console.log("  [" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
@@ -191,7 +191,7 @@ for (item of calcm) {
     var wkey = item.webbank.block;
     var wfld = item.webbank.code;
 
-    var wblock = bankid_transform_out[wkey];//.find(x => x.webbank.block === wkey && x.webbank.code === wfld)
+    var wblock = bankid_transform_out[wkey]; //.find(x => x.webbank.block === wkey && x.webbank.code === wfld)
     wblock.push(item);
     wblock = bankid_transform_out[wkey];
     /*
@@ -226,13 +226,13 @@ var fill_data = {};
 fill_data.client = {};
 for (item of bankid_transform_out.Client) {
     //console.log('!!!!!!!-----------'+JSON.stringify(item.bankid)); 
-    if (item.bankid.maps !== undefined && item.bankid.maps !== "" ) {     
+    if (item.bankid.maps !== undefined && item.bankid.maps !== "") {
         //console.log('!!!!!!!-----------'+item.bankid.maps);      
-        console.log(item.bankid.maps);              
-        fill_data.client[item.webbank.code] = 
+        console.log(item.bankid.maps);
+        fill_data.client[item.webbank.code] =
             get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     } else
-         fill_data.client[item.webbank.code] = item.value;
+        fill_data.client[item.webbank.code] = item.value;
 }
 // Персональные данные
 fill_data.indiv = {};
@@ -241,10 +241,10 @@ for (item of bankid_transform_out.Individuals) {
     var value = item.value;
     //console.log('-----------Individuals IN '+value);
     console.log(item);
-    if(item.bankid.maps !== undefined && item.bankid.maps !== '')
+    if (item.bankid.maps !== undefined && item.bankid.maps !== '')
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
-    if(item.bankid.type === 'date')
-        value = trans_date( value );
+    if (item.bankid.type === 'date')
+        value = trans_date(value);
     //console.log('-----------Individuals OUT '+value);
     fill_data.indiv[item.webbank.code] = value; //item.value;
 }
@@ -253,17 +253,17 @@ var i = 0;
 // Документы
 fill_data.ident = [];
 for (item of bankid_transform_out.Identifications) {
-    fill_data.ident[i] = {};    
-    for (o of item) { 
-        var code = o.webbank.code;   
+    fill_data.ident[i] = {};
+    for (o of item) {
+        var code = o.webbank.code;
         var value = o.value;
-        if(o.bankid.type === 'date')
-            value = trans_date( value );
-        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0 ) {  
+        if (o.bankid.type === 'date')
+            value = trans_date(value);
+        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {
             value = get_reftrans(bankid_dicts, o.bankid.maps, value);
         }
         fill_data.ident[i][code] = value;
-        if(fill_data.ident[i]['ExpirationDate'] === '') {
+        if (fill_data.ident[i]['ExpirationDate'] === '') {
             fill_data.ident[i]['ExpirationDate'] = '2099-01-01T00:00:00';
         };
     }
@@ -275,13 +275,13 @@ i = 0;
 for (item of bankid_transform_out.Properties) {
     if (item.webbank.code !== '') {
         fill_data.props[i] = {};
-        fill_data.props[i].Refs  = item.bankid.maps;
-        fill_data.props[i].Code  = item.webbank.code;
-        fill_data.props[i].Dict  = item.webbank.dict;
+        fill_data.props[i].Refs = item.bankid.maps;
+        fill_data.props[i].Code = item.webbank.code;
+        fill_data.props[i].Dict = item.webbank.dict;
         fill_data.props[i].Value = item.value;
 
-        if (item.bankid.maps !== undefined && item.bankid.maps.length > 0 ) {     
-            fill_data.props[i].Value = 
+        if (item.bankid.maps !== undefined && item.bankid.maps.length > 0) {
+            fill_data.props[i].Value =
                 get_reftrans(bankid_dicts, item.bankid.maps, item.value);
         }
 
@@ -317,37 +317,98 @@ const client_xml_files = {
 }
 const client_xml = {
     top: null,
-    client_top: null,    client_man: null,    client_bot: null,
-    indiv_top: null,    indiv_man: null,    indiv_bot: null,
-    props_top: null,    props_man: null,    props_bot: null,
-    ident_top: null,    ident_man: null,    ident_bot: null,
-    addre_top: null,    addre_man: null,    addre_bot: null,
+    client_top: null,
+    client_man: null,
+    client_bot: null,
+    indiv_top: null,
+    indiv_man: null,
+    indiv_bot: null,
+    props_top: null,
+    props_man: null,
+    props_bot: null,
+    ident_top: null,
+    ident_man: null,
+    ident_bot: null,
+    addre_top: null,
+    addre_man: null,
+    addre_bot: null,
     bot: null
 }
 
-client_xml.top = fs.readFileSync(client_xml_files.top, { encoding: 'utf8', flag: 'r' });
+client_xml.top = fs.readFileSync(client_xml_files.top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
-client_xml.client_top = fs.readFileSync(client_xml_files.client_top, { encoding: 'utf8', flag: 'r' });
-client_xml.client_man = fs.readFileSync(client_xml_files.client_man, { encoding: 'utf8', flag: 'r' });
-client_xml.client_bot = fs.readFileSync(client_xml_files.client_bot, { encoding: 'utf8', flag: 'r' });
+client_xml.client_top = fs.readFileSync(client_xml_files.client_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.client_man = fs.readFileSync(client_xml_files.client_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.client_bot = fs.readFileSync(client_xml_files.client_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
-client_xml.indiv_top = fs.readFileSync(client_xml_files.indiv_top, { encoding: 'utf8', flag: 'r' });
-client_xml.indiv_man = fs.readFileSync(client_xml_files.indiv_man, { encoding: 'utf8', flag: 'r' });
-client_xml.indiv_bot = fs.readFileSync(client_xml_files.indiv_bot, { encoding: 'utf8', flag: 'r' });
+client_xml.indiv_top = fs.readFileSync(client_xml_files.indiv_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.indiv_man = fs.readFileSync(client_xml_files.indiv_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.indiv_bot = fs.readFileSync(client_xml_files.indiv_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
-client_xml.props_top = fs.readFileSync(client_xml_files.props_top, { encoding: 'utf8', flag: 'r' });
-client_xml.props_man = fs.readFileSync(client_xml_files.props_man, { encoding: 'utf8', flag: 'r' });
-client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, { encoding: 'utf8', flag: 'r' });
+client_xml.props_top = fs.readFileSync(client_xml_files.props_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.props_man = fs.readFileSync(client_xml_files.props_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
-client_xml.ident_top = fs.readFileSync(client_xml_files.ident_top, { encoding: 'utf8', flag: 'r' });
-client_xml.ident_man = fs.readFileSync(client_xml_files.ident_man, { encoding: 'utf8', flag: 'r' });
-client_xml.ident_bot = fs.readFileSync(client_xml_files.ident_bot, { encoding: 'utf8', flag: 'r' });
+client_xml.ident_top = fs.readFileSync(client_xml_files.ident_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.ident_man = fs.readFileSync(client_xml_files.ident_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.ident_bot = fs.readFileSync(client_xml_files.ident_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
-client_xml.addre_top = fs.readFileSync(client_xml_files.addre_top, { encoding: 'utf8', flag: 'r' });
-client_xml.addre_man = fs.readFileSync(client_xml_files.addre_man, { encoding: 'utf8', flag: 'r' });
-client_xml.addre_bot = fs.readFileSync(client_xml_files.addre_bot, { encoding: 'utf8', flag: 'r' });
+client_xml.addre_top = fs.readFileSync(client_xml_files.addre_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.addre_man = fs.readFileSync(client_xml_files.addre_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.addre_bot = fs.readFileSync(client_xml_files.addre_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
-client_xml.bot = fs.readFileSync(client_xml_files.bot, { encoding: 'utf8', flag: 'r' });
+client_xml.bot = fs.readFileSync(client_xml_files.bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
 
 console.log("fill_data --------------------------------------------");
 
@@ -392,7 +453,7 @@ output += client_xml.bot;
 
 console.log(output);
 
-fs.writeFileSync("client-create-bankid-3.xml", output); 
+fs.writeFileSync("client-create-bankid-3.xml", output);
 
 // MAIN TRANSFORMATOR END-----------------------------------
 
@@ -400,62 +461,63 @@ fs.writeFileSync("client-create-bankid-3.xml", output);
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
 
-    for( o of refmaps[idrefcode])
-    { 
+    for (o of refmaps[idrefcode]) {
         //console.log(' get_reftrans'+ JSON.stringify(o));
-        if(o.ibancode === idvalue) {
+        if (o.ibancode === idvalue) {
             ret = o.wbid;
             break;
         }
     }
- 
+
     return ret;
 }
 
-function trans_date(date){
+function trans_date(date) {
     var ret = date;
     // from DD.MM.YYYY
     // to 1982-05-03T00:00:00
-    if(date.length > 0) {
+    if (date.length > 0) {
         var parts = date.split('.');
-        ret = parts[2]+'-'+parts[1]+'-'+parts[0]+'T00:00:00';
+        ret = parts[2] + '-' + parts[1] + '-' + parts[0] + 'T00:00:00';
     }
     return ret;
 }
 
-function getIPNKey(data){
-    var aMulti = [  -1,  5,  7,  9,  4,  6,  10,  5,  7,  0];
+function getIPNKey(data) {
+    var aMulti = [-1, 5, 7, 9, 4, 6, 10, 5, 7, 0];
     var key = data.length;
-    if(data.length == 10) {
-      var sum = 0;
-      for(var i=0;i<aMulti.length;i++) {
-        var o = data[i]*aMulti[i];
-        sum += o;
-      }
+    if (data.length == 10) {
+        var sum = 0;
+        for (var i = 0; i < aMulti.length; i++) {
+            var o = data[i] * aMulti[i];
+            sum += o;
+        }
     }
-    var msum = sum - ( Math.trunc(sum / 11) * 11);
-    return msum<10?msum:0;
+    var msum = sum - (Math.trunc(sum / 11) * 11);
+    return msum < 10 ? msum : 0;
 }
+
 function excelDateToJSDate(serialDate) {
     var e0date = new Date(0); // epoch "zero" date
     var offset = e0date.getTimezoneOffset(); // tz offset in min
-    var dateOut = new Date(Math.round((serialDate - 25568)*86400*1000));
+    var dateOut = new Date(Math.round((serialDate - 25568) * 86400 * 1000));
     return dateOut.toJSON();
 }
-function generateIPN(){
+
+function generateIPN() {
 
     var requestAmo;
     var requestSex;
     var requestDat;
     var requestKey;
 
-    requestDat = Math.floor(Math.random() * 20000)+20000;
-    requestAmo = Math.floor(Math.random() * 100)+100;
-    requestSex = Math.floor(Math.random() * 10-1)+1;
-    requestKey = Math.floor(Math.random() * 10-1)+1;
-    var dataPre = ''+requestDat+requestAmo+requestSex+requestKey;
-    var dataOk = dataPre.substr(0,9) + getIPNKey(dataPre);
+    requestDat = Math.floor(Math.random() * 20000) + 20000;
+    requestAmo = Math.floor(Math.random() * 100) + 100;
+    requestSex = Math.floor(Math.random() * 10 - 1) + 1;
+    requestKey = Math.floor(Math.random() * 10 - 1) + 1;
+    var dataPre = '' + requestDat + requestAmo + requestSex + requestKey;
+    var dataOk = dataPre.substr(0, 9) + getIPNKey(dataPre);
     return dataOk;
 }
-  
+
 // FUNCTIONS -----------------------------------------------
