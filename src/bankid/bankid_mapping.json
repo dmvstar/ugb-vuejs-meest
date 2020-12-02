@@ -71,7 +71,7 @@
     "bankid": {
       "block": "person",
       "source": "",
-      "code": "іnn",
+      "code": "inn",
       "maps": "",
       "type": "string"
     },
@@ -110,8 +110,8 @@
       "type": "int"
     },
     "webbank": {
-      "block": "Properties",
-      "code": "MARITAL_STATUS",
+      "block": "Individuals",
+      "code": "MarriageStatus",
       "type": "int",
       "default": "",
       "dict": "D08",
@@ -417,7 +417,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "Town ",
+      "code": "Town",
       "type": "string",
       "default": "",
       "dict": "",
@@ -434,7 +434,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "Street ",
+      "code": "Street",
       "type": "string",
       "default": "",
       "dict": "",
@@ -451,7 +451,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "HouseNumber ",
+      "code": "HouseNumber",
       "type": "string",
       "default": "",
       "dict": "",
@@ -468,149 +468,14 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "FlatNumber ",
+      "code": "FlatNumber",
       "type": "string",
       "default": "",
       "dict": "",
       "isneed": "true"
     }
   },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "type",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "TypeCode",
-      "type": "int",
-      "default": "",
-      "dict": "",
-      "isneed": "true"
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "country",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "Country",
-      "type": "int",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "state",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "State",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "area",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "Region",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "city",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "Town ",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "street",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "Street ",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "houseNo",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "HouseNumber ",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "flatNo",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Addresses",
-      "code": "FlatNumber ",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
+  
   {
     "bankid": {
       "block": "person",

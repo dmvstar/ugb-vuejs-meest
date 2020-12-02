@@ -6,6 +6,8 @@ var bankid_dicts = require('./dicts_mapping.json');
 
 bankid_client.person.inn = generateIPN();
 
+console.log(bankid_client);
+
 var bankid_transform_out = {};
 var bankid_transform_web = [{
         name: "Client",
@@ -245,7 +247,7 @@ for (item of bankid_transform_out.Individuals) {
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     if (item.bankid.type === 'date')
         value = trans_date(value);
-    //console.log('-----------Individuals OUT '+value);
+    console.log('-----------Individuals OUT '+value);
     fill_data.indiv[item.webbank.code] = value; //item.value;
 }
 
@@ -266,6 +268,25 @@ for (item of bankid_transform_out.Identifications) {
         if (fill_data.ident[i]['ExpirationDate'] === '') {
             fill_data.ident[i]['ExpirationDate'] = '2099-01-01T00:00:00';
         };
+    }
+    i++;
+}
+// Адреса
+console.log(' +++++++++++++++++++++++++++ '+bankid_transform_out.Addresses.length)
+console.log(bankid_transform_out.Addresses);
+i = 0;
+fill_data.addr = [];
+for (item of bankid_transform_out.Addresses) {
+    fill_data.addr[i] = {};
+    for (o of item) {
+        var code = o.webbank.code;
+        var value = o.value;
+        if (o.bankid.type === 'date')
+            value = trans_date(value);
+        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {
+            value = get_reftrans(bankid_dicts, o.bankid.maps, value);
+        }
+        fill_data.addr[i][code] = value;
     }
     i++;
 }
@@ -442,6 +463,12 @@ for (prop of fill_data.ident) {
     output += mustache.render(client_xml.ident_man, prop);
 }
 output += client_xml.ident_bot;
+// addresses
+output += client_xml.addre_top;
+for (prop of fill_data.addr) {
+    output += mustache.render(client_xml.addre_man, prop);
+}
+output += client_xml.addre_bot;
 // props
 output += client_xml.props_top;
 for (prop of fill_data.props) {
@@ -452,6 +479,8 @@ output += client_xml.props_bot;
 output += client_xml.bot;
 
 console.log(output);
+console.log(bankid_client.person.inn);
+
 
 fs.writeFileSync("client-create-bankid-3.xml", output);
 

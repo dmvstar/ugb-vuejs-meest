@@ -16,7 +16,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>3347780927</tem:StateCode>
+               <tem:StateCode>2679418071</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кукуцаполь Кришна Олимпиада</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -34,7 +34,7 @@
                <tem:Gender>1</tem:Gender>
                <tem:BirthDay>1991-08-28T00:00:00</tem:BirthDay>
                <tem:BirthSurname></tem:BirthSurname>
-               <!--tem:MarriageStatus></tem:MarriageStatus-->
+               <!--tem:MarriageStatus>6</tem:MarriageStatus-->
                <tem:MarriageStatus>6</tem:MarriageStatus>
                <tem:Status>1</tem:Status>
             </tem:Individuals>            
@@ -64,14 +64,48 @@
                   <tem:Status>1</tem:Status>
                </tem:TIdentifications>
             </tem:Identifications>            
+            <tem:Addresses>               
+               <tem:TAddresses>
+                  <tem:TypeId>1</tem:TypeId>
+                  <tem:Country>804</tem:Country>
+                  <!--tem:PostalCode>14017</tem:PostalCode-->
+                  <tem:State>Чернігівська область</tem:State>
+                  <tem:Region/>
+                  <tem:TownshipType>3508</tem:TownshipType>
+                  <tem:Town>Чернігів</tem:Town>
+                  <tem:StreetType>3510</tem:StreetType>
+                  <tem:Street>Старобілоуська</tem:Street>
+                  <tem:HouseType>3511</tem:HouseType>
+                  <tem:HouseNumber>61а</tem:HouseNumber>
+                  <tem:FlatType>3506</tem:FlatType>
+                  <tem:FlatNumber>218</tem:FlatNumber>
+                  <tem:LandlinePhoneNumber/>
+                  <tem:PropertyStatus/>
+                  <tem:Status>1</tem:Status>
+               </tem:TAddresses>               
+               <tem:TAddresses>
+                  <tem:TypeId>1</tem:TypeId>
+                  <tem:Country>804</tem:Country>
+                  <!--tem:PostalCode>14017</tem:PostalCode-->
+                  <tem:State>Чернігівська область</tem:State>
+                  <tem:Region/>
+                  <tem:TownshipType>3508</tem:TownshipType>
+                  <tem:Town>Чернігів</tem:Town>
+                  <tem:StreetType>3510</tem:StreetType>
+                  <tem:Street>Старобілоуська</tem:Street>
+                  <tem:HouseType>3511</tem:HouseType>
+                  <tem:HouseNumber>61а</tem:HouseNumber>
+                  <tem:FlatType>3506</tem:FlatType>
+                  <tem:FlatNumber>218</tem:FlatNumber>
+                  <tem:LandlinePhoneNumber/>
+                  <tem:PropertyStatus/>
+                  <tem:Status>1</tem:Status>
+               </tem:TAddresses>            
+            </tem:Addresses>            
             <tem:Properties>
                 <tem:TProperties>
                   <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
                   <tem:Value>804</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>MARITAL_STATUS</tem:Code>
-                  <tem:Value>6</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
                   <tem:Code>BIRTH_COUNTRY</tem:Code>

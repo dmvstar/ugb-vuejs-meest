@@ -1,10 +1,8 @@
-            <tem:Addresses>
-               <tem:TAddressesFind>
-                  <tem:Id>3330936</tem:Id>
+               
+               <tem:TAddresses>
                   <tem:TypeId>1</tem:TypeId>
-                  <tem:TypeCode>1</tem:TypeCode>
                   <tem:Country>804</tem:Country>
-                  <tem:PostalCode>14017</tem:PostalCode>
+                  <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Чернігівська область</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
@@ -18,5 +16,4 @@
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
-               </tem:TAddressesFind>
-            </tem:Addresses>
+               </tem:TAddresses>
