@@ -1,6 +1,5 @@
-var aMulti = [  -1,  5,  7,  9,  4,  6,  10,  5,  7,  0];
-
 function getKey(data){
+  var aMulti = [  -1,  5,  7,  9,  4,  6,  10,  5,  7,  0];
   var key = data.length;
   if(data.length == 10) {
     var sum = 0;
@@ -9,9 +8,7 @@ function getKey(data){
       sum += o;
     }
   }
-
   var msum = sum - ( Math.trunc(sum / 11) * 11);
-
   return msum<10?msum:0;
 }
 

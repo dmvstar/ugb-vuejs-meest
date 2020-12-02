@@ -4,6 +4,8 @@ var bankid_client = require('./bankid-cli-1.json');
 var bankid_mapping = require('./bankid_mapping.json');
 var bankid_dicts = require('./dicts_mapping.json');
 
+bankid_client.person.inn = generateIPN();
+
 var bankid_transform_out = {};
 var bankid_transform_web = [{
     name: "Client",
@@ -391,10 +393,6 @@ output += client_xml.bot;
 console.log(output);
 
 fs.writeFileSync("client-create-bankid-3.xml", output); 
-
-console.log(generateIPN());
-console.log(generateIPN());
-console.log(generateIPN());
 
 // MAIN TRANSFORMATOR END-----------------------------------
 

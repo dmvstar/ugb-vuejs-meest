@@ -17,7 +17,7 @@
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
                <tem:StateCode>3347780927</tem:StateCode>
-               <tem:Residency>4</tem:Residency>
+               <tem:Residency>1</tem:Residency>
                <tem:Name>Кукуцаполь Кришна Олимпиада</tem:Name>               
                <tem:Type>1</tem:Type>
                <tem:SubType>0</tem:SubType>
@@ -53,7 +53,7 @@
             </tem:Identifications>            
             <tem:Identifications>
                <tem:TIdentifications>
-                  <tem:TypeId>404</tem:TypeId>
+                  <tem:TypeId>55</tem:TypeId>
                   <tem:Series></tem:Series>
                   <tem:Number>3425654326</tem:Number>
                   <tem:Registrator>1456</tem:Registrator>
