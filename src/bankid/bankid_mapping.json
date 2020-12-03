@@ -665,6 +665,23 @@
   },
   {
     "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "email",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "Value",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
       "block": "extends",
       "source": "",
       "code": "birth_country",

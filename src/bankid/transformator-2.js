@@ -293,6 +293,10 @@ for (item of bankid_transform_out.Addresses) {
 i = 0;
 fill_data.comm = [];
 for (item of bankid_transform_out.Communications) {
+    console.log('--------------------------------- Communications');
+    console.log(item);
+    console.log('--------------------------------- Communications');
+    /*
     fill_data.comm[i] = {};
     for (o of item) {
         var code = o.webbank.code;
@@ -304,6 +308,7 @@ for (item of bankid_transform_out.Communications) {
         }
         fill_data.addr[i][code] = value;
     }
+    */
     i++;
 }
 /*
