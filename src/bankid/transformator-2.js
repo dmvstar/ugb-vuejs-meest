@@ -31,7 +31,7 @@ var bankid_transform_web = [{
     }, // array
     {
         name: "Communications",
-        isarray: false,
+        isarray: true,
         mapping: []
     },
     {
@@ -239,7 +239,6 @@ for (item of bankid_transform_out.Client) {
 // Персональные данные
 fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
-
     var value = item.value;
     //console.log('-----------Individuals IN '+value);
     console.log(item);
@@ -272,7 +271,7 @@ for (item of bankid_transform_out.Identifications) {
     i++;
 }
 // Адреса
-console.log(' +++++++++++++++++++++++++++ '+bankid_transform_out.Addresses.length)
+//console.log(' +++++++++++++++++++++++++++ '+bankid_transform_out.Addresses.length)
 console.log(bankid_transform_out.Addresses);
 i = 0;
 fill_data.addr = [];
@@ -290,6 +289,36 @@ for (item of bankid_transform_out.Addresses) {
     }
     i++;
 }
+// явки пароли телефоны
+i = 0;
+fill_data.comm = [];
+for (item of bankid_transform_out.Communications) {
+    fill_data.comm[i] = {};
+    for (o of item) {
+        var code = o.webbank.code;
+        var value = o.value;
+        if (o.bankid.type === 'date')
+            value = trans_date(value);
+        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {
+            value = get_reftrans(bankid_dicts, o.bankid.maps, value);
+        }
+        fill_data.addr[i][code] = value;
+    }
+    i++;
+}
+/*
+for (item of bankid_transform_out.Communications) {
+    var value = item.value;
+    //console.log('-----------Communications IN '+value);
+    console.log(item);
+    if (item.bankid.maps !== undefined && item.bankid.maps !== '')
+        value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
+    if (item.bankid.type === 'date')
+        value = trans_date(value);
+    console.log('-----------Communications OUT '+value);
+    fill_data.comm[item.webbank.code] = value; 
+}
+*/
 // Реквизиты
 fill_data.props = [];
 i = 0;
@@ -333,6 +362,10 @@ const client_xml_files = {
     addre_top: './data/client-create-Addre-top.xml',
     addre_man: './data/client-create-Addre.xml',
     addre_bot: './data/client-create-Addre-bot.xml',
+
+    commu_top: './data/client-create-Commun-top.xml',
+    commu_man: './data/client-create-Commun.xml',
+    commu_bot: './data/client-create-Commun-bot.xml',
 
     bot: "./data/client-create-bot.xml"
 }
@@ -426,6 +459,19 @@ client_xml.addre_bot = fs.readFileSync(client_xml_files.addre_bot, {
     flag: 'r'
 });
 
+client_xml.commu_top = fs.readFileSync(client_xml_files.commu_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.commu_man = fs.readFileSync(client_xml_files.commu_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml.commu_bot = fs.readFileSync(client_xml_files.commu_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+
 client_xml.bot = fs.readFileSync(client_xml_files.bot, {
     encoding: 'utf8',
     flag: 'r'
@@ -469,6 +515,16 @@ for (prop of fill_data.addr) {
     output += mustache.render(client_xml.addre_man, prop);
 }
 output += client_xml.addre_bot;
+
+// comm
+output += client_xml.commu_top;
+console.log(fill_data.comm);
+for (prop of fill_data.comm) 
+{
+    output += mustache.render(client_xml.commu_man, prop);//fill_data.comm);
+}
+output += client_xml.commu_bot;
+
 // props
 output += client_xml.props_top;
 for (prop of fill_data.props) {

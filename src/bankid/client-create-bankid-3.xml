@@ -16,7 +16,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2679418071</tem:StateCode>
+               <tem:StateCode>3190118778</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кукуцаполь Кришна Олимпиада</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -101,7 +101,21 @@
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
                </tem:TAddresses>            
-            </tem:Addresses>            
+            </tem:Addresses>
+            <tem:Communications>
+
+               <tem:TCommunications>
+                  <tem:TypeId>3</tem:TypeId>
+                  <tem:TypeCode>3</tem:TypeCode>
+                  <tem:Value>380631003256</tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunications>
+
+            </tem:Communications>            
             <tem:Properties>
                 <tem:TProperties>
                   <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>

@@ -1,12 +1,11 @@
 
-               <tem:TCommunicationsFind>
-                  <tem:Id>2057632</tem:Id>
+               <tem:TCommunications>
                   <tem:TypeId>3</tem:TypeId>
                   <tem:TypeCode>3</tem:TypeCode>
-                  <tem:Value>+380935594959</tem:Value>
+                  <tem:Value>{{Value}}</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
                   <tem:Note/>
                   <tem:SourceInfo/>
                   <tem:Status>1</tem:Status>
-               </tem:TCommunicationsFind>
+               </tem:TCommunications>
