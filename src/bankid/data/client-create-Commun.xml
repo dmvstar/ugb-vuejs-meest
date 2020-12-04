@@ -1,7 +1,7 @@
 
                <tem:TCommunications>
-                  <tem:TypeId>3</tem:TypeId>
-                  <tem:TypeCode>3</tem:TypeCode>
+                  <tem:TypeId>{{TypeId}}</tem:TypeId>
+                  <tem:TypeCode>{{TypeId}}</tem:TypeCode>
                   <tem:Value>{{Value}}</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>

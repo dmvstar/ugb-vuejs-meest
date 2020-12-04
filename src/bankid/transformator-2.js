@@ -99,6 +99,7 @@ for (o of bankid_mapping) {
 }
 
 //console.log(bankid_transform_bid);
+console.log(bankid_transform_web);
 //console.log(bankid_transform_out);
 
 // Parce input data
@@ -106,14 +107,13 @@ for (key in bankid_client) {
 
     var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;
 
-
     if (bankid_client[key] instanceof Array) {
         console.log("[" + key + "][" + webbank_block + "] Array ");
         //console.log(bankid_transform_out[webbank_block]);
 
         var cnt = 0;
         var amapi = [];
-        ////console.log(" ["+webbank_block+"]["+key+"] "+a+"="+JSON.stringify(a));    
+        //console.log(" ++++++++++++["+webbank_block+"]["+key+"] ");    
         var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
 
         for (a of bankid_client[key]) {
@@ -150,10 +150,25 @@ for (key in bankid_client) {
             console.log(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
-                console.log("  [" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
+                console.log("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 //console.log(val);
                 bankid_transform_out[val.webbank.block].push(val);
+                // Ищем в знчения по умодчанию в для val.webbank.block
+                var mapw = bankid_transform_web.find(x => x.name === val.webbank.block).mapping;
+                //console.log("   ++++["+val.webbank.block+"] "+mapw);
+                for( d of mapw){
+                    //if( val.webbank.block === 'Communications') {
+                    if( d.bankid.code === o && d.webbank.default !== '') {
+                        var vald = JSON.parse(JSON.stringify(val));
+                        vald.value = d.webbank.default;
+                        vald.webbank.code = d.webbank.code;
+                        console.log("       ++++["+val.webbank.block+"] "+JSON.stringify(d));
+                        console.log("       ++++["+val.webbank.block+"] "+JSON.stringify(val));
+                        console.log("       ++++["+val.webbank.block+"] "+JSON.stringify(vald));
+                        bankid_transform_out[val.webbank.block].push(vald);
+                    }
+                }
             }
         }
     }
@@ -292,10 +307,16 @@ for (item of bankid_transform_out.Addresses) {
 // явки пароли телефоны
 i = 0;
 fill_data.comm = [];
+var comm_codes = [];
+console.log('--------------------------------- Communications');
 for (item of bankid_transform_out.Communications) {
-    console.log('--------------------------------- Communications');
+    
     console.log(item);
     console.log('--------------------------------- Communications');
+    if(comm_codes.indexOf(item.bankid.code) < 0)
+        comm_codes.push(item.bankid.code);
+
+
     /*
     fill_data.comm[i] = {};
     for (o of item) {
@@ -309,8 +330,24 @@ for (item of bankid_transform_out.Communications) {
         fill_data.addr[i][code] = value;
     }
     */
-    i++;
 }
+console.log(comm_codes);
+for(c of comm_codes) {
+    fill_data.comm[i] = {};
+    console.log(c);
+    for(item of bankid_transform_out.Communications) {
+    //var items = bankid_transform_out.Communications.find(x => x.bankid.code === c)
+        //console.log(item);
+        var code = item.webbank.code;
+        if(item.bankid.code === c) {
+            console.log('['+c+']['+code+']['+item.value+']');
+            fill_data.comm[i][code] = item.value;    
+        }  
+    }  
+    i++;    
+    console.log(fill_data.comm[i]); 
+}
+console.log('--------------------------------- Communications');
 /*
 for (item of bankid_transform_out.Communications) {
     var value = item.value;
