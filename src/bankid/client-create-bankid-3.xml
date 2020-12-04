@@ -16,7 +16,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2997517850</tem:StateCode>
+               <tem:StateCode>2823519611</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кукуцаполь Кришна Олимпиада</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -103,7 +103,6 @@
                </tem:TAddresses>            
             </tem:Addresses>
             <tem:Communications>
-
                <tem:TCommunications>
                   <tem:TypeId>3</tem:TypeId>
                   <tem:TypeCode>3</tem:TypeCode>
@@ -114,7 +113,6 @@
                   <tem:SourceInfo/>
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
-
                <tem:TCommunications>
                   <tem:TypeId>5</tem:TypeId>
                   <tem:TypeCode>5</tem:TypeCode>
@@ -125,7 +123,6 @@
                   <tem:SourceInfo/>
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
-
             </tem:Communications>            
             <tem:Properties>
                 <tem:TProperties>

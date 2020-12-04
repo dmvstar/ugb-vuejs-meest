@@ -310,34 +310,16 @@ fill_data.comm = [];
 var comm_codes = [];
 console.log('--------------------------------- Communications');
 for (item of bankid_transform_out.Communications) {
-    
     console.log(item);
     console.log('--------------------------------- Communications');
     if(comm_codes.indexOf(item.bankid.code) < 0)
         comm_codes.push(item.bankid.code);
-
-
-    /*
-    fill_data.comm[i] = {};
-    for (o of item) {
-        var code = o.webbank.code;
-        var value = o.value;
-        if (o.bankid.type === 'date')
-            value = trans_date(value);
-        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {
-            value = get_reftrans(bankid_dicts, o.bankid.maps, value);
-        }
-        fill_data.addr[i][code] = value;
-    }
-    */
 }
 console.log(comm_codes);
 for(c of comm_codes) {
     fill_data.comm[i] = {};
     console.log(c);
     for(item of bankid_transform_out.Communications) {
-    //var items = bankid_transform_out.Communications.find(x => x.bankid.code === c)
-        //console.log(item);
         var code = item.webbank.code;
         if(item.bankid.code === c) {
             console.log('['+c+']['+code+']['+item.value+']');
@@ -345,7 +327,6 @@ for(c of comm_codes) {
         }  
     }  
     i++;    
-    console.log(fill_data.comm[i]); 
 }
 console.log('--------------------------------- Communications');
 /*

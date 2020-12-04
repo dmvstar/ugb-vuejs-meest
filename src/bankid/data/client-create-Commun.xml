@@ -1,4 +1,3 @@
-
                <tem:TCommunications>
                   <tem:TypeId>{{TypeId}}</tem:TypeId>
                   <tem:TypeCode>{{TypeId}}</tem:TypeCode>
