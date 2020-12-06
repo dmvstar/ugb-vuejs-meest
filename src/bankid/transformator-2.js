@@ -4,6 +4,73 @@ var bankid_client = require('./bankid-cli-1.json');
 var bankid_mapping = require('./bankid_mapping.json');
 var bankid_dicts = require('./dicts_mapping.json');
 
+var client_xml_files = require('./client_xml_files.json');
+
+// FUNCTIONS -----------------------------------------------
+function get_reftrans(refmaps, idrefcode, idvalue) {
+    var ret = idvalue;
+
+    for (o of refmaps[idrefcode]) {
+        //console.log(' get_reftrans'+ JSON.stringify(o));
+        if (o.ibancode === idvalue) {
+            ret = o.wbid;
+            break;
+        }
+    }
+
+    return ret;
+}
+
+function trans_date(date) {
+    var ret = date;
+    // from DD.MM.YYYY
+    // to 1982-05-03T00:00:00
+    if (date.length > 0) {
+        var parts = date.split('.');
+        ret = parts[2] + '-' + parts[1] + '-' + parts[0] + 'T00:00:00';
+    }
+    return ret;
+}
+
+function getIPNKey(data) {
+    var aMulti = [-1, 5, 7, 9, 4, 6, 10, 5, 7, 0];
+    var key = data.length;
+    if (data.length == 10) {
+        var sum = 0;
+        for (var i = 0; i < aMulti.length; i++) {
+            var o = data[i] * aMulti[i];
+            sum += o;
+        }
+    }
+    var msum = sum - (Math.trunc(sum / 11) * 11);
+    return msum < 10 ? msum : 0;
+}
+
+function excelDateToJSDate(serialDate) {
+    var e0date = new Date(0); // epoch "zero" date
+    var offset = e0date.getTimezoneOffset(); // tz offset in min
+    var dateOut = new Date(Math.round((serialDate - 25568) * 86400 * 1000));
+    return dateOut.toJSON();
+}
+
+function generateIPN() {
+
+    var requestAmo;
+    var requestSex;
+    var requestDat;
+    var requestKey;
+
+    requestDat = Math.floor(Math.random() * 20000) + 20000;
+    requestAmo = Math.floor(Math.random() * 100) + 100;
+    requestSex = Math.floor(Math.random() * 10 - 1) + 1;
+    requestKey = Math.floor(Math.random() * 10 - 1) + 1;
+    var dataPre = '' + requestDat + requestAmo + requestSex + requestKey;
+    var dataOk = dataPre.substr(0, 9) + getIPNKey(dataPre);
+    return dataOk;
+}
+
+// FUNCTIONS -----------------------------------------------
+
 bankid_client.person.inn = generateIPN();
 
 console.log(bankid_client);
@@ -218,25 +285,6 @@ for (item of calcm) {
     */
 }
 
-/*
-calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
-console.log("calcm --------------------------------------------");
-console.log(calcm);
-console.log("calcm --------------------------------------------");
-/*
-console.log( "bankid_transform_out=");
-console.log( bankid_transform_out );
-console.log( "----------------------------------");
-*/
-/*
-const math = require(mathjs);
-var a='Hello', b='world';
-var r = math.evaluate(a + ' ' +b);
-console.log("evaluate --------------------------------------------");
-console.log(r);
-console.log("evaluate --------------------------------------------");
-*/
-
 console.log("bankid_transform_out --------------------------------------------");
 var fill_data = {};
 // Клиент
@@ -329,19 +377,7 @@ for(c of comm_codes) {
     i++;    
 }
 console.log('--------------------------------- Communications');
-/*
-for (item of bankid_transform_out.Communications) {
-    var value = item.value;
-    //console.log('-----------Communications IN '+value);
-    console.log(item);
-    if (item.bankid.maps !== undefined && item.bankid.maps !== '')
-        value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
-    if (item.bankid.type === 'date')
-        value = trans_date(value);
-    console.log('-----------Communications OUT '+value);
-    fill_data.comm[item.webbank.code] = value; 
-}
-*/
+
 // Реквизиты
 fill_data.props = [];
 i = 0;
@@ -363,35 +399,7 @@ for (item of bankid_transform_out.Properties) {
 }
 
 var client_data = bankid_transform_out.Client;
-const client_xml_files = {
-    top: "./data/client-create-top.xml",
 
-    client_top: './data/client-create-Empty.xml',
-    client_man: './data/client-create-Clients.xml',
-    client_bot: './data/client-create-Empty.xml',
-
-    indiv_top: './data/client-create-Empty.xml',
-    indiv_man: './data/client-create-Indiv.xml',
-    indiv_bot: './data/client-create-Empty.xml',
-
-    props_top: './data/client-create-Props-top.xml',
-    props_man: './data/client-create-Props.xml',
-    props_bot: './data/client-create-Props-bot.xml',
-
-    ident_top: './data/client-create-Empty.xml',
-    ident_man: './data/client-create-Ident.xml',
-    ident_bot: './data/client-create-Empty.xml',
-
-    addre_top: './data/client-create-Addre-top.xml',
-    addre_man: './data/client-create-Addre.xml',
-    addre_bot: './data/client-create-Addre-bot.xml',
-
-    commu_top: './data/client-create-Commun-top.xml',
-    commu_man: './data/client-create-Commun.xml',
-    commu_bot: './data/client-create-Commun-bot.xml',
-
-    bot: "./data/client-create-bot.xml"
-}
 const client_xml = {
     top: null,
     client_top: null,
@@ -558,74 +566,8 @@ output += client_xml.props_bot;
 output += client_xml.bot;
 
 console.log(output);
-console.log(bankid_client.person.inn);
-
 
 fs.writeFileSync("client-create-bankid-3.xml", output);
 
 // MAIN TRANSFORMATOR END-----------------------------------
 
-// FUNCTIONS -----------------------------------------------
-function get_reftrans(refmaps, idrefcode, idvalue) {
-    var ret = idvalue;
-
-    for (o of refmaps[idrefcode]) {
-        //console.log(' get_reftrans'+ JSON.stringify(o));
-        if (o.ibancode === idvalue) {
-            ret = o.wbid;
-            break;
-        }
-    }
-
-    return ret;
-}
-
-function trans_date(date) {
-    var ret = date;
-    // from DD.MM.YYYY
-    // to 1982-05-03T00:00:00
-    if (date.length > 0) {
-        var parts = date.split('.');
-        ret = parts[2] + '-' + parts[1] + '-' + parts[0] + 'T00:00:00';
-    }
-    return ret;
-}
-
-function getIPNKey(data) {
-    var aMulti = [-1, 5, 7, 9, 4, 6, 10, 5, 7, 0];
-    var key = data.length;
-    if (data.length == 10) {
-        var sum = 0;
-        for (var i = 0; i < aMulti.length; i++) {
-            var o = data[i] * aMulti[i];
-            sum += o;
-        }
-    }
-    var msum = sum - (Math.trunc(sum / 11) * 11);
-    return msum < 10 ? msum : 0;
-}
-
-function excelDateToJSDate(serialDate) {
-    var e0date = new Date(0); // epoch "zero" date
-    var offset = e0date.getTimezoneOffset(); // tz offset in min
-    var dateOut = new Date(Math.round((serialDate - 25568) * 86400 * 1000));
-    return dateOut.toJSON();
-}
-
-function generateIPN() {
-
-    var requestAmo;
-    var requestSex;
-    var requestDat;
-    var requestKey;
-
-    requestDat = Math.floor(Math.random() * 20000) + 20000;
-    requestAmo = Math.floor(Math.random() * 100) + 100;
-    requestSex = Math.floor(Math.random() * 10 - 1) + 1;
-    requestKey = Math.floor(Math.random() * 10 - 1) + 1;
-    var dataPre = '' + requestDat + requestAmo + requestSex + requestKey;
-    var dataOk = dataPre.substr(0, 9) + getIPNKey(dataPre);
-    return dataOk;
-}
-
-// FUNCTIONS -----------------------------------------------

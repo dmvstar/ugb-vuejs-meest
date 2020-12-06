@@ -3,16 +3,16 @@
                   <tem:TypeId>1</tem:TypeId>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
-                  <tem:State>Чернігівська область</tem:State>
+                  <tem:State>{{State}}</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>Чернігів</tem:Town>
+                  <tem:Town>{{Town}}</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>Старобілоуська</tem:Street>
+                  <tem:Street>{{Street}}</tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>61а</tem:HouseNumber>
+                  <tem:HouseNumber>{{HouseNumber}}</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>218</tem:FlatNumber>
+                  <tem:FlatNumber>{{FlatNumber}}</tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>

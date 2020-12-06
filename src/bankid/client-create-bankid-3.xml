@@ -16,9 +16,9 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2823519611</tem:StateCode>
+               <tem:StateCode>3380112841</tem:StateCode>
                <tem:Residency>1</tem:Residency>
-               <tem:Name>Кукуцаполь Кришна Олимпиада</tem:Name>               
+               <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
                <tem:SubType>0</tem:SubType>
                <tem:isTechFlag>0</tem:isTechFlag>
@@ -28,9 +28,9 @@
                <tem:Status>1</tem:Status>
             </tem:Clients>            
             <tem:Individuals>
-               <tem:FirstName>Кришна</tem:FirstName>
-               <tem:LastName>Кукуцаполь</tem:LastName>
-               <tem:FatherName>Олимпиада</tem:FatherName>
+               <tem:FirstName>Кукумац</tem:FirstName>
+               <tem:LastName>Кетцалькоатль</tem:LastName>
+               <tem:FatherName>Кукулькан</tem:FatherName>
                <tem:Gender>1</tem:Gender>
                <tem:BirthDay>1991-08-28T00:00:00</tem:BirthDay>
                <tem:BirthSurname></tem:BirthSurname>
@@ -69,16 +69,16 @@
                   <tem:TypeId>1</tem:TypeId>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
-                  <tem:State>Чернігівська область</tem:State>
+                  <tem:State>Київська</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>Чернігів</tem:Town>
+                  <tem:Town>м. Київ</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>Старобілоуська</tem:Street>
+                  <tem:Street>вул. Бородинского побоища</tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>61а</tem:HouseNumber>
+                  <tem:HouseNumber>21</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>218</tem:FlatNumber>
+                  <tem:FlatNumber>16</tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
@@ -87,16 +87,16 @@
                   <tem:TypeId>1</tem:TypeId>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
-                  <tem:State>Чернігівська область</tem:State>
+                  <tem:State>Київська</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>Чернігів</tem:Town>
+                  <tem:Town>м. Чичен-Ица</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>Старобілоуська</tem:Street>
+                  <tem:Street>вул. пирамида Кукулькана.</tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>61а</tem:HouseNumber>
+                  <tem:HouseNumber>1</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>218</tem:FlatNumber>
+                  <tem:FlatNumber>1</tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
@@ -117,6 +117,16 @@
                   <tem:TypeId>5</tem:TypeId>
                   <tem:TypeCode>5</tem:TypeCode>
                   <tem:Value>sava@mail.dot.com</tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunications>
+               <tem:TCommunications>
+                  <tem:TypeId>6</tem:TypeId>
+                  <tem:TypeCode>6</tem:TypeCode>
+                  <tem:Value>www.www.net</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
                   <tem:Note/>

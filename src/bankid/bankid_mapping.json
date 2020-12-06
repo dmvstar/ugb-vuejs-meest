@@ -716,6 +716,40 @@
   },
   {
     "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "web",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "Value",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "web",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "TypeId",
+      "type": "string",
+      "default": "6",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
       "block": "extends",
       "source": "",
       "code": "birth_country",

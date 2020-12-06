@@ -1,16 +1,17 @@
 {
     "person": {
         "type": "physical",
-        "lastName": "Кукуцаполь",
-        "firstName": "Кришна",
-        "middleName": "Олимпиада",
+        "lastName": "Кетцалькоатль",
+        "firstName": "Кукумац",
+        "middleName": "Кукулькан",
         "inn": "3347780927",
         "birthDay": "28.08.1991",
         "sex": "M",
         "phone": "380631003256",
         "email": "sava@mail.dot.com",
+        "web": "www.www.net",
         "uaResident": "1",
-        "edication": "Вища для тесту"
+        "edication": "Бог"
     },
 
     "extends": {
@@ -29,18 +30,18 @@
             "area": "Київ",
             "city": "м. Київ",
             "street": "вул. Бородинского побоища",
-            "houseNo": "44",
-            "flatNo": "341"
+            "houseNo": "21",
+            "flatNo": "16"
         },
         {
             "type": "juridical",
             "country": "UA",
             "state": "Київська",
             "area": "Київ",
-            "city": "м. Київ",
-            "street": "вул. Бородинского побоища",
-            "houseNo": "44",
-            "flatNo": "341"
+            "city": "м. Чичен-Ица",
+            "street": "вул. пирамида Кукулькана.",
+            "houseNo": "1",
+            "flatNo": "1"
         }
     ],
     "documents": [{

@@ -1,0 +1,29 @@
+{
+    "top": "./data/client-create-top.xml",
+
+    "client_top": "./data/client-create-Empty.xml",
+    "client_man": "./data/client-create-Clients.xml",
+    "client_bot": "./data/client-create-Empty.xml",
+
+    "indiv_top": "./data/client-create-Empty.xml",
+    "indiv_man": "./data/client-create-Indiv.xml",
+    "indiv_bot": "./data/client-create-Empty.xml",
+
+    "props_top": "./data/client-create-Props-top.xml",
+    "props_man": "./data/client-create-Props.xml",
+    "props_bot": "./data/client-create-Props-bot.xml",
+
+    "ident_top": "./data/client-create-Empty.xml",
+    "ident_man": "./data/client-create-Ident.xml",
+    "ident_bot": "./data/client-create-Empty.xml",
+
+    "addre_top": "./data/client-create-Addre-top.xml",
+    "addre_man": "./data/client-create-Addre.xml",
+    "addre_bot": "./data/client-create-Addre-bot.xml",
+
+    "commu_top": "./data/client-create-Commun-top.xml",
+    "commu_man": "./data/client-create-Commun.xml",
+    "commu_bot": "./data/client-create-Commun-bot.xml",
+
+    "bot": "./data/client-create-bot.xml"
+}
