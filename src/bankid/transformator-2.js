@@ -4,7 +4,8 @@ var bankid_client = require('./bankid-cli-1.json');
 var bankid_mapping = require('./bankid_mapping.json');
 var bankid_dicts = require('./dicts_mapping.json');
 
-var client_xml_files = require('./client_xml_files.json');
+var client_xml_names = require('./client_xml_names.json');
+var client_xml_data = require('./client_xml_data.json');
 
 // FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
@@ -76,6 +77,7 @@ bankid_client.person.inn = generateIPN();
 console.log(bankid_client);
 
 var bankid_transform_out = {};
+
 var bankid_transform_web = [{
         name: "Client",
         isarray: false,
@@ -398,112 +400,91 @@ for (item of bankid_transform_out.Properties) {
     }
 }
 
-var client_data = bankid_transform_out.Client;
 
-const client_xml = {
-    top: null,
-    client_top: null,
-    client_man: null,
-    client_bot: null,
-    indiv_top: null,
-    indiv_man: null,
-    indiv_bot: null,
-    props_top: null,
-    props_man: null,
-    props_bot: null,
-    ident_top: null,
-    ident_man: null,
-    ident_bot: null,
-    addre_top: null,
-    addre_man: null,
-    addre_bot: null,
-    bot: null
-}
-
-client_xml.top = fs.readFileSync(client_xml_files.top, {
+client_xml_data.top = fs.readFileSync(client_xml_names.top, {
     encoding: 'utf8',
     flag: 'r'
 });
 
-client_xml.client_top = fs.readFileSync(client_xml_files.client_top, {
+client_xml_data.client_top = fs.readFileSync(client_xml_names.client_top, {
     encoding: 'utf8',
     flag: 'r'
 });
-client_xml.client_man = fs.readFileSync(client_xml_files.client_man, {
+client_xml_data.client_man = fs.readFileSync(client_xml_names.client_man, {
     encoding: 'utf8',
     flag: 'r'
 });
-client_xml.client_bot = fs.readFileSync(client_xml_files.client_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml.indiv_top = fs.readFileSync(client_xml_files.indiv_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml.indiv_man = fs.readFileSync(client_xml_files.indiv_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml.indiv_bot = fs.readFileSync(client_xml_files.indiv_bot, {
+client_xml_data.client_bot = fs.readFileSync(client_xml_names.client_bot, {
     encoding: 'utf8',
     flag: 'r'
 });
 
-client_xml.props_top = fs.readFileSync(client_xml_files.props_top, {
+client_xml_data.indiv_top = fs.readFileSync(client_xml_names.indiv_top, {
     encoding: 'utf8',
     flag: 'r'
 });
-client_xml.props_man = fs.readFileSync(client_xml_files.props_man, {
+client_xml_data.indiv_man = fs.readFileSync(client_xml_names.indiv_man, {
     encoding: 'utf8',
     flag: 'r'
 });
-client_xml.props_bot = fs.readFileSync(client_xml_files.props_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml.ident_top = fs.readFileSync(client_xml_files.ident_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml.ident_man = fs.readFileSync(client_xml_files.ident_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml.ident_bot = fs.readFileSync(client_xml_files.ident_bot, {
+client_xml_data.indiv_bot = fs.readFileSync(client_xml_names.indiv_bot, {
     encoding: 'utf8',
     flag: 'r'
 });
 
-client_xml.addre_top = fs.readFileSync(client_xml_files.addre_top, {
+client_xml_data.props_top = fs.readFileSync(client_xml_names.props_top, {
     encoding: 'utf8',
     flag: 'r'
 });
-client_xml.addre_man = fs.readFileSync(client_xml_files.addre_man, {
+client_xml_data.props_man = fs.readFileSync(client_xml_names.props_man, {
     encoding: 'utf8',
     flag: 'r'
 });
-client_xml.addre_bot = fs.readFileSync(client_xml_files.addre_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml.commu_top = fs.readFileSync(client_xml_files.commu_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml.commu_man = fs.readFileSync(client_xml_files.commu_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml.commu_bot = fs.readFileSync(client_xml_files.commu_bot, {
+client_xml_data.props_bot = fs.readFileSync(client_xml_names.props_bot, {
     encoding: 'utf8',
     flag: 'r'
 });
 
-client_xml.bot = fs.readFileSync(client_xml_files.bot, {
+client_xml_data.ident_top = fs.readFileSync(client_xml_names.ident_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml_data.ident_man = fs.readFileSync(client_xml_names.ident_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml_data.ident_bot = fs.readFileSync(client_xml_names.ident_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+
+client_xml_data.addre_top = fs.readFileSync(client_xml_names.addre_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml_data.addre_man = fs.readFileSync(client_xml_names.addre_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml_data.addre_bot = fs.readFileSync(client_xml_names.addre_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+
+client_xml_data.commu_top = fs.readFileSync(client_xml_names.commu_top, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml_data.commu_man = fs.readFileSync(client_xml_names.commu_man, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+client_xml_data.commu_bot = fs.readFileSync(client_xml_names.commu_bot, {
+    encoding: 'utf8',
+    flag: 'r'
+});
+
+client_xml_data.bot = fs.readFileSync(client_xml_names.bot, {
     encoding: 'utf8',
     flag: 'r'
 });
@@ -527,43 +508,43 @@ var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
 
 // MAIN TRANSFORMATOR --------------------------------------
-output = client_xml.top;
-output += client_xml.client_top;
-output += mustache.render(client_xml.client_man, fill_data.client);
-output += client_xml.client_bot;
-output += client_xml.indiv_top;
-output += mustache.render(client_xml.indiv_man, fill_data.indiv);
-output += client_xml.indiv_bot;
+output = client_xml_data.top;
+output += client_xml_data.client_top;
+output += mustache.render(client_xml_data.client_man, fill_data.client);
+output += client_xml_data.client_bot;
+output += client_xml_data.indiv_top;
+output += mustache.render(client_xml_data.indiv_man, fill_data.indiv);
+output += client_xml_data.indiv_bot;
 // documents
-output += client_xml.ident_top;
+output += client_xml_data.ident_top;
 for (prop of fill_data.ident) {
-    output += mustache.render(client_xml.ident_man, prop);
+    output += mustache.render(client_xml_data.ident_man, prop);
 }
-output += client_xml.ident_bot;
+output += client_xml_data.ident_bot;
 // addresses
-output += client_xml.addre_top;
+output += client_xml_data.addre_top;
 for (prop of fill_data.addr) {
-    output += mustache.render(client_xml.addre_man, prop);
+    output += mustache.render(client_xml_data.addre_man, prop);
 }
-output += client_xml.addre_bot;
+output += client_xml_data.addre_bot;
 
 // comm
-output += client_xml.commu_top;
+output += client_xml_data.commu_top;
 console.log(fill_data.comm);
 for (prop of fill_data.comm) 
 {
-    output += mustache.render(client_xml.commu_man, prop);//fill_data.comm);
+    output += mustache.render(client_xml_data.commu_man, prop);//fill_data.comm);
 }
-output += client_xml.commu_bot;
+output += client_xml_data.commu_bot;
 
 // props
-output += client_xml.props_top;
+output += client_xml_data.props_top;
 for (prop of fill_data.props) {
-    output += mustache.render(client_xml.props_man, prop);
+    output += mustache.render(client_xml_data.props_man, prop);
 }
-output += client_xml.props_bot;
+output += client_xml_data.props_bot;
 
-output += client_xml.bot;
+output += client_xml_data.bot;
 
 console.log(output);
 
