@@ -1,0 +1,45 @@
+[{
+    "name": "Client",
+    "isarray": false,
+    "mapping": []
+},
+{
+    "name": "Individuals",
+    "isarray": false,
+    "mapping": [],
+    "comment" : "array"
+}, 
+{
+    "name": "Identifications",
+    "isarray": true,
+    "mapping": [],
+    "comment" : "array documents"
+}, 
+{
+    "name": "Addresses",
+    "isarray": true,
+    "mapping": [],
+    "comment" : "array"
+}, 
+{
+    "name": "Communications",
+    "isarray": true,
+    "mapping": []
+},
+{
+    "name": "Properties",
+    "isarray": false,
+    "mapping": []
+},
+{
+    "name": "Scans",
+    "isarray": true,
+    "mapping": [],
+    "comment" : "array"
+}, 
+{
+    "name": "Operations",
+    "isarray": false,
+    "mapping": []
+}
+]

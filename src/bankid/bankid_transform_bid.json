@@ -1,0 +1,31 @@
+[{
+    "name": "person",
+    "isarray": false,
+    "mapping": []
+},
+{
+    "name": "addresses",
+    "isarray": true,
+    "mapping": []
+},
+{
+    "name": "documents",
+    "isarray": true,
+    "mapping": []
+},
+{
+    "name": "scans",
+    "isarray": true,
+    "mapping": []
+},
+{
+    "name": "extends",
+    "isarray": true,
+    "mapping": []
+},
+{
+    "name": "calculate",
+    "isarray": false,
+    "mapping": []
+}
+]

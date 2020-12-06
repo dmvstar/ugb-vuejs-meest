@@ -7,6 +7,10 @@ var bankid_dicts = require('./dicts_mapping.json');
 var client_xml_names = require('./client_xml_names.json');
 var client_xml_data = require('./client_xml_data.json');
 
+var bankid_transform_web = require('./bankid_transform_web.json');
+var bankid_transform_bid = require('./bankid_transform_bid.json');
+var bankid_transform_out = {};
+
 // FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
@@ -70,87 +74,112 @@ function generateIPN() {
     return dataOk;
 }
 
-// FUNCTIONS -----------------------------------------------
+function load_xml_templates_files() {
+    client_xml_data.top = fs.readFileSync(client_xml_names.top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.client_top = fs.readFileSync(client_xml_names.client_top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.client_man = fs.readFileSync(client_xml_names.client_man, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.client_bot = fs.readFileSync(client_xml_names.client_bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.indiv_top = fs.readFileSync(client_xml_names.indiv_top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.indiv_man = fs.readFileSync(client_xml_names.indiv_man, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.indiv_bot = fs.readFileSync(client_xml_names.indiv_bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.props_top = fs.readFileSync(client_xml_names.props_top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.props_man = fs.readFileSync(client_xml_names.props_man, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.props_bot = fs.readFileSync(client_xml_names.props_bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.ident_top = fs.readFileSync(client_xml_names.ident_top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.ident_man = fs.readFileSync(client_xml_names.ident_man, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.ident_bot = fs.readFileSync(client_xml_names.ident_bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.addre_top = fs.readFileSync(client_xml_names.addre_top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.addre_man = fs.readFileSync(client_xml_names.addre_man, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.addre_bot = fs.readFileSync(client_xml_names.addre_bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.commu_top = fs.readFileSync(client_xml_names.commu_top, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.commu_man = fs.readFileSync(client_xml_names.commu_man, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    client_xml_data.commu_bot = fs.readFileSync(client_xml_names.commu_bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+    
+    client_xml_data.bot = fs.readFileSync(client_xml_names.bot, {
+        encoding: 'utf8',
+        flag: 'r'
+    });
+        return;
+    }
+    
+function load_xml_templates_nodes(){
+
+    return;
+}
+// FUNCTIONS END -------------------------------------------
+MODE_WORK_LOCAL = true;
+
+if(MODE_WORK_LOCAL === true)
+    load_xml_templates_files();
+else
+    load_xml_templates_nodes();
 
 bankid_client.person.inn = generateIPN();
 
 console.log(bankid_client);
-
-var bankid_transform_out = {};
-
-var bankid_transform_web = [{
-        name: "Client",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "Individuals",
-        isarray: false,
-        mapping: []
-    }, // array
-    {
-        name: "Identifications",
-        isarray: true,
-        mapping: []
-    }, // array documents
-    {
-        name: "Addresses",
-        isarray: true,
-        mapping: []
-    }, // array
-    {
-        name: "Communications",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "Properties",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "Scans",
-        isarray: true,
-        mapping: []
-    }, // array
-    {
-        name: "Operations",
-        isarray: false,
-        mapping: []
-    }
-]
-
-var bankid_transform_bid = [{
-        name: "person",
-        isarray: false,
-        mapping: []
-    },
-    {
-        name: "addresses",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "documents",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "scans",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "extends",
-        isarray: true,
-        mapping: []
-    },
-    {
-        name: "calculate",
-        isarray: false,
-        mapping: []
-    },
-]
 
 // Prepare out data
 for (k of bankid_transform_web) {
@@ -242,22 +271,9 @@ for (key in bankid_client) {
         }
     }
 }
-/*
-console.log( "bankid_transform_out=");
-console.log( bankid_transform_out );
-console.log( "----------------------------------");
-console.log( bankid_transform_out.Scans[0] );
-console.log( bankid_transform_out.Addresses[0] );
-console.log( bankid_transform_out.Addresses[1] );
-*/
 
 // Calculate field from bankid
 var calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
-/*
-console.log("calcm --------------------------------------------");
-console.log(calcm);
-console.log("calcm --------------------------------------------");
-*/
 
 for (item of calcm) {
     console.log(item); // x.name === a.source !!!! persons
@@ -400,94 +416,6 @@ for (item of bankid_transform_out.Properties) {
     }
 }
 
-
-client_xml_data.top = fs.readFileSync(client_xml_names.top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.client_top = fs.readFileSync(client_xml_names.client_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.client_man = fs.readFileSync(client_xml_names.client_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.client_bot = fs.readFileSync(client_xml_names.client_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.indiv_top = fs.readFileSync(client_xml_names.indiv_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.indiv_man = fs.readFileSync(client_xml_names.indiv_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.indiv_bot = fs.readFileSync(client_xml_names.indiv_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.props_top = fs.readFileSync(client_xml_names.props_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.props_man = fs.readFileSync(client_xml_names.props_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.props_bot = fs.readFileSync(client_xml_names.props_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.ident_top = fs.readFileSync(client_xml_names.ident_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.ident_man = fs.readFileSync(client_xml_names.ident_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.ident_bot = fs.readFileSync(client_xml_names.ident_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.addre_top = fs.readFileSync(client_xml_names.addre_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.addre_man = fs.readFileSync(client_xml_names.addre_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.addre_bot = fs.readFileSync(client_xml_names.addre_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.commu_top = fs.readFileSync(client_xml_names.commu_top, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.commu_man = fs.readFileSync(client_xml_names.commu_man, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-client_xml_data.commu_bot = fs.readFileSync(client_xml_names.commu_bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
-
-client_xml_data.bot = fs.readFileSync(client_xml_names.bot, {
-    encoding: 'utf8',
-    flag: 'r'
-});
 
 console.log("fill_data --------------------------------------------");
 
