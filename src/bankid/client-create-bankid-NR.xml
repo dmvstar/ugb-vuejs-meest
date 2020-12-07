@@ -71,6 +71,41 @@
                </tem:TAddresses>
             
             </tem:Addresses>
+
+            <tem:Communications>
+
+               <tem:TCommunications>
+                  <tem:TypeId></tem:TypeId>
+                  <tem:TypeCode></tem:TypeCode>
+                  <tem:Value></tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note></tem:Note>
+                  <tem:SourceInfo></tem:SourceInfo>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunications>
+               <tem:TCommunications>
+                  <tem:TypeId></tem:TypeId>
+                  <tem:TypeCode></tem:TypeCode>
+                  <tem:Value></tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note></tem:Note>
+                  <tem:SourceInfo></tem:SourceInfo>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunications>
+               <tem:TCommunications>
+                  <tem:TypeId></tem:TypeId>
+                  <tem:TypeCode></tem:TypeCode>
+                  <tem:Value></tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note></tem:Note>
+                  <tem:SourceInfo></tem:SourceInfo>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunications>
+
+            </tem:Communications>
             
             <tem:Properties>
 
