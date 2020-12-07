@@ -1,0 +1,87 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header>
+      <tem:AuthSoapHeader xmlns:tem="http://tempuri.org/">
+        <tem:Login>istest</tem:Login>
+         <tem:Password>gfhjk</tem:Password>
+      </tem:AuthSoapHeader>
+   </soapenv:Header>
+   
+   <soapenv:Body>
+      <tem:CreateClientFL xmlns:tem="http://tempuri.org/">
+         <tem:client>
+            <tem:Request>
+               <tem:RequestId>12547</tem:RequestId>
+               <tem:UserLogin>UKRGAS\appmb</tem:UserLogin>
+            </tem:Request>
+            <!--tem:ClientId&gt;1747753&lt;/tem:ClientId-->
+            <tem:SendToScrooge>1</tem:SendToScrooge>
+
+            
+            <tem:Addresses>
+               
+               <tem:TAddresses>
+                  <tem:TypeId>2</tem:TypeId>
+                  <tem:TypeCode>2</tem:TypeCode>
+                  <tem:Country>804</tem:Country>
+                  <!--tem:PostalCode&gt;14017&lt;/tem:PostalCode-->
+                  <tem:State>Київська</tem:State>
+                  <tem:Region></tem:Region>
+                  <tem:TownshipType>3508</tem:TownshipType>
+                  <tem:Town>м. Київ</tem:Town>
+                  <tem:StreetType>3510</tem:StreetType>
+                  <tem:Street>вул. Бородинского побоища</tem:Street>
+                  <tem:HouseType>3511</tem:HouseType>
+                  <tem:HouseNumber>21</tem:HouseNumber>
+                  <tem:FlatType>3506</tem:FlatType>
+                  <tem:FlatNumber>16</tem:FlatNumber>
+                  <tem:LandlinePhoneNumber></tem:LandlinePhoneNumber>
+                  <tem:PropertyStatus></tem:PropertyStatus>
+                  <tem:Status>1</tem:Status>
+               </tem:TAddresses>               
+               <tem:TAddresses>
+                  <tem:TypeId>1</tem:TypeId>
+                  <tem:TypeCode>1</tem:TypeCode>
+                  <tem:Country>804</tem:Country>
+                  <!--tem:PostalCode&gt;14017&lt;/tem:PostalCode-->
+                  <tem:State>Київська</tem:State>
+                  <tem:Region></tem:Region>
+                  <tem:TownshipType>3508</tem:TownshipType>
+                  <tem:Town>м. Чичен-Ица</tem:Town>
+                  <tem:StreetType>3510</tem:StreetType>
+                  <tem:Street>вул. пирамида Кукулькана.</tem:Street>
+                  <tem:HouseType>3511</tem:HouseType>
+                  <tem:HouseNumber>1</tem:HouseNumber>
+                  <tem:FlatType>3506</tem:FlatType>
+                  <tem:FlatNumber>1</tem:FlatNumber>
+                  <tem:LandlinePhoneNumber></tem:LandlinePhoneNumber>
+                  <tem:PropertyStatus></tem:PropertyStatus>
+                  <tem:Status>1</tem:Status>
+               </tem:TAddresses>
+            
+            </tem:Addresses>
+            
+            <tem:Properties>
+
+                <tem:TProperties>
+                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>BIRTH_COUNTRY</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>BIRTH_PLACE</tem:Code>
+                  <tem:Value>Бердичув</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>PROFIT_WAY</tem:Code>
+                  <tem:Value>2</tem:Value>
+                </tem:TProperties>
+
+            </tem:Properties>
+         
+         </tem:client>
+      </tem:CreateClientFL>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -344,7 +344,7 @@
       "block": "addresses",
       "source": "",
       "code": "type",
-      "maps": "",
+      "maps": "addresses",
       "type": "string"
     },
     "webbank": {

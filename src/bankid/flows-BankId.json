@@ -1,0 +1,637 @@
+[
+    {
+        "id": "6c70e68d.ef377",
+        "type": "tab",
+        "label": "BankId",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b8d5c2a0.7def48",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Create Client XML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.top}}}\n\n{{{xml.client}}}\n\n{{{xml.addresses}}}\n\n{{{xml.out.Properties}}}\n\n{{{xml.bot}}}",
+        "output": "str",
+        "x": 470,
+        "y": 100,
+        "wires": [
+            [
+                "bb6c3bb3.0e2a7"
+            ]
+        ]
+    },
+    {
+        "id": "bb6c3bb3.0e2a7",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 490,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "db041b.62e0f3e8",
+        "type": "inject",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "b2eb17e0.992d68"
+            ]
+        ]
+    },
+    {
+        "id": "cc7355ab.5b368",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Top",
+        "field": "xml.in.prop_top",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "            \n            <tem:Properties>",
+        "output": "str",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "e869e457.7fe1b8"
+            ]
+        ]
+    },
+    {
+        "id": "e869e457.7fe1b8",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Man",
+        "field": "xml.in.prop_man",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n                <tem:TProperties>\n                  <tem:Code>{{Code}}</tem:Code>\n                  <tem:Value>{{Value}}</tem:Value>\n                </tem:TProperties>",
+        "output": "str",
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "1ba771ab.4e885e"
+            ]
+        ]
+    },
+    {
+        "id": "1ba771ab.4e885e",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Bot",
+        "field": "xml.in.prop_bot",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n            </tem:Properties>",
+        "output": "str",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "c8fc0c40.2b5"
+            ]
+        ]
+    },
+    {
+        "id": "c8fc0c40.2b5",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties ",
+        "field": "xml.out.Properties",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.in.prop_top}}}\n{{{xml.in.prop_man}}}\n{{{xml.in.prop_bot}}}",
+        "output": "str",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "b8d5c2a0.7def48"
+            ]
+        ]
+    },
+    {
+        "id": "e15a7c56.e58d1",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "data",
+        "field": "in",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n  \"client\": {\n    \"StateCode\": \"2238914440\",\n    \"Residency\": \"1\",\n    \"Name\": \"Кетцалькоатль Кукумац Кукулькан\"\n  },\n  \"indiv\": {\n    \"LastName\": \"Кетцалькоатль\",\n    \"FirstName\": \"Кукумац\",\n    \"FatherName\": \"Кукулькан\",\n    \"BirthDay\": \"1991-08-28T00:00:00\",\n    \"GENDER\": \"1\",\n    \"MarriageStatus\": \"6\"\n  },\n  \"ident\": [\n    {\n      \"TypeId\": \"4\",\n      \"Series\": \"СН\",\n      \"Number\": \"432311\",\n      \"Registrator\": \"Святошинське РУ ГУ МВС у м.Києві\",\n      \"IssueDate\": \"1997-10-01T00:00:00\",\n      \"ExpirationDate\": \"2099-01-01T00:00:00\",\n      \"CountryCode\": \"UA\"\n    },\n    {\n      \"TypeId\": \"55\",\n      \"Series\": \"\",\n      \"Number\": \"3425654326\",\n      \"Registrator\": \"1456\",\n      \"IssueDate\": \"2020-10-01T00:00:00\",\n      \"ExpirationDate\": \"2040-10-01T00:00:00\",\n      \"CountryCode\": \"UA\"\n    }\n  ],\n  \"addr\": [\n    {\n      \"TypeCode\": \"2\",\n      \"Country\": \"UA\",\n      \"State\": \"Київська\",\n      \"Region\": \"Київ\",\n      \"Town\": \"м. Київ\",\n      \"Street\": \"вул. Бородинского побоища\",\n      \"HouseNumber\": \"21\",\n      \"FlatNumber\": \"16\"\n    },\n    {\n      \"TypeCode\": \"1\",\n      \"Country\": \"UA\",\n      \"State\": \"Київська\",\n      \"Region\": \"Київ\",\n      \"Town\": \"м. Чичен-Ица\",\n      \"Street\": \"вул. пирамида Кукулькана.\",\n      \"HouseNumber\": \"1\",\n      \"FlatNumber\": \"1\"\n    }\n  ],\n  \"comm\": [\n    {\n      \"Value\": \"380631003256\",\n      \"TypeId\": \"3\"\n    },\n    {\n      \"Value\": \"sava@mail.dot.com\",\n      \"TypeId\": \"5\"\n    },\n    {\n      \"Value\": \"www.www.net\",\n      \"TypeId\": \"6\"\n    }\n  ],\n  \"props\": [\n    {\n      \"Refs\": \"\",\n      \"Code\": \"FATF_COUNTRY_CITIZEN\",\n      \"Dict\": \"KL_K040.DBF\",\n      \"Value\": \"804\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"BIRTH_COUNTRY\",\n      \"Dict\": \"KL_K040.DBF\",\n      \"Value\": \"804\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"BIRTH_PLACE\",\n      \"Dict\": \"\",\n      \"Value\": \"Бердичув\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"PROFIT_WAY\",\n      \"Dict\": \"PROFIT_WAY\",\n      \"Value\": \"2\"\n    }\n  ]\n}",
+        "output": "json",
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "ac59637c.9c7e78"
+            ]
+        ]
+    },
+    {
+        "id": "c121a667.aebe28",
+        "type": "inject",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "b0a1fd17.70a908"
+            ]
+        ]
+    },
+    {
+        "id": "7e4f62f2.5d22e4",
+        "type": "split",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "ef82848e.659c58"
+            ]
+        ]
+    },
+    {
+        "id": "7c0ebf83.deb85",
+        "type": "join",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "mode": "auto",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "9ec48607.902c68"
+            ]
+        ]
+    },
+    {
+        "id": "a68a72e9.06f5d",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1230,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ef82848e.659c58",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Man",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n                <tem:TProperties>\n                  <tem:Code>{{payload.Code}}</tem:Code>\n                  <tem:Value>{{payload.Value}}</tem:Value>\n                </tem:TProperties>",
+        "output": "str",
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "7c0ebf83.deb85"
+            ]
+        ]
+    },
+    {
+        "id": "b2eb17e0.992d68",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Init",
+        "func": "msg.xml = {};\nmsg.xml.in = {};\nmsg.xml.out = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 250,
+        "y": 40,
+        "wires": [
+            [
+                "cc7355ab.5b368"
+            ]
+        ]
+    },
+    {
+        "id": "34ee0aff.edcade",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Top",
+        "field": "xml.in.prop_top",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "            \n            <tem:Properties>",
+        "output": "str",
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "31d51288.ee3a36"
+            ]
+        ]
+    },
+    {
+        "id": "31d51288.ee3a36",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Bot",
+        "field": "xml.in.prop_bot",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n            </tem:Properties>",
+        "output": "str",
+        "x": 520,
+        "y": 380,
+        "wires": [
+            [
+                "efc6719.0cf139"
+            ]
+        ]
+    },
+    {
+        "id": "b0a1fd17.70a908",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Init",
+        "func": "msg.xml = {};\nmsg.xml.in = {};\nmsg.xml.out = {};\nmsg.xml.out.prop_man = \"\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "a1d93306.6dc828"
+            ]
+        ]
+    },
+    {
+        "id": "efc6719.0cf139",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Properties XML",
+        "field": "xml.out.Properties",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.in.prop_top}}}\n{{{xml.out.prop_man}}}\n{{{xml.in.prop_bot}}}",
+        "output": "str",
+        "x": 700,
+        "y": 380,
+        "wires": [
+            [
+                "b5b8c88b.a9b418"
+            ]
+        ]
+    },
+    {
+        "id": "3f578485.4b15f4",
+        "type": "xmlc14n",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "x": 1040,
+        "y": 520,
+        "wires": [
+            [
+                "a68a72e9.06f5d",
+                "164d0dc9.d20b82"
+            ]
+        ]
+    },
+    {
+        "id": "77b08b8c.6f67ac",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Create Client XML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.in.top}}}\n{{{xml.out.Client}}}\n{{{xml.out.Addresses}}}\n{{{xml.out.Properties}}}\n{{{xml.in.bot}}}",
+        "output": "str",
+        "x": 930,
+        "y": 520,
+        "wires": [
+            [
+                "3f578485.4b15f4"
+            ]
+        ]
+    },
+    {
+        "id": "164d0dc9.d20b82",
+        "type": "file",
+        "z": "6c70e68d.ef377",
+        "name": "client-create-bankid-NR.xml",
+        "filename": "/home/devel/works/node/src/ugb-vuejs-meest/src/bankid/client-create-bankid-NR.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1260,
+        "y": 520,
+        "wires": [
+            [
+                "79cd0bb1.18afec"
+            ]
+        ]
+    },
+    {
+        "id": "79cd0bb1.18afec",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1070,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9ec48607.902c68",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Properties Xml",
+        "func": "var data = msg.payload;\nvar out = \"\";\nfor(var x of data ){\n    out += x;    \n}\nmsg.xml.out.prop_man = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "34ee0aff.edcade"
+            ]
+        ]
+    },
+    {
+        "id": "a1d93306.6dc828",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "XML Top",
+        "field": "xml.in.top",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header>\n      <tem:AuthSoapHeader>\n        <tem:Login>istest</tem:Login>\n         <tem:Password>gfhjk</tem:Password>\n      </tem:AuthSoapHeader>\n   </soapenv:Header>\n   \n   <soapenv:Body>\n      <tem:CreateClientFL>\n         <tem:client>\n            <tem:Request>\n               <tem:RequestId>12547</tem:RequestId>\n               <tem:UserLogin>UKRGAS\\appmb</tem:UserLogin>\n            </tem:Request>\n            <!--tem:ClientId>1747753</tem:ClientId-->\n            <tem:SendToScrooge>1</tem:SendToScrooge>",
+        "output": "str",
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "ae44182.657c368"
+            ]
+        ]
+    },
+    {
+        "id": "ae44182.657c368",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "XML Bot",
+        "field": "xml.in.bot",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "         \n         </tem:client>\n      </tem:CreateClientFL>\n   </soapenv:Body>\n</soapenv:Envelope>",
+        "output": "str",
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "e15a7c56.e58d1"
+            ]
+        ]
+    },
+    {
+        "id": "ac59637c.9c7e78",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "props data",
+        "func": "msg.payload = msg.in.props;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "7e4f62f2.5d22e4"
+            ]
+        ]
+    },
+    {
+        "id": "b75cdf.b01bb32",
+        "type": "split",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "93835afc.a4ef7"
+            ]
+        ]
+    },
+    {
+        "id": "e3465acf.c972f",
+        "type": "join",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "mode": "auto",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 630,
+        "y": 440,
+        "wires": [
+            [
+                "b8f7c210.48fb2"
+            ]
+        ]
+    },
+    {
+        "id": "93835afc.a4ef7",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Address Man",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "               \n               <tem:TAddresses>\n                  <tem:TypeId>{{payload.TypeCode}}</tem:TypeId>\n                  <tem:TypeCode>{{payload.TypeCode}}</tem:TypeCode>\n                  <tem:Country>804</tem:Country>\n                  <!--tem:PostalCode>14017</tem:PostalCode-->\n                  <tem:State>{{payload.State}}</tem:State>\n                  <tem:Region/>\n                  <tem:TownshipType>3508</tem:TownshipType>\n                  <tem:Town>{{payload.Town}}</tem:Town>\n                  <tem:StreetType>3510</tem:StreetType>\n                  <tem:Street>{{payload.Street}}</tem:Street>\n                  <tem:HouseType>3511</tem:HouseType>\n                  <tem:HouseNumber>{{payload.HouseNumber}}</tem:HouseNumber>\n                  <tem:FlatType>3506</tem:FlatType>\n                  <tem:FlatNumber>{{payload.FlatNumber}}</tem:FlatNumber>\n                  <tem:LandlinePhoneNumber/>\n                  <tem:PropertyStatus/>\n                  <tem:Status>1</tem:Status>\n               </tem:TAddresses>",
+        "output": "str",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "e3465acf.c972f"
+            ]
+        ]
+    },
+    {
+        "id": "f7f73dd3.6e8148",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Addresses Top",
+        "field": "xml.in.addr_top",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "            \n            <tem:Addresses>",
+        "output": "str",
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "e2993732.b1cc9"
+            ]
+        ]
+    },
+    {
+        "id": "e2993732.b1cc9",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Addresses Bot",
+        "field": "xml.in.addr_bot",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "            \n            </tem:Addresses>",
+        "output": "str",
+        "x": 520,
+        "y": 480,
+        "wires": [
+            [
+                "f7927ad3.87373"
+            ]
+        ]
+    },
+    {
+        "id": "f7927ad3.87373",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Addresses XML",
+        "field": "xml.out.Addresses",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.in.addr_top}}}\n{{{xml.out.addr_man}}}\n{{{xml.in.addr_bot}}}",
+        "output": "str",
+        "x": 700,
+        "y": 480,
+        "wires": [
+            [
+                "77b08b8c.6f67ac"
+            ]
+        ]
+    },
+    {
+        "id": "b8f7c210.48fb2",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Addresses Xml",
+        "func": "var data = msg.payload;\nvar out = \"\";\nfor(var x of data ){\n    out += x;    \n}\nmsg.xml.out.addr_man = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "f7f73dd3.6e8148"
+            ]
+        ]
+    },
+    {
+        "id": "b5b8c88b.a9b418",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "addr data",
+        "func": "msg.payload = msg.in.addr;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "b75cdf.b01bb32"
+            ]
+        ]
+    }
+]

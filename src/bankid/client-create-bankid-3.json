@@ -1,0 +1,97 @@
+{
+  "client": {
+    "StateCode": "2238914440",
+    "Residency": "1",
+    "Name": "Кетцалькоатль Кукумац Кукулькан"
+  },
+  "indiv": {
+    "LastName": "Кетцалькоатль",
+    "FirstName": "Кукумац",
+    "FatherName": "Кукулькан",
+    "BirthDay": "1991-08-28T00:00:00",
+    "GENDER": "1",
+    "MarriageStatus": "6"
+  },
+  "ident": [
+    {
+      "TypeId": "4",
+      "Series": "СН",
+      "Number": "432311",
+      "Registrator": "Святошинське РУ ГУ МВС у м.Києві",
+      "IssueDate": "1997-10-01T00:00:00",
+      "ExpirationDate": "2099-01-01T00:00:00",
+      "CountryCode": "UA"
+    },
+    {
+      "TypeId": "55",
+      "Series": "",
+      "Number": "3425654326",
+      "Registrator": "1456",
+      "IssueDate": "2020-10-01T00:00:00",
+      "ExpirationDate": "2040-10-01T00:00:00",
+      "CountryCode": "UA"
+    }
+  ],
+  "addr": [
+    {
+      "TypeCode": "2",
+      "Country": "UA",
+      "State": "Київська",
+      "Region": "Київ",
+      "Town": "м. Київ",
+      "Street": "вул. Бородинского побоища",
+      "HouseNumber": "21",
+      "FlatNumber": "16"
+    },
+    {
+      "TypeCode": "1",
+      "Country": "UA",
+      "State": "Київська",
+      "Region": "Київ",
+      "Town": "м. Чичен-Ица",
+      "Street": "вул. пирамида Кукулькана.",
+      "HouseNumber": "1",
+      "FlatNumber": "1"
+    }
+  ],
+  "comm": [
+    {
+      "Value": "380631003256",
+      "TypeId": "3"
+    },
+    {
+      "Value": "sava@mail.dot.com",
+      "TypeId": "5"
+    },
+    {
+      "Value": "www.www.net",
+      "TypeId": "6"
+    }
+  ],
+  "props": [
+    {
+      "Refs": "",
+      "Code": "FATF_COUNTRY_CITIZEN",
+      "Dict": "KL_K040.DBF",
+      "Value": "804"
+    },
+    {
+      "Refs": "",
+      "Code": "BIRTH_COUNTRY",
+      "Dict": "KL_K040.DBF",
+      "Value": "804"
+    },
+    {
+      "Refs": "",
+      "Code": "BIRTH_PLACE",
+      "Dict": "",
+      "Value": "Бердичув"
+    },
+    {
+      "Refs": "",
+      "Code": "PROFIT_WAY",
+      "Dict": "PROFIT_WAY",
+      "Value": "2"
+    }
+  ]
+}

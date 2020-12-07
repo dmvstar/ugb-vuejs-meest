@@ -416,11 +416,9 @@ for (item of bankid_transform_out.Properties) {
     }
 }
 
-
 console.log("fill_data --------------------------------------------");
-
 console.log(fill_data);
-
+fs.writeFileSync("client-create-bankid-3.json", JSON.stringify(fill_data,null,2));
 console.log("fill_data --------------------------------------------");
 
 var mustache = require("mustache");

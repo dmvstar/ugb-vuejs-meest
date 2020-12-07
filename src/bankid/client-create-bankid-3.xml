@@ -16,7 +16,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2910012519</tem:StateCode>
+               <tem:StateCode>2238914440</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -66,7 +66,8 @@
             </tem:Identifications>            
             <tem:Addresses>               
                <tem:TAddresses>
-                  <tem:TypeId>1</tem:TypeId>
+                  <tem:TypeId>2</tem:TypeId>
+                  <tem:TypeCode>2</tem:TypeCode>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Київська</tem:State>
@@ -85,6 +86,7 @@
                </tem:TAddresses>               
                <tem:TAddresses>
                   <tem:TypeId>1</tem:TypeId>
+                  <tem:TypeCode>1</tem:TypeCode>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Київська</tem:State>

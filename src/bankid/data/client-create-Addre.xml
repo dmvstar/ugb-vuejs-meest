@@ -1,6 +1,7 @@
                
                <tem:TAddresses>
-                  <tem:TypeId>1</tem:TypeId>
+                  <tem:TypeId>{{TypeCode}}</tem:TypeId>
+                  <tem:TypeCode>{{TypeCode}}</tem:TypeCode>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>{{State}}</tem:State>
