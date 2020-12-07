@@ -367,10 +367,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{{{xml.in.top}}}\n{{{xml.out.Client}}}\n{{{xml.out.Addresses}}}\n{{{xml.out.Properties}}}\n{{{xml.in.bot}}}",
+        "template": "{{{xml.in.top}}}\n{{{xml.out.Client}}}\n{{{xml.out.Addresses}}}\n{{{xml.out.Communications}}}\n{{{xml.out.Properties}}}\n{{{xml.in.bot}}}",
         "output": "str",
         "x": 930,
-        "y": 520,
+        "y": 640,
         "wires": [
             [
                 "3f578485.4b15f4"
@@ -598,7 +598,7 @@
         "y": 680,
         "wires": [
             [
-                "77b08b8c.6f67ac"
+                "a141bc2b.f21be8"
             ]
         ]
     },
@@ -701,6 +701,161 @@
         "wires": [
             [
                 "7e4433ae.a4a3fc"
+            ]
+        ]
+    },
+    {
+        "id": "ec169ba3.61edf8",
+        "type": "split",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "1e67734d.52aa6d"
+            ]
+        ]
+    },
+    {
+        "id": "9abda2d4.84264",
+        "type": "join",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "mode": "auto",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 630,
+        "y": 740,
+        "wires": [
+            [
+                "8d56419f.fdd19"
+            ]
+        ]
+    },
+    {
+        "id": "1e67734d.52aa6d",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Commun Man",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "               <tem:TCommunications>\n                  <tem:TypeId>{{TypeId}}</tem:TypeId>\n                  <tem:TypeCode>{{TypeId}}</tem:TypeCode>\n                  <tem:Value>{{Value}}</tem:Value>\n                  <tem:IsMain>true</tem:IsMain>\n                  <tem:IsVerified>true</tem:IsVerified>\n                  <tem:Note/>\n                  <tem:SourceInfo/>\n                  <tem:Status>1</tem:Status>\n               </tem:TCommunications>\n",
+        "output": "str",
+        "x": 460,
+        "y": 740,
+        "wires": [
+            [
+                "9abda2d4.84264"
+            ]
+        ]
+    },
+    {
+        "id": "12a57622.7f297a",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Commun Top",
+        "field": "xml.in.comm_top",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n            <tem:Communications>\n",
+        "output": "str",
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "4d3c331a.6f52ac"
+            ]
+        ]
+    },
+    {
+        "id": "4d3c331a.6f52ac",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Commun Bot",
+        "field": "xml.in.comm_bot",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "            </tem:Communications>",
+        "output": "str",
+        "x": 510,
+        "y": 780,
+        "wires": [
+            [
+                "4c758f3e.449a"
+            ]
+        ]
+    },
+    {
+        "id": "4c758f3e.449a",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Commun XML",
+        "field": "xml.out.Communications",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.in.comm_top}}}\n{{{xml.out.comm_man}}}\n{{{xml.in.comm_bot}}}",
+        "output": "str",
+        "x": 700,
+        "y": 780,
+        "wires": [
+            [
+                "77b08b8c.6f67ac"
+            ]
+        ]
+    },
+    {
+        "id": "8d56419f.fdd19",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Commun Xml",
+        "func": "var data = msg.payload;\nvar out = \"\";\nfor(var x of data ){\n    out += x;    \n}\nmsg.xml.out.comm_man = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 780,
+        "wires": [
+            [
+                "12a57622.7f297a"
+            ]
+        ]
+    },
+    {
+        "id": "a141bc2b.f21be8",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "comm data",
+        "func": "msg.payload = msg.in.comm;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 740,
+        "wires": [
+            [
+                "ec169ba3.61edf8"
             ]
         ]
     }
