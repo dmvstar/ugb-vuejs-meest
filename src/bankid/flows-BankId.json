@@ -151,7 +151,7 @@
         "y": 260,
         "wires": [
             [
-                "ac59637c.9c7e78"
+                "2ddee97a.fe1766"
             ]
         ]
     },
@@ -187,7 +187,7 @@
         "stream": false,
         "addname": "",
         "x": 290,
-        "y": 340,
+        "y": 540,
         "wires": [
             [
                 "ef82848e.659c58"
@@ -215,7 +215,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 630,
-        "y": 340,
+        "y": 540,
         "wires": [
             [
                 "9ec48607.902c68"
@@ -232,8 +232,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1230,
-        "y": 480,
+        "x": 1130,
+        "y": 560,
         "wires": []
     },
     {
@@ -248,7 +248,7 @@
         "template": "\n                <tem:TProperties>\n                  <tem:Code>{{payload.Code}}</tem:Code>\n                  <tem:Value>{{payload.Value}}</tem:Value>\n                </tem:TProperties>",
         "output": "str",
         "x": 460,
-        "y": 340,
+        "y": 540,
         "wires": [
             [
                 "7c0ebf83.deb85"
@@ -283,7 +283,7 @@
         "template": "            \n            <tem:Properties>",
         "output": "str",
         "x": 340,
-        "y": 380,
+        "y": 580,
         "wires": [
             [
                 "31d51288.ee3a36"
@@ -302,7 +302,7 @@
         "template": "\n            </tem:Properties>",
         "output": "str",
         "x": 520,
-        "y": 380,
+        "y": 580,
         "wires": [
             [
                 "efc6719.0cf139"
@@ -337,7 +337,7 @@
         "template": "{{{xml.in.prop_top}}}\n{{{xml.out.prop_man}}}\n{{{xml.in.prop_bot}}}",
         "output": "str",
         "x": 700,
-        "y": 380,
+        "y": 580,
         "wires": [
             [
                 "b5b8c88b.a9b418"
@@ -349,8 +349,8 @@
         "type": "xmlc14n",
         "z": "6c70e68d.ef377",
         "name": "",
-        "x": 1040,
-        "y": 520,
+        "x": 900,
+        "y": 560,
         "wires": [
             [
                 "a68a72e9.06f5d",
@@ -387,8 +387,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1260,
-        "y": 520,
+        "x": 960,
+        "y": 600,
         "wires": [
             [
                 "79cd0bb1.18afec"
@@ -405,8 +405,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1070,
-        "y": 480,
+        "x": 1170,
+        "y": 600,
         "wires": []
     },
     {
@@ -418,7 +418,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 160,
-        "y": 380,
+        "y": 580,
         "wires": [
             [
                 "34ee0aff.edcade"
@@ -472,7 +472,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 150,
-        "y": 340,
+        "y": 540,
         "wires": [
             [
                 "7e4f62f2.5d22e4"
@@ -491,7 +491,7 @@
         "stream": false,
         "addname": "",
         "x": 290,
-        "y": 440,
+        "y": 640,
         "wires": [
             [
                 "93835afc.a4ef7"
@@ -519,7 +519,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 630,
-        "y": 440,
+        "y": 640,
         "wires": [
             [
                 "b8f7c210.48fb2"
@@ -538,7 +538,7 @@
         "template": "               \n               <tem:TAddresses>\n                  <tem:TypeId>{{payload.TypeCode}}</tem:TypeId>\n                  <tem:TypeCode>{{payload.TypeCode}}</tem:TypeCode>\n                  <tem:Country>804</tem:Country>\n                  <!--tem:PostalCode>14017</tem:PostalCode-->\n                  <tem:State>{{payload.State}}</tem:State>\n                  <tem:Region/>\n                  <tem:TownshipType>3508</tem:TownshipType>\n                  <tem:Town>{{payload.Town}}</tem:Town>\n                  <tem:StreetType>3510</tem:StreetType>\n                  <tem:Street>{{payload.Street}}</tem:Street>\n                  <tem:HouseType>3511</tem:HouseType>\n                  <tem:HouseNumber>{{payload.HouseNumber}}</tem:HouseNumber>\n                  <tem:FlatType>3506</tem:FlatType>\n                  <tem:FlatNumber>{{payload.FlatNumber}}</tem:FlatNumber>\n                  <tem:LandlinePhoneNumber/>\n                  <tem:PropertyStatus/>\n                  <tem:Status>1</tem:Status>\n               </tem:TAddresses>",
         "output": "str",
         "x": 450,
-        "y": 440,
+        "y": 640,
         "wires": [
             [
                 "e3465acf.c972f"
@@ -557,7 +557,7 @@
         "template": "            \n            <tem:Addresses>",
         "output": "str",
         "x": 340,
-        "y": 480,
+        "y": 680,
         "wires": [
             [
                 "e2993732.b1cc9"
@@ -576,7 +576,7 @@
         "template": "            \n            </tem:Addresses>",
         "output": "str",
         "x": 520,
-        "y": 480,
+        "y": 680,
         "wires": [
             [
                 "f7927ad3.87373"
@@ -595,7 +595,7 @@
         "template": "{{{xml.in.addr_top}}}\n{{{xml.out.addr_man}}}\n{{{xml.in.addr_bot}}}",
         "output": "str",
         "x": 700,
-        "y": 480,
+        "y": 680,
         "wires": [
             [
                 "77b08b8c.6f67ac"
@@ -611,7 +611,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 160,
-        "y": 480,
+        "y": 680,
         "wires": [
             [
                 "f7f73dd3.6e8148"
@@ -627,10 +627,80 @@
         "outputs": 1,
         "noerr": 0,
         "x": 140,
-        "y": 440,
+        "y": 640,
         "wires": [
             [
                 "b75cdf.b01bb32"
+            ]
+        ]
+    },
+    {
+        "id": "7e4433ae.a4a3fc",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Client Man",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n            <tem:Clients>\n               <tem:StateCode>{{payload.StateCode}}</tem:StateCode>\n               <tem:Residency>{{payload.Residency}}</tem:Residency>\n               <tem:Name>{{payload.Name}}</tem:Name>               \n               <tem:Type>1</tem:Type>\n               <tem:SubType>0</tem:SubType>\n               <tem:isTechFlag>0</tem:isTechFlag>\n               <tem:IsOut>0</tem:IsOut>\n               <tem:IsPotential>0</tem:IsPotential>\n               <tem:IsPartner>false</tem:IsPartner>\n               <tem:Status>1</tem:Status>\n            </tem:Clients>",
+        "output": "str",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "5753359d.2eb92c"
+            ]
+        ]
+    },
+    {
+        "id": "891cb5c7.55d5",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "Client XML",
+        "field": "xml.out.Client",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{{xml.out.client_man}}}",
+        "output": "str",
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "ac59637c.9c7e78"
+            ]
+        ]
+    },
+    {
+        "id": "5753359d.2eb92c",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Client Xml",
+        "func": "\nmsg.xml.out.client_man = msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "891cb5c7.55d5"
+            ]
+        ]
+    },
+    {
+        "id": "2ddee97a.fe1766",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "client data",
+        "func": "msg.payload = msg.in.client;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "7e4433ae.a4a3fc"
             ]
         ]
     }
