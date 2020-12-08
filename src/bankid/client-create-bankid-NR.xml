@@ -29,6 +29,43 @@
                <tem:Status>1</tem:Status>
             </tem:Clients>
             
+            <tem:Individuals>
+               <tem:FirstName>Кукумац</tem:FirstName>
+               <tem:LastName>Кетцалькоатль</tem:LastName>
+               <tem:FatherName>Кукулькан</tem:FatherName>
+               <tem:Gender>1</tem:Gender>
+               <tem:BirthDay>1991-08-28T00:00:00</tem:BirthDay>
+               <tem:BirthSurname></tem:BirthSurname>
+               <tem:MarriageStatus>6</tem:MarriageStatus>
+               <tem:Status>1</tem:Status>
+            </tem:Individuals>
+            
+            <tem:Identifications>
+               <tem:TIdentifications>
+                  <tem:TypeId>4</tem:TypeId>
+                  <tem:Series>СН</tem:Series>
+                  <tem:Number>432311</tem:Number>
+                  <tem:Registrator>Святошинське РУ ГУ МВС у м.Києві</tem:Registrator>
+                  <tem:IssueDate>1997-10-01T00:00:00</tem:IssueDate>
+                  <tem:ExpirationDate>2099-01-01T00:00:00</tem:ExpirationDate>
+                  <tem:IsMain>false</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+               <tem:TIdentifications>
+                  <tem:TypeId>55</tem:TypeId>
+                  <tem:Series></tem:Series>
+                  <tem:Number>3425654326</tem:Number>
+                  <tem:Registrator>1456</tem:Registrator>
+                  <tem:IssueDate>2020-10-01T00:00:00</tem:IssueDate>
+                  <tem:ExpirationDate>2040-10-01T00:00:00</tem:ExpirationDate>
+                  <tem:IsMain>false</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+
+            </tem:Identifications>
+            
             <tem:Addresses>
                
                <tem:TAddresses>
@@ -75,9 +112,9 @@
             <tem:Communications>
 
                <tem:TCommunications>
-                  <tem:TypeId></tem:TypeId>
-                  <tem:TypeCode></tem:TypeCode>
-                  <tem:Value></tem:Value>
+                  <tem:TypeId>3</tem:TypeId>
+                  <tem:TypeCode>3</tem:TypeCode>
+                  <tem:Value>380631003256</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
                   <tem:Note></tem:Note>
@@ -85,9 +122,9 @@
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
                <tem:TCommunications>
-                  <tem:TypeId></tem:TypeId>
-                  <tem:TypeCode></tem:TypeCode>
-                  <tem:Value></tem:Value>
+                  <tem:TypeId>5</tem:TypeId>
+                  <tem:TypeCode>5</tem:TypeCode>
+                  <tem:Value>sava@mail.dot.com</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
                   <tem:Note></tem:Note>
@@ -95,9 +132,9 @@
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
                <tem:TCommunications>
-                  <tem:TypeId></tem:TypeId>
-                  <tem:TypeCode></tem:TypeCode>
-                  <tem:Value></tem:Value>
+                  <tem:TypeId>6</tem:TypeId>
+                  <tem:TypeCode>6</tem:TypeCode>
+                  <tem:Value>www.www.net</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
                   <tem:Note></tem:Note>
@@ -108,20 +145,16 @@
             </tem:Communications>
             
             <tem:Properties>
-
                 <tem:TProperties>
                   <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
                   <tem:Value>804</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
+                </tem:TProperties>                <tem:TProperties>
                   <tem:Code>BIRTH_COUNTRY</tem:Code>
                   <tem:Value>804</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
+                </tem:TProperties>                <tem:TProperties>
                   <tem:Code>BIRTH_PLACE</tem:Code>
                   <tem:Value>Бердичув</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
+                </tem:TProperties>                <tem:TProperties>
                   <tem:Code>PROFIT_WAY</tem:Code>
                   <tem:Value>2</tem:Value>
                 </tem:TProperties>
