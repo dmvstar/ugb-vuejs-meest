@@ -1,15 +1,16 @@
-const fs = require('fs');
 
-var bankid_client = require('./bankid-cli-1.json');
+const MODE_WORK_LOCAL = true;
+const MODE_TEST = true;
+
+var bankid_client;// = require('./bankid-cli-1.json');
 // @TODO - добавить ClientNames TNames
-var bankid_mapping = require('./bankid_mapping.json');
-var bankid_dicts = require('./dicts_mapping.json');
+var bankid_mapping;// = require('./bankid_mapping.json');
+var bankid_dicts;// = require('./dicts_mapping.json');
+var client_xml_names;// = require('./client_xml_names.json');
+var client_xml_data;// = require('./client_xml_data.json');
+var bankid_transform_web;// = require('./bankid_transform_web.json');
+var bankid_transform_bid;// = require('./bankid_transform_bid.json');
 
-var client_xml_names = require('./client_xml_names.json');
-var client_xml_data = require('./client_xml_data.json');
-
-var bankid_transform_web = require('./bankid_transform_web.json');
-var bankid_transform_bid = require('./bankid_transform_bid.json');
 var bankid_transform_out = {};
 
 // FUNCTIONS -----------------------------------------------
@@ -77,7 +78,7 @@ function generateIPN() {
 
 function load_xml_templates_files() {
     if (MODE_WORK_LOCAL !== true) return;
-
+    const fs = require('fs');
     client_xml_data.top = fs.readFileSync(client_xml_names.top, {
         encoding: 'utf8',
         flag: 'r'
@@ -170,6 +171,18 @@ function load_xml_templates_files() {
 
 function create_out_xml() {
     if (MODE_WORK_LOCAL !== true) return;
+
+    var mustache = require("mustache");
+    var view = {
+        title: "Joe",
+        calc: function () {
+            return 2 + 4;
+        }
+    };
+    var output = mustache.render("{{title}} spends {{calc}}", view);
+    console.log(output);
+
+    const fs = require('fs');
     fs.writeFileSync("client-create-bankid-3.json", JSON.stringify(fill_data, null, 2));
     // XML CREATE ----------------------------------------------
     output = client_xml_data.top;
@@ -209,12 +222,41 @@ function create_out_xml() {
     fs.writeFileSync("client-create-bankid-3.xml", output);
     // XML CREATE END-------------------------------------------
 }
-// FUNCTIONS END -------------------------------------------
+function load_requeries_files(){
+    if (MODE_WORK_LOCAL !== true) return;
+    bankid_client = require('./bankid-cli-1.json');
+    // @TODO - добавить ClientNames TNames
+    bankid_mapping = require('./bankid_mapping.json');
+    bankid_dicts = require('./dicts_mapping.json');
 
+    client_xml_names = require('./client_xml_names.json');
+    client_xml_data = require('./client_xml_data.json');
+
+    bankid_transform_web = require('./bankid_transform_web.json');
+    bankid_transform_bid = require('./bankid_transform_bid.json');
+}
+
+function load_transform_files(){
+    if (MODE_WORK_LOCAL === true) return;
+    bankid_client = msg.in.bankid_cli;
+    bankid_mapping = msg.transform.bankid_mapping;
+    bankid_dicts = msg.transform.dicts_mapping;
+    client_xml_names = msg.transform.client_xml_names;
+    client_xml_data = msg.transform.client_xml_data;
+    bankid_transform_web = msg.transform.bankid_transform_web;
+    bankid_transform_bid = msg.transform.bankid_transform_bid;
+}
+function create_out_nr(){
+    if (MODE_WORK_LOCAL === true) return;
+    msg.in.data = fill_data;
+}
+// FUNCTIONS END -------------------------------------------
 // MAIN INIT -----------------------------------------------
-MODE_WORK_LOCAL = true;
+load_requeries_files();
+load_transform_files();
 load_xml_templates_files();
-bankid_client.person.inn = generateIPN();
+if (MODE_TEST === true)
+    bankid_client.person.inn = generateIPN();
 console.log(bankid_client);
 // MAIN INIT END -------------------------------------------
 // MAIN TRANSFORMATOR --------------------------------------
@@ -425,15 +467,7 @@ for (item of bankid_transform_out.Properties) {
 console.log("fill_data --------------------------------------------");
 console.log(fill_data);
 console.log("fill_data --------------------------------------------");
-var mustache = require("mustache");
-var view = {
-    title: "Joe",
-    calc: function () {
-        return 2 + 4;
-    }
-};
-var output = mustache.render("{{title}} spends {{calc}}", view);
-console.log(output);
 
 create_out_xml();
-
+create_out_nr();
+if (MODE_WORK_LOCAL !== true) return msg;
