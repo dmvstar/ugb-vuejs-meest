@@ -208,7 +208,8 @@
         "wires": [
             [
                 "a68a72e9.06f5d",
-                "164d0dc9.d20b82"
+                "164d0dc9.d20b82",
+                "1edebade.2e6dad"
             ]
         ]
     },
@@ -242,7 +243,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 960,
-        "y": 380,
+        "y": 300,
         "wires": [
             [
                 "79cd0bb1.18afec"
@@ -259,8 +260,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1170,
-        "y": 380,
+        "x": 1190,
+        "y": 300,
         "wires": []
     },
     {
@@ -967,8 +968,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 80,
-        "y": 660,
+        "x": 120,
+        "y": 680,
         "wires": [
             [
                 "3aaa495a.7669de"
@@ -986,8 +987,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 460,
-        "y": 700,
+        "x": 630,
+        "y": 820,
         "wires": []
     },
     {
@@ -1001,8 +1002,8 @@
         "syntax": "mustache",
         "template": "{\n    \"person\": {\n        \"type\": \"physical\",\n        \"lastName\": \"Кетцалькоатль\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"inn\": \"3347780927\",\n        \"birthDay\": \"28.08.1991\",\n        \"sex\": \"M\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\",\n        \"uaResident\": \"1\",\n        \"edication\": \"Бог\"\n    },\n\n    \"extends\": {\n        \"country_citizen\": \"804\",\n        \"marital_status\": \"6\",\n        \"work_info\": \"безроботный\",\n        \"birth_country\": \"804\",\n        \"birth_place\": \"Бердичув\",\n        \"profit_way\": \"2\"\n    },\n\n    \"addresses\": [{\n            \"type\": \"factual\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }\n    ],\n    \"documents\": [{\n            \"type\": \"passport\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateIssue\": \"01.10.1997\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"UA\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"scans\": [{\n            \"type\": \"passport\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        },\n        {\n            \"type\": \"photo\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        }\n    ]\n}",
         "output": "json",
-        "x": 110,
-        "y": 720,
+        "x": 270,
+        "y": 680,
         "wires": [
             [
                 "a83e148c.1f7cb8"
@@ -1021,7 +1022,7 @@
         "template": "[\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"lastName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"LastName\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"firstName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"FirstName\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"middleName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"FatherName\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"calculate\",\n      \"source\": \"person\",\n      \"code\": \"lastName+firstName+middleName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Client\",\n      \"code\": \"Name\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"inn\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Client\",\n      \"code\": \"StateCode\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"country_citizen\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"FATF_COUNTRY_CITIZEN\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"KL_K040.DBF\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"marital_status\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"MarriageStatus\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"D08\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"sex\",\n      \"maps\": \"sex\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"GENDER\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"D06\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"sex\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"GENDER\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"D06\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"birthDay\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"BirthDay\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"uaResident\",\n      \"maps\": \"resident\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Client\",\n      \"code\": \"Residency\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"KL_K030.DBF\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"type\",\n      \"maps\": \"documents\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"TypeId\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"cfIdentificationTypes\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"series\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Series\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"number\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Number\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"issue\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Registrator\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"dateIssue\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"IssueDate\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"dateExpiration\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"ExpirationDate\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"issueCountryIso2\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"CountryCode\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"none\",\n      \"source\": \"\",\n      \"code\": \"none\",\n      \"maps\": \"\",\n      \"type\": \"none\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Checked\",\n      \"type\": \"int\",\n      \"default\": \"0\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"none\",\n      \"source\": \"\",\n      \"code\": \"none\",\n      \"maps\": \"\",\n      \"type\": \"none\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"IsMain\",\n      \"type\": \"int\",\n      \"default\": \"0\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"type\",\n      \"maps\": \"addresses\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"TypeCode\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"country\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Country\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"state\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"State\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"area\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Region\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"city\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Town\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"street\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Street\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"houseNo\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"HouseNumber\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"flatNo\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"FlatNumber\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  \n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"socStatus\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagPEPs\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagPersonTerror\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagRestriction\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagTopLevelRisk\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"type\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"name\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"scans\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"scanFile\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"content\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"dateCreate\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"tmestamp\",\n      \"type\": \"dete\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"extension\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"comment\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"work_info\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"phone\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"Value\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"phone\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"TypeId\",\n      \"type\": \"string\",\n      \"default\": \"3\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"email\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"Value\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"email\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"TypeId\",\n      \"type\": \"string\",\n      \"default\": \"5\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"web\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"Value\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"web\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"TypeId\",\n      \"type\": \"string\",\n      \"default\": \"6\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"birth_country\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BIRTH_COUNTRY\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"KL_K040.DBF\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"birth_place\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BIRTH_PLACE\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"profit_way\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROFIT_WAY\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROFIT_WAY\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"profit_src\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BANK_PRODUCT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"FIN_DOCH\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"obsyag_nad\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"OBSYAG_NAD\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"OBSYAG_NAD_1\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"nad_k_3\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"NAD_K_3\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"NAD_K_3\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"monthsumm\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"MONTHSUMM\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"SUMA_DOHOD\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"propetyth_of_client\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROPETYTH_OF_CLIENT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROPETYTH_OF_CLIENT\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"propetyth_of_client_avto\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROPETYTH_OF_CLIENT_AVTO\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROPETYTH_OF_CLIENT_AVTO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"info_outer_acc_sel\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"INFO_OUTER_ACC_SEL\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"INFO_OUTER_ACC\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"exists_cred_out\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"EXISTS_CRED_OUT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"YESNO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"exists_depo_out\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"EXISTS_DEPO_OUT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"YESNO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"propetypap_of_clientype\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROPETYPAP_OF_CLIENTYPE\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROPETYPAP_OF_CLIENTYPE\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"bank_services_manual\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BANK_SERVICES_MANUAL\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"BANK_SERVICES_MANUAL\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"ugb_tcurelpers\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"UGB_TCURelPers\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"RF_UGB_TCURelPers\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_person_exists\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_PERSON_EXISTS\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PUBLIC_PERSON_EXISTS\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_data_fact\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_DATA_FACT\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_data_permission\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_DATA_PERMISSION\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_data_risk\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_DATA_RISK\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"data_zax_per\",\n      \"maps\": \"\",\n      \"type\": \"operation\"\n    },\n    \"webbank\": {\n      \"block\": \"Operations\",\n      \"code\": \"DATA_ZAX_PER\",\n      \"type\": \"operation\",\n      \"default\": \"\",\n      \"dict\": \"operation\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"kl_k013fo\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"KL_K013FO\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"KL_K013_FO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"usa_chiisares\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"Chiisaresident_USA\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"YESNO\",\n      \"isneed\": \"\"\n    }\n  }\n]\n",
         "output": "json",
         "x": 160,
-        "y": 760,
+        "y": 720,
         "wires": [
             [
                 "9ef62c27.4db638"
@@ -1039,46 +1040,8 @@
         "syntax": "mustache",
         "template": "{\n    \"resident\": [\n        {\n            \"ibancode\": \"1\",\n            \"ibanname\": \"uaResident\",\n            \"ibandesc\": \"Резидент\",            \n            \"wbid\": \"1\",\n            \"wbcode\": \"1\",\n            \"wbdesc\": \"Резидент\"\n        },\n        {\n            \"ibancode\": \"0\",\n            \"ibanname\": \"uaResident\",\n            \"ibandesc\": \"Не Резидент\",\n            \"wbid\": \"2\",\n            \"wbcode\": \"2\",\n            \"wbdesc\": \"Не Резидент\"\n        }\n    ],\n    \"sex\": [\n        {\n            \"ibancode\": \"M\",\n            \"ibanname\": \"Man\",\n            \"ibandesc\": \"Чоловіча\",            \n            \"wbid\": \"1\",\n            \"wbcode\": \"1\",\n            \"wbdesc\": \"Чоловіча\"\n        },\n        {\n            \"ibancode\": \"F\",\n            \"ibanname\": \"Woman\",\n            \"ibandesc\": \"Жіноча\",\n            \"wbid\": \"2\",\n            \"wbcode\": \"2\",\n            \"wbdesc\": \"Жіноча\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"ibancode\": \"factual\",\n            \"ibanname\": \"проживання\",\n            \"ibandesc\": \"Адрес проживання\",\n            \"wbid\": \"2\",\n            \"wbcode\": \"2\",\n            \"wbdesc\": \"Фактична адреса\"\n        },\n        {\n            \"ibancode\": \"juridical\",\n            \"ibanname\": \"реєстрації\",\n            \"ibandesc\": \"Адрес реєстрації\",\n            \"wbid\": \"1\",\n            \"wbcode\": \"1\",\n            \"wbdesc\": \"Адреса постійного місця проживання або регістрації\"\n        }\n    ],\n    \"documents\": [\n        {\n            \"ibancode\": \"passport\",\n            \"ibanname\": \"паспорт\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"4\",\n            \"wbcode\": \"4\",\n            \"wbdesc\": \"Паспорт громадянина України\"\n        },\n        {\n            \"ibancode\": \"idpassport\",\n            \"ibanname\": \"паспорт\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"55\",\n            \"wbcode\": \"404\",\n            \"wbdesc\": \"Паспорт (Id-карта)\"\n        },\n        {\n            \"ibancode\": \"zpassport\",\n            \"ibanname\": \"закордонний\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"24\",\n            \"wbcode\": \"42\",\n            \"wbdesc\": \"Паспорт громадянина України для виїзду за кордон\"\n        },\n        {\n            \"ibancode\": \"ident\",\n            \"ibanname\": \"посвідчення особи у відповідності до вимог законодавства України\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"29\",\n            \"wbcode\": \"48\",\n            \"wbdesc\": \"Інші документи, які видаються уповноваженими державними органами і за якими є можливість здійснення однозначної ідентифікації особи\"\n        }\n    ],\n    \"scans\": [\n        {\n            \"ibancode\": \"passport\",\n            \"ibanname\": \"паспорт України\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",           \n            \"wbdesc\": \"Паспорт громадянина України\"\n        },\n        {\n            \"ibancode\": \"idpassport\",\n            \"ibanname\": \"id - картка\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"Паспорт (Id-карта)\"\n        },\n        {\n            \"ibancode\": \"zpassport\",\n            \"ibanname\": \"закордонний\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"Паспорт громадянина України для виїзду за кордон\"\n        },\n        {\n            \"ibancode\": \"inn\",\n            \"ibanname\": \"реєстраційний номер облікової картки платника податків\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"реєстраційний номер облікової картки платника податків\"\n        },\n        {\n            \"ibancode\": \"personalPhoto\",\n            \"ibanname\": \"фото особи(анфас)\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"фото особи(анфас)\"\n        }\n    ]\n}",
         "output": "json",
-        "x": 150,
-        "y": 800,
-        "wires": [
-            [
-                "3a31da80.733b6e"
-            ]
-        ]
-    },
-    {
-        "id": "3a31da80.733b6e",
-        "type": "template",
-        "z": "6c70e68d.ef377",
-        "name": "transform.client_xml_names",
-        "field": "transform.client_xml_names",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"top\": \"./data/client-create-top.xml\",\n\n    \"client_top\": \"./data/client-create-Empty.xml\",\n    \"client_man\": \"./data/client-create-Clients.xml\",\n    \"client_bot\": \"./data/client-create-Empty.xml\",\n\n    \"indiv_top\": \"./data/client-create-Empty.xml\",\n    \"indiv_man\": \"./data/client-create-Indiv.xml\",\n    \"indiv_bot\": \"./data/client-create-Empty.xml\",\n\n    \"props_top\": \"./data/client-create-Props-top.xml\",\n    \"props_man\": \"./data/client-create-Props.xml\",\n    \"props_bot\": \"./data/client-create-Props-bot.xml\",\n\n    \"ident_top\": \"./data/client-create-Empty.xml\",\n    \"ident_man\": \"./data/client-create-Ident.xml\",\n    \"ident_bot\": \"./data/client-create-Empty.xml\",\n\n    \"addre_top\": \"./data/client-create-Addre-top.xml\",\n    \"addre_man\": \"./data/client-create-Addre.xml\",\n    \"addre_bot\": \"./data/client-create-Addre-bot.xml\",\n\n    \"commu_top\": \"./data/client-create-Commun-top.xml\",\n    \"commu_man\": \"./data/client-create-Commun.xml\",\n    \"commu_bot\": \"./data/client-create-Commun-bot.xml\",\n\n    \"bot\": \"./data/client-create-bot.xml\"\n}",
-        "output": "json",
-        "x": 160,
-        "y": 840,
-        "wires": [
-            [
-                "8a25bf35.f32208"
-            ]
-        ]
-    },
-    {
-        "id": "8a25bf35.f32208",
-        "type": "template",
-        "z": "6c70e68d.ef377",
-        "name": "transform.client_xml_data",
-        "field": "transform.client_xml_data",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"top\": null,\n    \"client_top\": null,\n    \"client_man\": null,\n    \"client_bot\": null,\n    \"indiv_top\": null,\n    \"indiv_man\": null,\n    \"indiv_bot\": null,\n    \"props_top\": null,\n    \"props_man\": null,\n    \"props_bot\": null,\n    \"ident_top\": null,\n    \"ident_man\": null,\n    \"ident_bot\": null,\n    \"addre_top\": null,\n    \"addre_man\": null,\n    \"addre_bot\": null,\n    \"bot\": null\n}",
-        "output": "json",
-        "x": 150,
-        "y": 880,
+        "x": 470,
+        "y": 720,
         "wires": [
             [
                 "131bc779.f6b2d9"
@@ -1097,7 +1060,7 @@
         "template": "[{\n    \"name\": \"Client\",\n    \"isarray\": false,\n    \"mapping\": []\n},\n{\n    \"name\": \"Individuals\",\n    \"isarray\": false,\n    \"mapping\": [],\n    \"comment\" : \"array\"\n}, \n{\n    \"name\": \"Identifications\",\n    \"isarray\": true,\n    \"mapping\": [],\n    \"comment\" : \"array documents\"\n}, \n{\n    \"name\": \"Addresses\",\n    \"isarray\": true,\n    \"mapping\": [],\n    \"comment\" : \"array\"\n}, \n{\n    \"name\": \"Communications\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"Properties\",\n    \"isarray\": false,\n    \"mapping\": []\n},\n{\n    \"name\": \"Scans\",\n    \"isarray\": true,\n    \"mapping\": [],\n    \"comment\" : \"array\"\n}, \n{\n    \"name\": \"Operations\",\n    \"isarray\": false,\n    \"mapping\": []\n}\n]",
         "output": "json",
         "x": 180,
-        "y": 920,
+        "y": 760,
         "wires": [
             [
                 "12d121b3.7d430e"
@@ -1115,8 +1078,8 @@
         "syntax": "mustache",
         "template": "[{\n    \"name\": \"person\",\n    \"isarray\": false,\n    \"mapping\": []\n},\n{\n    \"name\": \"addresses\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"documents\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"scans\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"extends\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"calculate\",\n    \"isarray\": false,\n    \"mapping\": []\n}\n]",
         "output": "json",
-        "x": 170,
-        "y": 960,
+        "x": 490,
+        "y": 760,
         "wires": [
             [
                 "b9388e0f.7de4b8"
@@ -1131,8 +1094,8 @@
         "links": [
             "51a1ab40.82fa5c"
         ],
-        "x": 560,
-        "y": 880,
+        "x": 675,
+        "y": 780,
         "wires": []
     },
     {
@@ -1150,5 +1113,182 @@
                 "b0a1fd17.70a908"
             ]
         ]
+    },
+    {
+        "id": "d4c6ebf6.64e628",
+        "type": "http in",
+        "z": "6c70e68d.ef377",
+        "name": "bankid",
+        "url": "/clients/bankid/client",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 880,
+        "wires": [
+            [
+                "13eadf29.d7ae11"
+            ]
+        ]
+    },
+    {
+        "id": "7bdee5fa.a8a774",
+        "type": "http response",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a347cabd.1a8788",
+        "type": "http request",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://localhost:1880/clients/bankid/client",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 410,
+        "y": 940,
+        "wires": [
+            [
+                "254075cb.ff7152"
+            ]
+        ]
+    },
+    {
+        "id": "254075cb.ff7152",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "5f303bbf.cd688c",
+        "type": "inject",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 940,
+        "wires": [
+            [
+                "4e2ad381.7aea2c"
+            ]
+        ]
+    },
+    {
+        "id": "4e2ad381.7aea2c",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "in.bankid_cli",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"person\": {\n        \"type\": \"physical\",\n        \"lastName\": \"Кетцалькоатль\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"inn\": \"3347780927\",\n        \"birthDay\": \"28.08.1991\",\n        \"sex\": \"M\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\",\n        \"uaResident\": \"1\",\n        \"edication\": \"Бог\"\n    },\n\n    \"extends\": {\n        \"country_citizen\": \"804\",\n        \"marital_status\": \"6\",\n        \"work_info\": \"безроботный\",\n        \"birth_country\": \"804\",\n        \"birth_place\": \"Бердичув\",\n        \"profit_way\": \"2\"\n    },\n\n    \"addresses\": [{\n            \"type\": \"factual\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }\n    ],\n    \"documents\": [{\n            \"type\": \"passport\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateIssue\": \"01.10.1997\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"UA\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"scans\": [{\n            \"type\": \"passport\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        },\n        {\n            \"type\": \"photo\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        }\n    ]\n}",
+        "output": "json",
+        "x": 250,
+        "y": 940,
+        "wires": [
+            [
+                "a347cabd.1a8788"
+            ]
+        ]
+    },
+    {
+        "id": "13eadf29.d7ae11",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Init",
+        "func": "msg.workStart = Date.now();\n\nmsg.isRequest = true;\nmsg.isNOA = false;\nif(msg.payload.noa !== undefined)\nmsg.isNOA = true;\n\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\n/*\nif (msg.req.headers['x-auth-token'] !== 'c8ER/H9%p=\";7`:}S%jU<A.eZ@$!BQwn') {\n    node.error(\"Unauthorized\", msg);\n}\n*/\nif (msg.payload  === undefined)\n{\n    node.error(\"Не заданы параметры запроса ....\", msg);\n} else {\n    msg.in = {};\n    msg.in.bankid_cli = msg.payload;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 250,
+        "y": 880,
+        "wires": [
+            [
+                "b08ab50c.87c0e8",
+                "a83e148c.1f7cb8"
+            ]
+        ]
+    },
+    {
+        "id": "b08ab50c.87c0e8",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "e5e94d79.160cc",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Reply Ok",
+        "func": "var workTime = 0;\nmsg.workStop = Date.now();\nworkTime = (msg.workStop - msg.workStart) / 100;\nmsg.workTime = 'Work time is: '+workTime +' msec.';\n\nvar data = msg.payload;\nif(data.length !== 0){\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '200',\n        result : 'ok',\n        time: msg.workTime,\n        path: msg.req.route.path,\n        data : data\n    }\n    return msg;\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '402',\n        message : 'empty',\n        workTime: msg.workTime,\n        error: \"No data for request\",\n        data : []\n    }\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 860,
+        "wires": [
+            [
+                "7bdee5fa.a8a774"
+            ]
+        ]
+    },
+    {
+        "id": "dceef801.9e8868",
+        "type": "link in",
+        "z": "6c70e68d.ef377",
+        "name": "ok",
+        "links": [
+            "1edebade.2e6dad"
+        ],
+        "x": 375,
+        "y": 860,
+        "wires": [
+            [
+                "e5e94d79.160cc"
+            ]
+        ]
+    },
+    {
+        "id": "1edebade.2e6dad",
+        "type": "link out",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "links": [
+            "dceef801.9e8868"
+        ],
+        "x": 1115,
+        "y": 420,
+        "wires": []
     }
 ]
