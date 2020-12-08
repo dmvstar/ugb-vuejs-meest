@@ -18,7 +18,8 @@
         "work_info": "безроботный",
         "birth_country": "804",
         "birth_place": "Бердичув",
-        "profit_way": "2"
+        "profit_way": "2",
+        "public_person_exists": "4"
     },
     "addresses": [{
             "type": "factual",

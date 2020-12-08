@@ -170,17 +170,16 @@ function load_xml_templates_nodes(){
     return;
 }
 // FUNCTIONS END -------------------------------------------
+// MAIN INIT -----------------------------------------------
 MODE_WORK_LOCAL = true;
-
 if(MODE_WORK_LOCAL === true)
     load_xml_templates_files();
 else
     load_xml_templates_nodes();
-
 bankid_client.person.inn = generateIPN();
-
 console.log(bankid_client);
-
+// MAIN INIT END -------------------------------------------
+// MAIN TRANSFORMATOR --------------------------------------
 // Prepare out data
 for (k of bankid_transform_web) {
     bankid_transform_out[k.name] = [];
@@ -200,7 +199,7 @@ for (o of bankid_mapping) {
 console.log(bankid_transform_web);
 //console.log(bankid_transform_out);
 
-// Parce input data
+// Parsing input data
 for (key in bankid_client) {
 
     var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;
@@ -415,25 +414,21 @@ for (item of bankid_transform_out.Properties) {
         i++;
     }
 }
-
+// MAIN TRANSFORMATOR END-----------------------------------
 console.log("fill_data --------------------------------------------");
 console.log(fill_data);
 fs.writeFileSync("client-create-bankid-3.json", JSON.stringify(fill_data,null,2));
 console.log("fill_data --------------------------------------------");
-
 var mustache = require("mustache");
-
 var view = {
     title: "Joe",
     calc: function () {
         return 2 + 4;
     }
 };
-
 var output = mustache.render("{{title}} spends {{calc}}", view);
 console.log(output);
-
-// MAIN TRANSFORMATOR --------------------------------------
+// XML CREATE ----------------------------------------------
 output = client_xml_data.top;
 output += client_xml_data.client_top;
 output += mustache.render(client_xml_data.client_man, fill_data.client);
@@ -453,7 +448,6 @@ for (prop of fill_data.addr) {
     output += mustache.render(client_xml_data.addre_man, prop);
 }
 output += client_xml_data.addre_bot;
-
 // comm
 output += client_xml_data.commu_top;
 console.log(fill_data.comm);
@@ -462,19 +456,13 @@ for (prop of fill_data.comm)
     output += mustache.render(client_xml_data.commu_man, prop);//fill_data.comm);
 }
 output += client_xml_data.commu_bot;
-
 // props
 output += client_xml_data.props_top;
 for (prop of fill_data.props) {
     output += mustache.render(client_xml_data.props_man, prop);
 }
 output += client_xml_data.props_bot;
-
 output += client_xml_data.bot;
-
 console.log(output);
-
 fs.writeFileSync("client-create-bankid-3.xml", output);
-
-// MAIN TRANSFORMATOR END-----------------------------------
-
+// XML CREATE END-------------------------------------------
