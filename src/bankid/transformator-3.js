@@ -1,13 +1,14 @@
 
 const MODE_WORK_LOCAL = true;
+const MODE_DEBUG  = true;
 const MODE_TEST = true;
 
 var bankid_client;// = require('./bankid-cli-1.json');
 // @TODO - добавить ClientNames TNames
 var bankid_mapping;// = require('./bankid_mapping.json');
 var bankid_dicts;// = require('./dicts_mapping.json');
-var client_xml_names;// = require('./client_xml_names.json');
 var client_xml_data;// = require('./client_xml_data.json');
+var client_xml_template;// = require('./client_xml_template.json');
 var bankid_transform_web;// = require('./bankid_transform_web.json');
 var bankid_transform_bid;// = require('./bankid_transform_bid.json');
 
@@ -16,7 +17,6 @@ var bankid_transform_out = {};
 // FUNCTIONS -----------------------------------------------
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
-
     for (o of refmaps[idrefcode]) {
         //console.log(' get_reftrans'+ JSON.stringify(o));
         if (o.ibancode === idvalue) {
@@ -24,7 +24,6 @@ function get_reftrans(refmaps, idrefcode, idvalue) {
             break;
         }
     }
-
     return ret;
 }
 
@@ -76,96 +75,41 @@ function generateIPN() {
     return dataOk;
 }
 
+function load_file( name ) {
+    if (MODE_WORK_LOCAL !== true) return;
+    const fs = require('fs');
+    return fs.readFileSync(name, {
+        encoding: 'utf8',
+        flag: 'r'
+    });    
+}
+
 function load_xml_templates_files() {
     if (MODE_WORK_LOCAL !== true) return;
     const fs = require('fs');
-    client_xml_data.top = fs.readFileSync(client_xml_names.top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
 
-    client_xml_data.client_top = fs.readFileSync(client_xml_names.client_top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.client_man = fs.readFileSync(client_xml_names.client_man, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.client_bot = fs.readFileSync(client_xml_names.client_bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
+    client_xml_data.top = load_file(client_xml_template.top.name);
 
-    client_xml_data.indiv_top = fs.readFileSync(client_xml_names.indiv_top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.indiv_man = fs.readFileSync(client_xml_names.indiv_man, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.indiv_bot = fs.readFileSync(client_xml_names.indiv_bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
+    client_xml_data.client_top = load_file(client_xml_template.client_top.name);
+    client_xml_data.client_man = load_file(client_xml_template.client_man.name);
+    client_xml_data.client_bot = load_file(client_xml_template.client_bot.name);
+    client_xml_data.indiv_top = load_file(client_xml_template.indiv_top.name);
+    client_xml_data.indiv_man = load_file(client_xml_template.indiv_man.name);
+    client_xml_data.indiv_bot = load_file(client_xml_template.indiv_bot.name);
+    client_xml_data.props_top = load_file(client_xml_template.props_top.name);
+    client_xml_data.props_man = load_file(client_xml_template.props_man.name);
+    client_xml_data.props_bot = load_file(client_xml_template.props_bot.name);
+    client_xml_data.ident_top = load_file(client_xml_template.ident_top.name);
+    client_xml_data.ident_man = load_file(client_xml_template.ident_man.name);
+    client_xml_data.ident_bot = load_file(client_xml_template.ident_bot.name);
+    client_xml_data.addre_top = load_file(client_xml_template.addre_top.name);
+    client_xml_data.addre_man = load_file(client_xml_template.addre_man.name);
+    client_xml_data.addre_bot = load_file(client_xml_template.addre_bot.name);
+    client_xml_data.commu_top = load_file(client_xml_template.commu_top.name);
+    client_xml_data.commu_man = load_file(client_xml_template.commu_man.name);
+    client_xml_data.commu_bot = load_file(client_xml_template.commu_bot.name);
+    client_xml_data.bot = load_file(client_xml_template.bot.name);
 
-    client_xml_data.props_top = fs.readFileSync(client_xml_names.props_top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.props_man = fs.readFileSync(client_xml_names.props_man, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.props_bot = fs.readFileSync(client_xml_names.props_bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-
-    client_xml_data.ident_top = fs.readFileSync(client_xml_names.ident_top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.ident_man = fs.readFileSync(client_xml_names.ident_man, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.ident_bot = fs.readFileSync(client_xml_names.ident_bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-
-    client_xml_data.addre_top = fs.readFileSync(client_xml_names.addre_top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.addre_man = fs.readFileSync(client_xml_names.addre_man, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.addre_bot = fs.readFileSync(client_xml_names.addre_bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-
-    client_xml_data.commu_top = fs.readFileSync(client_xml_names.commu_top, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.commu_man = fs.readFileSync(client_xml_names.commu_man, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-    client_xml_data.commu_bot = fs.readFileSync(client_xml_names.commu_bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
-
-    client_xml_data.bot = fs.readFileSync(client_xml_names.bot, {
-        encoding: 'utf8',
-        flag: 'r'
-    });
     return;
 }
 
@@ -229,8 +173,8 @@ function load_requeries_files(){
     bankid_mapping = require('./bankid_mapping.json');
     bankid_dicts = require('./dicts_mapping.json');
 
-    client_xml_names = require('./client_xml_names.json');
     client_xml_data = require('./client_xml_data.json');
+    client_xml_template = require('./client_xml_template.json');
 
     bankid_transform_web = require('./bankid_transform_web.json');
     bankid_transform_bid = require('./bankid_transform_bid.json');
@@ -241,14 +185,16 @@ function load_transform_files(){
     bankid_client = msg.in.bankid_cli;
     bankid_mapping = msg.transform.bankid_mapping;
     bankid_dicts = msg.transform.dicts_mapping;
-    client_xml_names = msg.transform.client_xml_names;
-    client_xml_data = msg.transform.client_xml_data;
     bankid_transform_web = msg.transform.bankid_transform_web;
     bankid_transform_bid = msg.transform.bankid_transform_bid;
 }
 function create_out_nr(){
     if (MODE_WORK_LOCAL === true) return;
     msg.in.data = fill_data;
+}
+function clog(msg){
+    if (MODE_DEBUG === true) 
+        console.log(msg);
 }
 // FUNCTIONS END -------------------------------------------
 // MAIN INIT -----------------------------------------------
@@ -296,6 +242,7 @@ for (key in bankid_client) {
         for (a of bankid_client[key]) {
             var mapi = JSON.parse(JSON.stringify((mapr)));
             for (o in a) {
+                clog("  [" + cnt + "][" + key + "] " + o + "=" + a[o]);
                 console.log("  [" + cnt + "][" + key + "] " + o + "=" + a[o]);
                 var val = mapi.find(x => x.bankid.code === o);
                 if (val !== undefined) {

@@ -1,0 +1,82 @@
+{
+    "top": {
+        "name": "./data/client-create-top.xml",
+        "data": null
+    },
+    "client_top": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "client_man": {
+        "name": "./data/client-create-Clients.xml",
+        "data": null
+    },
+    "client_bot": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "indiv_top": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "indiv_man": {
+        "name": "./data/client-create-Indiv.xml",
+        "data": null
+    },
+    "indiv_bot": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "props_top": {
+        "name": "./data/client-create-Props-top.xml",
+        "data": null
+    },
+    "props_man": {
+        "name": "./data/client-create-Props.xml",
+        "data": null
+    },
+    "props_bot": {
+        "name": "./data/client-create-Props-bot.xml",
+        "data": null
+    },
+    "ident_top": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "ident_man": {
+        "name": "./data/client-create-Ident.xml",
+        "data": null
+    },
+    "ident_bot": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "addre_top": {
+        "name": "./data/client-create-Addre-top.xml",
+        "data": null
+    },
+    "addre_man": {
+        "name": "./data/client-create-Addre.xml",
+        "data": null
+    },
+    "addre_bot": {
+        "name": "./data/client-create-Addre-bot.xml",
+        "data": null
+    },
+    "commu_top": {
+        "name": "./data/client-create-Commun-top.xml",
+        "data": null
+    },
+    "commu_man": {
+        "name": "./data/client-create-Commun.xml",
+        "data": null
+    },
+    "commu_bot": {
+        "name": "./data/client-create-Commun-bot.xml",
+        "data": null
+    },
+    "bot": {
+        "name": "./data/client-create-bot.xml",
+        "data": null
+    }
+}
