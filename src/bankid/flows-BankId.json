@@ -7,25 +7,6 @@
         "info": ""
     },
     {
-        "id": "e15a7c56.e58d1",
-        "type": "template",
-        "z": "6c70e68d.ef377",
-        "name": "data",
-        "field": "in.data",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n  \"client\": {\n    \"StateCode\": \"3482817778\",\n    \"Residency\": \"1\",\n    \"Name\": \"Кетцалькоатль Кукумац Кукулькан\"\n  },\n  \"indiv\": {\n    \"LastName\": \"Кетцалькоатль\",\n    \"FirstName\": \"Кукумац\",\n    \"FatherName\": \"Кукулькан\",\n    \"BirthDay\": \"1991-08-28T00:00:00\",\n    \"GENDER\": \"1\",\n    \"MarriageStatus\": \"6\"\n  },\n  \"ident\": [\n    {\n      \"TypeId\": \"4\",\n      \"Series\": \"СН\",\n      \"Number\": \"432311\",\n      \"Registrator\": \"Святошинське РУ ГУ МВС у м.Києві\",\n      \"IssueDate\": \"1997-10-01T00:00:00\",\n      \"ExpirationDate\": \"2099-01-01T00:00:00\",\n      \"CountryCode\": \"UA\"\n    },\n    {\n      \"TypeId\": \"55\",\n      \"Series\": \"\",\n      \"Number\": \"3425654326\",\n      \"Registrator\": \"1456\",\n      \"IssueDate\": \"2020-10-01T00:00:00\",\n      \"ExpirationDate\": \"2040-10-01T00:00:00\",\n      \"CountryCode\": \"UA\"\n    }\n  ],\n  \"addr\": [\n    {\n      \"TypeCode\": \"2\",\n      \"Country\": \"UA\",\n      \"State\": \"Київська\",\n      \"Region\": \"Київ\",\n      \"Town\": \"м. Київ\",\n      \"Street\": \"вул. Бородинского побоища\",\n      \"HouseNumber\": \"21\",\n      \"FlatNumber\": \"16\"\n    },\n    {\n      \"TypeCode\": \"1\",\n      \"Country\": \"UA\",\n      \"State\": \"Київська\",\n      \"Region\": \"Київ\",\n      \"Town\": \"м. Чичен-Ица\",\n      \"Street\": \"вул. пирамида Кукулькана.\",\n      \"HouseNumber\": \"1\",\n      \"FlatNumber\": \"1\"\n    }\n  ],\n  \"comm\": [\n    {\n      \"Value\": \"380631003256\",\n      \"TypeId\": \"3\"\n    },\n    {\n      \"Value\": \"sava@mail.dot.com\",\n      \"TypeId\": \"5\"\n    },\n    {\n      \"Value\": \"www.www.net\",\n      \"TypeId\": \"6\"\n    }\n  ],\n  \"props\": [\n    {\n      \"Refs\": \"\",\n      \"Code\": \"FATF_COUNTRY_CITIZEN\",\n      \"Dict\": \"KL_K040.DBF\",\n      \"Value\": \"804\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"BIRTH_COUNTRY\",\n      \"Dict\": \"KL_K040.DBF\",\n      \"Value\": \"804\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"BIRTH_PLACE\",\n      \"Dict\": \"\",\n      \"Value\": \"Бердичув\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"PROFIT_WAY\",\n      \"Dict\": \"PROFIT_WAY\",\n      \"Value\": \"2\"\n    }\n  ]\n}",
-        "output": "json",
-        "x": 670,
-        "y": 420,
-        "wires": [
-            [
-                "2ddee97a.fe1766"
-            ]
-        ]
-    },
-    {
         "id": "c121a667.aebe28",
         "type": "inject",
         "z": "6c70e68d.ef377",
@@ -38,10 +19,10 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 120,
-        "y": 420,
+        "y": 340,
         "wires": [
             [
-                "b0a1fd17.70a908"
+                "7474f410.4516fc"
             ]
         ]
     },
@@ -57,7 +38,7 @@
         "stream": false,
         "addname": "",
         "x": 290,
-        "y": 640,
+        "y": 500,
         "wires": [
             [
                 "ef82848e.659c58"
@@ -85,7 +66,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 630,
-        "y": 640,
+        "y": 500,
         "wires": [
             [
                 "9ec48607.902c68"
@@ -97,13 +78,13 @@
         "type": "debug",
         "z": "6c70e68d.ef377",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "x": 690,
-        "y": 1040,
+        "y": 900,
         "wires": []
     },
     {
@@ -118,7 +99,7 @@
         "template": "                <tem:TProperties>\n                  <tem:Code>{{payload.Code}}</tem:Code>\n                  <tem:Value>{{payload.Value}}</tem:Value>\n                </tem:TProperties>",
         "output": "str",
         "x": 460,
-        "y": 640,
+        "y": 500,
         "wires": [
             [
                 "7c0ebf83.deb85"
@@ -137,7 +118,7 @@
         "template": "            \n            <tem:Properties>",
         "output": "str",
         "x": 340,
-        "y": 680,
+        "y": 540,
         "wires": [
             [
                 "31d51288.ee3a36"
@@ -156,7 +137,7 @@
         "template": "\n            </tem:Properties>",
         "output": "str",
         "x": 520,
-        "y": 680,
+        "y": 540,
         "wires": [
             [
                 "efc6719.0cf139"
@@ -171,11 +152,12 @@
         "func": "msg.xml = {};\nmsg.xml.in = {};\nmsg.xml.out = {};\nmsg.xml.out.prop_man = \"\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 250,
-        "y": 420,
+        "x": 390,
+        "y": 340,
         "wires": [
             [
-                "a1d93306.6dc828"
+                "a1d93306.6dc828",
+                "22192bb8.b16ac4"
             ]
         ]
     },
@@ -191,7 +173,7 @@
         "template": "{{{xml.in.prop_top}}}\n{{{xml.out.prop_man}}}\n{{{xml.in.prop_bot}}}",
         "output": "str",
         "x": 700,
-        "y": 680,
+        "y": 540,
         "wires": [
             [
                 "b5b8c88b.a9b418"
@@ -204,7 +186,7 @@
         "z": "6c70e68d.ef377",
         "name": "",
         "x": 360,
-        "y": 1040,
+        "y": 900,
         "wires": [
             [
                 "a68a72e9.06f5d",
@@ -225,7 +207,7 @@
         "template": "{{{xml.in.top}}}\n{{{xml.out.Client}}}\n{{{xml.out.Individuals}}}\n{{{xml.out.Identificatons}}}\n{{{xml.out.Addresses}}}\n{{{xml.out.Communications}}}\n{{{xml.out.Properties}}}\n{{{xml.in.bot}}}",
         "output": "str",
         "x": 170,
-        "y": 1040,
+        "y": 900,
         "wires": [
             [
                 "3f578485.4b15f4"
@@ -243,7 +225,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 660,
-        "y": 1100,
+        "y": 960,
         "wires": [
             [
                 "79cd0bb1.18afec"
@@ -260,8 +242,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 690,
-        "y": 1140,
+        "x": 710,
+        "y": 1000,
         "wires": []
     },
     {
@@ -273,7 +255,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 160,
-        "y": 680,
+        "y": 540,
         "wires": [
             [
                 "34ee0aff.edcade"
@@ -291,8 +273,8 @@
         "syntax": "mustache",
         "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header>\n      <tem:AuthSoapHeader>\n        <tem:Login>istest</tem:Login>\n         <tem:Password>gfhjk</tem:Password>\n      </tem:AuthSoapHeader>\n   </soapenv:Header>\n   \n   <soapenv:Body>\n      <tem:CreateClientFL>\n         <tem:client>\n            <tem:Request>\n               <tem:RequestId>12547</tem:RequestId>\n               <tem:UserLogin>UKRGAS\\appmb</tem:UserLogin>\n            </tem:Request>\n            <!--tem:ClientId>1747753</tem:ClientId-->\n            <tem:SendToScrooge>1</tem:SendToScrooge>",
         "output": "str",
-        "x": 380,
-        "y": 420,
+        "x": 540,
+        "y": 340,
         "wires": [
             [
                 "ae44182.657c368"
@@ -310,11 +292,11 @@
         "syntax": "mustache",
         "template": "         \n         </tem:client>\n      </tem:CreateClientFL>\n   </soapenv:Body>\n</soapenv:Envelope>",
         "output": "str",
-        "x": 520,
-        "y": 420,
+        "x": 680,
+        "y": 340,
         "wires": [
             [
-                "e15a7c56.e58d1"
+                "2ddee97a.fe1766"
             ]
         ]
     },
@@ -327,7 +309,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 150,
-        "y": 640,
+        "y": 500,
         "wires": [
             [
                 "7e4f62f2.5d22e4"
@@ -346,7 +328,7 @@
         "stream": false,
         "addname": "",
         "x": 290,
-        "y": 740,
+        "y": 600,
         "wires": [
             [
                 "93835afc.a4ef7"
@@ -374,7 +356,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 630,
-        "y": 740,
+        "y": 600,
         "wires": [
             [
                 "b8f7c210.48fb2"
@@ -393,7 +375,7 @@
         "template": "               \n               <tem:TAddresses>\n                  <tem:TypeId>{{payload.TypeCode}}</tem:TypeId>\n                  <tem:TypeCode>{{payload.TypeCode}}</tem:TypeCode>\n                  <tem:Country>804</tem:Country>\n                  <!--tem:PostalCode>14017</tem:PostalCode-->\n                  <tem:State>{{payload.State}}</tem:State>\n                  <tem:Region/>\n                  <tem:TownshipType>3508</tem:TownshipType>\n                  <tem:Town>{{payload.Town}}</tem:Town>\n                  <tem:StreetType>3510</tem:StreetType>\n                  <tem:Street>{{payload.Street}}</tem:Street>\n                  <tem:HouseType>3511</tem:HouseType>\n                  <tem:HouseNumber>{{payload.HouseNumber}}</tem:HouseNumber>\n                  <tem:FlatType>3506</tem:FlatType>\n                  <tem:FlatNumber>{{payload.FlatNumber}}</tem:FlatNumber>\n                  <tem:LandlinePhoneNumber/>\n                  <tem:PropertyStatus/>\n                  <tem:Status>1</tem:Status>\n               </tem:TAddresses>",
         "output": "str",
         "x": 450,
-        "y": 740,
+        "y": 600,
         "wires": [
             [
                 "e3465acf.c972f"
@@ -412,7 +394,7 @@
         "template": "            \n            <tem:Addresses>",
         "output": "str",
         "x": 340,
-        "y": 780,
+        "y": 640,
         "wires": [
             [
                 "e2993732.b1cc9"
@@ -431,7 +413,7 @@
         "template": "            \n            </tem:Addresses>",
         "output": "str",
         "x": 520,
-        "y": 780,
+        "y": 640,
         "wires": [
             [
                 "f7927ad3.87373"
@@ -450,10 +432,11 @@
         "template": "{{{xml.in.addr_top}}}\n{{{xml.out.addr_man}}}\n{{{xml.in.addr_bot}}}",
         "output": "str",
         "x": 700,
-        "y": 780,
+        "y": 640,
         "wires": [
             [
-                "a141bc2b.f21be8"
+                "a141bc2b.f21be8",
+                "dd07ca69.db425"
             ]
         ]
     },
@@ -466,7 +449,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 160,
-        "y": 780,
+        "y": 640,
         "wires": [
             [
                 "f7f73dd3.6e8148"
@@ -482,7 +465,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 140,
-        "y": 740,
+        "y": 600,
         "wires": [
             [
                 "b75cdf.b01bb32"
@@ -501,7 +484,7 @@
         "template": "\n            <tem:Clients>\n               <tem:StateCode>{{payload.StateCode}}</tem:StateCode>\n               <tem:Residency>{{payload.Residency}}</tem:Residency>\n               <tem:Name>{{payload.Name}}</tem:Name>               \n               <tem:Type>1</tem:Type>\n               <tem:SubType>0</tem:SubType>\n               <tem:isTechFlag>0</tem:isTechFlag>\n               <tem:IsOut>0</tem:IsOut>\n               <tem:IsPotential>0</tem:IsPotential>\n               <tem:IsPartner>false</tem:IsPartner>\n               <tem:Status>1</tem:Status>\n            </tem:Clients>",
         "output": "str",
         "x": 330,
-        "y": 500,
+        "y": 400,
         "wires": [
             [
                 "5753359d.2eb92c"
@@ -520,7 +503,7 @@
         "template": "{{{xml.out.client_man}}}",
         "output": "str",
         "x": 690,
-        "y": 500,
+        "y": 400,
         "wires": [
             [
                 "5e51fcb9.c3097c"
@@ -536,7 +519,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 510,
-        "y": 500,
+        "y": 400,
         "wires": [
             [
                 "891cb5c7.55d5"
@@ -552,7 +535,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 150,
-        "y": 500,
+        "y": 400,
         "wires": [
             [
                 "7e4433ae.a4a3fc"
@@ -571,7 +554,7 @@
         "stream": false,
         "addname": "",
         "x": 290,
-        "y": 840,
+        "y": 700,
         "wires": [
             [
                 "1e67734d.52aa6d"
@@ -599,7 +582,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 630,
-        "y": 840,
+        "y": 700,
         "wires": [
             [
                 "8d56419f.fdd19"
@@ -618,7 +601,7 @@
         "template": "               <tem:TCommunications>\n                  <tem:TypeId>{{payload.TypeId}}</tem:TypeId>\n                  <tem:TypeCode>{{payload.TypeId}}</tem:TypeCode>\n                  <tem:Value>{{payload.Value}}</tem:Value>\n                  <tem:IsMain>true</tem:IsMain>\n                  <tem:IsVerified>true</tem:IsVerified>\n                  <tem:Note/>\n                  <tem:SourceInfo/>\n                  <tem:Status>1</tem:Status>\n               </tem:TCommunications>\n",
         "output": "str",
         "x": 460,
-        "y": 840,
+        "y": 700,
         "wires": [
             [
                 "9abda2d4.84264"
@@ -637,7 +620,7 @@
         "template": "\n            <tem:Communications>\n",
         "output": "str",
         "x": 330,
-        "y": 880,
+        "y": 740,
         "wires": [
             [
                 "4d3c331a.6f52ac"
@@ -656,7 +639,7 @@
         "template": "            </tem:Communications>",
         "output": "str",
         "x": 510,
-        "y": 880,
+        "y": 740,
         "wires": [
             [
                 "4c758f3e.449a"
@@ -675,7 +658,7 @@
         "template": "{{{xml.in.comm_top}}}\n{{{xml.out.comm_man}}}\n{{{xml.in.comm_bot}}}",
         "output": "str",
         "x": 700,
-        "y": 880,
+        "y": 740,
         "wires": [
             [
                 "a23388ed.f7c7d"
@@ -691,7 +674,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 160,
-        "y": 880,
+        "y": 740,
         "wires": [
             [
                 "12a57622.7f297a"
@@ -707,7 +690,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 150,
-        "y": 840,
+        "y": 700,
         "wires": [
             [
                 "ec169ba3.61edf8"
@@ -726,7 +709,7 @@
         "stream": false,
         "addname": "",
         "x": 290,
-        "y": 940,
+        "y": 800,
         "wires": [
             [
                 "2993e0f9.3d5238"
@@ -754,7 +737,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 630,
-        "y": 940,
+        "y": 800,
         "wires": [
             [
                 "887f4811.c7eb3"
@@ -773,7 +756,7 @@
         "template": "               <tem:TIdentifications>\n                  <tem:TypeId>{{payload.TypeId}}</tem:TypeId>\n                  <tem:Series>{{payload.Series}}</tem:Series>\n                  <tem:Number>{{payload.Number}}</tem:Number>\n                  <tem:Registrator>{{payload.Registrator}}</tem:Registrator>\n                  <tem:IssueDate>{{payload.IssueDate}}</tem:IssueDate>\n                  <tem:ExpirationDate>{{payload.ExpirationDate}}</tem:ExpirationDate>\n                  <tem:IsMain>false</tem:IsMain>\n                  <tem:Checked>true</tem:Checked>\n                  <tem:Status>1</tem:Status>\n               </tem:TIdentifications>\n",
         "output": "str",
         "x": 440,
-        "y": 940,
+        "y": 800,
         "wires": [
             [
                 "2203eca2.734f84"
@@ -792,7 +775,7 @@
         "template": "            \n            <tem:Identifications>",
         "output": "str",
         "x": 320,
-        "y": 980,
+        "y": 840,
         "wires": [
             [
                 "a914224d.3d8ea"
@@ -811,7 +794,7 @@
         "template": "            </tem:Identifications>",
         "output": "str",
         "x": 500,
-        "y": 980,
+        "y": 840,
         "wires": [
             [
                 "c7138a40.f57ab"
@@ -830,7 +813,7 @@
         "template": "{{{xml.in.ident_top}}}\n{{{xml.out.ident_man}}}\n{{{xml.in.ident_bot}}}",
         "output": "str",
         "x": 690,
-        "y": 980,
+        "y": 840,
         "wires": [
             [
                 "77b08b8c.6f67ac"
@@ -846,7 +829,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 140,
-        "y": 980,
+        "y": 840,
         "wires": [
             [
                 "57211c96.08b89c"
@@ -862,7 +845,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 140,
-        "y": 940,
+        "y": 800,
         "wires": [
             [
                 "af258165.f3f188"
@@ -881,7 +864,7 @@
         "template": "            \n            <tem:Individuals>\n               <tem:FirstName>{{payload.FirstName}}</tem:FirstName>\n               <tem:LastName>{{payload.LastName}}</tem:LastName>\n               <tem:FatherName>{{payload.FatherName}}</tem:FatherName>\n               <tem:Gender>{{payload.GENDER}}</tem:Gender>\n               <tem:BirthDay>{{payload.BirthDay}}</tem:BirthDay>\n               <tem:BirthSurname>{{payload.BirthSurname}}</tem:BirthSurname>\n               <tem:MarriageStatus>6</tem:MarriageStatus>\n               <tem:Status>1</tem:Status>\n            </tem:Individuals>",
         "output": "str",
         "x": 320,
-        "y": 540,
+        "y": 440,
         "wires": [
             [
                 "4c99ce51.b30ef"
@@ -900,7 +883,7 @@
         "template": "{{{xml.out.indiv_man}}}",
         "output": "str",
         "x": 680,
-        "y": 540,
+        "y": 440,
         "wires": [
             [
                 "ac59637c.9c7e78"
@@ -916,7 +899,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 500,
-        "y": 540,
+        "y": 440,
         "wires": [
             [
                 "8c0bbcc5.940aa8"
@@ -932,7 +915,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 140,
-        "y": 540,
+        "y": 440,
         "wires": [
             [
                 "7745ad71.ed3214"
@@ -944,15 +927,14 @@
         "type": "function",
         "z": "6c70e68d.ef377",
         "name": "Transformator",
-        "func": "\nconst MODE_WORK_LOCAL = false;\nconst MODE_DEBUG  = true;\nconst MODE_TEST = true;\n\nvar bankid_client;// = require('./bankid-cli-1.json');\n// @TODO - добавить ClientNames TNames\nvar bankid_mapping;// = require('./bankid_mapping.json');\nvar bankid_dicts;// = require('./dicts_mapping.json');\nvar client_xml_data;// = require('./client_xml_data.json');\nvar client_xml_template;// = require('./client_xml_template.json');\nvar bankid_transform_web;// = require('./bankid_transform_web.json');\nvar bankid_transform_bid;// = require('./bankid_transform_bid.json');\n\nvar bankid_transform_out = {};\n\n// FUNCTIONS -----------------------------------------------\nfunction get_reftrans(refmaps, idrefcode, idvalue) {\n    var ret = idvalue;\n    for (o of refmaps[idrefcode]) {\n        //console.log(' get_reftrans'+ JSON.stringify(o));\n        if (o.ibancode === idvalue) {\n            ret = o.wbid;\n            break;\n        }\n    }\n    return ret;\n}\n\nfunction trans_date(date) {\n    var ret = date;\n    // from DD.MM.YYYY\n    // to 1982-05-03T00:00:00\n    if (date.length > 0) {\n        var parts = date.split('.');\n        ret = parts[2] + '-' + parts[1] + '-' + parts[0] + 'T00:00:00';\n    }\n    return ret;\n}\n\nfunction getIPNKey(data) {\n    var aMulti = [-1, 5, 7, 9, 4, 6, 10, 5, 7, 0];\n    var key = data.length;\n    if (data.length == 10) {\n        var sum = 0;\n        for (var i = 0; i < aMulti.length; i++) {\n            var o = data[i] * aMulti[i];\n            sum += o;\n        }\n    }\n    var msum = sum - (Math.trunc(sum / 11) * 11);\n    return msum < 10 ? msum : 0;\n}\n\nfunction excelDateToJSDate(serialDate) {\n    var e0date = new Date(0); // epoch \"zero\" date\n    var offset = e0date.getTimezoneOffset(); // tz offset in min\n    var dateOut = new Date(Math.round((serialDate - 25568) * 86400 * 1000));\n    return dateOut.toJSON();\n}\n\nfunction generateIPN() {\n\n    var requestAmo;\n    var requestSex;\n    var requestDat;\n    var requestKey;\n\n    requestDat = Math.floor(Math.random() * 20000) + 20000;\n    requestAmo = Math.floor(Math.random() * 100) + 100;\n    requestSex = Math.floor(Math.random() * 10 - 1) + 1;\n    requestKey = Math.floor(Math.random() * 10 - 1) + 1;\n    var dataPre = '' + requestDat + requestAmo + requestSex + requestKey;\n    var dataOk = dataPre.substr(0, 9) + getIPNKey(dataPre);\n    return dataOk;\n}\n\nfunction load_file( name ) {\n    if (MODE_WORK_LOCAL !== true) return;\n    const fs = require('fs');\n    return fs.readFileSync(name, {\n        encoding: 'utf8',\n        flag: 'r'\n    });    \n}\n\nfunction load_xml_templates_files() {\n    if (MODE_WORK_LOCAL !== true) return;\n    const fs = require('fs');\n\n    client_xml_data.top = load_file(client_xml_template.top.name);\n\n    client_xml_data.client_top = load_file(client_xml_template.client_top.name);\n    client_xml_data.client_man = load_file(client_xml_template.client_man.name);\n    client_xml_data.client_bot = load_file(client_xml_template.client_bot.name);\n    client_xml_data.indiv_top = load_file(client_xml_template.indiv_top.name);\n    client_xml_data.indiv_man = load_file(client_xml_template.indiv_man.name);\n    client_xml_data.indiv_bot = load_file(client_xml_template.indiv_bot.name);\n    client_xml_data.props_top = load_file(client_xml_template.props_top.name);\n    client_xml_data.props_man = load_file(client_xml_template.props_man.name);\n    client_xml_data.props_bot = load_file(client_xml_template.props_bot.name);\n    client_xml_data.ident_top = load_file(client_xml_template.ident_top.name);\n    client_xml_data.ident_man = load_file(client_xml_template.ident_man.name);\n    client_xml_data.ident_bot = load_file(client_xml_template.ident_bot.name);\n    client_xml_data.addre_top = load_file(client_xml_template.addre_top.name);\n    client_xml_data.addre_man = load_file(client_xml_template.addre_man.name);\n    client_xml_data.addre_bot = load_file(client_xml_template.addre_bot.name);\n    client_xml_data.commu_top = load_file(client_xml_template.commu_top.name);\n    client_xml_data.commu_man = load_file(client_xml_template.commu_man.name);\n    client_xml_data.commu_bot = load_file(client_xml_template.commu_bot.name);\n    client_xml_data.bot = load_file(client_xml_template.bot.name);\n\n    return;\n}\n\nfunction create_out_xml() {\n    if (MODE_WORK_LOCAL !== true) return;\n\n    var mustache = require(\"mustache\");\n    var view = {\n        title: \"Joe\",\n        calc: function () {\n            return 2 + 4;\n        }\n    };\n    var output = mustache.render(\"{{title}} spends {{calc}}\", view);\n    console.log(output);\n\n    const fs = require('fs');\n    fs.writeFileSync(\"client-create-bankid-3.json\", JSON.stringify(fill_data, null, 2));\n    // XML CREATE ----------------------------------------------\n    output = client_xml_data.top;\n    output += client_xml_data.client_top;\n    output += mustache.render(client_xml_data.client_man, fill_data.client);\n    output += client_xml_data.client_bot;\n    output += client_xml_data.indiv_top;\n    output += mustache.render(client_xml_data.indiv_man, fill_data.indiv);\n    output += client_xml_data.indiv_bot;\n    // documents\n    output += client_xml_data.ident_top;\n    for (prop of fill_data.ident) {\n        output += mustache.render(client_xml_data.ident_man, prop);\n    }\n    output += client_xml_data.ident_bot;\n    // addresses\n    output += client_xml_data.addre_top;\n    for (prop of fill_data.addr) {\n        output += mustache.render(client_xml_data.addre_man, prop);\n    }\n    output += client_xml_data.addre_bot;\n    // comm\n    output += client_xml_data.commu_top;\n    console.log(fill_data.comm);\n    for (prop of fill_data.comm) {\n        output += mustache.render(client_xml_data.commu_man, prop); //fill_data.comm);\n    }\n    output += client_xml_data.commu_bot;\n    // props\n    output += client_xml_data.props_top;\n    for (prop of fill_data.props) {\n        output += mustache.render(client_xml_data.props_man, prop);\n    }\n    output += client_xml_data.props_bot;\n    output += client_xml_data.bot;\n    console.log(output);\n    fs.writeFileSync(\"client-create-bankid-3.xml\", output);\n    // XML CREATE END-------------------------------------------\n}\nfunction load_requeries_files(){\n    if (MODE_WORK_LOCAL !== true) return;\n    bankid_client = require('./bankid-cli-1.json');\n    // @TODO - добавить ClientNames TNames\n    bankid_mapping = require('./bankid_mapping.json');\n    bankid_dicts = require('./dicts_mapping.json');\n\n    client_xml_data = require('./client_xml_data.json');\n    client_xml_template = require('./client_xml_template.json');\n\n    bankid_transform_web = require('./bankid_transform_web.json');\n    bankid_transform_bid = require('./bankid_transform_bid.json');\n}\n\nfunction load_transform_files(){\n    if (MODE_WORK_LOCAL === true) return;\n    bankid_client = msg.in.bankid_cli;\n    bankid_mapping = msg.transform.bankid_mapping;\n    bankid_dicts = msg.transform.dicts_mapping;\n    bankid_transform_web = msg.transform.bankid_transform_web;\n    bankid_transform_bid = msg.transform.bankid_transform_bid;\n}\nfunction create_out_nr(){\n    if (MODE_WORK_LOCAL === true) return;\n    msg.in.data = fill_data;\n}\nfunction clog(msg){\n    if (MODE_DEBUG === true) \n        console.log(msg);\n}\n// FUNCTIONS END -------------------------------------------\n// MAIN INIT -----------------------------------------------\nload_requeries_files();\nload_transform_files();\nload_xml_templates_files();\nif (MODE_TEST === true)\n    bankid_client.person.inn = generateIPN();\nconsole.log(bankid_client);\n// MAIN INIT END -------------------------------------------\n// MAIN TRANSFORMATOR --------------------------------------\n// Prepare out data\nfor (k of bankid_transform_web) {\n    bankid_transform_out[k.name] = [];\n}\n\nfor (o of bankid_mapping) {\n    //console.log(o);\n    if (o.bankid.block !== 'none') {\n        var f = bankid_transform_web.find(x => x.name === o.webbank.block);\n        f.mapping.push(o);\n        var i = bankid_transform_bid.find(x => x.name === o.bankid.block);\n        i.mapping.push(o);\n    }\n}\n\n//console.log(bankid_transform_bid);\nconsole.log(bankid_transform_web);\n//console.log(bankid_transform_out);\n\n// Parsing input data\nfor (key in bankid_client) {\n\n    var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;\n\n    if (bankid_client[key] instanceof Array) {\n        console.log(\"[\" + key + \"][\" + webbank_block + \"] Array \");\n        //console.log(bankid_transform_out[webbank_block]);\n\n        var cnt = 0;\n        var amapi = [];\n        //console.log(\" ++++++++++++[\"+webbank_block+\"][\"+key+\"] \");    \n        var mapr = bankid_transform_bid.find(x => x.name === key).mapping;\n\n        for (a of bankid_client[key]) {\n            var mapi = JSON.parse(JSON.stringify((mapr)));\n            for (o in a) {\n                clog(\"  [\" + cnt + \"][\" + key + \"] \" + o + \"=\" + a[o]);\n                console.log(\"  [\" + cnt + \"][\" + key + \"] \" + o + \"=\" + a[o]);\n                var val = mapi.find(x => x.bankid.code === o);\n                if (val !== undefined) {\n                    val.value = a[o];\n                }\n            }\n            amapi.push(mapi);\n            cnt++;\n        }\n        bankid_transform_out[webbank_block] = amapi;\n    } else {\n        console.log(\"[\" + key + \"] Object\");\n        for (o in bankid_client[key]) {\n            var mapi = bankid_transform_bid.find(x => x.name === key).mapping;\n            var val = mapi.find(x => x.bankid.code === o);\n            console.log(\" [\" + key + \"][\" + o + \"]\"); // val=\" + JSON.stringify(val));\n            if (val !== undefined) {\n                val.value = bankid_client[key][o];\n                console.log(\"  ++++[\" + key + \"][\" + o + \"]=\" + val.value + \"-\" + val.webbank.block);\n                //console.log(\" 00 key=\" + key + \" o=\" + o + \" val=\" + JSON.stringify(val));\n                //console.log(val);\n                bankid_transform_out[val.webbank.block].push(val);\n                // Ищем в знчения по умодчанию в для val.webbank.block\n                var mapw = bankid_transform_web.find(x => x.name === val.webbank.block).mapping;\n                for (d of mapw) {\n                    if (d.bankid.code === o && d.webbank.default !== '') {\n                        var vald = JSON.parse(JSON.stringify(val));\n                        vald.value = d.webbank.default;\n                        vald.webbank.code = d.webbank.code;\n                        bankid_transform_out[val.webbank.block].push(vald);\n                    }\n                }\n            }\n        }\n    }\n}\n\n// Calculate field from bankid\nvar calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;\n\nfor (item of calcm) {\n    console.log(item); // x.name === a.source !!!! persons\n    var bankid_src = bankid_transform_bid.find(x => x.name === 'person').mapping;\n    console.log(\"bankid_src --------------------------------------------\");\n    console.log(bankid_src);\n\n    var fields = item.bankid.code.split('+');\n    var calculate = \"\";\n    for (f of fields) {\n        var n = bankid_src.find(x => x.bankid.block === 'person' && x.bankid.code === f)\n        //console.log(\"  bankid_fld \"+f+\" \"+n.value + JSON.stringify(n));\n        calculate += n.value + \" \";\n        calculate = calculate;\n    }\n    item.value = calculate.trimRight();\n    var wkey = item.webbank.block;\n    var wfld = item.webbank.code;\n\n    var wblock = bankid_transform_out[wkey];\n    wblock.push(item);\n    wblock = bankid_transform_out[wkey];\n}\n\nconsole.log(\"bankid_transform_out --------------------------------------------\");\nvar fill_data = {};\n// Клиент\nfill_data.client = {};\nfor (item of bankid_transform_out.Client) {\n    if (item.bankid.maps !== undefined && item.bankid.maps !== \"\") {\n        console.log(item.bankid.maps);\n        fill_data.client[item.webbank.code] =\n            get_reftrans(bankid_dicts, item.bankid.maps, item.value);\n    } else\n        fill_data.client[item.webbank.code] = item.value;\n}\n// Персональные данные\nfill_data.indiv = {};\nfor (item of bankid_transform_out.Individuals) {\n    var value = item.value;\n    console.log(item);\n    if (item.bankid.maps !== undefined && item.bankid.maps !== '')\n        value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);\n    if (item.bankid.type === 'date')\n        value = trans_date(value);\n    fill_data.indiv[item.webbank.code] = value;\n}\n\nvar i = 0;\n// Документы\nfill_data.ident = [];\nfor (item of bankid_transform_out.Identifications) {\n    fill_data.ident[i] = {};\n    for (o of item) {\n        var code = o.webbank.code;\n        var value = o.value;\n        if (o.bankid.type === 'date')\n            value = trans_date(value);\n        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {\n            value = get_reftrans(bankid_dicts, o.bankid.maps, value);\n        }\n        fill_data.ident[i][code] = value;\n        if (fill_data.ident[i]['ExpirationDate'] === '') {\n            fill_data.ident[i]['ExpirationDate'] = '2099-01-01T00:00:00';\n        };\n    }\n    i++;\n}\n// Адреса\nconsole.log(bankid_transform_out.Addresses);\ni = 0;\nfill_data.addr = [];\nfor (item of bankid_transform_out.Addresses) {\n    fill_data.addr[i] = {};\n    for (o of item) {\n        var code = o.webbank.code;\n        var value = o.value;\n        if (o.bankid.type === 'date')\n            value = trans_date(value);\n        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {\n            value = get_reftrans(bankid_dicts, o.bankid.maps, value);\n        }\n        fill_data.addr[i][code] = value;\n    }\n    i++;\n}\n// явки пароли телефоны\ni = 0;\nfill_data.comm = [];\nvar comm_codes = [];\nfor (item of bankid_transform_out.Communications) {\n    console.log(item);\n    if (comm_codes.indexOf(item.bankid.code) < 0)\n        comm_codes.push(item.bankid.code);\n}\nconsole.log(comm_codes);\nfor (c of comm_codes) {\n    fill_data.comm[i] = {};\n    console.log(c);\n    for (item of bankid_transform_out.Communications) {\n        var code = item.webbank.code;\n        if (item.bankid.code === c) {\n            console.log('[' + c + '][' + code + '][' + item.value + ']');\n            fill_data.comm[i][code] = item.value;\n        }\n    }\n    i++;\n}\n// Реквизиты\nfill_data.props = [];\ni = 0;\nfor (item of bankid_transform_out.Properties) {\n    if (item.webbank.code !== '') {\n        fill_data.props[i] = {};\n        fill_data.props[i].Refs = item.bankid.maps;\n        fill_data.props[i].Code = item.webbank.code;\n        fill_data.props[i].Dict = item.webbank.dict;\n        fill_data.props[i].Value = item.value;\n\n        if (item.bankid.maps !== undefined && item.bankid.maps.length > 0) {\n            fill_data.props[i].Value =\n                get_reftrans(bankid_dicts, item.bankid.maps, item.value);\n        }\n\n        i++;\n    }\n}\n// MAIN TRANSFORMATOR END-----------------------------------\n\nconsole.log(\"fill_data --------------------------------------------\");\nconsole.log(fill_data);\nconsole.log(\"fill_data --------------------------------------------\");\n\ncreate_out_xml();\ncreate_out_nr();\nif (MODE_WORK_LOCAL !== true) return msg;\n",
+        "func": "\nconst MODE_WORK_LOCAL = false;\nconst MODE_DEBUG  = true;\nconst MODE_TEST = true;\n\nvar bankid_client;// = require('./bankid-cli-1.json');\n// @TODO - добавить ClientNames TNames\nvar bankid_mapping;// = require('./bankid_mapping.json');\nvar bankid_dicts;// = require('./dicts_mapping.json');\nvar client_xml_data;// = require('./client_xml_data.json');\nvar client_xml_template;// = require('./client_xml_template.json');\nvar bankid_transform_web;// = require('./bankid_transform_web.json');\nvar bankid_transform_bid;// = require('./bankid_transform_bid.json');\n\nvar bankid_transform_out = {};\n\n// FUNCTIONS -----------------------------------------------\nfunction get_reftrans(refmaps, idrefcode, idvalue) {\n    var ret = idvalue;\n    for (o of refmaps[idrefcode]) {\n        //console.log(' get_reftrans'+ JSON.stringify(o));\n        if (o.ibancode === idvalue) {\n            ret = o.wbid;\n            break;\n        }\n    }\n    return ret;\n}\n\nfunction trans_date(date) {\n    var ret = date;\n    // from DD.MM.YYYY\n    // to 1982-05-03T00:00:00\n    if (date.length > 0) {\n        var parts = date.split('.');\n        ret = parts[2] + '-' + parts[1] + '-' + parts[0] + 'T00:00:00';\n    }\n    return ret;\n}\n\nfunction getIPNKey(data) {\n    var aMulti = [-1, 5, 7, 9, 4, 6, 10, 5, 7, 0];\n    var key = data.length;\n    if (data.length == 10) {\n        var sum = 0;\n        for (var i = 0; i < aMulti.length; i++) {\n            var o = data[i] * aMulti[i];\n            sum += o;\n        }\n    }\n    var msum = sum - (Math.trunc(sum / 11) * 11);\n    return msum < 10 ? msum : 0;\n}\n\nfunction excelDateToJSDate(serialDate) {\n    var e0date = new Date(0); // epoch \"zero\" date\n    var offset = e0date.getTimezoneOffset(); // tz offset in min\n    var dateOut = new Date(Math.round((serialDate - 25568) * 86400 * 1000));\n    return dateOut.toJSON();\n}\n\nfunction generateIPN() {\n\n    var requestAmo;\n    var requestSex;\n    var requestDat;\n    var requestKey;\n\n    requestDat = Math.floor(Math.random() * 20000) + 20000;\n    requestAmo = Math.floor(Math.random() * 100) + 100;\n    requestSex = Math.floor(Math.random() * 10 - 1) + 1;\n    requestKey = Math.floor(Math.random() * 10 - 1) + 1;\n    var dataPre = '' + requestDat + requestAmo + requestSex + requestKey;\n    var dataOk = dataPre.substr(0, 9) + getIPNKey(dataPre);\n    return dataOk;\n}\n\nfunction load_file( name ) {\n    if (MODE_WORK_LOCAL !== true) return;\n    const fs = require('fs');\n    return fs.readFileSync(name, {\n        encoding: 'utf8',\n        flag: 'r'\n    });    \n}\n\nfunction load_xml_templates_files() {\n    if (MODE_WORK_LOCAL !== true) return;\n    const fs = require('fs');\n\n    client_xml_data.top = load_file(client_xml_template.top.name);\n\n    client_xml_data.client_top = load_file(client_xml_template.client_top.name);\n    client_xml_data.client_man = load_file(client_xml_template.client_man.name);\n    client_xml_data.client_bot = load_file(client_xml_template.client_bot.name);\n    client_xml_data.indiv_top = load_file(client_xml_template.indiv_top.name);\n    client_xml_data.indiv_man = load_file(client_xml_template.indiv_man.name);\n    client_xml_data.indiv_bot = load_file(client_xml_template.indiv_bot.name);\n    client_xml_data.props_top = load_file(client_xml_template.props_top.name);\n    client_xml_data.props_man = load_file(client_xml_template.props_man.name);\n    client_xml_data.props_bot = load_file(client_xml_template.props_bot.name);\n    client_xml_data.ident_top = load_file(client_xml_template.ident_top.name);\n    client_xml_data.ident_man = load_file(client_xml_template.ident_man.name);\n    client_xml_data.ident_bot = load_file(client_xml_template.ident_bot.name);\n    client_xml_data.addre_top = load_file(client_xml_template.addre_top.name);\n    client_xml_data.addre_man = load_file(client_xml_template.addre_man.name);\n    client_xml_data.addre_bot = load_file(client_xml_template.addre_bot.name);\n    client_xml_data.commu_top = load_file(client_xml_template.commu_top.name);\n    client_xml_data.commu_man = load_file(client_xml_template.commu_man.name);\n    client_xml_data.commu_bot = load_file(client_xml_template.commu_bot.name);\n    client_xml_data.bot = load_file(client_xml_template.bot.name);\n\n    return;\n}\n\nfunction create_out_xml() {\n    if (MODE_WORK_LOCAL !== true) return;\n\n    var mustache = require(\"mustache\");\n    var view = {\n        title: \"Joe\",\n        calc: function () {\n            return 2 + 4;\n        }\n    };\n    var output = mustache.render(\"{{title}} spends {{calc}}\", view);\n    console.log(output);\n\n    const fs = require('fs');\n    fs.writeFileSync(\"client-create-bankid-3.json\", JSON.stringify(fill_data, null, 2));\n    // XML CREATE ----------------------------------------------\n    output = client_xml_data.top;\n    output += client_xml_data.client_top;\n    output += mustache.render(client_xml_data.client_man, fill_data.client);\n    output += client_xml_data.client_bot;\n    output += client_xml_data.indiv_top;\n    output += mustache.render(client_xml_data.indiv_man, fill_data.indiv);\n    output += client_xml_data.indiv_bot;\n    // documents\n    output += client_xml_data.ident_top;\n    for (prop of fill_data.ident) {\n        output += mustache.render(client_xml_data.ident_man, prop);\n    }\n    output += client_xml_data.ident_bot;\n    // addresses\n    output += client_xml_data.addre_top;\n    for (prop of fill_data.addr) {\n        output += mustache.render(client_xml_data.addre_man, prop);\n    }\n    output += client_xml_data.addre_bot;\n    // comm\n    output += client_xml_data.commu_top;\n    console.log(fill_data.comm);\n    for (prop of fill_data.comm) {\n        output += mustache.render(client_xml_data.commu_man, prop); //fill_data.comm);\n    }\n    output += client_xml_data.commu_bot;\n    // props\n    output += client_xml_data.props_top;\n    for (prop of fill_data.props) {\n        output += mustache.render(client_xml_data.props_man, prop);\n    }\n    output += client_xml_data.props_bot;\n    output += client_xml_data.bot;\n    console.log(output);\n    fs.writeFileSync(\"client-create-bankid-3.xml\", output);\n    // XML CREATE END-------------------------------------------\n}\nfunction load_requeries_files(){\n    if (MODE_WORK_LOCAL !== true) return;\n    bankid_client = require('./bankid-cli-1.json');\n    // @TODO - добавить ClientNames TNames\n    bankid_mapping = require('./bankid_mapping.json');\n    bankid_dicts = require('./dicts_mapping.json');\n    client_xml_data = require('./client_xml_data.json');\n    client_xml_template = require('./client_xml_template.json');\n    bankid_transform_web = require('./bankid_transform_web.json');\n    bankid_transform_bid = require('./bankid_transform_bid.json');\n}\n\nfunction load_transform_files(){\n    if (MODE_WORK_LOCAL === true) return;\n    bankid_client = msg.in.bankid_cli;\n    bankid_mapping = msg.transform.bankid_mapping;\n    bankid_dicts = msg.transform.dicts_mapping;\n    bankid_transform_web = msg.transform.bankid_transform_web;\n    bankid_transform_bid = msg.transform.bankid_transform_bid;\n}\nfunction create_out_nr(){\n    if (MODE_WORK_LOCAL === true) return;\n    msg.out.trans_data = fill_data;\n}\nfunction clog(msg){\n    if (MODE_DEBUG === true) \n        console.log(msg);\n}\n// FUNCTIONS END -------------------------------------------\n// MAIN INIT -----------------------------------------------\nload_requeries_files();\nload_transform_files();\nload_xml_templates_files();\nif (MODE_TEST === true)\n    bankid_client.person.inn = generateIPN();\nconsole.log(bankid_client);\n// MAIN INIT END -------------------------------------------\n// MAIN TRANSFORMATOR --------------------------------------\n// Prepare out data\nfor (k of bankid_transform_web) {\n    bankid_transform_out[k.name] = [];\n}\n\nfor (o of bankid_mapping) {\n    //console.log(o);\n    if (o.bankid.block !== 'none') {\n        var f = bankid_transform_web.find(x => x.name === o.webbank.block);\n        f.mapping.push(o);\n        var i = bankid_transform_bid.find(x => x.name === o.bankid.block);\n        i.mapping.push(o);\n    }\n}\n\n//console.log(bankid_transform_bid);\nconsole.log(bankid_transform_web);\n//console.log(bankid_transform_out);\n\n// Parsing input data\nfor (key in bankid_client) {\n\n    var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;\n    //console.log(\"1 bankid_client[key]\");\n    //console.log(JSON.stringify(bankid_client[key]));\n    //console.log(\"2 bankid_client[key]\");\n    var citem = bankid_client[key]\n    //if (citem instanceof Array) { // do not wort in nodered\n    if (Array.isArray(citem)) { \n        \n        console.log(\"[\" + key + \"][\" + webbank_block + \"] Array \");\n        //console.log(bankid_transform_out[webbank_block]);\n\n        var cnt = 0;\n        var amapi = [];\n        //console.log(\" ++++++++++++[\"+webbank_block+\"][\"+key+\"] \");    \n        var mapr = bankid_transform_bid.find(x => x.name === key).mapping;\n\n        for (a of bankid_client[key]) {\n            var mapi = JSON.parse(JSON.stringify((mapr)));\n            for (o in a) {\n                clog(\"  [\" + cnt + \"][\" + key + \"] \" + o + \"=\" + a[o]);\n                console.log(\"  [\" + cnt + \"][\" + key + \"] \" + o + \"=\" + a[o]);\n                var val = mapi.find(x => x.bankid.code === o);\n                if (val !== undefined) {\n                    val.value = a[o];\n                }\n            }\n            amapi.push(mapi);\n            cnt++;\n        }\n        bankid_transform_out[webbank_block] = amapi;\n    } else {\n        console.log(\"[\" + key + \"] Object\");\n        for (o in bankid_client[key]) {\n            var mapi = bankid_transform_bid.find(x => x.name === key).mapping;\n            var val = mapi.find(x => x.bankid.code === o);\n            console.log(\" [\" + key + \"][\" + o + \"]\"); // val=\" + JSON.stringify(val));\n            if (val !== undefined) {\n                val.value = bankid_client[key][o];\n                console.log(\"  ++++[\" + key + \"][\" + o + \"]=\" + val.value + \"-\" + val.webbank.block);\n                //console.log(\" 00 key=\" + key + \" o=\" + o + \" val=\" + JSON.stringify(val));\n                //console.log(val);\n                bankid_transform_out[val.webbank.block].push(val);\n                // Ищем в знчения по умодчанию в для val.webbank.block\n                var mapw = bankid_transform_web.find(x => x.name === val.webbank.block).mapping;\n                for (d of mapw) {\n                    if (d.bankid.code === o && d.webbank.default !== '') {\n                        var vald = JSON.parse(JSON.stringify(val));\n                        vald.value = d.webbank.default;\n                        vald.webbank.code = d.webbank.code;\n                        bankid_transform_out[val.webbank.block].push(vald);\n                    }\n                }\n            }\n        }\n    }\n}\n// Calculate field from bankid\nvar calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;\n\nfor (item of calcm) {\n    console.log(item); // x.name === a.source !!!! persons\n    var bankid_src = bankid_transform_bid.find(x => x.name === 'person').mapping;\n    console.log(\"bankid_src --------------------------------------------\");\n    console.log(bankid_src);\n\n    var fields = item.bankid.code.split('+');\n    var calculate = \"\";\n    for (f of fields) {\n        var n = bankid_src.find(x => x.bankid.block === 'person' && x.bankid.code === f)\n        //console.log(\"  bankid_fld \"+f+\" \"+n.value + JSON.stringify(n));\n        calculate += n.value + \" \";\n        calculate = calculate;\n    }\n    item.value = calculate.trimRight();\n    var wkey = item.webbank.block;\n    var wfld = item.webbank.code;\n\n    var wblock = bankid_transform_out[wkey];\n    wblock.push(item);\n    wblock = bankid_transform_out[wkey];\n}\n\nconsole.log(\"bankid_transform_out --------------------------------------------\");\nvar fill_data = {};\n// Клиент\nfill_data.client = {};\nfor (item of bankid_transform_out.Client) {\n    if (item.bankid.maps !== undefined && item.bankid.maps !== \"\") {\n        console.log(item.bankid.maps);\n        fill_data.client[item.webbank.code] =\n            get_reftrans(bankid_dicts, item.bankid.maps, item.value);\n    } else\n        fill_data.client[item.webbank.code] = item.value;\n}\n// Персональные данные\nfill_data.indiv = {};\nfor (item of bankid_transform_out.Individuals) {\n    var value = item.value;\n    console.log(item);\n    if (item.bankid.maps !== undefined && item.bankid.maps !== '')\n        value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);\n    if (item.bankid.type === 'date')\n        value = trans_date(value);\n    fill_data.indiv[item.webbank.code] = value;\n}\n\nvar i = 0;\n// Документы\nfill_data.ident = [];\n\nconsole.log('------------ bankid_transform_out.Identifications');\nconsole.log(bankid_transform_out.Identifications);\nconsole.log('------------ bankid_transform_out.Identifications');\n\nfor (item of bankid_transform_out.Identifications) {\n    fill_data.ident[i] = {};\n    for (o of item) {\n        var code = o.webbank.code;\n        var value = o.value;\n        if (o.bankid.type === 'date')\n            value = trans_date(value);\n        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {\n            value = get_reftrans(bankid_dicts, o.bankid.maps, value);\n        }\n        fill_data.ident[i][code] = value;\n        if (fill_data.ident[i]['ExpirationDate'] === '') {\n            fill_data.ident[i]['ExpirationDate'] = '2099-01-01T00:00:00';\n        };\n    }\n    i++;\n}\n// Адреса\nconsole.log(bankid_transform_out.Addresses);\ni = 0;\nfill_data.addr = [];\nfor (item of bankid_transform_out.Addresses) {\n    fill_data.addr[i] = {};\n    for (o of item) {\n        var code = o.webbank.code;\n        var value = o.value;\n        if (o.bankid.type === 'date')\n            value = trans_date(value);\n        if (o.bankid.maps !== undefined && o.bankid.maps.length > 0) {\n            value = get_reftrans(bankid_dicts, o.bankid.maps, value);\n        }\n        fill_data.addr[i][code] = value;\n    }\n    i++;\n}\n// явки пароли телефоны\ni = 0;\nfill_data.comm = [];\nvar comm_codes = [];\nfor (item of bankid_transform_out.Communications) {\n    console.log(item);\n    if (comm_codes.indexOf(item.bankid.code) < 0)\n        comm_codes.push(item.bankid.code);\n}\nconsole.log(comm_codes);\nfor (c of comm_codes) {\n    fill_data.comm[i] = {};\n    console.log(c);\n    for (item of bankid_transform_out.Communications) {\n        var code = item.webbank.code;\n        if (item.bankid.code === c) {\n            console.log('[' + c + '][' + code + '][' + item.value + ']');\n            fill_data.comm[i][code] = item.value;\n        }\n    }\n    i++;\n}\n// Реквизиты\nfill_data.props = [];\ni = 0;\nfor (item of bankid_transform_out.Properties) {\n    if (item.webbank.code !== '') {\n        fill_data.props[i] = {};\n        fill_data.props[i].Refs = item.bankid.maps;\n        fill_data.props[i].Code = item.webbank.code;\n        fill_data.props[i].Dict = item.webbank.dict;\n        fill_data.props[i].Value = item.value;\n\n        if (item.bankid.maps !== undefined && item.bankid.maps.length > 0) {\n            fill_data.props[i].Value =\n                get_reftrans(bankid_dicts, item.bankid.maps, item.value);\n        }\n\n        i++;\n    }\n}\n// MAIN TRANSFORMATOR END-----------------------------------\n\nconsole.log(\"fill_data --------------------------------------------\");\nconsole.log(fill_data);\nconsole.log(\"fill_data --------------------------------------------\");\n\ncreate_out_xml();\ncreate_out_nr();\nif (MODE_WORK_LOCAL !== true) return msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 420,
+        "x": 320,
         "y": 200,
         "wires": [
             [
-                "cab1b021.42a2d",
-                "e4b63362.e39938"
+                "65368dde.b323c4"
             ]
         ]
     },
@@ -968,8 +950,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 140,
-        "y": 60,
+        "x": 460,
+        "y": 80,
         "wires": [
             [
                 "3aaa495a.7669de"
@@ -981,14 +963,14 @@
         "type": "debug",
         "z": "6c70e68d.ef377",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 650,
-        "y": 180,
+        "x": 750,
+        "y": 200,
         "wires": []
     },
     {
@@ -1002,8 +984,8 @@
         "syntax": "mustache",
         "template": "{\n    \"person\": {\n        \"type\": \"physical\",\n        \"lastName\": \"Кетцалькоатль\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"inn\": \"3347780927\",\n        \"birthDay\": \"28.08.1991\",\n        \"sex\": \"M\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\",\n        \"uaResident\": \"1\",\n        \"edication\": \"Бог\"\n    },\n\n    \"extends\": {\n        \"country_citizen\": \"804\",\n        \"marital_status\": \"6\",\n        \"work_info\": \"безроботный\",\n        \"birth_country\": \"804\",\n        \"birth_place\": \"Бердичув\",\n        \"profit_way\": \"2\"\n    },\n\n    \"addresses\": [{\n            \"type\": \"factual\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }\n    ],\n    \"documents\": [{\n            \"type\": \"passport\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateIssue\": \"01.10.1997\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"UA\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"scans\": [{\n            \"type\": \"passport\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        },\n        {\n            \"type\": \"photo\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        }\n    ]\n}",
         "output": "json",
-        "x": 290,
-        "y": 60,
+        "x": 610,
+        "y": 80,
         "wires": [
             [
                 "a83e148c.1f7cb8"
@@ -1021,8 +1003,8 @@
         "syntax": "mustache",
         "template": "[\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"lastName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"LastName\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"firstName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"FirstName\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"middleName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"FatherName\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"calculate\",\n      \"source\": \"person\",\n      \"code\": \"lastName+firstName+middleName\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Client\",\n      \"code\": \"Name\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"inn\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Client\",\n      \"code\": \"StateCode\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"country_citizen\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"FATF_COUNTRY_CITIZEN\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"KL_K040.DBF\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"marital_status\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"MarriageStatus\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"D08\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"sex\",\n      \"maps\": \"sex\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"GENDER\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"D06\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"sex\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"GENDER\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"D06\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"birthDay\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Individuals\",\n      \"code\": \"BirthDay\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"uaResident\",\n      \"maps\": \"resident\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Client\",\n      \"code\": \"Residency\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"KL_K030.DBF\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"type\",\n      \"maps\": \"documents\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"TypeId\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"cfIdentificationTypes\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"series\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Series\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"number\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Number\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"issue\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Registrator\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"dateIssue\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"IssueDate\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"dateExpiration\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"ExpirationDate\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"documents\",\n      \"source\": \"\",\n      \"code\": \"issueCountryIso2\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"CountryCode\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"none\",\n      \"source\": \"\",\n      \"code\": \"none\",\n      \"maps\": \"\",\n      \"type\": \"none\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"Checked\",\n      \"type\": \"int\",\n      \"default\": \"0\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"none\",\n      \"source\": \"\",\n      \"code\": \"none\",\n      \"maps\": \"\",\n      \"type\": \"none\"\n    },\n    \"webbank\": {\n      \"block\": \"Identifications\",\n      \"code\": \"IsMain\",\n      \"type\": \"int\",\n      \"default\": \"0\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"type\",\n      \"maps\": \"addresses\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"TypeCode\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"country\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Country\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"state\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"State\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"area\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Region\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"city\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Town\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"street\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"Street\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"houseNo\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"HouseNumber\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"addresses\",\n      \"source\": \"\",\n      \"code\": \"flatNo\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Addresses\",\n      \"code\": \"FlatNumber\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"true\"\n    }\n  },\n  \n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"socStatus\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagPEPs\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagPersonTerror\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagRestriction\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"flagTopLevelRisk\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"type\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"name\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"scans\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"scanFile\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"content\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"dateCreate\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"tmestamp\",\n      \"type\": \"dete\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"scans\",\n      \"source\": \"\",\n      \"code\": \"extension\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Scans\",\n      \"code\": \"comment\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"work_info\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"\",\n      \"type\": \"\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"phone\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"Value\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"phone\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"TypeId\",\n      \"type\": \"string\",\n      \"default\": \"3\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"email\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"Value\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"email\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"TypeId\",\n      \"type\": \"string\",\n      \"default\": \"5\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"web\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"Value\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"person\",\n      \"source\": \"\",\n      \"code\": \"web\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Communications\",\n      \"code\": \"TypeId\",\n      \"type\": \"string\",\n      \"default\": \"6\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"birth_country\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BIRTH_COUNTRY\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"KL_K040.DBF\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"birth_place\",\n      \"maps\": \"\",\n      \"type\": \"string\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BIRTH_PLACE\",\n      \"type\": \"string\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"profit_way\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROFIT_WAY\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROFIT_WAY\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"profit_src\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BANK_PRODUCT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"FIN_DOCH\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"obsyag_nad\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"OBSYAG_NAD\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"OBSYAG_NAD_1\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"nad_k_3\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"NAD_K_3\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"NAD_K_3\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"monthsumm\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"MONTHSUMM\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"SUMA_DOHOD\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"propetyth_of_client\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROPETYTH_OF_CLIENT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROPETYTH_OF_CLIENT\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"propetyth_of_client_avto\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROPETYTH_OF_CLIENT_AVTO\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROPETYTH_OF_CLIENT_AVTO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"info_outer_acc_sel\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"INFO_OUTER_ACC_SEL\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"INFO_OUTER_ACC\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"exists_cred_out\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"EXISTS_CRED_OUT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"YESNO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"exists_depo_out\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"EXISTS_DEPO_OUT\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"YESNO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"propetypap_of_clientype\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PROPETYPAP_OF_CLIENTYPE\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PROPETYPAP_OF_CLIENTYPE\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"bank_services_manual\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"BANK_SERVICES_MANUAL\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"BANK_SERVICES_MANUAL\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"ugb_tcurelpers\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"UGB_TCURelPers\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"RF_UGB_TCURelPers\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_person_exists\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_PERSON_EXISTS\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"PUBLIC_PERSON_EXISTS\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_data_fact\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_DATA_FACT\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_data_permission\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_DATA_PERMISSION\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"public_data_risk\",\n      \"maps\": \"\",\n      \"type\": \"date\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"PUBLIC_DATA_RISK\",\n      \"type\": \"date\",\n      \"default\": \"\",\n      \"dict\": \"\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"data_zax_per\",\n      \"maps\": \"\",\n      \"type\": \"operation\"\n    },\n    \"webbank\": {\n      \"block\": \"Operations\",\n      \"code\": \"DATA_ZAX_PER\",\n      \"type\": \"operation\",\n      \"default\": \"\",\n      \"dict\": \"operation\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"kl_k013fo\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"KL_K013FO\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"KL_K013_FO\",\n      \"isneed\": \"\"\n    }\n  },\n  {\n    \"bankid\": {\n      \"block\": \"extends\",\n      \"source\": \"\",\n      \"code\": \"usa_chiisares\",\n      \"maps\": \"\",\n      \"type\": \"int\"\n    },\n    \"webbank\": {\n      \"block\": \"Properties\",\n      \"code\": \"Chiisaresident_USA\",\n      \"type\": \"int\",\n      \"default\": \"\",\n      \"dict\": \"YESNO\",\n      \"isneed\": \"\"\n    }\n  }\n]\n",
         "output": "json",
-        "x": 180,
-        "y": 100,
+        "x": 160,
+        "y": 120,
         "wires": [
             [
                 "9ef62c27.4db638"
@@ -1040,8 +1022,8 @@
         "syntax": "mustache",
         "template": "{\n    \"resident\": [\n        {\n            \"ibancode\": \"1\",\n            \"ibanname\": \"uaResident\",\n            \"ibandesc\": \"Резидент\",            \n            \"wbid\": \"1\",\n            \"wbcode\": \"1\",\n            \"wbdesc\": \"Резидент\"\n        },\n        {\n            \"ibancode\": \"0\",\n            \"ibanname\": \"uaResident\",\n            \"ibandesc\": \"Не Резидент\",\n            \"wbid\": \"2\",\n            \"wbcode\": \"2\",\n            \"wbdesc\": \"Не Резидент\"\n        }\n    ],\n    \"sex\": [\n        {\n            \"ibancode\": \"M\",\n            \"ibanname\": \"Man\",\n            \"ibandesc\": \"Чоловіча\",            \n            \"wbid\": \"1\",\n            \"wbcode\": \"1\",\n            \"wbdesc\": \"Чоловіча\"\n        },\n        {\n            \"ibancode\": \"F\",\n            \"ibanname\": \"Woman\",\n            \"ibandesc\": \"Жіноча\",\n            \"wbid\": \"2\",\n            \"wbcode\": \"2\",\n            \"wbdesc\": \"Жіноча\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"ibancode\": \"factual\",\n            \"ibanname\": \"проживання\",\n            \"ibandesc\": \"Адрес проживання\",\n            \"wbid\": \"2\",\n            \"wbcode\": \"2\",\n            \"wbdesc\": \"Фактична адреса\"\n        },\n        {\n            \"ibancode\": \"juridical\",\n            \"ibanname\": \"реєстрації\",\n            \"ibandesc\": \"Адрес реєстрації\",\n            \"wbid\": \"1\",\n            \"wbcode\": \"1\",\n            \"wbdesc\": \"Адреса постійного місця проживання або регістрації\"\n        }\n    ],\n    \"documents\": [\n        {\n            \"ibancode\": \"passport\",\n            \"ibanname\": \"паспорт\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"4\",\n            \"wbcode\": \"4\",\n            \"wbdesc\": \"Паспорт громадянина України\"\n        },\n        {\n            \"ibancode\": \"idpassport\",\n            \"ibanname\": \"паспорт\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"55\",\n            \"wbcode\": \"404\",\n            \"wbdesc\": \"Паспорт (Id-карта)\"\n        },\n        {\n            \"ibancode\": \"zpassport\",\n            \"ibanname\": \"закордонний\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"24\",\n            \"wbcode\": \"42\",\n            \"wbdesc\": \"Паспорт громадянина України для виїзду за кордон\"\n        },\n        {\n            \"ibancode\": \"ident\",\n            \"ibanname\": \"посвідчення особи у відповідності до вимог законодавства України\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"29\",\n            \"wbcode\": \"48\",\n            \"wbdesc\": \"Інші документи, які видаються уповноваженими державними органами і за якими є можливість здійснення однозначної ідентифікації особи\"\n        }\n    ],\n    \"scans\": [\n        {\n            \"ibancode\": \"passport\",\n            \"ibanname\": \"паспорт України\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",           \n            \"wbdesc\": \"Паспорт громадянина України\"\n        },\n        {\n            \"ibancode\": \"idpassport\",\n            \"ibanname\": \"id - картка\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"Паспорт (Id-карта)\"\n        },\n        {\n            \"ibancode\": \"zpassport\",\n            \"ibanname\": \"закордонний\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"Паспорт громадянина України для виїзду за кордон\"\n        },\n        {\n            \"ibancode\": \"inn\",\n            \"ibanname\": \"реєстраційний номер облікової картки платника податків\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"реєстраційний номер облікової картки платника податків\"\n        },\n        {\n            \"ibancode\": \"personalPhoto\",\n            \"ibanname\": \"фото особи(анфас)\",\n            \"ibandesc\": \"\",\n            \"wbid\": \"109\",\n            \"wbcode\": \"109\",   \n            \"wbdesc\": \"фото особи(анфас)\"\n        }\n    ]\n}",
         "output": "json",
-        "x": 490,
-        "y": 100,
+        "x": 570,
+        "y": 120,
         "wires": [
             [
                 "131bc779.f6b2d9"
@@ -1059,8 +1041,8 @@
         "syntax": "mustache",
         "template": "[{\n    \"name\": \"Client\",\n    \"isarray\": false,\n    \"mapping\": []\n},\n{\n    \"name\": \"Individuals\",\n    \"isarray\": false,\n    \"mapping\": [],\n    \"comment\" : \"array\"\n}, \n{\n    \"name\": \"Identifications\",\n    \"isarray\": true,\n    \"mapping\": [],\n    \"comment\" : \"array documents\"\n}, \n{\n    \"name\": \"Addresses\",\n    \"isarray\": true,\n    \"mapping\": [],\n    \"comment\" : \"array\"\n}, \n{\n    \"name\": \"Communications\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"Properties\",\n    \"isarray\": false,\n    \"mapping\": []\n},\n{\n    \"name\": \"Scans\",\n    \"isarray\": true,\n    \"mapping\": [],\n    \"comment\" : \"array\"\n}, \n{\n    \"name\": \"Operations\",\n    \"isarray\": false,\n    \"mapping\": []\n}\n]",
         "output": "json",
-        "x": 200,
-        "y": 140,
+        "x": 180,
+        "y": 160,
         "wires": [
             [
                 "12d121b3.7d430e"
@@ -1078,8 +1060,8 @@
         "syntax": "mustache",
         "template": "[{\n    \"name\": \"person\",\n    \"isarray\": false,\n    \"mapping\": []\n},\n{\n    \"name\": \"addresses\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"documents\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"scans\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"extends\",\n    \"isarray\": true,\n    \"mapping\": []\n},\n{\n    \"name\": \"calculate\",\n    \"isarray\": false,\n    \"mapping\": []\n}\n]",
         "output": "json",
-        "x": 510,
-        "y": 140,
+        "x": 550,
+        "y": 160,
         "wires": [
             [
                 "b9388e0f.7de4b8"
@@ -1094,8 +1076,8 @@
         "links": [
             "51a1ab40.82fa5c"
         ],
-        "x": 615,
-        "y": 220,
+        "x": 655,
+        "y": 240,
         "wires": []
     },
     {
@@ -1106,8 +1088,8 @@
         "links": [
             "e4b63362.e39938"
         ],
-        "x": 75,
-        "y": 380,
+        "x": 255,
+        "y": 240,
         "wires": [
             [
                 "b0a1fd17.70a908"
@@ -1123,8 +1105,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 260,
+        "x": 130,
+        "y": 40,
         "wires": [
             [
                 "13eadf29.d7ae11"
@@ -1138,8 +1120,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 430,
-        "y": 1140,
+        "x": 410,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1156,7 +1138,7 @@
         "proxy": "",
         "authType": "",
         "x": 430,
-        "y": 320,
+        "y": 280,
         "wires": [
             [
                 "254075cb.ff7152"
@@ -1174,7 +1156,7 @@
         "tostatus": false,
         "complete": "false",
         "x": 630,
-        "y": 320,
+        "y": 280,
         "wires": []
     },
     {
@@ -1190,7 +1172,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 120,
-        "y": 320,
+        "y": 280,
         "wires": [
             [
                 "4e2ad381.7aea2c"
@@ -1209,7 +1191,7 @@
         "template": "{\n    \"person\": {\n        \"type\": \"physical\",\n        \"lastName\": \"Кетцалькоатль\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"inn\": \"3347780927\",\n        \"birthDay\": \"28.08.1991\",\n        \"sex\": \"M\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\",\n        \"uaResident\": \"1\",\n        \"edication\": \"Бог\"\n    },\n\n    \"extends\": {\n        \"country_citizen\": \"804\",\n        \"marital_status\": \"6\",\n        \"work_info\": \"безроботный\",\n        \"birth_country\": \"804\",\n        \"birth_place\": \"Бердичув\",\n        \"profit_way\": \"2\"\n    },\n\n    \"addresses\": [{\n            \"type\": \"factual\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }\n    ],\n    \"documents\": [{\n            \"type\": \"passport\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateIssue\": \"01.10.1997\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"UA\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"scans\": [{\n            \"type\": \"passport\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        },\n        {\n            \"type\": \"photo\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        }\n    ]\n}",
         "output": "json",
         "x": 270,
-        "y": 320,
+        "y": 280,
         "wires": [
             [
                 "a347cabd.1a8788"
@@ -1221,11 +1203,11 @@
         "type": "function",
         "z": "6c70e68d.ef377",
         "name": "Init",
-        "func": "msg.workStart = Date.now();\n\nmsg.isRequest = true;\nmsg.isNOA = false;\nif(msg.payload.noa !== undefined)\nmsg.isNOA = true;\n\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\n/*\nif (msg.req.headers['x-auth-token'] !== 'c8ER/H9%p=\";7`:}S%jU<A.eZ@$!BQwn') {\n    node.error(\"Unauthorized\", msg);\n}\n*/\nif (msg.payload  === undefined)\n{\n    node.error(\"Не заданы параметры запроса ....\", msg);\n} else {\n    msg.in = {};\n    msg.in.bankid_cli = msg.payload;\n    return msg;\n}\n",
+        "func": "msg.workStart = Date.now();\n\nmsg.isRequest = true;\nmsg.isNOA = false;\nif(msg.payload.noa !== undefined)\nmsg.isNOA = true;\n\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\n/*\nif (msg.req.headers['x-auth-token'] !== 'c8ER/H9%p=\";7`:}S%jU<A.eZ@$!BQwn') {\n    node.error(\"Unauthorized\", msg);\n}\n*/\nif (msg.payload  === undefined)\n{\n    node.error(\"Не заданы параметры запроса ....\", msg);\n} else {\n    msg.in = {};\n    msg.out = {};\n    msg.in.bankid_cli = msg.payload;\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 330,
-        "y": 260,
+        "x": 310,
+        "y": 40,
         "wires": [
             [
                 "b08ab50c.87c0e8",
@@ -1242,9 +1224,10 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
-        "x": 510,
-        "y": 260,
+        "complete": "true",
+        "targetType": "full",
+        "x": 590,
+        "y": 40,
         "wires": []
     },
     {
@@ -1255,8 +1238,8 @@
         "func": "var workTime = 0;\nmsg.workStop = Date.now();\nworkTime = (msg.workStop - msg.workStart) / 100;\nmsg.workTime = 'Work time is: '+workTime +' msec.';\n\nvar data = msg.payload;\nif(data.length !== 0){\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '200',\n        result : 'ok',\n        time: msg.workTime,\n        path: msg.req.route.path,\n        data : data\n    }\n    return msg;\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '402',\n        message : 'empty',\n        workTime: msg.workTime,\n        error: \"No data for request\",\n        data : []\n    }\n    return msg\n}\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 420,
-        "y": 1100,
+        "x": 400,
+        "y": 960,
         "wires": [
             [
                 "7bdee5fa.a8a774"
@@ -1271,8 +1254,8 @@
         "links": [
             "1edebade.2e6dad"
         ],
-        "x": 175,
-        "y": 1100,
+        "x": 155,
+        "y": 960,
         "wires": [
             [
                 "ce6a6d6f.c81378"
@@ -1287,8 +1270,8 @@
         "links": [
             "dceef801.9e8868"
         ],
-        "x": 115,
-        "y": 1100,
+        "x": 75,
+        "y": 960,
         "wires": []
     },
     {
@@ -1302,12 +1285,78 @@
         "syntax": "mustache",
         "template": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n   <soap:Body>\n      <CreateClientFLResponse xmlns=\"http://tempuri.org/\">\n         <CreateClientFLResult>\n            <ResponseId>12547</ResponseId>\n            <RequestId>12547</RequestId>\n            <Result>1</Result>\n            <HasErrors>false</HasErrors>\n            <Errors/>\n            <Client>\n               <ClientId>3322201</ClientId>\n               <ScroogeId>3282141</ScroogeId>\n               <ClientPushABS>true</ClientPushABS>\n            </Client>\n         </CreateClientFLResult>\n      </CreateClientFLResponse>\n   </soap:Body>\n</soap:Envelope>",
         "output": "str",
-        "x": 280,
-        "y": 1100,
+        "x": 260,
+        "y": 960,
         "wires": [
             [
                 "e5e94d79.160cc"
             ]
         ]
+    },
+    {
+        "id": "7474f410.4516fc",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "in.data",
+        "field": "in.data",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n  \"client\": {\n    \"StateCode\": \"3482817778\",\n    \"Residency\": \"1\",\n    \"Name\": \"Кетцалькоатль Кукумац Кукулькан\"\n  },\n  \"indiv\": {\n    \"LastName\": \"Кетцалькоатль\",\n    \"FirstName\": \"Кукумац\",\n    \"FatherName\": \"Кукулькан\",\n    \"BirthDay\": \"1991-08-28T00:00:00\",\n    \"GENDER\": \"1\",\n    \"MarriageStatus\": \"6\"\n  },\n  \"ident\": [\n    {\n      \"TypeId\": \"4\",\n      \"Series\": \"СН\",\n      \"Number\": \"432311\",\n      \"Registrator\": \"Святошинське РУ ГУ МВС у м.Києві\",\n      \"IssueDate\": \"1997-10-01T00:00:00\",\n      \"ExpirationDate\": \"2099-01-01T00:00:00\",\n      \"CountryCode\": \"UA\"\n    },\n    {\n      \"TypeId\": \"55\",\n      \"Series\": \"\",\n      \"Number\": \"3425654326\",\n      \"Registrator\": \"1456\",\n      \"IssueDate\": \"2020-10-01T00:00:00\",\n      \"ExpirationDate\": \"2040-10-01T00:00:00\",\n      \"CountryCode\": \"UA\"\n    }\n  ],\n  \"addr\": [\n    {\n      \"TypeCode\": \"2\",\n      \"Country\": \"UA\",\n      \"State\": \"Київська\",\n      \"Region\": \"Київ\",\n      \"Town\": \"м. Київ\",\n      \"Street\": \"вул. Бородинского побоища\",\n      \"HouseNumber\": \"21\",\n      \"FlatNumber\": \"16\"\n    },\n    {\n      \"TypeCode\": \"1\",\n      \"Country\": \"UA\",\n      \"State\": \"Київська\",\n      \"Region\": \"Київ\",\n      \"Town\": \"м. Чичен-Ица\",\n      \"Street\": \"вул. пирамида Кукулькана.\",\n      \"HouseNumber\": \"1\",\n      \"FlatNumber\": \"1\"\n    }\n  ],\n  \"comm\": [\n    {\n      \"Value\": \"380631003256\",\n      \"TypeId\": \"3\"\n    },\n    {\n      \"Value\": \"sava@mail.dot.com\",\n      \"TypeId\": \"5\"\n    },\n    {\n      \"Value\": \"www.www.net\",\n      \"TypeId\": \"6\"\n    }\n  ],\n  \"props\": [\n    {\n      \"Refs\": \"\",\n      \"Code\": \"FATF_COUNTRY_CITIZEN\",\n      \"Dict\": \"KL_K040.DBF\",\n      \"Value\": \"804\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"BIRTH_COUNTRY\",\n      \"Dict\": \"KL_K040.DBF\",\n      \"Value\": \"804\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"BIRTH_PLACE\",\n      \"Dict\": \"\",\n      \"Value\": \"Бердичув\"\n    },\n    {\n      \"Refs\": \"\",\n      \"Code\": \"PROFIT_WAY\",\n      \"Dict\": \"PROFIT_WAY\",\n      \"Value\": \"2\"\n    }\n  ]\n}",
+        "output": "json",
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "b0a1fd17.70a908"
+            ]
+        ]
+    },
+    {
+        "id": "65368dde.b323c4",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "in.data",
+        "func": "msg.in.data = msg.out.trans_data;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "e4b63362.e39938",
+                "cab1b021.42a2d"
+            ]
+        ]
+    },
+    {
+        "id": "dd07ca69.db425",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 790,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "22192bb8.b16ac4",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 750,
+        "y": 240,
+        "wires": []
     }
 ]

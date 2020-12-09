@@ -1,5 +1,5 @@
 
-const MODE_WORK_LOCAL = true;
+const MODE_WORK_LOCAL = false;
 const MODE_DEBUG  = true;
 const MODE_TEST = true;
 
@@ -172,10 +172,8 @@ function load_requeries_files(){
     // @TODO - добавить ClientNames TNames
     bankid_mapping = require('./bankid_mapping.json');
     bankid_dicts = require('./dicts_mapping.json');
-
     client_xml_data = require('./client_xml_data.json');
     client_xml_template = require('./client_xml_template.json');
-
     bankid_transform_web = require('./bankid_transform_web.json');
     bankid_transform_bid = require('./bankid_transform_bid.json');
 }
@@ -190,7 +188,7 @@ function load_transform_files(){
 }
 function create_out_nr(){
     if (MODE_WORK_LOCAL === true) return;
-    msg.in.data = fill_data;
+    msg.out.trans_data = fill_data;
 }
 function clog(msg){
     if (MODE_DEBUG === true) 
@@ -229,8 +227,13 @@ console.log(bankid_transform_web);
 for (key in bankid_client) {
 
     var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;
-
-    if (bankid_client[key] instanceof Array) {
+    //console.log("1 bankid_client[key]");
+    //console.log(JSON.stringify(bankid_client[key]));
+    //console.log("2 bankid_client[key]");
+    var citem = bankid_client[key]
+    //if (citem instanceof Array) { // do not wort in nodered
+    if (Array.isArray(citem)) { 
+        
         console.log("[" + key + "][" + webbank_block + "] Array ");
         //console.log(bankid_transform_out[webbank_block]);
 
@@ -279,7 +282,6 @@ for (key in bankid_client) {
         }
     }
 }
-
 // Calculate field from bankid
 var calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
 
@@ -333,6 +335,11 @@ for (item of bankid_transform_out.Individuals) {
 var i = 0;
 // Документы
 fill_data.ident = [];
+
+console.log('------------ bankid_transform_out.Identifications');
+console.log(bankid_transform_out.Identifications);
+console.log('------------ bankid_transform_out.Identifications');
+
 for (item of bankid_transform_out.Identifications) {
     fill_data.ident[i] = {};
     for (o of item) {
