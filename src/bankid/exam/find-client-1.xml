@@ -1,0 +1,616 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <FindClientFLResponse xmlns="http://tempuri.org/">
+         <FindClientFLResult>
+            <Responses>
+               <ResponseId>0</ResponseId>
+               <RequestId>0</RequestId>
+               <Result>1</Result>
+               <HasErrors>false</HasErrors>
+               <Errors/>
+            </Responses>
+            <ClientId>3322205</ClientId>
+            <ScroogeId>3282145</ScroogeId>
+            <Clients>
+               <StateCode>2302812082</StateCode>
+               <Name>Кетцалькоатль Кукумац Кукулькан</Name>
+               <Residency>1</Residency>
+               <Type>1</Type>
+               <SubType>0</SubType>
+               <isTechFlag>0</isTechFlag>
+               <IsOut>0</IsOut>
+               <IsPotential>0</IsPotential>
+               <IsPartner>false</IsPartner>
+               <TreatFlag>0</TreatFlag>
+               <LastChangeDate>2020-12-10T11:49:15.223</LastChangeDate>
+               <IdentDate>2025-12-10T00:00:00</IdentDate>
+               <PrevIdentDate>2020-12-10T00:00:00</PrevIdentDate>
+               <IdentInfo>Дата переид.уст. на срок 60 месяцев согласно низкой категории риска</IdentInfo>
+               <Status>1</Status>
+            </Clients>
+            <Properties>
+               <TPropertiesFind>
+                  <TypeCode>int</TypeCode>
+                  <Code>Education</Code>
+                  <Name>Освіта</Name>
+                  <Value>6</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.25</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>CA_REG</Code>
+                  <Name>код региона контрагента</Name>
+                  <Value>26</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.773</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>INFO_WORK_FROM</Code>
+                  <Name>Место работы</Name>
+                  <Value>Бог</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.25</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>ResearchUser</Code>
+                  <Name>Допрек клиента, для формы ввода анкеты</Name>
+                  <Value>ukrgas\appmb</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-09T22:05:55.207</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>FATF_COUNTRY</Code>
+                  <Name>Код страны регистрации или гражданства</Name>
+                  <Value>804</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.757</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>CITY_CODE</Code>
+                  <Name>Код страны</Name>
+                  <Value>804</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.757</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>FATF_CodObl</Code>
+                  <Name>Kод области по справочнику финансового мониторинга</Name>
+                  <Value>12</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.57</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>CL_FATF_CHECK_RESULT</Code>
+                  <Name>Проверка по списку террористов</Name>
+                  <Value>Клиент Кетцалькоатль Кукумац Кукулькан по состоянию на 10.12.2020 в списке террористов отсутствует.&lt;br> Параметры поиска: [Поиск:[Кетцалькоатль; Кукумац; Кукулькан]: [0 записей]]</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:28:33.943</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>BANK_SERVICES_MANUAL</Code>
+                  <Name>Банковские услуги, которые заполняются пользователем</Name>
+                  <Value>1,111,12,2</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.28</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>PROPETYPAP_OF_CLIENTYPE</Code>
+                  <Name>Назва цінного паперу</Name>
+                  <Value>Відсутні</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.31</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>ECONOMY_SECTION</Code>
+                  <Name>Институционный сектор экономики (К070)</Name>
+                  <Value>14300</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.39</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>int</TypeCode>
+                  <Code>SEASONITY</Code>
+                  <Name>Сезонність</Name>
+                  <Value>1</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.773</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>MONTHSUMM</Code>
+                  <Name>Середньомісячна суме доходів</Name>
+                  <Value>4</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.297</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>PUBLIC_PERSON_EXISTS</Code>
+                  <Name>Інформація про осіб - публічних діячів</Name>
+                  <Value>1;Не належить до публічних діячів;;</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.6</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>datetime</TypeCode>
+                  <Code>First_Date</Code>
+                  <Name>Дата первинного заповнення анкети</Name>
+                  <Value>09.12.2020</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T04:17:40.287</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>BANK_PRODUCT</Code>
+                  <Name>Основні джерела доходів</Name>
+                  <Value>1,11,3</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.28</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>PROPETYTH_OF_CLIENT</Code>
+                  <Name>Наявність нерухомого майна у власності</Name>
+                  <Value>2,3</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.297</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>PROPETYTH_OF_CLIENT_AVTO</Code>
+                  <Name>Наявність рухомого майна</Name>
+                  <Value>2,XX:Колесница богов</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.297</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>logic</TypeCode>
+                  <Code>PASPFOTOCONTROL25</Code>
+                  <Name>Контроль за вклеюванням фотокартки 25</Name>
+                  <Value>1</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.537</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>logic</TypeCode>
+                  <Code>PASPFOTOCONTROL45</Code>
+                  <Name>Контроль за вклеюванням фотокартки 45</Name>
+                  <Value>1</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.553</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>Criterias</Code>
+                  <Name>Репутація клієнта1</Name>
+                  <Value>Задовільна</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.57</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>int</TypeCode>
+                  <Code>BIRTH_COUNTRY</Code>
+                  <Name>Код країни народження</Name>
+                  <Value>804</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-09T22:05:55.143</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>int</TypeCode>
+                  <Code>CARD_GREEN</Code>
+                  <Name>Наявність Зеленої карти</Name>
+                  <Value>2</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.327</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>OBSYAG_NAD</Code>
+                  <Name>Обсяги надходження коштів та інших цінностей на рахунки клієнта</Name>
+                  <Value>3</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.28</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>CUSTOMER_TYPE</Code>
+                  <Name>Тип клієнта</Name>
+                  <Value>клієнт банка-партнера</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.43</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>PROFIT_WAY</Code>
+                  <Name>Шляхи одержання доходу</Name>
+                  <Value>14300</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.263</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>BIRTH_PLACE</Code>
+                  <Name>Місце народження</Name>
+                  <Value>Бердичув</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-09T22:05:55.143</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>int</TypeCode>
+                  <Code>SM_CUSTOMER_TYPE</Code>
+                  <Name>Тип клієнта для перехода по МС</Name>
+                  <Value>0</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.74</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>EXISTS_DEPO_OUT</Code>
+                  <Name>Наявність депозитів в інших банках</Name>
+                  <Value>1</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.31</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>EXISTS_CRED_OUT</Code>
+                  <Name>Наявність кредитів в інших банках</Name>
+                  <Value>1</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.31</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>INFO_OUTER_ACC_SEL</Code>
+                  <Name>Інформація про рахунки в інших банках</Name>
+                  <Value>1,2,4</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.31</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>FATF_COUNTRY_CITIZEN</Code>
+                  <Name>Код країни громадянства</Name>
+                  <Value>804</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-09T22:05:55.143</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>int</TypeCode>
+                  <Code>Client_ZP</Code>
+                  <Name>Клієнт по З/П або соц.виплатам</Name>
+                  <Value>0</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.297</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>FinStateFiz</Code>
+                  <Name>Оцінка фінансового стану фізичної особи</Name>
+                  <Value>Суперово</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.31</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>NAD_K_3</Code>
+                  <Name>Джерела походження  власних коштів</Name>
+                  <Value>2,5</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.297</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>Chiisaresident_USA</Code>
+                  <Name>Податковий резидент США</Name>
+                  <Value>0</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.327</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>Resident_USA</Code>
+                  <Name>Реєстрація/перебування в США</Name>
+                  <Value>0</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.343</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>FATCA</Code>
+                  <Name>FATCA-статус клієнта</Name>
+                  <Value>3</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.343</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>datetime</TypeCode>
+                  <Code>Verifikatsii_date</Code>
+                  <Name>Дата верифікації клієнта</Name>
+                  <Value>02.12.2020</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:38:03.6</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>Customer_verification</Code>
+                  <Name>Спосіб верифікації клієнта</Name>
+                  <Value>2</Value>
+                  <DateFrom xsi:nil="true"/>
+                  <DateInto xsi:nil="true"/>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:42:19.767</Changed>
+               </TPropertiesFind>
+               <TPropertiesFind>
+                  <TypeCode>string</TypeCode>
+                  <Code>K140</Code>
+                  <Name>Код размера субъекта хозяйствования</Name>
+                  <Value>9</Value>
+                  <DateFrom>2020-12-10T00:00:00</DateFrom>
+                  <DateInto>4637-11-27T00:00:00</DateInto>
+                  <Status>1</Status>
+                  <Changed>2020-12-10T11:46:58.61</Changed>
+               </TPropertiesFind>
+            </Properties>
+            <Addresses>
+               <TAddressesFind>
+                  <Id>7202371</Id>
+                  <TypeId>1</TypeId>
+                  <TypeCode>1</TypeCode>
+                  <Country>804</Country>
+                  <PostalCode/>
+                  <State>Київська</State>
+                  <Region/>
+                  <TownshipType>3508</TownshipType>
+                  <Town>м. Чичен-Ица</Town>
+                  <StreetType>3510</StreetType>
+                  <Street>вул. пирамида Кукулькана.</Street>
+                  <HouseType>3511</HouseType>
+                  <HouseNumber>1</HouseNumber>
+                  <FlatType>3506</FlatType>
+                  <FlatNumber>1</FlatNumber>
+                  <LandlinePhoneNumber/>
+                  <PropertyStatus/>
+                  <RegistrationDate xsi:nil="true"/>
+                  <EndDate xsi:nil="true"/>
+                  <Changed>2020-12-09T22:05:54.973</Changed>
+                  <Status>1</Status>
+               </TAddressesFind>
+               <TAddressesFind>
+                  <Id>7202370</Id>
+                  <TypeId>2</TypeId>
+                  <TypeCode>2</TypeCode>
+                  <Country>804</Country>
+                  <PostalCode/>
+                  <State>Київська</State>
+                  <Region/>
+                  <TownshipType>3508</TownshipType>
+                  <Town>м. Київ</Town>
+                  <StreetType>3510</StreetType>
+                  <Street>вул. Бородинского побоища</Street>
+                  <HouseType>3511</HouseType>
+                  <HouseNumber>21</HouseNumber>
+                  <FlatType>3506</FlatType>
+                  <FlatNumber>16</FlatNumber>
+                  <LandlinePhoneNumber/>
+                  <PropertyStatus/>
+                  <RegistrationDate xsi:nil="true"/>
+                  <EndDate xsi:nil="true"/>
+                  <Changed>2020-12-09T22:05:54.973</Changed>
+                  <Status>1</Status>
+               </TAddressesFind>
+            </Addresses>
+            <Communications>
+               <TCommunicationsFind>
+                  <Id>4455805</Id>
+                  <TypeId>3</TypeId>
+                  <TypeCode>3</TypeCode>
+                  <Value>380631003256</Value>
+                  <IsMain>true</IsMain>
+                  <IsVerified>true</IsVerified>
+                  <Note/>
+                  <SourceInfo/>
+                  <Changed>2020-12-09T22:05:55.05</Changed>
+                  <Status>1</Status>
+               </TCommunicationsFind>
+               <TCommunicationsFind>
+                  <Id>4455806</Id>
+                  <TypeId>5</TypeId>
+                  <TypeCode>5</TypeCode>
+                  <Value>sava@mail.dot.com</Value>
+                  <IsMain>true</IsMain>
+                  <IsVerified>true</IsVerified>
+                  <Note/>
+                  <SourceInfo/>
+                  <Changed>2020-12-09T22:05:55.05</Changed>
+                  <Status>1</Status>
+               </TCommunicationsFind>
+               <TCommunicationsFind>
+                  <Id>4455807</Id>
+                  <TypeId>6</TypeId>
+                  <TypeCode>6</TypeCode>
+                  <Value>www.www.net</Value>
+                  <IsMain>true</IsMain>
+                  <IsVerified>true</IsVerified>
+                  <Note/>
+                  <SourceInfo/>
+                  <Changed>2020-12-09T22:05:55.05</Changed>
+                  <Status>1</Status>
+               </TCommunicationsFind>
+            </Communications>
+            <Names>
+               <TNamesFind>
+                  <Id>2986206</Id>
+                  <Lang>RUS</Lang>
+                  <Name>Кетцалькоатль</Name>
+                  <FullName>Кетцалькоатль Кукумац Кукулькан</FullName>
+                  <FullNameR>Кетцалькоатль Кукумац Кукулькан Р</FullNameR>
+                  <FullNameD>Кетцалькоатль Кукумац Кукулькан Д</FullNameD>
+                  <Status>1</Status>
+               </TNamesFind>
+               <TNamesFind>
+                  <Id>2986208</Id>
+                  <Lang>LAT</Lang>
+                  <Name>Ketcal'koatl</Name>
+                  <FullName>Ketcal'koatl Kukumac Kukul'kan</FullName>
+                  <FullNameR/>
+                  <FullNameD/>
+                  <Status>1</Status>
+               </TNamesFind>
+               <TNamesFind>
+                  <Id>2986207</Id>
+                  <Lang>ENG</Lang>
+                  <Name>Ketcal'koatl</Name>
+                  <FullName>Ketcal'koatl Kukumac Kukul'kan</FullName>
+                  <FullNameR/>
+                  <FullNameD/>
+                  <Status>1</Status>
+               </TNamesFind>
+            </Names>
+            <Identifications>
+               <TIdentificationsFind>
+                  <Id>4565569</Id>
+                  <TypeId>4</TypeId>
+                  <TypeCode>4</TypeCode>
+                  <No>1</No>
+                  <Series>СН</Series>
+                  <Number>432311</Number>
+                  <FormSeries/>
+                  <FormNumber/>
+                  <Registrator>Святошинське РУ ГУ МВС у м.Києві</Registrator>
+                  <RegistrationDate xsi:nil="true"/>
+                  <IssueDate>1997-10-01T00:00:00</IssueDate>
+                  <ExpirationDate>2099-01-01T00:00:00</ExpirationDate>
+                  <RecordDate xsi:nil="true"/>
+                  <CheckDate xsi:nil="true"/>
+                  <IsMain>false</IsMain>
+                  <Checked>true</Checked>
+                  <Changed>2020-12-09T22:05:54.88</Changed>
+                  <Status>1</Status>
+               </TIdentificationsFind>
+               <TIdentificationsFind>
+                  <Id>4565570</Id>
+                  <TypeId>55</TypeId>
+                  <TypeCode>404</TypeCode>
+                  <No>1</No>
+                  <Series/>
+                  <Number>3425654326</Number>
+                  <FormSeries/>
+                  <FormNumber/>
+                  <Registrator>1456</Registrator>
+                  <RegistrationDate xsi:nil="true"/>
+                  <IssueDate>2020-10-01T00:00:00</IssueDate>
+                  <ExpirationDate>2040-10-01T00:00:00</ExpirationDate>
+                  <RecordDate xsi:nil="true"/>
+                  <CheckDate xsi:nil="true"/>
+                  <IsMain>false</IsMain>
+                  <Checked>true</Checked>
+                  <Changed>2020-12-09T22:05:54.88</Changed>
+                  <Status>1</Status>
+               </TIdentificationsFind>
+            </Identifications>
+            <BusinessActivities/>
+            <Relations/>
+            <Individuals>
+               <FirstName>Кукумац</FirstName>
+               <LastName>Кетцалькоатль</LastName>
+               <FatherName>Кукулькан</FatherName>
+               <Gender>1</Gender>
+               <BirthDay>1991-08-28T00:00:00</BirthDay>
+               <BirthSurname>Кетцалькоатль</BirthSurname>
+               <MarriageStatus>6</MarriageStatus>
+               <Changed>2020-12-10T11:49:15.223</Changed>
+               <Status>1</Status>
+            </Individuals>
+         </FindClientFLResult>
+      </FindClientFLResponse>
+   </soap:Body>
+</soap:Envelope>

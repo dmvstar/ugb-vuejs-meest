@@ -1,10 +1,11 @@
 
-const MODE_WORK_LOCAL = false;
+const MODE_WORK_LOCAL = true;
+if (typeof msg != "undefined") MODE_WORK_LOCAL = false;
 const MODE_DEBUG  = true;
 const MODE_TEST = true;
 
 var bankid_client;// = require('./bankid-cli-1.json');
-// @TODO - добавить ClientNames TNames
+// @TODO - добавить ClientNames TNames + Тип клієнта* + Дата верифікації клієнта + Спосіб верифікації клієнта
 var bankid_mapping;// = require('./bankid_mapping.json');
 var bankid_dicts;// = require('./dicts_mapping.json');
 var client_xml_data;// = require('./client_xml_data.json');
@@ -234,7 +235,7 @@ for (key in bankid_client) {
     //if (citem instanceof Array) { // do not wort in nodered
     if (Array.isArray(citem)) { 
         
-        console.log("[" + key + "][" + webbank_block + "] Array ");
+        clog("[" + key + "][" + webbank_block + "] Array ");
         //console.log(bankid_transform_out[webbank_block]);
 
         var cnt = 0;
@@ -257,11 +258,11 @@ for (key in bankid_client) {
         }
         bankid_transform_out[webbank_block] = amapi;
     } else {
-        console.log("[" + key + "] Object");
+        clog("[" + key + "] Object");
         for (o in bankid_client[key]) {
             var mapi = bankid_transform_bid.find(x => x.name === key).mapping;
             var val = mapi.find(x => x.bankid.code === o);
-            console.log(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
+            clog(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
                 console.log("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
