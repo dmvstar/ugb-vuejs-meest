@@ -515,13 +515,13 @@
       "block": "person",
       "source": "",
       "code": "flagPersonTerror",
-      "maps": "",
+      "maps": "terrorist",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
-      "code": "",
-      "type": "int",
+      "code": "CL_FATF_CHECK_RESULT",
+      "type": "string",
       "default": "",
       "dict": "",
       "isneed": ""

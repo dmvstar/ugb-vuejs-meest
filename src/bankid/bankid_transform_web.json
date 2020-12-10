@@ -16,6 +16,12 @@
     "comment" : "array documents"
 }, 
 {
+    "name": "ClientNames",
+    "isarray": true,
+    "mapping": [],
+    "comment" : "array of names"
+}, 
+{
     "name": "Addresses",
     "isarray": true,
     "mapping": [],

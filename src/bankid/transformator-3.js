@@ -1,8 +1,8 @@
 
-const MODE_WORK_LOCAL = true;
+var MODE_WORK_LOCAL = true;
 if (typeof msg != "undefined") MODE_WORK_LOCAL = false;
-const MODE_DEBUG  = true;
-const MODE_TEST = true;
+var MODE_DEBUG  = true;
+var MODE_TEST = true;
 
 var bankid_client;// = require('./bankid-cli-1.json');
 // @TODO - добавить ClientNames TNames + Тип клієнта* + Дата верифікації клієнта + Спосіб верифікації клієнта
@@ -20,8 +20,8 @@ function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
     for (o of refmaps[idrefcode]) {
         //console.log(' get_reftrans'+ JSON.stringify(o));
-        if (o.ibancode === idvalue) {
-            ret = o.wbid;
+        if (o.bankidcode === idvalue) {
+            ret = o.webbankid;
             break;
         }
     }

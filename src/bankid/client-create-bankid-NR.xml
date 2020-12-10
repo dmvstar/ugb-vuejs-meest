@@ -17,7 +17,7 @@
             <tem:SendToScrooge>1</tem:SendToScrooge>
 
             <tem:Clients>
-               <tem:StateCode>2302812082</tem:StateCode>
+               <tem:StateCode>2783015398</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -28,6 +28,7 @@
                <tem:IsPartner>false</tem:IsPartner>
                <tem:Status>1</tem:Status>
             </tem:Clients>
+
             
             <tem:Individuals>
                <tem:FirstName>Кукумац</tem:FirstName>
@@ -146,6 +147,9 @@
             
             <tem:Properties>
                 <tem:TProperties>
+                  <tem:Code>CL_FATF_CHECK_RESULT</tem:Code>
+                  <tem:Value>Клиент являестя террористом соглано данных bankid</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
                   <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
                   <tem:Value>804</tem:Value>
                 </tem:TProperties>                <tem:TProperties>

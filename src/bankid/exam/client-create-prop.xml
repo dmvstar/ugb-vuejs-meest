@@ -1,26 +1,14 @@
 <Properties>
 	<TProperties>
-		<Code>
-			FIN_STATE
-		</Code>
-		<Value>
-			111 Відповідає
-		</Value>
+		<Code>FIN_STATE</Code>
+		<Value>111 Відповідає</Value>
 	</TProperties>
 	<TProperties>
-		<Code>
-			CL_FATF_CHECK_RESULT
-		</Code>
-		<Value>
-			Таки не нашли и таки не террорист наверное
-		</Value>
+		<Code>CL_FATF_CHECK_RESULT</Code>
+		<Value>Таки не нашли и таки не террорист наверное</Value>
 	</TProperties>
 	<TProperties>
-		<Code>
-			PUBLIC_PERSON_EXISTS
-		</Code>
-		<Value>
-			4
-		</Value>
+		<Code>PUBLIC_PERSON_EXISTS</Code>
+		<Value>4</Value>
 	</TProperties>
 </Properties>
