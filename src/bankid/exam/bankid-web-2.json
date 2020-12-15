@@ -1,0 +1,111 @@
+{
+    "code": "200",
+    "result": "ok",
+    "time": "Work time is: 11.52 msec.",
+    "path": "/webbank/clients/bankid/phone",
+    "data": {
+        "person": {
+            "webbankId": 199785,
+            "inn": "2949404835",
+            "name": "Бабій Богдан Вікторович",
+            "cliId": "362918",
+            "cliCode": "UGB.165687",
+            "lastName": "Бабій",
+            "firstName": "Богдан",
+            "middleName": "Вікторович",
+            "birtDay": "01.10.1980",
+            "birthSurname": "",
+            "gender": 1,
+            "sex": "M",
+            "marriageStatus": 2,
+            "phone": "+380979622317"
+        },
+        "addresses": [
+            {
+                "typeId": 1,
+                "desc": "Адреса постійного місця проживання або регістрації",
+                "type": "juridical",
+                "state": "Вінницька область",
+                "postalCode": "23233",
+                "city": "Бохоники",
+                "street": "Миколаївська",
+                "houseNo": "16",
+                "flatNo": "83",
+                "country": "UA"
+            },
+            {
+                "typeId": 2,
+                "desc": "Фактична адреса",
+                "type": "factual",
+                "state": "Вінницька область",
+                "postalCode": "23233",
+                "city": "Бохоники",
+                "street": " Миколаївська",
+                "houseNo": "16",
+                "flatNo": "83",
+                "country": "UA"
+            },
+            {
+                "typeId": 9,
+                "desc": "Мiсце народження",
+                "type": "unknown",
+                "state": null,
+                "postalCode": null,
+                "city": "м.Камянець-Подільський Хмельницької області",
+                "street": null,
+                "houseNo": null,
+                "flatNo": null
+            }
+        ],
+        "documents": [
+            {
+                "typeId": 4,
+                "typeName": "Паспорт громадянина України",
+                "type": "passport",
+                "series": "АТ",
+                "number": "083005",
+                "dateIssue": "29.04.2014",
+                "dateExpiration": null,
+                "documentName": "Паспорт",
+                "issue": "Вінницьким РС УДМС України у Вінницькій обл.",
+                "issueCountryIso2": "UA"
+            },
+            {
+                "typeId": 24,
+                "typeName": "Паспорт громадянина України для виїзду за кордон",
+                "type": "zpassport",
+                "series": "ФФ",
+                "number": "123445",
+                "dateIssue": "01.01.2019",
+                "dateExpiration": "01.01.2022",
+                "documentName": "Паспорт громадянина України для виїзду за кордон",
+                "issue": "1255",
+                "issueCountryIso2": "UA"
+            },
+            {
+                "typeId": 32,
+                "typeName": "Довідка про взяття на облік платника податків",
+                "type": "ident",
+                "series": "",
+                "number": "",
+                "dateIssue": null,
+                "dateExpiration": null,
+                "documentName": null,
+                "issue": "2949404835",
+                "issueCountryIso2": "UA"
+            },
+            {
+                "typeId": 55,
+                "typeName": "Паспорт (Id-карта)",
+                "type": "idpassport",
+                "series": "",
+                "number": "123332232",
+                "dateIssue": "01.01.2020",
+                "dateExpiration": "01.01.2045",
+                "documentName": "Паспорт (Id-карта)",
+                "issue": "2311",
+                "issueCountryIso2": "UA"
+            }
+        ]
+    }
+}
