@@ -9,3 +9,16 @@
     "content": "base64"
   }
 }
+
+
+{
+  "requestRef": 134549,
+  "data": {
+    "ownerId": "{{{msg.out.cliId}}}",
+    "fileTypeId": 109,
+    "name": "passport.jpg",
+    "comment": "Паспорт",
+    "checkSign": false,
+    "content": "{{{msg.in.docs.pass}}}"
+  }
+}
