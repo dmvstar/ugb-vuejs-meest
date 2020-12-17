@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RegisterOperation xmlns="http://www.ukrgasbank.com">
+    <TransferId>46141159</TransferId>
+    <TransferNumber>12855480867</TransferNumber>
+    <SystemCode>ri</SystemCode>
+    <SystemName>RIA</SystemName>
+    <Operation>2</Operation>
+    <Type>1</Type>
+    <OperationDate>2020-12-15T14:29:49+02:00</OperationDate>
+    <PayoutDate>2020-12-15T14:29:03+02:00</PayoutDate>
+    <OperationCashDesk>0</OperationCashDesk>
+    <ABSDate>2020-12-15T00:00:00+02:00</ABSDate>
+    <TransferAmount>200.0000</TransferAmount>
+    <FromCountry>380</FromCountry>
+    <ToCountry>804</ToCountry>
+    <!-- тут С у ФП  - кириллица -->
+    <TransferCurrency>978</TransferCurrency>
+    <PointBank>1000024</PointBank>
+    <PointSW>GASB0206</PointSW>
+    <UserLogin>orybak</UserLogin>
+    <UserName>Рибак Олена Валеріївна</UserName>
+    <UserID>12438</UserID>
+    <Sender>
+        <LastName>VOZNIUK</LastName>
+        <FirstName>NATALIIA</FirstName>
+        <Residency>false</Residency>
+        <DocumentName>PASSAPORTO</DocumentName>
+        <DocumentSeries>EX</DocumentSeries>
+        <DocumentNumber>980622</DocumentNumber>
+        <DocumentIssuedBy>GOVERNO</DocumentIssuedBy>
+
+        <DateofBirth>1985-09-05</DateofBirth>
+        <BirthPlace>место рождения</BirthPlace>
+    </Sender>
+    <Receiver>
+        <LastName>POVOROZNYK</LastName>
+        <FirstName>VIKTOR</FirstName>
+        <Residency>true</Residency>
+        <DocumentName>PASSPORT</DocumentName>
+        <DocumentSeries>HB</DocumentSeries>
+        <DocumentNumber>007183</DocumentNumber>
+        <DocumentIssueDate>2001-10-10</DocumentIssueDate>
+        <DocumentIssuedBy>TEOFIOPOLSKIM RO UMVD V KHMELNICKOJ OBL</DocumentIssuedBy>
+        <DateofBirth>1985-09-05</DateofBirth>
+
+        <BirthPlace>место рождения</BirthPlace>
+    </Receiver>
+</RegisterOperation>
