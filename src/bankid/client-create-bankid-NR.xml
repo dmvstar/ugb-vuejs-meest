@@ -1,23 +1,23 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header>
-      <tem:AuthSoapHeader xmlns:tem="http://tempuri.org/">
+      <tem:AuthSoapHeader>
         <tem:Login>istest</tem:Login>
          <tem:Password>gfhjk</tem:Password>
       </tem:AuthSoapHeader>
    </soapenv:Header>
    
    <soapenv:Body>
-      <tem:CreateClientFL xmlns:tem="http://tempuri.org/">
+      <tem:CreateClientFL>
          <tem:client>
             <tem:Request>
                <tem:RequestId>12547</tem:RequestId>
                <tem:UserLogin>UKRGAS\appmb</tem:UserLogin>
             </tem:Request>
-            <!--tem:ClientId&gt;1747753&lt;/tem:ClientId-->
+            <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
 
             <tem:Clients>
-               <tem:StateCode>2791711211</tem:StateCode>
+               <tem:StateCode>2722117534</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -73,9 +73,9 @@
                   <tem:TypeId>2</tem:TypeId>
                   <tem:TypeCode>2</tem:TypeCode>
                   <tem:Country>804</tem:Country>
-                  <!--tem:PostalCode&gt;14017&lt;/tem:PostalCode-->
+                  <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Київська</tem:State>
-                  <tem:Region></tem:Region>
+                  <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
                   <tem:Town>м. Київ</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
@@ -84,17 +84,17 @@
                   <tem:HouseNumber>21</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
                   <tem:FlatNumber>16</tem:FlatNumber>
-                  <tem:LandlinePhoneNumber></tem:LandlinePhoneNumber>
-                  <tem:PropertyStatus></tem:PropertyStatus>
+                  <tem:LandlinePhoneNumber/>
+                  <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
                </tem:TAddresses>               
                <tem:TAddresses>
                   <tem:TypeId>1</tem:TypeId>
                   <tem:TypeCode>1</tem:TypeCode>
                   <tem:Country>804</tem:Country>
-                  <!--tem:PostalCode&gt;14017&lt;/tem:PostalCode-->
+                  <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Київська</tem:State>
-                  <tem:Region></tem:Region>
+                  <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
                   <tem:Town>м. Чичен-Ица</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
@@ -103,8 +103,8 @@
                   <tem:HouseNumber>1</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
                   <tem:FlatNumber>1</tem:FlatNumber>
-                  <tem:LandlinePhoneNumber></tem:LandlinePhoneNumber>
-                  <tem:PropertyStatus></tem:PropertyStatus>
+                  <tem:LandlinePhoneNumber/>
+                  <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
                </tem:TAddresses>
             
@@ -118,8 +118,8 @@
                   <tem:Value>380631003256</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
-                  <tem:Note></tem:Note>
-                  <tem:SourceInfo></tem:SourceInfo>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
                <tem:TCommunications>
@@ -128,8 +128,8 @@
                   <tem:Value>sava@mail.dot.com</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
-                  <tem:Note></tem:Note>
-                  <tem:SourceInfo></tem:SourceInfo>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
                <tem:TCommunications>
@@ -138,8 +138,8 @@
                   <tem:Value>www.www.net</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
-                  <tem:Note></tem:Note>
-                  <tem:SourceInfo></tem:SourceInfo>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
 

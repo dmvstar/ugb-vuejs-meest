@@ -2,7 +2,7 @@
     {
         "id": "6c70e68d.ef377",
         "type": "tab",
-        "label": "BankId",
+        "label": "BankID-C",
         "disabled": false,
         "info": ""
     },
@@ -182,21 +182,6 @@
         ]
     },
     {
-        "id": "3f578485.4b15f4",
-        "type": "xmlc14n",
-        "z": "6c70e68d.ef377",
-        "name": "",
-        "x": 520,
-        "y": 920,
-        "wires": [
-            [
-                "a68a72e9.06f5d",
-                "4e145266.de7304",
-                "4999478a.da4ac8"
-            ]
-        ]
-    },
-    {
         "id": "77b08b8c.6f67ac",
         "type": "template",
         "z": "6c70e68d.ef377",
@@ -211,7 +196,9 @@
         "y": 920,
         "wires": [
             [
-                "3f578485.4b15f4"
+                "a68a72e9.06f5d",
+                "4999478a.da4ac8",
+                "4e145266.de7304"
             ]
         ]
     },
@@ -1075,12 +1062,12 @@
         "id": "d4c6ebf6.64e628",
         "type": "http in",
         "z": "6c70e68d.ef377",
-        "name": "/clients/bankid/client",
+        "name": "",
         "url": "/clients/bankid/client",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 130,
+        "x": 150,
         "y": 40,
         "wires": [
             [
@@ -1104,12 +1091,12 @@
         "type": "function",
         "z": "6c70e68d.ef377",
         "name": "Init",
-        "func": "msg.isRequest = true;\nmsg.isAWS = false;\n\nmsg.workStart = Date.now();\nmsg.out = {};\n\nmsg.isNOA = false;\nif(msg.payload.noa !== undefined)\nmsg.isNOA = true;\n\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\n/*\nif (msg.req.headers['x-auth-token'] !== 'c8ER/H9%p=\";7`:}S%jU<A.eZ@$!BQwn') {\n    node.error(\"Unauthorized\", msg);\n}\n*/\nif (msg.payload  === undefined)\n{\n    node.error(\"Не заданы параметры запроса ....\", msg);\n} else {\n    msg.in = {};\n    msg.out = {};\n    msg.in.bankid_cli = msg.payload;\n    return msg;\n}\n",
+        "func": "msg.isRequest = true;\nmsg.isAWS = false;\nif(env.get(\"ENVIRONMENT\") !== undefined)  msg.isAWS = true;\n\nmsg.workStart = Date.now();\nmsg.out = {};\n\nmsg.isNOA = false;\nif(msg.payload.noa !== undefined)\nmsg.isNOA = true;\n\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\n/*\nif (msg.req.headers['x-auth-token'] !== 'c8ER/H9%p=\";7`:}S%jU<A.eZ@$!BQwn') {\n    node.error(\"Unauthorized\", msg);\n}\n*/\nif (msg.payload  === undefined)\n{\n    node.error(\"Не заданы параметры запроса ....\", msg);\n} else {\n    msg.in = {};\n    msg.out = {};\n    msg.in.bankid_cli = msg.payload;\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 310,
+        "x": 350,
         "y": 40,
         "wires": [
             [
@@ -1166,7 +1153,7 @@
         "y": 1080,
         "wires": [
             [
-                "7efea52b.39b50c"
+                "c63b7025.e3e99"
             ]
         ]
     },
@@ -1270,7 +1257,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n  \"requestRef\": 134549,\n  \"data\": {\n    \"ownerId\": \"{{{out.cliId}}}\",\n    \"fileTypeId\": 109,\n    \"name\": \"{{payload.type}}.{{payload.extension}}\",\n    \"comment\": \"{{payload.type}}\",\n    \"checkSign\": false,\n    \"content\": \"{{{in.docs.pass}}}\"\n  }\n}",
+        "template": "{\n  \"requestRef\": 134549,\n  \"data\": {\n    \"ownerId\": \"{{{out.cliId}}}\",\n    \"fileTypeId\": 109,\n    \"name\": \"{{payload.type}}.{{payload.extension}}\",\n    \"comment\": \"{{payload.type}}\",\n    \"checkSign\": false,\n    \"mode\" : \"sync\",\n    \"content\": \"{{{in.docs.pass}}}\"\n  }\n}",
         "output": "json",
         "x": 460,
         "y": 1280,
@@ -1422,7 +1409,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 580,
+        "x": 660,
         "y": 1220,
         "wires": [
             [
@@ -1491,16 +1478,16 @@
         "id": "32bf8f49.65554",
         "type": "http request",
         "z": "6c70e68d.ef377",
-        "name": "",
+        "name": "LOC clients/bankid/client",
         "method": "POST",
         "ret": "obj",
-        "paytoqs": false,
+        "paytoqs": "ignore",
         "url": "http://localhost:1880/clients/bankid/client",
         "tls": "",
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 430,
+        "x": 470,
         "y": 1460,
         "wires": [
             [
@@ -1518,22 +1505,9 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 650,
+        "x": 710,
         "y": 1460,
         "wires": []
-    },
-    {
-        "id": "7efea52b.39b50c",
-        "type": "xmlc14n",
-        "z": "6c70e68d.ef377",
-        "name": "",
-        "x": 520,
-        "y": 1080,
-        "wires": [
-            [
-                "c63b7025.e3e99"
-            ]
-        ]
     },
     {
         "id": "582ac393.fd2fe4",
@@ -1685,8 +1659,8 @@
         "links": [
             "c2f240a7.3f3cf8"
         ],
-        "x": 235,
-        "y": 1900,
+        "x": 55,
+        "y": 1740,
         "wires": [
             [
                 "9e7419fd.18c7"
@@ -1713,8 +1687,8 @@
         "links": [
             "65016abe.e34274"
         ],
-        "x": 495,
-        "y": 1900,
+        "x": 995,
+        "y": 1740,
         "wires": []
     },
     {
@@ -1727,11 +1701,11 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 360,
-        "y": 1900,
+        "x": 180,
+        "y": 1740,
         "wires": [
             [
-                "ed9ed034.74417"
+                "f9a01698.20447"
             ]
         ]
     },
@@ -1821,7 +1795,7 @@
         "y": 1120,
         "wires": [
             [
-                "7efea52b.39b50c"
+                "c63b7025.e3e99"
             ]
         ]
     },
@@ -1854,7 +1828,7 @@
         "initialize": "",
         "finalize": "",
         "x": 280,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "3c995857.9d829"
@@ -1874,7 +1848,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "d0519aa8.8b66c8"
@@ -1892,7 +1866,7 @@
         "tostatus": false,
         "complete": "false",
         "x": 470,
-        "y": 1520,
+        "y": 1580,
         "wires": []
     },
     {
@@ -1926,7 +1900,7 @@
         "name": "WB kv-v-is3-pr",
         "method": "POST",
         "ret": "txt",
-        "paytoqs": false,
+        "paytoqs": "ignore",
         "url": "https://10.1.16.4/Webbank/WebServices/WorkWithClients/ClientApi.asmx",
         "tls": "",
         "persist": false,
@@ -2023,6 +1997,292 @@
             ],
             [
                 "79cd0bb1.18afec"
+            ]
+        ]
+    },
+    {
+        "id": "50a854a3.520d6c",
+        "type": "inject",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1500,
+        "wires": [
+            [
+                "5372864.b33e2f8"
+            ]
+        ]
+    },
+    {
+        "id": "5372864.b33e2f8",
+        "type": "template",
+        "z": "6c70e68d.ef377",
+        "name": "in.bankid_cli",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"person\": {\n        \"type\": \"physical\",\n        \"lastName\": \"Кетцалькоатль\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"inn\": \"3347780927\",\n        \"birthDay\": \"28.08.1991\",\n        \"sex\": \"M\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\",\n        \"uaResident\": \"1\",\n        \"flagPersonTerror\": \"1\",\n        \"edication\": \"Бог\"\n    },\n\n    \"extends\": {\n        \"country_citizen\": \"804\",\n        \"marital_status\": \"6\",\n        \"work_info\": \"безроботный\",\n        \"birth_country\": \"804\",\n        \"birth_place\": \"Бердичув\",\n        \"profit_way\": \"2\"\n    },\n\n    \"addresses\": [{\n            \"type\": \"factual\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }\n    ],\n    \"documents\": [{\n            \"type\": \"passport\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateIssue\": \"01.10.1997\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"UA\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"scans\": [{\n            \"type\": \"passport\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        },\n        {\n            \"type\": \"photo\",\n            \"scanFile\": \"BASE64\",\n            \"dateCreate\": \"dd.mm.yyyy\",\n            \"extension\": \"jpg\"\n\n        }\n    ]\n}",
+        "output": "json",
+        "x": 270,
+        "y": 1500,
+        "wires": [
+            [
+                "6b2f862e.0289b8"
+            ]
+        ]
+    },
+    {
+        "id": "6b2f862e.0289b8",
+        "type": "http request",
+        "z": "6c70e68d.ef377",
+        "name": "AWS clients/bankid/client",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://nr-clients.dev.ukrgasaws.com/clients/bankid/client",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 470,
+        "y": 1500,
+        "wires": [
+            [
+                "7102858e.2994cc"
+            ]
+        ]
+    },
+    {
+        "id": "7102858e.2994cc",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "85beb736.71fec",
+        "type": "catch",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "scope": [
+            "45939b73.f38734",
+            "71b88201.d4e9dc",
+            "b9388e0f.7de4b8"
+        ],
+        "uncaught": false,
+        "x": 830,
+        "y": 40,
+        "wires": [
+            [
+                "92586c11.d93c6"
+            ]
+        ]
+    },
+    {
+        "id": "92586c11.d93c6",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "Reply Err",
+        "func": "var workTime = 0;\nmsg.workStop = Date.now();\nworkTime = (msg.workStop - msg.workStart) / 100;\nmsg.workTime = 'Work time is: '+workTime +' msec.';\n\nvar data = msg.payload;\nif(data.length !== 0){\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '402',\n        result : 'error',\n        time: msg.workTime,\n        path: msg.req.route.path,\n        data : data\n    }\n    return msg;\n} \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 980,
+        "y": 40,
+        "wires": [
+            [
+                "6730701a.3ab138"
+            ]
+        ]
+    },
+    {
+        "id": "85b6927.76eecf",
+        "type": "http response",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5db48677.e5a668",
+        "type": "debug",
+        "z": "6c70e68d.ef377",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6730701a.3ab138",
+        "type": "switch",
+        "z": "6c70e68d.ef377",
+        "name": "isRequest",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 840,
+        "y": 80,
+        "wires": [
+            [
+                "85b6927.76eecf"
+            ],
+            [
+                "5db48677.e5a668"
+            ]
+        ]
+    },
+    {
+        "id": "f9a01698.20447",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "getToken",
+        "func": "msg.wpTokenInfo = global.get('WP_TOKEN');\n\nmsg.workDir = 'LOC';\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    msg.wpHost = 'kv-v-webpl-pr1.ukrgas.bank.local';    \n} else if (msg.workDir == \"DEV\") {\n    msg.wpHost = 'kv-v-webpl-pp1';\n}\n\nif( msg.wpTokenInfo === undefined)\n    node.error('Token not found !', msg);   \nelse\n    return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 1700,
+        "wires": [
+            [
+                "cbe1e3d9.915eb8"
+            ]
+        ]
+    },
+    {
+        "id": "d90ef988.ccaa28",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "🡹P/D/L🡻",
+        "func": "msg.workDir = 'LOC';\nif(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\nif (msg.workDir == \"PRO\") {\n    return [msg, null, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg, null];\n} else if (msg.workDir == \"LOC\") {\n    return [null, null, msg];\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 520,
+        "y": 1740,
+        "wires": [
+            [
+                "1071f463.fbf15c"
+            ],
+            [
+                "f4ba4f34.a24a18"
+            ],
+            [
+                "f4ba4f34.a24a18"
+            ]
+        ]
+    },
+    {
+        "id": "1071f463.fbf15c",
+        "type": "http request",
+        "z": "6c70e68d.ef377",
+        "name": "PR FileApi/files PUT",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "http://10.1.16.44/WebPlatform/api/v1/FileApi/files",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 720,
+        "y": 1720,
+        "wires": [
+            [
+                "ca6796e8.a9889"
+            ]
+        ]
+    },
+    {
+        "id": "f4ba4f34.a24a18",
+        "type": "http request",
+        "z": "6c70e68d.ef377",
+        "name": "PP FileApi/files PUT",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "http://10.1.16.40/WebPlatform/api/v1/FileApi/files",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 720,
+        "y": 1760,
+        "wires": [
+            [
+                "ca6796e8.a9889"
+            ]
+        ]
+    },
+    {
+        "id": "ca6796e8.a9889",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": ">>>",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 890,
+        "y": 1740,
+        "wires": [
+            [
+                "ed9ed034.74417"
+            ]
+        ]
+    },
+    {
+        "id": "cbe1e3d9.915eb8",
+        "type": "function",
+        "z": "6c70e68d.ef377",
+        "name": "headers",
+        "func": "var tokenInfo = msg.wpTokenInfo;\nvar requestRef = Math.floor(100000 + Math.random() * 900000);\nmsg.requestRef = requestRef;\n\nmsg.headers = {};\nmsg.headers[\"authorization\"] = \"Bearer \"+tokenInfo.token;\nmsg.headers[\"accept\"] = \"application/json\";\nmsg.headers[\"Host\"] = tokenInfo.wpHost;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 1760,
+        "wires": [
+            [
+                "d90ef988.ccaa28"
             ]
         ]
     }
