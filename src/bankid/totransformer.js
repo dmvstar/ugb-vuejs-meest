@@ -1,3 +1,7 @@
+// Прямое преобразование из структуры типа BankId в WebBank XML 
+// RUN 
+// export NODE_PATH="$(npm root -g)"
+// node retransformer.js  totransformer.js
 
 var MODE_WORK_LOCAL = true;
 if (typeof msg != "undefined") MODE_WORK_LOCAL = false;
