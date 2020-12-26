@@ -95,7 +95,7 @@
                                             <h3 class="red--text">Result SQL</h3>
                                         </v-col>
                                     </v-row>
-                                    
+
                                     <v-row>
                                         <v-col cols="12" sm="12">
                                             <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
@@ -186,17 +186,69 @@
 
             methods: {
 
-                onButtonExecuteSQL: function (item) {
+                onButtonExecuteSQL: async function (item) {
                     var view = this.from;
                     var sql = Mustache.render(this.sql.template, view);
                     this.sql.query = sql;
                     this.result = this.result_test;
+
+                    await this.exequteRequest();
+
                 },
                 
                 onButtonCopyClick: async function (item) {
                     //alert(item.message);
                     await navigator.clipboard.writeText(item.message);
-                }
+                },
+                exequteRequest: async function() {
+
+                    var headers = {
+                    "accept": "application/json", "Content-Type": "application/json", "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+                    "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
+                    "x-post-pathto": "common/logger/syslog/", "x-post-method": "select"
+                    };
+                    var realUrl = "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/";
+//alert("exequteRequest");
+                    var result = {};
+                    let base64data = btoa(this.sql.query);
+//alert(base64data);
+                    var request = {
+                        data: base64data
+                    };
+
+                    const requestOptions = {
+                    method: "POST",
+                    headers: headers,
+                    body: JSON.stringify(request)
+                    };
+
+                    await fetch(realUrl, requestOptions)
+                    .then(async response => {
+                        const bdata = await response.text();
+
+//alert(data);
+                        result = atob(bdata);
+//alert(result);
+                        const data = JSON.parse(result);
+
+                        this.result = data.data;
+
+                        if (!response.ok) {
+                        // get error message from body or default to response statusText
+                        const error = (data && data.message) || response.statusText;
+                        this.error = error;
+                        alert('E1 exequteRequest ' + JSON.stringify(response, null, ' ') + ' ');
+                        return Promise.reject(error);
+                        }
+                    })
+                    .catch(error => {
+                        //alert('E2 loadAddressByCityStreet [' + JSON.stringify(error) + '] ');
+                        this.error = error;
+                        alert("E2 exequteRequest" + error);
+                    });
+
+                    return result;
+                    }
                 
             },
 
@@ -225,7 +277,7 @@
                             ],
                     from: {                    
                         source : "PRO) Transgen XML",
-                        search: "2344554333",
+                        search: "12858889329",
                         level: "DEBUG"
                     },
                     sql: {
