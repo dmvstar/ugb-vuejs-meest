@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <style>
-        #documents table thead tr th {
+        #result table thead tr th {
             font-size: +18px;
             background: text--primary;
         }
@@ -91,6 +91,13 @@
                                     </v-row>
 
                                     <v-row>
+                                        <v-col cols="12" sm="12">
+                                            <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
+                                        </v-col>
+                                    </v-row>
+
+
+                                    <v-row>
                                         <v-col cols="12" sm="4">
                                             <h3 class="red--text">Result SQL</h3>
                                         </v-col>
@@ -150,13 +157,6 @@
                                         </v-col>
                                     </v-row>
 
-                                    <v-row>
-                                        <v-col cols="12" sm="12">
-                                            <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
-                                            </br>
-                                        </v-col>
-                                    </v-row>
-
 
 
                                 </v-form>
@@ -211,7 +211,8 @@
                 exequteRequest: async function() {
 
                     var headers = {
-                    "accept": "application/json", "Content-Type": "application/json", "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+                    "accept": "application/json", "Content-Type": "application/json", 
+                    "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
                     "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
                     "x-post-pathto": "common/logger/syslog/", "x-post-method": "select"
                     };
