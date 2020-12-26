@@ -96,13 +96,6 @@
                                         </v-col>
                                     </v-row>
 
-                                    <v-row>
-                                        <v-col cols="12" sm="12">
-                                            <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
-                                            </br>
-                                        </v-col>
-                                    </v-row>
-
 
                                     <v-row align="start" justify="center">
                                         <v-col cols="12" sm="12" md="12">
@@ -136,7 +129,14 @@
                                                             <td>{{ item.date }}</td>
                                                             <td>{{ item.level }}</td>
                                                             <td>{{ item.source }}</td>
-                                                            <td>{{ item.message }}</td>
+                                                            <td>
+                                                                <v-tooltip top>
+                                                                <template v-slot:activator="{ on, attrs }">
+                                                                <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden">{{ item.message }}</div>
+                                                                </template>
+                                                                <span>{{ item.message }}</span>
+                                                                </v-tooltip>
+                                                            </td>
                                                             <td>
                                                                 <v-btn class="mx-2" @click="onButtonCopyClick(item)"
                                                                     fab dark small color="pink">
@@ -149,6 +149,14 @@
                                             </v-simple-table>
                                         </v-col>
                                     </v-row>
+
+                                    <v-row>
+                                        <v-col cols="12" sm="12">
+                                            <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
+                                            </br>
+                                        </v-col>
+                                    </v-row>
+
 
 
                                 </v-form>
