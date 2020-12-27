@@ -58,16 +58,21 @@
                                         <v-col cols="12" sm="4">
                                             <v-select v-model="from.level" 
                                             :items="dict.level" label="Level" required>
-                                            </v-text-select>
+                                            </v-select>
                                         </v-col>
                                         <v-col cols="12" sm="8">
-                                            <v-text-field v-model="from.source" :counter="30" label="Source"
-                                                required>
-                                            </v-text-field>
+                                            <v-select v-model="from.source" 
+                                            :items="dict.sources" label="Sources" required>
+                                            </v-select>
                                         </v-col>
                                     </v-row>
                                     <v-row>
-                                        <v-col cols="12" sm="12" md="12">
+                                        <v-col cols="12" sm="4">
+                                            <v-text-field v-model="from.source" :counter="50" label="Source"
+                                                required>
+                                            </v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" sm="8">
                                             <v-text-field v-model="from.search" :counter="50" label="Search"
                                                 required>
                                             </v-text-field>
@@ -110,19 +115,19 @@
                                                 <template v-slot:default>
                                                     <thead>
                                                         <tr>
-                                                            <th class="text-left">
+                                                            <th class="text-center">
                                                                 id
                                                             </th>
-                                                            <th class="text-left">
+                                                            <th class="text-center">
                                                                 date
                                                             </th>
-                                                            <th class="text-left">
+                                                            <th class="text-center">
                                                                 level
                                                             </th>
-                                                            <th class="text-left">
+                                                            <th class="text-center">
                                                                 source
                                                             </th>
-                                                            <th class="text-left">
+                                                            <th class="text-center">
                                                                 message
                                                             </th>
                                                             <th class="text-center">
@@ -237,6 +242,7 @@
 
 //alert(bdata);
                         result = decodeURIComponent(escape(atob(bdata)));
+//console.log(result);
 //alert(result);
                         const data = JSON.parse(result);
 
@@ -285,21 +291,13 @@
                                 }
                             ],
                     from: {                    
-                        source : "PRO) Transgen XML",
+                        source : "Transgen XML",
                         search: "12858889329",
                         level: "DEBUG"
                     },
                     sql: {
                         query: "",
-                        template: "\
-SELECT id, date, level, source, message \
-FROM public.nrlogs \
-WHERE 1=1 \
-AND level = '{{level}}' \
-AND source like '%{{source}}%' \
-AND message like '%{{search}}%' \
-ORDER BY ID DESC \
-LIMIT 100;"
+                        template: "SELECT id, date, level, source, message FROM public.nrlogs WHERE 1=1 AND level = '{{level}}' AND source like '%{{source}}%' AND message like '%{{search}}%' ORDER BY ID DESC LIMIT 100;"
                     },
                    
                     dict: {
@@ -311,16 +309,17 @@ LIMIT 100;"
                         sex: [
                             { value: "M", text: "Чоловічий" },
                             { value: "F", text: "Жіночий" },
-                        ]                       
+                        ],
+                        sources: [
+                            "Transgen XML",
+                            "Card Status",
+                            "depo"
+                        ],                       
 
                     }
                 }
             },
         })
-
-
-
-
         /*
         function utf8_to_b64( str ) {
             return window.btoa(unescape(encodeURIComponent( str )));
