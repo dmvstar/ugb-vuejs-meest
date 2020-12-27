@@ -160,9 +160,9 @@
                                                             <td>
                                                                 <v-tooltip top>
                                                                 <template v-slot:activator="{ on, attrs }">
-                                                                <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden">{{ prepare_message(item.message) }}</div>
+                                                                <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden">{{ prepare_message(item.message, 0) }}</div>
                                                                 </template>
-                                                                <span>{{ prepare_message(item.message) }}</span>
+                                                                <span>{{ prepare_message(item.message, 1) }}</span>
                                                                 </v-tooltip>
                                                             </td>
                                                             <td>
@@ -215,13 +215,15 @@
 
             methods: {
 
-                prepare_message: function(message) {
+                prepare_message: function(message, mode) {
                     var ret = message;
                     if( (message.startsWith('{') && message.endsWith('}')) ||
                         (message.startsWith('[') && message.endsWith(']'))
-                    ){                        
-                        ret = JSON.stringify(JSON.parse(message), null, 2);
-                        //ret = message.replaceAll('":', '": ');
+                    ){    
+                        if(mode === 0)                    
+                            ret = JSON.stringify(JSON.parse(message), null, 2);
+                        else
+                            ret = message.replaceAll('":', '": ');
                     }
                     return ret;
                 },
