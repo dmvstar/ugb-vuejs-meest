@@ -10,6 +10,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <style>
+
+.layout {
+  display: inline-block;
+  width: 100%;
+}
+
+
+        table {
+        width: 100%;
+        border: 1px solid #000;
+        }
+
+        #result table {
+            width: 100%;
+        }
+
         #result table thead tr th {
             font-size: +18px;
             background: text--primary;
@@ -144,9 +160,9 @@
                                                             <td>
                                                                 <v-tooltip top>
                                                                 <template v-slot:activator="{ on, attrs }">
-                                                                <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden">{{ item.message }}</div>
+                                                                <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden">{{ prepare_message(item.message) }}</div>
                                                                 </template>
-                                                                <span>{{ item.message }}</span>
+                                                                <span>{{ prepare_message(item.message) }}</span>
                                                                 </v-tooltip>
                                                             </td>
                                                             <td>
@@ -198,6 +214,17 @@
             },
 
             methods: {
+
+                prepare_message: function(message) {
+                    var ret = message;
+                    if( (message.startsWith('{') && message.endsWith('}')) ||
+                        (message.startsWith('[') && message.endsWith(']'))
+                    ){                        
+                        ret = JSON.stringify(JSON.parse(message), null, 2);
+                        //ret = message.replaceAll('":', '": ');
+                    }
+                    return ret;
+                },
 
                 onButtonExecuteSQL: async function (item) {
                     var view = this.from;
