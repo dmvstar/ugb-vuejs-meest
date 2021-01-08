@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "2609214459",
+    "BirthDay": "28.08.1991",
     "Residency": "1",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
   },
@@ -8,8 +8,8 @@
     "LastName": "Кетцалькоатль",
     "FirstName": "Кукумац",
     "FatherName": "Кукулькан",
-    "BirthDay": "1991-08-28T00:00:00",
-    "GENDER": "1"
+    "GENDER": "1",
+    "MarriageStatus": "6"
   },
   "ident": [
     {
@@ -33,38 +33,32 @@
   ],
   "addr": [
     {
-      "TypeCode": "2",
+      "TypeCode": "factual",
       "Country": "UA",
       "State": "Київська",
       "Region": "Київ",
-      "Town": "м. Київ",
-      "Street": "вул. Бородинского побоища",
-      "HouseNumber": "21",
-      "FlatNumber": "16"
+      "Town ": "м. Київ",
+      "Street ": "вул. Бородинского побоища",
+      "HouseNumber ": "21",
+      "FlatNumber ": "16"
     },
     {
-      "TypeCode": "1",
+      "TypeCode": "juridical",
       "Country": "UA",
       "State": "Київська",
       "Region": "Київ",
-      "Town": "м. Чичен-Ица",
-      "Street": "вул. пирамида Кукулькана.",
-      "HouseNumber": "1",
-      "FlatNumber": "1"
+      "Town ": "м. Чичен-Ица",
+      "Street ": "вул. пирамида Кукулькана.",
+      "HouseNumber ": "1",
+      "FlatNumber ": "1"
     }
   ],
   "comm": [
     {
-      "Value": "380631003256",
-      "TypeId": "3"
+      "Value": "380631003256"
     },
     {
-      "Value": "sava@mail.dot.com",
-      "TypeId": "5"
-    },
-    {
-      "Value": "www.www.net",
-      "TypeId": "6"
+      "Value": "sava@mail.dot.com"
     }
   ],
   "props": [
@@ -73,6 +67,36 @@
       "Code": "CL_FATF_CHECK_RESULT",
       "Dict": "",
       "Value": "Клиент являестя террористом соглано данных bankid"
+    },
+    {
+      "Refs": "",
+      "Code": "FATF_COUNTRY_CITIZEN",
+      "Dict": "KL_K040.DBF",
+      "Value": "804"
+    },
+    {
+      "Refs": "",
+      "Code": "BIRTH_COUNTRY",
+      "Dict": "KL_K040.DBF",
+      "Value": "804"
+    },
+    {
+      "Refs": "",
+      "Code": "BIRTH_PLACE",
+      "Dict": "",
+      "Value": "Бердичув"
+    },
+    {
+      "Refs": "",
+      "Code": "PROFIT_WAY",
+      "Dict": "PROFIT_WAY",
+      "Value": "2"
+    },
+    {
+      "Refs": "",
+      "Code": "Customer_verification",
+      "Dict": "Customer_verification",
+      "Value": "1"
     }
   ]
 }

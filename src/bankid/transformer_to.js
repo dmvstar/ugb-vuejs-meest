@@ -176,6 +176,7 @@ function load_requeries_files(){
     bankid_client = require('./bankid-cli-1.json');
     // @TODO - добавить ClientNames TNames
     bankid_mapping = require('./bankid_mapping.json');
+//console.log(bankid_mapping);
     bankid_dicts = require('./dicts_mapping.json');
     client_xml_data = require('./client_xml_data.json');
     client_xml_template = require('./client_xml_template.json');
@@ -200,28 +201,36 @@ function clog(msg){
         console.log(msg);
 }
 // FUNCTIONS END -------------------------------------------
+
 // MAIN INIT -----------------------------------------------
+console.log("MAIN INIT");
 load_requeries_files();
 load_transform_files();
 load_xml_templates_files();
+
 if (MODE_TEST === true)
     bankid_client.person.inn = generateIPN();
 console.log(bankid_client);
+
 // MAIN INIT END -------------------------------------------
 // MAIN TRANSFORMATOR --------------------------------------
 // Prepare out data
 for (k of bankid_transform_web) {
     bankid_transform_out[k.name] = [];
 }
+console.log("bankid_mapping");
+console.log(bankid_mapping);
+
 
 for (o of bankid_mapping) {
-    //console.log(o);
     if (o.bankid.block !== 'none') {
         var f = bankid_transform_web.find(x => x.name === o.webbank.block);
-        f.mapping.push(o);
-        var i = bankid_transform_bid.find(x => x.name === o.bankid.block);
-        i.mapping.push(o);
-    }
+        if(f !== undefined) {
+            f.mapping.push(o);
+            var i = bankid_transform_bid.find(x => x.name === o.bankid.block);
+            i.mapping.push(o);
+        }
+    }    
 }
 
 //console.log(bankid_transform_bid);

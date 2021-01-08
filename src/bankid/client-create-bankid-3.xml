@@ -16,7 +16,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2609214459</tem:StateCode>
+               <tem:StateCode></tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -32,9 +32,9 @@
                <tem:LastName>Кетцалькоатль</tem:LastName>
                <tem:FatherName>Кукулькан</tem:FatherName>
                <tem:Gender>1</tem:Gender>
-               <tem:BirthDay>1991-08-28T00:00:00</tem:BirthDay>
+               <tem:BirthDay></tem:BirthDay>
                <tem:BirthSurname></tem:BirthSurname>
-               <!--tem:MarriageStatus></tem:MarriageStatus-->
+               <!--tem:MarriageStatus>6</tem:MarriageStatus-->
                <tem:MarriageStatus>6</tem:MarriageStatus>
                <tem:Status>1</tem:Status>
             </tem:Individuals>            
@@ -66,39 +66,39 @@
             </tem:Identifications>            
             <tem:Addresses>               
                <tem:TAddresses>
-                  <tem:TypeId>2</tem:TypeId>
-                  <tem:TypeCode>2</tem:TypeCode>
+                  <tem:TypeId>factual</tem:TypeId>
+                  <tem:TypeCode>factual</tem:TypeCode>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Київська</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>м. Київ</tem:Town>
+                  <tem:Town></tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>вул. Бородинского побоища</tem:Street>
+                  <tem:Street></tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>21</tem:HouseNumber>
+                  <tem:HouseNumber></tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>16</tem:FlatNumber>
+                  <tem:FlatNumber></tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
                </tem:TAddresses>               
                <tem:TAddresses>
-                  <tem:TypeId>1</tem:TypeId>
-                  <tem:TypeCode>1</tem:TypeCode>
+                  <tem:TypeId>juridical</tem:TypeId>
+                  <tem:TypeCode>juridical</tem:TypeCode>
                   <tem:Country>804</tem:Country>
                   <!--tem:PostalCode>14017</tem:PostalCode-->
                   <tem:State>Київська</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>м. Чичен-Ица</tem:Town>
+                  <tem:Town></tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>вул. пирамида Кукулькана.</tem:Street>
+                  <tem:Street></tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>1</tem:HouseNumber>
+                  <tem:HouseNumber></tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>1</tem:FlatNumber>
+                  <tem:FlatNumber></tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
@@ -106,8 +106,8 @@
             </tem:Addresses>
             <tem:Communications>
                <tem:TCommunications>
-                  <tem:TypeId>3</tem:TypeId>
-                  <tem:TypeCode>3</tem:TypeCode>
+                  <tem:TypeId></tem:TypeId>
+                  <tem:TypeCode></tem:TypeCode>
                   <tem:Value>380631003256</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
@@ -116,19 +116,9 @@
                   <tem:Status>1</tem:Status>
                </tem:TCommunications>
                <tem:TCommunications>
-                  <tem:TypeId>5</tem:TypeId>
-                  <tem:TypeCode>5</tem:TypeCode>
+                  <tem:TypeId></tem:TypeId>
+                  <tem:TypeCode></tem:TypeCode>
                   <tem:Value>sava@mail.dot.com</tem:Value>
-                  <tem:IsMain>true</tem:IsMain>
-                  <tem:IsVerified>true</tem:IsVerified>
-                  <tem:Note/>
-                  <tem:SourceInfo/>
-                  <tem:Status>1</tem:Status>
-               </tem:TCommunications>
-               <tem:TCommunications>
-                  <tem:TypeId>6</tem:TypeId>
-                  <tem:TypeCode>6</tem:TypeCode>
-                  <tem:Value>www.www.net</tem:Value>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:IsVerified>true</tem:IsVerified>
                   <tem:Note/>
@@ -140,6 +130,26 @@
                 <tem:TProperties>
                   <tem:Code>CL_FATF_CHECK_RESULT</tem:Code>
                   <tem:Value>Клиент являестя террористом соглано данных bankid</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>BIRTH_COUNTRY</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>BIRTH_PLACE</tem:Code>
+                  <tem:Value>Бердичув</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>PROFIT_WAY</tem:Code>
+                  <tem:Value>2</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>Customer_verification</tem:Code>
+                  <tem:Value>1</tem:Value>
                 </tem:TProperties>
             </tem:Properties>         
          </tem:client>
