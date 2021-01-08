@@ -1,0 +1,100 @@
+person,,lastName,,string,Individuals,LastName,,string,,true
+person,,firstName,,string,Individuals,FirstName,,string,,true
+person,,middleName,,string,Individuals,FatherName,,string,,true
+calculate,person,lastName+firstName+middleName,,string,Client,Name,,string,,true
+person,,іnn,,string,Client,StateCode,,string,,true
+extends,,countryCitizen,,int,Properties,FATF_COUNTRY_CITIZEN,KL_K040.DBF,string,,true
+extends,,maritalStatus,,int,Individuals,MarriageStatus,D08,int,,true
+person,,sex,sex,string,Individuals,GENDER,D06,int,,true
+person,,sex,,string,Properties,GENDER,D06,int,,true
+person,,birthDay,,date,Client,BirthDay,,date,,true
+person,,uaResident,resident,int,Client,Residency,KL_K030.DBF,int,,true
+documents,,type,documents,string,Identifications,TypeId,cfIdentificationTypes,int,,true
+documents,,series,,string,Identifications,Series,,string,,true
+documents,,number,,string,Identifications,Number,,string,,true
+documents,,issue,,string,Identifications,Registrator,,string,,true
+documents,,dateIssue,,date,Identifications,IssueDate,,date,,true
+documents,,dateExpiration,,date,Identifications,ExpirationDate,,date,,true
+documents,,issueCountryIso2,,string,Identifications,CountryCode,,string,,true
+none,,none,,none,Identifications,Checked,,int,0,true
+none,,none,,none,Identifications,IsMain,,int,0,true
+addresses,,type,,string,Addresses,TypeCode,,int,,true
+addresses,,country,,string,Addresses,Country,,int,,true
+,,,,,Addresses,PostalCode,,string,,true
+addresses,,state,,string,Addresses,State,,string,,true
+addresses,,area,,string,Addresses,Region,,string,,true
+addresses,,city,,string,Addresses,Town ,,string,,true
+,,,,,Addresses,TownshipType,TownshipType,int,3508;м;мiсто,true
+addresses,,street,,string,Addresses,Street ,,string,,true
+,,,,,Addresses,StreetType,StreetType,int,3510;вул.;вулиця,true
+addresses,,houseNo,,string,Addresses,HouseNumber ,,string,,true
+,,,,,Addresses,HouseType,HouseType,int,3511;буд.;будинок,true
+addresses,,flatNo,,string,Addresses,FlatNumber ,,string,,true
+,,,,,Addresses,FlatType,FlatType,int,3506; кв.;квартира,true
+none,,type,,string,Addresses,TypeCode,,int,,true
+none,,country,,string,Addresses,Country,,int,,
+none,,,,,Addresses,PostalCode,,string,,
+none,,state,,string,Addresses,State,,string,,
+none,,area,,string,Addresses,Region,,string,,
+none,,city,,string,Addresses,Town ,,string,,
+none,,,,,Addresses,TownshipType,,int,,
+none,,street,,string,Addresses,Street ,,string,,
+none,,,,,Addresses,StreetType,,int,,
+none,,houseNo,,string,Addresses,HouseNumber ,,string,,
+none,,,,,Addresses,HouseType,,int,,
+none,,flatNo,,string,Addresses,FlatNumber ,,string,,
+none,,,,,Addresses,FlatType,,int,,
+person,,socStatus,socstatus,string,Properties,socStatus,socStatus,int,,true
+person,,flagPEPs,,int,Properties,,,int,,
+person,,flagPersonTerror,terrorist,int,Properties,CL_FATF_CHECK_RESULT,,string,,
+person,,flagRestriction,terrorist,int,Properties,CL_FATF_CHECK_RESULT,,int,,
+person,,flagTopLevelRisk,,int,Properties,,,int,,
+scans,,type,,string,Scans,name,scans,string,,
+scans,,,,,Scans,fileTypeId,,int,109,
+scans,,scanFile,,string,Scans,content,,string,,
+scans,,dateCreate,,date,Scans,tmestamp,,dete,,
+scans,,extension,,string,Scans,comment,,string,,
+extends,,workInfo,,string,Properties,,,,,
+person,,phone,,string,Communications,Value,,string,,\true
+,,,,string,Communications,CommunicationType,,int,3,
+person,,email,,string,Communications,Value,,string,,
+,,,,string,Communications,CommunicationType,,int,5,
+extends,,birthCountry,,string,Properties,BIRTH_COUNTRY,KL_K040.DBF,int,,
+extends,,birthPlace,,string,Properties,BIRTH_PLACE,,string,,
+extends,,profitWay,,int,Properties,PROFIT_WAY,PROFIT_WAY,int,,
+extends,,profitSrc,,int,Properties,BANK_PRODUCT,FIN_DOCH,int,,
+extends,,ownFundsAmount,,int,Properties,OBSYAG_NAD,OBSYAG_NAD_1,int,,
+extends,,ownFundsSrc,,int,Properties,NAD_K_3,NAD_K_3,int,,
+extends,,monthAmouunt,,int,Properties,MONTHSUMM,SUMA_DOHOD,int,,
+extends,,realEstateAvail,,int,Properties,PROPETYTH_OF_CLIENT,PROPETYTH_OF_CLIENT,int,,
+extends,,movePropAvail,,int,Properties,PROPETYTH_OF_CLIENT_AVTO,PROPETYTH_OF_CLIENT_AVTO,int,,
+extends,,otherBankAccount,,int,Properties,INFO_OUTER_ACC_SEL,INFO_OUTER_ACC,int,,
+extends,,otherBankCredit,,int,Properties,EXISTS_CRED_OUT,YESNO,int,,
+extends,,otherBankDepo,,int,Properties,EXISTS_DEPO_OUT,YESNO,int,,
+extends,,costPaperAvail,,int,Properties,PROPETYPAP_OF_CLIENTYPE,PROPETYPAP_OF_CLIENTYPE,int,,
+extends,,planUseServices,,int,Properties,BANK_SERVICES_MANUAL,BANK_SERVICES_MANUAL,int,,
+extends,,ugbRelatePers,,int,Properties,UGB_TCURelPers,RF_UGB_TCURelPers,int,,
+extends,,publicPersonExists,,int,Properties,PUBLIC_PERSON_EXISTS,PUBLIC_PERSON_EXISTS,int,,
+extends,,publicFactDate,,date,Properties,PUBLIC_DATA_FACT,,date,,
+extends,,publicPermitDate,,date,Properties,PUBLIC_DATA_PERMISSION,,date,,
+extends,,publicRiskDate,,date,Properties,PUBLIC_DATA_RISK,,date,,
+extends,,clienInspectDate,,operation,Operations,DATA_ZAX_PER,operation,operation,,
+extends,,statusBusiness,,int,Properties,KL_K013FO,KL_K013_FO,int,,
+extends,,usaChiisares,,int,Properties,Chiisaresident_USA,YESNO,int,0,
+extends,,typeCli,,int,Properties,CUSTOMER_TYPE,CUSTOMER_TYPE,int,11694-клієнт з відкриттям рахунків+,
+extends,,photo25,,int,Properties,PASPFOTOCONTROL25,,int,,
+extends,,photo45,,int,Properties,PASPFOTOCONTROL45,,int,,
+extends,,codOblRee,,int,Properties,FATF_CodObl,,int,,
+extends,,verifyDate,,date,Properties,Verifikatsii_date,,date,,
+extends,,signDate,,date,Client,PrevIdentDate,,date,,
+extends,,education,,int,Properties,Education,,int,,
+extends,,forTaxStatus,,int,Properties,CLIENT_STATUS,,int,,
+extends,,forTaxDate,,date,Properties,CLIENT_STATUS_DATE,,,,
+extends,,forTaxCode,,int,Properties,TAX_CODE,,,,
+extends,,segment,,segment,Segment,Segment,Segment,segment,,
+extends,,verifyType,,int,Properties,Customer_verification,Customer_verification,,,
+extends,,reputation,,string,Properties,Criterias,,,,
+extends,,countryCitisien,,int,Properties,FATF_COUNTRY_CITIZEN,KL_K040.DBF,,,
+extends,,greenCard,,int,Properties,CARD_GREEN,A_GREEN_CARD,,,
+extends,,registryUSA,,int,Properties,Resident_USA,YESNO,,,
+extends,,statusFATCA,,int,Properties,FATCA,FATCA,,,

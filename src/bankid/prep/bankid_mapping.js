@@ -3,11 +3,14 @@
 const fs = require('fs');
 const readline = require('readline');
 
+var myArgs = process.argv.slice(2);
+// console.log('myArgs: ', myArgs[0]);
+
 // Creating a readable stream from file 
 // readline module reads line by line 
 // but from a readable stream only. 
 const file = readline.createInterface({
-  input: fs.createReadStream('mapping.csv'),
+  input: fs.createReadStream(myArgs[0]),
   output: null,
   terminal: true
 });
@@ -17,21 +20,21 @@ const file = readline.createInterface({
 // line event which will triggered 
 // whenever a new line is read from 
 // the stream 
-var count = 0;
+var count = 1;
 var ret = [];
 
 file.on('line', (line) => {
   // if(count > 1 && count < 100) {
   if (count >= 0) {
     //if (count === 100) {
-      //lineReader.close();
+    //lineReader.close();
     //}
     var record = line.split(',');
     //console.log(count + '['+record[2]+'] '+line);
     //"cnt" : record.length,
-    if (record[2] !== "") {
+    if (record[2] !== "" && record[0] !== "none") {
       var obj = {
-        
+        "cnt": count,
         "bankid": {
           "block": record[0],
           "source": record[1],
@@ -46,13 +49,14 @@ file.on('line', (line) => {
           "default": record[9],
           "dict": record[7],
           "isneed": record[10]
-        }       
+        }
       }
+      count++;
       ret.push(obj);
       //console.log(JSON.stringify(obj));
     }
   }
-  count++;
+  //count++;
 });
 
 file.on('close', cb => {
