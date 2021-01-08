@@ -16,12 +16,13 @@
     },
 
     "extends": {
-        "country_citizen": "804",
-        "marital_status": "6",
-        "work_info": "безроботный",
-        "birth_country": "804",
-        "birth_place": "Бердичув",
-        "profit_way": "2"
+        "countryCitizen": "804",
+        "maritalStatus": "6",
+        "workInfo": "безроботный",
+        "birthCountry": "804",
+        "birthPlace": "Бердичув",
+        "profitWay": "2",
+        "verifyType": "1"
     },
 
     "addresses": [{
