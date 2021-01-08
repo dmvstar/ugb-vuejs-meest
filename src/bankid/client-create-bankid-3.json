@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "3096617063",
+    "StateCode": "2609214459",
     "Residency": "1",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
   },
@@ -9,8 +9,7 @@
     "FirstName": "Кукумац",
     "FatherName": "Кукулькан",
     "BirthDay": "1991-08-28T00:00:00",
-    "GENDER": "1",
-    "MarriageStatus": "6"
+    "GENDER": "1"
   },
   "ident": [
     {
@@ -74,30 +73,6 @@
       "Code": "CL_FATF_CHECK_RESULT",
       "Dict": "",
       "Value": "Клиент являестя террористом соглано данных bankid"
-    },
-    {
-      "Refs": "",
-      "Code": "FATF_COUNTRY_CITIZEN",
-      "Dict": "KL_K040.DBF",
-      "Value": "804"
-    },
-    {
-      "Refs": "",
-      "Code": "BIRTH_COUNTRY",
-      "Dict": "KL_K040.DBF",
-      "Value": "804"
-    },
-    {
-      "Refs": "",
-      "Code": "BIRTH_PLACE",
-      "Dict": "",
-      "Value": "Бердичув"
-    },
-    {
-      "Refs": "",
-      "Code": "PROFIT_WAY",
-      "Dict": "PROFIT_WAY",
-      "Value": "2"
     }
   ]
 }
