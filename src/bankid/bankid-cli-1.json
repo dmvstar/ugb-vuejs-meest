@@ -22,7 +22,14 @@
         "birthCountry": "804",
         "birthPlace": "Бердичув",
         "profitWay": "2",
-        "verifyType": "1"
+        "verifyType": "3",
+        "typeCli": "клієнт з відкриттям рахунків",
+        "education": "5",
+        "photo25" :"1",
+        "photo45" :"1",
+        "codOblRee": "32",
+        "verifyDate": "10.01.2021",
+        "signDate": "10.01.2021" 
     },
 
     "addresses": [{
