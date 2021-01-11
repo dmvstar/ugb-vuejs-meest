@@ -12,27 +12,54 @@
         "web": "www.www.net",
         "uaResident": "1",
         "flagPersonTerror": "1",
-        "edication": "Бог"
+        "flagPEPs": "1",
+        "flagTopLevelRisk": "1"
     },
-
     "extends": {
         "countryCitizen": "804",
         "maritalStatus": "6",
-        "workInfo": "безроботный",
+        "workInfo": "Бог, глава всего",
         "birthCountry": "804",
         "birthPlace": "Бердичув",
-        "profitWay": "2",
+        "profitWay": "14300",
+
+        "profitSrc": "1",
+        "ownFundsAmount": "1",
+        "ownFundsSrc": "1",
+        "monthAmouunt": "4",
+        "realEstateAvail": "1",
+        "movePropAvail": "2",
+        "otherBankAccount": "1,2,3,4",
+        "otherBankCredit": "1",
+        "otherBankDepo": "1",
+        "costPaperAvail": "0",
+        "planUseServices": "1,2,3",
+        "ugbRelatePers": "0",
+        "publicPersonExists": "0",
+        "statusBusiness": "5",
+        "usaChiisares": "0",
+
         "verifyType": "3",
         "typeCli": "клієнт з відкриттям рахунків",
         "education": "5",
-        "photo25" :"1",
-        "photo45" :"1",
+        "photo25": "1",
+        "photo45": "1",
         "codOblRee": "32",
         "verifyDate": "10.01.2021",
-        "signDate": "10.01.2021" 
-    },
+        "signDate": "10.01.2021",
 
-    "addresses": [{
+        "forTaxStatus": "0",
+        "forTaxDate": "10.01.2021",
+        "forTaxCode": "026 097",
+        
+        "reputation": "добре",
+        "countryCitisien": "804",
+        "greenCard": "1",
+        "registryUSA": "0",
+        "statusFATCA": "3"
+    },
+    "addresses": [
+        {
             "type": "factual",
             "country": "UA",
             "state": "Київська",
@@ -53,7 +80,8 @@
             "flatNo": "1"
         }
     ],
-    "documents": [{
+    "documents": [
+        {
             "type": "passport",
             "typeName": "Паспорт",
             "series": "СН",
@@ -74,19 +102,18 @@
             "issueCountryIso2": "UA"
         }
     ],
-    "scans": [{
+    "scans": [
+        {
             "type": "passport",
             "scanFile": "BASE64",
             "dateCreate": "dd.mm.yyyy",
             "extension": "jpg"
-
         },
         {
             "type": "photo",
             "scanFile": "BASE64",
             "dateCreate": "dd.mm.yyyy",
             "extension": "jpg"
-
         }
     ]
 }
