@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "3788216003",
+    "StateCode": "3384114725",
     "Residency": "1",
     "PrevIdentDate": "2021-01-10T00:00:00",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
@@ -75,6 +75,12 @@
       "Code": "CL_FATF_CHECK_RESULT",
       "Dict": "",
       "Value": "Клиент являестя террористом соглано данных bankid"
+    },
+    {
+      "Refs": "peps",
+      "Code": "PUBLIC_PERSON_EXISTS",
+      "Dict": "",
+      "Value": "1"
     },
     {
       "Refs": "",

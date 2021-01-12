@@ -496,7 +496,7 @@
     },
     "webbank": {
       "block": "Properties",
-      "code": "",
+      "code": "PUBLIC_PERSON_EXISTS",
       "type": "int",
       "default": "",
       "dict": "",

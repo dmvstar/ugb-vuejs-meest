@@ -5,7 +5,7 @@ MAIN INIT
     lastName: 'Кетцалькоатль',
     firstName: 'Кукумац',
     middleName: 'Кукулькан',
-    inn: '3788216003',
+    inn: '3384114725',
     birthDay: '28.08.1991',
     sex: 'M',
     phone: '380631003256',
@@ -613,7 +613,7 @@ bankid_mapping
     },
     webbank: {
       block: 'Properties',
-      code: '',
+      code: 'PUBLIC_PERSON_EXISTS',
       type: 'int',
       default: '',
       dict: '',
@@ -1648,7 +1648,7 @@ bankid_transform_web ---------------------------
   ++++[person][lastName]=Кетцалькоатль-Individuals
   ++++[person][firstName]=Кукумац-Individuals
   ++++[person][middleName]=Кукулькан-Individuals
-  ++++[person][inn]=3788216003-Client
+  ++++[person][inn]=3384114725-Client
   ++++[person][birthDay]=28.08.1991-Individuals
   ++++[person][sex]=M-Individuals
   ++++[person][phone]=380631003256-Communications
@@ -1832,7 +1832,7 @@ bankid_transform_web ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '3788216003'
+    value: '3384114725'
   },
   {
     cnt: 8,
@@ -1938,7 +1938,7 @@ bankid_transform_web ---------------------------
     },
     webbank: {
       block: 'Properties',
-      code: '',
+      code: 'PUBLIC_PERSON_EXISTS',
       type: 'int',
       default: '',
       dict: '',
@@ -2130,7 +2130,7 @@ bankid_transform_web ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '3788216003'
+    value: '3384114725'
   },
   {
     cnt: 11,
@@ -2524,7 +2524,7 @@ web
 fill_data --------------------------------------------
 {
   client: {
-    StateCode: '3788216003',
+    StateCode: '3384114725',
     Residency: '1',
     PrevIdentDate: '2021-01-10T00:00:00',
     Name: 'Кетцалькоатль Кукумац Кукулькан'
@@ -2590,6 +2590,12 @@ fill_data --------------------------------------------
       Code: 'CL_FATF_CHECK_RESULT',
       Dict: '',
       Value: 'Клиент являестя террористом соглано данных bankid'
+    },
+    {
+      Refs: 'peps',
+      Code: 'PUBLIC_PERSON_EXISTS',
+      Dict: '',
+      Value: '1'
     },
     {
       Refs: '',
