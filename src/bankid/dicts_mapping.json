@@ -17,6 +17,24 @@
             "webbankdesc": "Не Резидент"
         }
     ],
+    "peps": [
+        {
+            "bankidcode": "1",
+            "bankidname": "flagPEPs",
+            "bankiddesc": "ПВО",            
+            "webbankid": "2",
+            "webbankcode": "2",
+            "webbankdesc": "ПВО"
+        },
+        {
+            "bankidcode": "0",
+            "bankidname": "flagPEPs",
+            "bankiddesc": "Не ПВО",
+            "webbankid": "1",
+            "webbankcode": "1",
+            "webbankdesc": "Не ПВО"
+        }
+    ],
     "terrorist": [
         {
             "bankidcode": "1",

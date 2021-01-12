@@ -12,7 +12,7 @@
         "web": "www.www.net",
         "uaResident": "1",
         "flagPersonTerror": "1",
-        "flagPEPs": "1",
+        "flagPEPs": "0",
         "flagTopLevelRisk": "1"
     },
     "extends": {

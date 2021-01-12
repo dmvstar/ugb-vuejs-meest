@@ -1,13 +1,15 @@
 {
   "client": {
-    "BirthDay": "28.08.1991",
+    "StateCode": "2712018579",
     "Residency": "1",
+    "IdentDate": "10.01.2021",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
   },
   "indiv": {
     "LastName": "Кетцалькоатль",
     "FirstName": "Кукумац",
     "FatherName": "Кукулькан",
+    "BirthDay": "1991-08-28T00:00:00",
     "GENDER": "1",
     "MarriageStatus": "6"
   },
@@ -33,32 +35,38 @@
   ],
   "addr": [
     {
-      "TypeCode": "factual",
+      "TypeCode": "2",
       "Country": "UA",
       "State": "Київська",
       "Region": "Київ",
-      "Town ": "м. Київ",
-      "Street ": "вул. Бородинского побоища",
-      "HouseNumber ": "21",
-      "FlatNumber ": "16"
+      "Town": "м. Київ",
+      "Street": "вул. Бородинского побоища",
+      "HouseNumber": "21",
+      "FlatNumber": "16"
     },
     {
-      "TypeCode": "juridical",
+      "TypeCode": "1",
       "Country": "UA",
       "State": "Київська",
       "Region": "Київ",
-      "Town ": "м. Чичен-Ица",
-      "Street ": "вул. пирамида Кукулькана.",
-      "HouseNumber ": "1",
-      "FlatNumber ": "1"
+      "Town": "м. Чичен-Ица",
+      "Street": "вул. пирамида Кукулькана.",
+      "HouseNumber": "1",
+      "FlatNumber": "1"
     }
   ],
   "comm": [
     {
-      "Value": "380631003256"
+      "Value": "380631003256",
+      "TypeId": "3"
     },
     {
-      "Value": "sava@mail.dot.com"
+      "Value": "sava@mail.dot.com",
+      "TypeId": "5"
+    },
+    {
+      "Value": "www.www.net",
+      "TypeId": "6"
     }
   ],
   "props": [
@@ -90,13 +98,193 @@
       "Refs": "",
       "Code": "PROFIT_WAY",
       "Dict": "PROFIT_WAY",
+      "Value": "14300"
+    },
+    {
+      "Refs": "",
+      "Code": "BANK_PRODUCT",
+      "Dict": "FIN_DOCH",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "OBSYAG_NAD",
+      "Dict": "OBSYAG_NAD_1",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "NAD_K_3",
+      "Dict": "NAD_K_3",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "MONTHSUMM",
+      "Dict": "SUMA_DOHOD",
+      "Value": "4"
+    },
+    {
+      "Refs": "",
+      "Code": "PROPETYTH_OF_CLIENT",
+      "Dict": "PROPETYTH_OF_CLIENT",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "PROPETYTH_OF_CLIENT_AVTO",
+      "Dict": "PROPETYTH_OF_CLIENT_AVTO",
       "Value": "2"
+    },
+    {
+      "Refs": "",
+      "Code": "INFO_OUTER_ACC_SEL",
+      "Dict": "INFO_OUTER_ACC",
+      "Value": "1,2,3,4"
+    },
+    {
+      "Refs": "",
+      "Code": "EXISTS_CRED_OUT",
+      "Dict": "YESNO",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "EXISTS_DEPO_OUT",
+      "Dict": "YESNO",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "PROPETYPAP_OF_CLIENTYPE",
+      "Dict": "PROPETYPAP_OF_CLIENTYPE",
+      "Value": "0"
+    },
+    {
+      "Refs": "",
+      "Code": "BANK_SERVICES_MANUAL",
+      "Dict": "BANK_SERVICES_MANUAL",
+      "Value": "1,2,3"
+    },
+    {
+      "Refs": "",
+      "Code": "UGB_TCURelPers",
+      "Dict": "RF_UGB_TCURelPers",
+      "Value": "0"
+    },
+    {
+      "Refs": "",
+      "Code": "PUBLIC_PERSON_EXISTS",
+      "Dict": "PUBLIC_PERSON_EXISTS",
+      "Value": "0"
+    },
+    {
+      "Refs": "",
+      "Code": "KL_K013FO",
+      "Dict": "KL_K013_FO",
+      "Value": "5"
+    },
+    {
+      "Refs": "",
+      "Code": "Chiisaresident_USA",
+      "Dict": "YESNO",
+      "Value": "0"
+    },
+    {
+      "Refs": "",
+      "Code": "Chiisaresident_USA",
+      "Dict": "YESNO",
+      "Value": "0"
     },
     {
       "Refs": "",
       "Code": "Customer_verification",
       "Dict": "Customer_verification",
+      "Value": "3"
+    },
+    {
+      "Refs": "",
+      "Code": "CUSTOMER_TYPE",
+      "Dict": "CUSTOMER_TYPE",
+      "Value": "клієнт з відкриттям рахунків"
+    },
+    {
+      "Refs": "",
+      "Code": "CUSTOMER_TYPE",
+      "Dict": "CUSTOMER_TYPE",
+      "Value": "11694-клієнт з відкриттям рахунків+"
+    },
+    {
+      "Refs": "",
+      "Code": "Education",
+      "Dict": "",
+      "Value": "5"
+    },
+    {
+      "Refs": "",
+      "Code": "PASPFOTOCONTROL25",
+      "Dict": "",
       "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "PASPFOTOCONTROL45",
+      "Dict": "",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "FATF_CodObl",
+      "Dict": "",
+      "Value": "32"
+    },
+    {
+      "Refs": "",
+      "Code": "CLIENT_STATUS",
+      "Dict": "",
+      "Value": "0"
+    },
+    {
+      "Refs": "",
+      "Code": "CLIENT_STATUS_DATE",
+      "Dict": "",
+      "Value": "2021-01-10T00:00:00"
+    },
+    {
+      "Refs": "",
+      "Code": "TAX_CODE",
+      "Dict": "",
+      "Value": "026 097"
+    },
+    {
+      "Refs": "",
+      "Code": "Criterias",
+      "Dict": "",
+      "Value": "добре"
+    },
+    {
+      "Refs": "",
+      "Code": "FATF_COUNTRY_CITIZEN",
+      "Dict": "KL_K040.DBF",
+      "Value": "804"
+    },
+    {
+      "Refs": "",
+      "Code": "CARD_GREEN",
+      "Dict": "A_GREEN_CARD",
+      "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "Resident_USA",
+      "Dict": "YESNO",
+      "Value": "0"
+    },
+    {
+      "Refs": "",
+      "Code": "FATCA",
+      "Dict": "FATCA",
+      "Value": "3"
     }
   ]
 }

@@ -167,7 +167,7 @@ function create_out_xml() {
     }
     output += client_xml_data.props_bot;
     output += client_xml_data.bot;
-    console.log(output);
+    //console.log(output);
     fs.writeFileSync("client-create-bankid-3.xml", output);
     // XML CREATE END-------------------------------------------
 }
@@ -234,7 +234,9 @@ for (o of bankid_mapping) {
 }
 
 //console.log(bankid_transform_bid);
-console.log(bankid_transform_web);
+clog('bankid_transform_web ---------------------------');
+clog(bankid_transform_web);
+clog('bankid_transform_web ---------------------------');                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 //console.log(bankid_transform_out);
 
 // Parsing input data
@@ -259,8 +261,8 @@ for (key in bankid_client) {
         for (a of bankid_client[key]) {
             var mapi = JSON.parse(JSON.stringify((mapr)));
             for (o in a) {
+                //clog("  [" + cnt + "][" + key + "] " + o + "=" + a[o]);
                 clog("  [" + cnt + "][" + key + "] " + o + "=" + a[o]);
-                console.log("  [" + cnt + "][" + key + "] " + o + "=" + a[o]);
                 var val = mapi.find(x => x.bankid.code === o);
                 if (val !== undefined) {
                     val.value = a[o];
@@ -275,10 +277,10 @@ for (key in bankid_client) {
         for (o in bankid_client[key]) {
             var mapi = bankid_transform_bid.find(x => x.name === key).mapping;
             var val = mapi.find(x => x.bankid.code === o);
-            clog(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
+            //clog(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
-                console.log("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
+                clog("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 //console.log(val);
                 bankid_transform_out[val.webbank.block].push(val);
@@ -296,13 +298,14 @@ for (key in bankid_client) {
         }
     }
 }
+
 // Calculate field from bankid
 var calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
 
 for (item of calcm) {
     console.log(item); // x.name === a.source !!!! persons
     var bankid_src = bankid_transform_bid.find(x => x.name === 'person').mapping;
-    console.log("bankid_src --------------------------------------------");
+    console.log("-------------------------------------------- calcm bankid_src ");
     console.log(bankid_src);
 
     var fields = item.bankid.code.split('+');
@@ -322,10 +325,12 @@ for (item of calcm) {
     wblock = bankid_transform_out[wkey];
 }
 
-console.log("bankid_transform_out --------------------------------------------");
+clog("--------------------- bankid_transform_out ");
 var fill_data = {};
 // Клиент
 fill_data.client = {};
+clog('--------------------- bankid_transform_out.Client ');
+clog(bankid_transform_out.Client);
 for (item of bankid_transform_out.Client) {
     if (item.bankid.maps !== undefined && item.bankid.maps !== "") {
         console.log(item.bankid.maps);
@@ -343,6 +348,7 @@ for (item of bankid_transform_out.Individuals) {
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     if (item.bankid.type === 'date')
         value = trans_date(value);
+    //console.log('   indiv value = '+value);
     fill_data.indiv[item.webbank.code] = value;
 }
 
@@ -426,7 +432,8 @@ for (item of bankid_transform_out.Properties) {
             fill_data.props[i].Value =
                 get_reftrans(bankid_dicts, item.bankid.maps, item.value);
         }
-
+        if (item.bankid.type === 'date')
+            fill_data.props[i].Value = trans_date(item.value);
         i++;
     }
 }

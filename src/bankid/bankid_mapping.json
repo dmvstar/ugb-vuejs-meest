@@ -76,7 +76,7 @@
     "bankid": {
       "block": "person",
       "source": "",
-      "code": "іnn",
+      "code": "inn",
       "maps": "",
       "type": "string"
     },
@@ -171,7 +171,7 @@
       "type": "date"
     },
     "webbank": {
-      "block": "Client",
+      "block": "Individuals",
       "code": "BirthDay",
       "type": "date",
       "default": "",
@@ -329,7 +329,7 @@
       "block": "addresses",
       "source": "",
       "code": "type",
-      "maps": "",
+      "maps": "addresses",
       "type": "string"
     },
     "webbank": {
@@ -406,7 +406,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "Town ",
+      "code": "Town",
       "type": "string",
       "default": "",
       "dict": "",
@@ -424,7 +424,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "Street ",
+      "code": "Street",
       "type": "string",
       "default": "",
       "dict": "",
@@ -442,7 +442,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "HouseNumber ",
+      "code": "HouseNumber",
       "type": "string",
       "default": "",
       "dict": "",
@@ -460,7 +460,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "FlatNumber ",
+      "code": "FlatNumber",
       "type": "string",
       "default": "",
       "dict": "",
@@ -491,7 +491,7 @@
       "block": "person",
       "source": "",
       "code": "flagPEPs",
-      "maps": "",
+      "maps": "peps",
       "type": "int"
     },
     "webbank": {
@@ -662,7 +662,24 @@
       "type": "string",
       "default": "",
       "dict": "",
-      "isneed": "\\true"
+      "isneed": "true"
+    }
+  },
+  {
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "phone",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "TypeId",
+      "type": "string",
+      "default": "3",
+      "dict": "",
+      "isneed": ""
     }
   },
   {
@@ -679,6 +696,56 @@
       "code": "Value",
       "type": "string",
       "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },{
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "email",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "TypeId",
+      "type": "string",
+      "default": "5",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "web",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "Value",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "web",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Communications",
+      "code": "TypeId",
+      "type": "string",
+      "default": "6",
       "dict": "",
       "isneed": ""
     }
@@ -1158,12 +1225,12 @@
       "source": "",
       "code": "verifyDate",
       "maps": "",
-      "type": "date"
+      "type": "adate"
     },
     "webbank": {
-      "block": "Properties",
+      "block": "0Properties",
       "code": "Verifikatsii_date",
-      "type": "date",
+      "type": "adate",
       "default": "",
       "dict": "",
       "isneed": ""
@@ -1180,7 +1247,7 @@
     },
     "webbank": {
       "block": "Client",
-      "code": "PrevIdentDate",
+      "code": "IdentDate",
       "type": "date",
       "default": "",
       "dict": "",
