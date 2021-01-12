@@ -9,6 +9,6 @@
                <tem:IsOut>0</tem:IsOut>
                <tem:IsPotential>0</tem:IsPotential>
                <tem:IsPartner>false</tem:IsPartner>
-               <tem:IdentDate>{{IdentDate}}</tem:IdentDate>
+               <tem:PrevIdentDate>{{PrevIdentDate}}</tem:PrevIdentDate>
                <tem:Status>1</tem:Status>
             </tem:Clients>

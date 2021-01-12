@@ -1247,7 +1247,7 @@
     },
     "webbank": {
       "block": "Client",
-      "code": "IdentDate",
+      "code": "PrevIdentDate",
       "type": "date",
       "default": "",
       "dict": "",

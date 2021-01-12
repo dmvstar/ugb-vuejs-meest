@@ -5,7 +5,7 @@ MAIN INIT
     lastName: 'Кетцалькоатль',
     firstName: 'Кукумац',
     middleName: 'Кукулькан',
-    inn: '2712018579',
+    inn: '3788216003',
     birthDay: '28.08.1991',
     sex: 'M',
     phone: '380631003256',
@@ -1365,7 +1365,7 @@ bankid_mapping
     },
     webbank: {
       block: 'Client',
-      code: 'IdentDate',
+      code: 'PrevIdentDate',
       type: 'date',
       default: '',
       dict: '',
@@ -1648,7 +1648,7 @@ bankid_transform_web ---------------------------
   ++++[person][lastName]=Кетцалькоатль-Individuals
   ++++[person][firstName]=Кукумац-Individuals
   ++++[person][middleName]=Кукулькан-Individuals
-  ++++[person][inn]=2712018579-Client
+  ++++[person][inn]=3788216003-Client
   ++++[person][birthDay]=28.08.1991-Individuals
   ++++[person][sex]=M-Individuals
   ++++[person][phone]=380631003256-Communications
@@ -1832,7 +1832,7 @@ bankid_transform_web ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '2712018579'
+    value: '3788216003'
   },
   {
     cnt: 8,
@@ -2130,7 +2130,7 @@ bankid_transform_web ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '2712018579'
+    value: '3788216003'
   },
   {
     cnt: 11,
@@ -2162,7 +2162,7 @@ bankid_transform_web ---------------------------
     },
     webbank: {
       block: 'Client',
-      code: 'IdentDate',
+      code: 'PrevIdentDate',
       type: 'date',
       default: '',
       dict: '',
@@ -2524,9 +2524,9 @@ web
 fill_data --------------------------------------------
 {
   client: {
-    StateCode: '2712018579',
+    StateCode: '3788216003',
     Residency: '1',
-    IdentDate: '10.01.2021',
+    PrevIdentDate: '2021-01-10T00:00:00',
     Name: 'Кетцалькоатль Кукумац Кукулькан'
   },
   indiv: {

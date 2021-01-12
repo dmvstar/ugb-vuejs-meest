@@ -338,6 +338,8 @@ for (item of bankid_transform_out.Client) {
             get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     } else
         fill_data.client[item.webbank.code] = item.value;
+    if (item.bankid.type === 'date')
+        fill_data.client[item.webbank.code] = trans_date(item.value);
 }
 // Персональные данные
 fill_data.indiv = {};
