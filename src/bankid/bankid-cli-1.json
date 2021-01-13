@@ -114,6 +114,12 @@
             "scanFile": "BASE64",
             "dateCreate": "dd.mm.yyyy",
             "extension": "jpg"
+        },
+        {
+            "type": "inn",
+            "scanFile": "BASE64",
+            "dateCreate": "dd.mm.yyyy",
+            "extension": "jpg"
         }
     ]
 }
