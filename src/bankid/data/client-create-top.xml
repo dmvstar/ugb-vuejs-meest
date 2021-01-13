@@ -1,8 +1,14 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header>
+   <!--soapenv:Header>
       <tem:AuthSoapHeader>
         <tem:Login>istest</tem:Login>
          <tem:Password>gfhjk</tem:Password>
+      </tem:AuthSoapHeader>
+   </soapenv:Header-->
+   <soapenv:Header>
+      <tem:AuthSoapHeader>
+        <tem:Login>UKRGAS\appmb</tem:Login>
+         <tem:Password>$N$q3:ynw=B)_OM}</tem:Password>
       </tem:AuthSoapHeader>
    </soapenv:Header>
    

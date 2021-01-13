@@ -5,7 +5,7 @@ MAIN INIT
     lastName: 'Кетцалькоатль',
     firstName: 'Кукумац',
     middleName: 'Кукулькан',
-    inn: '3384114725',
+    inn: '2165516163',
     birthDay: '28.08.1991',
     sex: 'M',
     phone: '380631003256',
@@ -1346,8 +1346,8 @@ bankid_mapping
       type: 'adate'
     },
     webbank: {
-      block: '0Properties',
-      code: 'Verifikatsii_date',
+      block: 'Properties',
+      code: 'Verifikatsii_date ',
       type: 'adate',
       default: '',
       dict: '',
@@ -1631,7 +1631,7 @@ bankid_transform_web ---------------------------
       [Object], [Object], [Object], [Object],
       [Object], [Object], [Object], [Object],
       [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object]
+      [Object], [Object], [Object], [Object]
     ]
   },
   {
@@ -1648,7 +1648,7 @@ bankid_transform_web ---------------------------
   ++++[person][lastName]=Кетцалькоатль-Individuals
   ++++[person][firstName]=Кукумац-Individuals
   ++++[person][middleName]=Кукулькан-Individuals
-  ++++[person][inn]=3384114725-Client
+  ++++[person][inn]=2165516163-Client
   ++++[person][birthDay]=28.08.1991-Individuals
   ++++[person][sex]=M-Individuals
   ++++[person][phone]=380631003256-Communications
@@ -1686,6 +1686,7 @@ bankid_transform_web ---------------------------
   ++++[extends][photo25]=1-Properties
   ++++[extends][photo45]=1-Properties
   ++++[extends][codOblRee]=32-Properties
+  ++++[extends][verifyDate]=10.01.2021-Properties
   ++++[extends][signDate]=10.01.2021-Client
   ++++[extends][forTaxStatus]=0-Properties
   ++++[extends][forTaxDate]=10.01.2021-Properties
@@ -1832,7 +1833,7 @@ bankid_transform_web ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '3384114725'
+    value: '2165516163'
   },
   {
     cnt: 8,
@@ -2130,7 +2131,7 @@ bankid_transform_web ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '3384114725'
+    value: '2165516163'
   },
   {
     cnt: 11,
@@ -2524,7 +2525,7 @@ web
 fill_data --------------------------------------------
 {
   client: {
-    StateCode: '3384114725',
+    StateCode: '2165516163',
     Residency: '1',
     PrevIdentDate: '2021-01-10T00:00:00',
     Name: 'Кетцалькоатль Кукумац Кукулькан'
@@ -2689,6 +2690,12 @@ fill_data --------------------------------------------
     { Refs: '', Code: 'PASPFOTOCONTROL25', Dict: '', Value: '1' },
     { Refs: '', Code: 'PASPFOTOCONTROL45', Dict: '', Value: '1' },
     { Refs: '', Code: 'FATF_CodObl', Dict: '', Value: '32' },
+    {
+      Refs: '',
+      Code: 'Verifikatsii_date ',
+      Dict: '',
+      Value: '10.01.2021'
+    },
     { Refs: '', Code: 'CLIENT_STATUS', Dict: '', Value: '0' },
     {
       Refs: '',

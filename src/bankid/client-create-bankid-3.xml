@@ -1,8 +1,14 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header>
+   <!--soapenv:Header>
       <tem:AuthSoapHeader>
         <tem:Login>istest</tem:Login>
          <tem:Password>gfhjk</tem:Password>
+      </tem:AuthSoapHeader>
+   </soapenv:Header-->
+   <soapenv:Header>
+      <tem:AuthSoapHeader>
+        <tem:Login>UKRGAS\appmb</tem:Login>
+         <tem:Password>$N$q3:ynw=B)_OM}</tem:Password>
       </tem:AuthSoapHeader>
    </soapenv:Header>
    
@@ -16,7 +22,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>3384114725</tem:StateCode>
+               <tem:StateCode>2165516163</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -253,6 +259,10 @@
                 <tem:TProperties>
                   <tem:Code>FATF_CodObl</tem:Code>
                   <tem:Value>32</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
+                  <tem:Code>Verifikatsii_date </tem:Code>
+                  <tem:Value>10.01.2021</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
                   <tem:Code>CLIENT_STATUS</tem:Code>

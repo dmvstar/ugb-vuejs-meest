@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "3384114725",
+    "StateCode": "2165516163",
     "Residency": "1",
     "PrevIdentDate": "2021-01-10T00:00:00",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
@@ -243,6 +243,12 @@
       "Code": "FATF_CodObl",
       "Dict": "",
       "Value": "32"
+    },
+    {
+      "Refs": "",
+      "Code": "Verifikatsii_date ",
+      "Dict": "",
+      "Value": "10.01.2021"
     },
     {
       "Refs": "",

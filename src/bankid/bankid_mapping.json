@@ -1228,8 +1228,8 @@
       "type": "adate"
     },
     "webbank": {
-      "block": "0Properties",
-      "code": "Verifikatsii_date",
+      "block": "Properties",
+      "code": "Verifikatsii_date ",
       "type": "adate",
       "default": "",
       "dict": "",
