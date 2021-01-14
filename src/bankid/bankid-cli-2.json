@@ -4,7 +4,7 @@
         "lastName": "Кетцалькоатль",
         "firstName": "Кукумац",
         "middleName": "Кукулькан",
-        "inn": "3347780927",
+        "inn": "{{inn}}",
         "birthDay": "28.08.1991",
         "sex": "M",
         "phone": "380631003256",
@@ -13,9 +13,10 @@
         "uaResident": "1",
         "flagPersonTerror": "1",
         "flagPEPs": "0",
-        "flagTopLevelRisk": "0"
+        "flagTopLevelRisk": "1"
     },
     "extends": {
+        "nameLat": "KUKULARA",
         "countryCitizen": "804",
         "maritalStatus": "6",
         "workInfo": "Бог, глава всего",
@@ -32,7 +33,7 @@
         "otherBankAccount": "1,2,3,4",
         "otherBankCredit": "1",
         "otherBankDepo": "1",
-        "costPaperAvail": "0",
+        "costPaperAvail": "Відсутні",
         "planUseServices": "1,2,3",
         "ugbRelatePers": "0",
         "publicPersonExists": "0",
@@ -80,7 +81,17 @@
             "flatNo": "1"
         }
     ],
-    "documents": [       
+    "documents": [
+        {
+            "type": "passport",
+            "typeName": "Паспорт",
+            "series": "СН",
+            "number": "432311",
+            "issue": "Святошинське РУ ГУ МВС у м.Києві",
+            "dateIssue": "01.10.1997",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+        },
         {
             "type": "idpassport",
             "typeName": "Паспорт картка",
@@ -95,19 +106,13 @@
     "scans": [
         {
             "type": "passport",
-            "scanFile": "BASE64",
+            "scanFile": "{{{in.docs.photo}}}",
             "dateCreate": "dd.mm.yyyy",
             "extension": "jpg"
         },
         {
             "type": "photo",
-            "scanFile": "BASE64",
-            "dateCreate": "dd.mm.yyyy",
-            "extension": "jpg"
-        },
-        {
-            "type": "inn",
-            "scanFile": "BASE64",
+            "scanFile": "{{{in.docs.photo}}}",
             "dateCreate": "dd.mm.yyyy",
             "extension": "jpg"
         }

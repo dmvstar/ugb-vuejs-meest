@@ -22,7 +22,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>3096317249</tem:StateCode>
+               <tem:StateCode>3192819838</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -33,7 +33,35 @@
                <tem:IsPartner>false</tem:IsPartner>
                <tem:PrevIdentDate>2021-01-10T00:00:00</tem:PrevIdentDate>
                <tem:Status>1</tem:Status>
-            </tem:Clients>            
+            </tem:Clients>   
+                        
+            <tem:ClientNames>
+               <tem:TNames>
+                  <Lang>ENG</Lang>
+                  <Name>Ketcal'koatl</Name>
+                  <FullName>Ketcal'koatl Kukumac Kukul'kan</FullName>
+                  <FullNameR/>
+                  <FullNameD/>
+                  <Status>1</Status>                
+               </tem:TNames>
+               <tem:TNames>
+                  <Lang>LAT</Lang>
+                  <Name>Ketcal'koatl</Name>
+                  <FullName>Ketcal'koatl Kukumac Kukul'kan</FullName>
+                  <FullNameR/>
+                  <FullNameD/>
+                  <Status>1</Status>                 
+               </tem:TNames>
+               <tem:TNames>
+                  <Lang>RUS</Lang>
+                  <Name>Кетцалькоатль</Name>
+                  <FullName>Кетцалькоатль Кукумац Кукулькан</FullName>
+                  <FullNameR>Кетцалькоатль Кукумац Кукулькан Р</FullNameR>
+                  <FullNameD>Кетцалькоатль Кукумац Кукулькан Д</FullNameD>
+                  <Status>1</Status>
+               </tem:TNames>
+            </tem:ClientNames>
+                     
             <tem:Individuals>
                <tem:FirstName>Кукумац</tem:FirstName>
                <tem:LastName>Кетцалькоатль</tem:LastName>

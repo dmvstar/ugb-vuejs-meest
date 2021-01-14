@@ -5,6 +5,10 @@
     "client_man": "./data/client-create-Clients.xml",
     "client_bot": "./data/client-create-Empty.xml",
 
+    "names_top": "./data/client-create-Empty.xml",
+    "names_man": "./data/client-create-ClientNames.xml",
+    "names_bot": "./data/client-create-Empty.xml",
+
     "indiv_top": "./data/client-create-Empty.xml",
     "indiv_man": "./data/client-create-Indiv.xml",
     "indiv_bot": "./data/client-create-Empty.xml",

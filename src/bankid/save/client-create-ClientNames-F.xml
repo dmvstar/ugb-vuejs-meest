@@ -1,0 +1,27 @@
+            
+            <tem:ClientNames>
+               <tem:TNames>
+                  <Lang>ENG</Lang>
+                  <Name>Ketcal'koatl</Name>
+                  <FullName>Ketcal'koatl Kukumac Kukul'kan</FullName>
+                  <FullNameR/>
+                  <FullNameD/>
+                  <Status>1</Status>                
+               </tem:TNames>
+               <tem:TNames>
+                  <Lang>LAT</Lang>
+                  <Name>Ketcal'koatl</Name>
+                  <FullName>Ketcal'koatl Kukumac Kukul'kan</FullName>
+                  <FullNameR/>
+                  <FullNameD/>
+                  <Status>1</Status>                 
+               </tem:TNames>
+               <tem:TNames>
+                  <Lang>RUS</Lang>
+                  <Name>Кетцалькоатль</Name>
+                  <FullName>Кетцалькоатль Кукумац Кукулькан</FullName>
+                  <FullNameR>Кетцалькоатль Кукумац Кукулькан Р</FullNameR>
+                  <FullNameD>Кетцалькоатль Кукумац Кукулькан Д</FullNameD>
+                  <Status>1</Status>
+               </tem:TNames>
+            </tem:ClientNames>

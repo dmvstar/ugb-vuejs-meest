@@ -98,6 +98,11 @@ function load_xml_templates_files() {
     client_xml_data.client_top = load_file(client_xml_template.client_top.name);
     client_xml_data.client_man = load_file(client_xml_template.client_man.name);
     client_xml_data.client_bot = load_file(client_xml_template.client_bot.name);
+
+    client_xml_data.names_top = load_file(client_xml_template.names_top.name);
+    client_xml_data.names_man = load_file(client_xml_template.names_man.name);
+    client_xml_data.names_bot = load_file(client_xml_template.names_bot.name);
+
     client_xml_data.indiv_top = load_file(client_xml_template.indiv_top.name);
     client_xml_data.indiv_man = load_file(client_xml_template.indiv_man.name);
     client_xml_data.indiv_bot = load_file(client_xml_template.indiv_bot.name);
@@ -171,6 +176,7 @@ function create_out_xml() {
     fs.writeFileSync("client-create-bankid-3.xml", output);
     // XML CREATE END-------------------------------------------
 }
+
 function load_requeries_files(){
     if (MODE_WORK_LOCAL !== true) return;
     bankid_client = require('./bankid-cli-1.json');

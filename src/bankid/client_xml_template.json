@@ -11,6 +11,18 @@
         "name": "./data/client-create-Clients.xml",
         "data": null
     },
+    "names_man": {
+        "name": "./data/client-create-ClientNames.xml",
+        "data": null
+    },
+    "names_bot": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
+    "names_top": {
+        "name": "./data/client-create-Empty.xml",
+        "data": null
+    },
     "client_bot": {
         "name": "./data/client-create-Empty.xml",
         "data": null

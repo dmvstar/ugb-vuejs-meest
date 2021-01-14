@@ -1,5 +1,6 @@
 [
   {
+    "cnt": 1,
     "bankid": {
       "block": "person",
       "source": "",
@@ -17,6 +18,7 @@
     }
   },
   {
+    "cnt": 2,
     "bankid": {
       "block": "person",
       "source": "",
@@ -34,6 +36,7 @@
     }
   },
   {
+    "cnt": 3,
     "bankid": {
       "block": "person",
       "source": "",
@@ -51,6 +54,7 @@
     }
   },
   {
+    "cnt": 4,
     "bankid": {
       "block": "calculate",
       "source": "person",
@@ -68,10 +72,11 @@
     }
   },
   {
+    "cnt": 5,
     "bankid": {
       "block": "person",
       "source": "",
-      "code": "inn",
+      "code": "іnn",
       "maps": "",
       "type": "string"
     },
@@ -85,10 +90,11 @@
     }
   },
   {
+    "cnt": 6,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "country_citizen",
+      "code": "countryCitizen",
       "maps": "",
       "type": "int"
     },
@@ -102,10 +108,11 @@
     }
   },
   {
+    "cnt": 7,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "marital_status",
+      "code": "maritalStatus",
       "maps": "",
       "type": "int"
     },
@@ -119,6 +126,7 @@
     }
   },
   {
+    "cnt": 8,
     "bankid": {
       "block": "person",
       "source": "",
@@ -136,6 +144,7 @@
     }
   },
   {
+    "cnt": 9,
     "bankid": {
       "block": "person",
       "source": "",
@@ -153,6 +162,7 @@
     }
   },
   {
+    "cnt": 10,
     "bankid": {
       "block": "person",
       "source": "",
@@ -161,7 +171,7 @@
       "type": "date"
     },
     "webbank": {
-      "block": "Individuals",
+      "block": "Client",
       "code": "BirthDay",
       "type": "date",
       "default": "",
@@ -170,6 +180,7 @@
     }
   },
   {
+    "cnt": 11,
     "bankid": {
       "block": "person",
       "source": "",
@@ -187,6 +198,7 @@
     }
   },
   {
+    "cnt": 12,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -204,6 +216,7 @@
     }
   },
   {
+    "cnt": 13,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -221,6 +234,7 @@
     }
   },
   {
+    "cnt": 14,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -238,6 +252,7 @@
     }
   },
   {
+    "cnt": 15,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -255,6 +270,7 @@
     }
   },
   {
+    "cnt": 16,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -272,6 +288,7 @@
     }
   },
   {
+    "cnt": 17,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -289,6 +306,7 @@
     }
   },
   {
+    "cnt": 18,
     "bankid": {
       "block": "documents",
       "source": "",
@@ -306,45 +324,12 @@
     }
   },
   {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "none",
-      "maps": "",
-      "type": "none"
-    },
-    "webbank": {
-      "block": "Identifications",
-      "code": "Checked",
-      "type": "int",
-      "default": "0",
-      "dict": "",
-      "isneed": "true"
-    }
-  },
-  {
-    "bankid": {
-      "block": "none",
-      "source": "",
-      "code": "none",
-      "maps": "",
-      "type": "none"
-    },
-    "webbank": {
-      "block": "Identifications",
-      "code": "IsMain",
-      "type": "int",
-      "default": "0",
-      "dict": "",
-      "isneed": "true"
-    }
-  },
-  {
+    "cnt": 19,
     "bankid": {
       "block": "addresses",
       "source": "",
       "code": "type",
-      "maps": "addresses",
+      "maps": "",
       "type": "string"
     },
     "webbank": {
@@ -357,6 +342,7 @@
     }
   },
   {
+    "cnt": 20,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -374,6 +360,7 @@
     }
   },
   {
+    "cnt": 21,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -391,6 +378,7 @@
     }
   },
   {
+    "cnt": 22,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -408,6 +396,7 @@
     }
   },
   {
+    "cnt": 23,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -417,7 +406,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "Town",
+      "code": "Town ",
       "type": "string",
       "default": "",
       "dict": "",
@@ -425,6 +414,7 @@
     }
   },
   {
+    "cnt": 24,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -434,7 +424,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "Street",
+      "code": "Street ",
       "type": "string",
       "default": "",
       "dict": "",
@@ -442,6 +432,7 @@
     }
   },
   {
+    "cnt": 25,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -451,7 +442,7 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "HouseNumber",
+      "code": "HouseNumber ",
       "type": "string",
       "default": "",
       "dict": "",
@@ -459,6 +450,7 @@
     }
   },
   {
+    "cnt": 26,
     "bankid": {
       "block": "addresses",
       "source": "",
@@ -468,21 +460,39 @@
     },
     "webbank": {
       "block": "Addresses",
-      "code": "FlatNumber",
+      "code": "FlatNumber ",
       "type": "string",
       "default": "",
       "dict": "",
       "isneed": "true"
     }
   },
-  
   {
+    "cnt": 27,
     "bankid": {
       "block": "person",
       "source": "",
       "code": "socStatus",
-      "maps": "",
+      "maps": "socstatus",
       "type": "string"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "socStatus",
+      "type": "int",
+      "default": "",
+      "dict": "socStatus",
+      "isneed": "true"
+    }
+  },
+  {
+    "cnt": 28,
+    "bankid": {
+      "block": "person",
+      "source": "",
+      "code": "flagPEPs",
+      "maps": "",
+      "type": "int"
     },
     "webbank": {
       "block": "Properties",
@@ -494,23 +504,7 @@
     }
   },
   {
-    "bankid": {
-      "block": "person",
-      "source": "",
-      "code": "flagPEPs",
-      "maps": "",
-      "type": "int"
-    },
-    "webbank": {
-      "block": "Properties",
-      "code": "PUBLIC_PERSON_EXISTS",
-      "type": "int",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
+    "cnt": 29,
     "bankid": {
       "block": "person",
       "source": "",
@@ -528,16 +522,17 @@
     }
   },
   {
+    "cnt": 30,
     "bankid": {
       "block": "person",
       "source": "",
       "code": "flagRestriction",
-      "maps": "",
+      "maps": "terrorist",
       "type": "int"
     },
     "webbank": {
       "block": "Properties",
-      "code": "",
+      "code": "CL_FATF_CHECK_RESULT",
       "type": "int",
       "default": "",
       "dict": "",
@@ -545,6 +540,7 @@
     }
   },
   {
+    "cnt": 31,
     "bankid": {
       "block": "person",
       "source": "",
@@ -562,6 +558,7 @@
     }
   },
   {
+    "cnt": 32,
     "bankid": {
       "block": "scans",
       "source": "",
@@ -579,6 +576,7 @@
     }
   },
   {
+    "cnt": 33,
     "bankid": {
       "block": "scans",
       "source": "",
@@ -596,6 +594,7 @@
     }
   },
   {
+    "cnt": 34,
     "bankid": {
       "block": "scans",
       "source": "",
@@ -613,6 +612,7 @@
     }
   },
   {
+    "cnt": 35,
     "bankid": {
       "block": "scans",
       "source": "",
@@ -630,10 +630,11 @@
     }
   },
   {
+    "cnt": 36,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "work_info",
+      "code": "workInfo",
       "maps": "",
       "type": "string"
     },
@@ -647,6 +648,7 @@
     }
   },
   {
+    "cnt": 37,
     "bankid": {
       "block": "person",
       "source": "",
@@ -660,27 +662,11 @@
       "type": "string",
       "default": "",
       "dict": "",
-      "isneed": ""
+      "isneed": "\\true"
     }
   },
   {
-    "bankid": {
-      "block": "person",
-      "source": "",
-      "code": "phone",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Communications",
-      "code": "TypeId",
-      "type": "string",
-      "default": "3",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
+    "cnt": 38,
     "bankid": {
       "block": "person",
       "source": "",
@@ -698,61 +684,11 @@
     }
   },
   {
-    "bankid": {
-      "block": "person",
-      "source": "",
-      "code": "email",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Communications",
-      "code": "TypeId",
-      "type": "string",
-      "default": "5",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "person",
-      "source": "",
-      "code": "web",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Communications",
-      "code": "Value",
-      "type": "string",
-      "default": "",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
-    "bankid": {
-      "block": "person",
-      "source": "",
-      "code": "web",
-      "maps": "",
-      "type": "string"
-    },
-    "webbank": {
-      "block": "Communications",
-      "code": "TypeId",
-      "type": "string",
-      "default": "6",
-      "dict": "",
-      "isneed": ""
-    }
-  },
-  {
+    "cnt": 39,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "birth_country",
+      "code": "birthCountry",
       "maps": "",
       "type": "string"
     },
@@ -766,10 +702,11 @@
     }
   },
   {
+    "cnt": 40,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "birth_place",
+      "code": "birthPlace",
       "maps": "",
       "type": "string"
     },
@@ -783,10 +720,11 @@
     }
   },
   {
+    "cnt": 41,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "profit_way",
+      "code": "profitWay",
       "maps": "",
       "type": "int"
     },
@@ -800,10 +738,11 @@
     }
   },
   {
+    "cnt": 42,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "profit_src",
+      "code": "profitSrc",
       "maps": "",
       "type": "int"
     },
@@ -817,10 +756,11 @@
     }
   },
   {
+    "cnt": 43,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "obsyag_nad",
+      "code": "ownFundsAmount",
       "maps": "",
       "type": "int"
     },
@@ -834,10 +774,11 @@
     }
   },
   {
+    "cnt": 44,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "nad_k_3",
+      "code": "ownFundsSrc",
       "maps": "",
       "type": "int"
     },
@@ -851,10 +792,11 @@
     }
   },
   {
+    "cnt": 45,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "monthsumm",
+      "code": "monthAmouunt",
       "maps": "",
       "type": "int"
     },
@@ -868,10 +810,11 @@
     }
   },
   {
+    "cnt": 46,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "propetyth_of_client",
+      "code": "realEstateAvail",
       "maps": "",
       "type": "int"
     },
@@ -885,10 +828,11 @@
     }
   },
   {
+    "cnt": 47,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "propetyth_of_client_avto",
+      "code": "movePropAvail",
       "maps": "",
       "type": "int"
     },
@@ -902,10 +846,11 @@
     }
   },
   {
+    "cnt": 48,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "info_outer_acc_sel",
+      "code": "otherBankAccount",
       "maps": "",
       "type": "int"
     },
@@ -919,10 +864,11 @@
     }
   },
   {
+    "cnt": 49,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "exists_cred_out",
+      "code": "otherBankCredit",
       "maps": "",
       "type": "int"
     },
@@ -936,10 +882,11 @@
     }
   },
   {
+    "cnt": 50,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "exists_depo_out",
+      "code": "otherBankDepo",
       "maps": "",
       "type": "int"
     },
@@ -953,10 +900,11 @@
     }
   },
   {
+    "cnt": 51,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "propetypap_of_clientype",
+      "code": "costPaperAvail",
       "maps": "",
       "type": "int"
     },
@@ -970,10 +918,11 @@
     }
   },
   {
+    "cnt": 52,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "bank_services_manual",
+      "code": "planUseServices",
       "maps": "",
       "type": "int"
     },
@@ -987,10 +936,11 @@
     }
   },
   {
+    "cnt": 53,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "ugb_tcurelpers",
+      "code": "ugbRelatePers",
       "maps": "",
       "type": "int"
     },
@@ -1004,10 +954,11 @@
     }
   },
   {
+    "cnt": 54,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "public_person_exists",
+      "code": "publicPersonExists",
       "maps": "",
       "type": "int"
     },
@@ -1021,10 +972,11 @@
     }
   },
   {
+    "cnt": 55,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "public_data_fact",
+      "code": "publicFactDate",
       "maps": "",
       "type": "date"
     },
@@ -1038,10 +990,11 @@
     }
   },
   {
+    "cnt": 56,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "public_data_permission",
+      "code": "publicPermitDate",
       "maps": "",
       "type": "date"
     },
@@ -1055,10 +1008,11 @@
     }
   },
   {
+    "cnt": 57,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "public_data_risk",
+      "code": "publicRiskDate",
       "maps": "",
       "type": "date"
     },
@@ -1072,10 +1026,11 @@
     }
   },
   {
+    "cnt": 58,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "data_zax_per",
+      "code": "clienInspectDate",
       "maps": "",
       "type": "operation"
     },
@@ -1089,10 +1044,11 @@
     }
   },
   {
+    "cnt": 59,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "kl_k013fo",
+      "code": "statusBusiness",
       "maps": "",
       "type": "int"
     },
@@ -1106,10 +1062,11 @@
     }
   },
   {
+    "cnt": 60,
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "usa_chiisares",
+      "code": "usaChiisares",
       "maps": "",
       "type": "int"
     },
@@ -1117,8 +1074,314 @@
       "block": "Properties",
       "code": "Chiisaresident_USA",
       "type": "int",
+      "default": "0",
+      "dict": "YESNO",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 61,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "typeCli",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "CUSTOMER_TYPE",
+      "type": "int",
+      "default": "11694-клієнт з відкриттям рахунків+",
+      "dict": "CUSTOMER_TYPE",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 62,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "photo25",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "PASPFOTOCONTROL25",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 63,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "photo45",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "PASPFOTOCONTROL45",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 64,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "codOblRee",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "FATF_CodObl",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 65,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "verifyDate",
+      "maps": "",
+      "type": "date"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "Verifikatsii_date",
+      "type": "date",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 66,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "signDate",
+      "maps": "",
+      "type": "date"
+    },
+    "webbank": {
+      "block": "Client",
+      "code": "PrevIdentDate",
+      "type": "date",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 67,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "education",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "Education",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 68,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "forTaxStatus",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "CLIENT_STATUS",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 69,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "forTaxDate",
+      "maps": "",
+      "type": "date"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "CLIENT_STATUS_DATE",
+      "type": "",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 70,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "forTaxCode",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "TAX_CODE",
+      "type": "",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 71,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "segment",
+      "maps": "",
+      "type": "segment"
+    },
+    "webbank": {
+      "block": "Segment",
+      "code": "Segment",
+      "type": "segment",
+      "default": "",
+      "dict": "Segment",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 72,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "verifyType",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "Customer_verification",
+      "type": "",
+      "default": "",
+      "dict": "Customer_verification",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 73,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "reputation",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "Criterias",
+      "type": "",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 74,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "countryCitisien",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "FATF_COUNTRY_CITIZEN",
+      "type": "",
+      "default": "",
+      "dict": "KL_K040.DBF",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 75,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "greenCard",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "CARD_GREEN",
+      "type": "",
+      "default": "",
+      "dict": "A_GREEN_CARD",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 76,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "registryUSA",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "Resident_USA",
+      "type": "",
       "default": "",
       "dict": "YESNO",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 77,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "statusFATCA",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "FATCA",
+      "type": "",
+      "default": "",
+      "dict": "FATCA",
       "isneed": ""
     }
   }

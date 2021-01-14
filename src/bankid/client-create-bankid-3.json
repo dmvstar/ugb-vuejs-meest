@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "2165516163",
+    "StateCode": "3096317249",
     "Residency": "1",
     "PrevIdentDate": "2021-01-10T00:00:00",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
@@ -14,15 +14,6 @@
     "MarriageStatus": "6"
   },
   "ident": [
-    {
-      "TypeId": "4",
-      "Series": "СН",
-      "Number": "432311",
-      "Registrator": "Святошинське РУ ГУ МВС у м.Києві",
-      "IssueDate": "1997-10-01T00:00:00",
-      "ExpirationDate": "2099-01-01T00:00:00",
-      "CountryCode": "UA"
-    },
     {
       "TypeId": "55",
       "Series": "",
@@ -87,6 +78,12 @@
       "Code": "FATF_COUNTRY_CITIZEN",
       "Dict": "KL_K040.DBF",
       "Value": "804"
+    },
+    {
+      "Refs": "",
+      "Code": "INFO_WORK_FROM",
+      "Dict": "",
+      "Value": "Бог, глава всего"
     },
     {
       "Refs": "",

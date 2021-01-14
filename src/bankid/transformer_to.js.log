@@ -1,1654 +1,1353 @@
 MAIN INIT
-{
-  person: {
-    type: 'physical',
-    lastName: 'Кетцалькоатль',
-    firstName: 'Кукумац',
-    middleName: 'Кукулькан',
-    inn: '2165516163',
-    birthDay: '28.08.1991',
-    sex: 'M',
-    phone: '380631003256',
-    email: 'sava@mail.dot.com',
-    web: 'www.www.net',
-    uaResident: '1',
-    flagPersonTerror: '1',
-    flagPEPs: '0',
-    flagTopLevelRisk: '1'
-  },
-  extends: {
-    countryCitizen: '804',
-    maritalStatus: '6',
-    workInfo: 'Бог, глава всего',
-    birthCountry: '804',
-    birthPlace: 'Бердичув',
-    profitWay: '14300',
-    profitSrc: '1',
-    ownFundsAmount: '1',
-    ownFundsSrc: '1',
-    monthAmouunt: '4',
-    realEstateAvail: '1',
-    movePropAvail: '2',
-    otherBankAccount: '1,2,3,4',
-    otherBankCredit: '1',
-    otherBankDepo: '1',
-    costPaperAvail: '0',
-    planUseServices: '1,2,3',
-    ugbRelatePers: '0',
-    publicPersonExists: '0',
-    statusBusiness: '5',
-    usaChiisares: '0',
-    verifyType: '3',
-    typeCli: 'клієнт з відкриттям рахунків',
-    education: '5',
-    photo25: '1',
-    photo45: '1',
-    codOblRee: '32',
-    verifyDate: '10.01.2021',
-    signDate: '10.01.2021',
-    forTaxStatus: '0',
-    forTaxDate: '10.01.2021',
-    forTaxCode: '026 097',
-    reputation: 'добре',
-    countryCitisien: '804',
-    greenCard: '1',
-    registryUSA: '0',
-    statusFATCA: '3'
-  },
-  addresses: [
-    {
-      type: 'factual',
-      country: 'UA',
-      state: 'Київська',
-      area: 'Київ',
-      city: 'м. Київ',
-      street: 'вул. Бородинского побоища',
-      houseNo: '21',
-      flatNo: '16'
-    },
-    {
-      type: 'juridical',
-      country: 'UA',
-      state: 'Київська',
-      area: 'Київ',
-      city: 'м. Чичен-Ица',
-      street: 'вул. пирамида Кукулькана.',
-      houseNo: '1',
-      flatNo: '1'
-    }
-  ],
-  documents: [
-    {
-      type: 'passport',
-      typeName: 'Паспорт',
-      series: 'СН',
-      number: '432311',
-      issue: 'Святошинське РУ ГУ МВС у м.Києві',
-      dateIssue: '01.10.1997',
-      dateExpiration: '',
-      issueCountryIso2: 'UA'
-    },
-    {
-      type: 'idpassport',
-      typeName: 'Паспорт картка',
-      series: '',
-      number: '3425654326',
-      issue: '1456',
-      dateIssue: '01.10.2020',
-      dateExpiration: '01.10.2040',
-      issueCountryIso2: 'UA'
-    }
-  ],
-  scans: [
-    {
-      type: 'passport',
-      scanFile: 'BASE64',
-      dateCreate: 'dd.mm.yyyy',
-      extension: 'jpg'
-    },
-    {
-      type: 'photo',
-      scanFile: 'BASE64',
-      dateCreate: 'dd.mm.yyyy',
-      extension: 'jpg'
-    }
-  ]
-}
+{ person:
+   { type: 'physical',
+     lastName: 'Кетцалькоатль',
+     firstName: 'Кукумац',
+     middleName: 'Кукулькан',
+     inn: '3096317249',
+     birthDay: '28.08.1991',
+     sex: 'M',
+     phone: '380631003256',
+     email: 'sava@mail.dot.com',
+     web: 'www.www.net',
+     uaResident: '1',
+     flagPersonTerror: '1',
+     flagPEPs: '0',
+     flagTopLevelRisk: '0' },
+  extends:
+   { countryCitizen: '804',
+     maritalStatus: '6',
+     workInfo: 'Бог, глава всего',
+     birthCountry: '804',
+     birthPlace: 'Бердичув',
+     profitWay: '14300',
+     profitSrc: '1',
+     ownFundsAmount: '1',
+     ownFundsSrc: '1',
+     monthAmouunt: '4',
+     realEstateAvail: '1',
+     movePropAvail: '2',
+     otherBankAccount: '1,2,3,4',
+     otherBankCredit: '1',
+     otherBankDepo: '1',
+     costPaperAvail: '0',
+     planUseServices: '1,2,3',
+     ugbRelatePers: '0',
+     publicPersonExists: '0',
+     statusBusiness: '5',
+     usaChiisares: '0',
+     verifyType: '3',
+     typeCli: 'клієнт з відкриттям рахунків',
+     education: '5',
+     photo25: '1',
+     photo45: '1',
+     codOblRee: '32',
+     verifyDate: '10.01.2021',
+     signDate: '10.01.2021',
+     forTaxStatus: '0',
+     forTaxDate: '10.01.2021',
+     forTaxCode: '026 097',
+     reputation: 'добре',
+     countryCitisien: '804',
+     greenCard: '1',
+     registryUSA: '0',
+     statusFATCA: '3' },
+  addresses:
+   [ { type: 'factual',
+       country: 'UA',
+       state: 'Київська',
+       area: 'Київ',
+       city: 'м. Київ',
+       street: 'вул. Бородинского побоища',
+       houseNo: '21',
+       flatNo: '16' },
+     { type: 'juridical',
+       country: 'UA',
+       state: 'Київська',
+       area: 'Київ',
+       city: 'м. Чичен-Ица',
+       street: 'вул. пирамида Кукулькана.',
+       houseNo: '1',
+       flatNo: '1' } ],
+  documents:
+   [ { type: 'idpassport',
+       typeName: 'Паспорт картка',
+       series: '',
+       number: '3425654326',
+       issue: '1456',
+       dateIssue: '01.10.2020',
+       dateExpiration: '01.10.2040',
+       issueCountryIso2: 'UA' } ],
+  scans:
+   [ { type: 'passport',
+       scanFile: 'BASE64',
+       dateCreate: 'dd.mm.yyyy',
+       extension: 'jpg' },
+     { type: 'photo',
+       scanFile: 'BASE64',
+       dateCreate: 'dd.mm.yyyy',
+       extension: 'jpg' },
+     { type: 'inn',
+       scanFile: 'BASE64',
+       dateCreate: 'dd.mm.yyyy',
+       extension: 'jpg' } ] }
 bankid_mapping
-[
-  {
-    cnt: 1,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'lastName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'LastName',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 2,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'firstName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'FirstName',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 3,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'middleName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'FatherName',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 4,
-    bankid: {
-      block: 'calculate',
-      source: 'person',
-      code: 'lastName+firstName+middleName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'Name',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 5,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'inn',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'StateCode',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 6,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'countryCitizen',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'FATF_COUNTRY_CITIZEN',
-      type: 'string',
-      default: '',
-      dict: 'KL_K040.DBF',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 7,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'maritalStatus',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'MarriageStatus',
-      type: 'int',
-      default: '',
-      dict: 'D08',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 8,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'sex',
-      maps: 'sex',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'GENDER',
-      type: 'int',
-      default: '',
-      dict: 'D06',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 9,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'sex',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'GENDER',
-      type: 'int',
-      default: '',
-      dict: 'D06',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 10,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'birthDay',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'BirthDay',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 11,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'uaResident',
-      maps: 'resident',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'Residency',
-      type: 'int',
-      default: '',
-      dict: 'KL_K030.DBF',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 12,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'type',
-      maps: 'documents',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'TypeId',
-      type: 'int',
-      default: '',
-      dict: 'cfIdentificationTypes',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 13,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'series',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'Series',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 14,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'number',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'Number',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 15,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'issue',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'Registrator',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 16,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'dateIssue',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'IssueDate',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 17,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'dateExpiration',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'ExpirationDate',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 18,
-    bankid: {
-      block: 'documents',
-      source: '',
-      code: 'issueCountryIso2',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Identifications',
-      code: 'CountryCode',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 19,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'type',
-      maps: 'addresses',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'TypeCode',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 20,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'country',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'Country',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 21,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'state',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'State',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 22,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'area',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'Region',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 23,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'city',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'Town',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 24,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'street',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'Street',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 25,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'houseNo',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'HouseNumber',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 26,
-    bankid: {
-      block: 'addresses',
-      source: '',
-      code: 'flatNo',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Addresses',
-      code: 'FlatNumber',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 27,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'socStatus',
-      maps: 'socstatus',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'socStatus',
-      type: 'int',
-      default: '',
-      dict: 'socStatus',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 28,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagPEPs',
-      maps: 'peps',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PUBLIC_PERSON_EXISTS',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 29,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagPersonTerror',
-      maps: 'terrorist',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CL_FATF_CHECK_RESULT',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 30,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagRestriction',
-      maps: 'terrorist',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CL_FATF_CHECK_RESULT',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 31,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagTopLevelRisk',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: '',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 32,
-    bankid: {
-      block: 'scans',
-      source: '',
-      code: 'type',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Scans',
-      code: 'name',
-      type: 'string',
-      default: '',
-      dict: 'scans',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 33,
-    bankid: {
-      block: 'scans',
-      source: '',
-      code: 'scanFile',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Scans',
-      code: 'content',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 34,
-    bankid: {
-      block: 'scans',
-      source: '',
-      code: 'dateCreate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Scans',
-      code: 'tmestamp',
-      type: 'dete',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 35,
-    bankid: {
-      block: 'scans',
-      source: '',
-      code: 'extension',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Scans',
-      code: 'comment',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 36,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'workInfo',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: '',
-      type: '',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 37,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'phone',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'Value',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    }
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'phone',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'TypeId',
-      type: 'string',
-      default: '3',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 38,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'email',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'Value',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'email',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'TypeId',
-      type: 'string',
-      default: '5',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'web',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'Value',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'web',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'TypeId',
-      type: 'string',
-      default: '6',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 39,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'birthCountry',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'BIRTH_COUNTRY',
-      type: 'int',
-      default: '',
-      dict: 'KL_K040.DBF',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 40,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'birthPlace',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'BIRTH_PLACE',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 41,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'profitWay',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PROFIT_WAY',
-      type: 'int',
-      default: '',
-      dict: 'PROFIT_WAY',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 42,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'profitSrc',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'BANK_PRODUCT',
-      type: 'int',
-      default: '',
-      dict: 'FIN_DOCH',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 43,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'ownFundsAmount',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'OBSYAG_NAD',
-      type: 'int',
-      default: '',
-      dict: 'OBSYAG_NAD_1',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 44,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'ownFundsSrc',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'NAD_K_3',
-      type: 'int',
-      default: '',
-      dict: 'NAD_K_3',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 45,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'monthAmouunt',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'MONTHSUMM',
-      type: 'int',
-      default: '',
-      dict: 'SUMA_DOHOD',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 46,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'realEstateAvail',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PROPETYTH_OF_CLIENT',
-      type: 'int',
-      default: '',
-      dict: 'PROPETYTH_OF_CLIENT',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 47,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'movePropAvail',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PROPETYTH_OF_CLIENT_AVTO',
-      type: 'int',
-      default: '',
-      dict: 'PROPETYTH_OF_CLIENT_AVTO',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 48,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'otherBankAccount',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'INFO_OUTER_ACC_SEL',
-      type: 'int',
-      default: '',
-      dict: 'INFO_OUTER_ACC',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 49,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'otherBankCredit',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'EXISTS_CRED_OUT',
-      type: 'int',
-      default: '',
-      dict: 'YESNO',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 50,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'otherBankDepo',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'EXISTS_DEPO_OUT',
-      type: 'int',
-      default: '',
-      dict: 'YESNO',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 51,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'costPaperAvail',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PROPETYPAP_OF_CLIENTYPE',
-      type: 'int',
-      default: '',
-      dict: 'PROPETYPAP_OF_CLIENTYPE',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 52,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'planUseServices',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'BANK_SERVICES_MANUAL',
-      type: 'int',
-      default: '',
-      dict: 'BANK_SERVICES_MANUAL',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 53,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'ugbRelatePers',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'UGB_TCURelPers',
-      type: 'int',
-      default: '',
-      dict: 'RF_UGB_TCURelPers',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 54,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'publicPersonExists',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PUBLIC_PERSON_EXISTS',
-      type: 'int',
-      default: '',
-      dict: 'PUBLIC_PERSON_EXISTS',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 55,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'publicFactDate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PUBLIC_DATA_FACT',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 56,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'publicPermitDate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PUBLIC_DATA_PERMISSION',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 57,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'publicRiskDate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PUBLIC_DATA_RISK',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 58,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'clienInspectDate',
-      maps: '',
-      type: 'operation'
-    },
-    webbank: {
-      block: 'Operations',
-      code: 'DATA_ZAX_PER',
-      type: 'operation',
-      default: '',
-      dict: 'operation',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 59,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'statusBusiness',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'KL_K013FO',
-      type: 'int',
-      default: '',
-      dict: 'KL_K013_FO',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 60,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'usaChiisares',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'Chiisaresident_USA',
-      type: 'int',
-      default: '0',
-      dict: 'YESNO',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 61,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'typeCli',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CUSTOMER_TYPE',
-      type: 'int',
-      default: '11694-клієнт з відкриттям рахунків+',
-      dict: 'CUSTOMER_TYPE',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 62,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'photo25',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PASPFOTOCONTROL25',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 63,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'photo45',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PASPFOTOCONTROL45',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 64,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'codOblRee',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'FATF_CodObl',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 65,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'verifyDate',
-      maps: '',
-      type: 'adate'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'Verifikatsii_date ',
-      type: 'adate',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 66,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'signDate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'PrevIdentDate',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 67,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'education',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'Education',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 68,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'forTaxStatus',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CLIENT_STATUS',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 69,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'forTaxDate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CLIENT_STATUS_DATE',
-      type: '',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 70,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'forTaxCode',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'TAX_CODE',
-      type: '',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 71,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'segment',
-      maps: '',
-      type: 'segment'
-    },
-    webbank: {
-      block: 'Segment',
-      code: 'Segment',
-      type: 'segment',
-      default: '',
-      dict: 'Segment',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 72,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'verifyType',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'Customer_verification',
-      type: '',
-      default: '',
-      dict: 'Customer_verification',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 73,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'reputation',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'Criterias',
-      type: '',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 74,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'countryCitisien',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'FATF_COUNTRY_CITIZEN',
-      type: '',
-      default: '',
-      dict: 'KL_K040.DBF',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 75,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'greenCard',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CARD_GREEN',
-      type: '',
-      default: '',
-      dict: 'A_GREEN_CARD',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 76,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'registryUSA',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'Resident_USA',
-      type: '',
-      default: '',
-      dict: 'YESNO',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 77,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'statusFATCA',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'FATCA',
-      type: '',
-      default: '',
-      dict: 'FATCA',
-      isneed: ''
-    }
-  }
-]
+[ { cnt: 1,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'lastName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'LastName',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 2,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'firstName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'FirstName',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 3,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'middleName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'FatherName',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 4,
+    bankid:
+     { block: 'calculate',
+       source: 'person',
+       code: 'lastName+firstName+middleName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Client',
+       code: 'Name',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 5,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'inn',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Client',
+       code: 'StateCode',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 6,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'countryCitizen',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'FATF_COUNTRY_CITIZEN',
+       type: 'string',
+       default: '',
+       dict: 'KL_K040.DBF',
+       isneed: 'true' } },
+  { cnt: 7,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'maritalStatus',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Individuals',
+       code: 'MarriageStatus',
+       type: 'int',
+       default: '',
+       dict: 'D08',
+       isneed: 'true' } },
+  { cnt: 8,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'sex',
+       maps: 'sex',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'GENDER',
+       type: 'int',
+       default: '',
+       dict: 'D06',
+       isneed: 'true' } },
+  { cnt: 9,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'sex',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'GENDER',
+       type: 'int',
+       default: '',
+       dict: 'D06',
+       isneed: 'true' } },
+  { cnt: 10,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'birthDay',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Individuals',
+       code: 'BirthDay',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 11,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'uaResident',
+       maps: 'resident',
+       type: 'int' },
+    webbank:
+     { block: 'Client',
+       code: 'Residency',
+       type: 'int',
+       default: '',
+       dict: 'KL_K030.DBF',
+       isneed: 'true' } },
+  { cnt: 12,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'type',
+       maps: 'documents',
+       type: 'string' },
+    webbank:
+     { block: 'Identifications',
+       code: 'TypeId',
+       type: 'int',
+       default: '',
+       dict: 'cfIdentificationTypes',
+       isneed: 'true' } },
+  { cnt: 13,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'series',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Identifications',
+       code: 'Series',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 14,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'number',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Identifications',
+       code: 'Number',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 15,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'issue',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Identifications',
+       code: 'Registrator',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 16,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'dateIssue',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Identifications',
+       code: 'IssueDate',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 17,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'dateExpiration',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Identifications',
+       code: 'ExpirationDate',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 18,
+    bankid:
+     { block: 'documents',
+       source: '',
+       code: 'issueCountryIso2',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Identifications',
+       code: 'CountryCode',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 19,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'type',
+       maps: 'addresses',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'TypeCode',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 20,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'country',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'Country',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 21,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'state',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'State',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 22,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'area',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'Region',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 23,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'city',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'Town',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 24,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'street',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'Street',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 25,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'houseNo',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'HouseNumber',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 26,
+    bankid:
+     { block: 'addresses',
+       source: '',
+       code: 'flatNo',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Addresses',
+       code: 'FlatNumber',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { cnt: 27,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'socStatus',
+       maps: 'socstatus',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'socStatus',
+       type: 'int',
+       default: '',
+       dict: 'socStatus',
+       isneed: 'true' } },
+  { cnt: 28,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagPEPs',
+       maps: 'peps',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PUBLIC_PERSON_EXISTS',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 29,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagPersonTerror',
+       maps: 'terrorist',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CL_FATF_CHECK_RESULT',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 30,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagRestriction',
+       maps: 'terrorist',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CL_FATF_CHECK_RESULT',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 31,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagTopLevelRisk',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'ClientRisk',
+       code: '',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 32,
+    bankid:
+     { block: 'scans',
+       source: '',
+       code: 'type',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Scans',
+       code: 'name',
+       type: 'string',
+       default: '',
+       dict: 'scans',
+       isneed: '' } },
+  { cnt: 33,
+    bankid:
+     { block: 'scans',
+       source: '',
+       code: 'scanFile',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Scans',
+       code: 'content',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 34,
+    bankid:
+     { block: 'scans',
+       source: '',
+       code: 'dateCreate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Scans',
+       code: 'tmestamp',
+       type: 'dete',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 35,
+    bankid:
+     { block: 'scans',
+       source: '',
+       code: 'extension',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Scans',
+       code: 'comment',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 36,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'workInfo',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'INFO_WORK_FROM',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 37,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'phone',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'Value',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' } },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'phone',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'TypeId',
+       type: 'string',
+       default: '3',
+       dict: '',
+       isneed: '' } },
+  { cnt: 38,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'email',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'Value',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'email',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'TypeId',
+       type: 'string',
+       default: '5',
+       dict: '',
+       isneed: '' } },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'web',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'Value',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'web',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'TypeId',
+       type: 'string',
+       default: '6',
+       dict: '',
+       isneed: '' } },
+  { cnt: 39,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'birthCountry',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'BIRTH_COUNTRY',
+       type: 'int',
+       default: '',
+       dict: 'KL_K040.DBF',
+       isneed: '' } },
+  { cnt: 40,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'birthPlace',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'BIRTH_PLACE',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 41,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'profitWay',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PROFIT_WAY',
+       type: 'int',
+       default: '',
+       dict: 'PROFIT_WAY',
+       isneed: '' } },
+  { cnt: 42,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'profitSrc',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'BANK_PRODUCT',
+       type: 'int',
+       default: '',
+       dict: 'FIN_DOCH',
+       isneed: '' } },
+  { cnt: 43,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'ownFundsAmount',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'OBSYAG_NAD',
+       type: 'int',
+       default: '',
+       dict: 'OBSYAG_NAD_1',
+       isneed: '' } },
+  { cnt: 44,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'ownFundsSrc',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'NAD_K_3',
+       type: 'int',
+       default: '',
+       dict: 'NAD_K_3',
+       isneed: '' } },
+  { cnt: 45,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'monthAmouunt',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'MONTHSUMM',
+       type: 'int',
+       default: '',
+       dict: 'SUMA_DOHOD',
+       isneed: '' } },
+  { cnt: 46,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'realEstateAvail',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PROPETYTH_OF_CLIENT',
+       type: 'int',
+       default: '',
+       dict: 'PROPETYTH_OF_CLIENT',
+       isneed: '' } },
+  { cnt: 47,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'movePropAvail',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PROPETYTH_OF_CLIENT_AVTO',
+       type: 'int',
+       default: '',
+       dict: 'PROPETYTH_OF_CLIENT_AVTO',
+       isneed: '' } },
+  { cnt: 48,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'otherBankAccount',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'INFO_OUTER_ACC_SEL',
+       type: 'int',
+       default: '',
+       dict: 'INFO_OUTER_ACC',
+       isneed: '' } },
+  { cnt: 49,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'otherBankCredit',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'EXISTS_CRED_OUT',
+       type: 'int',
+       default: '',
+       dict: 'YESNO',
+       isneed: '' } },
+  { cnt: 50,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'otherBankDepo',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'EXISTS_DEPO_OUT',
+       type: 'int',
+       default: '',
+       dict: 'YESNO',
+       isneed: '' } },
+  { cnt: 51,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'costPaperAvail',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PROPETYPAP_OF_CLIENTYPE',
+       type: 'int',
+       default: '',
+       dict: 'PROPETYPAP_OF_CLIENTYPE',
+       isneed: '' } },
+  { cnt: 52,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'planUseServices',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'BANK_SERVICES_MANUAL',
+       type: 'int',
+       default: '',
+       dict: 'BANK_SERVICES_MANUAL',
+       isneed: '' } },
+  { cnt: 53,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'ugbRelatePers',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'UGB_TCURelPers',
+       type: 'int',
+       default: '',
+       dict: 'RF_UGB_TCURelPers',
+       isneed: '' } },
+  { cnt: 54,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'publicPersonExists',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PUBLIC_PERSON_EXISTS',
+       type: 'int',
+       default: '',
+       dict: 'PUBLIC_PERSON_EXISTS',
+       isneed: '' } },
+  { cnt: 55,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'publicFactDate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Properties',
+       code: 'PUBLIC_DATA_FACT',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 56,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'publicPermitDate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Properties',
+       code: 'PUBLIC_DATA_PERMISSION',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 57,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'publicRiskDate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Properties',
+       code: 'PUBLIC_DATA_RISK',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 58,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'clienInspectDate',
+       maps: '',
+       type: 'operation' },
+    webbank:
+     { block: 'Operations',
+       code: 'DATA_ZAX_PER',
+       type: 'operation',
+       default: '',
+       dict: 'operation',
+       isneed: '' } },
+  { cnt: 59,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'statusBusiness',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'KL_K013FO',
+       type: 'int',
+       default: '',
+       dict: 'KL_K013_FO',
+       isneed: '' } },
+  { cnt: 60,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'usaChiisares',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'Chiisaresident_USA',
+       type: 'int',
+       default: '0',
+       dict: 'YESNO',
+       isneed: '' } },
+  { cnt: 61,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'typeCli',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CUSTOMER_TYPE',
+       type: 'int',
+       default: '11694-клієнт з відкриттям рахунків+',
+       dict: 'CUSTOMER_TYPE',
+       isneed: '' } },
+  { cnt: 62,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'photo25',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PASPFOTOCONTROL25',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 63,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'photo45',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PASPFOTOCONTROL45',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 64,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'codOblRee',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'FATF_CodObl',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 65,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'verifyDate',
+       maps: '',
+       type: 'adate' },
+    webbank:
+     { block: 'Properties',
+       code: 'Verifikatsii_date ',
+       type: 'adate',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 66,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'signDate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Client',
+       code: 'PrevIdentDate',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 67,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'education',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'Education',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 68,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'forTaxStatus',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CLIENT_STATUS',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 69,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'forTaxDate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Properties',
+       code: 'CLIENT_STATUS_DATE',
+       type: '',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 70,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'forTaxCode',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'TAX_CODE',
+       type: '',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 71,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'segment',
+       maps: '',
+       type: 'segment' },
+    webbank:
+     { block: 'Segment',
+       code: 'Segment',
+       type: 'segment',
+       default: '',
+       dict: 'Segment',
+       isneed: '' } },
+  { cnt: 72,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'verifyType',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'Customer_verification',
+       type: '',
+       default: '',
+       dict: 'Customer_verification',
+       isneed: '' } },
+  { cnt: 73,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'reputation',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'Criterias',
+       type: '',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 74,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'countryCitisien',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'FATF_COUNTRY_CITIZEN',
+       type: '',
+       default: '',
+       dict: 'KL_K040.DBF',
+       isneed: '' } },
+  { cnt: 75,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'greenCard',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CARD_GREEN',
+       type: '',
+       default: '',
+       dict: 'A_GREEN_CARD',
+       isneed: '' } },
+  { cnt: 76,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'registryUSA',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'Resident_USA',
+       type: '',
+       default: '',
+       dict: 'YESNO',
+       isneed: '' } },
+  { cnt: 77,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'statusFATCA',
+       maps: '',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'FATCA',
+       type: '',
+       default: '',
+       dict: 'FATCA',
+       isneed: '' } },
+  { cnt: 78,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'nameLat',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'FATF_SHORT_NAME',
+       type: '',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 79,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'nameLat',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'ClientNames',
+       code: 'Name',
+       type: '',
+       default: '',
+       dict: '',
+       isneed: '' } } ]
 bankid_transform_web ---------------------------
-[
-  {
-    name: 'Client',
+[ { name: 'Client',
     isarray: false,
-    mapping: [ [Object], [Object], [Object], [Object] ]
-  },
-  {
-    name: 'Individuals',
+    mapping: [ [Object], [Object], [Object], [Object] ] },
+  { name: 'Individuals',
     isarray: false,
-    mapping: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
-    comment: 'array'
-  },
-  {
-    name: 'Identifications',
+    mapping:
+     [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    comment: 'array' },
+  { name: 'Identifications',
     isarray: true,
-    mapping: [
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object],
-      [Object]
-    ],
-    comment: 'array documents'
-  },
-  {
-    name: 'ClientNames',
+    mapping:
+     [ [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object] ],
+    comment: 'array documents' },
+  { name: 'ClientNames',
     isarray: true,
-    mapping: [],
-    comment: 'array of names'
-  },
-  {
-    name: 'Addresses',
+    mapping: [ [Object] ],
+    comment: 'array of names' },
+  { name: 'Addresses',
     isarray: true,
-    mapping: [
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object]
-    ],
-    comment: 'array'
-  },
-  {
-    name: 'Communications',
+    mapping:
+     [ [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object] ],
+    comment: 'array' },
+  { name: 'Communications',
     isarray: true,
-    mapping: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
-  },
-  {
-    name: 'Properties',
+    mapping:
+     [ [Object], [Object], [Object], [Object], [Object], [Object] ] },
+  { name: 'Properties',
     isarray: false,
-    mapping: [
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object],
-      [Object], [Object], [Object], [Object]
-    ]
-  },
-  {
-    name: 'Scans',
+    mapping:
+     [ [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object],
+       [Object] ] },
+  { name: 'Scans',
     isarray: true,
     mapping: [ [Object], [Object], [Object], [Object] ],
-    comment: 'array'
-  },
-  { name: 'Operations', isarray: false, mapping: [ [Object] ] },
-  { name: 'Operations', isarray: false, mapping: [] }
-]
+    comment: 'array' },
+  { name: 'Operations', isarray: false, mapping: [ [Object] ] } ]
 bankid_transform_web ---------------------------
 [person] Object
   ++++[person][lastName]=Кетцалькоатль-Individuals
   ++++[person][firstName]=Кукумац-Individuals
   ++++[person][middleName]=Кукулькан-Individuals
-  ++++[person][inn]=2165516163-Client
+  ++++[person][inn]=3096317249-Client
   ++++[person][birthDay]=28.08.1991-Individuals
   ++++[person][sex]=M-Individuals
   ++++[person][phone]=380631003256-Communications
@@ -1657,7 +1356,6 @@ bankid_transform_web ---------------------------
   ++++[person][uaResident]=1-Client
   ++++[person][flagPersonTerror]=1-Properties
   ++++[person][flagPEPs]=0-Properties
-  ++++[person][flagTopLevelRisk]=1-Properties
 [extends] Object
   ++++[extends][countryCitizen]=804-Properties
   ++++[extends][maritalStatus]=6-Individuals
@@ -1714,22 +1412,14 @@ bankid_transform_web ---------------------------
   [1][addresses] houseNo=1
   [1][addresses] flatNo=1
 [documents][Identifications] Array 
-  [0][documents] type=passport
-  [0][documents] typeName=Паспорт
-  [0][documents] series=СН
-  [0][documents] number=432311
-  [0][documents] issue=Святошинське РУ ГУ МВС у м.Києві
-  [0][documents] dateIssue=01.10.1997
-  [0][documents] dateExpiration=
+  [0][documents] type=idpassport
+  [0][documents] typeName=Паспорт картка
+  [0][documents] series=
+  [0][documents] number=3425654326
+  [0][documents] issue=1456
+  [0][documents] dateIssue=01.10.2020
+  [0][documents] dateExpiration=01.10.2040
   [0][documents] issueCountryIso2=UA
-  [1][documents] type=idpassport
-  [1][documents] typeName=Паспорт картка
-  [1][documents] series=
-  [1][documents] number=3425654326
-  [1][documents] issue=1456
-  [1][documents] dateIssue=01.10.2020
-  [1][documents] dateExpiration=01.10.2040
-  [1][documents] issueCountryIso2=UA
 [scans][Scans] Array 
   [0][scans] type=passport
   [0][scans] scanFile=BASE64
@@ -1739,779 +1429,581 @@ bankid_transform_web ---------------------------
   [1][scans] scanFile=BASE64
   [1][scans] dateCreate=dd.mm.yyyy
   [1][scans] extension=jpg
-{
-  cnt: 4,
-  bankid: {
-    block: 'calculate',
-    source: 'person',
-    code: 'lastName+firstName+middleName',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Client',
-    code: 'Name',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  }
-}
+  [2][scans] type=inn
+  [2][scans] scanFile=BASE64
+  [2][scans] dateCreate=dd.mm.yyyy
+  [2][scans] extension=jpg
+{ cnt: 4,
+  bankid:
+   { block: 'calculate',
+     source: 'person',
+     code: 'lastName+firstName+middleName',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Client',
+     code: 'Name',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: 'true' } }
 -------------------------------------------- calcm bankid_src 
-[
-  {
-    cnt: 1,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'lastName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'LastName',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: 'Кетцалькоатль'
-  },
-  {
-    cnt: 2,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'firstName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'FirstName',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: 'Кукумац'
-  },
-  {
-    cnt: 3,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'middleName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'FatherName',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: 'Кукулькан'
-  },
-  {
-    cnt: 5,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'inn',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'StateCode',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: '2165516163'
-  },
-  {
-    cnt: 8,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'sex',
-      maps: 'sex',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'GENDER',
-      type: 'int',
-      default: '',
-      dict: 'D06',
-      isneed: 'true'
-    },
-    value: 'M'
-  },
-  {
-    cnt: 9,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'sex',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'GENDER',
-      type: 'int',
-      default: '',
-      dict: 'D06',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 10,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'birthDay',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Individuals',
-      code: 'BirthDay',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: '28.08.1991'
-  },
-  {
-    cnt: 11,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'uaResident',
-      maps: 'resident',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'Residency',
-      type: 'int',
-      default: '',
-      dict: 'KL_K030.DBF',
-      isneed: 'true'
-    },
-    value: '1'
-  },
-  {
-    cnt: 27,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'socStatus',
-      maps: 'socstatus',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'socStatus',
-      type: 'int',
-      default: '',
-      dict: 'socStatus',
-      isneed: 'true'
-    }
-  },
-  {
-    cnt: 28,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagPEPs',
-      maps: 'peps',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'PUBLIC_PERSON_EXISTS',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    },
-    value: '0'
-  },
-  {
-    cnt: 29,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagPersonTerror',
-      maps: 'terrorist',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CL_FATF_CHECK_RESULT',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    },
-    value: '1'
-  },
-  {
-    cnt: 30,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagRestriction',
-      maps: 'terrorist',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: 'CL_FATF_CHECK_RESULT',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 31,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'flagTopLevelRisk',
-      maps: '',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Properties',
-      code: '',
-      type: 'int',
-      default: '',
-      dict: '',
-      isneed: ''
-    },
-    value: '1'
-  },
-  {
-    cnt: 37,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'phone',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'Value',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: '380631003256'
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'phone',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'TypeId',
-      type: 'string',
-      default: '3',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    cnt: 38,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'email',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'Value',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    },
-    value: 'sava@mail.dot.com'
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'email',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'TypeId',
-      type: 'string',
-      default: '5',
-      dict: '',
-      isneed: ''
-    }
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'web',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'Value',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: ''
-    },
-    value: 'www.www.net'
-  },
-  {
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'web',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Communications',
-      code: 'TypeId',
-      type: 'string',
-      default: '6',
-      dict: '',
-      isneed: ''
-    }
-  }
-]
+[ { cnt: 1,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'lastName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'LastName',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: 'Кетцалькоатль' },
+  { cnt: 2,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'firstName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'FirstName',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: 'Кукумац' },
+  { cnt: 3,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'middleName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'FatherName',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: 'Кукулькан' },
+  { cnt: 5,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'inn',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Client',
+       code: 'StateCode',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: '3096317249' },
+  { cnt: 8,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'sex',
+       maps: 'sex',
+       type: 'string' },
+    webbank:
+     { block: 'Individuals',
+       code: 'GENDER',
+       type: 'int',
+       default: '',
+       dict: 'D06',
+       isneed: 'true' },
+    value: 'M' },
+  { cnt: 9,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'sex',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'GENDER',
+       type: 'int',
+       default: '',
+       dict: 'D06',
+       isneed: 'true' } },
+  { cnt: 10,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'birthDay',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Individuals',
+       code: 'BirthDay',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: '28.08.1991' },
+  { cnt: 11,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'uaResident',
+       maps: 'resident',
+       type: 'int' },
+    webbank:
+     { block: 'Client',
+       code: 'Residency',
+       type: 'int',
+       default: '',
+       dict: 'KL_K030.DBF',
+       isneed: 'true' },
+    value: '1' },
+  { cnt: 27,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'socStatus',
+       maps: 'socstatus',
+       type: 'string' },
+    webbank:
+     { block: 'Properties',
+       code: 'socStatus',
+       type: 'int',
+       default: '',
+       dict: 'socStatus',
+       isneed: 'true' } },
+  { cnt: 28,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagPEPs',
+       maps: 'peps',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'PUBLIC_PERSON_EXISTS',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' },
+    value: '0' },
+  { cnt: 29,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagPersonTerror',
+       maps: 'terrorist',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CL_FATF_CHECK_RESULT',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' },
+    value: '1' },
+  { cnt: 30,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'flagRestriction',
+       maps: 'terrorist',
+       type: 'int' },
+    webbank:
+     { block: 'Properties',
+       code: 'CL_FATF_CHECK_RESULT',
+       type: 'int',
+       default: '',
+       dict: '',
+       isneed: '' } },
+  { cnt: 37,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'phone',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'Value',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: '380631003256' },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'phone',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'TypeId',
+       type: 'string',
+       default: '3',
+       dict: '',
+       isneed: '' } },
+  { cnt: 38,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'email',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'Value',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' },
+    value: 'sava@mail.dot.com' },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'email',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'TypeId',
+       type: 'string',
+       default: '5',
+       dict: '',
+       isneed: '' } },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'web',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'Value',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: '' },
+    value: 'www.www.net' },
+  { bankid:
+     { block: 'person',
+       source: '',
+       code: 'web',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Communications',
+       code: 'TypeId',
+       type: 'string',
+       default: '6',
+       dict: '',
+       isneed: '' } } ]
 --------------------- bankid_transform_out 
 --------------------- bankid_transform_out.Client 
-[
-  {
-    cnt: 5,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'inn',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'StateCode',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: '2165516163'
-  },
-  {
-    cnt: 11,
-    bankid: {
-      block: 'person',
-      source: '',
-      code: 'uaResident',
-      maps: 'resident',
-      type: 'int'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'Residency',
-      type: 'int',
-      default: '',
-      dict: 'KL_K030.DBF',
-      isneed: 'true'
-    },
-    value: '1'
-  },
-  {
-    cnt: 66,
-    bankid: {
-      block: 'extends',
-      source: '',
-      code: 'signDate',
-      maps: '',
-      type: 'date'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'PrevIdentDate',
-      type: 'date',
-      default: '',
-      dict: '',
-      isneed: ''
-    },
-    value: '10.01.2021'
-  },
-  {
-    cnt: 4,
-    bankid: {
-      block: 'calculate',
-      source: 'person',
-      code: 'lastName+firstName+middleName',
-      maps: '',
-      type: 'string'
-    },
-    webbank: {
-      block: 'Client',
-      code: 'Name',
-      type: 'string',
-      default: '',
-      dict: '',
-      isneed: 'true'
-    },
-    value: 'Кетцалькоатль Кукумац Кукулькан'
-  }
-]
+[ { cnt: 5,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'inn',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Client',
+       code: 'StateCode',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: '3096317249' },
+  { cnt: 11,
+    bankid:
+     { block: 'person',
+       source: '',
+       code: 'uaResident',
+       maps: 'resident',
+       type: 'int' },
+    webbank:
+     { block: 'Client',
+       code: 'Residency',
+       type: 'int',
+       default: '',
+       dict: 'KL_K030.DBF',
+       isneed: 'true' },
+    value: '1' },
+  { cnt: 66,
+    bankid:
+     { block: 'extends',
+       source: '',
+       code: 'signDate',
+       maps: '',
+       type: 'date' },
+    webbank:
+     { block: 'Client',
+       code: 'PrevIdentDate',
+       type: 'date',
+       default: '',
+       dict: '',
+       isneed: '' },
+    value: '10.01.2021' },
+  { cnt: 4,
+    bankid:
+     { block: 'calculate',
+       source: 'person',
+       code: 'lastName+firstName+middleName',
+       maps: '',
+       type: 'string' },
+    webbank:
+     { block: 'Client',
+       code: 'Name',
+       type: 'string',
+       default: '',
+       dict: '',
+       isneed: 'true' },
+    value: 'Кетцалькоатль Кукумац Кукулькан' } ]
 resident
-{
-  cnt: 1,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'lastName',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Individuals',
-    code: 'LastName',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  },
-  value: 'Кетцалькоатль'
-}
-{
-  cnt: 2,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'firstName',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Individuals',
-    code: 'FirstName',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  },
-  value: 'Кукумац'
-}
-{
-  cnt: 3,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'middleName',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Individuals',
-    code: 'FatherName',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  },
-  value: 'Кукулькан'
-}
-{
-  cnt: 10,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'birthDay',
-    maps: '',
-    type: 'date'
-  },
-  webbank: {
-    block: 'Individuals',
-    code: 'BirthDay',
-    type: 'date',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  },
-  value: '28.08.1991'
-}
-{
-  cnt: 8,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'sex',
-    maps: 'sex',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Individuals',
-    code: 'GENDER',
-    type: 'int',
-    default: '',
-    dict: 'D06',
-    isneed: 'true'
-  },
-  value: 'M'
-}
-{
-  cnt: 7,
-  bankid: {
-    block: 'extends',
-    source: '',
-    code: 'maritalStatus',
-    maps: '',
-    type: 'int'
-  },
-  webbank: {
-    block: 'Individuals',
-    code: 'MarriageStatus',
-    type: 'int',
-    default: '',
-    dict: 'D08',
-    isneed: 'true'
-  },
-  value: '6'
-}
+{ cnt: 1,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'lastName',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Individuals',
+     code: 'LastName',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: 'true' },
+  value: 'Кетцалькоатль' }
+{ cnt: 2,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'firstName',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Individuals',
+     code: 'FirstName',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: 'true' },
+  value: 'Кукумац' }
+{ cnt: 3,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'middleName',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Individuals',
+     code: 'FatherName',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: 'true' },
+  value: 'Кукулькан' }
+{ cnt: 10,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'birthDay',
+     maps: '',
+     type: 'date' },
+  webbank:
+   { block: 'Individuals',
+     code: 'BirthDay',
+     type: 'date',
+     default: '',
+     dict: '',
+     isneed: 'true' },
+  value: '28.08.1991' }
+{ cnt: 8,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'sex',
+     maps: 'sex',
+     type: 'string' },
+  webbank:
+   { block: 'Individuals',
+     code: 'GENDER',
+     type: 'int',
+     default: '',
+     dict: 'D06',
+     isneed: 'true' },
+  value: 'M' }
+{ cnt: 7,
+  bankid:
+   { block: 'extends',
+     source: '',
+     code: 'maritalStatus',
+     maps: '',
+     type: 'int' },
+  webbank:
+   { block: 'Individuals',
+     code: 'MarriageStatus',
+     type: 'int',
+     default: '',
+     dict: 'D08',
+     isneed: 'true' },
+  value: '6' }
 ------------ bankid_transform_out.Identifications
-[
-  [
-    { cnt: 12, bankid: [Object], webbank: [Object], value: 'passport' },
-    { cnt: 13, bankid: [Object], webbank: [Object], value: 'СН' },
-    { cnt: 14, bankid: [Object], webbank: [Object], value: '432311' },
-    {
-      cnt: 15,
+[ [ { cnt: 12,
       bankid: [Object],
       webbank: [Object],
-      value: 'Святошинське РУ ГУ МВС у м.Києві'
-    },
-    {
-      cnt: 16,
-      bankid: [Object],
-      webbank: [Object],
-      value: '01.10.1997'
-    },
-    { cnt: 17, bankid: [Object], webbank: [Object], value: '' },
-    { cnt: 18, bankid: [Object], webbank: [Object], value: 'UA' }
-  ],
-  [
-    {
-      cnt: 12,
-      bankid: [Object],
-      webbank: [Object],
-      value: 'idpassport'
-    },
+      value: 'idpassport' },
     { cnt: 13, bankid: [Object], webbank: [Object], value: '' },
-    {
-      cnt: 14,
+    { cnt: 14,
       bankid: [Object],
       webbank: [Object],
-      value: '3425654326'
-    },
+      value: '3425654326' },
     { cnt: 15, bankid: [Object], webbank: [Object], value: '1456' },
-    {
-      cnt: 16,
+    { cnt: 16,
       bankid: [Object],
       webbank: [Object],
-      value: '01.10.2020'
-    },
-    {
-      cnt: 17,
+      value: '01.10.2020' },
+    { cnt: 17,
       bankid: [Object],
       webbank: [Object],
-      value: '01.10.2040'
-    },
-    { cnt: 18, bankid: [Object], webbank: [Object], value: 'UA' }
-  ]
-]
+      value: '01.10.2040' },
+    { cnt: 18, bankid: [Object], webbank: [Object], value: 'UA' } ] ]
 ------------ bankid_transform_out.Identifications
-[
-  [
-    { cnt: 19, bankid: [Object], webbank: [Object], value: 'factual' },
+[ [ { cnt: 19, bankid: [Object], webbank: [Object], value: 'factual' },
     { cnt: 20, bankid: [Object], webbank: [Object], value: 'UA' },
-    { cnt: 21, bankid: [Object], webbank: [Object], value: 'Київська' },
+    { cnt: 21,
+      bankid: [Object],
+      webbank: [Object],
+      value: 'Київська' },
     { cnt: 22, bankid: [Object], webbank: [Object], value: 'Київ' },
     { cnt: 23, bankid: [Object], webbank: [Object], value: 'м. Київ' },
-    {
-      cnt: 24,
+    { cnt: 24,
       bankid: [Object],
       webbank: [Object],
-      value: 'вул. Бородинского побоища'
-    },
+      value: 'вул. Бородинского побоища' },
     { cnt: 25, bankid: [Object], webbank: [Object], value: '21' },
-    { cnt: 26, bankid: [Object], webbank: [Object], value: '16' }
-  ],
-  [
-    {
-      cnt: 19,
+    { cnt: 26, bankid: [Object], webbank: [Object], value: '16' } ],
+  [ { cnt: 19,
       bankid: [Object],
       webbank: [Object],
-      value: 'juridical'
-    },
+      value: 'juridical' },
     { cnt: 20, bankid: [Object], webbank: [Object], value: 'UA' },
-    { cnt: 21, bankid: [Object], webbank: [Object], value: 'Київська' },
+    { cnt: 21,
+      bankid: [Object],
+      webbank: [Object],
+      value: 'Київська' },
     { cnt: 22, bankid: [Object], webbank: [Object], value: 'Київ' },
-    {
-      cnt: 23,
+    { cnt: 23,
       bankid: [Object],
       webbank: [Object],
-      value: 'м. Чичен-Ица'
-    },
-    {
-      cnt: 24,
+      value: 'м. Чичен-Ица' },
+    { cnt: 24,
       bankid: [Object],
       webbank: [Object],
-      value: 'вул. пирамида Кукулькана.'
-    },
+      value: 'вул. пирамида Кукулькана.' },
     { cnt: 25, bankid: [Object], webbank: [Object], value: '1' },
-    { cnt: 26, bankid: [Object], webbank: [Object], value: '1' }
-  ]
-]
-{
-  cnt: 37,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'phone',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Communications',
-    code: 'Value',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  },
-  value: '380631003256'
-}
-{
-  cnt: 37,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'phone',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Communications',
-    code: 'TypeId',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: 'true'
-  },
-  value: '3'
-}
-{
-  cnt: 38,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'email',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Communications',
-    code: 'Value',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: ''
-  },
-  value: 'sava@mail.dot.com'
-}
-{
-  cnt: 38,
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'email',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Communications',
-    code: 'TypeId',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: ''
-  },
-  value: '5'
-}
-{
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'web',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Communications',
-    code: 'Value',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: ''
-  },
-  value: 'www.www.net'
-}
-{
-  bankid: {
-    block: 'person',
-    source: '',
-    code: 'web',
-    maps: '',
-    type: 'string'
-  },
-  webbank: {
-    block: 'Communications',
-    code: 'TypeId',
-    type: 'string',
-    default: '',
-    dict: '',
-    isneed: ''
-  },
-  value: '6'
-}
+    { cnt: 26, bankid: [Object], webbank: [Object], value: '1' } ] ]
+{ cnt: 37,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'phone',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Communications',
+     code: 'Value',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: 'true' },
+  value: '380631003256' }
+{ cnt: 37,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'phone',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Communications',
+     code: 'TypeId',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: 'true' },
+  value: '3' }
+{ cnt: 38,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'email',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Communications',
+     code: 'Value',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: '' },
+  value: 'sava@mail.dot.com' }
+{ cnt: 38,
+  bankid:
+   { block: 'person',
+     source: '',
+     code: 'email',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Communications',
+     code: 'TypeId',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: '' },
+  value: '5' }
+{ bankid:
+   { block: 'person',
+     source: '',
+     code: 'web',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Communications',
+     code: 'Value',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: '' },
+  value: 'www.www.net' }
+{ bankid:
+   { block: 'person',
+     source: '',
+     code: 'web',
+     maps: '',
+     type: 'string' },
+  webbank:
+   { block: 'Communications',
+     code: 'TypeId',
+     type: 'string',
+     default: '',
+     dict: '',
+     isneed: '' },
+  value: '6' }
 [ 'phone', 'email', 'web' ]
 phone
 [phone][Value][380631003256]
@@ -2523,203 +2015,152 @@ web
 [web][Value][www.www.net]
 [web][TypeId][6]
 fill_data --------------------------------------------
-{
-  client: {
-    StateCode: '2165516163',
-    Residency: '1',
-    PrevIdentDate: '2021-01-10T00:00:00',
-    Name: 'Кетцалькоатль Кукумац Кукулькан'
-  },
-  indiv: {
-    LastName: 'Кетцалькоатль',
-    FirstName: 'Кукумац',
-    FatherName: 'Кукулькан',
-    BirthDay: '1991-08-28T00:00:00',
-    GENDER: '1',
-    MarriageStatus: '6'
-  },
-  ident: [
-    {
-      TypeId: '4',
-      Series: 'СН',
-      Number: '432311',
-      Registrator: 'Святошинське РУ ГУ МВС у м.Києві',
-      IssueDate: '1997-10-01T00:00:00',
-      ExpirationDate: '2099-01-01T00:00:00',
-      CountryCode: 'UA'
-    },
-    {
-      TypeId: '55',
-      Series: '',
-      Number: '3425654326',
-      Registrator: '1456',
-      IssueDate: '2020-10-01T00:00:00',
-      ExpirationDate: '2040-10-01T00:00:00',
-      CountryCode: 'UA'
-    }
-  ],
-  addr: [
-    {
-      TypeCode: '2',
-      Country: 'UA',
-      State: 'Київська',
-      Region: 'Київ',
-      Town: 'м. Київ',
-      Street: 'вул. Бородинского побоища',
-      HouseNumber: '21',
-      FlatNumber: '16'
-    },
-    {
-      TypeCode: '1',
-      Country: 'UA',
-      State: 'Київська',
-      Region: 'Київ',
-      Town: 'м. Чичен-Ица',
-      Street: 'вул. пирамида Кукулькана.',
-      HouseNumber: '1',
-      FlatNumber: '1'
-    }
-  ],
-  comm: [
-    { Value: '380631003256', TypeId: '3' },
-    { Value: 'sava@mail.dot.com', TypeId: '5' },
-    { Value: 'www.www.net', TypeId: '6' }
-  ],
-  props: [
-    {
-      Refs: 'terrorist',
-      Code: 'CL_FATF_CHECK_RESULT',
-      Dict: '',
-      Value: 'Клиент являестя террористом соглано данных bankid'
-    },
-    {
-      Refs: 'peps',
-      Code: 'PUBLIC_PERSON_EXISTS',
-      Dict: '',
-      Value: '1'
-    },
-    {
-      Refs: '',
-      Code: 'FATF_COUNTRY_CITIZEN',
-      Dict: 'KL_K040.DBF',
-      Value: '804'
-    },
-    {
-      Refs: '',
-      Code: 'BIRTH_COUNTRY',
-      Dict: 'KL_K040.DBF',
-      Value: '804'
-    },
-    { Refs: '', Code: 'BIRTH_PLACE', Dict: '', Value: 'Бердичув' },
-    {
-      Refs: '',
-      Code: 'PROFIT_WAY',
-      Dict: 'PROFIT_WAY',
-      Value: '14300'
-    },
-    { Refs: '', Code: 'BANK_PRODUCT', Dict: 'FIN_DOCH', Value: '1' },
-    { Refs: '', Code: 'OBSYAG_NAD', Dict: 'OBSYAG_NAD_1', Value: '1' },
-    { Refs: '', Code: 'NAD_K_3', Dict: 'NAD_K_3', Value: '1' },
-    { Refs: '', Code: 'MONTHSUMM', Dict: 'SUMA_DOHOD', Value: '4' },
-    {
-      Refs: '',
-      Code: 'PROPETYTH_OF_CLIENT',
-      Dict: 'PROPETYTH_OF_CLIENT',
-      Value: '1'
-    },
-    {
-      Refs: '',
-      Code: 'PROPETYTH_OF_CLIENT_AVTO',
-      Dict: 'PROPETYTH_OF_CLIENT_AVTO',
-      Value: '2'
-    },
-    {
-      Refs: '',
-      Code: 'INFO_OUTER_ACC_SEL',
-      Dict: 'INFO_OUTER_ACC',
-      Value: '1,2,3,4'
-    },
-    { Refs: '', Code: 'EXISTS_CRED_OUT', Dict: 'YESNO', Value: '1' },
-    { Refs: '', Code: 'EXISTS_DEPO_OUT', Dict: 'YESNO', Value: '1' },
-    {
-      Refs: '',
-      Code: 'PROPETYPAP_OF_CLIENTYPE',
-      Dict: 'PROPETYPAP_OF_CLIENTYPE',
-      Value: '0'
-    },
-    {
-      Refs: '',
-      Code: 'BANK_SERVICES_MANUAL',
-      Dict: 'BANK_SERVICES_MANUAL',
-      Value: '1,2,3'
-    },
-    {
-      Refs: '',
-      Code: 'UGB_TCURelPers',
-      Dict: 'RF_UGB_TCURelPers',
-      Value: '0'
-    },
-    {
-      Refs: '',
-      Code: 'PUBLIC_PERSON_EXISTS',
-      Dict: 'PUBLIC_PERSON_EXISTS',
-      Value: '0'
-    },
-    { Refs: '', Code: 'KL_K013FO', Dict: 'KL_K013_FO', Value: '5' },
-    { Refs: '', Code: 'Chiisaresident_USA', Dict: 'YESNO', Value: '0' },
-    { Refs: '', Code: 'Chiisaresident_USA', Dict: 'YESNO', Value: '0' },
-    {
-      Refs: '',
-      Code: 'Customer_verification',
-      Dict: 'Customer_verification',
-      Value: '3'
-    },
-    {
-      Refs: '',
-      Code: 'CUSTOMER_TYPE',
-      Dict: 'CUSTOMER_TYPE',
-      Value: 'клієнт з відкриттям рахунків'
-    },
-    {
-      Refs: '',
-      Code: 'CUSTOMER_TYPE',
-      Dict: 'CUSTOMER_TYPE',
-      Value: '11694-клієнт з відкриттям рахунків+'
-    },
-    { Refs: '', Code: 'Education', Dict: '', Value: '5' },
-    { Refs: '', Code: 'PASPFOTOCONTROL25', Dict: '', Value: '1' },
-    { Refs: '', Code: 'PASPFOTOCONTROL45', Dict: '', Value: '1' },
-    { Refs: '', Code: 'FATF_CodObl', Dict: '', Value: '32' },
-    {
-      Refs: '',
-      Code: 'Verifikatsii_date ',
-      Dict: '',
-      Value: '10.01.2021'
-    },
-    { Refs: '', Code: 'CLIENT_STATUS', Dict: '', Value: '0' },
-    {
-      Refs: '',
-      Code: 'CLIENT_STATUS_DATE',
-      Dict: '',
-      Value: '2021-01-10T00:00:00'
-    },
-    { Refs: '', Code: 'TAX_CODE', Dict: '', Value: '026 097' },
-    { Refs: '', Code: 'Criterias', Dict: '', Value: 'добре' },
-    {
-      Refs: '',
-      Code: 'FATF_COUNTRY_CITIZEN',
-      Dict: 'KL_K040.DBF',
-      Value: '804'
-    },
-    { Refs: '', Code: 'CARD_GREEN', Dict: 'A_GREEN_CARD', Value: '1' },
-    { Refs: '', Code: 'Resident_USA', Dict: 'YESNO', Value: '0' },
-    { Refs: '', Code: 'FATCA', Dict: 'FATCA', Value: '3' }
-  ]
-}
+{ client:
+   { StateCode: '3096317249',
+     Residency: '1',
+     PrevIdentDate: '2021-01-10T00:00:00',
+     Name: 'Кетцалькоатль Кукумац Кукулькан' },
+  indiv:
+   { LastName: 'Кетцалькоатль',
+     FirstName: 'Кукумац',
+     FatherName: 'Кукулькан',
+     BirthDay: '1991-08-28T00:00:00',
+     GENDER: '1',
+     MarriageStatus: '6' },
+  ident:
+   [ { TypeId: '55',
+       Series: '',
+       Number: '3425654326',
+       Registrator: '1456',
+       IssueDate: '2020-10-01T00:00:00',
+       ExpirationDate: '2040-10-01T00:00:00',
+       CountryCode: 'UA' } ],
+  addr:
+   [ { TypeCode: '2',
+       Country: 'UA',
+       State: 'Київська',
+       Region: 'Київ',
+       Town: 'м. Київ',
+       Street: 'вул. Бородинского побоища',
+       HouseNumber: '21',
+       FlatNumber: '16' },
+     { TypeCode: '1',
+       Country: 'UA',
+       State: 'Київська',
+       Region: 'Київ',
+       Town: 'м. Чичен-Ица',
+       Street: 'вул. пирамида Кукулькана.',
+       HouseNumber: '1',
+       FlatNumber: '1' } ],
+  comm:
+   [ { Value: '380631003256', TypeId: '3' },
+     { Value: 'sava@mail.dot.com', TypeId: '5' },
+     { Value: 'www.www.net', TypeId: '6' } ],
+  props:
+   [ { Refs: 'terrorist',
+       Code: 'CL_FATF_CHECK_RESULT',
+       Dict: '',
+       Value: 'Клиент являестя террористом соглано данных bankid' },
+     { Refs: 'peps',
+       Code: 'PUBLIC_PERSON_EXISTS',
+       Dict: '',
+       Value: '1' },
+     { Refs: '',
+       Code: 'FATF_COUNTRY_CITIZEN',
+       Dict: 'KL_K040.DBF',
+       Value: '804' },
+     { Refs: '',
+       Code: 'INFO_WORK_FROM',
+       Dict: '',
+       Value: 'Бог, глава всего' },
+     { Refs: '',
+       Code: 'BIRTH_COUNTRY',
+       Dict: 'KL_K040.DBF',
+       Value: '804' },
+     { Refs: '', Code: 'BIRTH_PLACE', Dict: '', Value: 'Бердичув' },
+     { Refs: '',
+       Code: 'PROFIT_WAY',
+       Dict: 'PROFIT_WAY',
+       Value: '14300' },
+     { Refs: '', Code: 'BANK_PRODUCT', Dict: 'FIN_DOCH', Value: '1' },
+     { Refs: '', Code: 'OBSYAG_NAD', Dict: 'OBSYAG_NAD_1', Value: '1' },
+     { Refs: '', Code: 'NAD_K_3', Dict: 'NAD_K_3', Value: '1' },
+     { Refs: '', Code: 'MONTHSUMM', Dict: 'SUMA_DOHOD', Value: '4' },
+     { Refs: '',
+       Code: 'PROPETYTH_OF_CLIENT',
+       Dict: 'PROPETYTH_OF_CLIENT',
+       Value: '1' },
+     { Refs: '',
+       Code: 'PROPETYTH_OF_CLIENT_AVTO',
+       Dict: 'PROPETYTH_OF_CLIENT_AVTO',
+       Value: '2' },
+     { Refs: '',
+       Code: 'INFO_OUTER_ACC_SEL',
+       Dict: 'INFO_OUTER_ACC',
+       Value: '1,2,3,4' },
+     { Refs: '', Code: 'EXISTS_CRED_OUT', Dict: 'YESNO', Value: '1' },
+     { Refs: '', Code: 'EXISTS_DEPO_OUT', Dict: 'YESNO', Value: '1' },
+     { Refs: '',
+       Code: 'PROPETYPAP_OF_CLIENTYPE',
+       Dict: 'PROPETYPAP_OF_CLIENTYPE',
+       Value: '0' },
+     { Refs: '',
+       Code: 'BANK_SERVICES_MANUAL',
+       Dict: 'BANK_SERVICES_MANUAL',
+       Value: '1,2,3' },
+     { Refs: '',
+       Code: 'UGB_TCURelPers',
+       Dict: 'RF_UGB_TCURelPers',
+       Value: '0' },
+     { Refs: '',
+       Code: 'PUBLIC_PERSON_EXISTS',
+       Dict: 'PUBLIC_PERSON_EXISTS',
+       Value: '0' },
+     { Refs: '', Code: 'KL_K013FO', Dict: 'KL_K013_FO', Value: '5' },
+     { Refs: '',
+       Code: 'Chiisaresident_USA',
+       Dict: 'YESNO',
+       Value: '0' },
+     { Refs: '',
+       Code: 'Chiisaresident_USA',
+       Dict: 'YESNO',
+       Value: '0' },
+     { Refs: '',
+       Code: 'Customer_verification',
+       Dict: 'Customer_verification',
+       Value: '3' },
+     { Refs: '',
+       Code: 'CUSTOMER_TYPE',
+       Dict: 'CUSTOMER_TYPE',
+       Value: 'клієнт з відкриттям рахунків' },
+     { Refs: '',
+       Code: 'CUSTOMER_TYPE',
+       Dict: 'CUSTOMER_TYPE',
+       Value: '11694-клієнт з відкриттям рахунків+' },
+     { Refs: '', Code: 'Education', Dict: '', Value: '5' },
+     { Refs: '', Code: 'PASPFOTOCONTROL25', Dict: '', Value: '1' },
+     { Refs: '', Code: 'PASPFOTOCONTROL45', Dict: '', Value: '1' },
+     { Refs: '', Code: 'FATF_CodObl', Dict: '', Value: '32' },
+     { Refs: '',
+       Code: 'Verifikatsii_date ',
+       Dict: '',
+       Value: '10.01.2021' },
+     { Refs: '', Code: 'CLIENT_STATUS', Dict: '', Value: '0' },
+     { Refs: '',
+       Code: 'CLIENT_STATUS_DATE',
+       Dict: '',
+       Value: '2021-01-10T00:00:00' },
+     { Refs: '', Code: 'TAX_CODE', Dict: '', Value: '026 097' },
+     { Refs: '', Code: 'Criterias', Dict: '', Value: 'добре' },
+     { Refs: '',
+       Code: 'FATF_COUNTRY_CITIZEN',
+       Dict: 'KL_K040.DBF',
+       Value: '804' },
+     { Refs: '', Code: 'CARD_GREEN', Dict: 'A_GREEN_CARD', Value: '1' },
+     { Refs: '', Code: 'Resident_USA', Dict: 'YESNO', Value: '0' },
+     { Refs: '', Code: 'FATCA', Dict: 'FATCA', Value: '3' } ] }
 fill_data --------------------------------------------
 Joe spends 6
-[
-  { Value: '380631003256', TypeId: '3' },
+[ { Value: '380631003256', TypeId: '3' },
   { Value: 'sava@mail.dot.com', TypeId: '5' },
-  { Value: 'www.www.net', TypeId: '6' }
-]
+  { Value: 'www.www.net', TypeId: '6' } ]

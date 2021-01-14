@@ -549,7 +549,7 @@
       "type": "int"
     },
     "webbank": {
-      "block": "Properties",
+      "block": "ClientRisk",
       "code": "",
       "type": "int",
       "default": "",
@@ -640,8 +640,8 @@
     },
     "webbank": {
       "block": "Properties",
-      "code": "",
-      "type": "",
+      "code": "INFO_WORK_FROM",
+      "type": "string",
       "default": "",
       "dict": "",
       "isneed": ""
@@ -1449,6 +1449,42 @@
       "type": "",
       "default": "",
       "dict": "FATCA",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 78,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "nameLat",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "FATF_SHORT_NAME",
+      "type": "",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 79,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "nameLat",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "ClientNames",
+      "code": "Name",
+      "type": "",
+      "default": "",
+      "dict": "",
       "isneed": ""
     }
   }
