@@ -70,6 +70,25 @@
                                             <h3 class="red--text">Prepare SQL</h3>
                                         </v-col>
                                     </v-row>
+
+                                    <v-row>
+                                        <v-col cols="12" sm="4">
+                                            <v-select v-model="from.database" 
+                                            :items="dict.database" label="Database" required>
+                                            </v-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="4">
+                                            <v-select v-model="from.table" 
+                                            :items="dict.table" label="Table" required>
+                                            </v-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="4">
+                                            <v-text-field v-model="from.table" 
+                                            label="Table" required>
+                                            </v-text-field>
+                                        </v-col>
+                                    </v-row>
+
                                     <v-row>
                                         <v-col cols="12" sm="4">
                                             <v-select v-model="from.level" 
@@ -82,6 +101,7 @@
                                             </v-select>
                                         </v-col>
                                     </v-row>
+
                                     <v-row>
                                         <v-col cols="12" sm="4">
                                             <v-text-field v-model="from.source" :counter="50" label="Source"
@@ -232,7 +252,8 @@
                     var view = this.from;
                     var sql = Mustache.render(this.sql.template, view);
                     this.sql.query = sql;
-                    this.result = this.result_test;
+                    //this.result = this.result_test;
+                    this.result = [];
 
                     await this.exequteRequest();
 
@@ -244,11 +265,15 @@
                 },
                 exequteRequest: async function() {
 
+                    var pathTo = "common/logger/syslog/";
+                    if (this.from.database === "openbank")
+                        pathTo = "common/logger/clilog/";
+
                     var headers = {
                     "accept": "application/json", "Content-Type": "application/json", 
                     "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
                     "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
-                    "x-post-pathto": "common/logger/syslog/", "x-post-method": "select"
+                    "x-post-pathto": pathTo, "x-post-method": "select"
                     };
                     var realUrl = "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/";
 //alert("exequteRequest");
@@ -319,21 +344,26 @@
                                     "message": '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><RegisterOperation xmlns="http://www.ukrgasbank.com"><TransferId>45982680</TransferId><TransferNumber>12858889329</TransferNumber><SystemCode>ri</SystemCode><SystemName>RIA</SystemName><Operation>2</Operation><Type>1</Type><OperationDate>2020-12-04T12:15:30+02:00</OperationDate><PayoutDate>2020-12-04T12:14:25+02:00</PayoutDate><OperationCashDesk>0</OperationCashDesk><ABSDate>2020-12-04T00:00:00+02:00</ABSDate><TransferAmount>850.0000</TransferAmount><FromCountry>380</FromCountry><ToCountry>804</ToCountry><TransferСurrency>978</TransferСurrency><PointBank>1000466</PointBank><PointSW>GASB0390</PointSW><UserLogin>vpolikarpova</UserLogin><UserName>Полікарпова Вікторія Михайлівна</UserName><UserID>14243</UserID><Sender><LastName>DIACHENKO</LastName><FirstName>NINA</FirstName><Residency>false</Residency><DocumentName>PASSAPORTO</DocumentName><DocumentSeries>EX</DocumentSeries><DocumentNumber>002214</DocumentNumber><DocumentIssuedBy>GOVERNO</DocumentIssuedBy></Sender><Receiver><LastName>DIACHENKO</LastName><FirstName>IRINA</FirstName><Residency>true</Residency><DocumentName>PASSPORT</DocumentName><DocumentSeries>EB</DocumentSeries><DocumentNumber>165849</DocumentNumber><DocumentIssueDate>2007-06-15</DocumentIssueDate><DocumentIssuedBy>ZNAMYANS?KYM MRV UMVS UKRAYINY V KIROV OBL</DocumentIssuedBy><DateofBirth>1982-11-03</DateofBirth></Receiver></RegisterOperation></soap:Body></soap:Envelope>'	
                                 }
                             ],
-                    from: {                    
+                    from: {              
+                        database : "nrclients",
+                        table: "nrLogs",
                         source : "Transgen XML",
                         search: "12858889329",
                         level: "DEBUG"
                     },
                     sql: {
                         query: "",
-                        template: "SELECT id, date, level, source, message FROM public.nrlogs WHERE 1=1 AND level = '{{level}}' AND source like '%{{source}}%' AND message like '%{{search}}%' ORDER BY ID DESC LIMIT 100;"
+                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level = '{{level}}' AND source like '%{{source}}%' AND message like '%{{search}}%' ORDER BY ID DESC LIMIT 100;"
                     },
                    
                     dict: {
 
+                        database : ["nrclients", "openbank"],
+                        table: ["cardInfo", "nrLogs", "clLogs"],
                         level: [
                             "DEBUG",
-                            "ERROR"
+                            "ERROR",
+                            "TEST"
                         ],
                         sex: [
                             { value: "M", text: "Чоловічий" },
