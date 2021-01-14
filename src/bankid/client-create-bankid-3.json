@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "3096317249",
+    "StateCode": "3345914540",
     "Residency": "1",
     "PrevIdentDate": "2021-01-10T00:00:00",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
@@ -173,12 +173,6 @@
       "Refs": "",
       "Code": "UGB_TCURelPers",
       "Dict": "RF_UGB_TCURelPers",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "PUBLIC_PERSON_EXISTS",
-      "Dict": "PUBLIC_PERSON_EXISTS",
       "Value": "0"
     },
     {

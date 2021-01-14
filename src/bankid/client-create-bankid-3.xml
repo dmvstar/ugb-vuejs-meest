@@ -22,7 +22,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>3096317249</tem:StateCode>
+               <tem:StateCode>3345914540</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -205,10 +205,6 @@
                 </tem:TProperties>
                 <tem:TProperties>
                   <tem:Code>UGB_TCURelPers</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PUBLIC_PERSON_EXISTS</tem:Code>
                   <tem:Value>0</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
