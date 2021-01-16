@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "2217215390",
+    "StateCode": "3263911176",
     "Residency": "1",
     "PrevIdentDate": "2021-01-10T00:00:00",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
@@ -12,6 +12,10 @@
     "BirthDay": "1991-08-28T00:00:00",
     "GENDER": "1",
     "MarriageStatus": "6"
+  },
+  "names": {
+    "Name": "KUKULKA",
+    "Lang": "LAT"
   },
   "ident": [
     {
@@ -61,6 +65,12 @@
     }
   ],
   "props": [
+    {
+      "Refs": "",
+      "Code": "GENDER",
+      "Dict": "D06",
+      "Value": "M"
+    },
     {
       "Refs": "terrorist",
       "Code": "CL_FATF_CHECK_RESULT",
@@ -210,12 +220,6 @@
       "Code": "CUSTOMER_TYPE",
       "Dict": "CUSTOMER_TYPE",
       "Value": "клієнт з відкриттям рахунків"
-    },
-    {
-      "Refs": "",
-      "Code": "CUSTOMER_TYPE",
-      "Dict": "CUSTOMER_TYPE",
-      "Value": "11694-клієнт з відкриттям рахунків+"
     },
     {
       "Refs": "",

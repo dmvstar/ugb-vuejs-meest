@@ -302,9 +302,25 @@ for (key in bankid_client) {
 
             var amapi = mapi.filter(it => it.bankid.code === o); 
 clog("  ----[" + key + "][" + o + "] val=" + amapi.length);
-            for(mapa of amapi) {
+            if( amapi !== undefined) {
+                for(mapa of amapi) {
 clog("    ----[" + key + "][" + o + "] val=" + JSON.stringify(mapa));  
+                    mapa.value = bankid_client[key][o];
+
+                    bankid_transform_out[mapa.webbank.block].push(mapa);
+                    // Ищем в знчения по умодчанию в для val.webbank.block
+                    var mapw = bankid_transform_web.find(x => x.name === mapa.webbank.block).mapping;
+                    for (d of mapw) {
+                        if (d.bankid.code === o && d.webbank.default !== '') {
+                            var vald = JSON.parse(JSON.stringify(mapa));
+                            vald.value = d.webbank.default;
+                            vald.webbank.code = d.webbank.code;
+                            bankid_transform_out[mapa.webbank.block].push(vald);
+                        }
+                    }
+                }
             }
+            /* -------
             var val = mapi.find(x => x.bankid.code === o);
 //clog("  +++-[" + key + "][" + o + "] val=" + JSON.stringify(val));
             if (val !== undefined) {
@@ -324,6 +340,7 @@ clog("    ----[" + key + "][" + o + "] val=" + JSON.stringify(mapa));
                     }
                 }
             }
+            */
         }
     }
 }
@@ -384,10 +401,12 @@ for (item of bankid_transform_out.Individuals) {
 }
 clog('--------------------- bankid_transform_out.ClientNames ');
 clog(bankid_transform_out.ClientNames);
+fill_data.names = {};
 for (item of bankid_transform_out.ClientNames) {
     var value = item.value;
     console.log(item);
-    fill_data.indiv[item.webbank.code] = value;
+    fill_data.names[item.webbank.code] = value;
+    fill_data.names["Lang"] = "LAT";
 }
 clog('--------------------- bankid_transform_out.ClientNames ');
 var i = 0;

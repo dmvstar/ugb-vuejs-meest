@@ -1159,7 +1159,7 @@
       "block": "Properties",
       "code": "CUSTOMER_TYPE",
       "type": "int",
-      "default": "11694-клієнт з відкриттям рахунків+",
+      "default": "",
       "dict": "CUSTOMER_TYPE",
       "isneed": ""
     }

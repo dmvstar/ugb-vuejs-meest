@@ -22,7 +22,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2217215390</tem:StateCode>
+               <tem:StateCode>3263911176</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -132,6 +132,10 @@
             </tem:Communications>            
             <tem:Properties>
                 <tem:TProperties>
+                  <tem:Code>GENDER</tem:Code>
+                  <tem:Value>M</tem:Value>
+                </tem:TProperties>
+                <tem:TProperties>
                   <tem:Code>CL_FATF_CHECK_RESULT</tem:Code>
                   <tem:Value>Клиент являестя террористом соглано данных bankid</tem:Value>
                 </tem:TProperties>
@@ -230,10 +234,6 @@
                 <tem:TProperties>
                   <tem:Code>CUSTOMER_TYPE</tem:Code>
                   <tem:Value>клієнт з відкриттям рахунків</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>CUSTOMER_TYPE</tem:Code>
-                  <tem:Value>11694-клієнт з відкриттям рахунків+</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
                   <tem:Code>Education</tem:Code>
