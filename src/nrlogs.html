@@ -285,9 +285,9 @@
                     };
 
                     const requestOptions = {
-                    method: "POST",
-                    headers: headers,
-                    body: JSON.stringify(request)
+                        method: "POST",
+                        headers: headers,
+                        body: JSON.stringify(request)
                     };
 
                     await fetch(realUrl, requestOptions)
@@ -299,8 +299,16 @@
 //console.log(result);
 //alert(result);
                         const data = JSON.parse(result);
-
                         this.result = data.data;
+
+                        if(this.result.length >0) {
+                            for(i of this.result) {
+                                //alert(JSON.stringify(i));
+                                if(i.payload !== undefined)
+                                    i.message = JSON.stringify(i.payload);
+                            }
+                        }
+                        
 
                         if (!response.ok) {
                         // get error message from body or default to response statusText
