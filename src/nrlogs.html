@@ -305,7 +305,7 @@
                             for(i of this.result) {
                                 //alert(JSON.stringify(i));
                                 if(i.payload !== undefined)
-                                    i.message = JSON.stringify(i.payload);
+                                    i.message = JSON.stringify(i.payload, null,2);
                             }
                         }
                         
@@ -327,6 +327,14 @@
                     return result;
                     }
                 
+            },
+            watch: {
+                'from.database': function(newQuestion, oldQuestion) {
+                    this.dict.table = this.dict.tables[newQuestion];
+                    this.from.table = this.dict.table[0];
+                    this.from.source = '';
+                    this.from.search = ''; 
+                }       
             },
 
             computed: {
@@ -367,7 +375,11 @@
                     dict: {
 
                         database : ["nrclients", "openbank"],
-                        table: ["cardInfo", "nrLogs", "clLogs"],
+                        table: ["nrLogs", "cardInfo", "clLogs"],
+                        tables: {
+                            "nrclients": ["nrLogs", "cardInfo" ],
+                            "openbank": ["clLogs"]
+                        },
                         level: [
                             "DEBUG",
                             "ERROR",
