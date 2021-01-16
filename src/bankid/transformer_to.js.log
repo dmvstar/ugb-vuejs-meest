@@ -5,7 +5,7 @@ MAIN INIT
     lastName: 'Кетцалькоатль',
     firstName: 'Кукумац',
     middleName: 'Кукулькан',
-    inn: '3263911176',
+    inn: '2972815807',
     birthDay: '28.08.1991',
     sex: 'M',
     phone: '380631003256',
@@ -1927,7 +1927,7 @@ bankid_transform_bid ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '3263911176'
+    value: '2972815807'
   },
   {
     cnt: 8,
@@ -2210,7 +2210,7 @@ bankid_transform_bid ---------------------------
       dict: '',
       isneed: 'true'
     },
-    value: '3263911176'
+    value: '2972815807'
   },
   {
     cnt: 11,
@@ -2741,7 +2741,7 @@ web
 fill_data --------------------------------------------
 {
   client: {
-    StateCode: '3263911176',
+    StateCode: '2972815807',
     Residency: '1',
     PrevIdentDate: '2021-01-10T00:00:00',
     Name: 'Кетцалькоатль Кукумац Кукулькан'
@@ -2922,6 +2922,9 @@ fill_data --------------------------------------------
 }
 fill_data --------------------------------------------
 Joe spends 6
+client_xml_data.names_top
+            
+            <tem:Names>                            
 [
   { Value: '380631003256', TypeId: '3' },
   { Value: 'sava@mail.dot.com', TypeId: '5' },

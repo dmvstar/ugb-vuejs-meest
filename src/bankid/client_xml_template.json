@@ -16,11 +16,11 @@
         "data": null
     },
     "names_bot": {
-        "name": "./data/client-create-Empty.xml",
+        "name": "./data/client-create-ClientNames-bot.xml",
         "data": null
     },
     "names_top": {
-        "name": "./data/client-create-Empty.xml",
+        "name": "./data/client-create-ClientNames-top.xml",
         "data": null
     },
     "client_bot": {

@@ -1,10 +1,9 @@
             
-               <tem:TNames>
+              <tem:TNames>
                   <Lang>{{Lang}}</Lang>
                   <Name>{{Name}}</Name>
                   <FullName>{{Name}}</FullName>
                   <FullNameR/>
                   <FullNameD/>
                   <Status>1</Status>                 
-               </tem:TNames>
-              
+              </tem:TNames>              

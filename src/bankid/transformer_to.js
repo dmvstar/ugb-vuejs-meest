@@ -151,12 +151,12 @@ function create_out_xml() {
     output += client_xml_data.indiv_bot;
 
     // name Lat
-    /*
+    clog("client_xml_data.names_top");
+    clog(client_xml_data.names_top);
     output += client_xml_data.names_top;
     output += mustache.render(client_xml_data.names_man, fill_data.names);
     output += client_xml_data.names_bot;
-    */
-
+    
     // documents
     output += client_xml_data.ident_top;
     for (prop of fill_data.ident) {
