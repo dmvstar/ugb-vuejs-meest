@@ -17,9 +17,9 @@
 }, 
 {
     "name": "ClientNames",
-    "isarray": true,
+    "isarray": false,
     "mapping": [],
-    "comment" : "array of names"
+    "comment" : "Lat names"
 }, 
 {
     "name": "Addresses",

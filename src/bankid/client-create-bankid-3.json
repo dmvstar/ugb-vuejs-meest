@@ -1,6 +1,6 @@
 {
   "client": {
-    "StateCode": "3345914540",
+    "StateCode": "2217215390",
     "Residency": "1",
     "PrevIdentDate": "2021-01-10T00:00:00",
     "Name": "Кетцалькоатль Кукумац Кукулькан"
@@ -72,6 +72,12 @@
       "Code": "PUBLIC_PERSON_EXISTS",
       "Dict": "",
       "Value": "1"
+    },
+    {
+      "Refs": "",
+      "Code": "FATF_SHORT_NAME",
+      "Dict": "",
+      "Value": "KUKULKA"
     },
     {
       "Refs": "",

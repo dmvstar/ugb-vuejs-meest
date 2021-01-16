@@ -140,12 +140,23 @@ function create_out_xml() {
     fs.writeFileSync("client-create-bankid-3.json", JSON.stringify(fill_data, null, 2));
     // XML CREATE ----------------------------------------------
     output = client_xml_data.top;
+    // client
     output += client_xml_data.client_top;
     output += mustache.render(client_xml_data.client_man, fill_data.client);
     output += client_xml_data.client_bot;
+
+    // individuals
     output += client_xml_data.indiv_top;
     output += mustache.render(client_xml_data.indiv_man, fill_data.indiv);
     output += client_xml_data.indiv_bot;
+
+    // name Lat
+    /*
+    output += client_xml_data.names_top;
+    output += mustache.render(client_xml_data.names_man, fill_data.names);
+    output += client_xml_data.names_bot;
+    */
+
     // documents
     output += client_xml_data.ident_top;
     for (prop of fill_data.ident) {
@@ -224,26 +235,31 @@ console.log(bankid_client);
 for (k of bankid_transform_web) {
     bankid_transform_out[k.name] = [];
 }
-console.log("bankid_mapping");
-console.log(bankid_mapping);
+//console.log("bankid_mapping");
+//console.log(bankid_mapping);
 
-
-for (o of bankid_mapping) {
-    if (o.bankid.block !== 'none') {
-        var f = bankid_transform_web.find(x => x.name === o.webbank.block);
-        if(f !== undefined) {
-            f.mapping.push(o);
-            var i = bankid_transform_bid.find(x => x.name === o.bankid.block);
-            i.mapping.push(o);
+for (bim of bankid_mapping) {
+    if (bim.bankid.block !== 'none') {
+        var web = bankid_transform_web.find(x => x.name === bim.webbank.block);
+        if(web !== undefined) {
+            web.mapping.push(bim);
+            var bid = bankid_transform_bid.find(x => x.name === bim.bankid.block);
+            bid.mapping.push(bim);
+clog(' ---- Fill '+bim.webbank.block+'<>'+bim.bankid.block+'<>'+bim.bankid.code);
         }
     }    
 }
 
-//console.log(bankid_transform_bid);
+/*
 clog('bankid_transform_web ---------------------------');
 clog(bankid_transform_web);
-clog('bankid_transform_web ---------------------------');                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-//console.log(bankid_transform_out);
+clog('bankid_transform_web ---------------------------');    
+*/
+
+clog('bankid_transform_bid ---------------------------');    
+clog(JSON.stringify(bankid_transform_bid, null,2));
+clog('bankid_transform_bid ---------------------------');                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
 
 // Parsing input data
 for (key in bankid_client) {
@@ -281,12 +297,19 @@ for (key in bankid_client) {
     } else {
         clog("[" + key + "] Object");
         for (o in bankid_client[key]) {
+            // key ~ extends,  o ~ nameLat
             var mapi = bankid_transform_bid.find(x => x.name === key).mapping;
+
+            var amapi = mapi.filter(it => it.bankid.code === o); 
+clog("  ----[" + key + "][" + o + "] val=" + amapi.length);
+            for(mapa of amapi) {
+clog("    ----[" + key + "][" + o + "] val=" + JSON.stringify(mapa));  
+            }
             var val = mapi.find(x => x.bankid.code === o);
-            //clog(" [" + key + "][" + o + "]"); // val=" + JSON.stringify(val));
+//clog("  +++-[" + key + "][" + o + "] val=" + JSON.stringify(val));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
-                clog("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
+//clog("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
                 //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
                 //console.log(val);
                 bankid_transform_out[val.webbank.block].push(val);
@@ -359,7 +382,14 @@ for (item of bankid_transform_out.Individuals) {
     //console.log('   indiv value = '+value);
     fill_data.indiv[item.webbank.code] = value;
 }
-
+clog('--------------------- bankid_transform_out.ClientNames ');
+clog(bankid_transform_out.ClientNames);
+for (item of bankid_transform_out.ClientNames) {
+    var value = item.value;
+    console.log(item);
+    fill_data.indiv[item.webbank.code] = value;
+}
+clog('--------------------- bankid_transform_out.ClientNames ');
 var i = 0;
 // Документы
 fill_data.ident = [];
@@ -431,9 +461,9 @@ i = 0;
 for (item of bankid_transform_out.Properties) {
     if (item.webbank.code !== '') {
         fill_data.props[i] = {};
-        fill_data.props[i].Refs = item.bankid.maps;
-        fill_data.props[i].Code = item.webbank.code;
-        fill_data.props[i].Dict = item.webbank.dict;
+        fill_data.props[i].Refs  = item.bankid.maps;
+        fill_data.props[i].Code  = item.webbank.code;
+        fill_data.props[i].Dict  = item.webbank.dict;
         fill_data.props[i].Value = item.value;
 
         if (item.bankid.maps !== undefined && item.bankid.maps.length > 0) {

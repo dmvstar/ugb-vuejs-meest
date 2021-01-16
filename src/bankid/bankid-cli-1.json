@@ -16,6 +16,7 @@
         "flagTopLevelRisk": "0"
     },
     "extends": {
+        "nameLat" : "KUKULKA",
         "countryCitizen": "804",
         "maritalStatus": "6",
         "workInfo": "Бог, глава всего",
@@ -35,7 +36,7 @@
         "costPaperAvail": "0",
         "planUseServices": "1,2,3",
         "ugbRelatePers": "0",
-        "0publicPersonExists": "0",
+        "ppublicPersonExists": "0",
         "statusBusiness": "5",
         "usaChiisares": "0",
 
