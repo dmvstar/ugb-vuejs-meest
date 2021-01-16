@@ -22,7 +22,7 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>2972815807</tem:StateCode>
+               <tem:StateCode>3293215551</tem:StateCode>
                <tem:Residency>1</tem:Residency>
                <tem:Name>Кетцалькоатль Кукумац Кукулькан</tem:Name>               
                <tem:Type>1</tem:Type>
@@ -45,16 +45,16 @@
                <tem:MarriageStatus>6</tem:MarriageStatus>
                <tem:Status>1</tem:Status>
             </tem:Individuals>            
-            <tem:Names>                                        
+            <tem:ClientNames>                                        
               <tem:TNames>
-                  <Lang>LAT</Lang>
-                  <Name>KUKULKA</Name>
-                  <FullName>KUKULKA</FullName>
-                  <FullNameR/>
-                  <FullNameD/>
-                  <Status>1</Status>                 
+                  <tem:Lang>LAT</tem:Lang>
+                  <tem:Name>KUKULKA</tem:Name>
+                  <tem:FullName>KUKULKA</tem:FullName>
+                  <tem:FullNameR/>
+                  <tem:FullNameD/>
+                  <tem:Status>1</tem:Status>                 
               </tem:TNames>                          
-            </tem:Names>                                        
+            </tem:ClientNames>                                        
             <tem:Identifications>
                <tem:TIdentifications>
                   <tem:TypeId>55</tem:TypeId>

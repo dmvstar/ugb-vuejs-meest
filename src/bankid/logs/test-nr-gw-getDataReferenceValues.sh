@@ -6,7 +6,7 @@ curl -v -XGET \
 -H "x-get-geturl:https://nr-clients.dev.ukrgasaws.com/" \
 -H "x-get-pathto:scrooge/webbank/dictionary/" \
 -H "x-get-method:data_refs_values" \
--H "x-get-params:catalogCode=KL_K030.DBF" \
+-H "x-get-params:catalogCode=K_DFM11" \
 https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/
 
 

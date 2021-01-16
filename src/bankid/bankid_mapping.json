@@ -1025,7 +1025,7 @@
     "bankid": {
       "block": "extends",
       "source": "",
-      "code": "publicPersonExists",
+      "code": "dpublicPersonExists",
       "maps": "",
       "type": "int"
     },

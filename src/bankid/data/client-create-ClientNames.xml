@@ -1,9 +1,9 @@
             
               <tem:TNames>
-                  <Lang>{{Lang}}</Lang>
-                  <Name>{{Name}}</Name>
-                  <FullName>{{Name}}</FullName>
-                  <FullNameR/>
-                  <FullNameD/>
-                  <Status>1</Status>                 
+                  <tem:Lang>{{Lang}}</tem:Lang>
+                  <tem:Name>{{Name}}</tem:Name>
+                  <tem:FullName>{{Name}}</tem:FullName>
+                  <tem:FullNameR/>
+                  <tem:FullNameD/>
+                  <tem:Status>1</tem:Status>                 
               </tem:TNames>              
