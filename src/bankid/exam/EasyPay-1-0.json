@@ -1,0 +1,91 @@
+{
+    "person": {
+        "type": "physical",
+        "lastName": "Рабушенко",
+        "firstName": "Антон", 
+        "middleName": "Володимирович",
+        "inn": "3358603879", 
+        "birthDay": "15.12.1991", 
+        "sex": "1", 
+        "phone": "380675097987",
+        "uaResident": "1",
+        "flagPersonTerror": "0",
+        "flagPEPs": "0",
+        "flagTopLevelRisk": "0"
+    },
+    "extends": {
+        "countryCitizen": "804",
+        "maritalStatus": "2",
+        "workInfo": "Приватний підприємець",
+        "birthCountry": "643",
+        "birthPlace": "Санкт-Петербург",
+        "profitWay": "14430",
+        "profitSrc": "12",
+        "ownFundsAmount": "1",
+        "ownFundsSrc": "8",
+        "monthAmouunt": "4",
+        "realEstateAvail": "1",
+        "movePropAvail": "1",
+        "otherBankAccount": "5",
+        "otherBankCredit": "0",
+        "otherBankDepo": "0",
+        "costPaperAvail": "Відсутні",
+        "planUseServices": "1,22,4",
+            "ugbRelatePers": "0 -> 2", правильное заняение по умолчанию - 2
+            "statusBusiness": "4", если знвчение 4, то необходимо заполнение соедующих полей, например
+                "forTaxStatus" : "1",
+                "forTaxDate" : "01.01.2000",
+                "forTaxCode" : "026 098",
+        "usaChiisares": "0",
+
+        "verifyType": "3",
+        "typeCli": "Клієнт з відкриттям рахунків",
+        "education": "5",
+        "photo25": "1",
+        "photo45": "1",
+        "codOblRee": "23",
+        "verifyDate": "16.01.2021",
+        "signDate": "16.01.2021",
+            "forTaxStatus": "0",        
+        "reputation": "добре",
+        "countryCitisien": "804",
+        "greenCard": "1",
+        "registryUSA": "0",
+        "statusFATCA": "3",
+		"nameLat": "Anton Rabushenko"
+    },
+    "addresses": [
+        {
+            "type": "factual",
+            "country": "Україна",
+            "state": "Київська",
+            "area": "",
+            "city": "Буча",
+            "street": "Шухевича",
+            "houseNo": "1Г",
+            "flatNo": ""
+        },
+        {
+            "type": "juridical",
+            "country": "Україна",
+            "state": "Київська",
+            "area": "",
+            "city": "Буча",
+            "street": "Шухевича",
+            "houseNo": "1Г",
+            "flatNo": ""
+        }
+    ],
+    "documents": [
+        {
+            "type": "passport",
+            "typeName": "",
+            "series": "НВ",
+            "number": "498823",
+            "issue": "Шепетівським МВ УМВС України в Хмельницькій обл.",
+            "dateIssue": "24.07.2008",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+        }
+    ]
+}
