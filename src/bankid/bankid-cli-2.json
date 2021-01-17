@@ -37,7 +37,7 @@
         "planUseServices": "1,2,3",
         "ugbRelatePers": "0",
         "publicPersonExists": "0",
-        "statusBusiness": "5",
+            "statusBusiness": "5",
         "usaChiisares": "0",
 
         "verifyType": "3",
@@ -49,7 +49,7 @@
         "verifyDate": "10.01.2021",
         "signDate": "10.01.2021",
 
-        "forTaxStatus": "0",
+            "forTaxStatus": "0",
         "forTaxDate": "10.01.2021",
         "forTaxCode": "026 097",
         

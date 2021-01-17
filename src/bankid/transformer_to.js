@@ -23,7 +23,7 @@ var bankid_transform_out = {};
 function get_reftrans(refmaps, idrefcode, idvalue) {
     var ret = idvalue;
     for (o of refmaps[idrefcode]) {
-        //console.log(' get_reftrans'+ JSON.stringify(o));
+        //clog(' get_reftrans'+ JSON.stringify(o));
         if (o.bankidcode === idvalue) {
             ret = o.webbankid;
             break;
@@ -134,7 +134,7 @@ function create_out_xml() {
         }
     };
     var output = mustache.render("{{title}} spends {{calc}}", view);
-    console.log(output);
+    clog(output);
 
     const fs = require('fs');
     fs.writeFileSync("client-create-bankid-3.json", JSON.stringify(fill_data, null, 2));
@@ -171,7 +171,7 @@ function create_out_xml() {
     output += client_xml_data.addre_bot;
     // comm
     output += client_xml_data.commu_top;
-    console.log(fill_data.comm);
+    clog(fill_data.comm);
     for (prop of fill_data.comm) {
         output += mustache.render(client_xml_data.commu_man, prop); //fill_data.comm);
     }
@@ -183,7 +183,7 @@ function create_out_xml() {
     }
     output += client_xml_data.props_bot;
     output += client_xml_data.bot;
-    //console.log(output);
+    //clog(output);
     fs.writeFileSync("client-create-bankid-3.xml", output);
     // XML CREATE END-------------------------------------------
 }
@@ -193,7 +193,7 @@ function load_requeries_files(){
     bankid_client = require('./bankid-cli-1.json');
     // @TODO - добавить ClientNames TNames
     bankid_mapping = require('./bankid_mapping.json');
-//console.log(bankid_mapping);
+//clog(bankid_mapping);
     bankid_dicts = require('./dicts_mapping.json');
     client_xml_data = require('./client_xml_data.json');
     client_xml_template = require('./client_xml_template.json');
@@ -215,19 +215,19 @@ function create_out_nr(){
 }
 function clog(msg){
     if (MODE_DEBUG === true) 
-        console.log(msg);
+        clog(msg);
 }
 // FUNCTIONS END -------------------------------------------
 
 // MAIN INIT -----------------------------------------------
-console.log("MAIN INIT");
+clog("MAIN INIT");
 load_requeries_files();
 load_transform_files();
 load_xml_templates_files();
 
 if (MODE_TEST === true)
     bankid_client.person.inn = generateIPN();
-console.log(bankid_client);
+clog(bankid_client);
 
 // MAIN INIT END -------------------------------------------
 // MAIN TRANSFORMATOR --------------------------------------
@@ -235,8 +235,8 @@ console.log(bankid_client);
 for (k of bankid_transform_web) {
     bankid_transform_out[k.name] = [];
 }
-//console.log("bankid_mapping");
-//console.log(bankid_mapping);
+//clog("bankid_mapping");
+//clog(bankid_mapping);
 
 for (bim of bankid_mapping) {
     if (bim.bankid.block !== 'none') {
@@ -265,19 +265,19 @@ clog('bankid_transform_bid ---------------------------');
 for (key in bankid_client) {
 
     var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;
-    //console.log("1 bankid_client[key]");
-    //console.log(JSON.stringify(bankid_client[key]));
-    //console.log("2 bankid_client[key]");
+    //clog("1 bankid_client[key]");
+    //clog(JSON.stringify(bankid_client[key]));
+    //clog("2 bankid_client[key]");
     var citem = bankid_client[key]
     //if (citem instanceof Array) { // do not wort in nodered
     if (Array.isArray(citem)) { 
         
         clog("[" + key + "][" + webbank_block + "] Array ");
-        //console.log(bankid_transform_out[webbank_block]);
+        //clog(bankid_transform_out[webbank_block]);
 
         var cnt = 0;
         var amapi = [];
-        //console.log(" ++++++++++++["+webbank_block+"]["+key+"] ");    
+        //clog(" ++++++++++++["+webbank_block+"]["+key+"] ");    
         var mapr = bankid_transform_bid.find(x => x.name === key).mapping;
 
         for (a of bankid_client[key]) {
@@ -326,8 +326,8 @@ clog("    ----[" + key + "][" + o + "] val=" + JSON.stringify(mapa));
             if (val !== undefined) {
                 val.value = bankid_client[key][o];
 //clog("  ++++[" + key + "][" + o + "]=" + val.value + "-" + val.webbank.block);
-                //console.log(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
-                //console.log(val);
+                //clog(" 00 key=" + key + " o=" + o + " val=" + JSON.stringify(val));
+                //clog(val);
                 bankid_transform_out[val.webbank.block].push(val);
                 // Ищем в знчения по умодчанию в для val.webbank.block
                 var mapw = bankid_transform_web.find(x => x.name === val.webbank.block).mapping;
@@ -349,16 +349,16 @@ clog("    ----[" + key + "][" + o + "] val=" + JSON.stringify(mapa));
 var calcm = bankid_transform_bid.find(x => x.name === 'calculate').mapping;
 
 for (item of calcm) {
-    console.log(item); // x.name === a.source !!!! persons
+    clog(item); // x.name === a.source !!!! persons
     var bankid_src = bankid_transform_bid.find(x => x.name === 'person').mapping;
-    console.log("-------------------------------------------- calcm bankid_src ");
-    console.log(bankid_src);
+    clog("-------------------------------------------- calcm bankid_src ");
+    clog(bankid_src);
 
     var fields = item.bankid.code.split('+');
     var calculate = "";
     for (f of fields) {
         var n = bankid_src.find(x => x.bankid.block === 'person' && x.bankid.code === f)
-        //console.log("  bankid_fld "+f+" "+n.value + JSON.stringify(n));
+        //clog("  bankid_fld "+f+" "+n.value + JSON.stringify(n));
         calculate += n.value + " ";
         calculate = calculate;
     }
@@ -379,7 +379,7 @@ clog('--------------------- bankid_transform_out.Client ');
 clog(bankid_transform_out.Client);
 for (item of bankid_transform_out.Client) {
     if (item.bankid.maps !== undefined && item.bankid.maps !== "") {
-        console.log(item.bankid.maps);
+        clog(item.bankid.maps);
         fill_data.client[item.webbank.code] =
             get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     } else
@@ -391,12 +391,12 @@ for (item of bankid_transform_out.Client) {
 fill_data.indiv = {};
 for (item of bankid_transform_out.Individuals) {
     var value = item.value;
-    console.log(item);
+    clog(item);
     if (item.bankid.maps !== undefined && item.bankid.maps !== '')
         value = get_reftrans(bankid_dicts, item.bankid.maps, item.value);
     if (item.bankid.type === 'date')
         value = trans_date(value);
-    //console.log('   indiv value = '+value);
+    //clog('   indiv value = '+value);
     fill_data.indiv[item.webbank.code] = value;
 }
 clog('--------------------- bankid_transform_out.ClientNames ');
@@ -404,7 +404,7 @@ clog(bankid_transform_out.ClientNames);
 fill_data.names = {};
 for (item of bankid_transform_out.ClientNames) {
     var value = item.value;
-    console.log(item);
+    clog(item);
     fill_data.names[item.webbank.code] = value;
     fill_data.names["Lang"] = "LAT";
 }
@@ -413,9 +413,9 @@ var i = 0;
 // Документы
 fill_data.ident = [];
 
-console.log('------------ bankid_transform_out.Identifications');
-console.log(bankid_transform_out.Identifications);
-console.log('------------ bankid_transform_out.Identifications');
+clog('------------ bankid_transform_out.Identifications');
+clog(bankid_transform_out.Identifications);
+clog('------------ bankid_transform_out.Identifications');
 
 for (item of bankid_transform_out.Identifications) {
     fill_data.ident[i] = {};
@@ -435,7 +435,7 @@ for (item of bankid_transform_out.Identifications) {
     i++;
 }
 // Адреса
-console.log(bankid_transform_out.Addresses);
+clog(bankid_transform_out.Addresses);
 i = 0;
 fill_data.addr = [];
 for (item of bankid_transform_out.Addresses) {
@@ -457,18 +457,18 @@ i = 0;
 fill_data.comm = [];
 var comm_codes = [];
 for (item of bankid_transform_out.Communications) {
-    console.log(item);
+    clog(item);
     if (comm_codes.indexOf(item.bankid.code) < 0)
         comm_codes.push(item.bankid.code);
 }
-console.log(comm_codes);
+clog(comm_codes);
 for (c of comm_codes) {
     fill_data.comm[i] = {};
-    console.log(c);
+    clog(c);
     for (item of bankid_transform_out.Communications) {
         var code = item.webbank.code;
         if (item.bankid.code === c) {
-            console.log('[' + c + '][' + code + '][' + item.value + ']');
+            clog('[' + c + '][' + code + '][' + item.value + ']');
             fill_data.comm[i][code] = item.value;
         }
     }
@@ -496,9 +496,9 @@ for (item of bankid_transform_out.Properties) {
 }
 // MAIN TRANSFORMATOR END-----------------------------------
 
-console.log("fill_data --------------------------------------------");
-console.log(fill_data);
-console.log("fill_data --------------------------------------------");
+clog("fill_data --------------------------------------------");
+clog(fill_data);
+clog("fill_data --------------------------------------------");
 
 create_out_xml();
 create_out_nr();
