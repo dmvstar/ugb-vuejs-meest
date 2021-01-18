@@ -39,6 +39,11 @@ const file = readline.createInterface({
 // the stream 
 var count = 0;
 console.log("TRUNCATE TABLE postcodes;")
+
+file.on('close', () => {
+  console.log('-- '+count);
+});
+
 file.on('line', (line) => { 
 // if(count > 1 && count < 100) {
  if(count > 1) {
@@ -54,7 +59,7 @@ file.on('line', (line) => {
   var distinct_ua = record[1];
   var locality_ua = record[2].replace(/'/g, "''");
   var house_numbers_ua = record[5];
-  var post_office_ua = record[6];  
+  var post_office_ua = record[6].replace(/'/g, "''");  
   var street_type_ua = record[4].split(' ')[0];
   var street_ua = record[4].substring(street_type_ua.length+1).replace(/'/g, "''");
 
@@ -85,7 +90,7 @@ street_type_ua+
 "','"+
 street_ua+
 "','"+
-record[5]+"','"+record[6]+"','"+record[8]+"','"+record[9]+"','"+record[10].replace(/'/g, "''")+"','"+
+record[5]+"','"+record[6].replace(/'/g, "''")+"','"+record[8]+"','"+record[9]+"','"+record[10].replace(/'/g, "''")+"','"+
 street_type_en+
 "','"+
 street_en+
