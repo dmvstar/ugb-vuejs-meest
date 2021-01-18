@@ -4,7 +4,7 @@ MAIN INIT
      lastName: 'Іванова',
      firstName: 'Катерина',
      middleName: 'Сергіївна',
-     inn: '2597914608',
+     inn: '2624119142',
      birthDay: '07.11.1990',
      sex: '2',
      phone: '380671112223',
@@ -1846,7 +1846,7 @@ bankid_transform_bid ---------------------------
        default: '',
        dict: '',
        isneed: 'true' },
-    value: '2597914608' },
+    value: '2624119142' },
   { cnt: 8,
     bankid:
      { block: 'person',
@@ -2063,7 +2063,7 @@ bankid_transform_bid ---------------------------
        default: '',
        dict: '',
        isneed: 'true' },
-    value: '2597914608' },
+    value: '2624119142' },
   { cnt: 11,
     bankid:
      { block: 'person',
@@ -2347,7 +2347,7 @@ phone
 [phone][TypeId][3]
 fill_data --------------------------------------------
 { client:
-   { StateCode: '2597914608',
+   { StateCode: '2624119142',
      Residency: '1',
      PrevIdentDate: '2021-01-16T00:00:00',
      Name: 'Іванова Катерина Сергіївна' },
