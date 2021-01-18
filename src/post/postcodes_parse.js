@@ -38,17 +38,33 @@ const file = readline.createInterface({
 // whenever a new line is read from 
 // the stream 
 var count = 0;
+console.log("TRUNCATE TABLE postcodes;")
 file.on('line', (line) => { 
 // if(count > 1 && count < 100) {
  if(count > 1) {
   if(count === 100 ) {
-    //lineReader.close();
+    //file.close();
   }
+   
+
   var record=line.split(';');
+  var postindex_loc = record[3];
+  var postindex_vpz = record[7];
+  var region_ua = record[0];
+  var distinct_ua = record[1];
+  var locality_ua = record[2].replace(/'/g, "''");
+  var house_numbers_ua = record[5];
+  var post_office_ua = record[6];  
   var street_type_ua = record[4].split(' ')[0];
-  var street_type_en = record[12].split(' ')[0];
-  var street_ua = record[4].substring(street_type_ua.length+1);
-  var street_en = record[12].substring(street_type_ua.length+1);
+  var street_ua = record[4].substring(street_type_ua.length+1).replace(/'/g, "''");
+
+  var region_en = record[8];
+  var distinct_en = record[9];
+  var locality_en = record[10].replace(/'/g, "''");
+  var street_type_en = record[12].split(' ')[0];  
+  var street_en = record[12].substring(street_type_ua.length+1).replace(/'/g, "''");
+  var house_numbers_en = record[13];
+  var post_office_en = record[14];  
 
   console.log("INSERT INTO postcodes( \
 postindex_loc \
@@ -63,13 +79,13 @@ postindex_loc \
 ,house_numbers_en ,post_office_en \
 ) \
 VALUES('"+record[3]+"','"+record[7]+"','"
-+record[0]+"','"+record[1]+"','"+record[2]+
++record[0]+"','"+record[1]+"','"+record[2].replace(/'/g, "''")+
 "','"+
 street_type_ua+
 "','"+
 street_ua+
 "','"+
-record[5]+"','"+record[6]+"','"+record[8]+"','"+record[9]+"','"+record[10]+"','"+
+record[5]+"','"+record[6]+"','"+record[8]+"','"+record[9]+"','"+record[10].replace(/'/g, "''")+"','"+
 street_type_en+
 "','"+
 street_en+
