@@ -10,7 +10,7 @@ id                 SERIAL PRIMARY KEY
 
 ,street_type_ua    VARCHAR(128)
 ,street_ua         VARCHAR(128)
-,house_numbers_ua  VARCHAR(648)
+,house_numbers_ua  VARCHAR(1024)
 ,post_office_ua    VARCHAR(128)
 
 ,region_en         VARCHAR(128)  
@@ -19,7 +19,7 @@ id                 SERIAL PRIMARY KEY
 
 ,street_type_en    VARCHAR(128)
 ,street_en         VARCHAR(128)
-,house_numbers_en  VARCHAR(648)
+--,house_numbers_en  VARCHAR(648)
 ,post_office_en    VARCHAR(128)
 );
 --DROP TABLE postcodes;
