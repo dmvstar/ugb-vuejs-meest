@@ -4,7 +4,7 @@
         "lastName": "Іванова",
         "firstName": "Катерина", 
         "middleName": "Сергіївна",
-        "inn": "3238853058", 
+        "inn": "{{inn}}", 
         "birthDay": "07.11.1990", 
         "sex": "2", 
         "phone": "380671112223",
@@ -31,7 +31,7 @@
         "otherBankDepo": "0",
         "costPaperAvail": "Відсутні",
         "planUseServices": "1,22,4",
-            "ugbRelatePers": "0->2",
+            "ugbRelatePers": "2",
             "statusBusiness": "5",
         "usaChiisares": "0",
 
@@ -49,13 +49,13 @@
         "greenCard": "1",
         "registryUSA": "0",
         "statusFATCA": "3",
-	"nameLat": "Kateryna Ivanova"
+	    "nameLat": "Kateryna Ivanova"
     },
     "addresses": [
         {
             "type": "factual",
             "country": "Україна",
-            "state": "",
+            "state": "Київська",
             "area": "",
             "city": "Київ",
             "street": "Перемоги",
@@ -65,7 +65,7 @@
         {
             "type": "juridical",
             "country": "Україна",
-            "state": "",
+            "state": "Київська",
             "area": "",
             "city": "Київ",
             "street": "Перемоги",
@@ -84,5 +84,5 @@
             "dateExpiration": "",
             "issueCountryIso2": "UA"
         }
-    ]
+    ] 
 }

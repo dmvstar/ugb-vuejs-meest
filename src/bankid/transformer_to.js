@@ -190,7 +190,7 @@ function create_out_xml() {
 
 function load_requeries_files(){
     if (MODE_WORK_LOCAL !== true) return;
-    bankid_client = require('./bankid-cli-1.json');
+    bankid_client = require('./bankid-cli.json');
     // @TODO - добавить ClientNames TNames
     bankid_mapping = require('./bankid_mapping.json');
 //clog(bankid_mapping);
@@ -215,7 +215,7 @@ function create_out_nr(){
 }
 function clog(msg){
     if (MODE_DEBUG === true) 
-        clog(msg);
+        console.log(msg);
 }
 // FUNCTIONS END -------------------------------------------
 

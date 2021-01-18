@@ -31,11 +31,17 @@
         "otherBankDepo": "0",
         "costPaperAvail": "Відсутні",
         "planUseServices": "1,22,4",
-            "ugbRelatePers": "0 -> 2", правильное заняение по умолчанию - 2
-            "statusBusiness": "4", если знвчение 4, то необходимо заполнение соедующих полей, например
-                "forTaxStatus" : "1",
-                "forTaxDate" : "01.01.2000",
-                "forTaxCode" : "026 098",
+
+        для 1 и 2 примера поле
+        "ugbRelatePers": "0 -> 2", правильное значение по умолчанию - 2
+        1
+        "statusBusiness": "4", если значение 4, то необходимо заполнение следующих полей, например
+            "forTaxStatus" : "1",
+            "forTaxDate" : "01.01.2000",
+            "forTaxCode" : "026 098",
+         
+        Клиенты создаются 
+
         "usaChiisares": "0",
 
         "verifyType": "3",
