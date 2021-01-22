@@ -1,0 +1,283 @@
+[
+    {
+        "lit": "1",
+        "ua_cap": "А",
+        "en_cap": "A",
+        "ua_lit": "а",
+        "en_lit_f": "а",
+        "en_lit_o": "а"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Б",
+        "en_cap": "B",
+        "ua_lit": "б",
+        "en_lit_f": "b",
+        "en_lit_o": "b"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "В",
+        "en_cap": "V",
+        "ua_lit": "в",
+        "en_lit_f": "v",
+        "en_lit_o": "v"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Г",
+        "en_cap": "H",
+        "ua_lit": "г",
+        "en_lit_f": "h",
+        "en_lit_o": "h"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ґ",
+        "en_cap": "G",
+        "ua_lit": "ґ",
+        "en_lit_f": "g",
+        "en_lit_o": "g"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Д",
+        "en_cap": "D",
+        "ua_lit": "д",
+        "en_lit_f": "d",
+        "en_lit_o": "d"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Е",
+        "en_cap": "E",
+        "ua_lit": "е",
+        "en_lit_f": "е",
+        "en_lit_o": "е"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Є",
+        "en_cap": "Ye",
+        "ua_lit": "є",
+        "en_lit_f": "ye",
+        "en_lit_o": "ie"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ж",
+        "en_cap": "Zh",
+        "ua_lit": "ж",
+        "en_lit_f": "zh",
+        "en_lit_o": "zh"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "З",
+        "en_cap": "Z",
+        "ua_lit": "з",
+        "en_lit_f": "z",
+        "en_lit_o": "z"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "И",
+        "en_cap": "Y",
+        "ua_lit": "и",
+        "en_lit_f": "y",
+        "en_lit_o": "y"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "І",
+        "en_cap": "I",
+        "ua_lit": "і",
+        "en_lit_f": "i",
+        "en_lit_o": "i"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ї",
+        "en_cap": "Yi",
+        "ua_lit": "ї",
+        "en_lit_f": "yi",
+        "en_lit_o": "i"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Й",
+        "en_cap": "Y",
+        "ua_lit": "й",
+        "en_lit_f": "yi",
+        "en_lit_o": "i"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "К",
+        "en_cap": "K",
+        "ua_lit": "к",
+        "en_lit_f": "k",
+        "en_lit_o": "k"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Л",
+        "en_cap": "L",
+        "ua_lit": "л",
+        "en_lit_f": "l",
+        "en_lit_o": "l"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "М",
+        "en_cap": "M",
+        "ua_lit": "м",
+        "en_lit_f": "m",
+        "en_lit_o": "m"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Н",
+        "en_cap": "N",
+        "ua_lit": "н",
+        "en_lit_f": "n",
+        "en_lit_o": "n"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "О",
+        "en_cap": "O",
+        "ua_lit": "о",
+        "en_lit_f": "o",
+        "en_lit_o": "o"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "П",
+        "en_cap": "P",
+        "ua_lit": "п",
+        "en_lit_f": "p",
+        "en_lit_o": "p"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Р",
+        "en_cap": "R",
+        "ua_lit": "р",
+        "en_lit_f": "r",
+        "en_lit_o": "r"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "С",
+        "en_cap": "S",
+        "ua_lit": "с",
+        "en_lit_f": "s",
+        "en_lit_o": "s"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Т",
+        "en_cap": "T",
+        "ua_lit": "т",
+        "en_lit_f": "t",
+        "en_lit_o": "t"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "У",
+        "en_cap": "U",
+        "ua_lit": "у",
+        "en_lit_f": "u",
+        "en_lit_o": "u"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ф",
+        "en_cap": "F",
+        "ua_lit": "ф",
+        "en_lit_f": "f",
+        "en_lit_o": "f"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Х",
+        "en_cap": "Kh",
+        "ua_lit": "х",
+        "en_lit_f": "kh",
+        "en_lit_o": "kh"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ц",
+        "en_cap": "Ts",
+        "ua_lit": "ц",
+        "en_lit_f": "ts",
+        "en_lit_o": "ts"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ч",
+        "en_cap": "Ch",
+        "ua_lit": "ч",
+        "en_lit_f": "ch",
+        "en_lit_o": "ch"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ш",
+        "en_cap": "Sh",
+        "ua_lit": "ш",
+        "en_lit_f": "sh",
+        "en_lit_o": "sh"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Щ",
+        "en_cap": "Shch",
+        "ua_lit": "щ",
+        "en_lit_f": "shch",
+        "en_lit_o": "shch"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Ю",
+        "en_cap": "Yu",
+        "ua_lit": "ю",
+        "en_lit_f": "yu",
+        "en_lit_o": "iu"
+    },
+    {
+        "lit": "1",
+        "ua_cap": "Я",
+        "en_cap": "Ya",
+        "ua_lit": "я",
+        "en_lit_f": "ya",
+        "en_lit_o": "ia"
+    },
+    {
+        "lit": "2",
+        "ua_cap": "Зг",
+        "en_cap": "Zgh",
+        "ua_lit": "зг",
+        "en_lit_f": "zgh",
+        "en_lit_o": "zgh"
+    },
+    {
+        "lit": "0",
+        "ua_cap": "Ь",
+        "en_cap": "",
+        "ua_lit": "ь",
+        "en_lit_f": "",
+        "en_lit_o": ""
+    },
+    {
+        "lit": "0",
+        "ua_cap": "'",
+        "en_cap": "",
+        "ua_lit": "'",
+        "en_lit_f": "",
+        "en_lit_o": ""
+    }
+
+]

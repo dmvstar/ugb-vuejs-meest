@@ -22,9 +22,9 @@
             <!--tem:ClientId>1747753</tem:ClientId-->
             <tem:SendToScrooge>1</tem:SendToScrooge>
             <tem:Clients>
-               <tem:StateCode>3089411761</tem:StateCode>
+               <tem:StateCode>3255214997</tem:StateCode>
                <tem:Residency>1</tem:Residency>
-               <tem:Name>Іванова Катерина Сергіївна</tem:Name>               
+               <tem:Name>Рабушенко Антон Володимирович</tem:Name>               
                <tem:Type>1</tem:Type>
                <tem:SubType>0</tem:SubType>
                <tem:isTechFlag>0</tem:isTechFlag>
@@ -35,13 +35,13 @@
                <tem:Status>1</tem:Status>
             </tem:Clients>            
             <tem:Individuals>
-               <tem:FirstName>Катерина</tem:FirstName>
-               <tem:LastName>Іванова</tem:LastName>
-               <tem:FatherName>Сергіївна</tem:FatherName>
-               <tem:Gender>2</tem:Gender>
-               <tem:BirthDay>1990-11-07T00:00:00</tem:BirthDay>
+               <tem:FirstName>Антон</tem:FirstName>
+               <tem:LastName>Рабушенко</tem:LastName>
+               <tem:FatherName>Володимирович</tem:FatherName>
+               <tem:Gender>1</tem:Gender>
+               <tem:BirthDay>1991-12-15T00:00:00</tem:BirthDay>
                <tem:BirthSurname></tem:BirthSurname>
-               <!--tem:MarriageStatus>1</tem:MarriageStatus-->
+               <!--tem:MarriageStatus></tem:MarriageStatus-->
                <tem:MarriageStatus>6</tem:MarriageStatus>
                <tem:Status>1</tem:Status>
             </tem:Individuals>            
@@ -58,10 +58,10 @@
             <tem:Identifications>
                <tem:TIdentifications>
                   <tem:TypeId>4</tem:TypeId>
-                  <tem:Series>АА</tem:Series>
-                  <tem:Number>489304</tem:Number>
-                  <tem:Registrator>Подільським районним відділом РАЦС</tem:Registrator>
-                  <tem:IssueDate>2007-03-15T00:00:00</tem:IssueDate>
+                  <tem:Series>НВ</tem:Series>
+                  <tem:Number>498823</tem:Number>
+                  <tem:Registrator>Шепетівським МВ УМВС України в Хмельницькій област</tem:Registrator>
+                  <tem:IssueDate>2008-07-24T00:00:00</tem:IssueDate>
                   <tem:ExpirationDate>2099-01-01T00:00:00</tem:ExpirationDate>
                   <tem:IsMain>true</tem:IsMain>
                   <tem:Checked>true</tem:Checked>
@@ -77,13 +77,13 @@
                   <tem:State>Київська</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>Київ</tem:Town>
+                  <tem:Town>Буча</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>Перемоги</tem:Street>
+                  <tem:Street>Шухевича Романа</tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>2</tem:HouseNumber>
+                  <tem:HouseNumber>1Г</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>15</tem:FlatNumber>
+                  <tem:FlatNumber></tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
@@ -96,13 +96,13 @@
                   <tem:State>Київська</tem:State>
                   <tem:Region/>
                   <tem:TownshipType>3508</tem:TownshipType>
-                  <tem:Town>Київ</tem:Town>
+                  <tem:Town>Буча</tem:Town>
                   <tem:StreetType>3510</tem:StreetType>
-                  <tem:Street>Перемоги</tem:Street>
+                  <tem:Street>Шухевича Романа</tem:Street>
                   <tem:HouseType>3511</tem:HouseType>
-                  <tem:HouseNumber>2</tem:HouseNumber>
+                  <tem:HouseNumber>1Г</tem:HouseNumber>
                   <tem:FlatType>3506</tem:FlatType>
-                  <tem:FlatNumber>15</tem:FlatNumber>
+                  <tem:FlatNumber></tem:FlatNumber>
                   <tem:LandlinePhoneNumber/>
                   <tem:PropertyStatus/>
                   <tem:Status>1</tem:Status>
@@ -123,7 +123,7 @@
             <tem:Properties>
                 <tem:TProperties>
                   <tem:Code>GENDER</tem:Code>
-                  <tem:Value>2</tem:Value>
+                  <tem:Value>1</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
                   <tem:Code>CL_FATF_CHECK_RESULT</tem:Code>
@@ -134,140 +134,12 @@
                   <tem:Value>1</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
-                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
-                  <tem:Value>804</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>INFO_WORK_FROM</tem:Code>
-                  <tem:Value>Ашан, старший менеджер</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>BIRTH_COUNTRY</tem:Code>
-                  <tem:Value>804</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>BIRTH_PLACE</tem:Code>
-                  <tem:Value>Київ</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PROFIT_WAY</tem:Code>
-                  <tem:Value>14300</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>BANK_PRODUCT</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>OBSYAG_NAD</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>NAD_K_3</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>MONTHSUMM</tem:Code>
-                  <tem:Value>3</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PROPETYTH_OF_CLIENT</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PROPETYTH_OF_CLIENT_AVTO</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>INFO_OUTER_ACC_SEL</tem:Code>
-                  <tem:Value>5</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>EXISTS_CRED_OUT</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>EXISTS_DEPO_OUT</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PROPETYPAP_OF_CLIENTYPE</tem:Code>
-                  <tem:Value>Відсутні</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>BANK_SERVICES_MANUAL</tem:Code>
-                  <tem:Value>1,22,4</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>UGB_TCURelPers</tem:Code>
-                  <tem:Value>2</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>KL_K013FO</tem:Code>
-                  <tem:Value>5</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>Chiisaresident_USA</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>Chiisaresident_USA</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>Customer_verification</tem:Code>
-                  <tem:Value>3</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>CUSTOMER_TYPE</tem:Code>
-                  <tem:Value>Клієнт з відкриттям рахунків</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>Education</tem:Code>
-                  <tem:Value>2</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PASPFOTOCONTROL25</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>PASPFOTOCONTROL45</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>FATF_CodObl</tem:Code>
-                  <tem:Value>23</tem:Value>
+                  <tem:Code>FATF_SHORT_NAME</tem:Code>
+                  <tem:Value>Kateryna Ivanova</tem:Value>
                 </tem:TProperties>
                 <tem:TProperties>
                   <tem:Code>Verifikatsii_date </tem:Code>
                   <tem:Value>16.01.2021</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>CLIENT_STATUS</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>Criterias</tem:Code>
-                  <tem:Value>добре</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
-                  <tem:Value>804</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>CARD_GREEN</tem:Code>
-                  <tem:Value>1</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>Resident_USA</tem:Code>
-                  <tem:Value>0</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>FATCA</tem:Code>
-                  <tem:Value>3</tem:Value>
-                </tem:TProperties>
-                <tem:TProperties>
-                  <tem:Code>FATF_SHORT_NAME</tem:Code>
-                  <tem:Value>Kateryna Ivanova</tem:Value>
                 </tem:TProperties>
             </tem:Properties>         
          </tem:client>

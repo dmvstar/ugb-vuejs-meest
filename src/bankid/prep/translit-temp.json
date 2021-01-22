@@ -1,0 +1,9 @@
+{"lit" : "",    "ua_cap" : "",    "en_cap" : "",    "ua_lit" : "",    "en_lit_f" : "",    "en_lit_o" : ""}
+
+
+"{""lit"" : """&A2&""", ""ua_cap"" : """&B2&""", ""en_cap"": """&C2&""", ""ua_lit"": """&D2&""", ""en_lit_f"": """&E2&""", ""en_lit_o"": """&F2&""" }"
+
+
+{"lit" : "1", "ua_cap" : "А", "en_cap": "A", "ua_lit": "а", "en_lit_f": "а", "en_lit_o": "а" }
+{"lit" : "1", "ua_cap" : "Б", "en_cap": "B", "ua_lit": "б", "en_lit_f": "b", "en_lit_o": "b" }
+{"lit" : "1", "ua_cap" : "В", "en_cap": "V", "ua_lit": "в", "en_lit_f": "v", "en_lit_o": "v" }

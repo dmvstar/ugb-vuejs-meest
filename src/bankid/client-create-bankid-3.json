@@ -1,17 +1,16 @@
 {
   "client": {
-    "StateCode": "3089411761",
+    "StateCode": "3255214997",
     "Residency": "1",
     "PrevIdentDate": "2021-01-16T00:00:00",
-    "Name": "Іванова Катерина Сергіївна"
+    "Name": "Рабушенко Антон Володимирович"
   },
   "indiv": {
-    "LastName": "Іванова",
-    "FirstName": "Катерина",
-    "FatherName": "Сергіївна",
-    "BirthDay": "1990-11-07T00:00:00",
-    "GENDER": "2",
-    "MarriageStatus": "1"
+    "LastName": "Рабушенко",
+    "FirstName": "Антон",
+    "FatherName": "Володимирович",
+    "BirthDay": "1991-12-15T00:00:00",
+    "GENDER": "1"
   },
   "names": {
     "Name": "Kateryna Ivanova",
@@ -20,10 +19,10 @@
   "ident": [
     {
       "TypeId": "4",
-      "Series": "АА",
-      "Number": "489304",
-      "Registrator": "Подільським районним відділом РАЦС",
-      "IssueDate": "2007-03-15T00:00:00",
+      "Series": "НВ",
+      "Number": "498823",
+      "Registrator": "Шепетівським МВ УМВС України в Хмельницькій област",
+      "IssueDate": "2008-07-24T00:00:00",
       "ExpirationDate": "2099-01-01T00:00:00",
       "CountryCode": "UA"
     }
@@ -31,23 +30,23 @@
   "addr": [
     {
       "TypeCode": "2",
-      "Country": "Україна",
+      "Country": "Ук",
       "State": "Київська",
       "Region": "",
-      "Town": "Київ",
-      "Street": "Перемоги",
-      "HouseNumber": "2",
-      "FlatNumber": "15"
+      "Town": "Буча",
+      "Street": "Шухевича Романа",
+      "HouseNumber": "1Г",
+      "FlatNumber": ""
     },
     {
       "TypeCode": "1",
-      "Country": "Україна",
+      "Country": "Ук",
       "State": "Київська",
       "Region": "",
-      "Town": "Київ",
-      "Street": "Перемоги",
-      "HouseNumber": "2",
-      "FlatNumber": "15"
+      "Town": "Буча",
+      "Street": "Шухевича Романа",
+      "HouseNumber": "1Г",
+      "FlatNumber": ""
     }
   ],
   "comm": [
@@ -58,10 +57,10 @@
   ],
   "props": [
     {
-      "Refs": "",
+      "Refs": "sex",
       "Code": "GENDER",
       "Dict": "D06",
-      "Value": "2"
+      "Value": "1"
     },
     {
       "Refs": "terrorist",
@@ -77,207 +76,15 @@
     },
     {
       "Refs": "",
-      "Code": "FATF_COUNTRY_CITIZEN",
-      "Dict": "KL_K040.DBF",
-      "Value": "804"
-    },
-    {
-      "Refs": "",
-      "Code": "INFO_WORK_FROM",
+      "Code": "FATF_SHORT_NAME",
       "Dict": "",
-      "Value": "Ашан, старший менеджер"
-    },
-    {
-      "Refs": "",
-      "Code": "BIRTH_COUNTRY",
-      "Dict": "KL_K040.DBF",
-      "Value": "804"
-    },
-    {
-      "Refs": "",
-      "Code": "BIRTH_PLACE",
-      "Dict": "",
-      "Value": "Київ"
-    },
-    {
-      "Refs": "",
-      "Code": "PROFIT_WAY",
-      "Dict": "PROFIT_WAY",
-      "Value": "14300"
-    },
-    {
-      "Refs": "",
-      "Code": "BANK_PRODUCT",
-      "Dict": "FIN_DOCH",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "OBSYAG_NAD",
-      "Dict": "OBSYAG_NAD_1",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "NAD_K_3",
-      "Dict": "NAD_K_3",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "MONTHSUMM",
-      "Dict": "SUMA_DOHOD",
-      "Value": "3"
-    },
-    {
-      "Refs": "",
-      "Code": "PROPETYTH_OF_CLIENT",
-      "Dict": "PROPETYTH_OF_CLIENT",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "PROPETYTH_OF_CLIENT_AVTO",
-      "Dict": "PROPETYTH_OF_CLIENT_AVTO",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "INFO_OUTER_ACC_SEL",
-      "Dict": "INFO_OUTER_ACC",
-      "Value": "5"
-    },
-    {
-      "Refs": "",
-      "Code": "EXISTS_CRED_OUT",
-      "Dict": "YESNO",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "EXISTS_DEPO_OUT",
-      "Dict": "YESNO",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "PROPETYPAP_OF_CLIENTYPE",
-      "Dict": "PROPETYPAP_OF_CLIENTYPE",
-      "Value": "Відсутні"
-    },
-    {
-      "Refs": "",
-      "Code": "BANK_SERVICES_MANUAL",
-      "Dict": "BANK_SERVICES_MANUAL",
-      "Value": "1,22,4"
-    },
-    {
-      "Refs": "",
-      "Code": "UGB_TCURelPers",
-      "Dict": "RF_UGB_TCURelPers",
-      "Value": "2"
-    },
-    {
-      "Refs": "",
-      "Code": "KL_K013FO",
-      "Dict": "KL_K013_FO",
-      "Value": "5"
-    },
-    {
-      "Refs": "",
-      "Code": "Chiisaresident_USA",
-      "Dict": "YESNO",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "Chiisaresident_USA",
-      "Dict": "YESNO",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "Customer_verification",
-      "Dict": "Customer_verification",
-      "Value": "3"
-    },
-    {
-      "Refs": "",
-      "Code": "CUSTOMER_TYPE",
-      "Dict": "CUSTOMER_TYPE",
-      "Value": "Клієнт з відкриттям рахунків"
-    },
-    {
-      "Refs": "",
-      "Code": "Education",
-      "Dict": "",
-      "Value": "2"
-    },
-    {
-      "Refs": "",
-      "Code": "PASPFOTOCONTROL25",
-      "Dict": "",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "PASPFOTOCONTROL45",
-      "Dict": "",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "FATF_CodObl",
-      "Dict": "",
-      "Value": "23"
+      "Value": "Kateryna Ivanova"
     },
     {
       "Refs": "",
       "Code": "Verifikatsii_date ",
       "Dict": "",
       "Value": "16.01.2021"
-    },
-    {
-      "Refs": "",
-      "Code": "CLIENT_STATUS",
-      "Dict": "",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "Criterias",
-      "Dict": "",
-      "Value": "добре"
-    },
-    {
-      "Refs": "",
-      "Code": "FATF_COUNTRY_CITIZEN",
-      "Dict": "KL_K040.DBF",
-      "Value": "804"
-    },
-    {
-      "Refs": "",
-      "Code": "CARD_GREEN",
-      "Dict": "A_GREEN_CARD",
-      "Value": "1"
-    },
-    {
-      "Refs": "",
-      "Code": "Resident_USA",
-      "Dict": "YESNO",
-      "Value": "0"
-    },
-    {
-      "Refs": "",
-      "Code": "FATCA",
-      "Dict": "FATCA",
-      "Value": "3"
-    },
-    {
-      "Refs": "",
-      "Code": "FATF_SHORT_NAME",
-      "Dict": "",
-      "Value": "Kateryna Ivanova"
     }
   ]
 }

@@ -2,6 +2,7 @@
 // RUN 
 // export NODE_PATH="$(npm root -g)"
 // node retransformer.js  totransformer.js
+// v.0.1.44 - 22.01.2021 Добавлено исключение лишних блоков "timestamp" "merchant_name"
 
 var MODE_WORK_LOCAL = true;
 if (typeof msg != "undefined") MODE_WORK_LOCAL = false;
@@ -263,8 +264,11 @@ clog('bankid_transform_bid ---------------------------');
 
 // Parsing input data
 for (key in bankid_client) {
+clog("--------------------------- bankid_client[key]="+key);
+    var bid_mapping = bankid_transform_bid.find(x => x.name === key);
 
-    var webbank_block = bankid_transform_bid.find(x => x.name === key).mapping[0].webbank.block;
+    if (bid_mapping !== undefined) {
+    var webbank_block = bid_mapping.mapping[0].webbank.block;
     //clog("1 bankid_client[key]");
     //clog(JSON.stringify(bankid_client[key]));
     //clog("2 bankid_client[key]");
@@ -294,6 +298,7 @@ for (key in bankid_client) {
             cnt++;
         }
         bankid_transform_out[webbank_block] = amapi;
+        
     } else {
         clog("[" + key + "] Object");
         for (o in bankid_client[key]) {
@@ -343,6 +348,7 @@ clog("    ----[" + key + "][" + o + "] val=" + JSON.stringify(mapa));
             */
         }
     }
+    }    
 }
 
 // Calculate field from bankid

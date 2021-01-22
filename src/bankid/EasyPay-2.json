@@ -1,12 +1,13 @@
 {
     "person": {
         "type": "physical",
-        "lastName": "Іванова",
-        "firstName": "Катерина", 
-        "middleName": "Сергіївна",
-        "inn": "{{inn}}", 
-        "birthDay": "07.11.1990", 
-        "sex": "2", 
+        "lastName": "Рабушенко",
+        "firstName": "Антон",
+        "middleName": "Володимирович",
+        "inn": "3074319822",
+        "birthDay": "15.12.1991",
+        "sex": "M",
+
         "phone": "380671112223",
         "uaResident": "1",
         "flagPersonTerror": "0",
@@ -14,75 +15,44 @@
         "flagTopLevelRisk": "0"
     },
     "extends": {
-        "countryCitizen": "804",
-        "maritalStatus": "1",
-        "workInfo": "Ашан, старший менеджер",
-        "birthCountry": "804",
-        "birthPlace": "Київ",
-        "profitWay": "14300",
-        "profitSrc": "1",
-        "ownFundsAmount": "1",
-        "ownFundsSrc": "1",
-        "monthAmouunt": "3",
-        "realEstateAvail": "1",
-        "movePropAvail": "1",
-        "otherBankAccount": "5",
-        "otherBankCredit": "0",
-        "otherBankDepo": "0",
-        "costPaperAvail": "Відсутні",
-        "planUseServices": "1,22,4",
-            "ugbRelatePers": "2",
-            "statusBusiness": "5",
-        "usaChiisares": "0",
-
-        "verifyType": "3",
-        "typeCli": "Клієнт з відкриттям рахунків",
-        "education": "2",
-        "photo25": "1",
-        "photo45": "1",
-            "codOblRee": "23",
+        "nameLat": "Kateryna Ivanova",
         "verifyDate": "16.01.2021",
-        "signDate": "16.01.2021",
-            "forTaxStatus": "0",        
-        "reputation": "добре",
-        "countryCitisien": "804",
-        "greenCard": "1",
-        "registryUSA": "0",
-        "statusFATCA": "3",
-	    "nameLat": "Kateryna Ivanova"
+        "signDate": "16.01.2021"
     },
     "addresses": [
         {
             "type": "factual",
-            "country": "Україна",
+            "country": "Ук",
             "state": "Київська",
             "area": "",
-            "city": "Київ",
-            "street": "Перемоги",
-            "houseNo": "2",
-            "flatNo": "15"
+            "city": "Буча",
+            "street": "Шухевича Романа",
+            "houseNo": "1Г",
+            "flatNo": ""
         },
         {
             "type": "juridical",
-            "country": "Україна",
+            "country": "Ук",
             "state": "Київська",
             "area": "",
-            "city": "Київ",
-            "street": "Перемоги",
-            "houseNo": "2",
-            "flatNo": "15"
+            "city": "Буча",
+            "street": "Шухевича Романа",
+            "houseNo": "1Г",
+            "flatNo": ""
         }
     ],
     "documents": [
         {
             "type": "passport",
-            "typeName": "",
-            "series": "АА",
-            "number": "489304",
-            "issue": "Подільським районним відділом РАЦС",
-            "dateIssue": "15.03.2007",
+            "typeName": "НВ",
+            "series": "НВ",
+            "number": "498823",
+            "issue": "Шепетівським МВ УМВС України в Хмельницькій област",
+            "dateIssue": "24.07.2008",
             "dateExpiration": "",
             "issueCountryIso2": "UA"
         }
-    ] 
+    ],
+    "timestamp": "202101221516377103",
+    "merchant_name": "easypay_test"
 }
