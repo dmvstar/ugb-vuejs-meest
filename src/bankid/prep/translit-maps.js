@@ -1,4 +1,3 @@
-
 var translit_maps = require('./translit-maps.json');
 
 //console.log(translit_maps);
@@ -7,8 +6,8 @@ var example = [
     "Христина",
     "Соломія Марія",
     "Старжинський Дмитро",
-    "Рибчинськй",
-    "Шевченко",
+    "Рибьчинськй",
+    "Шевч'енк'о",
     "Уляна",
     "Іващенко",
     "Згоран",
@@ -19,16 +18,20 @@ var example = [
 for (sname of example) {
     //console.log(sname);     
     var oname = translit(sname);
-    console.log(sname, '\t\t', oname);
+    console.log(sname, '\n\t', oname);
 }
 
 //-----------------------------------------------------
 function translit(sname) {
-    var out = '';    
-    var first = true;    
+    var out = '';
+    var first = true;
+    var iname = sname;
     // delete non translate char
-    var iname = sname.replace("'", "");
-    iname = iname.replace("ь", "");
+    var amapi = translit_maps.filter(x => x.lit === "0");
+    for (o of amapi) {
+        var reg = new RegExp(o.ua_lit, 'g');
+        iname = iname.replace(reg, o.en_lit_f);
+    }
     // replace two sequence char 
     var tr = translit_maps.find(x => x.lit === "2");
     if (iname.includes(tr.ua_cap))
@@ -40,21 +43,21 @@ function translit(sname) {
         var ochr = '';
         var tr_c = translit_maps.find(x => x.ua_cap === chr);
         var tr_l = translit_maps.find(x => x.ua_lit === chr);
-        if(tr_c !== undefined) {
-            ochr = tr_c.en_cap;  
+        if (tr_c !== undefined) {
+            ochr = tr_c.en_cap;
         } else {
-            if(tr_l !== undefined){
-                if(first)
+            if (tr_l !== undefined) {
+                if (first)
                     ochr = tr_l.en_lit_f;
-                else    
-                    ochr = tr_l.en_lit_o;            
+                else
+                    ochr = tr_l.en_lit_o;
             } else {
-                ochr = chr;    
+                ochr = chr;
             }
         }
-        out += ochr;        
-        if(first) first = !first;
-        if(chr === ' ') first = true;
+        out += ochr;
+        if (first) first = !first;
+        if (chr === ' ') first = true;
     }
     return out;
 }
