@@ -1,0 +1,288 @@
+{
+  "extends": {
+    "countryCitizen": "804",
+    "maritalStatus": "1",
+    "uaResident": "1",
+    "codOblRee": "",
+    "flagTopLevelRisk": "0",
+    "workInfo": "Безробітний",
+    "birthCountry": "804",
+    "birthPlace": "Україна",
+    "profitWay": "14430",
+    "profitSrc": "16",
+    "ownFundsAmount": "1",
+    "ownFundsSrc": "9",
+    "monthAmouunt": "1",
+    "realEstateAvail": "1",
+    "movePropAvail": "1",
+    "otherBankAccount": "3",
+    "otherBankCredit": "0",
+    "otherBankDepo": "0",
+    "costPaperAvail": "Відсутні",
+    "planUseServices": "44652",
+    "ugbRelatePers": "2",
+    "flagPEPs": "0",
+    "statusBusiness": "5",
+    "usaChiisares": "0",
+    "typeCli": "3",
+    "photo25": "1",
+    "photo45": "1",
+    "verifyDate": "now",
+    "signDate": "now",
+    "education": "2",
+    "forTaxStatus": "0",
+    "verifyType": "3",
+    "reputation": "Задовільний",
+    "countryCitisien": "804",
+    "greenCard": "1",
+    "registryUSA": "0",
+    "statusFATCA": "0"
+  }
+}
+
+
+[
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2480,
+    "value": "1",
+    "code": "Автономна Республiка Крим",
+    "description": "Автономна Республiка Крим"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2481,
+    "value": "12",
+    "code": "Дніпропетровська",
+    "description": "Дніпропетровська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2482,
+    "value": "14",
+    "code": "Донецька",
+    "description": "Донецька область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2483,
+    "value": "18",
+    "code": "Житомирська",
+    "description": "Житомирська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2484,
+    "value": "21",
+    "code": "Закарпатська",
+    "description": "Закарпатська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2485,
+    "value": "23",
+    "code": "Запорізька",
+    "description": "Запорізька область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2486,
+    "value": "26",
+    "code": "Івано-Франківська",
+    "description": "Івано-Франківська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2487,
+    "value": "32",
+    "code": "Київська",
+    "description": "Київська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2488,
+    "value": "35",
+    "code": "Кіровоградська",
+    "description": "Кіровоградська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2489,
+    "value": "44",
+    "code": "Луганська",
+    "description": "Луганська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2490,
+    "value": "46",
+    "code": "Львівська",
+    "description": "Львівська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2491,
+    "value": "48",
+    "code": "Миколаївська",
+    "description": "Миколаївська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2492,
+    "value": "5",
+    "code": "Вінницька",
+    "description": "Вінницька область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2493,
+    "value": "51",
+    "code": "Одеська",
+    "description": "Одеська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2494,
+    "value": "53",
+    "code": "Полтавська",
+    "description": "Полтавська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2495,
+    "value": "56",
+    "code": "Рівненська",
+    "description": "Рівненська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2496,
+    "value": "59",
+    "code": "Сумська",
+    "description": "Сумська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2497,
+    "value": "61",
+    "code": "Тернопільська",
+    "description": "Тернопільська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2498,
+    "value": "63",
+    "code": "Харківська",
+    "description": "Харківська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2499,
+    "value": "65",
+    "code": "Херсонська",
+    "description": "Херсонська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2500,
+    "value": "68",
+    "code": "Хмельницька",
+    "description": "Хмельницька область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2501,
+    "value": "7",
+    "code": "Волинська",
+    "description": "Волинська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2502,
+    "value": "71",
+    "code": "Черкаська",
+    "description": "Черкаська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2503,
+    "value": "73",
+    "code": "Чернівецька",
+    "description": "Чернівецька область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2504,
+    "value": "74",
+    "code": "Чернігівська",
+    "description": "Чернігівська область"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2505,
+    "value": "80",
+    "code": "м.Київ",
+    "description": "м.Київ"
+  },
+  {
+    "ident": "K_DFM11",
+    "name": "Довiдник кодiв областей України",
+    "kind": 1,
+    "id": 2506,
+    "value": "85",
+    "code": "м.Севастополь",
+    "description": "м.Севастополь"
+  }
+]
