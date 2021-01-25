@@ -187,7 +187,7 @@ console.log(client.extends);
 for (d in defaults.extends) {
     if(client.extends[d] === undefined)
         if(defaults.extends[d] === "now")
-            client.extends[d] = trans_date_date(new Date().toISOString());
+            client.extends[d] = trans_date_fr(new Date().toISOString());
         else
             client.extends[d] = defaults.extends[d];
 }
