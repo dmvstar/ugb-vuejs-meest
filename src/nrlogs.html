@@ -95,9 +95,14 @@
                                             :items="dict.level" label="Level" required>
                                             </v-select>
                                         </v-col>
-                                        <v-col cols="12" sm="8">
+                                        <v-col cols="12" sm="4">
                                             <v-select v-model="from.source" 
                                             :items="dict.sources" label="Sources" required>
+                                            </v-select>
+                                        </v-col>
+                                        <v-col cols="12" sm="4">
+                                            <v-select v-model="from.mode" 
+                                            :items="dict.mode" label="Message" required>
                                             </v-select>
                                         </v-col>
                                     </v-row>
@@ -144,7 +149,6 @@
                                         </v-col>
                                     </v-row>
 
-
                                     <v-row align="start" justify="center">
                                         <v-col cols="12" sm="12" md="12">
                                             <v-simple-table id="result">
@@ -177,12 +181,17 @@
                                                             <td>{{ item.date }}</td>
                                                             <td>{{ item.level }}</td>
                                                             <td>{{ item.source }}</td>
+                                                            <!--td>{{ prepare_message(item.message, 1) }}</td-->
+                                                            <!--  style="height:80px; overflow:hidden; vertical-align:middle;"  -->
+                                                            <!-- td style="text-align: center; vertical-align: middle;"></td-->
                                                             <td>
-                                                                <v-tooltip top>
-                                                                <template v-slot:activator="{ on, attrs }">
-                                                                <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden">{{ prepare_message(item.message, 0) }}</div>
-                                                                </template>
-                                                                <span>{{ prepare_message(item.message, 1) }}</span>
+                                                                <v-tooltip>
+                                                                    <template v-slot:activator="{ on, attrs }">
+                                                                        <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden;">
+                                                                            {{ prepare_message(item.message, 0) }}
+                                                                        </div>
+                                                                    </template>
+                                                                    <span>{{ prepare_message(item.message, 1) }}</span>
                                                                 </v-tooltip>
                                                             </td>
                                                             <td>
@@ -254,9 +263,7 @@
                     this.sql.query = sql;
                     //this.result = this.result_test;
                     this.result = [];
-
                     await this.exequteRequest();
-
                 },
                 
                 onButtonCopyClick: async function (item) {
@@ -304,8 +311,10 @@
                         if(this.result.length >0) {
                             for(i of this.result) {
                                 //alert(JSON.stringify(i));
-                                if(i.payload !== undefined)
-                                    i.message = JSON.stringify(i.payload, null,2);
+                                if(this.from.mode === 'payload') {
+                                    if(i.payload !== undefined)
+                                        i.message = JSON.stringify(i.payload, null,2);
+                                } 
                             }
                         }
                         
@@ -334,6 +343,10 @@
                     this.from.table = this.dict.table[0];
                     this.from.source = '';
                     this.from.search = ''; 
+                    if(this.from.database === this.dict.database[0])
+                        this.from.mode = this.dict.mode[0]
+                    else
+                        this.from.mode = this.dict.mode[1]
                 }       
             },
 
@@ -365,11 +378,12 @@
                         table: "nrLogs",
                         source : "Transgen XML",
                         search: "12858889329",
-                        level: "DEBUG"
+                        level: "DEBUG",
+                        mode : "message"
                     },
                     sql: {
                         query: "",
-                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level = '{{level}}' AND source like '%{{source}}%' AND message like '%{{search}}%' ORDER BY ID DESC LIMIT 100;"
+                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level = '{{level}}' AND source like '%{{source}}%' AND message like '%{{search}}%' ORDER BY ID DESC LIMIT 10;"
                     },
                    
                     dict: {
@@ -393,8 +407,8 @@
                             "Transgen XML",
                             "Card Status",
                             "depo"
-                        ],                       
-
+                        ],  
+                        mode: ["message", "payload"]    
                     }
                 }
             },
