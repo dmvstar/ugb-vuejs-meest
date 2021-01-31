@@ -181,13 +181,13 @@
                                                             <td>{{ item.date }}</td>
                                                             <td>{{ item.level }}</td>
                                                             <td>{{ item.source }}</td>
-                                                            <!--td>{{ prepare_message(item.message, 1) }}</td-->
-                                                            <!--  style="height:80px; overflow:hidden; vertical-align:middle;"  -->
+                                                            <!-- td>{{ prepare_message(item.message, 1) }}</td-->
+                                                            <!-- style="height:80px; overflow:hidden; vertical-align:middle;"  -->
                                                             <!-- td style="text-align: center; vertical-align: middle;"></td-->
                                                             <td 
                                                                 style="vertical-align: middle;text-align: left;"
                                                             >
-                                                                <v-tooltip>
+                                                                <v-tooltip top>
                                                                     <template v-slot:activator="{ on, attrs }">
                                                                         <div v-bind="attrs" v-on="on">
                                                                             {{ prepare_message(item.message, 0) }}
@@ -248,7 +248,7 @@
 
                 prepare_message: function(message, mode) {
                     var ret = message;
-                    if(mode === 0 &&message.length > 200) {
+                    if(mode === 0 && message.length > 200) {
                         ret=message.substring(0,200) + ' ... ';
                     }
                     if( (message.startsWith('{') && message.endsWith('}')) ||
