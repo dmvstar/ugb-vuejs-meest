@@ -185,11 +185,11 @@
                                                             <!--  style="height:80px; overflow:hidden; vertical-align:middle;"  -->
                                                             <!-- td style="text-align: center; vertical-align: middle;"></td-->
                                                             <td 
-                                                                style="vertical-align: middle;text-align: center;"
+                                                                style="vertical-align: middle;text-align: left;"
                                                             >
                                                                 <v-tooltip>
                                                                     <template v-slot:activator="{ on, attrs }">
-                                                                        <div v-bind="attrs" v-on="on" style="height:80px; overflow:hidden;">
+                                                                        <div v-bind="attrs" v-on="on">
                                                                             {{ prepare_message(item.message, 0) }}
                                                                         </div>
                                                                     </template>
@@ -248,6 +248,9 @@
 
                 prepare_message: function(message, mode) {
                     var ret = message;
+                    if(mode === 0 &&message.length > 200) {
+                        ret=message.substring(0,200) + ' ... ';
+                    }
                     if( (message.startsWith('{') && message.endsWith('}')) ||
                         (message.startsWith('[') && message.endsWith(']'))
                     ){    
