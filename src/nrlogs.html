@@ -249,8 +249,11 @@
                     if( (message.startsWith('{') && message.endsWith('}')) ||
                         (message.startsWith('[') && message.endsWith(']'))
                     ){    
-                        if(mode === 0)                    
+                        if(mode === 0) {                    
                             ret = JSON.stringify(JSON.parse(message), null, 2);
+                            if(message.length > 200) 
+                                ret=ret.substring(0,200) + ' ... ';
+                        }
                         else
                             ret = message.replaceAll('":', '": ');
                     }
