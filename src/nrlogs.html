@@ -141,12 +141,55 @@
                                             <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
                                         </v-col>
                                     </v-row>
+                                    <v-row>
+                                        <v-col cols="12" sm="12">
 
 
+                                            <!--div v-if="loading">
+                                                <v-progress-circular
+                                                    :size="70"
+                                                    :width="7"
+                                                    color="purple"
+                                                    indeterminate>
+                                                </v-progress-circular>
+                                            <div-->
+                                            
+                                            <!--v-dialog v-model="loading" fullscreen full-width>
+                                                <v-container fluid fill-height style="background-color: rgba(255, 255, 255, 0.5);">
+                                                  <v-layout justify-center align-center>
+                                                    <v-progress-circular
+                                                      :size="70"
+                                                      :width="7"
+                                                      color="purple"
+                                                      indeterminate>
+                                                    </v-progress-circular>
+                                                  </v-layout>
+                                                </v-container>
+                                              </v-dialog-->
+
+                                        </v-col>
+                                    </v-row>
                                     <v-row>
                                         <v-col cols="12" sm="4">
                                             <h3 class="red--text">Result SQL</h3>
                                         </v-col>
+
+                                        <v-col cols="12" sm="4">
+                                            <div v-if="loading">
+                                                <h3 class="red--text">Loading...</h3>
+                                            </div>
+                                        </v-col>     
+
+                                        <v-col cols="12" sm="4">
+                                            <div v-if="loading">
+                                                <v-progress-circular
+                                                    color="purple"
+                                                    indeterminate>
+                                                </v-progress-circular>                                                
+                                            </div>
+                                        </v-col>                                            
+                             
+                                       
                                     </v-row>
 
                                     <v-row align="start" justify="center">
@@ -210,8 +253,7 @@
                                     </v-row>
                                 </v-form>
                             </v-col>
-                        </v-row>                       
-
+                        </v-row>                      
                     </v-container>
                 </v-main>
             </v-app>
@@ -275,6 +317,8 @@
                 },
                 exequteRequest: async function() {
 
+                    this.loading = true;
+
                     var pathTo = "common/logger/syslog/";
                     if (this.from.database === "openbank")
                         pathTo = "common/logger/clilog/";
@@ -304,6 +348,8 @@
                     .then(async response => {
                         const bdata = await response.text();
 
+                        this.loading = false;
+
 //alert(bdata);
                         result = decodeURIComponent(escape(atob(bdata)));
 //console.log(result);
@@ -323,14 +369,16 @@
                         
 
                         if (!response.ok) {
-                        // get error message from body or default to response statusText
-                        const error = (data && data.message) || response.statusText;
-                        this.error = error;
-                        alert('E1 exequteRequest ' + JSON.stringify(response, null, ' ') + ' ');
-                        return Promise.reject(error);
+                            this.loading = false;
+                            // get error message from body or default to response statusText
+                            const error = (data && data.message) || response.statusText;
+                            this.error = error;
+                            alert('E1 exequteRequest ' + JSON.stringify(response, null, ' ') + ' ');
+                            return Promise.reject(error);
                         }
                     })
                     .catch(error => {
+                        this.loading = false;
                         //alert('E2 loadAddressByCityStreet [' + JSON.stringify(error) + '] ');
                         this.error = error;
                         alert("E2 exequteRequest" + error);
@@ -359,6 +407,7 @@
 
             data() {
                 return {
+                    loading: false,
                     result : [],
                     result_test : [
                                 { 
