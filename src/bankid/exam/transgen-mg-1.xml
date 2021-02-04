@@ -7,6 +7,12 @@ Operation
 4 Возврат
 -->
 
+<!--
+Moniker	                Flag	BranchId
+280954601.980.050	    0	    1000550  для виплати переказу у гривні 
+280964629781.980.050	1	    1000550  повернення комісії у гривні
+-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <soap:Body>
@@ -21,15 +27,16 @@ Operation
             <PayoutDate>2021-02-04T10:51:29+02:00</PayoutDate>
             <OperationCashDesk>0</OperationCashDesk>
             <ABSDate>2021-02-04T00:00:00+02:00</ABSDate>
+            <!-- 2809 - 1002 0 -->
             <TransferAmount>200.000</TransferAmount>
             <FromCountry>840</FromCountry>
             <ToCountry>804</ToCountry>
             <TransferСurrency>980</TransferСurrency>
             <PointBank>1000017</PointBank>
             <PointSW>GASB0204</PointSW>
-            <UserLogin>vtsymbalista</UserLogin>
-            <UserName>Цимбаліста Вікторія Олегівна</UserName>
-            <UserID>13464</UserID>
+            <UserLogin>nnilosh</UserLogin>
+            <UserName>Нілош Ніколетт Тіберіївна</UserName>
+            <UserID>13481</UserID>
             <Sender>
                 <LastName>POPOVA</LastName>
                 <FirstName>SVITLANA</FirstName>
@@ -64,12 +71,14 @@ Operation
             <SendDate>2021-01-20T13:08:55+02:00</SendDate>
             <OperationCashDesk>0</OperationCashDesk>
             <ABSDate>2021-01-28T00:00:00+02:00</ABSDate>
+            <!-- 1002 - 2809 0 ??? -->
             <TransferAmount>200.000</TransferAmount>
             <FromCountry>804</FromCountry>
             <ToCountry>840</ToCountry>
             <TransferСurrency>980</TransferСurrency>
             <CommissionAmount>10.000</CommissionAmount>
             <CommissionСurrency>980</CommissionСurrency>
+            <!-- 1002 - 2809 1 -->
             <CommissionAmountEq>10.000</CommissionAmountEq>
             <PointBank>1000550</PointBank>
             <PointSW>GASB0258</PointSW>
