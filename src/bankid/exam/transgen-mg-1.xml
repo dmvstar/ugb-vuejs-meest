@@ -2,7 +2,7 @@
 in.operation 
 Operation
 1 Отправка
-2 Получение
+2 Получение  Выплата
 3 Аннулирование
 4 Возврат
 -->
@@ -24,7 +24,7 @@ Operation
             <TransferAmount>200.000</TransferAmount>
             <FromCountry>840</FromCountry>
             <ToCountry>804</ToCountry>
-            <TransferСurrency>840</TransferСurrency>
+            <TransferСurrency>980</TransferСurrency>
             <PointBank>1000017</PointBank>
             <PointSW>GASB0204</PointSW>
             <UserLogin>vtsymbalista</UserLogin>
@@ -64,13 +64,13 @@ Operation
             <SendDate>2021-01-20T13:08:55+02:00</SendDate>
             <OperationCashDesk>0</OperationCashDesk>
             <ABSDate>2021-01-28T00:00:00+02:00</ABSDate>
-            <TransferAmount>260.000</TransferAmount>
+            <TransferAmount>200.000</TransferAmount>
             <FromCountry>804</FromCountry>
-            <ToCountry>643</ToCountry>
-            <TransferСurrency>840</TransferСurrency>
-            <CommissionAmount>2.600</CommissionAmount>
-            <CommissionСurrency>840</CommissionСurrency>
-            <CommissionAmountEq>73.2</CommissionAmountEq>
+            <ToCountry>840</ToCountry>
+            <TransferСurrency>980</TransferСurrency>
+            <CommissionAmount>10.000</CommissionAmount>
+            <CommissionСurrency>980</CommissionСurrency>
+            <CommissionAmountEq>10.000</CommissionAmountEq>
             <PointBank>1000550</PointBank>
             <PointSW>GASB0258</PointSW>
             <UserLogin>nnilosh</UserLogin>
