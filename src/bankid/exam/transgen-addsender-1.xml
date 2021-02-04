@@ -25,6 +25,7 @@
         <LastName>VOZNIUK</LastName>
         <FirstName>NATALIIA</FirstName>
         <Residency>false</Residency>
+
         <DocumentName>PASSAPORTO</DocumentName>
         <DocumentSeries>EX</DocumentSeries>
         <DocumentNumber>980622</DocumentNumber>
@@ -32,11 +33,18 @@
 
         <DateofBirth>1985-09-05</DateofBirth>
         <BirthPlace>место рождения</BirthPlace>
+
+        <Phone>0993334455</Phone>
+        <CountryOfResidence>Ukraine</CountryOfResidence>
+        <City>Kijow</City>
+        <ZipCode>02000</ZipCode>
+        <Address>Place 22, 45-222</Address>
     </Sender>
     <Receiver>
         <LastName>POVOROZNYK</LastName>
         <FirstName>VIKTOR</FirstName>
         <Residency>true</Residency>
+        
         <DocumentName>PASSPORT</DocumentName>
         <DocumentSeries>HB</DocumentSeries>
         <DocumentNumber>007183</DocumentNumber>

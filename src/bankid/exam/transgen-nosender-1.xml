@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>46755852</TransferId>
+            <TransferNumber>12874679763</TransferNumber>
+            <SystemCode>ri</SystemCode>
+            <SystemName>RIA</SystemName>
+            <Operation>2</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-02-01T14:21:07+02:00</OperationDate>
+            <PayoutDate>2021-02-01T14:19:55+02:00</PayoutDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-02-01T00:00:00+02:00</ABSDate>
+            <TransferAmount>200.0000</TransferAmount>
+            <FromCountry>528</FromCountry>
+            <ToCountry>804</ToCountry>
+            <TransferСurrency>978</TransferСurrency>
+            <PointBank>1000330</PointBank>
+            <PointSW>GASB0125</PointSW>
+            <UserLogin>tkryvulia</UserLogin>
+            <UserName>Кривуля Тетяна Володимирівна</UserName>
+            <UserID>11070</UserID>
+            <Sender>
+                <LastName>TVERDOKHLIB</LastName>
+                <FirstName>ANATOLII</FirstName>
+                <Residency>false</Residency>
+                <DocumentName>PASSPORT</DocumentName>
+                <DocumentSeries>FE</DocumentSeries>
+                <DocumentNumber>750758</DocumentNumber>
+            </Sender>
+            <Receiver>
+                <LastName>IGNATENKO</LastName>
+                <FirstName>TATIANA</FirstName>
+                <Residency>true</Residency>
+                <DocumentName>PASSPORT</DocumentName>
+                <DocumentSeries>HO</DocumentSeries>
+                <DocumentNumber>033393</DocumentNumber>
+                <DocumentIssueDate>2016-09-16</DocumentIssueDate>
+                <DocumentIssuedBy>GORISHNEPLAVNENSKIMGS UGMS UKRAINY V POLTAVSKOJ</DocumentIssuedBy>
+                <DateofBirth>1962-10-12</DateofBirth>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>

@@ -435,7 +435,7 @@
                     },
                     sql: {
                         query: "",
-                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level = '{{level}}' AND source like '%{{source}}%' AND message like '%{{search}}%' ORDER BY ID DESC LIMIT 10;"
+                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level = '{{level}}' AND source like '%{{{source}}}%' AND message like '%{{{search}}}%' ORDER BY ID DESC LIMIT 10;"
                     },
                    
                     dict: {

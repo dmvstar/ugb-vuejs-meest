@@ -1,0 +1,94 @@
+<!--
+in.operation Operation
+1 Отправка
+2 Получение
+3 Аннулирование
+4 Возврат
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>46833734</TransferId>
+            <TransferNumber>40505184</TransferNumber>
+            <SystemCode>mg</SystemCode>
+            <SystemName>MoneyGram</SystemName>
+            <Operation>2</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-02-04T10:53:40+02:00</OperationDate>
+            <PayoutDate>2021-02-04T10:51:29+02:00</PayoutDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-02-04T00:00:00+02:00</ABSDate>
+            <TransferAmount>200.000</TransferAmount>
+            <FromCountry>840</FromCountry>
+            <ToCountry>804</ToCountry>
+            <TransferСurrency>840</TransferСurrency>
+            <PointBank>1000017</PointBank>
+            <PointSW>GASB0204</PointSW>
+            <UserLogin>vtsymbalista</UserLogin>
+            <UserName>Цимбаліста Вікторія Олегівна</UserName>
+            <UserID>13464</UserID>
+            <Sender>
+                <LastName>POPOVA</LastName>
+                <FirstName>SVITLANA</FirstName>
+            </Sender>
+            <Receiver>
+                <LastName>DITYATKIN</LastName>
+                <FirstName>DINIS</FirstName>
+                <Residency>true</Residency>
+                <DocumentName>Паспорт</DocumentName>
+                <DocumentSeries>CE</DocumentSeries>
+                <DocumentNumber>761321</DocumentNumber>
+                <DocumentIssueDate>2016-08-26</DocumentIssueDate>
+                <DocumentIssuedBy>IVANO-FRANKIVSKYM MV</DocumentIssuedBy>
+                <DateofBirth>1986-02-05</DateofBirth>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>46635258</TransferId>
+            <TransferNumber>16409942</TransferNumber>
+            <SystemCode>mg</SystemCode>
+            <SystemName>MoneyGram</SystemName>
+            <Operation>4</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-01-28T15:42:52+02:00</OperationDate>
+            <SendDate>2021-01-20T13:08:55+02:00</SendDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-01-28T00:00:00+02:00</ABSDate>
+            <TransferAmount>260.000</TransferAmount>
+            <FromCountry>804</FromCountry>
+            <ToCountry>643</ToCountry>
+            <TransferСurrency>840</TransferСurrency>
+            <CommissionAmount>2.600</CommissionAmount>
+            <CommissionСurrency>840</CommissionСurrency>
+            <CommissionAmountEq>73.2</CommissionAmountEq>
+            <PointBank>1000550</PointBank>
+            <PointSW>GASB0258</PointSW>
+            <UserLogin>nnilosh</UserLogin>
+            <UserName>Нілош Ніколетт Тіберіївна</UserName>
+            <UserID>13481</UserID>
+            <Sender>
+                <LastName>KVASHILAVA</LastName>
+                <FirstName>YULIYA</FirstName>
+                <Residency>true</Residency>
+                <DocumentName>Паспорт</DocumentName>
+                <DocumentSeries>CT</DocumentSeries>
+                <DocumentNumber>210471</DocumentNumber>
+                <DocumentIssueDate>2010-08-05</DocumentIssueDate>
+                <DateofBirth>1984-11-28</DateofBirth>
+            </Sender>
+            <Receiver>
+                <LastName>DANELIA</LastName>
+                <FirstName>TAMARI</FirstName>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
