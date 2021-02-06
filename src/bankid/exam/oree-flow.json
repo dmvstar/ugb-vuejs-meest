@@ -786,7 +786,7 @@
         "type": "function",
         "z": "cc6e5f43.ff9078",
         "name": "",
-        "func": "m = global.get('mustache');\nmsg.payload = m.render(msg.temp, msg.data);\nreturn msg;",
+        "func": "m = global.get('mustache');\n\nvar data = msg.data;\nvar temp = msg.temp;\nvar out = \"\";\nfor (var o of data) {\n     var payload = {};\n     payload.payload = o;\n     out += m.render(temp, payload);\n}\nmsg.payload = out;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -795,7 +795,8 @@
         "y": 760,
         "wires": [
             [
-                "420c0dde.03328c"
+                "420c0dde.03328c",
+                "f85545ba.2682b8"
             ]
         ]
     },
@@ -808,7 +809,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"value\" : \"232211\"\n}",
+        "template": "[\n    {\n        \"participant\" : {\n                        \"bankAccountId\" : \"1\" ,\n                        \"bankCode\" : \"320478\" ,\n                        \"dic\" : \"1\" ,\n                        \"ean\" : \"1\" ,\n                        \"edrpou\" : \"23697280\" ,\n                        \"eic\" : \"0\" ,\n                        \"iban\" : \"UA133204780000026007924864736\" ,\n                        \"ic\" : \"1\" ,\n                        \"name\" : \"АТ ДТЕК ДНІПРОЕНЕРГО\" ,\n                        \"particId\" : \"1\",\n\n                        \"data\" : {\n                            \"currency\" : \"UAH\" ,\n                            \"type\" : \"limit\" ,\n                            \"value\" : \"1121.42\"\n                        }\n        }\n    },\n    {\n        \"participant\" : {\n                        \"bankAccountId\" : \"1\" ,\n                        \"bankCode\" : \"320478\" ,\n                        \"dic\" : \"1\" ,\n                        \"ean\" : \"1\" ,\n                        \"edrpou\" : \"23697280\" ,\n                        \"eic\" : \"0\" ,\n                        \"iban\" : \"UA133204780000026007924864736\" ,\n                        \"ic\" : \"1\" ,\n                        \"name\" : \"АТ ДТЕК ДНІПРОЕНЕРГО\" ,\n                        \"particId\" : \"1\",\n                        \n                        \"data\" : {\n                            \"currency\" : \"UAH\" ,\n                            \"type\" : \"limit\" ,\n                            \"value\" : \"4312.42\"\n                        }\n        }\n    }\n]",
         "output": "json",
         "x": 250,
         "y": 760,
@@ -827,7 +828,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "plain",
-        "template": "This is the payload: {{value}} !",
+        "template": "                \n            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                <ns:DataGroups>\n                     <ns:TotalsData>\n                        <ns:Data \n                            currency=\"{{payload.participant.data.currency}}\" \n                            type=\"{{payload.participant.data.type}}\" \n                            value=\"{{payload.participant.data.value}}\"/>\n                     </ns:TotalsData>\n                </ns:DataGroups>\n            </ns:Participant>\n               ",
         "output": "str",
         "x": 410,
         "y": 760,
@@ -854,6 +855,24 @@
         "x": 590,
         "y": 800,
         "wires": []
+    },
+    {
+        "id": "f85545ba.2682b8",
+        "type": "file",
+        "z": "cc6e5f43.ff9078",
+        "name": "",
+        "filename": "/home/sdv/devel/node-js/workings/projects/ugb-vuejs-meest/src/bankid/exam/oree-temp.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "420c0dde.03328c"
+            ]
+        ]
     },
     {
         "id": "f253a4c3.6fa848",
