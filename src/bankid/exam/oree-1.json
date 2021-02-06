@@ -1,0 +1,42 @@
+[
+    {
+        "participant" : {
+                        "bankAccountId" : "1" ,
+                        "bankCode" : "320478" ,
+                        "dic" : "1" ,
+                        "ean" : "1" ,
+                        "edrpou" : "23697280" ,
+                        "eic" : "0" ,
+                        "iban" : "UA133204780000026007924864736" ,
+                        "ic" : "1" ,
+                        "name" : "АТ ДТЕК ДНІПРОЕНЕРГО" ,
+                        "particId" : "1",
+
+                        "data" : {
+                            "currency" : "UAH" ,
+                            "type" : "limit" ,
+                            "value" : "1121.42"
+                        }
+        }
+    },
+    {
+        "participant" : {
+                        "bankAccountId" : "1" ,
+                        "bankCode" : "320478" ,
+                        "dic" : "1" ,
+                        "ean" : "1" ,
+                        "edrpou" : "23697280" ,
+                        "eic" : "0" ,
+                        "iban" : "UA133204780000026007924864736" ,
+                        "ic" : "1" ,
+                        "name" : "АТ ДТЕК ДНІПРОЕНЕРГО" ,
+                        "particId" : "1",
+                        
+                        "data" : {
+                            "currency" : "UAH" ,
+                            "type" : "limit" ,
+                            "value" : "4312.42"
+                        }
+        }
+    }
+]

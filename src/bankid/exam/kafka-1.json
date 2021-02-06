@@ -1,0 +1,70 @@
+"jvalue": {
+    "EventUid": "05VBGZ5Z4ZRDSCP18J05HQJNQW",
+    "EventType": "DocumentConfirmed",
+    "Timestamp": "2020-12-31T11:09:11.847",
+    "Version": 1,
+    "Data": {
+        "BillId": 784776862,
+        "BranchId": 1,
+        "ActionId": 6,
+        "CurrencyTag": "EUR",
+        "MainAmount": 5.93,
+        "CrncyAmount": 0.17,
+        "Code": "TR.10450309.8530.13428",
+        "OrgDate": "2020-12-31T00:00:00",
+        "DayDate": "2020-12-31T00:00:00",
+        "Purpose": "Нарахованi вiдсотки по рахунку 26301133274578.978 (Мороз Ірина Ярославівна) згідно Договору N 002/03/19/0296 від 21/03/2019за перiод з 01/12/2020 по 31/12/2020",
+        "Ctrls": "",
+        "SystemId": 0,
+        "Created": "2020-12-31T11:08:31.61",
+        "Changed": "2020-12-31T11:09:11.83",
+        "PayType": {
+            "Code": "RefillDepo"
+        },
+        "Debit": {
+            "AccountId": 49727572,
+            "BankCode": "320478",
+            "AccountCode": "38004016.978.000",
+            "AccountIban": "UA773204780000000000038004016",
+            "StateCode": "23697280",
+            "Name": "Операційна ВП доход/витрат",
+            "ClientId": 1
+        },
+        "Credit": {
+            "AccountId": 42089504,
+            "BankCode": "320478",
+            "AccountCode": "26382133274575.978",
+            "AccountIban": "UA503204780000026382133274575",
+            "StateCode": "2544909121",
+            "Name": "Мороз Ірина Ярославівна",
+            "ClientId": 1840687,
+            "PhoneNumber": "380979659279"
+        },
+        "Treaty": {
+            "TreatyId": 10450309,
+            "Code": "002/03/19/0296",
+            "SystemId": 9000,
+            "OrgDate": "2019-03-21T00:00:00",
+            "CurrencyTag": "EUR",
+            "CrncyAmount": 400,
+            "Rate": 0.5
+        },
+        "Transfers": [
+            {
+                "TransferId": 1512074914,
+                "CrncyAmount": 0.17,
+                "MainAmount": 5.93,
+                "CurrencyTag": "EUR",
+                "Purpose": "Нарахованi вiдсотки по рахунку 26301133274578.978 (Мороз Ірина Ярославівна) згідно Договору N 002/03/19/0296 від 21/03/2019за перiод з 01/12/2020 по 31/12/2020",
+                "Debit": {
+                    "AccountCode": "38004016.978.000",
+                    "AccountIban": "UA773204780000000000038004016"
+                },
+                "Credit": {
+                    "AccountCode": "26382133274575.978",
+                    "AccountIban": "UA503204780000026382133274575"
+                }
+            }
+        ]
+    }
+}
