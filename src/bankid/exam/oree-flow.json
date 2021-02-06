@@ -737,6 +737,125 @@
         ]
     },
     {
+        "id": "e3f9139f.dea768",
+        "type": "inject",
+        "z": "cc6e5f43.ff9078",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 760,
+        "wires": [
+            [
+                "15c286d6.195e29"
+            ]
+        ]
+    },
+    {
+        "id": "420c0dde.03328c",
+        "type": "debug",
+        "z": "cc6e5f43.ff9078",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "baf92f6b.b7f2c",
+        "type": "function",
+        "z": "cc6e5f43.ff9078",
+        "name": "",
+        "func": "m = global.get('mustache');\nmsg.payload = m.render(msg.temp, msg.data);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 600,
+        "y": 760,
+        "wires": [
+            [
+                "420c0dde.03328c"
+            ]
+        ]
+    },
+    {
+        "id": "15c286d6.195e29",
+        "type": "template",
+        "z": "cc6e5f43.ff9078",
+        "name": "data",
+        "field": "data",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"value\" : \"232211\"\n}",
+        "output": "json",
+        "x": 250,
+        "y": 760,
+        "wires": [
+            [
+                "221a5f93.935b58"
+            ]
+        ]
+    },
+    {
+        "id": "221a5f93.935b58",
+        "type": "template",
+        "z": "cc6e5f43.ff9078",
+        "name": "temp",
+        "field": "temp",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "This is the payload: {{value}} !",
+        "output": "str",
+        "x": 410,
+        "y": 760,
+        "wires": [
+            [
+                "baf92f6b.b7f2c",
+                "ae752ac0.f8d7b8"
+            ]
+        ]
+    },
+    {
+        "id": "ae752ac0.f8d7b8",
+        "type": "debug",
+        "z": "cc6e5f43.ff9078",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 800,
+        "wires": []
+    },
+    {
         "id": "f253a4c3.6fa848",
         "type": "tls-config",
         "z": "",
