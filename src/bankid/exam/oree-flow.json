@@ -2,7 +2,7 @@
     {
         "id": "cc6e5f43.ff9078",
         "type": "tab",
-        "label": "Energorynok",
+        "label": "OREE",
         "disabled": false,
         "info": ""
     },
@@ -209,13 +209,13 @@
         "id": "dbbbf82b.d689",
         "type": "function",
         "z": "cc6e5f43.ff9078",
-        "name": "",
+        "name": "result",
         "func": "var ret = {\n    data : msg.payload\n}\nif( (typeof msg.payload === 'string') ) {\n    ret.result = \"ok\";    \n} else {\n    ret.result = \"error\";     \n}\n\nmsg.payload = ret;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 560,
+        "x": 550,
         "y": 540,
         "wires": [
             [
@@ -315,13 +315,13 @@
         "id": "4bedec5.48bc394",
         "type": "function",
         "z": "cc6e5f43.ff9078",
-        "name": "",
+        "name": "none",
         "func": "//node.error(\"Sign error\", msg);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 280,
+        "x": 270,
         "y": 640,
         "wires": [
             [
@@ -785,7 +785,7 @@
         "id": "baf92f6b.b7f2c",
         "type": "function",
         "z": "cc6e5f43.ff9078",
-        "name": "",
+        "name": "mustache",
         "func": "m = global.get('mustache');\n\nvar data = msg.data;\nvar temp = msg.temp;\nvar out = \"\";\nfor (var o of data) {\n     var payload = {};\n     payload.payload = o;\n     out += m.render(temp, payload);\n}\nmsg.payload = out;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
