@@ -615,7 +615,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<ns:Participant bankAccountId=\"{{payload.participant.bankAccountId}}\"  bankCode=\"{{payload.participant.bankCode}}\"  dic=\"{{payload.participant.dic}}\"  ean=\"{{payload.participant.ean}}\"  edrpou=\"{{payload.participant.edrpou}}\"  eic=\"{{payload.participant.eic}}\"  iban=\"{{payload.participant.iban}}\"  ic=\"{{payload.participant.ic}}\"  name=\"{{payload.participant.name}}\"  particId=\"{{payload.participant.particId}}\">\n\t<ns:DataGroups>\n\t\t<ns:TotalsData>\n\t\t\t<ns:Data currency=\"{{payload.participant.data.currency}}\" type=\"{{payload.participant.data.type}}\" value=\"{{payload.participant.data.value}}\"/>\n\t\t</ns:TotalsData>\n\t</ns:DataGroups>\n</ns:Participant>\n",
+        "template": "            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                        <ns:DataGroups>\n                            <ns:TotalsData>\n                            <ns:Data \n                                currency=\"{{payload.participant.data.currency}}\" \n                                type=\"{{payload.participant.data.type}}\" \n                                value=\"{{payload.participant.data.value}}\"/>\n                            </ns:TotalsData>\n                        </ns:DataGroups>\n            </ns:Participant>\n",
         "output": "str",
         "x": 420,
         "y": 420,
@@ -1255,7 +1255,7 @@
         "type": "function",
         "z": "e72aed43.e4b9b8",
         "name": "trim",
-        "func": "var out = '';\n\nvar lines = msg.xml.body.split('\\n');\n\n    for (var line of lines) {\n            out += line.trim();\n    }\n\nmsg.xml.bodyt = out;\nmsg.payload = out;\nreturn msg;",
+        "func": "var out = '';\n\nvar lines = msg.xml.body.split('\\n');\n\n    for (var line of lines) {\n            var trim = line.trim();\n            if( line.match(/^.*<.*$/) )\n                out += trim;\n            else \n                if(trim.length > 0)\n                out += (' '+line.trim());\n    }\n\nmsg.xml.bodyt = out;\nmsg.payload = out;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1450,15 +1450,133 @@
         "id": "ba34be00.0f6098",
         "type": "template",
         "z": "e72aed43.e4b9b8",
-        "name": "Xml Body",
+        "name": "Xml Body Fmt",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
         "template": "            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                        <ns:DataGroups>\n                            <ns:TotalsData>\n                            <ns:Data \n                                currency=\"{{payload.participant.data.currency}}\" \n                                type=\"{{payload.participant.data.type}}\" \n                                value=\"{{payload.participant.data.value}}\"/>\n                            </ns:TotalsData>\n                        </ns:DataGroups>\n            </ns:Participant>\n",
         "output": "str",
-        "x": 580,
-        "y": 380,
+        "x": 960,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e220ce5.ee8a8c",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "trim",
+        "func": "var out = '';\n\nvar lines = msg.xml.body.split('\\n');\n\n    for (var line of lines) {\n            var trim = line.trim();\n            if( line.match(/^.*<.*$/) )\n                out += trim;\n            else \n                if(trim.length > 0)\n                out += (' '+line.trim());\n    }\n\nmsg.xml.bodyt = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 1320,
+        "wires": [
+            [
+                "1e59faca.f6de05",
+                "217d7faa.5d2b7"
+            ]
+        ]
+    },
+    {
+        "id": "7ce96a94.c88cc4",
+        "type": "inject",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1320,
+        "wires": [
+            [
+                "1c74b4b5.ecae5b"
+            ]
+        ]
+    },
+    {
+        "id": "1c74b4b5.ecae5b",
+        "type": "template",
+        "z": "e72aed43.e4b9b8",
+        "name": "data",
+        "field": "xml.body",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<soap:Envelope xmlns:ns=\"http://oree.com.ua/etsua/soapsvc/bankaccountstatus/2020/09\" xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\">\n   <soap:Header><wsse:Security soap:mustUnderstand=\"true\" xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">\n        <wsse:UsernameToken wsu:Id=\"UsernameToken-3D8E495A71D1035BD516125380512321\">\n        <wsse:Username>ukrgaz</wsse:Username>\n        <wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">WFtCRyFJt3</wsse:Password>\n        </wsse:UsernameToken></wsse:Security>\n        </soap:Header>\n   <soap:Body>\n      <ns:UploadRequest>\n         <ns:BANKLIMITS answer-required=\"true\" date-time=\"2020-10-26T18:51:13Z \" dtd-release=\"1\" dtd-version=\"1\" id=\"5654\" message-code=\"301\">\n            <ns:SenderIdentification coding-scheme=\"NAME\" id=\"UGB\"/>\n            <ns:ReceiverIdentification coding-scheme=\"EIC\" id=\"62X-OPERRYNKU--3\"/>\n            <ns:Limits date=\"2020-10-26T18:51:13Z\" title=\"FinancialLimit\">\n                \n            <ns:Participant \n                        bankAccountId=\"1\" \n                        bankCode=\"320478\" \n                        dic=\"1\" \n                        ean=\"1\" \n                        edrpou=\"23697280\" \n                        eic=\"0\" \n                        iban=\"UA133204780000026007924864736\" \n                        ic=\"1\" \n                        name=\"АТ ДТЕК ДНІПРОЕНЕРГО\" \n                        particId=\"1\">\n                <ns:DataGroups>\n                     <ns:TotalsData>\n                        <ns:Data \n                            currency=\"UAH\" \n                            type=\"limit\" \n                            value=\"1121.42\"/>\n                     </ns:TotalsData>\n                </ns:DataGroups>\n            </ns:Participant>\n                               \n            <ns:Participant \n                        bankAccountId=\"1\" \n                        bankCode=\"320478\" \n                        dic=\"1\" \n                        ean=\"1\" \n                        edrpou=\"23697280\" \n                        eic=\"0\" \n                        iban=\"UA133204780000026007924864736\" \n                        ic=\"1\" \n                        name=\"АТ ДТЕК ДНІПРОЕНЕРГО\" \n                        particId=\"1\">\n                <ns:DataGroups>\n                     <ns:TotalsData>\n                        <ns:Data \n                            currency=\"UAH\" \n                            type=\"limit\" \n                            value=\"4312.42\"/>\n                     </ns:TotalsData>\n                </ns:DataGroups>\n            </ns:Participant>\n               \n            </ns:Limits>\n         </ns:BANKLIMITS>\n      </ns:UploadRequest>\n   </soap:Body>\n</soap:Envelope>\n",
+        "output": "str",
+        "x": 290,
+        "y": 1320,
+        "wires": [
+            [
+                "3e220ce5.ee8a8c"
+            ]
+        ]
+    },
+    {
+        "id": "1e59faca.f6de05",
+        "type": "file",
+        "z": "e72aed43.e4b9b8",
+        "name": "~/oree-temp.xml",
+        "filename": "oree-temp.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 680,
+        "y": 1360,
+        "wires": [
+            [
+                "217d7faa.5d2b7"
+            ]
+        ]
+    },
+    {
+        "id": "217d7faa.5d2b7",
+        "type": "debug",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "61c71318.a253cc",
+        "type": "template",
+        "z": "e72aed43.e4b9b8",
+        "name": "Xml Body No",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<ns:Participant bankAccountId=\"{{payload.participant.bankAccountId}}\"  bankCode=\"{{payload.participant.bankCode}}\"  dic=\"{{payload.participant.dic}}\"  ean=\"{{payload.participant.ean}}\"  edrpou=\"{{payload.participant.edrpou}}\"  eic=\"{{payload.participant.eic}}\"  iban=\"{{payload.participant.iban}}\"  ic=\"{{payload.participant.ic}}\"  name=\"{{payload.participant.name}}\"  particId=\"{{payload.participant.particId}}\">\n\t<ns:DataGroups>\n\t\t<ns:TotalsData>\n\t\t\t<ns:Data currency=\"{{payload.participant.data.currency}}\" type=\"{{payload.participant.data.type}}\" value=\"{{payload.participant.data.value}}\"/>\n\t\t</ns:TotalsData>\n\t</ns:DataGroups>\n</ns:Participant>\n",
+        "output": "str",
+        "x": 950,
+        "y": 260,
         "wires": [
             []
         ]
