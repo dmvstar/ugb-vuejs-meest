@@ -132,7 +132,7 @@
         "type": "function",
         "z": "e72aed43.e4b9b8",
         "name": "To Base64",
-        "func": "// https://stackabuse.com/encoding-and-decoding-base64-strings-in-node-js/\n\nvar data = msg.xml.body;\nlet buff = new Buffer(data);\nlet base64data = buff.toString('base64');\nmsg.data  = base64data;\nreturn msg;",
+        "func": "// https://stackabuse.com/encoding-and-decoding-base64-strings-in-node-js/\n\nvar data = msg.xml.bodys;\nlet buff = new Buffer(data);\nlet base64data = buff.toString('base64');\nmsg.data  = base64data;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -175,8 +175,8 @@
         "syntax": "mustache",
         "template": "PCEtLQppbi5vcGVyYXRpb24gCk9wZXJhdGlvbgoxINCe0YLQv9GA0LDQstC60LAKMiDQn9C+0LvRg9GH0LXQvdC40LUgINCS0YvQv9C70LDRgtCwCiAgICAxINC/0YDQvtCy0L7QtNC60LAgCiAgICDQlNGCIDI4MDkgKGFjY19kaXJlY3Rpb249MCkg0JrRgiAxMDAyIAozINCQ0L3QvdGD0LvQuNGA0L7QstCw0L3QuNC1CjQg0JLQvtC30LLRgNCw0YIKICAgIDIg0L/RgNC+0LLQvtC00LrQuAogICAg0JTRgiAyODA5INCa0YIgMTAwMiAoYWNjX2RpcmVjdGlvbj0xKSDQotC10LvQvgogICAg0JTRgiAyODA5INCa0YIgMTAwMiAoYWNjX2RpcmVjdGlvbj0xKSDQmtC+0LzQuNGB0YHQuNGPCi0tPgo8IS0tCk1vbmlrZXIJICAgICAgICAgICAgICAgIEZsYWcJQnJhbmNoSWQKMjgwOTU0NjAxLjk4MC4wNTAJICAgIDAJICAgIDEwMDA1NTAgINC00LvRjyDQstC40L/Qu9Cw0YLQuCDQv9C10YDQtdC60LDQt9GDINGDINCz0YDQuNCy0L3RliAKMjgwOTY0NjI5NzgxLjk4MC4wNTAJMQkgICAgMTAwMDU1MCAg0L/QvtCy0LXRgNC90LXQvdC90Y8g0LrQvtC80ZbRgdGW0Zcg0YMg0LPRgNC40LLQvdGWCjEwMDI3NDI0MS45ODAuMDUwICAgICAgICAgICAgICAgMTAwMDU1MCAg0JHQsNC90LrQvdC+0YLQuCDRgtCwINC80L7QvdC10YLQuCDQsiDQutCw0YHRliwg0JLihJYwNTAKLS0+Cgo8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/Pgo8c29hcDpFbnZlbG9wZSB4bWxuczpzb2FwPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSI+CiAgICA8c29hcDpCb2R5PgogICAgICAgIDxSZWdpc3Rlck9wZXJhdGlvbiB4bWxucz0iaHR0cDovL3d3dy51a3JnYXNiYW5rLmNvbSI+CiAgICAgICAgICAgIDxUcmFuc2ZlcklkPjQ2ODMzNzM0PC9UcmFuc2ZlcklkPgogICAgICAgICAgICA8VHJhbnNmZXJOdW1iZXI+NDA1MDUxODQ8L1RyYW5zZmVyTnVtYmVyPgogICAgICAgICAgICA8U3lzdGVtQ29kZT5tZzwvU3lzdGVtQ29kZT4KICAgICAgICAgICAgPFN5c3RlbU5hbWU+TW9uZXlHcmFtPC9TeXN0ZW1OYW1lPgogICAgICAgICAgICA8T3BlcmF0aW9uPjI8L09wZXJhdGlvbj4KICAgICAgICAgICAgPFR5cGU+MTwvVHlwZT4KICAgICAgICAgICAgPE9wZXJhdGlvbkRhdGU+MjAyMS0wMi0wNFQxMDo1Mzo0MCswMjowMDwvT3BlcmF0aW9uRGF0ZT4KICAgICAgICAgICAgPFBheW91dERhdGU+MjAyMS0wMi0wNFQxMDo1MToyOSswMjowMDwvUGF5b3V0RGF0ZT4KICAgICAgICAgICAgPE9wZXJhdGlvbkNhc2hEZXNrPjA8L09wZXJhdGlvbkNhc2hEZXNrPgogICAgICAgICAgICA8QUJTRGF0ZT4yMDIxLTAyLTA0VDAwOjAwOjAwKzAyOjAwPC9BQlNEYXRlPgogICAgICAgICAgICA8IS0tIDI4MDkgLSAxMDAyIDAgLS0+CiAgICAgICAgICAgIDxUcmFuc2ZlckFtb3VudD4yMDAuMDAwPC9UcmFuc2ZlckFtb3VudD4KICAgICAgICAgICAgPEZyb21Db3VudHJ5Pjg0MDwvRnJvbUNvdW50cnk+CiAgICAgICAgICAgIDxUb0NvdW50cnk+ODA0PC9Ub0NvdW50cnk+CiAgICAgICAgICAgIDxUcmFuc2ZlctChdXJyZW5jeT45ODA8L1RyYW5zZmVy0KF1cnJlbmN5PgogICAgICAgICAgICA8UG9pbnRCYW5rPjEwMDAwMTc8L1BvaW50QmFuaz4KICAgICAgICAgICAgPFBvaW50U1c+R0FTQjAyMDQ8L1BvaW50U1c+CiAgICAgICAgICAgIDxVc2VyTG9naW4+bm5pbG9zaDwvVXNlckxvZ2luPgogICAgICAgICAgICA8VXNlck5hbWU+0J3RltC70L7RiCDQndGW0LrQvtC70LXRgtGCINCi0ZbQsdC10YDRltGX0LLQvdCwPC9Vc2VyTmFtZT4KICAgICAgICAgICAgPFVzZXJJRD4xMzQ4MTwvVXNlcklEPgogICAgICAgICAgICA8U2VuZGVyPgogICAgICAgICAgICAgICAgPExhc3ROYW1lPlBPUE9WQTwvTGFzdE5hbWU+CiAgICAgICAgICAgICAgICA8Rmlyc3ROYW1lPlNWSVRMQU5BPC9GaXJzdE5hbWU+CiAgICAgICAgICAgIDwvU2VuZGVyPgogICAgICAgICAgICA8UmVjZWl2ZXI+CiAgICAgICAgICAgICAgICA8TGFzdE5hbWU+RElUWUFUS0lOPC9MYXN0TmFtZT4KICAgICAgICAgICAgICAgIDxGaXJzdE5hbWU+RElOSVM8L0ZpcnN0TmFtZT4KICAgICAgICAgICAgICAgIDxSZXNpZGVuY3k+dHJ1ZTwvUmVzaWRlbmN5PgogICAgICAgICAgICAgICAgPERvY3VtZW50TmFtZT7Qn9Cw0YHQv9C+0YDRgjwvRG9jdW1lbnROYW1lPgogICAgICAgICAgICAgICAgPERvY3VtZW50U2VyaWVzPkNFPC9Eb2N1bWVudFNlcmllcz4KICAgICAgICAgICAgICAgIDxEb2N1bWVudE51bWJlcj43NjEzMjE8L0RvY3VtZW50TnVtYmVyPgogICAgICAgICAgICAgICAgPERvY3VtZW50SXNzdWVEYXRlPjIwMTYtMDgtMjY8L0RvY3VtZW50SXNzdWVEYXRlPgogICAgICAgICAgICAgICAgPERvY3VtZW50SXNzdWVkQnk+SVZBTk8tRlJBTktJVlNLWU0gTVY8L0RvY3VtZW50SXNzdWVkQnk+CiAgICAgICAgICAgICAgICA8RGF0ZW9mQmlydGg+MTk4Ni0wMi0wNTwvRGF0ZW9mQmlydGg+CiAgICAgICAgICAgIDwvUmVjZWl2ZXI+CiAgICAgICAgPC9SZWdpc3Rlck9wZXJhdGlvbj4KICAgIDwvc29hcDpCb2R5Pgo8L3NvYXA6RW52ZWxvcGU+CgoKPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHNvYXA6RW52ZWxvcGUgeG1sbnM6c29hcD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZlbG9wZS8iIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPgogICAgPHNvYXA6Qm9keT4KICAgICAgICA8UmVnaXN0ZXJPcGVyYXRpb24geG1sbnM9Imh0dHA6Ly93d3cudWtyZ2FzYmFuay5jb20iPgogICAgICAgICAgICA8VHJhbnNmZXJJZD40NjYzNTI1ODwvVHJhbnNmZXJJZD4KICAgICAgICAgICAgPFRyYW5zZmVyTnVtYmVyPjE2NDA5OTQyPC9UcmFuc2Zlck51bWJlcj4KICAgICAgICAgICAgPFN5c3RlbUNvZGU+bWc8L1N5c3RlbUNvZGU+CiAgICAgICAgICAgIDxTeXN0ZW1OYW1lPk1vbmV5R3JhbTwvU3lzdGVtTmFtZT4KICAgICAgICAgICAgPE9wZXJhdGlvbj40PC9PcGVyYXRpb24+CiAgICAgICAgICAgIDxUeXBlPjE8L1R5cGU+CiAgICAgICAgICAgIDxPcGVyYXRpb25EYXRlPjIwMjEtMDEtMjhUMTU6NDI6NTIrMDI6MDA8L09wZXJhdGlvbkRhdGU+CiAgICAgICAgICAgIDxTZW5kRGF0ZT4yMDIxLTAxLTIwVDEzOjA4OjU1KzAyOjAwPC9TZW5kRGF0ZT4KICAgICAgICAgICAgPE9wZXJhdGlvbkNhc2hEZXNrPjA8L09wZXJhdGlvbkNhc2hEZXNrPgogICAgICAgICAgICA8QUJTRGF0ZT4yMDIxLTAxLTI4VDAwOjAwOjAwKzAyOjAwPC9BQlNEYXRlPgogICAgICAgICAgICA8IS0tIDEwMDIgLSAyODA5IDAgPz8/IC0tPgogICAgICAgICAgICA8VHJhbnNmZXJBbW91bnQ+MjAwLjAwMDwvVHJhbnNmZXJBbW91bnQ+CiAgICAgICAgICAgIDxGcm9tQ291bnRyeT44MDQ8L0Zyb21Db3VudHJ5PgogICAgICAgICAgICA8VG9Db3VudHJ5Pjg0MDwvVG9Db3VudHJ5PgogICAgICAgICAgICA8VHJhbnNmZXLQoXVycmVuY3k+OTgwPC9UcmFuc2ZlctChdXJyZW5jeT4KICAgICAgICAgICAgPENvbW1pc3Npb25BbW91bnQ+MTAuMDAwPC9Db21taXNzaW9uQW1vdW50PgogICAgICAgICAgICA8Q29tbWlzc2lvbtChdXJyZW5jeT45ODA8L0NvbW1pc3Npb27QoXVycmVuY3k+CiAgICAgICAgICAgIDwhLS0gMTAwMiAtIDI4MDkgMSAtLT4KICAgICAgICAgICAgPENvbW1pc3Npb25BbW91bnRFcT4xMC4wMDA8L0NvbW1pc3Npb25BbW91bnRFcT4KICAgICAgICAgICAgPFBvaW50QmFuaz4xMDAwNTUwPC9Qb2ludEJhbms+CiAgICAgICAgICAgIDxQb2ludFNXPkdBU0IwMjU4PC9Qb2ludFNXPgogICAgICAgICAgICA8VXNlckxvZ2luPm5uaWxvc2g8L1VzZXJMb2dpbj4KICAgICAgICAgICAgPFVzZXJOYW1lPtCd0ZbQu9C+0Ygg0J3RltC60L7Qu9C10YLRgiDQotGW0LHQtdGA0ZbRl9Cy0L3QsDwvVXNlck5hbWU+CiAgICAgICAgICAgIDxVc2VySUQ+MTM0ODE8L1VzZXJJRD4KICAgICAgICAgICAgPFNlbmRlcj4KICAgICAgICAgICAgICAgIDxMYXN0TmFtZT5LVkFTSElMQVZBPC9MYXN0TmFtZT4KICAgICAgICAgICAgICAgIDxGaXJzdE5hbWU+WVVMSVlBPC9GaXJzdE5hbWU+CiAgICAgICAgICAgICAgICA8UmVzaWRlbmN5PnRydWU8L1Jlc2lkZW5jeT4KICAgICAgICAgICAgICAgIDxEb2N1bWVudE5hbWU+0J/QsNGB0L/QvtGA0YI8L0RvY3VtZW50TmFtZT4KICAgICAgICAgICAgICAgIDxEb2N1bWVudFNlcmllcz5DVDwvRG9jdW1lbnRTZXJpZXM+CiAgICAgICAgICAgICAgICA8RG9jdW1lbnROdW1iZXI+MjEwNDcxPC9Eb2N1bWVudE51bWJlcj4KICAgICAgICAgICAgICAgIDxEb2N1bWVudElzc3VlRGF0ZT4yMDEwLTA4LTA1PC9Eb2N1bWVudElzc3VlRGF0ZT4KICAgICAgICAgICAgICAgIDxEYXRlb2ZCaXJ0aD4xOTg0LTExLTI4PC9EYXRlb2ZCaXJ0aD4KICAgICAgICAgICAgPC9TZW5kZXI+CiAgICAgICAgICAgIDxSZWNlaXZlcj4KICAgICAgICAgICAgICAgIDxMYXN0TmFtZT5EQU5FTElBPC9MYXN0TmFtZT4KICAgICAgICAgICAgICAgIDxGaXJzdE5hbWU+VEFNQVJJPC9GaXJzdE5hbWU+CiAgICAgICAgICAgIDwvUmVjZWl2ZXI+CiAgICAgICAgPC9SZWdpc3Rlck9wZXJhdGlvbj4KICAgIDwvc29hcDpCb2R5Pgo8L3NvYXA6RW52ZWxvcGU+Cg==",
         "output": "str",
-        "x": 945,
-        "y": 640,
+        "x": 1200,
+        "y": 520,
         "wires": [
             []
         ]
@@ -256,8 +256,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 680,
+        "x": 790,
+        "y": 720,
         "wires": []
     },
     {
@@ -470,9 +470,9 @@
         "y": 540,
         "wires": [
             [
-                "21e79c4b.c938f4",
                 "7b41cca7.3c2af4",
-                "fe47e86c.3905"
+                "fe47e86c.3905",
+                "4a67b7f0.abb65"
             ]
         ]
     },
@@ -487,8 +487,8 @@
         "syntax": "mustache",
         "template": "<soap:Envelope xmlns:ns=\"http://oree.com.ua/etsua/soapsvc/bankaccountstatus/2020/09\" xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\">\n   <soap:Header><wsse:Security soap:mustUnderstand=\"true\" xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken wsu:Id=\"UsernameToken-3D8E495A71D1035BD516125380512321\"><wsse:Username>ukrgaz</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">WFtCRyFJt3</wsse:Password></wsse:UsernameToken></wsse:Security></soap:Header>\n   <soap:Body>\n      <ns:UploadRequest>\n         <!--Optional:-->\n         <ns:BANKLIMITS answer-required=\"true\" date-time=\"2020-10-26T18:51:13Z \" dtd-release=\"1\" dtd-version=\"1\" id=\"5654\" message-code=\"301\">\n            <!--Optional:-->\n            <ns:SenderIdentification coding-scheme=\"NAME\" id=\"UGB\"/>\n            <!--Optional:-->\n            <ns:ReceiverIdentification coding-scheme=\"EIC\" id=\"62X-OPERRYNKU--3\"/>\n            <!--Optional:-->\n            <ns:Limits date=\"2020-10-26T18:51:13Z\" title=\"FinancialLimit\">\n               <!--Zero or more repetitions:-->\n               <ns:Participant bankAccountId=\"1\" bankCode=\"320478\" dic=\"1\" ean=\"1\" edrpou=\"23697280\" eic=\"0\" iban=\"UA133204780000026007924864736\" ic=\"1\" name=\"АТ ДТЕК ДНІПРОЕНЕРГО\" particId=\"1\">\n                  <!--Zero or more repetitions:-->\n                  <ns:DataGroups>\n                     <!--Optional:-->\n                     <ns:TotalsData>\n                        <!--Zero or more repetitions:-->\n                        <ns:Data currency=\"UAH\" type=\"limit\" value=\"1121.42\"/>\n                     </ns:TotalsData>\n                  </ns:DataGroups>\n               </ns:Participant>\n            </ns:Limits>\n         </ns:BANKLIMITS>\n      </ns:UploadRequest>\n   </soap:Body>\n</soap:Envelope>",
         "output": "str",
-        "x": 940,
-        "y": 600,
+        "x": 1200,
+        "y": 480,
         "wires": [
             []
         ]
@@ -580,7 +580,7 @@
         "timeout": "",
         "count": "",
         "reduceRight": false,
-        "x": 555,
+        "x": 570,
         "y": 420,
         "wires": [
             [
@@ -598,7 +598,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 145,
+        "x": 140,
         "y": 420,
         "wires": [
             [
@@ -615,9 +615,9 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                        <ns:DataGroups>\n                            <ns:TotalsData>\n                            <ns:Data \n                                currency=\"{{payload.participant.data.currency}}\" \n                                type=\"{{payload.participant.data.type}}\" \n                                value=\"{{payload.participant.data.value}}\"/>\n                            </ns:TotalsData>\n                        </ns:DataGroups>\n            </ns:Participant>\n",
+        "template": "<ns:Participant bankAccountId=\"{{payload.participant.bankAccountId}}\"  bankCode=\"{{payload.participant.bankCode}}\"  dic=\"{{payload.participant.dic}}\"  ean=\"{{payload.participant.ean}}\"  edrpou=\"{{payload.participant.edrpou}}\"  eic=\"{{payload.participant.eic}}\"  iban=\"{{payload.participant.iban}}\"  ic=\"{{payload.participant.ic}}\"  name=\"{{payload.participant.name}}\"  particId=\"{{payload.participant.particId}}\">\n\t<ns:DataGroups>\n\t\t<ns:TotalsData>\n\t\t\t<ns:Data currency=\"{{payload.participant.data.currency}}\" type=\"{{payload.participant.data.type}}\" value=\"{{payload.participant.data.value}}\"/>\n\t\t</ns:TotalsData>\n\t</ns:DataGroups>\n</ns:Participant>\n",
         "output": "str",
-        "x": 405,
+        "x": 420,
         "y": 420,
         "wires": [
             [
@@ -651,7 +651,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 145,
+        "x": 140,
         "y": 460,
         "wires": [
             [
@@ -688,11 +688,12 @@
         "syntax": "mustache",
         "template": "{{{xml.btop}}}\n{{{xml.body}}}\n{{{xml.bfoot}}}",
         "output": "str",
-        "x": 415,
+        "x": 430,
         "y": 460,
         "wires": [
             [
-                "b5d32dcd.2e4728"
+                "69e9126f.57d5bc",
+                "72beb55f.8de584"
             ]
         ]
     },
@@ -845,8 +846,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 315,
-        "y": 520,
+        "x": 330,
+        "y": 580,
         "wires": []
     },
     {
@@ -935,7 +936,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 575,
+        "x": 570,
         "y": 500,
         "wires": [
             [
@@ -948,12 +949,12 @@
         "type": "file",
         "z": "e72aed43.e4b9b8",
         "name": "",
-        "filename": "oreebd.xml",
+        "filename": "1-oree-body.xml",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 735,
+        "x": 740,
         "y": 500,
         "wires": [
             [
@@ -966,7 +967,7 @@
         "type": "debug",
         "z": "e72aed43.e4b9b8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -974,7 +975,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 895,
+        "x": 970,
         "y": 500,
         "wires": []
     },
@@ -1043,7 +1044,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{{{xml.top}}}\n{{{xml.head}}}\n{{{xml.body}}}\n{{{xml.foot}}}",
+        "template": "{{{xml.top}}}\n{{{xml.head}}}\n{{{xml.bodyt}}}\n{{{xml.foot}}}",
         "output": "str",
         "x": 310,
         "y": 900,
@@ -1077,12 +1078,12 @@
         "type": "file",
         "z": "e72aed43.e4b9b8",
         "name": "",
-        "filename": "oreeok.xml",
+        "filename": "5-oree-out.xml",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 290,
+        "x": 300,
         "y": 960,
         "wires": [
             [
@@ -1116,15 +1117,14 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{{{xml.top}}}\n{{{xml.body}}}\n{{{xml.foot}}}",
+        "template": "{{{xml.top}}}{{{xml.bodyt}}}{{{xml.foot}}}",
         "output": "str",
-        "x": 135,
+        "x": 410,
         "y": 500,
         "wires": [
             [
                 "54964061.c8da38",
-                "72beb55f.8de584",
-                "145708f1.80345f"
+                "408f2e50.7e40d"
             ]
         ]
     },
@@ -1138,8 +1138,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 575,
-        "y": 540,
+        "x": 570,
+        "y": 620,
         "wires": [
             [
                 "577ba368.d4c0ac"
@@ -1151,13 +1151,13 @@
         "type": "file",
         "z": "e72aed43.e4b9b8",
         "name": "",
-        "filename": "oreex4.xml",
+        "filename": "3-oree-x4n.xml",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 735,
-        "y": 540,
+        "x": 740,
+        "y": 620,
         "wires": [
             [
                 "d340f5ec.289ed"
@@ -1177,8 +1177,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 895,
-        "y": 540,
+        "x": 970,
+        "y": 620,
         "wires": []
     },
     {
@@ -1230,6 +1230,238 @@
         "x": 130,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "57c6e7be.9b8338",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "to sign",
+        "func": "var out = msg.payload.replace('<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><soap:Body>','').replace('</soap:Body></soap:Envelope>','')\nout = out.replace(/&lt;/g,'<').replace(/&gt;/g,'>')\n\nmsg.xml.bodys = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 130,
+        "y": 600,
+        "wires": [
+            [
+                "21e79c4b.c938f4",
+                "be92021b.9595d8"
+            ]
+        ]
+    },
+    {
+        "id": "69e9126f.57d5bc",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "trim",
+        "func": "var out = '';\n\nvar lines = msg.xml.body.split('\\n');\n\n    for (var line of lines) {\n            out += line.trim();\n    }\n\nmsg.xml.bodyt = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "d1f722e4.6ad118",
+                "b5d32dcd.2e4728"
+            ]
+        ]
+    },
+    {
+        "id": "d1f722e4.6ad118",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "to file",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 540,
+        "wires": [
+            [
+                "67decd3c.87d5ec"
+            ]
+        ]
+    },
+    {
+        "id": "67decd3c.87d5ec",
+        "type": "file",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "filename": "2-oree-tr.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 730,
+        "y": 540,
+        "wires": [
+            [
+                "2641e2e6.d6beb6"
+            ]
+        ]
+    },
+    {
+        "id": "2641e2e6.d6beb6",
+        "type": "debug",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "be92021b.9595d8",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "to file",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 660,
+        "wires": [
+            [
+                "59603192.84d7c"
+            ]
+        ]
+    },
+    {
+        "id": "59603192.84d7c",
+        "type": "file",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "filename": "4-oree-x4s.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 740,
+        "y": 660,
+        "wires": [
+            [
+                "ce63afaa.1d2068"
+            ]
+        ]
+    },
+    {
+        "id": "ce63afaa.1d2068",
+        "type": "debug",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "408f2e50.7e40d",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "to file",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 580,
+        "wires": [
+            [
+                "fe16782.daebd88"
+            ]
+        ]
+    },
+    {
+        "id": "fe16782.daebd88",
+        "type": "file",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "filename": "3-oree-tn4.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 740,
+        "y": 580,
+        "wires": [
+            [
+                "a7f010a7.37919"
+            ]
+        ]
+    },
+    {
+        "id": "a7f010a7.37919",
+        "type": "debug",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4a67b7f0.abb65",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "norm",
+        "func": "var out = msg.payload;\nout = out.replace(/&lt;/g,'<').replace(/&gt;/g,'>')\nmsg.xml.bodys = out;\nmsg.payload = out;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "57c6e7be.9b8338"
+            ]
+        ]
+    },
+    {
+        "id": "ba34be00.0f6098",
+        "type": "template",
+        "z": "e72aed43.e4b9b8",
+        "name": "Xml Body",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                        <ns:DataGroups>\n                            <ns:TotalsData>\n                            <ns:Data \n                                currency=\"{{payload.participant.data.currency}}\" \n                                type=\"{{payload.participant.data.type}}\" \n                                value=\"{{payload.participant.data.value}}\"/>\n                            </ns:TotalsData>\n                        </ns:DataGroups>\n            </ns:Participant>\n",
+        "output": "str",
+        "x": 580,
+        "y": 380,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "281c65ac.15c112",
