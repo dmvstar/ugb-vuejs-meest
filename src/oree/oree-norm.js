@@ -13,7 +13,7 @@ function normaliseJsonObject(jsonObject, out, akey){
         } else{
             //console.log("v  "+akey + " " + key + ": " + jsonObject[key]);
             var skey = key;
-            if( key === "_") skey = "result";
+            if( key === "_")  skey = "result";
             if( key !== "$" ) out[akey][skey] = jsonObject[key];
         }
     }
