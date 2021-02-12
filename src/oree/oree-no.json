@@ -24,7 +24,7 @@
             }
         },
         "Reason": {
-            "_": "Data structure error: Element '{http://oree.com.ua/etsua/soapsvc/bankaccountstatus/2020/09}Limits', attribute 'date': '&quot;2020-10-26T18:51:13Z' is not a valid value of the atomic type 'xs:dateTime'.\n; ",
+            "_": "Data structure error: Element...",
             "$": {
                 "type": "E02"
             }

@@ -1,33 +1,32 @@
 {
     "RESPONSE": {
+        "$": {
+            "message-code": "501",
+            "date-time": "2021-02-12T17:09:56Z",
+            "dtd-version": "1",
+            "dtd-release": "1"
+        },
+        "SenderIdentification": {
             "$": {
-                "message-code": "501",
-                "date-time": "2021-02-12T17:09:56Z",
-                "dtd-version": "1",
-                "dtd-release": "1"
-            },
-            "SenderIdentification": {
-                "$": {
-                    "id": "62X-OPERRYNKU--3",
-                    "coding-scheme": "EIC"
-                }
-            },
-            "ReceiverIdentification": {
-                "$": {
-                    "id": "UGB",
-                    "coding-scheme": "NAME"
-                }
-            },
-            "Reference": {
-                "$": {
-                    "id": "5654"
-                }
-            },
-            "Reason": {
-                "_": "OK",
-                "$": {
-                    "type": "S01"
-                }
+                "id": "62X-OPERRYNKU--3",
+                "coding-scheme": "EIC"
+            }
+        },
+        "ReceiverIdentification": {
+            "$": {
+                "id": "UGB",
+                "coding-scheme": "NAME"
+            }
+        },
+        "Reference": {
+            "$": {
+                "id": "5654"
+            }
+        },
+        "Reason": {
+            "_": "OK",
+            "$": {
+                "type": "S01"
             }
         }
     }
