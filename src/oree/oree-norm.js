@@ -1,32 +1,111 @@
 
-function normaliseJsonObject(jsonObject, out, akey){
-    for(var key in jsonObject){
-        if (typeof jsonObject[key] === 'object') {
-            //console.log("o  "+akey + " " + key);
-            if( key !== "$" ) {
-                out[key] = {};
-                normaliseJsonObject(jsonObject[key], out, key);
-            } else {
-                normaliseJsonObject(jsonObject[key], out, akey);
+function normalise0(obj, aout, pkey){
+    if (typeof obj === 'object') {
+        ret = {};
+        for(var key in obj){
+            if (typeof obj[key] === 'object') {
+                console.log("o  "+pkey + " " + key);
+                if( key !== "$" ) {
+                    aout[key] = {};
+                    ret[key] = {};
+                    console.log(ret);
+                    ret = normalise(obj[key], aout, key);
+                } else {
+                    ret = normalise(obj[key], aout, pkey);
+                }                
+            } else{
+                console.log("v  "+pkey + " " + key + ": " + obj[key]);
+                console.log(ret);
+                var skey = key;
+                if( key === "_")  skey = "result";
+                if( key !== "$" ) aout[pkey][skey] = obj[key];
+                if( key !== "$" ) {ret[pkey] = {}; ret[pkey][skey] = obj[key];}
             }
-            
-        } else{
-            //console.log("v  "+akey + " " + key + ": " + jsonObject[key]);
-            var skey = key;
-            if( key === "_")  skey = "result";
-            if( key !== "$" ) out[akey][skey] = jsonObject[key];
         }
+        return ret;
+    } else {
+        return obj;
     }
 };
+
+function simplify(obj) {
+    if (Object.prototype.toString.call(obj) == "[object Array]") {
+        var out = []; 
+        if (obj.length > 1) {
+            for (var i in obj) {
+                out[i] = simplify(obj[i]);
+            }
+            return out;
+        } else if (obj.length == 1) {
+            out = simplify(obj[0]);
+            return out;
+        } else {
+            return "";
+        }
+   } else if (Object.prototype.toString.call(obj) == "[object Object]") {
+       var out = {};
+       for (var property in obj) {
+           if( property === 'RESPONSE')
+               outProperty = property.toLowerCase();
+           else {
+               outProperty = property[0].toLowerCase();
+               outProperty = outProperty + property.substr(1, property.length);
+           }
+           out[outProperty] = simplify(obj[property]);
+       }
+        return out;
+    } else {
+        return obj;
+    }
+}
+
+
+function normalise(obj, pkey, pret){      
+        ret = {};
+        for(var key in obj){             
+            if (typeof obj[key] === 'object') {
+                console.log("o  "+pkey + " " + key);
+                if( key !== "$" ) {
+                    if (ret === undefined ) ret = {}
+                    if(pkey === undefined) {                                   
+                        console.log(">", key, ret);
+                        ret[key] = normalise(obj[key], key,   ret);
+                        console.log("<", key, ret);
+                    } else {
+                        ret[pkey] = {};
+                        console.log("+", ret);
+                        //ret[pkey][key] = normalise(obj[key],  key,  ret);
+                    }                    
+                } else {
+                    console.log("$", pret);
+                    ret = pret;                    
+                    pret[key] = normalise(obj[key], pkey, ret);
+                }                
+            } else {
+                console.log("v  "+pkey + " " + key + ": " + obj[key]);
+                
+                var skey = key;
+                //if( key === "_")  skey = "result";                
+                if( key !== "$" ) { ret[skey] = obj[key]; }
+                console.log(ret);
+            }
+        }
+        return ret;
+} 
+
 
 // MAIN --------------------------------------------------------------------------------
 var resn = require('./oree-no.json');
 var out = {};
-normaliseJsonObject( resn, out);
-console.log( JSON.stringify(out, null, 4) );
-
+var oout;
+oout = normalise( resn );
+//console.log( JSON.stringify(out, null, 4) );
+console.log( oout );
+/*
 var reso = require('./oree-ok.json');
 out = {};
-normaliseJsonObject( reso, out);
+oout = normalise( reso );
 console.log( JSON.stringify(out, null, 4) );
+console.log( JSON.stringify(oout, null, 4) );
+*/
 // MAIN --------------------------------------------------------------------------------
