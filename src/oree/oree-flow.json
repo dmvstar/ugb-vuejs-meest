@@ -397,7 +397,7 @@
         "y": 980,
         "wires": [
             [
-                "937b6f97.562c38"
+                "5a213ace.a5e244"
             ]
         ],
         "info": "https://a4.oree.com.ua/index.php/bank_ws/upload\n\nhttps://94.131.247.4/index.php/bank_ws/upload\nhttps://94.131.247.4/Service.svc.xml\nhttps://94.131.247.4/upload.xsd\n\nNew\nukrgaz\nWFtCRyFJt3\nhttps://212.1.116.41/index.php/bank_ws/upload\nhttps://212.1.116.41/Service.svc.xml\nhttps://212.1.116.41/upload.xsdм\n\n\n"
@@ -415,8 +415,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 960,
+        "x": 1090,
+        "y": 940,
         "wires": []
     },
     {
@@ -436,7 +436,7 @@
         "y": 940,
         "wires": [
             [
-                "937b6f97.562c38"
+                "5a213ace.a5e244"
             ]
         ],
         "info": "https://a4.oree.com.ua/index.php/bank_ws/upload\n\nhttps://94.131.247.4/index.php/bank_ws/upload\nhttps://94.131.247.4/Service.svc.xml\nhttps://94.131.247.4/upload.xsd\n"
@@ -839,7 +839,7 @@
         "type": "debug",
         "z": "e72aed43.e4b9b8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1579,6 +1579,99 @@
         "y": 260,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "5a213ace.a5e244",
+        "type": "xml",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 910,
+        "y": 940,
+        "wires": [
+            [
+                "ee7d64b9.78635",
+                "937b6f97.562c38"
+            ]
+        ]
+    },
+    {
+        "id": "ee7d64b9.78635",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "simplify",
+        "func": "\nfunction simplify(obj) {\n    if (Object.prototype.toString.call(obj) == \"[object Array]\") {\n        var out = []; \n        if (obj.length > 1) {\n            for (var i in obj) {\n                out[i] = simplify(obj[i]);\n            }\n            return out;\n        } else if (obj.length == 1) {\n            out = simplify(obj[0]);\n            return out;\n        } else {\n            return \"\";\n        }\n   } else if (Object.prototype.toString.call(obj) == \"[object Object]\") {\n       var out = {};\n       for (var property in obj) {\n           outProperty = property;\n           out[outProperty] = simplify(obj[property]);\n       }\n        return out;\n    } else {\n        return obj;\n    }\n}\n//var input = msg.payload['soap:Envelope']['soap:Body'][0].RegisterOperation[0];\n\nvar tracksArray = msg.payload['env:Envelope']['env:Body'][0];\nvar temp = simplify(tracksArray);\n\nmsg.payload = temp;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 920,
+        "y": 980,
+        "wires": [
+            [
+                "937b6f97.562c38"
+            ]
+        ]
+    },
+    {
+        "id": "98f155c3.6cdc3",
+        "type": "link out",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "links": [
+            "7fcb1885.dc3b9",
+            "c6942b0a.3b454"
+        ],
+        "x": 905,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "99797596.85aeb",
+        "type": "inject",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 1040,
+        "wires": [
+            [
+                "98f155c3.6cdc3"
+            ]
+        ]
+    },
+    {
+        "id": "c6942b0a.3b454",
+        "type": "link in",
+        "z": "e72aed43.e4b9b8",
+        "name": "",
+        "links": [
+            "98f155c3.6cdc3"
+        ],
+        "x": 135,
+        "y": 100,
+        "wires": [
+            [
+                "36a19816.e23da8"
+            ]
         ]
     },
     {
