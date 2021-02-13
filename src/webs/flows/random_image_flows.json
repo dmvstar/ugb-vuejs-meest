@@ -1,0 +1,138 @@
+[
+    {
+        "id": "996bafaf.a6e4",
+        "type": "tab",
+        "label": "random image",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c3e1c5a0.271718",
+        "type": "http in",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "url": "/clients/photos/random",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "521c69a4.c4309"
+            ]
+        ],
+        "info": "http://localhost:1880/clients/photos/random"
+    },
+    {
+        "id": "521c69a4.c4309",
+        "type": "function",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "func": "function rr() {\n\n    var i = Math.floor(1 + Math.random() * 5);\n    return i;\n\n}\n\nvar path = '/home/devel/works/node/src/ugb-vuejs-meest/src/post/';\nvar pre = 'face-';\nvar pos = '2.jpg';\n\nvar filename  = path + pre + rr() + pos\nmsg.payload = filename ;\nmsg.filename = filename ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "5df4e739.78cb88",
+                "b7332344.cca55"
+            ]
+        ]
+    },
+    {
+        "id": "5df4e739.78cb88",
+        "type": "file in",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 520,
+        "y": 60,
+        "wires": [
+            [
+                "631c142a.4a1714"
+            ]
+        ]
+    },
+    {
+        "id": "b7332344.cca55",
+        "type": "debug",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 390,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3cf8ff56.1ed758",
+        "type": "inject",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "521c69a4.c4309"
+            ]
+        ]
+    },
+    {
+        "id": "631c142a.4a1714",
+        "type": "function",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "func": "var ret = msg.payload.toString('base64');\n\nmsg.payload = {\n    data: ret\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 60,
+        "wires": [
+            [
+                "bd5cb1ad.e78488",
+                "c53c94cd.d2bd38"
+            ]
+        ]
+    },
+    {
+        "id": "bd5cb1ad.e78488",
+        "type": "debug",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c53c94cd.d2bd38",
+        "type": "http response",
+        "z": "996bafaf.a6e4",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 800,
+        "y": 60,
+        "wires": []
+    }
+]
