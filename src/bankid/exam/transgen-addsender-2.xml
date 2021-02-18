@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>47036687</TransferId>
+            <TransferNumber>86935422</TransferNumber>
+            <SystemCode>mg</SystemCode>
+            <SystemName>MoneyGram</SystemName>
+            <Operation>1</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-02-18T17:22:19+02:00</OperationDate>
+            <SendDate>2021-02-18T14:12:11+02:00</SendDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-02-18T00:00:00+02:00</ABSDate>
+            <TransferAmount>100.000</TransferAmount>
+            <FromCountry>804</FromCountry>
+            <ToCountry>051</ToCountry>
+            <TransferСurrency>840</TransferСurrency>
+            <CommissionAmount>2.000</CommissionAmount>
+            <CommissionСurrency>840</CommissionСurrency>
+            <CommissionAmountEq>55.8</CommissionAmountEq>
+            <PointBank>1000074</PointBank>
+            <PointSW>GASB0032</PointSW>
+            <UserLogin>odziuba</UserLogin>
+            <UserName>Дзюба Олена Миколаївна</UserName>
+            <UserID>11417</UserID>
+            <Sender>
+                <LastName>PETROSYAN</LastName>
+                <FirstName>ARMEN</FirstName>
+                <Residency>false</Residency>
+
+                <DocumentName>Другой</DocumentName>
+                <DocumentNumber>800141074</DocumentNumber>
+                <DocumentIssueDate>2020-06-16</DocumentIssueDate>
+                <DocumentIssuedBy>6101</DocumentIssuedBy>
+                <DateofBirth>1998-06-20</DateofBirth>
+                
+            </Sender>
+            <Receiver>
+                <LastName>PETROSYAN</LastName>
+                <FirstName>SATENIK</FirstName>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
