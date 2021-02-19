@@ -1,3 +1,18 @@
+<!--
+function buildSenderInfo(person) {
+    /*
+                        MoneyGram Payment Systems, Inc.;
+    DocumentName        ПАСПОРТ (ID-КАРТА);
+    DocumentSeries      ФФ;
+    DocumentNumber      21436587;
+    DocumentIssuedBy,DocumentIssueDate Выдан 2133,01/01/2015;
+    DateofBirth         18/02/2000;
+    Address             02000, Киев, ул. Правды, 25-233;
+                        0;
+                        000000000;
+  */
+-->
+
 <?xml version="1.0" encoding="utf-8"?>
 
 <RegisterOperation xmlns="http://www.ukrgasbank.com">
