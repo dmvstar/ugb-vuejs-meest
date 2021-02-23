@@ -21,7 +21,8 @@
             [
                 "12d7a3c6.8f889c"
             ]
-        ]
+        ],
+        "info": "Sign data\nPOST\nhttp://kv-v-nr-it-t:1880/common/umca/sign\n{\n\"data\" : \"{{{data}}}\",\n\"sigType\": \"cades-x-ts-signtime-ocsp-stdua\",\n\"key\" : {\n    \"name\" : \"{{keyName}}\",\n    \"pin\"  : \"{{keyPin}}\",\n    \"key\"  : \"{{{keyBase64}}}\"\n  }\n}  "
     },
     {
         "id": "df15710f.320158",
@@ -572,7 +573,8 @@
             [
                 "dd233d70.753988"
             ]
-        ]
+        ],
+        "info": "http://kv-v-nr-it-t:1880//common/umca/verify\nVerify Data\nPOST\n{\n    \"data\" : \"{{{data}}}\",\n    \"sign\" : \"{{{sign}}}\"\n}  "
     },
     {
         "id": "dd233d70.753988",
