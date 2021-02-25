@@ -2,7 +2,7 @@
 in.operation 
 Operation
 1 Отправка
-2 Получение  Выплата
+2 Получение - Выплата
     1 проводка 
     Дт 2809 (acc_direction=0) Кт 1002 
 3 Аннулирование
@@ -44,8 +44,26 @@ Moniker	                Flag	BranchId
             <UserName>Нілош Ніколетт Тіберіївна</UserName>
             <UserID>13481</UserID>
             <Sender>
-                <LastName>POPOVA</LastName>
-                <FirstName>SVITLANA</FirstName>
+
+                    <LastName>VOZNIUK</LastName>
+                    <FirstName>NATALIIA</FirstName>
+                    <Residency>false</Residency>
+
+                    <DocumentName>PASSAPORTO</DocumentName>
+                    <DocumentSeries>EX</DocumentSeries>
+                    <DocumentNumber>980622</DocumentNumber>
+                    <DocumentIssueDate>2001-10-10</DocumentIssueDate>
+                    <DocumentIssuedBy>GOVERNO</DocumentIssuedBy>
+
+                    <DateofBirth>1985-09-05</DateofBirth>
+                    <BirthPlace>место рождения</BirthPlace>
+
+                    <Country>Ukraine</Country>
+                    <Phone>0993334455</Phone>
+                    <City>Kijow</City>
+                    <ZipCode>02000</ZipCode>
+                    <Address>Place 22, 45-222</Address>        
+
             </Sender>
             <Receiver>
                 <LastName>DITYATKIN</LastName>
@@ -92,14 +110,24 @@ Moniker	                Flag	BranchId
             <UserName>Нілош Ніколетт Тіберіївна</UserName>
             <UserID>13481</UserID>
             <Sender>
-                <LastName>KVASHILAVA</LastName>
-                <FirstName>YULIYA</FirstName>
-                <Residency>true</Residency>
-                <DocumentName>Паспорт</DocumentName>
-                <DocumentSeries>CT</DocumentSeries>
-                <DocumentNumber>210471</DocumentNumber>
-                <DocumentIssueDate>2010-08-05</DocumentIssueDate>
-                <DateofBirth>1984-11-28</DateofBirth>
+                    <LastName>VOZNIUK</LastName>
+                    <FirstName>NATALIIA</FirstName>
+                    <Residency>false</Residency>
+
+                    <DocumentName>PASSAPORTO</DocumentName>
+                    <DocumentSeries>EX</DocumentSeries>
+                    <DocumentNumber>980622</DocumentNumber>
+                    <DocumentIssueDate>2001-10-10</DocumentIssueDate>
+                    <DocumentIssuedBy>GOVERNO</DocumentIssuedBy>
+
+                    <DateofBirth>1985-09-05</DateofBirth>
+                    <BirthPlace>место рождения</BirthPlace>
+
+                    <Country>Ukraine</Country>
+                    <Phone>0993334455</Phone>
+                    <City>Kijow</City>
+                    <ZipCode>02000</ZipCode>
+                    <Address>Place 22, 45-222</Address>        
             </Sender>
             <Receiver>
                 <LastName>DANELIA</LastName>

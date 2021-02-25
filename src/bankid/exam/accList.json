@@ -1,0 +1,54 @@
+[
+    {
+        "AmountID": 2085999,
+        "Moniker": "280964629781.840.050",
+        "Code": "2809  46297816.840.050",
+        "IBAN": "UA553204780000000280964629781",
+        "CurrencyTag": "USD",
+        "PayName": "MoneyGram(деб.заборг.за переказа",
+        "Opened": 39981,
+        "OpenedDat": "2009-06-19T00:00:00.000Z",
+        "ClientId": 133692,
+        "ClientName": "MoneyGram Payment Systems, Inc.",
+        "Direction": 0
+    },
+    {
+        "AmountID": 2086001,
+        "Moniker": "280964629781.978.050",
+        "Code": "2809  46297816.978.050",
+        "IBAN": "UA553204780000000280964629781",
+        "CurrencyTag": "EUR",
+        "PayName": "MoneyGram(деб.заборг.за переказа",
+        "Opened": 39981,
+        "OpenedDat": "2009-06-19T00:00:00.000Z",
+        "ClientId": 133692,
+        "ClientName": "MoneyGram Payment Systems, Inc.",
+        "Direction": 0
+    },
+    {
+        "AmountID": 8376433,
+        "Moniker": "280964629781.980.050",
+        "Code": "2809  46297816.980.050",
+        "IBAN": "UA553204780000000280964629781",
+        "CurrencyTag": "",
+        "PayName": "MoneyGram(дебіторська заборгованість за переказами), В№050",
+        "Opened": 42261,
+        "OpenedDat": "2015-09-16T00:00:00.000Z",
+        "ClientId": 133692,
+        "ClientName": "MoneyGram Payment Systems, Inc.",
+        "Direction": 1
+    },
+    {
+        "AmountID": 54614473,
+        "Moniker": "280954601.980.050",
+        "Code": "2809     46015.980.050",
+        "IBAN": "UA223204780000000000280954601",
+        "CurrencyTag": "",
+        "PayName": "MoneyGram(деб.заб.перека.) В№050",
+        "Opened": 44139,
+        "OpenedDat": "2020-11-06T00:00:00.000Z",
+        "ClientId": 133692,
+        "ClientName": "MoneyGram Payment Systems, Inc.",
+        "Direction": 0
+    }
+]

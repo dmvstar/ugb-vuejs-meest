@@ -1,3 +1,18 @@
+<!--
+function buildSenderInfo(person) {
+    /*
+                        MoneyGram Payment Systems, Inc.;
+    DocumentName        ПАСПОРТ (ID-КАРТА);
+    DocumentSeries      ФФ;
+    DocumentNumber      21436587;
+    DocumentIssuedBy,DocumentIssueDate Выдан 2133,01/01/2015;
+    DateofBirth         18/02/2000;
+    Address             02000, Киев, ул. Правды, 25-233;
+                        0;
+                        000000000;
+  */
+-->
+
 <?xml version="1.0" encoding="utf-8"?>
 
 <RegisterOperation xmlns="http://www.ukrgasbank.com">
@@ -29,16 +44,17 @@
         <DocumentName>PASSAPORTO</DocumentName>
         <DocumentSeries>EX</DocumentSeries>
         <DocumentNumber>980622</DocumentNumber>
+        <DocumentIssueDate>2001-10-10</DocumentIssueDate>
         <DocumentIssuedBy>GOVERNO</DocumentIssuedBy>
 
         <DateofBirth>1985-09-05</DateofBirth>
         <BirthPlace>место рождения</BirthPlace>
 
+        <Country>Ukraine</Country>
         <Phone>0993334455</Phone>
-        <CountryOfResidence>Ukraine</CountryOfResidence>
         <City>Kijow</City>
         <ZipCode>02000</ZipCode>
-        <Address>Place 22, 45-222</Address>
+        <Address>Place 22, 45-222</Address>        
     </Sender>
     <Receiver>
         <LastName>POVOROZNYK</LastName>
