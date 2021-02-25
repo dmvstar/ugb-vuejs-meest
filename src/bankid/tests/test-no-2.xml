@@ -1,0 +1,230 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header>
+      <tem:AuthSoapHeader>
+        <tem:Login>istest</tem:Login>
+         <tem:Password>gfhjk</tem:Password>
+      </tem:AuthSoapHeader>
+   </soapenv:Header>
+   
+   <soapenv:Body>
+      <tem:CreateClientFL>
+         <tem:client>
+            <tem:Request>
+               <tem:RequestId>12547</tem:RequestId>
+               <tem:UserLogin>UKRGAS\appmb</tem:UserLogin>
+            </tem:Request>
+            <!--tem:ClientId>1747753</tem:ClientId-->
+            <tem:SendToScrooge>1</tem:SendToScrooge>
+
+            <tem:Clients>
+               <tem:StateCode>3344101873</tem:StateCode>
+               <tem:Residency>1</tem:Residency>
+               <tem:Name>ЛАБАЙ ВОЛОДИМИР МАРЯНОВИЧ</tem:Name>               
+               <tem:Type>1</tem:Type>
+               <tem:SubType>0</tem:SubType>
+               <tem:isTechFlag>0</tem:isTechFlag>
+               <tem:IsOut>0</tem:IsOut>
+               <tem:IsPotential>0</tem:IsPotential>
+               <tem:IsPartner>false</tem:IsPartner>
+               <tem:PrevIdentDate>2021-02-25T00:00:00</tem:PrevIdentDate>
+               <tem:Status>1</tem:Status>
+            </tem:Clients>
+
+
+            <tem:ClientNames>                                        
+              <tem:TNames>
+                  <tem:Lang>LAT</tem:Lang>
+                  <tem:Name>LABAY VOLODYMYR</tem:Name>
+                  <tem:FullName>LABAY VOLODYMYR</tem:FullName>
+                  <tem:FullNameR/>
+                  <tem:FullNameD/>
+                  <tem:Status>1</tem:Status>                 
+              </tem:TNames>                          
+            </tem:ClientNames>       
+
+            
+            <tem:Individuals>
+               <tem:FirstName>ВОЛОДИМИР</tem:FirstName>
+               <tem:LastName>ЛАБАЙ</tem:LastName>
+               <tem:FatherName>МАРЯНОВИЧ</tem:FatherName>
+               <tem:Gender>М</tem:Gender>
+               <tem:BirthDay>1991-07-23T00:00:00</tem:BirthDay>
+               <tem:BirthSurname></tem:BirthSurname>
+               <tem:MarriageStatus>6</tem:MarriageStatus>
+               <tem:Status>1</tem:Status>
+            </tem:Individuals>
+            
+            <tem:Identifications>
+               <tem:TIdentifications>
+                  <tem:TypeId>4</tem:TypeId>
+                  <tem:Series>КС</tem:Series>
+                  <tem:Number>620090</tem:Number>
+                  <tem:Registrator>КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ</tem:Registrator>
+                  <tem:IssueDate>2008-01-17T00:00:00</tem:IssueDate>
+                  <tem:ExpirationDate>2099-01-01T00:00:00</tem:ExpirationDate>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:Checked>true</tem:Checked>
+                  <tem:Status>1</tem:Status>
+               </tem:TIdentifications>
+
+            </tem:Identifications>
+            
+            <tem:Addresses>
+               
+               <tem:TAddresses>
+                  <tem:TypeId>2</tem:TypeId>
+                  <tem:TypeCode>2</tem:TypeCode>
+                  <tem:Country>804</tem:Country>
+                  <!--tem:PostalCode>14017</tem:PostalCode-->
+                  <tem:State>Львiвська</tem:State>
+                  <tem:Region/>
+                  <tem:TownshipType>3508</tem:TownshipType>
+                  <tem:Town>КАМ’ЯНКА-БУЗЬКА</tem:Town>
+                  <tem:StreetType>3510</tem:StreetType>
+                  <tem:Street>ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58</tem:Street>
+                  <tem:HouseType>3511</tem:HouseType>
+                  <tem:HouseNumber></tem:HouseNumber>
+                  <tem:FlatType>3506</tem:FlatType>
+                  <tem:FlatNumber></tem:FlatNumber>
+                  <tem:LandlinePhoneNumber/>
+                  <tem:PropertyStatus/>
+                  <tem:Status>1</tem:Status>
+               </tem:TAddresses>
+            
+            </tem:Addresses>
+
+            <tem:Communications>
+
+               <tem:TCommunications>
+                  <tem:TypeId>3</tem:TypeId>
+                  <tem:TypeCode>3</tem:TypeCode>
+                  <tem:Value>380971553054</tem:Value>
+                  <tem:IsMain>true</tem:IsMain>
+                  <tem:IsVerified>true</tem:IsVerified>
+                  <tem:Note/>
+                  <tem:SourceInfo/>
+                  <tem:Status>1</tem:Status>
+               </tem:TCommunications>
+
+            </tem:Communications>
+            
+            <tem:Properties>
+                <tem:TProperties>
+                  <tem:Code>GENDER</tem:Code>
+                  <tem:Value>М</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>CL_FATF_CHECK_RESULT</tem:Code>
+                  <tem:Value>Клиент НЕ являестя террористом соглано данных bankid</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PUBLIC_PERSON_EXISTS</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>FATF_CodObl</tem:Code>
+                  <tem:Value>00</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>INFO_WORK_FROM</tem:Code>
+                  <tem:Value>Безробітний</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>BIRTH_COUNTRY</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>BIRTH_PLACE</tem:Code>
+                  <tem:Value>Україна</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PROFIT_WAY</tem:Code>
+                  <tem:Value>14430</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>BANK_PRODUCT</tem:Code>
+                  <tem:Value>16</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>OBSYAG_NAD</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>NAD_K_3</tem:Code>
+                  <tem:Value>9</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>MONTHSUMM</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PROPETYTH_OF_CLIENT</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PROPETYTH_OF_CLIENT_AVTO</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>INFO_OUTER_ACC_SEL</tem:Code>
+                  <tem:Value>3</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>EXISTS_CRED_OUT</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>EXISTS_DEPO_OUT</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PROPETYPAP_OF_CLIENTYPE</tem:Code>
+                  <tem:Value>Відсутні</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>BANK_SERVICES_MANUAL</tem:Code>
+                  <tem:Value>44652</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>UGB_TCURelPers</tem:Code>
+                  <tem:Value>2</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>KL_K013FO</tem:Code>
+                  <tem:Value>5</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Chiisaresident_USA</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Chiisaresident_USA</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>CUSTOMER_TYPE</tem:Code>
+                  <tem:Value>клієнт з відкриттям рахунків</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PASPFOTOCONTROL25</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>PASPFOTOCONTROL45</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Verifikatsii_date </tem:Code>
+                  <tem:Value>2021-02-25T00:00:00</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Education</tem:Code>
+                  <tem:Value>2</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>CLIENT_STATUS</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Customer_verification</tem:Code>
+                  <tem:Value>3</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Criterias</tem:Code>
+                  <tem:Value>Задовільний</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>FATF_COUNTRY_CITIZEN</tem:Code>
+                  <tem:Value>804</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>CARD_GREEN</tem:Code>
+                  <tem:Value>1</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>Resident_USA</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>FATCA</tem:Code>
+                  <tem:Value>0</tem:Value>
+                </tem:TProperties>                <tem:TProperties>
+                  <tem:Code>FATF_SHORT_NAME</tem:Code>
+                  <tem:Value>LABAY VOLODYMYR</tem:Value>
+                </tem:TProperties>
+
+            </tem:Properties>
+         
+         </tem:client>
+      </tem:CreateClientFL>
+   </soapenv:Body>
+</soapenv:Envelope>

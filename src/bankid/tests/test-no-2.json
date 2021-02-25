@@ -1,0 +1,46 @@
+В данном примере поле "sex": "М", - Кирилица - добавил костыль на замену символа
+если вместо F вдруг будет Ж тоже добавил костыль
+Обработку null - добавил
+{
+    "person": {
+        "type": "physical",
+        "lastName": "ЛАБАЙ",
+        "firstName": "ВОЛОДИМИР",
+        "middleName": "МАРЯНОВИЧ",
+        "inn": "3344101873",
+        "birthDay": "23.07.1991",
+        "sex": "М", 
+        "phone": "380971553054",
+        "uaResident": null,
+        "flagPersonTerror": null,
+        "flagPEPs": null,
+        "flagTopLevelRisk": null
+    },
+    "extends": {},
+    "addresses": [
+        {
+            "type": "factual",
+            "country": "UA",
+            "state": "Львiвська",
+            "area": "",
+            "city": "КАМ’ЯНКА-БУЗЬКА",
+            "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+            "houseNo": "",
+            "flatNo": ""
+        }
+    ],
+    "documents": [
+        {
+            "type": "passport",
+            "typeName": "КС",
+            "series": "КС",
+            "number": "620090",
+            "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+            "dateIssue": "17.01.2008",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "timeStamp": "202102251646102186",
+    "merchantName": "easypay_test"
+}
