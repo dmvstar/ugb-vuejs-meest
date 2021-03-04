@@ -1,8 +1,29 @@
 DECLARE @DocInfo VARCHAR(120), @MainAmount MONEY, @Status INT, @MaxAmountDay MONEY, @MaxAmountWeek MONEY, @MaxAmountMonth MONEY;
+DECLARE @CurrencyTag VARCHAR(10)
 --SET @DocInfo = 'Македон Євгеній Віталійович;;;;,;;;;';
 --SET @MainAmount = 500000;
+--SET @CurrencyTag='USD';
 SET @DocInfo='{{payload.docInfo}}'
 SET @MainAmount='{{payload.mainAmount}}'
+SET @CurrencyTag='{{payload.currencyTag}}'
+
+IF @CurrencyTag <> 'UAH' 
+    BEGIN
+    DECLARE @today INT
+    SET @today = datediff(DD, '', GETDATE());
+    SELECT @MainAmount=dbo.fn_GetCrossAmountByActionId(@today, @MainAmount,@CurrencyTag,'',0,0)
+/*
+Сегодняшний экв. 100 долл
+dbo.fn_GetCrossAmountByActionId
+( @DayDate TDate , -- дата на которую проводится расчет
+  @CrncyAmount TMoney , -- исходная Сумма
+  @FromTag TTag , -- исходная Валюта
+  @IntoTag TTag  -- нужная валюта
+ ,@FromActionId TRowId = 0 -- Тип операции
+ ,@IntoActionId TRowId = 0 -- Тип операции
+)
+*/
+END;
 
 SET @Status = 1;
 SET @MaxAmountDay = 400000;
