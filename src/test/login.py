@@ -16,17 +16,26 @@ class Login(QtWidgets.QDialog):
         layout.addWidget(self.buttonLogin)
         self.textName.setText('dstarzhynskyi')
         self.textCode.setText('3264')
+        self.textPass.setText('123456')
         self.textPass.setFocus()
+        print("self.textPass.text().length()")
+        str = "this is string example....wow!!!";
+        print("Length of the string: ", len(str))
+        print("Length of the string: ", len( self.textPass.text() ))
+        
 
 
     def handleLogin(self):
+        #QtWidgets.QMessageBox.warning(
+        #        self, 'Error', 'Text '+self.textPass.text()[0])
+        
         #if (self.textName.text() == 'foo' and
         #    self.textPass.text() == 'bar'):
-        if (self.textPass.text().length() == 6):
+        if (len( self.textPass.text() ) == 6):
             self.accept()
         else:
             QtWidgets.QMessageBox.warning(
-                self, 'Error', 'Bad user or password '+self.textPass.text().count)
+                self, 'Error', 'Bad user or password '+self.textPass.text())
 
 class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -39,10 +48,12 @@ if __name__ == '__main__':
     import sys
     app = QtWidgets.QApplication(sys.argv)
     login = Login()
+    
 
     if login.exec_() == QtWidgets.QDialog.Accepted:
         #window = Window()
         #window.show()
         #sys.exit(app.exec_())
-        QtWidgets.QMessageBox.warning(
-                self, 'Ok', 'Execute cpa...')
+        str = 'Ok, '+ 'Execute cpa...'
+        print(str)
+        
