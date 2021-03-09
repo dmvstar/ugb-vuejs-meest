@@ -16,10 +16,11 @@ class Login(QtWidgets.QDialog):
         layout.addWidget(self.buttonLogin)
         self.textName.setText('dstarzhynskyi')
         self.textCode.setText('3264')
-        self.textPass.setText('123456')
+        self.textPass.setText('')
         self.textPass.setFocus()
         print("self.textPass.text().length()")
         str = "this is string example....wow!!!";
+        self.cmd = ""
         print("Length of the string: ", len(str))
         print("Length of the string: ", len( self.textPass.text() ))
         
@@ -32,6 +33,10 @@ class Login(QtWidgets.QDialog):
         #if (self.textName.text() == 'foo' and
         #    self.textPass.text() == 'bar'):
         if (len( self.textPass.text() ) == 6):
+            name = self.textName.text()
+            code = self.textCode.text()
+            pins = self.textPass.text()
+            self.cmd = 'echo '+ code + pins + '| snx -g -s 91.208.198.207 -u '+ name
             self.accept()
         else:
             QtWidgets.QMessageBox.warning(
@@ -46,6 +51,8 @@ class Window(QtWidgets.QMainWindow):
 if __name__ == '__main__':
 
     import sys
+    import subprocess
+
     app = QtWidgets.QApplication(sys.argv)
     login = Login()
     
@@ -54,6 +61,12 @@ if __name__ == '__main__':
         #window = Window()
         #window.show()
         #sys.exit(app.exec_())
-        str = 'Ok, '+ 'Execute cpa...'
-        print(str)
+        str = 'Ok, '+ 'Execute snx ...'
+        print(str)        
+        print(login.cmd)
+        output = subprocess.getoutput( login.cmd )
+        print(output)
         
+        #Another session of SNX is already running, aborting...
+        #SNX: Access denied - wrong user name or password
+        #SNX - connected.
