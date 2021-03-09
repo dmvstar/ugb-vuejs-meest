@@ -1,0 +1,715 @@
+[
+    {
+        "regionDescr": "Вінницька",
+        "cityDescr": "Вінниця",
+        "addressDescr": "Бевза Івана",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ВІННИЦЬКА",
+            "regionID": "d15e3019-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Вінниця",
+            "cityID": "4aba3d28-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Бевза Івана",
+            "addressID": "743fdc1d-e0d2-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Вінницька",
+            "data": {
+                "city": "Вінниця",
+                "street": "Бевза Івана",
+                "streetNum": "34",
+                "address": "21009, м. Вінниця вул. Івана Бевза 34",
+                "contacts": [
+                    {
+                        "email": "hvysotska@ukrgasbank.com",
+                        "name": "Висоцька Галина Петрівна",
+                        "phone": "+380679893565"
+                    }
+                ],
+                "contactPhone": "+380679893565"
+            }
+        }
+    },
+    {
+        "regionDescr": "Волинська",
+        "cityDescr": "Луцьк",
+        "addressDescr": "Шопена",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ВОЛИНСЬКА",
+            "regionID": "d15e301a-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Луцьк",
+            "cityID": "62c3d4a4-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Шопена",
+            "addressID": "8ce20997-e0d2-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Волинська",
+            "data": {
+                "city": "Луцьк",
+                "street": "Шопена",
+                "streetNum": "1",
+                "address": "43025, Волинська обл.  м. Луцьк, вул. Шопена 1",
+                "contacts": [
+                    {
+                        "email": "mkalapusha@ukrgasbank.com",
+                        "name": "Калапуша Микола Мелетійович",
+                        "phone": "+380503780561"
+                    }
+                ],
+                "contactPhone": "+380503780561"
+            }
+        }
+    },
+    {
+        "regionDescr": "Дніпропетровська",
+        "cityDescr": "%Дніпропетровськ%",
+        "addressDescr": "Челюскіна",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ДНІПРОПЕТРОВСЬКА",
+            "regionID": "d15e301b-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Дніпро (Дніпропетровськ)",
+            "cityID": "50c5951b-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Челюскіна",
+            "addressID": "da41978f-ed9f-11df-b61a-00215aee3ebe"
+        },
+        "data": {
+            "name": "Дніпропетровська",
+            "data": {
+                "city": "%Дніпропетровськ%",
+                "street": "Челюскіна",
+                "streetNum": "12",
+                "address": "49000, м.Дніпро (Дніпропетровськ), Бабушкінський р-н вул. Челюскіна 12",
+                "contacts": [
+                    {
+                        "email": "mprudnykova@ukrgasbank.com",
+                        "name": "Прудникова Марина Сергіївна",
+                        "phone": "+380967706367"
+                    }
+                ],
+                "contactPhone": "+380967706367"
+            }
+        }
+    },
+    {
+        "regionDescr": "Житомирська",
+        "cityDescr": "Житомир",
+        "addressDescr": "Київська",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЖИТОМИРСЬКА",
+            "regionID": "d15e301d-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Житомир",
+            "cityID": "56bdd203-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Київська",
+            "addressID": "fbfafa9f-e0d2-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Житомирська",
+            "data": {
+                "city": "Житомир",
+                "street": "Київська",
+                "streetNum": "74",
+                "address": "10030, м. Житомир, вул Київська, 74",
+                "contacts": [
+                    {
+                        "email": "nmazurevich@ukrgasbank.com",
+                        "name": "Мазуревич Наталія Василівна",
+                        "phone": "+380674270865"
+                    }
+                ],
+                "contactPhone": "+380674270865"
+            }
+        }
+    },
+    {
+        "regionDescr": "Закарпатська",
+        "cityDescr": "Ужгород",
+        "addressDescr": "Швабська",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЗАКАРПАТСЬКА",
+            "regionID": "d15e301e-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Ужгород",
+            "cityID": "8716218d-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Швабська",
+            "addressID": "152e95a0-e0d3-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Закарпатська",
+            "data": {
+                "city": "Ужгород",
+                "street": "Швабська",
+                "streetNum": "70",
+                "address": "88018, м.Ужгород, вул. Швабська 70",
+                "contacts": [
+                    {
+                        "email": "apopalenyk@ukrgasbank.com",
+                        "name": "Опаленик Артем Петрович",
+                        "phone": "+380990409918"
+                    }
+                ],
+                "contactPhone": "+380990409918"
+            }
+        }
+    },
+    {
+        "regionDescr": "Запорізька",
+        "cityDescr": "Запоріжжя",
+        "addressDescr": "Незалежної України",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЗАПОРІЗЬКА",
+            "regionID": "d15e301f-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Запоріжжя",
+            "cityID": "56bdd4c6-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Незалежної України",
+            "addressID": "2198b57e-e0d3-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Запорізька",
+            "data": {
+                "city": "Запоріжжя",
+                "street": "Незалежної України",
+                "streetNum": "39",
+                "address": "69037, м. Запоріжжя, Вознесенівський р-н вул. Незалежної України 39",
+                "contacts": [
+                    {
+                        "email": "gliashenko@ukrgasbank.com",
+                        "name": "Ляшенко Ганна Миколаївна",
+                        "phone": "+380973596554"
+                    }
+                ],
+                "contactPhone": "+380973596554"
+            }
+        }
+    },
+    {
+        "regionDescr": "Івано-Франківська",
+        "cityDescr": "Івано-Франківськ",
+        "addressDescr": "вул. Мельника",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ІВАНО-ФРАНКІВСЬКА",
+            "regionID": "d15e3020-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Івано-Франківськ",
+            "cityID": "56bdd87c-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Мельника",
+            "addressID": "476d457e-e0d3-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Івано-Франківська",
+            "data": {
+                "city": "Івано-Франківськ",
+                "street": "вул. Мельника",
+                "streetNum": "11-А",
+                "address": "76000, м. Івано-Франківськ, вул. А. Мельника, 11-А",
+                "contacts": [
+                    {
+                        "email": "nhavrylko@ukrgasbank.com",
+                        "name": "Гаврилко Наталія Вікторівна",
+                        "phone": "+380509500372"
+                    }
+                ],
+                "contactPhone": "+380509500372"
+            }
+        }
+    },
+    {
+        "regionDescr": "Київська",
+        "cityDescr": "Київ",
+        "addressDescr": "%Січових%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "КИЇВСЬКА",
+            "regionID": "d15e3021-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Київ",
+            "cityID": "5cb61671-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Січових Стрільців (Артема)",
+            "addressID": "6e23d411-e0d2-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Київська",
+            "data": {
+                "city": "Київ",
+                "street": "%Січових%",
+                "streetNum": "10-Б",
+                "address": "04053, м. Київ, вул. Січових Стрільців, 10-Б",
+                "contacts": [
+                    {
+                        "email": "skarchevskyi@ukrgasbank.com",
+                        "name": "Карчевський Сергій Олександрович",
+                        "phone": "+380638357407"
+                    }
+                ],
+                "contactPhone": "+380638357407"
+            }
+        }
+    },
+    {
+        "regionDescr": "Кіровоградська",
+        "cityDescr": "Кропивницький (Кіровоград)",
+        "addressDescr": "%Соборна%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "КІРОВОГРАДСЬКА",
+            "regionID": "d15e3022-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Кропивницький (Кіровоград)",
+            "cityID": "5cb61730-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Соборна (50-річчя Жовтня)",
+            "addressID": "7ea9e31e-e0d3-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Кіровоградська",
+            "data": {
+                "city": "Кропивницький (Кіровоград)",
+                "street": "%Соборна%",
+                "streetNum": "17",
+                "address": "25009, м. Кропивницький, вул. Соборна, 17",
+                "contacts": [
+                    {
+                        "email": "asekovalenko@ukrgasbank.com",
+                        "name": "Коваленко Анастасія Сергіївна",
+                        "phone": "+380677964559"
+                    }
+                ],
+                "contactPhone": "+380677964559"
+            }
+        }
+    },
+    {
+        "regionDescr": "Львівська",
+        "cityDescr": "Львів",
+        "addressDescr": "Стрийська",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЛЬВІВСЬКА",
+            "regionID": "d15e3024-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Львів",
+            "cityID": "62c3d54a-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Стрийська",
+            "addressID": "da910752-e0d3-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Львівська",
+            "data": {
+                "city": "Львів",
+                "street": "Стрийська",
+                "streetNum": "98",
+                "address": "79026, м.Львів, вул. Стрийська, 98",
+                "contacts": [
+                    {
+                        "email": "snikitina@ukrgasbank.com",
+                        "name": "Нікітіна Стефанія Петрівна",
+                        "phone": "+380975878176"
+                    }
+                ],
+                "contactPhone": "+380975878176"
+            }
+        }
+    },
+    {
+        "regionDescr": "Миколаївська",
+        "cityDescr": "Миколаїв",
+        "addressDescr": "Декабристів",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "МИКОЛАЇВСЬКА",
+            "regionID": "d15e3025-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Миколаїв",
+            "cityID": "68cf2798-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Декабристів",
+            "addressID": "ff61b77e-e0d3-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Миколаївська",
+            "data": {
+                "city": "Миколаїв",
+                "street": "Декабристів",
+                "streetNum": "43831",
+                "address": "54001, м. Миколаїв, вул. Декабристів, 1/1",
+                "contacts": [
+                    {
+                        "email": "nkoziol@ukrgasbank.com",
+                        "name": "Козіол Наталя Дмитрівна",
+                        "phone": "+380675124776"
+                    }
+                ],
+                "contactPhone": "+380675124776"
+            }
+        }
+    },
+    {
+        "regionDescr": "Одеська",
+        "cityDescr": "Одеса",
+        "addressDescr": "Пушкінська",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ОДЕСЬКА",
+            "regionID": "d15e3026-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Одеса",
+            "cityID": "6ed81d37-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Пушкінська",
+            "addressID": "1e604745-e0d4-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Одеська",
+            "data": {
+                "city": "Одеса",
+                "street": "Пушкінська",
+                "streetNum": "7",
+                "address": "65026, м. Одеса, Приморський р-н вул. Пушкінська 7",
+                "contacts": [
+                    {
+                        "email": "ymkravchenko@ukrgasbank.com",
+                        "name": "Кравченко Юлія Миколаївна",
+                        "phone": "+380502271272"
+                    }
+                ],
+                "contactPhone": "+380502271272"
+            }
+        }
+    },
+    {
+        "regionDescr": "Полтавська",
+        "cityDescr": "Полтава",
+        "addressDescr": "Соборності%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ПОЛТАВСЬКА",
+            "regionID": "d15e3027-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Полтава",
+            "cityID": "74dc4d38-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Соборності (Жовтнева)",
+            "addressID": "6d2d1f4c-eda2-11df-b61a-00215aee3ebe"
+        },
+        "data": {
+            "name": "Полтавська",
+            "data": {
+                "city": "Полтава",
+                "street": "Соборності%",
+                "streetNum": "19",
+                "address": "36000, м. Полтава, вул. Соборності,19",
+                "contacts": [
+                    {
+                        "email": "akolosov@ukrgasbank.com",
+                        "name": "Колосов Андрій Анатолійович",
+                        "phone": "+380675320632"
+                    }
+                ],
+                "contactPhone": "+380675320632"
+            }
+        }
+    },
+    {
+        "regionDescr": "Рівненська",
+        "cityDescr": "Рівне",
+        "addressDescr": "Княгиницького%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "РІВНЕНСЬКА",
+            "regionID": "d15e3028-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Рівне",
+            "cityID": "7ad950ad-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Княгиницького",
+            "addressID": "5715996a-e0d4-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Рівненська",
+            "data": {
+                "city": "Рівне",
+                "street": "Княгиницького%",
+                "streetNum": "5-А",
+                "address": "33016, м.Рівне, вул. Княгиницького, 5А",
+                "contacts": [
+                    {
+                        "email": "mmatyukha@ukrgasbank.com",
+                        "name": "Матюха Максим Валерійович",
+                        "phone": "+380674478381"
+                    }
+                ],
+                "contactPhone": "+380674478381"
+            }
+        }
+    },
+    {
+        "regionDescr": "Сумська",
+        "cityDescr": "Суми",
+        "addressDescr": "%Кондратьєва%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "СУМСЬКА",
+            "regionID": "d15e302a-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Суми",
+            "cityID": "80f55a5e-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Кондратьєва (Кірова)",
+            "addressID": "69674b3d-e0d4-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Сумська",
+            "data": {
+                "city": "Суми",
+                "street": "%Кондратьєва%",
+                "streetNum": "4",
+                "address": "40030, м. Суми, вул. Герасима Кондратьєва 4",
+                "contacts": [
+                    {
+                        "email": "inesterov@ukrgasbank.com",
+                        "name": "Нестеров Ігор Анатолійович",
+                        "phone": "+380667129493"
+                    }
+                ],
+                "contactPhone": "+380667129493"
+            }
+        }
+    },
+    {
+        "regionDescr": "Донецька",
+        "cityDescr": "Краматорськ",
+        "addressDescr": "Стуса%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ДОНЕЦЬКА",
+            "regionID": "d15e301c-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Краматорськ",
+            "cityID": "5cb61c49-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Стуса Василя ( Соціалістична )",
+            "addressID": "3685b811-eda0-11df-b61a-00215aee3ebe"
+        },
+        "data": {
+            "name": "Донецька",
+            "data": {
+                "city": "Краматорськ",
+                "street": "Стуса%",
+                "streetNum": "74",
+                "address": "84300 Донецька обл. м. Краматорськ вул.Василя Стуса(Соціалістична) 74",
+                "contacts": [
+                    {
+                        "email": "okulish@ukrgasbank.com",
+                        "name": "Кулиш Елена Павловна",
+                        "phone": "+380502792947"
+                    }
+                ],
+                "contactPhone": "+380502792947"
+            }
+        }
+    },
+    {
+        "regionDescr": "Тернопільська",
+        "cityDescr": "Тернопіль",
+        "addressDescr": "Франка%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ТЕРНОПІЛЬСЬКА",
+            "regionID": "d15e302b-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Тернопіль",
+            "cityID": "80f55c6a-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Франка Івана",
+            "addressID": "880b4237-e0d4-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Тернопільська",
+            "data": {
+                "city": "Тернопіль",
+                "street": "Франка%",
+                "streetNum": "23",
+                "address": "46004, м.Тернопіль, вул. I.Франка, 23",
+                "contacts": [
+                    {
+                        "email": "ru_shveda@ukrgasbank.com",
+                        "name": "Шведа Руслан Юрійович",
+                        "phone": "+380504110610"
+                    }
+                ],
+                "contactPhone": "+380504110610"
+            }
+        }
+    },
+    {
+        "regionDescr": "Харківська",
+        "cityDescr": "Харків",
+        "addressDescr": "Космічна",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ХАРКІВСЬКА",
+            "regionID": "d15e302c-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Харків",
+            "cityID": "87162365-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Космічна",
+            "addressID": "a14ac85b-e0d4-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Харківська",
+            "data": {
+                "city": "Харків",
+                "street": "Космічна",
+                "streetNum": "20",
+                "address": "61145, м.Харків, вул. Космічна, 20",
+                "contacts": [
+                    {
+                        "email": "vlavrovska@ukrgasbank.com",
+                        "name": "Лавровська Вікторія Анатоліївна",
+                        "phone": "+380954084047"
+                    }
+                ],
+                "contactPhone": "+380954084047"
+            }
+        }
+    },
+    {
+        "regionDescr": "Херсонська",
+        "cityDescr": "Херсон",
+        "addressDescr": "Перекопська",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ХЕРСОНСЬКА",
+            "regionID": "d15e302d-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Херсон",
+            "cityID": "8716239a-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Перекопська",
+            "addressID": "5509d04d-eda3-11df-b61a-00215aee3ebe"
+        },
+        "data": {
+            "name": "Херсонська",
+            "data": {
+                "city": "Херсон",
+                "street": "Перекопська",
+                "streetNum": "21",
+                "address": "73024, м. Херсон, вул. Перекопська 21",
+                "contacts": [
+                    {
+                        "email": "oipatenko@ukrgasbank.com",
+                        "name": "Іпатенко Ольга Вікторівна",
+                        "phone": "+380505646781"
+                    }
+                ],
+                "contactPhone": "+380505646781"
+            }
+        }
+    },
+    {
+        "regionDescr": "Хмельницька",
+        "cityDescr": "Хмельницький",
+        "addressDescr": "Проскурівського підпілля",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ХМЕЛЬНИЦЬКА",
+            "regionID": "d15e302e-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Хмельницький",
+            "cityID": "871623ec-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Проскурівського Підпілля",
+            "addressID": "26085e87-0229-11ea-80e7-1c98ec135261"
+        },
+        "data": {
+            "name": "Хмельницька",
+            "data": {
+                "city": "Хмельницький",
+                "street": "Проскурівського підпілля",
+                "streetNum": "105",
+                "address": "29000, м. Хмельницький, вул. Проскурівського підпілля, 105",
+                "contacts": [
+                    {
+                        "email": "sdmitriieva@ukrgasbank.com",
+                        "name": "Дмітрієва Світлана Олександрівна",
+                        "phone": "+380682021476"
+                    }
+                ],
+                "contactPhone": "+380682021476"
+            }
+        }
+    },
+    {
+        "regionDescr": "Черкаська",
+        "cityDescr": "Черкаси",
+        "addressDescr": "Гоголя",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЧЕРКАСЬКА",
+            "regionID": "d15e302f-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Черкаси",
+            "cityID": "8716275b-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Гоголя",
+            "addressID": "625a07b7-16a1-11ea-80e7-1c98ec135261"
+        },
+        "data": {
+            "name": "Черкаська",
+            "data": {
+                "city": "Черкаси",
+                "street": "Гоголя",
+                "streetNum": "221",
+                "address": "18000, м.Черкаси, вул. Гоголя 221",
+                "contacts": [
+                    {
+                        "email": "skuzkin@ukrgasbank.com",
+                        "name": "Кузькін Сергій Васильович",
+                        "phone": "+380951546828"
+                    }
+                ],
+                "contactPhone": "+380951546828"
+            }
+        }
+    },
+    {
+        "regionDescr": "Чернівецька",
+        "cityDescr": "Чернівці",
+        "addressDescr": "Героїв Майдану%",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЧЕРНІВЕЦЬКА",
+            "regionID": "d15e3030-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Чернівці",
+            "cityID": "8716279d-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Героїв Майдану (Червоноармійська)",
+            "addressID": "1cb86420-e0d5-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Чернівецька",
+            "data": {
+                "city": "Чернівці",
+                "street": "Героїв Майдану%",
+                "streetNum": "77",
+                "address": "58013, м. Чернівці, вул. Героїв Майдану, 77",
+                "contacts": [
+                    {
+                        "email": "imatushchak@ukrgasbank.com",
+                        "name": "Матущак Ірина Володимирівна",
+                        "phone": "+380953999814"
+                    }
+                ],
+                "contactPhone": "+380953999814"
+            }
+        }
+    },
+    {
+        "regionDescr": "Чернігівська",
+        "cityDescr": "Чернігів",
+        "addressDescr": "вул. Шевченка",
+        "meest": {
+            "countryID": "c35b6195-4ea3-11de-8591-001d600938f8",
+            "regionUA": "ЧЕРНІГІВСЬКА",
+            "regionID": "d15e3031-60b0-11de-be1e-0030485903e8",
+            "cityUA": "Чернігів",
+            "cityID": "8716279f-749b-11df-b112-00215aee3ebe",
+            "addressUA": "вул. Шевченка",
+            "addressID": "28fc5ebe-e0d5-11df-9b37-00215aee3ebe"
+        },
+        "data": {
+            "name": "Чернігівська",
+            "data": {
+                "city": "Чернігів",
+                "street": "вул. Шевченка",
+                "streetNum": "32",
+                "address": "14013, м. Чернігів, вул. Шевченка, 32",
+                "contacts": [
+                    {
+                        "email": "yedmytrieiev@ukrgasbank.com",
+                        "name": "Дмитрієв Євген Олександрович",
+                        "phone": "+380688143739"
+                    }
+                ],
+                "contactPhone": "+380688143739"
+            }
+        }
+    }
+]
