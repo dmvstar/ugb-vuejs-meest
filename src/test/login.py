@@ -66,6 +66,8 @@ if __name__ == '__main__':
         print(login.cmd)
         output = subprocess.getoutput( login.cmd )
         print(output)
+        QtWidgets.QMessageBox.warning(
+                login, 'Debug', output)
         
         #Another session of SNX is already running, aborting...
         #SNX: Access denied - wrong user name or password
