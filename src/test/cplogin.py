@@ -2,6 +2,8 @@
 
 from PyQt5 import QtWidgets
 from PyQt5 import QtGui 
+from PyQt5 import QtCore 
+import os
 
 # from mainwindow import Ui_MainWindow
 
@@ -32,6 +34,13 @@ class Login(QtWidgets.QDialog):
         self.textPass.setText('')
         self.textPass.setFocus()
         self.cmd = ""
+        programname = os.path.basename(__file__)
+        print(programname)
+        programbase, ext = os.path.splitext(programname)  # extract basename and ext from filename
+        settings = QtCore.QSettings("company", programbase) 
+        self.textName.setText(str(settings.value("textName")))  # restore lineEditFile
+        self.textCode.setText(str(settings.value("textCode")))  # restore lineEditFile
+
         #str = "this is string example....wow!!!";
         #print("Length of the string: ", len(str))
         #print("Length of the string: ", len( self.textPass.text() ))
@@ -62,6 +71,15 @@ class Login(QtWidgets.QDialog):
             if output.find("connected")>=0:
                 QtWidgets.QMessageBox.warning(
                         self, 'Info', output) 
+            programname = os.path.basename(__file__)
+            programbase, ext = os.path.splitext(programname)  # extract basename and ext from filename
+            settings = QtCore.QSettings("company", programbase)    
+            settings.setValue("geometry", self.saveGeometry())  # save window geometry
+            #settings.setValue("state", self.saveState(UI_VERSION))   # save settings (UI_VERSION is a constant you should increment when your UI changes significantly to prevent attempts to restore an invalid state.)
+            # save ui values, so they can be restored next time
+            settings.setValue("textName", self.textName.text());
+            settings.setValue("textCode", self.textCode.text());
+
             self.accept()
         else:
             QtWidgets.QMessageBox.warning(
