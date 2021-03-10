@@ -9,8 +9,10 @@ class Login(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
         title = "Login CheckPoint"
+        width = 300;height = 200
         self.setWindowTitle(title) 
         self.setWindowIcon(QtGui.QIcon('face-cool.png')) 
+        self.setMinimumSize(width, height) 
 
         self.textName = QtWidgets.QLineEdit(self)
         self.textCode = QtWidgets.QLineEdit(self)
@@ -45,10 +47,26 @@ class Login(QtWidgets.QDialog):
             code = self.textCode.text()
             pins = self.textPass.text()
             self.cmd = 'echo '+ code + pins + '| snx -g -s 91.208.198.207 -u '+ name
+            
+            output = subprocess.getoutput( self.cmd )
+            print(output)
+            #Another session of SNX is already running, aborting...
+            if output.find("Another")>=0:
+                QtWidgets.QMessageBox.warning(
+                        self, 'Warning', output)               
+            #SNX: Access denied - wrong user name or password
+            if output.find("Access denied")>=0:
+                QtWidgets.QMessageBox.warning(
+                        self, 'Error', output)      
+            #SNX - connected.
+            if output.find("connected")>=0:
+                QtWidgets.QMessageBox.warning(
+                        self, 'Info', output) 
             self.accept()
         else:
             QtWidgets.QMessageBox.warning(
                 self, 'Error', 'Bad user or password '+self.textPass.text())    
+    
     def handleLogout(self):
         #
         self.cmd = "snx -d"
@@ -57,6 +75,7 @@ class Login(QtWidgets.QDialog):
         #Another session of SNX is already running, aborting...
         QtWidgets.QMessageBox.warning(
                     self, 'Info', output) 
+
 class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(Window, self).__init__(parent)
@@ -77,18 +96,3 @@ if __name__ == '__main__':
         #sys.exit(app.exec_())
         str = 'Ok, '+ 'Execute snx ...'
         print(str)        
-        print(login.cmd)
-        output = subprocess.getoutput( login.cmd )
-        print(output)
-        #Another session of SNX is already running, aborting...
-        if output.find("Another")>=0:
-            QtWidgets.QMessageBox.warning(
-                    login, 'Warning', output)               
-        #SNX: Access denied - wrong user name or password
-        if output.find("Access denied")>=0:
-            QtWidgets.QMessageBox.warning(
-                    login, 'Error', output)      
-        #SNX - connected.
-        if output.find("connected")>=0:
-            QtWidgets.QMessageBox.warning(
-                    login, 'Info', output)   
