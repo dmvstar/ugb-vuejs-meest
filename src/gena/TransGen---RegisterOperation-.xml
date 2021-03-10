@@ -1,0 +1,52 @@
+﻿<-- TransGen--2021-02-25-10-14-12-2281842-23668-23-RegisterOperation--936300715.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<Trace>
+  <RequestType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <TransferId>334455</TransferId>
+    <SystemCode>mg</SystemCode>
+    <SystemName>MoneyGram</SystemName>
+    <Operation>2</Operation>
+    <Type>1</Type>
+    <OperationDate>2021-02-25T10:14:11+02:00</OperationDate>
+    <ABSDate>2021-02-25T09:14:11+02:00</ABSDate>
+    <TransferAmount>9.99</TransferAmount>
+    <FromCountry>804</FromCountry>
+    <ToCountry>804</ToCountry>
+    <TransferСurrency>980</TransferСurrency>
+    <PointBank>/304665/000000/060000/</PointBank>
+    <PointSW>AFFR</PointSW>
+    <UserLogin>dummy</UserLogin>
+    <UserName>clerk FIO</UserName>
+    <UserID>788</UserID>
+    <Sender>
+      <LastName>PETRENKO</LastName>
+      <FirstName>SEMEN</FirstName>
+      <Residency>true</Residency>
+
+      <DocumentName>НАЦИОНАЛЬНЫЙ ПАСПОРТ</DocumentName>
+      <DocumentSeries>NN</DocumentSeries>
+      <DocumentNumber>123456</DocumentNumber>
+      <DocumentIssueDate>2019-02-25</DocumentIssueDate>
+      <DocumentIssuedBy>ROVD 1</DocumentIssuedBy>
+
+      <Account>UA213223130000026007233566001</Account>
+
+      <Country>804</Country>
+      <State>KHARKIVSKA OBL</State>
+      <Phone>380504243211</Phone>
+      <City>Kharkiv</City>
+      <ZipCode>123123</ZipCode>
+      <Address>Сумська, д 24, к 88</Address>
+    </Sender>
+    <Receiver>
+      <LastName>SHEVCHENKO</LastName>
+      <FirstName>ANDRIY</FirstName>
+      <Residency>true</Residency>
+      <DocumentName>НАЦИОНАЛЬНЫЙ ПАСПОРТ</DocumentName>
+      <DocumentSeries>MM</DocumentSeries>
+      <DocumentNumber>334343</DocumentNumber>
+      <DocumentIssueDate>2018-02-25</DocumentIssueDate>
+      <DocumentIssuedBy>ROVD 2</DocumentIssuedBy>
+    </Receiver>
+  </RequestType>
+</Trace>

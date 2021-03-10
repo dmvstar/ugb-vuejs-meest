@@ -1,30 +1,36 @@
 from PyQt5 import QtWidgets
+from PyQt5 import QtGui 
+
 # from mainwindow import Ui_MainWindow
 
 class Login(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
+        title = "Login CheckPoint"
+        self.setWindowTitle(title) 
+        self.setWindowIcon(QtGui.QIcon('face-cool.png')) 
+
         self.textName = QtWidgets.QLineEdit(self)
         self.textCode = QtWidgets.QLineEdit(self)
         self.textPass = QtWidgets.QLineEdit(self)
         self.buttonLogin = QtWidgets.QPushButton('Login', self)
         self.buttonLogin.clicked.connect(self.handleLogin)
+        self.buttonLogout = QtWidgets.QPushButton('Logout', self)
+        self.buttonLogout.clicked.connect(self.handleLogout)
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.textName)
         layout.addWidget(self.textCode)
         layout.addWidget(self.textPass)
+        layout.addWidget(self.buttonLogout)
         layout.addWidget(self.buttonLogin)
         self.textName.setText('dstarzhynskyi')
         self.textCode.setText('3264')
         self.textPass.setText('')
         self.textPass.setFocus()
-        print("self.textPass.text().length()")
-        str = "this is string example....wow!!!";
         self.cmd = ""
-        print("Length of the string: ", len(str))
-        print("Length of the string: ", len( self.textPass.text() ))
-        
-
+        #str = "this is string example....wow!!!";
+        #print("Length of the string: ", len(str))
+        #print("Length of the string: ", len( self.textPass.text() ))
 
     def handleLogin(self):
         #QtWidgets.QMessageBox.warning(
@@ -40,8 +46,15 @@ class Login(QtWidgets.QDialog):
             self.accept()
         else:
             QtWidgets.QMessageBox.warning(
-                self, 'Error', 'Bad user or password '+self.textPass.text())
-
+                self, 'Error', 'Bad user or password '+self.textPass.text())    
+    def handleLogout(self):
+        #
+        self.cmd = "snx -d"
+        output = subprocess.getoutput( self.cmd )
+        print(output)
+        #Another session of SNX is already running, aborting...
+        QtWidgets.QMessageBox.warning(
+                    self, 'Info', output) 
 class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(Window, self).__init__(parent)
@@ -54,8 +67,7 @@ if __name__ == '__main__':
     import subprocess
 
     app = QtWidgets.QApplication(sys.argv)
-    login = Login()
-    
+    login = Login()    
 
     if login.exec_() == QtWidgets.QDialog.Accepted:
         #window = Window()
@@ -67,14 +79,14 @@ if __name__ == '__main__':
         output = subprocess.getoutput( login.cmd )
         print(output)
         #Another session of SNX is already running, aborting...
-        if(output.find("Another")>=0)
+        if output.find("Another")>=0:
             QtWidgets.QMessageBox.warning(
                     login, 'Warning', output)               
         #SNX: Access denied - wrong user name or password
-        if(output.find("Access denied")>=0)
+        if output.find("Access denied")>=0:
             QtWidgets.QMessageBox.warning(
                     login, 'Error', output)      
         #SNX - connected.
-        if(output.find("connected")>=0)
+        if output.find("connected")>=0:
             QtWidgets.QMessageBox.warning(
                     login, 'Info', output)   

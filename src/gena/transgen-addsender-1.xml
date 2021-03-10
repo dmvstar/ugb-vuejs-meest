@@ -51,6 +51,7 @@ function buildSenderInfo(person) {
         <BirthPlace>место рождения</BirthPlace>
 
         <Country>Ukraine</Country>
+          <State>KHARKIVSKA OBL</State>
         <Phone>0993334455</Phone>
         <City>Kijow</City>
         <ZipCode>02000</ZipCode>
