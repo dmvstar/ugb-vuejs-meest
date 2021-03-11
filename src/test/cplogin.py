@@ -19,6 +19,8 @@ class Login(QtWidgets.QDialog):
         self.textName = QtWidgets.QLineEdit(self)
         self.textCode = QtWidgets.QLineEdit(self)
         self.textPass = QtWidgets.QLineEdit(self)
+        self.buttonStatus = QtWidgets.QPushButton('Status', self)
+        self.buttonStatus.clicked.connect(self.handleStatus)
         self.buttonLogin = QtWidgets.QPushButton('Login', self)
         self.buttonLogin.clicked.connect(self.handleLogin)
         self.buttonLogout = QtWidgets.QPushButton('Logout', self)
@@ -27,6 +29,7 @@ class Login(QtWidgets.QDialog):
         layout.addWidget(self.textName)
         layout.addWidget(self.textCode)
         layout.addWidget(self.textPass)
+        layout.addWidget(self.buttonStatus)
         layout.addWidget(self.buttonLogout)
         layout.addWidget(self.buttonLogin)
         self.textName.setText('dstarzhynskyi')
@@ -44,6 +47,16 @@ class Login(QtWidgets.QDialog):
         #str = "this is string example....wow!!!";
         #print("Length of the string: ", len(str))
         #print("Length of the string: ", len( self.textPass.text() ))
+
+    def handleStatus(self):
+        #
+        self.cmd = "ifconfig | grep -A 1 tunsnx"
+
+        print("Status")
+        output = subprocess.getoutput( self.cmd )
+        QtWidgets.QMessageBox.information(
+                        self, 'Info', output)
+        print(output)
 
     def handleLogin(self):
         #QtWidgets.QMessageBox.warning(
