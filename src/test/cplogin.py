@@ -44,9 +44,15 @@ class Login(QtWidgets.QDialog):
         programname = os.path.basename(__file__)
         print(programname)
         programbase, ext = os.path.splitext(programname)  # extract basename and ext from filename
-        settings = QtCore.QSettings("company", programbase) 
-        self.textName.setText(str(settings.value("textName")))  # restore lineEditFile
-        self.textCode.setText(str(settings.value("textCode")))  # restore lineEditFile
+        settings = QtCore.QSettings("star", programbase) 
+        value = str(settings.value("textName"))
+        if value == "None":
+            value = ""
+        self.textName.setText(value)  # restore lineEditFile
+        value = str(settings.value("textCode"))
+        if value == "None":    
+            value = ""
+        self.textCode.setText(value)  # restore lineEditFile
 
         #str = "this is string example....wow!!!";
         #print("Length of the string: ", len(str))
@@ -68,6 +74,16 @@ class Login(QtWidgets.QDialog):
         
         #if (self.textName.text() == 'foo' and
         #    self.textPass.text() == 'bar'):
+
+        programname = os.path.basename(__file__)
+        programbase, ext = os.path.splitext(programname)  # extract basename and ext from filename
+        settings = QtCore.QSettings("star", programbase)    
+        settings.setValue("geometry", self.saveGeometry())  # save window geometry
+        #settings.setValue("state", self.saveState(UI_VERSION))   # save settings (UI_VERSION is a constant you should increment when your UI changes significantly to prevent attempts to restore an invalid state.)
+        # save ui values, so they can be restored next time
+        settings.setValue("textName", self.textName.text());
+        settings.setValue("textCode", self.textCode.text());
+
         if (len( self.textPass.text() ) == 6):
             name = self.textName.text()
             code = self.textCode.text()
@@ -79,8 +95,7 @@ class Login(QtWidgets.QDialog):
                     self, 'Info', self.cmd) 
 
             output = subprocess.getoutput( self.cmd )
-            print(output)
-            
+            print(output)            
 
             #Another session of SNX is already running, aborting...
             if output.find("Another")>=0:
@@ -94,15 +109,6 @@ class Login(QtWidgets.QDialog):
             if output.find("connected")>=0:
                 QtWidgets.QMessageBox.information(
                         self, 'Info', output) 
-            programname = os.path.basename(__file__)
-            programbase, ext = os.path.splitext(programname)  # extract basename and ext from filename
-            settings = QtCore.QSettings("company", programbase)    
-            settings.setValue("geometry", self.saveGeometry())  # save window geometry
-            #settings.setValue("state", self.saveState(UI_VERSION))   # save settings (UI_VERSION is a constant you should increment when your UI changes significantly to prevent attempts to restore an invalid state.)
-            # save ui values, so they can be restored next time
-            settings.setValue("textName", self.textName.text());
-            settings.setValue("textCode", self.textCode.text());
-
             self.accept()
         else:
             QtWidgets.QMessageBox.warning(
