@@ -19,12 +19,15 @@ class Login(QtWidgets.QDialog):
         self.textName = QtWidgets.QLineEdit(self)
         self.textCode = QtWidgets.QLineEdit(self)
         self.textPass = QtWidgets.QLineEdit(self)
+
         self.buttonStatus = QtWidgets.QPushButton('Status', self)
         self.buttonStatus.clicked.connect(self.handleStatus)
-        self.buttonLogin = QtWidgets.QPushButton('Login', self)
-        self.buttonLogin.clicked.connect(self.handleLogin)
         self.buttonLogout = QtWidgets.QPushButton('Logout', self)
         self.buttonLogout.clicked.connect(self.handleLogout)
+        self.buttonLogin = QtWidgets.QPushButton('Login', self)
+        self.buttonLogin.clicked.connect(self.handleLogin)
+        
+
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.textName)
         layout.addWidget(self.textCode)
@@ -32,6 +35,7 @@ class Login(QtWidgets.QDialog):
         layout.addWidget(self.buttonStatus)
         layout.addWidget(self.buttonLogout)
         layout.addWidget(self.buttonLogin)
+
         self.textName.setText('dstarzhynskyi')
         self.textCode.setText('3264')
         self.textPass.setText('')
@@ -69,9 +73,15 @@ class Login(QtWidgets.QDialog):
             code = self.textCode.text()
             pins = self.textPass.text()
             self.cmd = 'echo '+ code + pins + '| snx -g -s 91.208.198.207 -u '+ name
-            
+            output = ""
+
+            QtWidgets.QMessageBox.information(
+                    self, 'Info', self.cmd) 
+
             output = subprocess.getoutput( self.cmd )
             print(output)
+            
+
             #Another session of SNX is already running, aborting...
             if output.find("Another")>=0:
                 QtWidgets.QMessageBox.warning(
@@ -82,7 +92,7 @@ class Login(QtWidgets.QDialog):
                         self, 'Error', output)      
             #SNX - connected.
             if output.find("connected")>=0:
-                QtWidgets.QMessageBox.warning(
+                QtWidgets.QMessageBox.information(
                         self, 'Info', output) 
             programname = os.path.basename(__file__)
             programbase, ext = os.path.splitext(programname)  # extract basename and ext from filename
