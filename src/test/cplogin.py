@@ -7,18 +7,23 @@ import os
 
 # from mainwindow import Ui_MainWindow
 
+version = "v. 0.0.16"
+
 class Login(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
-        title = "Login CheckPoint"
-        width = 300;height = 200
+        title = "Login CheckPoint ("+version+")"
+        width = 360;height = 200
         self.setWindowTitle(title) 
         self.setWindowIcon(QtGui.QIcon('face-cool.png')) 
         self.setMinimumSize(width, height) 
 
         self.textName = QtWidgets.QLineEdit(self)
+        self.textName.setToolTip("Username")
         self.textCode = QtWidgets.QLineEdit(self)
+        self.textCode.setToolTip("Static PIN")
         self.textPass = QtWidgets.QLineEdit(self)
+        self.textPass.setToolTip("OTP Code")
 
         self.buttonStatus = QtWidgets.QPushButton('Status', self)
         self.buttonStatus.clicked.connect(self.handleStatus)
@@ -89,13 +94,16 @@ class Login(QtWidgets.QDialog):
             code = self.textCode.text()
             pins = self.textPass.text()
             self.cmd = 'echo '+ code + pins + '| snx -g -s 91.208.198.207 -u '+ name
+            print( self.cmd )
             output = ""
 
-            QtWidgets.QMessageBox.information(
-                    self, 'Info', self.cmd) 
+            #QtWidgets.QMessageBox.information(
+            #        self, 'Info', self.cmd) 
 
             output = subprocess.getoutput( self.cmd )
             print(output)            
+            QtWidgets.QMessageBox.information(
+                    self, 'Info output', self.cmd + "\n"+ output) 
 
             #Another session of SNX is already running, aborting...
             if output.find("Another")>=0:
@@ -108,8 +116,8 @@ class Login(QtWidgets.QDialog):
             #SNX - connected.
             if output.find("connected")>=0:
                 QtWidgets.QMessageBox.information(
-                        self, 'Info', output) 
-            self.accept()
+                        self, 'Info', output)
+                self.accept()
         else:
             QtWidgets.QMessageBox.warning(
                 self, 'Error', 'Bad user or password '+self.textPass.text())    
