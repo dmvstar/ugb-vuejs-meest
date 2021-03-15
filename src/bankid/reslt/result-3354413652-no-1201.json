@@ -1,0 +1,104 @@
+{
+    "code": "1201",
+    "result": "no",
+    "time": "Work time is: 41.818 sec.",
+    "path": "/openbanking/bankid/client",
+    "data": {
+        "trans": {},
+        "result": {
+            "responseId": "12547",
+            "requestId": "12547",
+            "result": "1",
+            "hasErrors": "true",
+            "errors": {
+                "errorOperation": [
+                    {
+                        "code": "1059",
+                        "text": "Ошибка при получении конвертера: Ass:Ls.WebBank.ClientForm.Logic, AssType: Ls.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverterLs.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverter",
+                        "isError": "true",
+                        "exceptMessage": "<b>Value cannot be null.\r\nParameter name: type</b><br/><font color='#696969'>ArgumentNullException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>   at System.Activator.CreateInstance(Type type, Boolean nonPublic)\r\n   at System.Activator.CreateInstance(Type type)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetConnotationConverter(String assName, String assType)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetClientConnotations(Int32 clientId, Int32 scroogeClientId, Int32 branchId, Int32 providerId, IEnumerable`1 propertiesMapping, SyncGroup syncGroup, List`1& errors, Nullable`1 sessionId, IConvertLogHelper logger)</pre></div><br/>"
+                    },
+                    {
+                        "code": "1059",
+                        "text": "Ошибка при получении конвертера: Ass:Ls.WebBank.ClientForm.Logic, AssType: Ls.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverterLs.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverter",
+                        "isError": "true",
+                        "exceptMessage": "<b>Value cannot be null.\r\nParameter name: type</b><br/><font color='#696969'>ArgumentNullException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>   at System.Activator.CreateInstance(Type type, Boolean nonPublic)\r\n   at System.Activator.CreateInstance(Type type)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetLinkToPropConverter(String assName, String assType)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetClientRelationToConnotation(Int32 clientId, Int32 scroogeClientId, Int32 branchId, Int32 providerId, IEnumerable`1 propertiesMapping, SyncGroup syncGroup, List`1& errors, Nullable`1 sessionId, IConvertLogHelper logger)</pre></div><br/>"
+                    },
+                    {
+                        "code": "1059",
+                        "text": "Ошибка вставки реквизита [UGB_TCURelPers_F] значение [2], описание [Не пов'язана] в АБС",
+                        "isError": "true",
+                        "exceptMessage": "<b>Server was unable to process request. ---> SCROOGE-III operation failed.\nУстановлен запрет на действие [работа с реквизитами объектов] для филиала [1] за [13/03/2021]\n\n</b><br/><font color='#696969'>FaultException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>\r\nServer stack trace: \r\n   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)\r\n   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)\r\n\r\nException rethrown at [0]: \r\n   at System.Runtime.Remoting.Proxies.R..."
+                    }
+                ]
+            },
+            "client": {
+                "clientId": "3433626",
+                "scroogeId": "3385384",
+                "clientPushABS": "true"
+            }
+        },
+        "info": {
+            "wbId": 3433626,
+            "paramCode": "Customer_verification",
+            "paramDesc": "Спосіб верифікації клієнта",
+            "paramValue": "3",
+            "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+            "syncFlag": 4,
+            "syncCode": "Частично синхронизирован",
+            "cliStatus": 1,
+            "cliStatusCode": "Активный",
+            "smStates": [
+                {
+                    "Source": "log",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "NEW_CLIENT",
+                    "StateName": "Новий",
+                    "Date": "2021-03-13T15:10:49.223Z",
+                    "Info": "Новий"
+                },
+                {
+                    "Source": "state",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "NEW_CLIENT",
+                    "StateName": "Новий",
+                    "Date": "2021-03-13T15:11:00.130Z",
+                    "Info": "Новий"
+                }
+            ],
+            "terCheck": "1",
+            "terCheckInfo": "BankId Клиент [Захарченко Олександр Володимирович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+        },
+        "terr": {
+            "code": "400",
+            "result": "error",
+            "find": true,
+            "time": "Work time is: 288.07 msec.",
+            "path": "/openbanking/bankid/client/tercheck",
+            "responce": {
+                "checkClients": [
+                    {
+                        "name": "[Захарченко] [Олександр] Володимирович",
+                        "weight": "100.00",
+                        "systemName": "Санкционный список СНБО для физлиц",
+                        "ruleName": "Замена кириллицы латиницей"
+                    },
+                    {
+                        "name": "[Захарченко] [Олександр] Володимирович",
+                        "weight": "100.00",
+                        "systemName": "Санкционный список СНБО для физлиц",
+                        "ruleName": "Совпадение контекста"
+                    },
+                    {
+                        "name": "[Захарченко] [Олександр] Володимирович",
+                        "weight": "100.00",
+                        "systemName": "Санкционный список СНБО для физлиц",
+                        "ruleName": "Фонетическое подобие"
+                    }
+                ]
+            },
+            "data": "BankId Клиент [Захарченко Олександр Володимирович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+        },
+        "docs": {}
+    }
+}
