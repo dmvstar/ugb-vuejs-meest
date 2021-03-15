@@ -1,0 +1,27 @@
+SR529143 WebBank preprod перестал корректно работать сервис создания Клиента CreateClientFL
+
+После добавления специфически обязательного поля WebBank
+Номер ЄДДР
+SR529143 WebBank preprod перестал корректно работать сервис создания Клиента CreateClientFL
+Возможности установить флаг "поле может быть пустое", как это есть в интерфейсе, 
+у сервиса - НЕТ.
+
+Просьба дать комментарии и рекомендации по использованию.
+
+
+{"clientId":"3433627","scroogeId":"3385385","clientPushABS":"true"}
+
+[
+    {
+        "code": "1059",
+        "text": "Ошибка при получении конвертера: Ass:Ls.WebBank.ClientForm.Logic, AssType: Ls.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverterLs.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverter",
+        "isError": "true",
+        "exceptMessage": "<b>Value cannot be null.\r\nParameter name: type</b><br/><font color='#696969'>ArgumentNullException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>   at System.Activator.CreateInstance(Type type, Boolean nonPublic)\r\n   at System.Activator.CreateInstance(Type type)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetConnotationConverter(String assName, String assType)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetClientConnotations(Int32 clientId, Int32 scroogeClientId, Int32 branchId, Int32 providerId, IEnumerable`1 propertiesMapping, SyncGroup syncGroup, List`1& errors, Nullable`1 sessionId, IConvertLogHelper logger)</pre></div><br/>"
+    },
+    {
+        "code": "1059",
+        "text": "Ошибка при получении конвертера: Ass:Ls.WebBank.ClientForm.Logic, AssType: Ls.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverterLs.WebBank.ClientForm.Logic.Conversion.Converter.StringTrimConverter",
+        "isError": "true",
+        "exceptMessage": "<b>Value cannot be null.\r\nParameter name: type</b><br/><font color='#696969'>ArgumentNullException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>   at System.Activator.CreateInstance(Type type, Boolean nonPublic)\r\n   at System.Activator.CreateInstance(Type type)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetLinkToPropConverter(String assName, String assType)\r\n   at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.GetClientRelationToConnotation(Int32 clientId, Int32 scroogeClientId, Int32 branchId, Int32 providerId, IEnumerable`1 propertiesMapping, SyncGroup syncGroup, List`1& errors, Nullable`1 sessionId, IConvertLogHelper logger)</pre></div><br/>"
+    }
+]
