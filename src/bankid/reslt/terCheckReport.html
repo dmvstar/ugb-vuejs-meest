@@ -11,13 +11,19 @@
                 border: 1px solid black;
             }
 
+            h2 {
+                text-align: center;
+                color: red;
+            }
+
             body {
                 background-color: lightblue;
                 margin: 50;
                 padding: 50;
             }
+
             .centered {
-                margin: 0 auto;
+                margin: 50 auto;
                 text-align: left;
                 width: 800px;
             }
@@ -26,12 +32,30 @@
                 width: 100%;
             }
             .container {
+                background-color: rgb(246, 248, 212);
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
             .mydiv {
-                width: 600px;
+                background-color: lightblue;
+                width: 640px;
+            }
+            .formdiv {
+                border: 0 solid red;
+                margin: 10px;
+                background-color: rgb(246, 248, 212);
+            }
+
+            .block {
+                display: block;
+                width: 100%;
+                border: none;
+                background-color: #4CAF50;
+                padding: 14px 28px;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: center;
             }
         </style>
     </head>
@@ -39,26 +63,32 @@
     <body>
         <div class="container">
             <div class="mydiv">
-                <h2>TerCheck Report params</h2>
-                <form target="_blank" action="https://nr-openbanking.dev.ukrgasaws.com/openbanking/bankid/client/report/terlistreport">
+                <div>
+                    <h2>TerCheck Report params</h2>
+                </div>
+                <div class="formdiv">
+                    <form target="_blank" action="https://nr-openbanking.dev.ukrgasaws.com/openbanking/bankid/client/report/terlistreport">
 
-                    <b><label for="fname">Date from (YYYY-MM-DD):</label></b><br>
-                    <input type="text" id="dtFrom" name="dtFrom" value="2021-"><br>
+                        <p>
+                            <b><label for="fname">Date from (YYYY-MM-DD):</label></b><br>
+                            <input type="text" id="dtFrom" name="dtFrom" value="2021-"><br>
 
-                    <b><label for="lname">Date into (YYYY-MM-DD):</label></b><br>
-                    <input type="text" id="dtInto" name="dtInto" value="2021-"><br><br>
+                            <b><label for="lname">Date into (YYYY-MM-DD):</label></b><br>
+                            <input type="text" id="dtInto" name="dtInto" value="2021-"><br><br>
 
-                    <b><label for="lname">Source:</label></b><br>
+                            <b><label for="lname">Source:</label></b><br>
+                            <input type="radio" id="dev" name="src" value="DEV">
+                            <label for="dev">DEV</label><br>
 
-                    <input type="radio" id="dev" name="src" value="DEV">
-                    <label for="dev">DEV</label><br>
-
-                    <input type="radio" id="pro" name="src" value="PRO">
-                    <label for="pro">PRO</label><br>
-
-                    <input type="submit" value="Submit">
-
-                </form>
+                            <input type="radio" id="pro" name="src" value="PRO">
+                            <label for="pro">PRO</label><br><br>
+                            
+                        </p>
+                        <b>
+                            <button type="submit" class="block">SUBMIT</button>
+                        </b>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
