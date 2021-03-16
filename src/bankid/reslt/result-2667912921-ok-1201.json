@@ -1,0 +1,60 @@
+{
+    "code": "200",
+    "result": "ok",
+    "time": "Work time is: 16.997 sec.",
+    "path": "/openbanking/bankid/client",
+    "data": {
+        "trans": {},
+        "result": {
+            "responseId": "12547",
+            "requestId": "12547",
+            "result": "1",
+            "hasErrors": "false",
+            "errors": "",
+            "client": {
+                "clientId": "3433638",
+                "scroogeId": "3385396",
+                "clientPushABS": "true"
+            }
+        },
+        "info": {
+            "wbId": 3433638,
+            "paramCode": "Customer_verification",
+            "paramDesc": "Спосіб верифікації клієнта",
+            "paramValue": "3",
+            "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+            "syncFlag": 1,
+            "syncCode": "Синхронизирован",
+            "cliStatus": 1,
+            "cliStatusCode": "Активный",
+            "smStates": [
+                {
+                    "Source": "log",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "NEW_CLIENT",
+                    "StateName": "Новий",
+                    "Date": "2021-03-16T12:00:43.620Z",
+                    "Info": "Новий"
+                },
+                {
+                    "Source": "log",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "COMPLETE_CLIENT",
+                    "StateName": "Підтверджений, актуальний",
+                    "Date": "2021-03-16T12:00:49.323Z",
+                    "Info": "Актуальний згідно даних BankId"
+                },
+                {
+                    "Source": "state",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "COMPLETE_CLIENT",
+                    "StateName": "Підтверджений, актуальний",
+                    "Date": "2021-03-16T12:00:49.397Z",
+                    "Info": "Підтверджений, актуальний"
+                }
+            ],
+            "terCheck": "0"
+        },
+        "docs": {}
+    }
+}

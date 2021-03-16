@@ -1,0 +1,1250 @@
+[
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 9.06 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Блінніков] [Сергій] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Блінніков] [Сергій] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Блінніков] [Сергій] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Блінніков Сергій Анатолійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 4.136 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Бекузаров] [Батраз] Борисович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                },
+                {
+                    "name": "[Бєкузаров] [Батраз] Борисович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Бєкузаров] [Батраз] Борисович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Бєкузаров] [Батраз] Борисович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Бєкузаров Батраз Борисович] найден в [4][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 2.145 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Козенко] [Андрей] Дмитревич",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                },
+                {
+                    "name": "[Козенко] [Андрій] Дмитрович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Козенко] [Андрій] Дмитрович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Козенко] [Андрій] Дмитрович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Козенко Андрій Дмитрович] найден в [4][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 10.265 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Колганов] [Олександр] Юрійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Колганов] [Олександр] Юрійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Колганов] [Олександр] Юрійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Колганов Олександр Юрійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 8.538 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Лисенко] [Олександр] Григорович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Лисенко] [Олександр] Григорович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Лисенко] [Олександр] Григорович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Лисенко Олександр Григорович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 5.141 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Мігунов] [Антон] Сергійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Мігунов] [Антон] Сергійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Мігунов] [Антон] Сергійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Мігунов Антон Сергійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 6.922 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Орловська] [Олена] Миколаївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Орловська] [Олена] Миколаївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Орловська] [Олена] Миколаївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Орловська Олена Миколаївна] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 4.255 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Плугін А. Б.] не найден в списках террористов"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 5.82 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Расновський] [Андрій] Володимирович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Расновський] [Андрій] Володимирович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Расновський] [Андрій] Володимирович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Расновський Андрій Володимирович ] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 4.01 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Старцева] [Світлана] Миколаївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Старцева] [Світлана] Миколаївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Старцева] [Світлана] Миколаївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Старцева Світлана Миколаївна] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 14.692 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Філіппенко] [Оксана] Анатоліївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Філіппенко] [Оксана] Анатоліївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Філіппенко] [Оксана] Анатоліївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Філіппенко Оксана Анатоліївна] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 4.34 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Богачьова] [Регіна] Валентинівна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Богачьова] [Регіна] Валентинівна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Богачьова] [Регіна] Валентинівна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Богачьова Регіна Валентинівна ] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 5.268 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Бокунович] [Дмитро] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Бокунович] [Дмитро] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Бокунович] [Дмитро] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Бокунович Дмитро Валерійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 4.254 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Грінь] [Віктор] Якович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Грінь] [Віктор] Якович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Грінь] [Віктор] Якович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Грінь Віктор Якович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 6.474 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Карпов] [Павло] Миколайович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Карпов] [Павло] Миколайович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Карпов] [Павло] Миколайович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Карпов Павло Миколайович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 3.229 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Карасьов] [Олег]",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Карасьов] [Олег]",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Карасьов] [Олег]",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Карасьов Олег] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 7.303 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Луценко] [Михайло] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Луценко] [Михайло] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Луценко] [Михайло] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Луценко Михайло Анатолійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 3.813 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Мохов] [Андрій] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Мохов] [Андрій] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Мохов] [Андрій] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Мохов Андрій Валерійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 2.017 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Савицький] [Михайло] Олексійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Савицький] [Михайло] Олексійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Савицький] [Михайло] Олексійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Савицький Михайло Олексійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 5.45 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Черниш] [Євгенія] Сергіївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Черниш] [Євгенія] Сергіївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Черниш] [Євгенія] Сергіївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Черниш Євгенія Сергіївна] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 3.037 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Фадюхин] [Андрей] В.",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                },
+                {
+                    "name": "[Фадюхін] [Андрій] В.",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Фадюхін] [Андрій] В.",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Фадюхін] [Андрій] В.",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Фадюхін Андрій В.] найден в [4][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 11.006 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Щукин] [Александр] Вячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                },
+                {
+                    "name": "[Щукін] [Олександр] В'ячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Щукін] [Олександр] В'ячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Щукін] [Олександр] В'ячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Щукін Олександр В’ячеславович] найден в [4][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.521 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Блинков Сергей Анатольевич] не найден в списках террористов"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 3.187 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Бекузаров] [Батраз] Борисович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                },
+                {
+                    "name": "[Бєкузаров] [Батраз] Борисович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Бакузаров Батраз Борисович] найден в [2][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 4.424 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Косенко Андрей Дмитриевич] не найден в списках террористов"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 6.065 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": {
+                "name": "[Колганов] [Александр] Юрьевич",
+                "weight": "100.00",
+                "systemName": "Санкционный список СНБО для физлиц",
+                "ruleName": "Фонетическое подобие"
+            }
+        },
+        "data": "BankId Клиент [Кулганов Александр Юрьевич] найден в [1][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 6.343 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Лыченко Александр Григорьевич] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 4.461 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Мизунов Антон Сергеевич] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.64 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Орловая Елена Николаевна] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 1.128 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Пугин А. Б.] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.64 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Рановский Андрей Владимирович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 6.413 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Старева Светлана Николаевна] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 4.855 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Филпенко Оксана Анатольевна] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 1.878 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Бограчёва Регина Валентиновна] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.841 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Боркунович Дмитрий Валерьевич] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 1.638 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Гринченко Виктор Яковлевич] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 4.073 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Карпилов Павел Николаевич] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.294 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Карев Олег] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.504 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Луттенко Михаил Анатольевич] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 4.17 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Мохович Андрей Валерьевич] не найден в списках террористов"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 1.617 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": {
+                "name": "[Савицкий] [Михаил] Алексеевич",
+                "weight": "100.00",
+                "systemName": "Санкционный список СНБО для физлиц",
+                "ruleName": "Фонетическое подобие"
+            }
+        },
+        "data": "BankId Клиент [Савицкая Михаил Алексеевич] найден в [1][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 4.31 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": {
+                "name": "[Черниш] [Євгенія] Сергіївна",
+                "weight": "100.00",
+                "systemName": "Санкционный список СНБО для физлиц",
+                "ruleName": "Фонетическое подобие"
+            }
+        },
+        "data": "BankId Клиент [Чернош Евгения Сергеевна] найден в [1][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.605 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Фадушин Андрей В.] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.015 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Щукина Александр Вячеславович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.752 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Блінніков Андрій Анатолійович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.523 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Бєкузаров Андрій Борискович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 6.049 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Козенко Сергій Дмитрович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.062 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Колганов Віктор Юрійович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.204 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Лисенко Валенти Григорович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.848 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Мігунов Андрій Сергійович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.838 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Орловська Тетяна Миколівна] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.1 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Плугін Андрій Борисович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.2 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Расновський Сергій Водимирович ] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 1.999 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Старцева Світлана Ігорівна] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.484 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Філіппенко Оксана А.] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.194 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Богачьова Регіна Л.] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 6.516 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Бокунович Дмитро Сергійович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.611 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Грінь Степан Якович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.029 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Карпов Павло Андрійович] не найден в списках террористов"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 1.813 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Карасьов] [Олег]",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Карасьов] [Олег]",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Карасьов] [Олег]",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Карасьов Олег] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 3.693 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Луценко] [Михайло] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Луценко] [Михайло] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Луценко] [Михайло] Анатолійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Луценко Михайло Анатолійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 7.261 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Мохов] [Андрій] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Мохов] [Андрій] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Мохов] [Андрій] Валерійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Мохов Андрій Валерійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 6.542 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Савицький] [Михайло] Олексійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Савицький] [Михайло] Олексійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Савицький] [Михайло] Олексійович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Савицький Михайло Олексійович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 6.388 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Черниш] [Євгенія] Сергіївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Черниш] [Євгенія] Сергіївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Черниш] [Євгенія] Сергіївна",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Черниш Євгенія Сергіївна] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.504 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Фадюхін Андрійко Вікторович] не найден в списках террористов"
+    },
+    {
+        "code": "400",
+        "result": "error",
+        "find": true,
+        "time": "Work time is: 24.499 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "responce": {
+            "checkClients": [
+                {
+                    "name": "[Щукин] [Александр] Вячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                },
+                {
+                    "name": "[Щукін] [Олександр] В'ячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Замена кириллицы латиницей"
+                },
+                {
+                    "name": "[Щукін] [Олександр] В'ячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Совпадение контекста"
+                },
+                {
+                    "name": "[Щукін] [Олександр] В'ячеславович",
+                    "weight": "100.00",
+                    "systemName": "Санкционный список СНБО для физлиц",
+                    "ruleName": "Фонетическое подобие"
+                }
+            ]
+        },
+        "data": "BankId Клиент [Щукін О\"лександр Вячеславович] найден в [4][100%] списках: Санкционный список СНБО для физлиц"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 3.869 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Блінніков С. А.] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.585 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Бєкузаров Батраз ] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 1.594 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Козенко  Дмитрович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 5.251 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Колганов О. Ю.] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 6.072 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Лисенко Олександр] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 2.988 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Кириченко Антон Сергійович] не найден в списках террористов"
+    },
+    {
+        "code": "200",
+        "result": "ok",
+        "find": false,
+        "time": "Work time is: 16.408 sec.",
+        "path": "/openbanking/bankid/client/tercheck",
+        "data": "BankId Клиент [Кириченко Олена Миколаївна] не найден в списках террористов"
+    }
+]
