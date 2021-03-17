@@ -1,0 +1,79 @@
+{
+    "topic": "scrooge-documents-depo",
+    "offset": 17,
+    "partition": 2,
+    "highWaterOffset": 18,
+    "key": "\u0000\u0000\u0000\u00001�Y�",
+    "timestamp": "2021-03-17T09:30:16.146Z",
+    "tvalue": "{\"EventUid\":\"05W3ZWT9G1Z7KQBG4TBTZQKTF4\",\"EventType\":\"DocumentConfirmed\",\"Timestamp\":\"2021-03-17T11:30:11.967\",\"Version\":1,\"Data\":{\"BillId\":834886030,\"BranchId\":1,\"ActionId\":905,\"CurrencyTag\":\"UAH\",\"MainAmount\":1000.0000,\"CrncyAmount\":1000.0000,\"Code\":\"TR.17425361.10.13428\",\"OrgDate\":\"2021-03-17T00:00:00\",\"DayDate\":\"2021-03-17T00:00:00\",\"Purpose\":\"Збільшення суми кредитної лінії по договору овердрафту  \\u2116 2021/ОВР/030-000031  от  21/01/2021.\",\"Ctrls\":\"\",\"SystemId\":0,\"Created\":\"2021-03-17T11:30:11.887\",\"Changed\":\"2021-03-17T11:30:11.887\",\"PayType\":{\"Code\":\"OpenOverdrafdt\"},\"Debit\":{\"AccountId\":55835381,\"BankCode\":\"320478\",\"AccountCode\":\"91295112261472.980\",\"AccountIban\":\"UA283204780000091295112261472\",\"StateCode\":\"2476618672\",\"Name\":\"Данільцев Микола Олексійович\",\"ClientId\":3384513,\"PhoneNumber\":\"380992035265\"},\"Credit\":{\"AccountId\":23993609,\"BankCode\":\"320478\",\"AccountCode\":\"990050303.980\",\"AccountIban\":\"UA063204780000000000990050303\",\"StateCode\":\"23697280\",\"Name\":\"Контррах для розд 90-95 А В\\u2116030\",\"ClientId\":1},\"Treaty\":{\"TreatyId\":17425361,\"Code\":\"2021/ОВР/030-000031\",\"SystemId\":6000,\"OrgDate\":\"2021-01-21T00:00:00\",\"CurrencyTag\":\"UAH\",\"CrncyAmount\":1000.0000,\"Rate\":42.0000000000},\"Transfers\":[{\"TransferId\":1613766720,\"CrncyAmount\":1000.0000,\"MainAmount\":1000.0000,\"CurrencyTag\":\"UAH\",\"Purpose\":\"Збільшення суми кредитної лінії по договору овердрафту  \\u2116 2021/ОВР/030-000031  от  21/01/2021.\",\"Debit\":{\"AccountCode\":\"91295112261472.980\",\"AccountIban\":\"UA283204780000091295112261472\"},\"Credit\":{\"AccountCode\":\"990050303.980\",\"AccountIban\":\"UA063204780000000000990050303\"}}]}}",
+    "jvalue": {
+        "EventUid": "05W3ZWT9G1Z7KQBG4TBTZQKTF4",
+        "EventType": "DocumentConfirmed",
+        "Timestamp": "2021-03-17T11:30:11.967",
+        "Version": 1,
+        "Data": {
+            "BillId": 834886030,
+            "BranchId": 1,
+            "ActionId": 905,
+            "CurrencyTag": "UAH",
+            "MainAmount": 1000,
+            "CrncyAmount": 1000,
+            "Code": "TR.17425361.10.13428",
+            "OrgDate": "2021-03-17T00:00:00",
+            "DayDate": "2021-03-17T00:00:00",
+            "Purpose": "Збільшення суми кредитної лінії по договору овердрафту  № 2021/ОВР/030-000031  от  21/01/2021.",
+            "Ctrls": "",
+            "SystemId": 0,
+            "Created": "2021-03-17T11:30:11.887",
+            "Changed": "2021-03-17T11:30:11.887",
+            "PayType": {
+                "Code": "OpenOverdrafdt"
+            },
+            "Debit": {
+                "AccountId": 55835381,
+                "BankCode": "320478",
+                "AccountCode": "91295112261472.980",
+                "AccountIban": "UA283204780000091295112261472",
+                "StateCode": "2476618672",
+                "Name": "Данільцев Микола Олексійович",
+                "ClientId": 3384513,
+                "PhoneNumber": "380992035265"
+            },
+            "Credit": {
+                "AccountId": 23993609,
+                "BankCode": "320478",
+                "AccountCode": "990050303.980",
+                "AccountIban": "UA063204780000000000990050303",
+                "StateCode": "23697280",
+                "Name": "Контррах для розд 90-95 А В№030",
+                "ClientId": 1
+            },
+            "Treaty": {
+                "TreatyId": 17425361,
+                "Code": "2021/ОВР/030-000031",
+                "SystemId": 6000,
+                "OrgDate": "2021-01-21T00:00:00",
+                "CurrencyTag": "UAH",
+                "CrncyAmount": 1000,
+                "Rate": 42
+            },
+            "Transfers": [
+                {
+                    "TransferId": 1613766720,
+                    "CrncyAmount": 1000,
+                    "MainAmount": 1000,
+                    "CurrencyTag": "UAH",
+                    "Purpose": "Збільшення суми кредитної лінії по договору овердрафту  № 2021/ОВР/030-000031  от  21/01/2021.",
+                    "Debit": {
+                        "AccountCode": "91295112261472.980",
+                        "AccountIban": "UA283204780000091295112261472"
+                    },
+                    "Credit": {
+                        "AccountCode": "990050303.980",
+                        "AccountIban": "UA063204780000000000990050303"
+                    }
+                }
+            ]
+        }
+    }
+}

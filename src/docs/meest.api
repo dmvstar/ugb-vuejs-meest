@@ -12,3 +12,21 @@ https://devcenter.novaposhta.ua/docs/services/
 http://wanted.mvs.gov.ua/passport/;
 6) перевірки документів клієнта (представника клієнта) за відкритою базою недійсних документів, безкоштовний доступ до якої надано на офіційному веб-сайті Державної міграційної служби України за посиланням 
 https://nd.dmsu.gov.ua/.
+
+
+
+Рекомендуется использовать REST API сервис, с аналогичной структурой как описано в документации
+Доступ к API:
+
+https://<имя app сервера webbank>/Api/ClientApi/CheckClient
+
+Swagger:
+
+ПРОД- https://kv00-v-appfe-pr/WebBank/ 
+ПреПрод- https://app-front-pp.ukrgasbank.com/Webbank/ 
+
+https://app-front-pp.ukrgasbank.com/swagger/ui/index#!/ClientApi/ClientApi_CheckClient
+https://kv00-v-appfe-pr/swagger/ui/index#!/ClientApi/ClientApi_CheckClient
+
+
+Проверка выполняется по всем настроенным спискам АБС (террористы, ПЭП и т.д.)
