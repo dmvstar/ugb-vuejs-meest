@@ -1,0 +1,73 @@
+{
+    "topic": "scrooge-documents-depo",
+    "jvalue": {
+        "EventUid": "05W3YWB8K9P5JAK8A6MXJ706SR",
+        "EventType": "DocumentConfirmed",
+        "Timestamp": "2021-03-17T09:08:20.237",
+        "Version": 1,
+        "Data": {
+            "BillId": 834885981,
+            "BranchId": 1,
+            "ActionId": 317,
+            "CurrencyTag": "UAH",
+            "MainAmount": 1000,
+            "CrncyAmount": 1000,
+            "Code": "TR.17435616.3.13428",
+            "OrgDate": "2021-03-17T00:00:00",
+            "DayDate": "2021-03-17T00:00:00",
+            "Purpose": "Поповнення суми вкладу по договору N 012/03/21/1 від 15/03/2021 (КАМІНСЬКА КАТЕРИНА МИХАЙЛІВНА )",
+            "Ctrls": "P16.",
+            "SystemId": 0,
+            "Created": "2021-03-17T09:07:25.197",
+            "Changed": "2021-03-17T09:08:20.06",
+            "PayType": {
+                "Code": "OpenDepo"
+            },
+            "Debit": {
+                "AccountId": 5206607,
+                "BankCode": "320478",
+                "AccountCode": "100274241.980.094",
+                "AccountIban": "UA553204780000000000100274241",
+                "StateCode": "23697280",
+                "Name": "Банкноти та монети в касі,В№094",
+                "ClientId": 1
+            },
+            "Credit": {
+                "AccountId": 55917244,
+                "BankCode": "320478",
+                "AccountCode": "26307133482892.980",
+                "AccountIban": "UA163204780000026307133482892",
+                "StateCode": "3512602248",
+                "Name": "КАМІНСЬКА КАТЕРИНА МИХАЙЛІВНА",
+                "ClientId": 792390,
+                "PhoneNumber": "380668046493"
+            },
+            "Treaty": {
+                "TreatyId": 17435616,
+                "Code": "012/03/21/1",
+                "SystemId": 9000,
+                "OrgDate": "2021-03-15T00:00:00",
+                "CurrencyTag": "UAH",
+                "CrncyAmount": 2000,
+                "Rate": 6.5
+            },
+            "Transfers": [
+                {
+                    "TransferId": 1613766700,
+                    "CrncyAmount": 1000,
+                    "MainAmount": 1000,
+                    "CurrencyTag": "UAH",
+                    "Purpose": "Поповнення суми вкладу по договору N 012/03/21/1 від 15/03/2021 (КАМІНСЬКА КАТЕРИНА МИХАЙЛІВНА )",
+                    "Debit": {
+                        "AccountCode": "100274241.980.094",
+                        "AccountIban": "UA553204780000000000100274241"
+                    },
+                    "Credit": {
+                        "AccountCode": "26307133482892.980",
+                        "AccountIban": "UA163204780000026307133482892"
+                    }
+                }
+            ]
+        }
+    }
+}

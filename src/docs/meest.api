@@ -25,6 +25,8 @@ Swagger:
 ПРОД- https://kv00-v-appfe-pr/WebBank/ 
 ПреПрод- https://app-front-pp.ukrgasbank.com/Webbank/ 
 
+https://app-front-pp.ukrgasbank.com/Webbank/swagger/ui/index#!/ClientApi/ClientApi_CheckClient
+
 https://app-front-pp.ukrgasbank.com/swagger/ui/index#!/ClientApi/ClientApi_CheckClient
 https://kv00-v-appfe-pr/swagger/ui/index#!/ClientApi/ClientApi_CheckClient
 

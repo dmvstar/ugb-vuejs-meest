@@ -1,11 +1,5 @@
 {
     "topic": "scrooge-documents-depo",
-    "offset": 18,
-    "partition": 2,
-    "highWaterOffset": 19,
-    "key": "\u0000\u0000\u0000\u00001�Y�",
-    "timestamp": "2021-03-17T09:39:06.653Z",
-    "tvalue": "{\"EventUid\":\"05W3ZYTQ2MKGP32WJ6R6NJ9100\",\"EventType\":\"DocumentConfirmed\",\"Timestamp\":\"2021-03-17T11:38:59.73\",\"Version\":1,\"Data\":{\"BillId\":834886031,\"BranchId\":1,\"ActionId\":905,\"CurrencyTag\":\"UAH\",\"MainAmount\":1000.0000,\"CrncyAmount\":1000.0000,\"Code\":\"TR.17425246.11.13428\",\"OrgDate\":\"2021-03-17T00:00:00\",\"DayDate\":\"2021-03-17T00:00:00\",\"Purpose\":\"Збільшення суми кредитної лінії по договору овердрафту  \\u2116 2021/ОВР/054-000227  от  21/01/2021.\",\"Ctrls\":\"\",\"SystemId\":0,\"Created\":\"2021-03-17T11:38:59.637\",\"Changed\":\"2021-03-17T11:38:59.637\",\"PayType\":{\"Code\":\"OpenOverdrafdt\"},\"Debit\":{\"AccountId\":55835206,\"BankCode\":\"320478\",\"AccountCode\":\"91292112261464.980\",\"AccountIban\":\"UA883204780000091292112261464\",\"StateCode\":\"2907609467\",\"Name\":\"Онофрійчук Валентина Олександрівна\",\"ClientId\":3383470,\"PhoneNumber\":\"380503355542\"},\"Credit\":{\"AccountId\":23993645,\"BankCode\":\"320478\",\"AccountCode\":\"990030543.980\",\"AccountIban\":\"UA263204780000000000990030543\",\"StateCode\":\"23697280\",\"Name\":\"Контррах для розд 90-95 А В\\u2116054\",\"ClientId\":1},\"Treaty\":{\"TreatyId\":17425246,\"Code\":\"2021/ОВР/054-000227\",\"SystemId\":6000,\"OrgDate\":\"2021-01-21T00:00:00\",\"CurrencyTag\":\"UAH\",\"CrncyAmount\":1000.0000,\"Rate\":42.0000000000},\"Transfers\":[{\"TransferId\":1613766721,\"CrncyAmount\":1000.0000,\"MainAmount\":1000.0000,\"CurrencyTag\":\"UAH\",\"Purpose\":\"Збільшення суми кредитної лінії по договору овердрафту  \\u2116 2021/ОВР/054-000227  от  21/01/2021.\",\"Debit\":{\"AccountCode\":\"91292112261464.980\",\"AccountIban\":\"UA883204780000091292112261464\"},\"Credit\":{\"AccountCode\":\"990030543.980\",\"AccountIban\":\"UA263204780000000000990030543\"}}]}}",
     "jvalue": {
         "EventUid": "05W3ZYTQ2MKGP32WJ6R6NJ9100",
         "EventType": "DocumentConfirmed",

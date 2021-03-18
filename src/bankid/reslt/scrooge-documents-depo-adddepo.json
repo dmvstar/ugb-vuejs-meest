@@ -1,0 +1,74 @@
+{
+    "topic": "scrooge-documents-depo",
+    "jvalue": {
+        "EventUid": "05VJAS9SJ9QH6PKJYPYRG5X6V4",
+        "EventType": "DocumentConfirmed",
+        "Timestamp": "2021-01-21T14:42:06.863",
+        "Version": 1,
+        "Data": {
+            "BillId": 784823928,
+            "BranchId": 1,
+            "ActionId": 727,
+            "CurrencyTag": "UAH",
+            "MainAmount": 10000,
+            "CrncyAmount": 10000,
+            "Code": "TR.16300627.2.2668",
+            "OrgDate": "2021-01-21T00:00:00",
+            "DayDate": "2021-01-21T00:00:00",
+            "Purpose": "Внесення вкладу по договору N 012/01/21/1 від 21/01/2021 (Даниленко Олександр Сергійович )",
+            "Ctrls": "",
+            "SystemId": 0,
+            "Created": "2021-01-21T14:42:05.91",
+            "Changed": "2021-01-21T14:42:05.91",
+            "PayType": {
+                "Code": "AddDepo"
+            },
+            "Debit": {
+                "AccountId": 7411989,
+                "BankCode": "320478",
+                "AccountCode": "26206260913.980",
+                "AccountIban": "UA703204780000000026206260913",
+                "StateCode": "2042703313",
+                "Name": "Даниленко Олександр Сергійович",
+                "ClientId": 469953,
+                "PhoneNumber": "380674071055"
+            },
+            "Credit": {
+                "AccountId": 53886977,
+                "BankCode": "320478",
+                "AccountCode": "26303133453892.980",
+                "AccountIban": "UA183204780000026303133453892",
+                "StateCode": "2042703313",
+                "Name": "Даниленко Олександр Сергійович",
+                "ClientId": 469953,
+                "PhoneNumber": "380674071055"
+            },
+            "Treaty": {
+                "TreatyId": 16300627,
+                "Code": "012/01/21/1",
+                "SystemId": 9000,
+                "OrgDate": "2021-01-21T00:00:00",
+                "CurrencyTag": "UAH",
+                "CrncyAmount": 20000,
+                "Rate": 8
+            },
+            "Transfers": [
+                {
+                    "TransferId": 1513243994,
+                    "CrncyAmount": 10000,
+                    "MainAmount": 10000,
+                    "CurrencyTag": "UAH",
+                    "Purpose": "Внесення вкладу по договору N 012/01/21/1 від 21/01/2021 (Даниленко Олександр Сергійович )",
+                    "Debit": {
+                        "AccountCode": "26206260913.980",
+                        "AccountIban": "UA703204780000000026206260913"
+                    },
+                    "Credit": {
+                        "AccountCode": "26303133453892.980",
+                        "AccountIban": "UA183204780000026303133453892"
+                    }
+                }
+            ]
+        }
+    }
+}
