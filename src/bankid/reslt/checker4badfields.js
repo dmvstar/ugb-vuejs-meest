@@ -7,8 +7,8 @@ var regSD10  = "^[0-9]{10}$"
 var regSD09  = "^[0-9]{9}$"
 var regSPass = "^[А-Ю][А-Ю][0-9]{6}$"
 var regSAddr = "^(factual|juridical)$";
-var regSDocs = "^(passport|idpassport)$";
-var regSDocsAll = "^(passport|idpassport|zpassport|ident)$";
+var regSDocs = "^(паспорт|passport|idpassport)$";
+var regSDocsAll = "^(паспорт|passport|idpassport|zpassport|ident)$";
 
 var checkDate = "";
 
