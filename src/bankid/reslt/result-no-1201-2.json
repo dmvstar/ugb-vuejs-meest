@@ -1,0 +1,59 @@
+{
+    "code": "1201",
+    "result": "no",
+    "time": "Work time is: 55.425 sec.",
+    "path": "/openbanking/bankid/client",
+    "data": {
+        "trans": {},
+        "result": {
+            "responseId": "12547",
+            "requestId": "12547",
+            "result": "1",
+            "hasErrors": "true",
+            "errors": {
+                "errorOperation": {
+                    "code": "1059",
+                    "text": "Ошибка вставки реквизита [UGB_TCURelPers_F] значение [2], описание [Не пов'язана] в АБС",
+                    "isError": "true",
+                    "exceptMessage": "<b>Server was unable to process request. ---> SCROOGE-III operation failed.\nУстановлен запрет на действие [работа с реквизитами объектов] для филиала [1] за [19/03/2021]\n\n</b><br/><font color='#696969'>FaultException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>\r\nServer stack trace: \r\n   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)\r\n   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)\r\n\r\nException rethrown at [0]: \r\n   at System.Runtime.Remoting.Proxies.R..."
+                }
+            },
+            "client": {
+                "clientId": "3433639",
+                "scroogeId": "3385398",
+                "clientPushABS": "true"
+            }
+        },
+        "info": {
+            "wbId": 3433639,
+            "paramCode": "Customer_verification",
+            "paramDesc": "Спосіб верифікації клієнта",
+            "paramValue": "3",
+            "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+            "syncFlag": 4,
+            "syncCode": "Частично синхронизирован",
+            "cliStatus": 1,
+            "cliStatusCode": "Активный",
+            "smStates": [
+                {
+                    "Source": "log",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "NEW_CLIENT",
+                    "StateName": "Новий",
+                    "Date": "2021-03-19T09:53:45.297Z",
+                    "Info": "Новий"
+                },
+                {
+                    "Source": "state",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "NEW_CLIENT",
+                    "StateName": "Новий",
+                    "Date": "2021-03-19T09:54:05.177Z",
+                    "Info": "Новий"
+                }
+            ],
+            "terCheck": "1"
+        },
+        "docs": {}
+    }
+}
