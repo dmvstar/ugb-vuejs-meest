@@ -55,7 +55,7 @@ var regSD10  = "^[0-9]{10}$"
 var regSD09  = "^[0-9]{9}$"
 var regSPass = "^[А-Ю][А-Ю][0-9]{6}$"
 var regSAddr = "^(factual|juridical)$";
-var regSDocs = "^(passport|idpassport)$";
+var regSDocs = "^(паспорт|passport|idpassport)$";
 
 var digs = [
     "9876765656",

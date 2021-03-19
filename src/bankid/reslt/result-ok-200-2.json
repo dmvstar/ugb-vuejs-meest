@@ -1,0 +1,435 @@
+{
+    "code": "200",
+    "result": "ok",
+    "time": "Work time is: 16.098 sec.",
+    "path": "/openbanking/bankid/client",
+    "data": {
+        "input": {
+            "person": {
+                "type": "physical",
+                "lastName": "ЛАБАЙКОВ",
+                "firstName": "ВОЛОДИМИРК",
+                "middleName": "МАРЯНОВИЧ",
+                "inn": "0000000000",
+                "birthDay": "23.07.1991",
+                "sex": "M",
+                "phone": "380971553054",
+                "uaResident": "1",
+                "flagPersonTerror": "0",
+                "flagPEPs": "0",
+                "flagTopLevelRisk": "0"
+            },
+            "extends": {
+                "countryCitizen": "804",
+                "maritalStatus": "1",
+                "uaResident": "1",
+                "codOblRee": "46",
+                "flagTopLevelRisk": "0",
+                "workInfo": "Безробітний",
+                "birthCountry": "804",
+                "birthPlace": "Україна",
+                "profitWay": "14430",
+                "profitSrc": "16",
+                "ownFundsAmount": "1",
+                "ownFundsSrc": "9",
+                "monthAmouunt": "1",
+                "realEstateAvail": "1",
+                "movePropAvail": "1",
+                "otherBankAccount": "3",
+                "otherBankCredit": "0",
+                "otherBankDepo": "0",
+                "costPaperAvail": "Відсутні",
+                "planUseServices": "44652",
+                "ugbRelatePers": "2",
+                "flagPEPs": "0",
+                "statusBusiness": "5",
+                "usaChiisares": "0",
+                "typeCli": "клієнт з відкриттям рахунків",
+                "photo25": "1",
+                "photo45": "1",
+                "verifyDate": "19.03.2021",
+                "signDate": "19.03.2021",
+                "education": "2",
+                "forTaxStatus": "0",
+                "verifyType": "3",
+                "verifyType1": "1",
+                "reputation": "Задовільний",
+                "countryCitisien": "804",
+                "greenCard": "1",
+                "registryUSA": "0",
+                "statusFATCA": "0",
+                "nameLat": "LABAYKOV VOLODYMYRK"
+            },
+            "addresses": [
+                {
+                    "type": "factual",
+                    "country": "UA",
+                    "state": "Львівська",
+                    "area": "",
+                    "city": "КАМ’ЯНКА-БУЗЬКА",
+                    "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                    "houseNo": "",
+                    "flatNo": ""
+                },
+                {
+                    "type": "juridical",
+                    "country": "UA",
+                    "state": "Львівська",
+                    "area": "",
+                    "city": "КАМ’ЯНКА-БУЗЬКА",
+                    "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                    "houseNo": "",
+                    "flatNo": ""
+                }
+            ],
+            "documents": [
+                {
+                    "type": "passport",
+                    "typeName": "КС",
+                    "series": "КС",
+                    "number": "720077",
+                    "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                    "dateIssue": "17.01.2008",
+                    "dateExpiration": "",
+                    "issueCountryIso2": "UA"
+                }
+            ],
+            "timeStamp": "202102251646102186",
+            "merchantName": "easypay_test"
+        },
+        "trans": {
+            "client": {
+                "StateCode": "0000000000",
+                "Residency": "1",
+                "PrevIdentDate": "2021-03-19T00:00:00",
+                "Name": "ЛАБАЙКОВ ВОЛОДИМИРК МАРЯНОВИЧ"
+            },
+            "indiv": {
+                "LastName": "ЛАБАЙКОВ",
+                "FirstName": "ВОЛОДИМИРК",
+                "FatherName": "МАРЯНОВИЧ",
+                "BirthDay": "1991-07-23T00:00:00",
+                "GENDER": "1",
+                "MarriageStatus": "1"
+            },
+            "names": {
+                "Name": "LABAYKOV VOLODYMYRK",
+                "Lang": "LAT"
+            },
+            "ident": [
+                {
+                    "TypeId": "4",
+                    "Series": "КС",
+                    "Number": "720077",
+                    "Registrator": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                    "IssueDate": "2008-01-17T00:00:00",
+                    "ExpirationDate": "2099-01-01T00:00:00",
+                    "CountryCode": "UA"
+                }
+            ],
+            "addr": [
+                {
+                    "TypeCode": "2",
+                    "Country": "UA",
+                    "State": "Львівська",
+                    "Region": "",
+                    "Town": "КАМ’ЯНКА-БУЗЬКА",
+                    "Street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                    "HouseNumber": "",
+                    "FlatNumber": ""
+                },
+                {
+                    "TypeCode": "1",
+                    "Country": "UA",
+                    "State": "Львівська",
+                    "Region": "",
+                    "Town": "КАМ’ЯНКА-БУЗЬКА",
+                    "Street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                    "HouseNumber": "",
+                    "FlatNumber": ""
+                }
+            ],
+            "comm": [
+                {
+                    "Value": "380971553054",
+                    "TypeId": "3"
+                }
+            ],
+            "props": [
+                {
+                    "Refs": "sex",
+                    "Code": "GENDER",
+                    "Dict": "D06",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "terrorist",
+                    "Code": "CL_FATF_CHECK_RESULT",
+                    "Dict": "",
+                    "Value": "Клиент НЕ являестя террористом соглано данных bankid"
+                },
+                {
+                    "Refs": "peps",
+                    "Code": "PUBLIC_PERSON_EXISTS",
+                    "Dict": "",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "FATF_COUNTRY_CITIZEN",
+                    "Dict": "KL_K040.DBF",
+                    "Value": "804"
+                },
+                {
+                    "Refs": "",
+                    "Code": "FATF_CodObl",
+                    "Dict": "",
+                    "Value": "46"
+                },
+                {
+                    "Refs": "",
+                    "Code": "INFO_WORK_FROM",
+                    "Dict": "",
+                    "Value": "Безробітний"
+                },
+                {
+                    "Refs": "",
+                    "Code": "BIRTH_COUNTRY",
+                    "Dict": "KL_K040.DBF",
+                    "Value": "804"
+                },
+                {
+                    "Refs": "",
+                    "Code": "BIRTH_PLACE",
+                    "Dict": "",
+                    "Value": "Україна"
+                },
+                {
+                    "Refs": "",
+                    "Code": "PROFIT_WAY",
+                    "Dict": "PROFIT_WAY",
+                    "Value": "14430"
+                },
+                {
+                    "Refs": "",
+                    "Code": "BANK_PRODUCT",
+                    "Dict": "FIN_DOCH",
+                    "Value": "16"
+                },
+                {
+                    "Refs": "",
+                    "Code": "OBSYAG_NAD",
+                    "Dict": "OBSYAG_NAD_1",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "NAD_K_3",
+                    "Dict": "NAD_K_3",
+                    "Value": "9"
+                },
+                {
+                    "Refs": "",
+                    "Code": "MONTHSUMM",
+                    "Dict": "SUMA_DOHOD",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "PROPETYTH_OF_CLIENT",
+                    "Dict": "PROPETYTH_OF_CLIENT",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "PROPETYTH_OF_CLIENT_AVTO",
+                    "Dict": "PROPETYTH_OF_CLIENT_AVTO",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "INFO_OUTER_ACC_SEL",
+                    "Dict": "INFO_OUTER_ACC",
+                    "Value": "3"
+                },
+                {
+                    "Refs": "",
+                    "Code": "EXISTS_CRED_OUT",
+                    "Dict": "YESNO",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "EXISTS_DEPO_OUT",
+                    "Dict": "YESNO",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "PROPETYPAP_OF_CLIENTYPE",
+                    "Dict": "PROPETYPAP_OF_CLIENTYPE",
+                    "Value": "Відсутні"
+                },
+                {
+                    "Refs": "",
+                    "Code": "BANK_SERVICES_MANUAL",
+                    "Dict": "BANK_SERVICES_MANUAL",
+                    "Value": "44652"
+                },
+                {
+                    "Refs": "",
+                    "Code": "UGB_TCURelPers",
+                    "Dict": "RF_UGB_TCURelPers",
+                    "Value": "2"
+                },
+                {
+                    "Refs": "",
+                    "Code": "KL_K013FO",
+                    "Dict": "KL_K013_FO",
+                    "Value": "5"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Chiisaresident_USA",
+                    "Dict": "YESNO",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Chiisaresident_USA",
+                    "Dict": "YESNO",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "CUSTOMER_TYPE",
+                    "Dict": "CUSTOMER_TYPE",
+                    "Value": "клієнт з відкриттям рахунків"
+                },
+                {
+                    "Refs": "",
+                    "Code": "PASPFOTOCONTROL25",
+                    "Dict": "",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "PASPFOTOCONTROL45",
+                    "Dict": "",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Verifikatsii_date ",
+                    "Dict": "",
+                    "Value": "2021-03-19T00:00:00"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Education",
+                    "Dict": "",
+                    "Value": "2"
+                },
+                {
+                    "Refs": "",
+                    "Code": "CLIENT_STATUS",
+                    "Dict": "",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Customer_verification",
+                    "Dict": "Customer_verification",
+                    "Value": "3"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Criterias",
+                    "Dict": "",
+                    "Value": "Задовільний"
+                },
+                {
+                    "Refs": "",
+                    "Code": "FATF_COUNTRY_CITIZEN",
+                    "Dict": "KL_K040.DBF",
+                    "Value": "804"
+                },
+                {
+                    "Refs": "",
+                    "Code": "CARD_GREEN",
+                    "Dict": "A_GREEN_CARD",
+                    "Value": "1"
+                },
+                {
+                    "Refs": "",
+                    "Code": "Resident_USA",
+                    "Dict": "YESNO",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "FATCA",
+                    "Dict": "FATCA",
+                    "Value": "0"
+                },
+                {
+                    "Refs": "",
+                    "Code": "FATF_SHORT_NAME",
+                    "Dict": "",
+                    "Value": "LABAYKOV VOLODYMYRK"
+                }
+            ]
+        },
+        "result": {
+            "responseId": "12547",
+            "requestId": "12547",
+            "result": "1",
+            "hasErrors": "false",
+            "errors": "",
+            "client": {
+                "clientId": "3433641",
+                "scroogeId": "3385400",
+                "clientPushABS": "true"
+            }
+        },
+        "info": {
+            "wbId": 3433641,
+            "paramCode": "Customer_verification",
+            "paramDesc": "Спосіб верифікації клієнта",
+            "paramValue": "3",
+            "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+            "syncFlag": 1,
+            "syncCode": "Синхронизирован",
+            "cliStatus": 1,
+            "cliStatusCode": "Активный",
+            "smStates": [
+                {
+                    "Source": "log",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "NEW_CLIENT",
+                    "StateName": "Новий",
+                    "Date": "2021-03-19T16:08:47.320Z",
+                    "Info": "Новий"
+                },
+                {
+                    "Source": "log",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "COMPLETE_CLIENT",
+                    "StateName": "Підтверджений, актуальний",
+                    "Date": "2021-03-19T16:08:59.080Z",
+                    "Info": "Актуальний згідно даних BankId"
+                },
+                {
+                    "Source": "state",
+                    "SmName": "Процес Ідентифікаці клієнтів ФО",
+                    "StateCode": "COMPLETE_CLIENT",
+                    "StateName": "Підтверджений, актуальний",
+                    "Date": "2021-03-19T16:08:59.143Z",
+                    "Info": "Підтверджений, актуальний"
+                }
+            ],
+            "terCheck": "0"
+        },
+        "docs": {}
+    }
+}

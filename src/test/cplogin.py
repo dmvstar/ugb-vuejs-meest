@@ -102,8 +102,8 @@ class Login(QtWidgets.QDialog):
 
             output = subprocess.getoutput( self.cmd )
             print(output)            
-            QtWidgets.QMessageBox.information(
-                    self, 'Info output', self.cmd + "\n"+ output) 
+            #QtWidgets.QMessageBox.information(
+            #        self, 'Info output', self.cmd + "\n"+ output) 
 
             #Another session of SNX is already running, aborting...
             if output.find("Another")>=0:
