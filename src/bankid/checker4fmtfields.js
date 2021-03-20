@@ -1,4 +1,6 @@
 //@what checker4fmtields.js
+//https://regex101.com/ 
+//--------------------------------------------------------------------------
 var msg;
 var isConsole = true;
 if(msg === undefined) msg = {};
@@ -24,13 +26,11 @@ var validateData = {
     ],
     "addresses": [
         {
-            "type": "factual"
+            "type": "factual0"
         }
     ]    
 }
-
-//-------------------------------------------------------------------------------
-
+//--------------------------------------------------------------------------
 var regSD10  = "^[0-9]{10}$"
 var regSD09  = "^[0-9]{9}$"
 var regSPass = "^[А-Ю][А-Ю][0-9]{6}$"
@@ -94,11 +94,20 @@ const validateMap = {
                 "message": "Ошибка формата паспорта, поле dateIssue"
             }
         }
+    ],
+    "addresses": [
+        {
+            "type": {
+                "needed" : true,
+                "express":"^(factual|juridical)$",
+                "message": "Ошибка формата адреса, поле type"
+            }
+        }
     ]
 };
-
 msg.vdata = validateData;
-
+//--------------------------------------------------------------------------
+//@what checker4fmtields.js
 function validateItem(vmap, check, parent, field) {
     //console.log("validateItem", check, parent, field, vmap);    
     var mcheck;
@@ -188,11 +197,11 @@ function validateResult(checkErrors)
 
     return {
         hasError : hasError,
+        errorCount : result.length,
         result : result
     }
 }
-
-
+//--------------------------------------------------------------------------
 var out = validateTree(validateMap, msg.vdata, '', '', 0);
 var check = validateResult(out);
 if(isConsole) {
@@ -202,5 +211,6 @@ if(isConsole) {
     console.log(check);
     console.log('-------------------------');
 }
+//--------------------------------------------------------------------------
 
 
