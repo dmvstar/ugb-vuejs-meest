@@ -1,3 +1,36 @@
+//@what checker4fmtields.js
+var msg;
+var isConsole = true;
+if(msg === undefined) msg = {};
+
+var validateData = {
+    "person": {
+        "inn": "2837213759",
+        "birthDay": "10.09.1977",
+        "sex": "Ж",
+        "ext": {
+            "num": "9876q565454"
+        },
+        "type": "physical1",
+        "lastName": "ЛАБАЙКОВQ",
+        "firstName": "ВОЛОДИМИРК",
+        "middleName": "МАРЯНОВИЧ"
+    },
+    "documents": [
+        {
+            "type": "паспортф",
+            "dateIssue": "49.07.1995"
+        }
+    ],
+    "addresses": [
+        {
+            "type": "factual"
+        }
+    ]    
+}
+
+//-------------------------------------------------------------------------------
+
 var regSD10  = "^[0-9]{10}$"
 var regSD09  = "^[0-9]{9}$"
 var regSPass = "^[А-Ю][А-Ю][0-9]{6}$"
@@ -9,11 +42,37 @@ const validateMap = {
             "express": regSBIINN,
             "message": "Ошибка формата поля ИНН"
         },
+        "sex": {
+            "needed" : true,
+            "express": "^[MFЧЖ]$",
+            "message": "Ошибка формата поля ПОЛ"
+        },
         "birthDay": {
             "needed" : true,
             "express":"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
             "message": "Ошибка формата поля birthDay"
         },
+        "type": {
+            "needed" : true,
+            "express": "^physical$",
+            "message": "Ошибка формата поля Тип"
+        },
+        "lastName": {
+            "needed" : true,
+            "express": "^[А-я]*$",
+            "message": "Ошибка формата поля Фамилия"
+        },
+        "firstName": {
+            "needed" : true,
+            "express": "^[А-я]*$",
+            "message": "Ошибка формата поля Имя"
+        },
+        "middleName": {
+            "needed" : true,
+            "express": "^[А-я]*$",
+            "message": "Ошибка формата поля Отчество"
+        },
+
         "ext": {
             "num": {
                 "needed" : false,
@@ -38,43 +97,31 @@ const validateMap = {
     ]
 };
 
-const validateData = {
-    "person": {
-        "inn": "2837213759",
-        "birthDay": "10.09.1977",
-        "ext": {
-            "num": "9876q565454"
-        }
-    },
-    "documents": [
-        {
-            "type": "паспортф",
-            "dateIssue0": "19.07.1995"
-        }
-    ],
-    "addresses": [
-        {
-            "type": "factual"
-        }
-    ]    
-}
-
-console.log('-----------------------------')
+msg.vdata = validateData;
 
 function validateItem(vmap, check, parent, field) {
-    console.log("validateItem", check, parent, field, vmap);
-    const regexp = new RegExp(vmap.express, "gm");
-    const result = regexp.test(check);
-    const check = check===undefined?"Отсутвует значение поля !":check;
-    const message = vmap.message!==undefined&!result?vmap.message+" ("+parent+'->'+field+")["+check+"]":"";
+    //console.log("validateItem", check, parent, field, vmap);    
+    var mcheck;
+    var result = true;
+    if(check===undefined) {
+        if(vmap.needed) {
+            mcheck = "Отсутвует значение обязательного поля !";        
+            result = false;
+        }
+    } else {
+        const regexp = new RegExp(vmap.express, "gm");
+        result = regexp.test(check);
+        mcheck = check;
+    }     
+    const message = vmap.message!==undefined&!result?vmap.message+" ("+parent+'->'+field+")["+mcheck+"]":"";
     var ret = {
-        result: result,
-        path: parent+'->'+field,
-        check: check, 
-        express: vmap.express,
-        message: message
+        result:     result,
+        path:       parent+'->'+field,
+        check:      mcheck, 
+        express:    vmap.express,
+        message:    message
     }
-    //console.log("------", message);
+    //console.log("validateItem", result);
     return ret;
 }
 
@@ -93,28 +140,25 @@ function validateTree(vmap, data, parent, path, alevel) {
     for (var imap in vmap) {
         path += (parent+".");
         var result;
-        var from = 0;
 
         if(typeof vmap[imap] === "object"){
             //console.log(s(level),'0',level, (typeof vmap[imap]), imap);
             if(!Array.isArray(vmap[imap])) {
                 if (vmap[imap].express !== undefined) {
-                    from = 1;
                     if(!Array.isArray(data)) {
                         //console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap]);
-                        result = validateItem(vmap, data[imap], parent, imap); 
+                        result = validateItem(vmap[imap], data[imap], parent, imap); 
                         ret.push(result); 
                     } else {
                         //console.log(s(level),'33',level, data);
                         for (var idat of data) { // array
                             var testData = idat[imap];
-                            result = validateItem(vmap, testData, parent, imap);
+                            result = validateItem(vmap[imap], testData, parent, imap);
                             ret.push(result); 
                         }
                     }    
                 }
                 else { 
-                    from = 2;
                     //console.log(s(level),'2',level, (typeof vmap[imap]), imap);
                     var oret = validateTree(vmap[imap], data[imap], imap, path, level);
                     ret = ret.concat(oret);
@@ -148,13 +192,15 @@ function validateResult(checkErrors)
     }
 }
 
-var out = validateTree(validateMap, validateData, '', '', 0);
-console.log('-------------------------');
-console.log(out);
-console.log('-------------------------');
-var check = validateResult(out);
-console.log(check);
-console.log('-------------------------');
 
+var out = validateTree(validateMap, msg.vdata, '', '', 0);
+var check = validateResult(out);
+if(isConsole) {
+    console.log('-------------------------');
+    console.log(out);
+    console.log('-------------------------');
+    console.log(check);
+    console.log('-------------------------');
+}
 
 
