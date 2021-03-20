@@ -5,15 +5,18 @@ var regSBIINN= "("+regSD10+")|("+regSD09+")|("+regSPass+")";
 const validateMap = {
     "person": {
         "inn": {
+            "needed" : true,
             "express": regSBIINN,
             "message": "Ошибка формата поля ИНН"
         },
         "birthDay": {
+            "needed" : true,
             "express":"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
             "message": "Ошибка формата поля birthDay"
         },
         "ext": {
             "num": {
+                "needed" : false,
                 "express":regSD10,
                 "message": "Ошибка формата поля NUM"
             }
@@ -22,10 +25,12 @@ const validateMap = {
     "documents": [
         {
             "type": {
+                "needed" : true,
                 "express":"^(паспорт|passport|idpassport)$",
                 "message": "Ошибка формата паспорта, поле type"
             },
             "dateIssue": {
+                "needed" : true,
                 "express":"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
                 "message": "Ошибка формата паспорта, поле dateIssue"
             }
@@ -56,17 +61,18 @@ const validateData = {
 
 console.log('-----------------------------')
 
-function validateItem(check, express, parent, field, message) {
-    console.log("validateItem", check, express, parent, field, message);
-    const regexp = new RegExp(express, "gm");
+function validateItem(vmap, check, parent, field) {
+    console.log("validateItem", check, parent, field, vmap);
+    const regexp = new RegExp(vmap.express, "gm");
     const result = regexp.test(check);
-    check = check===undefined?"Отсутвует значение поля !":check;
+    const check = check===undefined?"Отсутвует значение поля !":check;
+    const message = vmap.message!==undefined&!result?vmap.message+" ("+parent+'->'+field+")["+check+"]":"";
     var ret = {
         result: result,
         path: parent+'->'+field,
         check: check, 
-        express: express,
-        message: message!==undefined&!result?message+" ("+parent+'->'+field+")["+check+"]":""
+        express: vmap.express,
+        message: message
     }
     //console.log("------", message);
     return ret;
@@ -96,13 +102,13 @@ function validateTree(vmap, data, parent, path, alevel) {
                     from = 1;
                     if(!Array.isArray(data)) {
                         //console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap]);
-                        result = validateItem(data[imap], vmap[imap].express, parent, imap, vmap[imap].message); 
+                        result = validateItem(vmap, data[imap], parent, imap); 
                         ret.push(result); 
                     } else {
                         //console.log(s(level),'33',level, data);
                         for (var idat of data) { // array
                             var testData = idat[imap];
-                            result = validateItem(testData, vmap[imap].express, parent, imap, vmap[imap].message);
+                            result = validateItem(vmap, testData, parent, imap);
                             ret.push(result); 
                         }
                     }    
@@ -119,19 +125,6 @@ function validateTree(vmap, data, parent, path, alevel) {
                 var oret = validateTree(vmap[imap][0], data[imap], imap, path, level);
                 ret = ret.concat(oret);
             }             
-        } else {
-            //console.log(s(level),'Z',level,(typeof vmap[imap]),Array.isArray(vmap[imap]), imap);
-            if(!Array.isArray(data)) {
-                from = 3;
-                result = validateItem(data[imap], vmap[imap], parent, imap, "");
-            } else               
-            {
-                for (var idat of data) { // array
-                    var testData = idat[imap];
-                    result = validateItem(testData, vmap[imap], parent, imap, "");
-                    ret.push(result); 
-                }
-            }
         }
     }
     return ret;
