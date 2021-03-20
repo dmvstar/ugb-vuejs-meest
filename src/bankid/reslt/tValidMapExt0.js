@@ -21,7 +21,10 @@ const validateMap = {
     },
     "documents": [
         {
-            "type": "^(паспорт|passport|idpassport)$",
+            "type": {
+                "express":"^(паспорт|passport|idpassport)$",
+                "message": "Ошибка формата паспорта, поле type"
+            },
             "dateIssue": "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$"
         }
     ]
@@ -79,43 +82,69 @@ function validateItem(check, express, parent, field, message) {
 }
 
 function validateTree(vmap, data, parent, path) {
+    var hasError = false;
+    var ret = [];
     for (var imap in vmap) {
         path += (parent+".");
         var result;
         var from = 0;
+
         if(typeof vmap[imap] === "object"){
             if(!Array.isArray(vmap[imap])) {
                 if (vmap[imap].express !== undefined) {
                     from = 1;
+                    console.log('      1+-',imap, data[imap], data);
                     result = validateItem(data[imap], vmap[imap].express, parent, imap, vmap[imap].message);  
                 }
                 else { 
-                    validateTree(vmap[imap], data[imap], imap, path);  
+                    from = 4;
+                    console.log('      4+-',imap, data[imap], data);
+                    validateTree(vmap[imap], data[imap], imap, path);
                 }    
             }
             else {                            
-                validateTree(vmap[imap][0], data[imap], imap, path);   
+                console.log('      Array Map',imap, data[imap])
+                validateTree(vmap[imap][0], data[imap], imap, path);
             }             
         } else {
+            console.log('      ++++ data', Array.isArray(data), imap, data)    
+            
             if(!Array.isArray(data)) {
                 from = 2;
+                console.log('      ----',imap, ikey, idat)
                 result = validateItem(data[imap], vmap[imap], parent, imap);
-            } else {
+            } else 
+              
+            {
                 for (var idat of data) {
+                    console.log('      ++++ idat', imap, idat)
                     for (var ikey in idat) {
-                        if(ikey == imap) {
+                        console.log('       ++++ ikey', ikey)
+                        if( ikey == imap ) {
                             from = 3;
+                            console.log('      -',imap, ikey, idat)
                             result = validateItem(idat[ikey], vmap[imap], parent, imap);
                         }
                     }
                 }
-            }            
+            }
         }
-        console.log();
+
+        if(result !== undefined 
+            //&& result.result == false
+            ) {
+            hasError = true;
+            ret.push(result);
+        }
+
+        console.log('-------------------------');
         console.log(from, imap, typeof vmap[imap], result);
     }
+    return ret;
 }
 
-validateTree(validateMap, validateData, '', '');
+var out = validateTree(validateMap, validateData, '', '');
+//console.log(out);
+
 
 
