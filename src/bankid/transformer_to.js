@@ -1,3 +1,4 @@
+// @what transformer_to.js
 // Прямое преобразование из структуры типа BankId в WebBank XML 
 // RUN 
 // export NODE_PATH="$(npm root -g)"

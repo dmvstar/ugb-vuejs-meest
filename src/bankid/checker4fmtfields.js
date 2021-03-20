@@ -1,88 +1,28 @@
 //@what checker4fmtields.js
 //https://regex101.com/ 
 //--------------------------------------------------------------------------
-var msg;
+
 var isConsole = true;
+var isLocalWork = true;
+if (typeof msg != "undefined") isLocalWork = false;
+else var msg;
+
 var validateData;
-if(msg === undefined) { msg = {};
-    validateData = require('./valdateData.json');
+var validateMapa
+if(isLocalWork) { 
+    validateData = require('./validateData.json');
+    validateMapa = require('./validateMapa.json');
+    msg = {};
+    msg.vBIdata = validateData;
+    msg.vBImapa = validateMapa;   
 }
+//console.log(validateMapa);
 //--------------------------------------------------------------------------
 var regSD10  = "^[0-9]{10}$"
 var regSD09  = "^[0-9]{9}$"
 var regSPass = "^[А-Ю][А-Ю][0-9]{6}$"
-var regSBIINN= "("+regSD10+")|("+regSD09+")|("+regSPass+")";
-const validateMap = {
-    "person": {
-        "inn": {
-            "needed" : true,
-            "express": regSBIINN,
-            "message": "Ошибка формата поля ИНН"
-        },
-        "sex": {
-            "needed" : true,
-            "express": "^[MFЧЖ]$",
-            "message": "Ошибка формата поля ПОЛ"
-        },
-        "birthDay": {
-            "needed" : true,
-            "express":"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
-            "message": "Ошибка формата поля birthDay"
-        },
-        "type": {
-            "needed" : true,
-            "express": "^physical$",
-            "message": "Ошибка формата поля Тип"
-        },
-        "lastName": {
-            "needed" : true,
-            "express": "^[А-я]*$",
-            "message": "Ошибка формата поля Фамилия"
-        },
-        "firstName": {
-            "needed" : true,
-            "express": "^[А-я]*$",
-            "message": "Ошибка формата поля Имя"
-        },
-        "middleName": {
-            "needed" : true,
-            "express": "^[А-я]*$",
-            "message": "Ошибка формата поля Отчество"
-        },
+var regSBIINN= "(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)";
 
-        "ext": {
-            "num": {
-                "needed" : false,
-                "express":regSD10,
-                "message": "Ошибка формата поля NUM"
-            }
-        }
-    },
-    "documents": [
-        {
-            "type": {
-                "needed" : true,
-                "express":"^(паспорт|passport|idpassport)$",
-                "message": "Ошибка формата паспорта, поле type"
-            },
-            "dateIssue": {
-                "needed" : true,
-                "express":"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
-                "message": "Ошибка формата паспорта, поле dateIssue"
-            }
-        }
-    ],
-    "addresses": [
-        {
-            "type": {
-                "needed" : true,
-                "express":"^(factual|juridical)$",
-                "message": "Ошибка формата адреса, поле type"
-            }
-        }
-    ]
-};
-msg.vdata = validateData;
 //--------------------------------------------------------------------------
 //@what checker4fmtields.js
 function validateItem(vmap, check, parent, field) {
@@ -179,9 +119,9 @@ function validateResult(checkErrors)
     }
 }
 //--------------------------------------------------------------------------
-var out = validateTree(validateMap, msg.vdata, '', '', 0);
+var out = validateTree(msg.vBImapa, msg.vBIdata, '', '', 0);
 var check = validateResult(out);
-if(isConsole) {
+if(isLocalWork) {
     console.log('-------------------------');
     console.log(out);
     console.log('-------------------------');
@@ -189,5 +129,7 @@ if(isConsole) {
     console.log('-------------------------');
 }
 //--------------------------------------------------------------------------
-
-
+if(!isLocalWork) { 
+    msg.payload = check;
+    return msg;
+}
