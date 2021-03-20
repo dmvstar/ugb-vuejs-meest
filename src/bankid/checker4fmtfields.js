@@ -3,32 +3,9 @@
 //--------------------------------------------------------------------------
 var msg;
 var isConsole = true;
-if(msg === undefined) msg = {};
-
-var validateData = {
-    "person": {
-        "inn": "2837213759",
-        "birthDay": "10.09.1977",
-        "sex": "Ж",
-        "ext": {
-            "num": "9876q565454"
-        },
-        "type": "physical1",
-        "lastName": "ЛАБАЙКОВQ",
-        "firstName": "ВОЛОДИМИРК",
-        "middleName": "МАРЯНОВИЧ"
-    },
-    "documents": [
-        {
-            "type": "паспортф",
-            "dateIssue": "49.07.1995"
-        }
-    ],
-    "addresses": [
-        {
-            "type": "factual0"
-        }
-    ]    
+var validateData;
+if(msg === undefined) { msg = {};
+    validateData = require('./validateData.json');
 }
 //--------------------------------------------------------------------------
 var regSD10  = "^[0-9]{10}$"
