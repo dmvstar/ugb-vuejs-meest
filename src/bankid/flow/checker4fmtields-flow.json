@@ -27,7 +27,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 140,
         "y": 80,
         "wires": [
             [
@@ -47,8 +47,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
-        "y": 180,
+        "x": 690,
+        "y": 160,
         "wires": []
     },
     {
@@ -61,8 +61,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 410,
-        "y": 140,
+        "x": 710,
+        "y": 120,
         "wires": [
             [
                 "8ac14010.fb7c08"
@@ -80,8 +80,8 @@
         "syntax": "mustache",
         "template": "{\n    \"person\": {\n        \"inn\": {\n            \"needed\" : true,\n            \"express\": \"(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)\",\n            \"message\": \"Ошибка формата поля ИНН\"\n        },\n        \"sex\": {\n            \"needed\" : true,\n            \"express\": \"^[MFЧЖ]$\",\n            \"message\": \"Ошибка формата поля ПОЛ\"\n        },\n        \"birthDay\": {\n            \"needed\" : true,\n            \"express\":\"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$\",\n            \"message\": \"Ошибка формата поля birthDay\"\n        },\n        \"type\": {\n            \"needed\" : true,\n            \"express\": \"^physical$\",\n            \"message\": \"Ошибка формата поля Тип\"\n        },\n        \"lastName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Фамилия\"\n        },\n        \"firstName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Имя\"\n        },\n        \"middleName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Отчество\"\n        },\n\n        \"ext\": {\n            \"num\": {\n                \"needed\" : false,\n                \"express\": \"^[0-9]{10}$\",\n                \"message\": \"Ошибка формата поля NUM\"\n            }\n        }\n    },\n    \"documents\": [\n        {\n            \"type\": {\n                \"needed\" : true,\n                \"express\":\"^(паспорт|passport|idpassport)$\",\n                \"message\": \"Ошибка формата паспорта, поле type\"\n            },\n            \"dateIssue\": {\n                \"needed\" : true,\n                \"express\":\"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$\",\n                \"message\": \"Ошибка формата паспорта, поле dateIssue\"\n            }\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": {\n                \"needed\" : true,\n                \"express\":\"^(factual|juridical)$\",\n                \"message\": \"Ошибка формата адреса, поле type\"\n            }\n        }\n    ]\n}",
         "output": "json",
-        "x": 190,
-        "y": 180,
+        "x": 460,
+        "y": 80,
         "wires": [
             [
                 "1fe5d98d.97731e"
@@ -92,18 +92,152 @@
         "id": "eea6c019.82744",
         "type": "template",
         "z": "58708704.df6b58",
-        "name": "vBIdata",
+        "name": "vBIdata no",
         "field": "vBIdata",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"person\": {\n        \"inn\": \"2837213759\",\n        \"birthDay\": \"10.09.1977\",\n        \"sex\": \"Ж\",\n        \"ext\": {\n            \"num\": \"9876q565454\"\n        },\n        \"type\": \"physical1\",\n        \"lastName\": \"Кетцалькоатль0\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\"\n\n    },\n    \"documents\": [\n        {\n            \"type\": \"паспортф\",\n            \"dateIssue\": \"49.07.1995\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"Ук\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": \"factual\",\n            \"country\": \"Ук\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }    \n    ]    \n}",
+        "template": "{\n    \"person\": {\n            \"inn\": \"28372137590\",\n        \"birthDay\": \"10.09.1977\",\n        \"sex\": \"Ж\",\n        \"ext\": {\n            \"num\": \"9876q565454\"\n        },\n        \"type\": \"physical1\",\n            \"lastName\": \"Кетцалькоатль0\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\"\n\n    },\n    \"documents\": [\n        {\n            \"type\": \"паспортф\",\n            \"dateIssue\": \"49.07.1995\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"Ук\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": \"factual\",\n            \"country\": \"Ук\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }    \n    ]    \n}",
         "output": "json",
-        "x": 190,
-        "y": 140,
+        "x": 290,
+        "y": 80,
         "wires": [
             [
                 "49657bd4.0ca7dc"
+            ]
+        ]
+    },
+    {
+        "id": "684b981.36773e8",
+        "type": "template",
+        "z": "58708704.df6b58",
+        "name": "vBImapa",
+        "field": "vBImapa",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n        \"email\": {\n            \"needed\" : true,\n            \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        },\n        \"phone\": {\n            \"needed\" : true,\n            \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        }\n}",
+        "output": "json",
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "1fe5d98d.97731e"
+            ]
+        ]
+    },
+    {
+        "id": "a099aa2b.dd92d",
+        "type": "template",
+        "z": "58708704.df6b58",
+        "name": "vBIdata ok",
+        "field": "vBIdata",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n        \"email\": \"mail@dot.com\"\n        ,\n        \"phone\": \"+380934323232\"\n        \n}",
+        "output": "json",
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "684b981.36773e8"
+            ]
+        ]
+    },
+    {
+        "id": "3a2fbab6.1deb2e",
+        "type": "inject",
+        "z": "58708704.df6b58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "a099aa2b.dd92d"
+            ]
+        ]
+    },
+    {
+        "id": "22ca88b0.b5758",
+        "type": "inject",
+        "z": "58708704.df6b58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "5dd4cb04.c3f37c"
+            ]
+        ]
+    },
+    {
+        "id": "5dd4cb04.c3f37c",
+        "type": "template",
+        "z": "58708704.df6b58",
+        "name": "vBIdata no",
+        "field": "vBIdata",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n        \"email\": \"mail@dot.com\"\n        ,\n        \"phone\": \"+3809343232323\"\n        \n}",
+        "output": "json",
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "b20cf552.a1d988"
+            ]
+        ]
+    },
+    {
+        "id": "b20cf552.a1d988",
+        "type": "template",
+        "z": "58708704.df6b58",
+        "name": "vBImapa",
+        "field": "vBImapa",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n        \"email\": {\n            \"needed\" : true,\n            \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        },\n        \"phone\": {\n            \"needed\" : true,\n            \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        }\n}",
+        "output": "json",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "1fe5d98d.97731e"
             ]
         ]
     }
