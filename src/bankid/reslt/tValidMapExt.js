@@ -25,7 +25,10 @@ const validateMap = {
                 "express":"^(паспорт|passport|idpassport)$",
                 "message": "Ошибка формата паспорта, поле type"
             },
-            "dateIssue": "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$"
+            "dateIssue": {
+                "express":"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
+                "message": "Ошибка формата паспорта, поле dateIssue"
+            }
         }
     ]
 };
@@ -41,7 +44,7 @@ const validateData = {
     "documents": [
         {
             "type": "паспортф",
-            "dateIssue": "19.07.1995"
+            "dateIssue0": "19.07.1995"
         }
     ],
     "addresses": [
@@ -54,15 +57,18 @@ const validateData = {
 console.log('-----------------------------')
 
 function validateItem(check, express, parent, field, message) {
+    console.log("validateItem", check, express, parent, field, message);
     const regexp = new RegExp(express, "gm");
     const result = regexp.test(check);
+    check = check===undefined?"Отсутвует значение поля !":check;
     var ret = {
         result: result,
         path: parent+'->'+field,
         check: check, 
         express: express,
-        message: message!==undefined&!result?message:""
+        message: message!==undefined&!result?message+" ("+parent+'->'+field+")["+check+"]":""
     }
+    //console.log("------", message);
     return ret;
 }
 
@@ -74,7 +80,7 @@ function s(level)
 }
 
 function validateTree(vmap, data, parent, path, alevel) {
-    var hasError = false;
+    
     var ret = [];    
     var level = alevel + 1;
     
@@ -96,10 +102,8 @@ function validateTree(vmap, data, parent, path, alevel) {
                         //console.log(s(level),'33',level, data);
                         for (var idat of data) { // array
                             var testData = idat[imap];
-                            if( testData !== undefined ) {
-                                result = validateItem(testData, vmap[imap], parent, imap);
-                                ret.push(result); 
-                            }
+                            result = validateItem(testData, vmap[imap].express, parent, imap, vmap[imap].message);
+                            ret.push(result); 
                         }
                     }    
                 }
@@ -119,15 +123,13 @@ function validateTree(vmap, data, parent, path, alevel) {
             //console.log(s(level),'Z',level,(typeof vmap[imap]),Array.isArray(vmap[imap]), imap);
             if(!Array.isArray(data)) {
                 from = 3;
-                result = validateItem(data[imap], vmap[imap], parent, imap);
+                result = validateItem(data[imap], vmap[imap], parent, imap, "");
             } else               
             {
                 for (var idat of data) { // array
                     var testData = idat[imap];
-                    if( testData !== undefined ) {
-                        result = validateItem(testData, vmap[imap], parent, imap);
-                        ret.push(result); 
-                    }
+                    result = validateItem(testData, vmap[imap], parent, imap, "");
+                    ret.push(result); 
                 }
             }
         }
@@ -135,9 +137,30 @@ function validateTree(vmap, data, parent, path, alevel) {
     return ret;
 }
 
+function validateResult(checkErrors)
+{
+    var hasError = false;
+    var result = [];
+
+    for (var o of checkErrors) {
+        if(!o.result) {
+            hasError = true;
+            result.push(o);
+        }
+    }
+
+    return {
+        hasError : hasError,
+        result : result
+    }
+}
+
 var out = validateTree(validateMap, validateData, '', '', 0);
 console.log('-------------------------');
 console.log(out);
+console.log('-------------------------');
+var check = validateResult(out);
+console.log(check);
 console.log('-------------------------');
 
 
