@@ -5,7 +5,7 @@ var msg;
 var isConsole = true;
 var validateData;
 if(msg === undefined) { msg = {};
-    validateData = require('./validateData.json');
+    validateData = require('./valdateData.json');
 }
 //--------------------------------------------------------------------------
 var regSD10  = "^[0-9]{10}$"
