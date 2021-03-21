@@ -212,7 +212,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n        \"email\": \"mail@dot.com\"\n        ,\n        \"phone\": \"+3809343232323\"\n        \n}",
+        "template": "{\n    \"email\": \"mail@dot.com\",\n    \"phone\": \"+380934323223\"\n}",
         "output": "json",
         "x": 290,
         "y": 160,
@@ -231,10 +231,77 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n        \"email\": {\n            \"needed\" : true,\n            \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        },\n        \"phone\": {\n            \"needed\" : true,\n            \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        }\n}",
+        "template": "{\n    \"email\": {\n        \"needed\" : true,\n        \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n        \"message\": \"Ошибка формата поля e-mail \"\n    },\n    \"phone\": {\n        \"needed\" : true,\n        \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n        \"message\": \"Ошибка формата поля телефон \"\n    },\n    \"web\":{\n        \"needed\" : false,\n        \"express\": \"^(https?:\\\\/\\\\/)?(www\\\\.)[-a-zA-Z0-9@:%._\\\\+~#=]{2,256}\\\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\\\+.~#?&//=]*)|(https?:\\/\\/)?(www\\\\.)?(?!ww)[-a-zA-Z0-9@:%._\\\\+~#=]{2,256}\\\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\\\+.~#?&//=]*)\",\n        \"message\": \"Ошибка формата поля web \"\n    }\n}",
         "output": "json",
         "x": 460,
         "y": 160,
+        "wires": [
+            [
+                "1fe5d98d.97731e"
+            ]
+        ]
+    },
+    {
+        "id": "5faa7f77.d15cb8",
+        "type": "inject",
+        "z": "58708704.df6b58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "d538a855.65db68"
+            ]
+        ]
+    },
+    {
+        "id": "d538a855.65db68",
+        "type": "template",
+        "z": "58708704.df6b58",
+        "name": "vBIdata no",
+        "field": "vBIdata",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"email\": \"mail@dot.com\",\n    \"phone\": \"+380934323223\",\n    \"web\": \"www\",\n    \"web1\": \"www.google.com\"\n}",
+        "output": "json",
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "101ca940.997b07"
+            ]
+        ]
+    },
+    {
+        "id": "101ca940.997b07",
+        "type": "template",
+        "z": "58708704.df6b58",
+        "name": "vBImapa",
+        "field": "vBImapa",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"email\": {\n        \"needed\" : true,\n        \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n        \"message\": \"Ошибка формата поля e-mail \"\n    },\n    \"phone\": {\n        \"needed\" : true,\n        \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n        \"message\": \"Ошибка формата поля телефон \"\n    },\n    \"web\":{\n        \"needed\" : false,\n        \"express\": \"(https?:\\/\\/(?:www\\\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\\\.[^\\\\s]{2,}|www\\\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\\\.[^\\\\s]{2,}|https?:\\/\\/(?:www\\\\.|(?!www))[a-zA-Z0-9]+\\\\.[^\\\\s]{2,}|www\\\\.[a-zA-Z0-9]+\\\\.[^\\\\s]{2,})\",\n        \"message\": \"Ошибка формата поля web \"\n    }\n}",
+        "output": "json",
+        "x": 460,
+        "y": 200,
         "wires": [
             [
                 "1fe5d98d.97731e"
