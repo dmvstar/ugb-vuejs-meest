@@ -1,0 +1,30 @@
+{
+    "code": 1455,
+    "result": "error",
+    "time": "Work time is: 0.028 sec.",
+    "path": "/openbanking/bankid/client",
+    "data": {
+        "result": "error",
+        "mess": "Ошибка формата полей",
+        "data": {
+            "hasError": true,
+            "errorCount": 2,
+            "result": [
+                {
+                    "result": false,
+                    "path": "person->middleName",
+                    "check": "МАРЯНОВИЧ2",
+                    "express": "^[А-я]*$",
+                    "message": "Ошибка формата поля Отчество (person->middleName)[МАРЯНОВИЧ2]"
+                },
+                {
+                    "result": false,
+                    "path": "addresses->type",
+                    "check": "factualo",
+                    "express": "^(factual|juridical)$",
+                    "message": "Ошибка формата адреса, поле type (addresses->type)[factualo]"
+                }
+            ]
+        }
+    }
+}

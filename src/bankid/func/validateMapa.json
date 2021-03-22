@@ -1,3 +1,4 @@
+vBImapa
 {
     "person": {
         "inn": {
@@ -7,7 +8,7 @@
         },
         "sex": {
             "needed" : true,
-            "express": "^[MFЧЖ]$",
+            "express": "^[MFЧЖМ]$",
             "message": "Ошибка формата поля ПОЛ"
         },
         "birthDay": {
@@ -67,4 +68,68 @@
             }
         }
     ]
+}
+
+vBIdata
+{
+    "person": {
+            "inn": "28372137590",
+        "birthDay": "10.09.1977",
+        "sex": "Ж",
+        "ext": {
+            "num": "9876q565454"
+        },
+        "type": "physical1",
+            "lastName": "Кетцалькоатль0",
+        "firstName": "Кукумац",
+        "middleName": "Кукулькан",
+        "phone": "380631003256",
+        "email": "sava@mail.dot.com",
+        "web": "www.www.net"
+
+    },
+    "documents": [
+        {
+            "type": "паспортф",
+            "dateIssue": "49.07.1995",
+            "typeName": "Паспорт",
+            "series": "СН",
+            "number": "432311",
+            "issue": "Святошинське РУ ГУ МВС у м.Києві",
+            "dateExpiration": "",
+            "issueCountryIso2": "Ук"
+        },
+        {
+            "type": "idpassport",
+            "typeName": "Паспорт картка",
+            "series": "",
+            "number": "3425654326",
+            "issue": "1456",
+            "dateIssue": "01.10.2020",
+            "dateExpiration": "01.10.2040",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "addresses": [
+        {
+            "type": "factual",
+            "country": "Ук",
+            "state": "Київська",
+            "area": "Київ",
+            "city": "м. Київ",
+            "street": "вул. Бородинского побоища",
+            "houseNo": "21",
+            "flatNo": "16"
+        },
+        {
+            "type": "juridical",
+            "country": "UA",
+            "state": "Київська",
+            "area": "Київ",
+            "city": "м. Чичен-Ица",
+            "street": "вул. пирамида Кукулькана.",
+            "houseNo": "1",
+            "flatNo": "1"
+        }    
+    ]    
 }
