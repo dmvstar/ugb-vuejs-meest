@@ -72,9 +72,12 @@ function validateTree(vmap, data, parent, path, alevel) {
             if(!Array.isArray(vmap[imap])) {
                 if (vmap[imap].express !== undefined) {
                     if(!Array.isArray(data)) {
-                        //console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap]);
-                        result = validateItem(vmap[imap], data[imap], parent, imap); 
-                        ret.push(result); 
+                        console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap], data);
+                        if(data!==undefined)
+                        {
+                            result = validateItem(vmap[imap], data[imap], parent, imap); 
+                            ret.push(result); 
+                        }    
                     } else {
                         //console.log(s(level),'33',level, data);
                         for (var idat of data) { // array
@@ -130,6 +133,23 @@ if(isLocalWork) {
 }
 //--------------------------------------------------------------------------
 if(!isLocalWork) { 
-    msg.payload = check;
-    return msg;
+    var mess = "Ошибка формата полей";
+    if(check.hasError) {
+        msg.payload = {
+            result : "error",
+            mess: mess,
+            data: check
+        }    
+        msg.errorCodeRe = 1455;
+        return msg;
+        //node.error(mess, msg);
+    } else {
+        msg.payload = {
+            result : "ok",
+            mess: "Ok",
+            data: []
+        }    
+        msg.errorCodeRe = 200;
+        return msg;
+    }
 }
