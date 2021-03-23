@@ -4,7 +4,7 @@
     "time"+:     string  "Work time is: 16.997 sec.",
     "path"+:     string  "/openbanking/bankid/client",
     "message"+:  string  "",
-    "description"+:    string  "",
+    "descrip"+:  string  "",
     "data"*:     object  {}|[]
 }
 
