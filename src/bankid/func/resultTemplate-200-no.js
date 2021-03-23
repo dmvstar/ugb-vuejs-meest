@@ -14,6 +14,10 @@ var data = {};
 var description = msg.payload; // default responce Array
 var message = description.result;
 
+var description ="";
+if(msg.error !== undefined)
+    description = msg.error;
+
 if(msg.errorCodeRe !== undefined)
     code = msg.errorCodeRe
 
