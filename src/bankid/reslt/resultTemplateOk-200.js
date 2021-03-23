@@ -39,12 +39,11 @@ if (data === undefined || data.length === 0) { // no data
 
 msg.statusCode = 200;
 msg.payload = {
-    code: code,
     result: result,
+    code: code,
     time: msg.workTime,
     path: msg.req.route.path,
     data: data
 };
-
 
 return msg;
