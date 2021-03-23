@@ -1,13 +1,18 @@
-var isArray = false;
-var resultCnt = 0; // Array
-var code = 1200;
-var result = 'ok';
+//Reply 200 ok
+msg.statusCode = 200;
+
 msg.workStop = Date.now();
 msg.workTime = 'Work time is: ' + (
     (msg.workStop - msg.workStart) / 1000
 ) + ' sec.';
+var isArray = false;
+var resultCnt = 0; // Array
 
+var code = 1200;
+var result = 'ok';
 var data = msg.payload; // default responce Array
+
+
 if (msg.topicResultCnt !== undefined) 
     resultCnt = msg.topicResultCnt;
 if (Array.isArray(data)) 
@@ -37,7 +42,6 @@ if (data === undefined || data.length === 0) { // no data
     }
 }
 
-msg.statusCode = 200;
 msg.payload = {
     result: result,
     code: code,
