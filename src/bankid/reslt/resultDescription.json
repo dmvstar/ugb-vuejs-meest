@@ -1,0 +1,9 @@
+{
+    "code"*:     int|string "200"|1401|1501|1555|...,
+    "result"*:   string  "ok"|"no"|"error",
+    "time"+:     string  "Work time is: 16.997 sec.",
+    "path"+:     string  "/openbanking/bankid/client",
+    "error"+:    string  "",
+    "data"*:     object  {}|[]
+}
+

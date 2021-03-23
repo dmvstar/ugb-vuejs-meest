@@ -4,7 +4,9 @@
 
 var isConsole = true;
 var isLocalWork = true;
-if (typeof msg != "undefined") isLocalWork = false;
+if (typeof msg != "undefined") {
+    isLocalWork = false;
+}    
 else var msg;
 
 var validateData;
@@ -72,7 +74,7 @@ function validateTree(vmap, data, parent, path, alevel) {
             if(!Array.isArray(vmap[imap])) {
                 if (vmap[imap].express !== undefined) {
                     if(!Array.isArray(data)) {
-                        console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap], data);
+                        if(isLocalWork) console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap], data);
                         if(data!==undefined)
                         {
                             result = validateItem(vmap[imap], data[imap], parent, imap); 
@@ -141,8 +143,8 @@ if(!isLocalWork) {
             data: check
         }    
         msg.errorCodeRe = 1455;
-        return msg;
-        //node.error(mess, msg);
+        //return msg;
+        node.error(mess, msg);
     } else {
         msg.payload = {
             result : "ok",

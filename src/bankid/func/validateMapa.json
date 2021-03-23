@@ -23,17 +23,17 @@ vBImapa
         },
         "lastName": {
             "needed" : true,
-            "express": "^[А-я]*$",
+            "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
             "message": "Ошибка формата поля Фамилия"
         },
         "firstName": {
             "needed" : true,
-            "express": "^[А-я]*$",
+            "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
             "message": "Ошибка формата поля Имя"
         },
         "middleName": {
             "needed" : true,
-            "express": "^[А-я]*$",
+            "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
             "message": "Ошибка формата поля Отчество"
         },
 

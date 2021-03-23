@@ -1,15 +1,15 @@
 [
     {
-        "id": "58708704.df6b58",
+        "id": "61944238.fea2dc",
         "type": "tab",
-        "label": "Check",
+        "label": "Validator",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "724cc7ca.de0298",
+        "id": "95bdba76.f48f5",
         "type": "inject",
-        "z": "58708704.df6b58",
+        "z": "61944238.fea2dc",
         "name": "",
         "props": [
             {
@@ -27,18 +27,18 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 110,
         "y": 80,
         "wires": [
             [
-                "eea6c019.82744"
+                "21556d89.ad601a"
             ]
         ]
     },
     {
-        "id": "8ac14010.fb7c08",
+        "id": "4bbaf19e.fed84",
         "type": "debug",
-        "z": "58708704.df6b58",
+        "z": "61944238.fea2dc",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -48,264 +48,94 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 160,
+        "y": 120,
         "wires": []
     },
     {
-        "id": "1fe5d98d.97731e",
+        "id": "bee76441.d60588",
+        "type": "template",
+        "z": "61944238.fea2dc",
+        "name": "vBIdata",
+        "field": "vBIdata",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\n{\n    \"person\": {\n            \"inn\": \"28372137590\",\n        \"birthDay\": \"10.09.1977\",\n        \"sex\": \"Ж\",\n        \"ext\": {\n            \"num\": \"9876q565454\"\n        },\n        \"type\": \"physical1\",\n            \"lastName\": \"Кетцалькоатль0\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\"\n\n    },\n    \"documents\": [\n        {\n            \"type\": \"паспортф\",\n            \"dateIssue\": \"49.07.1995\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"Ук\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": \"factual\",\n            \"country\": \"Ук\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }    \n    ]    \n}",
+        "output": "json",
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "746e5b84.75481c"
+            ]
+        ]
+    },
+    {
+        "id": "746e5b84.75481c",
         "type": "function",
-        "z": "58708704.df6b58",
-        "name": "checker4fmtields.js",
-        "func": "//@what checker4fmtields.js\n//https://regex101.com/ \n//--------------------------------------------------------------------------\n\nvar isConsole = true;\nvar isLocalWork = true;\nif (typeof msg != \"undefined\") isLocalWork = false;\nelse var msg;\n\nvar validateData;\nvar validateMapa\nif(isLocalWork) { \n    validateData = require('./validateData.json');\n    validateMapa = require('./validateMapa.json');\n    msg = {};\n    msg.vBIdata = validateData;\n    msg.vBImapa = validateMapa;   \n}\n//console.log(validateMapa);\n//--------------------------------------------------------------------------\nvar regSD10  = \"^[0-9]{10}$\"\nvar regSD09  = \"^[0-9]{9}$\"\nvar regSPass = \"^[А-Ю][А-Ю][0-9]{6}$\"\nvar regSBIINN= \"(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)\";\n\n//--------------------------------------------------------------------------\n//@what checker4fmtields.js\nfunction validateItem(vmap, check, parent, field) {\n    //console.log(\"validateItem\", check, parent, field, vmap);    \n    var mcheck;\n    var result = true;\n    if(check===undefined) {\n        if(vmap.needed) {\n            mcheck = \"Отсутвует значение обязательного поля !\";        \n            result = false;\n        }\n    } else {\n        const regexp = new RegExp(vmap.express, \"gm\");\n        result = regexp.test(check);\n        mcheck = check;\n    }     \n    const message = vmap.message!==undefined&!result?vmap.message+\" (\"+parent+'->'+field+\")[\"+mcheck+\"]\":\"\";\n    var ret = {\n        result:     result,\n        path:       parent+'->'+field,\n        check:      mcheck, \n        express:    vmap.express,\n        message:    message\n    }\n    //console.log(\"validateItem\", result);\n    return ret;\n}\n\nfunction s(level)\n{\n    var ret = \"\";\n    for (i=0; i<level*4; i++,ret +=\" \");\n    return ret;\n}\n\nfunction validateTree(vmap, data, parent, path, alevel) {\n    \n    var ret = [];    \n    var level = alevel + 1;\n    \n    for (var imap in vmap) {\n        path += (parent+\".\");\n        var result;\n\n        if(typeof vmap[imap] === \"object\"){\n            //console.log(s(level),'0',level, (typeof vmap[imap]), imap);\n            if(!Array.isArray(vmap[imap])) {\n                if (vmap[imap].express !== undefined) {\n                    if(!Array.isArray(data)) {\n                        console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap], data);\n                        if(data!==undefined)\n                        {\n                            result = validateItem(vmap[imap], data[imap], parent, imap); \n                            ret.push(result); \n                        }    \n                    } else {\n                        //console.log(s(level),'33',level, data);\n                        for (var idat of data) { // array\n                            var testData = idat[imap];\n                            result = validateItem(vmap[imap], testData, parent, imap);\n                            ret.push(result); \n                        }\n                    }    \n                }\n                else { \n                    //console.log(s(level),'2',level, (typeof vmap[imap]), imap);\n                    var oret = validateTree(vmap[imap], data[imap], imap, path, level);\n                    ret = ret.concat(oret);\n                }    \n            }\n            else {                            \n                //console.log(s(level),'3',level, (typeof vmap[imap]), imap, vmap[imap]);\n                var oret = validateTree(vmap[imap][0], data[imap], imap, path, level);\n                ret = ret.concat(oret);\n            }             \n        }\n    }\n    return ret;\n}\n\nfunction validateResult(checkErrors)\n{\n    var hasError = false;\n    var result = [];\n\n    for (var o of checkErrors) {\n        if(!o.result) {\n            hasError = true;\n            result.push(o);\n        }\n    }\n\n    return {\n        hasError : hasError,\n        errorCount : result.length,\n        result : result\n    }\n}\n//--------------------------------------------------------------------------\nvar out = validateTree(msg.vBImapa, msg.vBIdata, '', '', 0);\nvar check = validateResult(out);\nif(isLocalWork) {\n    console.log('-------------------------');\n    console.log(out);\n    console.log('-------------------------');\n    console.log(check);\n    console.log('-------------------------');\n}\n//--------------------------------------------------------------------------\nif(!isLocalWork) { \n    var mess = \"Ошибка формата полей\";\n    if(check.hasError) {\n        msg.payload = {\n            result : \"error\",\n            mess: mess,\n            data: check\n        }    \n        msg.errorCodeRe = 1455;\n        return msg;\n        //node.error(mess, msg);\n    } else {\n        msg.payload = {\n            result : \"ok\",\n            mess: \"Ok\",\n            data: []\n        }    \n        msg.errorCodeRe = 200;\n        return msg;\n    }\n}",
+        "z": "61944238.fea2dc",
+        "name": "validator",
+        "func": "//@what checker4fmtields.js\n//https://regex101.com/ \n//--------------------------------------------------------------------------\n\nvar isConsole = true;\nvar isLocalWork = true;\nif (typeof msg != \"undefined\") {\n    isLocalWork = false;\n}    \nelse var msg;\n\nvar validateData;\nvar validateMapa\nif(isLocalWork) { \n    validateData = require('./validateData.json');\n    validateMapa = require('./validateMapa.json');\n    msg = {};\n    msg.vBIdata = validateData;\n    msg.vBImapa = validateMapa;   \n}\n//console.log(validateMapa);\n//--------------------------------------------------------------------------\nvar regSD10  = \"^[0-9]{10}$\"\nvar regSD09  = \"^[0-9]{9}$\"\nvar regSPass = \"^[А-Ю][А-Ю][0-9]{6}$\"\nvar regSBIINN= \"(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)\";\n\n//--------------------------------------------------------------------------\n//@what checker4fmtields.js\nfunction validateItem(vmap, check, parent, field) {\n    //console.log(\"validateItem\", check, parent, field, vmap);    \n    var mcheck;\n    var result = true;\n    if(check===undefined) {\n        if(vmap.needed) {\n            mcheck = \"Отсутвует значение обязательного поля !\";        \n            result = false;\n        }\n    } else {\n        const regexp = new RegExp(vmap.express, \"gm\");\n        result = regexp.test(check);\n        mcheck = check;\n    }     \n    const message = vmap.message!==undefined&!result?vmap.message+\" (\"+parent+'->'+field+\")[\"+mcheck+\"]\":\"\";\n    var ret = {\n        result:     result,\n        path:       parent+'->'+field,\n        check:      mcheck, \n        express:    vmap.express,\n        message:    message\n    }\n    //console.log(\"validateItem\", result);\n    return ret;\n}\n\nfunction s(level)\n{\n    var ret = \"\";\n    for (i=0; i<level*4; i++,ret +=\" \");\n    return ret;\n}\n\nfunction validateTree(vmap, data, parent, path, alevel) {\n    \n    var ret = [];    \n    var level = alevel + 1;\n    \n    for (var imap in vmap) {\n        path += (parent+\".\");\n        var result;\n\n        if(typeof vmap[imap] === \"object\"){\n            //console.log(s(level),'0',level, (typeof vmap[imap]), imap);\n            if(!Array.isArray(vmap[imap])) {\n                if (vmap[imap].express !== undefined) {\n                    if(!Array.isArray(data)) {\n                        if(isLocalWork) console.log(s(level),'22',level, (typeof vmap[imap]), imap, Array.isArray(data), vmap[imap], data);\n                        if(data!==undefined)\n                        {\n                            result = validateItem(vmap[imap], data[imap], parent, imap); \n                            ret.push(result); \n                        }    \n                    } else {\n                        //console.log(s(level),'33',level, data);\n                        for (var idat of data) { // array\n                            var testData = idat[imap];\n                            result = validateItem(vmap[imap], testData, parent, imap);\n                            ret.push(result); \n                        }\n                    }    \n                }\n                else { \n                    //console.log(s(level),'2',level, (typeof vmap[imap]), imap);\n                    var oret = validateTree(vmap[imap], data[imap], imap, path, level);\n                    ret = ret.concat(oret);\n                }    \n            }\n            else {                            \n                //console.log(s(level),'3',level, (typeof vmap[imap]), imap, vmap[imap]);\n                var oret = validateTree(vmap[imap][0], data[imap], imap, path, level);\n                ret = ret.concat(oret);\n            }             \n        }\n    }\n    return ret;\n}\n\nfunction validateResult(checkErrors)\n{\n    var hasError = false;\n    var result = [];\n\n    for (var o of checkErrors) {\n        if(!o.result) {\n            hasError = true;\n            result.push(o);\n        }\n    }\n\n    return {\n        hasError : hasError,\n        errorCount : result.length,\n        result : result\n    }\n}\n//--------------------------------------------------------------------------\nvar out = validateTree(msg.vBImapa, msg.vBIdata, '', '', 0);\nvar check = validateResult(out);\nif(isLocalWork) {\n    console.log('-------------------------');\n    console.log(out);\n    console.log('-------------------------');\n    console.log(check);\n    console.log('-------------------------');\n}\n//--------------------------------------------------------------------------\nif(!isLocalWork) { \n    var mess = \"Ошибка формата полей\";\n    if(check.hasError) {\n        msg.payload = {\n            result : \"error\",\n            mess: mess,\n            data: check\n        }    \n        msg.errorCodeRe = 1455;\n        //return msg;\n        node.error(mess, msg);\n    } else {\n        msg.payload = {\n            result : \"ok\",\n            mess: \"Ok\",\n            data: []\n        }    \n        msg.errorCodeRe = 200;\n        return msg;\n    }\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 710,
+        "x": 480,
         "y": 120,
         "wires": [
             [
-                "8ac14010.fb7c08"
+                "4bbaf19e.fed84"
             ]
         ]
     },
     {
-        "id": "49657bd4.0ca7dc",
+        "id": "21556d89.ad601a",
         "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBImapa BankId",
+        "z": "61944238.fea2dc",
+        "name": "vBImapa",
         "field": "vBImapa",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"person\": {\n        \"inn\": {\n            \"needed\" : true,\n            \"express\": \"(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)\",\n            \"message\": \"Ошибка формата поля ИНН\"\n        },\n        \"sex\": {\n            \"needed\" : true,\n            \"express\": \"^[MFЧЖ]$\",\n            \"message\": \"Ошибка формата поля ПОЛ\"\n        },\n        \"birthDay\": {\n            \"needed\" : true,\n            \"express\":\"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$\",\n            \"message\": \"Ошибка формата поля birthDay\"\n        },\n        \"type\": {\n            \"needed\" : true,\n            \"express\": \"^physical$\",\n            \"message\": \"Ошибка формата поля Тип\"\n        },\n        \"lastName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Фамилия\"\n        },\n        \"firstName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Имя\"\n        },\n        \"middleName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Отчество\"\n        },\n\n        \"ext\": {\n            \"num\": {\n                \"needed\" : false,\n                \"express\": \"^[0-9]{10}$\",\n                \"message\": \"Ошибка формата поля NUM\"\n            }\n        }\n    },\n    \"documents\": [\n        {\n            \"type\": {\n                \"needed\" : true,\n                \"express\":\"^(паспорт|passport|idpassport)$\",\n                \"message\": \"Ошибка формата паспорта, поле type\"\n            },\n            \"dateIssue\": {\n                \"needed\" : true,\n                \"express\":\"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$\",\n                \"message\": \"Ошибка формата паспорта, поле dateIssue\"\n            }\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": {\n                \"needed\" : true,\n                \"express\":\"^(factual|juridical)$\",\n                \"message\": \"Ошибка формата адреса, поле type\"\n            }\n        }\n    ]\n}",
+        "template": "\n{\n    \"person\": {\n        \"inn\": {\n            \"needed\" : true,\n            \"express\": \"(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)\",\n            \"message\": \"Ошибка формата поля ИНН\"\n        },\n        \"sex\": {\n            \"needed\" : true,\n            \"express\": \"^[MFЧЖ]$\",\n            \"message\": \"Ошибка формата поля ПОЛ\"\n        },\n        \"birthDay\": {\n            \"needed\" : true,\n            \"express\":\"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$\",\n            \"message\": \"Ошибка формата поля birthDay\"\n        },\n        \"type\": {\n            \"needed\" : true,\n            \"express\": \"^physical$\",\n            \"message\": \"Ошибка формата поля Тип\"\n        },\n        \"lastName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Фамилия\"\n        },\n        \"firstName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Имя\"\n        },\n        \"middleName\": {\n            \"needed\" : true,\n            \"express\": \"^[А-я]*$\",\n            \"message\": \"Ошибка формата поля Отчество\"\n        },\n\n        \"ext\": {\n            \"num\": {\n                \"needed\" : false,\n                \"express\": \"^[0-9]{10}$\",\n                \"message\": \"Ошибка формата поля NUM\"\n            }\n        }\n    },\n    \"documents\": [\n        {\n            \"type\": {\n                \"needed\" : true,\n                \"express\":\"^(паспорт|passport|idpassport)$\",\n                \"message\": \"Ошибка формата паспорта, поле type\"\n            },\n            \"dateIssue\": {\n                \"needed\" : true,\n                \"express\":\"^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$\",\n                \"message\": \"Ошибка формата паспорта, поле dateIssue\"\n            }\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": {\n                \"needed\" : true,\n                \"express\":\"^(factual|juridical)$\",\n                \"message\": \"Ошибка формата адреса, поле type\"\n            }\n        }\n    ]\n}\n",
         "output": "json",
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "bee76441.d60588"
+            ]
+        ]
+    },
+    {
+        "id": "f3b34259.8efdc8",
+        "type": "catch",
+        "z": "61944238.fea2dc",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
         "x": 480,
         "y": 80,
         "wires": [
             [
-                "1fe5d98d.97731e"
+                "2a77e2f7.d5ed46"
             ]
         ]
     },
     {
-        "id": "eea6c019.82744",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBIdata no",
-        "field": "vBIdata",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"person\": {\n            \"inn\": \"28372137590\",\n        \"birthDay\": \"10.09.1977\",\n        \"sex\": \"Ж\",\n        \"ext\": {\n            \"num\": \"9876q565454\"\n        },\n        \"type\": \"physical1\",\n            \"lastName\": \"Кетцалькоатль0\",\n        \"firstName\": \"Кукумац\",\n        \"middleName\": \"Кукулькан\",\n        \"phone\": \"380631003256\",\n        \"email\": \"sava@mail.dot.com\",\n        \"web\": \"www.www.net\"\n\n    },\n    \"documents\": [\n        {\n            \"type\": \"паспортф\",\n            \"dateIssue\": \"49.07.1995\",\n            \"typeName\": \"Паспорт\",\n            \"series\": \"СН\",\n            \"number\": \"432311\",\n            \"issue\": \"Святошинське РУ ГУ МВС у м.Києві\",\n            \"dateExpiration\": \"\",\n            \"issueCountryIso2\": \"Ук\"\n        },\n        {\n            \"type\": \"idpassport\",\n            \"typeName\": \"Паспорт картка\",\n            \"series\": \"\",\n            \"number\": \"3425654326\",\n            \"issue\": \"1456\",\n            \"dateIssue\": \"01.10.2020\",\n            \"dateExpiration\": \"01.10.2040\",\n            \"issueCountryIso2\": \"UA\"\n        }\n    ],\n    \"addresses\": [\n        {\n            \"type\": \"factual\",\n            \"country\": \"Ук\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Київ\",\n            \"street\": \"вул. Бородинского побоища\",\n            \"houseNo\": \"21\",\n            \"flatNo\": \"16\"\n        },\n        {\n            \"type\": \"juridical\",\n            \"country\": \"UA\",\n            \"state\": \"Київська\",\n            \"area\": \"Київ\",\n            \"city\": \"м. Чичен-Ица\",\n            \"street\": \"вул. пирамида Кукулькана.\",\n            \"houseNo\": \"1\",\n            \"flatNo\": \"1\"\n        }    \n    ]    \n}",
-        "output": "json",
-        "x": 290,
+        "id": "2a77e2f7.d5ed46",
+        "type": "debug",
+        "z": "61944238.fea2dc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
         "y": 80,
-        "wires": [
-            [
-                "49657bd4.0ca7dc"
-            ]
-        ]
-    },
-    {
-        "id": "684b981.36773e8",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBImapa",
-        "field": "vBImapa",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n        \"email\": {\n            \"needed\" : true,\n            \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        },\n        \"phone\": {\n            \"needed\" : true,\n            \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n            \"message\": \"Ошибка формата поля ...\"\n        }\n}",
-        "output": "json",
-        "x": 460,
-        "y": 120,
-        "wires": [
-            [
-                "1fe5d98d.97731e"
-            ]
-        ]
-    },
-    {
-        "id": "a099aa2b.dd92d",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBIdata ok",
-        "field": "vBIdata",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n        \"email\": \"mail@dot.com\"\n        ,\n        \"phone\": \"+380934323232\"\n        \n}",
-        "output": "json",
-        "x": 290,
-        "y": 120,
-        "wires": [
-            [
-                "684b981.36773e8"
-            ]
-        ]
-    },
-    {
-        "id": "3a2fbab6.1deb2e",
-        "type": "inject",
-        "z": "58708704.df6b58",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 120,
-        "wires": [
-            [
-                "a099aa2b.dd92d"
-            ]
-        ]
-    },
-    {
-        "id": "22ca88b0.b5758",
-        "type": "inject",
-        "z": "58708704.df6b58",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 160,
-        "wires": [
-            [
-                "5dd4cb04.c3f37c"
-            ]
-        ]
-    },
-    {
-        "id": "5dd4cb04.c3f37c",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBIdata no",
-        "field": "vBIdata",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"email\": \"mail@dot.com\",\n    \"phone\": \"+380934323223\"\n}",
-        "output": "json",
-        "x": 290,
-        "y": 160,
-        "wires": [
-            [
-                "b20cf552.a1d988"
-            ]
-        ]
-    },
-    {
-        "id": "b20cf552.a1d988",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBImapa",
-        "field": "vBImapa",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"email\": {\n        \"needed\" : true,\n        \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n        \"message\": \"Ошибка формата поля e-mail \"\n    },\n    \"phone\": {\n        \"needed\" : true,\n        \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n        \"message\": \"Ошибка формата поля телефон \"\n    },\n    \"web\":{\n        \"needed\" : false,\n        \"express\": \"^(https?:\\\\/\\\\/)?(www\\\\.)[-a-zA-Z0-9@:%._\\\\+~#=]{2,256}\\\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\\\+.~#?&//=]*)|(https?:\\/\\/)?(www\\\\.)?(?!ww)[-a-zA-Z0-9@:%._\\\\+~#=]{2,256}\\\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\\\+.~#?&//=]*)\",\n        \"message\": \"Ошибка формата поля web \"\n    }\n}",
-        "output": "json",
-        "x": 460,
-        "y": 160,
-        "wires": [
-            [
-                "1fe5d98d.97731e"
-            ]
-        ]
-    },
-    {
-        "id": "5faa7f77.d15cb8",
-        "type": "inject",
-        "z": "58708704.df6b58",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 200,
-        "wires": [
-            [
-                "d538a855.65db68"
-            ]
-        ]
-    },
-    {
-        "id": "d538a855.65db68",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBIdata no",
-        "field": "vBIdata",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"email\": \"mail@dot.com\",\n    \"phone\": \"+380934323223\",\n    \"web\": \"www\",\n    \"web1\": \"www.google.com\"\n}",
-        "output": "json",
-        "x": 290,
-        "y": 200,
-        "wires": [
-            [
-                "101ca940.997b07"
-            ]
-        ]
-    },
-    {
-        "id": "101ca940.997b07",
-        "type": "template",
-        "z": "58708704.df6b58",
-        "name": "vBImapa",
-        "field": "vBImapa",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"email\": {\n        \"needed\" : true,\n        \"express\": \"^\\\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$\",\n        \"message\": \"Ошибка формата поля e-mail \"\n    },\n    \"phone\": {\n        \"needed\" : true,\n        \"express\": \"^[+]?[(]?[0-9]{3}[)]?[-\\\\s.]?[0-9]{3}[-\\\\s.]?[0-9]{4,6}$\",\n        \"message\": \"Ошибка формата поля телефон \"\n    },\n    \"web\":{\n        \"needed\" : false,\n        \"express\": \"(https?:\\/\\/(?:www\\\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\\\.[^\\\\s]{2,}|www\\\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\\\.[^\\\\s]{2,}|https?:\\/\\/(?:www\\\\.|(?!www))[a-zA-Z0-9]+\\\\.[^\\\\s]{2,}|www\\\\.[a-zA-Z0-9]+\\\\.[^\\\\s]{2,})\",\n        \"message\": \"Ошибка формата поля web \"\n    }\n}",
-        "output": "json",
-        "x": 460,
-        "y": 200,
-        "wires": [
-            [
-                "1fe5d98d.97731e"
-            ]
-        ]
+        "wires": []
     }
 ]
