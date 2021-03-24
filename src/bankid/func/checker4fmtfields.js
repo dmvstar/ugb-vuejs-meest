@@ -139,7 +139,7 @@ if(!isLocalWork) {
     if(check.hasError) {
         msg.payload = {
             result : "error",
-            mess: mess,
+            message: mess,
             data: check
         }    
         msg.errorCodeRe = 1455;
@@ -148,7 +148,7 @@ if(!isLocalWork) {
     } else {
         msg.payload = {
             result : "ok",
-            mess: "Ok",
+            message: "Ok",
             data: []
         }    
         msg.errorCodeRe = 200;

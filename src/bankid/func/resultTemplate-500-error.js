@@ -6,11 +6,15 @@ msg.workTime = 'Work time is: ' + (
     (msg.workStop - msg.workStart) / 1000
 ) + ' sec.';
 
-var errorCode = 1501;
+var errorCode = 1502;
 var result = 'error';
 
-var message = "";
+var message = "Шото пошло не так ((.";
 var description ="";
+
+if(data.message !== undefined)
+    message += data.message;
+
 if(msg.error !== undefined)
     description = msg.error;
 
@@ -24,6 +28,8 @@ if(data.length !== 0){
         result : result,
         time: msg.workTime,
         path: msg.req.route.path,
+        message : message,
+        error: data,
         data : data
     }
 } 

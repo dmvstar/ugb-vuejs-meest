@@ -8,16 +8,21 @@ msg.workTime = 'Work time is: ' + (
 
 var errorCode = 1402;
 var result = 'error';
+var data = msg.payload;
 
-var message = "Ошибка формата данных";
+
+var message = "Ошибка формата данных. ";
 var description =""
+
+if(data.message !== undefined)
+    message += data.message;
+
 if(msg.error !== undefined)
     description = msg.error;
 
 if(msg.errorCodeRe !== undefined)
     errorCode = msg.errorCodeRe
 
-    var data = msg.payload;
 if(data.length !== 0){
     msg.payload = {
         code : errorCode,
@@ -26,7 +31,8 @@ if(data.length !== 0){
         path: msg.req.route.path,
         message: message,
         description: description,
-        data : data
+        error: data,
+        data : {}
     }
 } 
 return msg;
