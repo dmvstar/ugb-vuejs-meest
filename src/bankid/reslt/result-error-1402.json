@@ -1,0 +1,17 @@
+{
+    "code": 1402,
+    "result": "error",
+    "time": "Work time is: 0.025 sec.",
+    "path": "/openbanking/bankid/client",
+    "message": "Ошибка формата данных. ",
+    "description": {
+        "message": "SyntaxError: Invalid regular expression: /^[MFЧЖМ$/: Unterminated character class",
+        "source": {
+            "id": "a8df2611.3788",
+            "type": "function",
+            "name": "checker4fmtields.js v.0",
+            "count": 1
+        }
+    },
+    "data": {}
+}
