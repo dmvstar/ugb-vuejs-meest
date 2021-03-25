@@ -1,0 +1,18 @@
+{
+    "result": "error",
+    "code": 1401,
+    "time": "Work time is: 0.042 sec.",
+    "path": "/api/openbanking/bankid/client",
+    "message": "Помилка авторизації. ",
+    "details": "Auth error. Reply 401 error. ",
+    "error": {
+        "message": "Not auth",
+        "source": {
+            "id": "85cf10af.aaa578",
+            "type": "function",
+            "name": "no auth",
+            "count": 1
+        }
+    },
+    "data": {}
+}

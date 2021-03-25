@@ -1,4 +1,4 @@
-//@what checker4fmtields.js
+//@what checker4fmtields.js ver. 0.0.2
 //https://regex101.com/ 
 //--------------------------------------------------------------------------
 
@@ -135,12 +135,15 @@ if(isLocalWork) {
 }
 //--------------------------------------------------------------------------
 if(!isLocalWork) { 
-    var mess = "Ошибка формата полей";
+    var message = "Ошибка формата полей BI... ";
+    var details = "Error from checker4fmtields.js...";
     if(check.hasError) {
         msg.payload = {
             result : "error",
-            message: mess,
-            data: check
+            message: message,
+            details: details,
+            error: check,
+            data: {}
         }    
         msg.errorCodeRe = 1455;
         //return msg;
@@ -149,7 +152,8 @@ if(!isLocalWork) {
         msg.payload = {
             result : "ok",
             message: "Ok",
-            data: []
+            details: "",
+            data: {}
         }    
         msg.errorCodeRe = 200;
         return msg;

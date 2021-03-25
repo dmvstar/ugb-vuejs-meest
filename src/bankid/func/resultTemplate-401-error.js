@@ -8,13 +8,14 @@ msg.workTime = 'Work time is: ' + (
 
 var errorCode = 1401;
 var result = 'error';
-var data = msg.payload;
+var data = {};
+var error = msg.payload;
 
 var message = "Помилка авторизації. ";
-var description = "";
+var details = "Auth error. Reply 401 error. ";
 
 if(msg.error !== undefined)
-    description = msg.error;
+    error = msg.error;
 
 if(data.message !== undefined)
     message += data.message;
@@ -24,12 +25,13 @@ if(msg.errorCodeRe !== undefined)
 
 if(data.length !== 0){
     msg.payload = {
-        code : errorCode,
         result : result,
+        code : errorCode,
         time: msg.workTime,
         path: msg.req.route.path,
         message : message,
-        error : data,        
+        details : details,
+        error : error,        
         data : {}
     }
 } 

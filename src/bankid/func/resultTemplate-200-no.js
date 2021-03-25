@@ -11,24 +11,24 @@ var resultCnt = 0; // Array
 var code = 1502;
 var result = 'no';
 var data = {};
-var description = msg.payload; // default responce Array
-var message = description.result;
+var details = msg.payload; // default responce Array
+var message = details.result;
 
-var description ="";
 if(msg.error !== undefined)
-    description = msg.error;
+    details = msg.error;
 
 if(msg.errorCodeRe !== undefined)
     code = msg.errorCodeRe
 
 msg.payload = {
-    code : code,
     result : result,
+    code : code,
     time: msg.workTime,
     path: msg.req.route.path,
     message : message,
-    description : description,
-    data : data
+    details : details,
+    error : msg.payload,
+    data : {}
 }
 
 return msg;

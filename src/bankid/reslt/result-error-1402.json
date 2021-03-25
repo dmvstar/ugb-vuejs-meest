@@ -4,7 +4,8 @@
     "time": "Work time is: 0.025 sec.",
     "path": "/openbanking/bankid/client",
     "message": "Ошибка формата данных. ",
-    "description": {
+    "detail": "Ошибка формата данных. ",
+    "error": {
         "message": "SyntaxError: Invalid regular expression: /^[MFЧЖМ$/: Unterminated character class",
         "source": {
             "id": "a8df2611.3788",

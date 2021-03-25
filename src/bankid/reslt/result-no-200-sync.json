@@ -1,0 +1,209 @@
+{
+    "statusCode": 200,
+    "payload": {
+        "result": "no",
+        "code": "1201",
+        "time": "Work time is: 29.986 sec.",
+        "path": "/openbanking/bankid/client",
+        
+        "message": "Клиент создан с ошибками, необходимо связаться с сотрудником банка !",
+        "details": "Ошибка вставки реквизита [UGB_TCURelPers_F] значение [2], описание [Не пов'язана] в АБС",
+
+        "data": {
+            "orig": {
+                "person": {
+                    "type": "physical",
+                    "lastName": "ЛАБАРИЙ",
+                    "firstName": "ПЕТРО",
+                    "middleName": "МАРЯНОВИЧ",
+                    "inn": "2308616560",
+                    "birthDay": "23.07.1991",
+                    "sex": "М",
+                    "phone": "380971553054",
+                    "uaResident": null,
+                    "flagPersonTerror": "null",
+                    "flagPEPs": null,
+                    "flagTopLevelRisk": null
+                },
+                "extends": {},
+                "addresses": [
+                    {
+                        "type": "factual",
+                        "country": "Ук",
+                        "state": "Львiвська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    }
+                ],
+                "documents": [
+                    {
+                        "type": "passport",
+                        "typeName": "КС",
+                        "series": "КС",
+                        "number": "620090",
+                        "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                        "dateIssue": "17.01.2008",
+                        "dateExpiration": "",
+                        "issueCountryIso2": "UA"
+                    }
+                ],
+                "timeStamp": "202102251646102186",
+                "merchantName": "easypay_test"
+            },
+            "input": {
+                "person": {
+                    "type": "physical",
+                    "lastName": "ЛАБАРИЙ",
+                    "firstName": "ПЕТРО",
+                    "middleName": "МАРЯНОВИЧ",
+                    "inn": "2308616560",
+                    "birthDay": "23.07.1991",
+                    "sex": "M",
+                    "phone": "380971553054",
+                    "uaResident": "1",
+                    "flagPersonTerror": "0",
+                    "flagPEPs": "0",
+                    "flagTopLevelRisk": "0"
+                },
+                "extends": {
+                    "countryCitizen": "804",
+                    "maritalStatus": "1",
+                    "uaResident": "1",
+                    "codOblRee": "46",
+                    "flagTopLevelRisk": "0",
+                    "workInfo": "Безробітний",
+                    "birthCountry": "804",
+                    "birthPlace": "Україна",
+                    "profitWay": "14430",
+                    "profitSrc": "16",
+                    "ownFundsAmount": "1",
+                    "ownFundsSrc": "9",
+                    "monthAmouunt": "1",
+                    "realEstateAvail": "1",
+                    "movePropAvail": "1",
+                    "otherBankAccount": "3",
+                    "otherBankCredit": "0",
+                    "otherBankDepo": "0",
+                    "costPaperAvail": "Відсутні",
+                    "planUseServices": "44652",
+                    "ugbRelatePers": "2",
+                    "flagPEPs": "0",
+                    "statusBusiness": "5",
+                    "usaChiisares": "0",
+                    "typeCli": "клієнт з відкриттям рахунків",
+                    "photo25": "1",
+                    "photo45": "1",
+                    "verifyDate": "25.03.2021",
+                    "signDate": "25.03.2021",
+                    "education": "2",
+                    "forTaxStatus": "0",
+                    "verifyType": "3",
+                    "verifyType1": "1",
+                    "reputation": "Задовільний",
+                    "countryCitisien": "804",
+                    "greenCard": "1",
+                    "registryUSA": "0",
+                    "statusFATCA": "0",
+                    "nameLat": "LABARYY PETRO"
+                },
+                "addresses": [
+                    {
+                        "type": "factual",
+                        "country": "UA",
+                        "state": "Львівська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    },
+                    {
+                        "type": "juridical",
+                        "country": "UA",
+                        "state": "Львівська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    }
+                ],
+                "documents": [
+                    {
+                        "type": "passport",
+                        "typeName": "КС",
+                        "series": "КС",
+                        "number": "620090",
+                        "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                        "dateIssue": "17.01.2008",
+                        "dateExpiration": "",
+                        "issueCountryIso2": "UA"
+                    }
+                ],
+                "timeStamp": "202102251646102186",
+                "merchantName": "easypay_test"
+            },
+            "result": {
+                "responseId": "12547",
+                "requestId": "12547",
+                "result": "1",
+                "hasErrors": "true",
+                "errors": {
+                    "errorOperation": {
+                        "code": "1059",
+                        "text": "Ошибка вставки реквизита [UGB_TCURelPers_F] значение [2], описание [Не пов'язана] в АБС",
+                        "isError": "true",
+                        "exceptMessage": "<b>Server was unable to process request. ---> SCROOGE-III operation failed.\nУстановлен запрет на действие [работа с реквизитами объектов] для филиала [1] за [25/03/2021]\n\n</b><br/><font color='#696969'>FaultException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>\r\nServer stack trace: \r\n   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)\r\n   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)\r\n\r\nException rethrown at [0]: \r\n   at System.Runtime.Remoting.Proxies.R..."
+                    }
+                },
+                "client": {
+                    "clientId": "3433730",
+                    "scroogeId": "3385489",
+                    "clientPushABS": "true"
+                }
+            },
+            "info": {
+                "wbId": 3433730,
+                "paramCode": "Customer_verification",
+                "paramDesc": "Спосіб верифікації клієнта",
+                "paramValue": "3",
+                "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+                "syncFlag": 4,
+                "syncCode": "Частично синхронизирован",
+                "cliStatus": 1,
+                "cliStatusCode": "Активный",
+                "smStates": [
+                    {
+                        "Source": "log",
+                        "SmName": "Процес Ідентифікаці клієнтів ФО",
+                        "StateCode": "NEW_CLIENT",
+                        "StateName": "Новий",
+                        "Date": "2021-03-25T12:41:05.060Z",
+                        "Info": "Новий"
+                    },
+                    {
+                        "Source": "log",
+                        "SmName": "Процес Ідентифікаці клієнтів ФО",
+                        "StateCode": "COMPLETE_CLIENT",
+                        "StateName": "Підтверджений, актуальний",
+                        "Date": "2021-03-25T12:41:13.613Z",
+                        "Info": "Актуальний згідно даних BankId"
+                    },
+                    {
+                        "Source": "state",
+                        "SmName": "Процес Ідентифікаці клієнтів ФО",
+                        "StateCode": "COMPLETE_CLIENT",
+                        "StateName": "Підтверджений, актуальний",
+                        "Date": "2021-03-25T12:41:13.730Z",
+                        "Info": "Підтверджений, актуальний"
+                    }
+                ],
+                "terCheck": "0"
+            },
+            "docs": {}
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "statusCode": 500,
+    "payload": {
+        "result": "error",
+        "code": 1501,
+        "time": "Work time is: 1.301 sec.",
+        "path": "/openbanking/bankid/client",
+        "message": "Шото пошло не так ((.",
+        "details": "Critical error. Reply 500 error unhandled",
+        "error": {
+            "message": "TypeError: Cannot read property 'result' of undefined",
+            "source": {
+                "id": "d5bc85f7.782f4",
+                "type": "function",
+                "name": "Reply TErr 200 no",
+                "count": 1
+            }
+        },
+        "data": {
+            "result": "Шановний клієнт 3012613455 Мілованов Панас Петрович! Для проведення ідентифікації Вам необхідно звернутися у відділення АБ «УКРГАЗБАНК» . Дякуємо за довіру! (380971553054)",
+            "error": {
+                "code": "400",
+                "result": "error",
+                "find": true,
+                "time": "Work time is: 1.263 sec.",
+                "path": "/openbanking/bankid/client/tercheck",
+                "responce": {
+                    "checkClients": {
+                        "name": "Маліванов#Маліванов А. Ю. (3567812553)Відмова від підтримання ділових відносин шляхом розірвання ділових відносин у зв’язку з встановленням  неприйнятно високого рівня ризику (переведення безготівкових коштів в готівку)15.05.2019",
+                        "weight": "100.00",
+                        "systemName": "Банковский список подозрительных лиц и организаций",
+                        "ruleName": "Фонетическое подобие"
+                    }
+                },
+                "data": "BankId Клиент [Мілованов Панас Петрович] найден в [1][100%] списках: Банковский список подозрительных лиц и организаций"
+            }
+        }
+    }
+}

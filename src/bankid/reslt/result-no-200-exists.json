@@ -1,0 +1,180 @@
+{
+    "statusCode": 200,
+    "payload": {
+        "result": "no",
+        "code": "1201",
+        "time": "Work time is: 2.333 sec.",
+        "path": "/openbanking/bankid/client",
+        "message": "Клиент создан с ошибками, необходимо связаться с сотрудником банка !",
+        "details": "Создание клиента невозможно, т.к. найден уже созданный клиент. Найденный ClientId=[261558]",
+        "data": {
+            "orig": {
+                "person": {
+                    "type": "physical",
+                    "lastName": "ЛАБАРИЙ",
+                    "firstName": "ПЕТРО",
+                    "middleName": "МАРЯНОВИЧ",
+                    "inn": "2758413550",
+                    "birthDay": "23.07.1991",
+                    "sex": "М",
+                    "phone": "380971553054",
+                    "uaResident": null,
+                    "flagPersonTerror": "null",
+                    "flagPEPs": null,
+                    "flagTopLevelRisk": null
+                },
+                "extends": {},
+                "addresses": [
+                    {
+                        "type": "factual",
+                        "country": "Ук",
+                        "state": "Львiвська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    }
+                ],
+                "documents": [
+                    {
+                        "type": "passport",
+                        "typeName": "КС",
+                        "series": "КС",
+                        "number": "620090",
+                        "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                        "dateIssue": "17.01.2008",
+                        "dateExpiration": "",
+                        "issueCountryIso2": "UA"
+                    }
+                ],
+                "timeStamp": "202102251646102186",
+                "merchantName": "easypay_test"
+            },
+            "input": {
+                "person": {
+                    "type": "physical",
+                    "lastName": "ЛАБАРИЙ",
+                    "firstName": "ПЕТРО",
+                    "middleName": "МАРЯНОВИЧ",
+                    "inn": "2758413550",
+                    "birthDay": "23.07.1991",
+                    "sex": "M",
+                    "phone": "380971553054",
+                    "uaResident": "1",
+                    "flagPersonTerror": "0",
+                    "flagPEPs": "0",
+                    "flagTopLevelRisk": "0"
+                },
+                "extends": {
+                    "countryCitizen": "804",
+                    "maritalStatus": "1",
+                    "uaResident": "1",
+                    "codOblRee": "46",
+                    "flagTopLevelRisk": "0",
+                    "workInfo": "Безробітний",
+                    "birthCountry": "804",
+                    "birthPlace": "Україна",
+                    "profitWay": "14430",
+                    "profitSrc": "16",
+                    "ownFundsAmount": "1",
+                    "ownFundsSrc": "9",
+                    "monthAmouunt": "1",
+                    "realEstateAvail": "1",
+                    "movePropAvail": "1",
+                    "otherBankAccount": "3",
+                    "otherBankCredit": "0",
+                    "otherBankDepo": "0",
+                    "costPaperAvail": "Відсутні",
+                    "planUseServices": "44652",
+                    "ugbRelatePers": "2",
+                    "flagPEPs": "0",
+                    "statusBusiness": "5",
+                    "usaChiisares": "0",
+                    "typeCli": "клієнт з відкриттям рахунків",
+                    "photo25": "1",
+                    "photo45": "1",
+                    "verifyDate": "25.03.2021",
+                    "signDate": "25.03.2021",
+                    "education": "2",
+                    "forTaxStatus": "0",
+                    "verifyType": "3",
+                    "verifyType1": "1",
+                    "reputation": "Задовільний",
+                    "countryCitisien": "804",
+                    "greenCard": "1",
+                    "registryUSA": "0",
+                    "statusFATCA": "0",
+                    "nameLat": "LABARYY PETRO"
+                },
+                "addresses": [
+                    {
+                        "type": "factual",
+                        "country": "UA",
+                        "state": "Львівська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    },
+                    {
+                        "type": "juridical",
+                        "country": "UA",
+                        "state": "Львівська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    }
+                ],
+                "documents": [
+                    {
+                        "type": "passport",
+                        "typeName": "КС",
+                        "series": "КС",
+                        "number": "620090",
+                        "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                        "dateIssue": "17.01.2008",
+                        "dateExpiration": "",
+                        "issueCountryIso2": "UA"
+                    }
+                ],
+                "timeStamp": "202102251646102186",
+                "merchantName": "easypay_test"
+            },
+            "result": {
+                "responseId": "12547",
+                "requestId": "12547",
+                "result": "2",
+                "hasErrors": "true",
+                "errors": {
+                    "errorOperation": {
+                        "code": "1026",
+                        "text": "Создание клиента невозможно, т.к. найден уже созданный клиент. Найденный ClientId=[261558]",
+                        "isError": "true",
+                        "exceptMessage": ""
+                    }
+                },
+                "client": {
+                    "clientId": "261558",
+                    "scroogeId": "195038",
+                    "clientPushABS": "false"
+                }
+            },
+            "info": {
+                "wbId": 261558,
+                "paramCode": "Customer_verification",
+                "paramDesc": "Спосіб верифікації клієнта",
+                "paramValue": "1",
+                "referVal": "Верифікацію здійснено в особистій присутності особи",
+                "syncFlag": 2,
+                "syncCode": "Заблокирован",
+                "cliStatus": 1,
+                "cliStatusCode": "Активный"
+            },
+            "docs": {}
+        }
+    }
+}

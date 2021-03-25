@@ -1,5 +1,4 @@
-//@what checker4badfields.js
-
+//@what checker4badfields.js ver. 0.0.2
 var error = false;
 
 var regDate = "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$"
@@ -17,6 +16,8 @@ msg.in.bankid_cli.person.inn+"]["
 +msg.in.bankid_cli.person.lastName + " "
 +msg.in.bankid_cli.person.firstName + " "
 +msg.in.bankid_cli.person.middleName+"]";
+var details = "Error in checker4badfields.js..."
+
 
 const regD09 = new RegExp(regSD09, "gm");
 const regPass = new RegExp(regSPass, "gm");
@@ -33,16 +34,18 @@ if( regPass.test(msg.in.bankid_cli.person.inn) |
 if( msg.in.bankid_cli.addresses.length === 0 ) {
     msg.errorCodeRe = 1430;
     mess += " Не задано ни одного адреса"
-    msg.payload.result = mess;
+    msg.payload.result = "error";
     msg.payload.message = mess;
+    msg.payload.details = details;
     error = true;
 } 
 
 if( msg.in.bankid_cli.documents.length === 0 ) {
     msg.errorCodeRe = 1440;
     mess += " Не задано ни одного документа"
-    msg.payload.result = mess;
+    msg.payload.result = "error";
     msg.payload.message = mess;
+    msg.payload.details = details;
     error = true;
 } else {
 
@@ -52,8 +55,9 @@ if( msg.in.bankid_cli.documents.length === 0 ) {
             msg.errorCodeRe = 1441;
             mess += " Ошибка формата поля документа dateIssue " + d.dateIssue + 
             " ("+regexpDate.test(d.dateIssue)+")"
-            msg.payload.result = mess;
+            msg.payload.result = "error";
             msg.payload.message = mess;
+            msg.payload.details = details;
             error = true;
             break;
         }
@@ -63,8 +67,9 @@ if( msg.in.bankid_cli.documents.length === 0 ) {
             msg.errorCodeRe = 1442;
             mess += " Ошибка формата поля документа type " + d.type + 
             " ("+regDocs.test(d.type)+")"
-            msg.payload.result = mess;
+            msg.payload.result = "error";
             msg.payload.message = mess;
+            msg.payload.details = details;
             error = true;
             break;
         }
@@ -84,8 +89,9 @@ if( msg.in.bankid_cli.documents.length === 0 ) {
         if( !validPass ){
             msg.errorCodeRe = 1443;
             mess += " Ошибка допустимости поля документа type для "+inn;
-            msg.payload.result = mess;
+            msg.payload.result = "error";
             msg.payload.message = mess;
+            msg.payload.details = details;
             error = true;
         }
     }
@@ -94,8 +100,9 @@ if( msg.in.bankid_cli.documents.length === 0 ) {
 if( msg.in.bankid_cli.person.phone === undefined ) {
     msg.errorCodeRe = 1450;
     mess += " Не задан номер телефона"
-    msg.payload.result = mess;
+    msg.payload.result = "error";
     msg.payload.message = mess;
+    msg.payload.details = details;
     error = true;
 }
 
@@ -105,19 +112,19 @@ if( !regexpDate.test(checkDate) ) {
     msg.errorCodeRe = 1451;
     mess += " Ошибка формата поля birthDay "+ checkDate + 
         " ("+regexpDate.test(checkDate)+")"
-    msg.payload.result = mess;
+    msg.payload.result = "error";
     msg.payload.message = mess;
+    msg.payload.details = details;
     error = true;
 }
 
+// Reply 400 bad fmt or field 
 if (error) {
     msg.payload = {
-        data : msg.in.bankid_cli,
-        //trans : {},
-        message : msg.payload.message,
         result : msg.payload.result,
-        //info: {},
-        //docs: {}
+        message : msg.payload.message,
+        details : msg.payload.details,
+        data : msg.in.bankid_cli
     };
     node.error(mess, msg);
 }
