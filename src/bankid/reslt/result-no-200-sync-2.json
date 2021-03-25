@@ -1,0 +1,180 @@
+{
+    "statusCode": 200,
+    "payload": {
+        "result": "no",
+        "code": "1201",
+        "time": "Work time is: 3.752 sec.",
+        "path": "/openbanking/bankid/client",
+        "data": {
+            "orig": {
+                "person": {
+                    "type": "physical",
+                    "lastName": "ЛАБАРИЙ",
+                    "firstName": "ПЕТРО",
+                    "middleName": "МАРЯНОВИЧ",
+                    "inn": "3337711458",
+                    "birthDay": "23.07.1991",
+                    "sex": "М",
+                    "phone": "380971553054",
+                    "uaResident": null,
+                    "flagPersonTerror": "null",
+                    "flagPEPs": null,
+                    "flagTopLevelRisk": null
+                },
+                "extends": {},
+                "addresses": [
+                    {
+                        "type": "factual",
+                        "country": "Ук",
+                        "state": "Львiвська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    }
+                ],
+                "documents": [
+                    {
+                        "type": "passport",
+                        "typeName": "КС",
+                        "series": "КС",
+                        "number": "620090",
+                        "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                        "dateIssue": "17.01.2008",
+                        "dateExpiration": "",
+                        "issueCountryIso2": "UA"
+                    }
+                ],
+                "timeStamp": "202102251646102186",
+                "merchantName": "easypay_test"
+            },
+            "input": {
+                "person": {
+                    "type": "physical",
+                    "lastName": "ЛАБАРИЙ",
+                    "firstName": "ПЕТРО",
+                    "middleName": "МАРЯНОВИЧ",
+                    "inn": "3337711458",
+                    "birthDay": "23.07.1991",
+                    "sex": "M",
+                    "phone": "380971553054",
+                    "uaResident": "1",
+                    "flagPersonTerror": "0",
+                    "flagPEPs": "0",
+                    "flagTopLevelRisk": "0"
+                },
+                "extends": {
+                    "countryCitizen": "804",
+                    "maritalStatus": "1",
+                    "uaResident": "1",
+                    "codOblRee": "46",
+                    "flagTopLevelRisk": "0",
+                    "workInfo": "Безробітний",
+                    "birthCountry": "804",
+                    "birthPlace": "Україна",
+                    "profitWay": "14430",
+                    "profitSrc": "16",
+                    "ownFundsAmount": "1",
+                    "ownFundsSrc": "9",
+                    "monthAmouunt": "1",
+                    "realEstateAvail": "1",
+                    "movePropAvail": "1",
+                    "otherBankAccount": "3",
+                    "otherBankCredit": "0",
+                    "otherBankDepo": "0",
+                    "costPaperAvail": "Відсутні",
+                    "planUseServices": "44652",
+                    "ugbRelatePers": "2",
+                    "flagPEPs": "0",
+                    "statusBusiness": "5",
+                    "usaChiisares": "0",
+                    "typeCli": "клієнт з відкриттям рахунків",
+                    "photo25": "1",
+                    "photo45": "1",
+                    "verifyDate": "25.03.2021",
+                    "signDate": "25.03.2021",
+                    "education": "2",
+                    "forTaxStatus": "0",
+                    "verifyType": "3",
+                    "verifyType1": "1",
+                    "reputation": "Задовільний",
+                    "countryCitisien": "804",
+                    "greenCard": "1",
+                    "registryUSA": "0",
+                    "statusFATCA": "0",
+                    "nameLat": "LABARYY PETRO"
+                },
+                "addresses": [
+                    {
+                        "type": "factual",
+                        "country": "UA",
+                        "state": "Львівська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    },
+                    {
+                        "type": "juridical",
+                        "country": "UA",
+                        "state": "Львівська",
+                        "area": "",
+                        "city": "КАМ’ЯНКА-БУЗЬКА",
+                        "street": "ГЕРОЇВ НЕБЕСНОЇ СОТНІ, БУД. 32, КВ. 58",
+                        "houseNo": "",
+                        "flatNo": ""
+                    }
+                ],
+                "documents": [
+                    {
+                        "type": "passport",
+                        "typeName": "КС",
+                        "series": "КС",
+                        "number": "620090",
+                        "issue": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+                        "dateIssue": "17.01.2008",
+                        "dateExpiration": "",
+                        "issueCountryIso2": "UA"
+                    }
+                ],
+                "timeStamp": "202102251646102186",
+                "merchantName": "easypay_test"
+            },
+            "result": {
+                "responseId": "12547",
+                "requestId": "12547",
+                "result": "1",
+                "hasErrors": "true",
+                "errors": {
+                    "errorOperation": {
+                        "code": "1059",
+                        "text": "Во время синхронизации клиента произошла ошибка: Server was unable to process request. ---> The HTTP service located at http://app-back-pp/Scrooge/IClientServiceSystem.svc is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later. ---> The remote server returned an error: (503) Server Unavailable.",
+                        "isError": "true",
+                        "exceptMessage": "<b>Server was unable to process request. ---> The HTTP service located at http://app-back-pp/Scrooge/IClientServiceSystem.svc is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later. ---> The remote server returned an error: (503) Server Unavailable.</b><br/><font color='#696969'>FaultException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>\r\nServer stack trace: \r\n   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)\r\n   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)\r\n   at System.ServiceModel.Channels.ServiceChan..."
+                    }
+                },
+                "client": {
+                    "clientId": "3433740",
+                    "scroogeId": "",
+                    "clientPushABS": "false"
+                }
+            },
+            "info": {
+                "wbId": 3433740,
+                "paramCode": "Customer_verification",
+                "paramDesc": "Спосіб верифікації клієнта",
+                "paramValue": "3",
+                "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+                "syncFlag": 2,
+                "syncCode": "Заблокирован",
+                "cliStatus": 1,
+                "cliStatusCode": "Активный"
+            },
+            "docs": {}
+        },
+        "message": "Клиент создан с ошибками, необходимо связаться с сотрудником банка !",
+        "details": "Во время синхронизации клиента произошла ошибка: Server was unable to process request. ---> The HTTP service located at http://app-back-pp/Scrooge/IClientServiceSystem.svc is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later. ---> The remote server returned an error: (503) Server Unavailable."
+    }
+}
