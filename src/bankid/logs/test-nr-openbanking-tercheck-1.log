@@ -1,0 +1,72 @@
+На тесте
+
+{
+  "code": "1200",
+  "result": "ok",
+  "find": false,
+  "time": "Work time is: 8.974 sec.",
+  "path": "/openbanking/bankid/client/tercheck",
+  "data": "BankId Клиент [Разковський Андрій Володимирович] не найден в списках террористов"
+}
+{
+  "code": "1400",
+  "result": "error",
+  "find": true,
+  "time": "Work time is: 4.486 sec.",
+  "path": "/openbanking/bankid/client/tercheck",
+  "responce": {
+    "checkClients": [
+      {
+        "name": "[Захарченко] [Олександр] Володимирович",
+        "weight": "100.00",
+        "systemName": "Санкционный список СНБО для физлиц",
+        "ruleName": "Замена кириллицы латиницей"
+      },
+      {
+        "name": "[Захарченко] [Олександр] Володимирович",
+        "weight": "100.00",
+        "systemName": "Санкционный список СНБО для физлиц",
+        "ruleName": "Совпадение контекста"
+      },
+      {
+        "name": "[Захарченко] [Олександр] Володимирович",
+        "weight": "100.00",
+        "systemName": "Санкционный список СНБО для физлиц",
+        "ruleName": "Фонетическое подобие"
+      }
+    ]
+  },
+  "data": "BankId Клиент [Захарченко Олександр Володимирович] найден в [3][100%] списках: Санкционный список СНБО для физлиц"
+}
+
+На проде
+{
+  "code": "1500",
+  "result": "error",
+  "find": false,
+  "time": "Work time is: 0.257 sec.",
+  "path": "/openbanking/bankid/client/tercheck",
+  "data": {
+    "errorOperation": {
+      "code": "1030",
+      "text": "Критическая ошибка при проверке клиента по спискам в АБС. Смотрите логи.",
+      "isError": "true",
+      "exceptMessage": "The HTTP request is unauthorized with client authentication scheme 'Negotiate'. The authentication header received from the server was 'Negotiate,Basic realm=\"kv00-v-appbe-pr\"'."
+    }
+  }
+}
+{
+  "code": "1500",
+  "result": "error",
+  "find": false,
+  "time": "Work time is: 0.216 sec.",
+  "path": "/openbanking/bankid/client/tercheck",
+  "data": {
+    "errorOperation": {
+      "code": "1030",
+      "text": "Критическая ошибка при проверке клиента по спискам в АБС. Смотрите логи.",
+      "isError": "true",
+      "exceptMessage": "The HTTP request is unauthorized with client authentication scheme 'Negotiate'. The authentication header received from the server was 'Negotiate,Basic realm=\"kv00-v-appbe-pr\"'."
+    }
+  }
+}
