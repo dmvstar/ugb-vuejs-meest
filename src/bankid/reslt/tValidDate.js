@@ -1,10 +1,15 @@
 var sdate = '2021-03-16T22:17:38.343Z'
 var ddate = new Date(sdate)
 
-console.log(ddate.toISOString())
-myTZO = 2;
-var ldate=new Date(ddate.getTime() - (60000*(ddate.getTimezoneOffset()-myTZO)));
+console.log( ddate.toISOString() )
+function dt2ldt(zDate) {
+    myTZO = 2;
+    var ldate=new Date(ddate.getTime() - (60000*(ddate.getTimezoneOffset()-myTZO)));
+    return ldate;
+}
+var ldate = console.log( dt2ldt(ddate) );
 console.log(ldate.toISOString())
+
 
 function checkParams(params) {
     // set up regex for each parameter
