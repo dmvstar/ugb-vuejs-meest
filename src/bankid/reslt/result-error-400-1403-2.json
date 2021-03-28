@@ -1,9 +1,14 @@
 {
-    "code": 1403,
     "result": "error",
-    "time": "Work time is: 0.002 sec.",
+    "code": 1430,
+    "time": "Work time is: 0 sec.",
     "path": "/openbanking/bankid/client",
-    "data": {
+    "message": "У Клиента [2837721375][Губарєв Віталій Іванович] Не задано ни одного адреса",
+    "details": "Error in checker4badfields.js...",
+    "error": {
+        "result": "error",
+        "message": "У Клиента [2837721375][Губарєв Віталій Іванович] Не задано ни одного адреса",
+        "details": "Error in checker4badfields.js...",
         "data": {
             "person": {
                 "type": "physical",
@@ -35,11 +40,10 @@
             ],
             "timeStamp": "202102251642196515",
             "merchantName": "easypay_test",
-            "result": "У Клиента [2837721375][Губарєв Віталій] Не задано ни одного адреса"
-        },
-        "trans": {},
-        "result": {},
-        "info": {},
-        "docs": {}
-    }
+            "result": "error",
+            "message": "У Клиента [2837721375][Губарєв Віталій Іванович] Не задано ни одного адреса",
+            "details": "Error in checker4badfields.js..."
+        }
+    },
+    "data": {}
 }
