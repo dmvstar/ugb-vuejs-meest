@@ -1,12 +1,12 @@
 //Reply 401 error
 msg.statusCode = 401;
+var errorCode = "1401";
 
 msg.workStop = Date.now();
 msg.workTime = 'Work time is: ' + (
     (msg.workStop - msg.workStart) / 1000
 ) + ' sec.';
 
-var errorCode = 1401;
 var result = 'error';
 var data = {};
 var error = msg.payload;

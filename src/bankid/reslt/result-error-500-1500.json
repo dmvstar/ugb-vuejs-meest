@@ -1,0 +1,18 @@
+{
+  "code": "1500",
+  "result": "error",
+  "find": false,
+  "time": "Work time is: 0.201 sec.",
+  "path": "/openbanking/bankid/client/tercheck",
+  "message": "Критическая ошибка при проверке клиента по спискам в АБС. Смотрите логи. ",
+  "details": "",
+  "error": {  
+    "errorOperation": {
+      "code": "1030",
+      "text": "Критическая ошибка при проверке клиента по спискам в АБС. Смотрите логи.",
+      "isError": "true",
+      "exceptMessage": "The HTTP request is unauthorized with client authentication scheme 'Negotiate'. The authentication header received from the server was 'Negotiate,Basic realm=\"kv00-v-appbe-pr\"'."
+    }
+  },
+  "data": {}
+}
