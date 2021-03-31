@@ -1,6 +1,7 @@
 function localTZDates(zdate){
     // 2021-03-31T10:46:48.841Z
-    var ldate=new Date(zdate.getTime() - (60000*(zdate.getTimezoneOffset()-2)));
+    var tzShift = -2;
+    var ldate=new Date(zdate.getTime() - (60000*(zdate.getTimezoneOffset()+tzShift)));
     var ldateTime = ldate.toISOString().replace('Z', '');
     
     var ldate = ldateTime.substring(8,10)+'.'+
