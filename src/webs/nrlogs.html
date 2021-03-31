@@ -304,10 +304,13 @@
 
                 onButtonExecuteSQL: async function (item) {
                     var view = this.from;
+                    var level = this.from.level;
+                    if(this.from.level === 'ANY') view.level = '%';
                     var sql = Mustache.render(this.sql.template, view);
                     this.sql.query = sql;
                     //this.result = this.result_test;
                     this.result = [];
+                    this.from.level = level;
                     await this.exequteRequest();
                 },
                 
@@ -435,7 +438,7 @@
                     },
                     sql: {
                         query: "",
-                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level = '{{level}}' AND source like '%{{{source}}}%' AND message like '%{{{search}}}%' ORDER BY ID DESC LIMIT 10;"
+                        template: "SELECT * FROM public.{{table}} WHERE 1=1 AND level like '{{level}}' AND source like '%{{{source}}}%' AND message like '%{{{search}}}%' ORDER BY ID DESC LIMIT 10;"
                     },
                    
                     dict: {
@@ -449,7 +452,8 @@
                         level: [
                             "DEBUG",
                             "ERROR",
-                            "TEST"
+                            "TEST",
+                            "ANY"
                         ],
                         sex: [
                             { value: "M", text: "Чоловічий" },
