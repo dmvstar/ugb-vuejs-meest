@@ -1,0 +1,81 @@
+{
+    "code": "200",
+    "result": "ok",
+    "time": "Work time is: 5.7 msec.",
+    "path": "/webbank/clients/bankid/id",
+    "data": {
+        "person": {
+            "webbankId": 3433573,
+            "inn": "2528419726",
+            "name": "Захарченко Олександр Володимирович",
+            "scCliId": "3385332",
+            "scCliCode": "UGB.1926358854",
+            "lastName": "Захарченко",
+            "firstName": "Олександр",
+            "middleName": "Володимирович",
+            "birtDay": "15.12.1991",
+            "birthSurname": "",
+            "gender": 1,
+            "sex": "M",
+            "marriageStatus": 6,
+            "phone": "+380885554433"
+        },
+        "addresses": [
+            {
+                "typeId": 1,
+                "desc": "Адреса постійного місця проживання або регістрації",
+                "type": "juridical",
+                "state": "Київська",
+                "postalCode": "",
+                "city": "Буча",
+                "street": "Шухевича Романа",
+                "houseNo": "1Г",
+                "flatNo": "",
+                "country": "UA"
+            },
+            {
+                "typeId": 2,
+                "desc": "Фактична адреса",
+                "type": "factual",
+                "state": "Київська",
+                "postalCode": "",
+                "city": "Буча",
+                "street": "Шухевича Романа",
+                "houseNo": "1Г",
+                "flatNo": "",
+                "country": "UA"
+            }
+        ],
+        "documents": [
+            {
+                "typeId": 4,
+                "typeName": "Паспорт громадянина України",
+                "type": "passport",
+                "series": "НВ",
+                "number": "498823",
+                "dateIssue": "24.07.2008",
+                "dateExpiration": "01.01.2099",
+                "documentName": "Паспорт громадянина України",
+                "issue": "Шепетівським МВ УМВС України в Хмельницькій област",
+                "issueCountryIso2": "UA"
+            }
+        ],
+        "info": {
+            "wbId": 3433573,
+            "scId": "3385332",
+            "scCode": "UGB.1926358854",
+            "inn": "2528419726",
+            "paramCode": "Customer_verification",
+            "paramDesc": "Спосіб верифікації клієнта",
+            "paramValue": "3",
+            "paramReffer": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+            "syncFlag": 1,
+            "syncCode": "Синхронизирован",
+            "cliStatusFlag": 1,
+            "cliStatusCode": "Активный",
+            "stateMashine": "Процес Ідентифікаці клієнтів ФО",
+            "stateCode": "NEW_CLIENT",
+            "stateName": "Новий"
+        }
+    }
+}

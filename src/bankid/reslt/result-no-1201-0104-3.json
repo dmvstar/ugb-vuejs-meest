@@ -1,0 +1,171 @@
+{
+  "code": 1200,
+  "data": {
+    "docs": {},
+    "info": {
+      "wbId": 3492918,
+      "referVal": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+      "syncCode": "Синхронизирован",
+      "syncFlag": 1,
+      "cliStatus": 1,
+      "paramCode": "Customer_verification",
+      "paramDesc": "Спосіб верифікації клієнта",
+      "paramValue": "3",
+      "cliStatusCode": "Активный"
+    },
+    "orig": {
+      "person": {
+        "inn": "3640209577",
+        "sex": "M",
+        "type": "physical",
+        "phone": "380637151624",
+        "birthDay": "31.08.1999",
+        "lastName": "Буковський",
+        "firstName": "Даниїл",
+        "middleName": "Ігорович"
+      },
+      "extends": {},
+      "addresses": [
+        {
+          "area": "",
+          "city": "Одеса",
+          "type": "juridical",
+          "state": "Одеська",
+          "flatNo": "8",
+          "street": "Адміральський",
+          "country": "Ук",
+          "houseNo": "36"
+        }
+      ],
+      "documents": [
+        {
+          "type": "passport",
+          "issue": "Малиновським РВ у місті Одесі ГУ ДМС України в Оде",
+          "number": "986973",
+          "series": "КМ",
+          "typeName": "",
+          "dateIssue": "17.11.2015",
+          "dateExpiration": "",
+          "issueCountryIso2": "UA"
+        }
+      ],
+      "timestamp": "1617287918088",
+      "merchant_name": "bankid_easypay"
+    },
+    "input": {
+      "person": {
+        "inn": "3640209577",
+        "sex": "M",
+        "type": "physical",
+        "phone": "380637151624",
+        "birthDay": "31.08.1999",
+        "flagPEPs": "0",
+        "lastName": "Буковський",
+        "firstName": "Даниїл",
+        "middleName": "Ігорович",
+        "uaResident": "1",
+        "flagPersonTerror": "0",
+        "flagTopLevelRisk": "0"
+      },
+      "extends": {
+        "nameLat": "Bukovskyi Dаnyil",
+        "photo25": "1",
+        "photo45": "1",
+        "typeCli": "клієнт з відкриттям рахунків",
+        "flagPEPs": "0",
+        "signDate": "01.04.2021",
+        "workInfo": "Безробітний",
+        "codOblRee": "51",
+        "education": "2",
+        "greenCard": "1",
+        "profitSrc": "16",
+        "profitWay": "14430",
+        "birthPlace": "Україна",
+        "reputation": "Задовільний",
+        "uaResident": "1",
+        "verifyDate": "01.04.2021",
+        "verifyType": "3",
+        "ownFundsSrc": "9",
+        "registryUSA": "0",
+        "statusFATCA": "0",
+        "verifyType1": "1",
+        "birthCountry": "804",
+        "forTaxStatus": "0",
+        "monthAmouunt": "1",
+        "usaChiisares": "0",
+        "maritalStatus": "1",
+        "movePropAvail": "1",
+        "otherBankDepo": "0",
+        "ugbRelatePers": "2",
+        "costPaperAvail": "Відсутні",
+        "countryCitizen": "804",
+        "ownFundsAmount": "1",
+        "statusBusiness": "5",
+        "countryCitisien": "804",
+        "otherBankCredit": "0",
+        "planUseServices": "44652",
+        "realEstateAvail": "1",
+        "flagTopLevelRisk": "0",
+        "otherBankAccount": "3"
+      },
+      "addresses": [
+        {
+          "area": "",
+          "city": "Одеса",
+          "type": "juridical",
+          "state": "Одеська",
+          "flatNo": "8",
+          "street": "Адміральський",
+          "country": "UA",
+          "houseNo": "36"
+        },
+        {
+          "area": "",
+          "city": "Одеса",
+          "type": "factual",
+          "state": "Одеська",
+          "flatNo": "8",
+          "street": "Адміральський",
+          "country": "UA",
+          "houseNo": "36"
+        }
+      ],
+      "documents": [
+        {
+          "type": "passport",
+          "issue": "Малиновським РВ у місті Одесі ГУ ДМС України в Оде",
+          "number": "986973",
+          "series": "КМ",
+          "typeName": "",
+          "dateIssue": "17.11.2015",
+          "dateExpiration": "",
+          "issueCountryIso2": "UA"
+        }
+      ],
+      "timestamp": "1617287918088",
+      "merchant_name": "bankid_easypay"
+    },
+    "result": {
+      "client": {
+        "clientId": "3492918",
+        "scroogeId": "3443200",
+        "clientPushABS": "true"
+      },
+      "errors": { -нужно - no 
+        "errorOperation": {
+          "code": "1072",
+          "text": "ГП CF_MANUAL_IDENT_DATES не установлен и не включен параметр isClientApiSetIdentDate. Устанавливать/менять даты переидентификации в ручную нельзя! ",
+          "isError": "false",
+          "exceptMessage": ""
+        }
+      },
+      "result": "1",
+      "hasErrors": "false",
+      "requestId": "12547",
+      "responseId": "12547"
+    }
+  },
+  "path": "/api/openbanking/bankid/client",
+  "time": "Work time is: 8.524 sec.",
+  "result": "ok"
+}

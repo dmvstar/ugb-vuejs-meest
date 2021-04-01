@@ -15,7 +15,7 @@ var data = {
     docs: msg.out.docs
 };
 
-delete(data.trans);
+//delete(data.trans);
     
 if(msg.isDebug === undefined && msg.isDebug === false ){
     delete(data.input);
@@ -32,12 +32,17 @@ if(data.length !== 0){
         path: msg.req.route.path,
         data : data
     }
-    if(msg.payload.data.result.hasErrors === "true") {
-        msg.payload.result = "no";
-        msg.payload.code = '1201';
+    
+    if(msg.payload.data.result.hasErrors === "true" || (msg.payload.data.result.errors !== undefined && msg.payload.data.result.errors !== "")) {
+        msg.statusCode = 500;
+        msg.payload.result = "error";
+        msg.payload.code = '1502';
         msg.payload.message = 'Клиент создан с ошибками, необходимо связаться с сотрудником банка !';
         if(msg.payload.data.result.errors.errorOperation.text !== undefined)
             msg.payload.details = msg.payload.data.result.errors.errorOperation.text;
+        if(msg.payload.data.result.errors !== undefined)
+            msg.payload.errors = msg.payload.data.result.errors;
+
     }
     return msg;
 } else {
