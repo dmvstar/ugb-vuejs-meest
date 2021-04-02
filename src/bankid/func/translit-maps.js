@@ -1,24 +1,12 @@
-var translit_maps = require('./translit-maps.json');
+//@what translit-maps.js
+var isLocal = true
+if (msg !== undefined) isLocal = false;
+var translit_maps;
 
-//console.log(translit_maps);
-
-var example = [
-    "Христина",
-    "Соломія Марія",
-    "Старжинський Дмитро",
-    "Рибьчинськй",
-    "Шевч'енк'о",
-    "Уляна",
-    "Іващенко",
-    "Згоран",
-    "Розгон",
-    "Жежелів"
-];
-
-for (sname of example) {
-    //console.log(sname);     
-    var oname = translit(sname);
-    console.log(sname, '\n\t', oname);
+if (isLocal) {
+    translit_maps = require('./translit-maps.json');
+} else {
+    translit_maps = msg.dicts.translit_maps;
 }
 
 //-----------------------------------------------------
@@ -28,7 +16,7 @@ function translit(sname) {
     var iname = sname;
     // delete non translate char
     var amapi = translit_maps.filter(x => x.lit === "0");
-    for (o of amapi) {
+    for (var o of amapi) {
         var reg = new RegExp(o.ua_lit, 'g');
         iname = iname.replace(reg, o.en_lit_f);
     }
@@ -39,7 +27,7 @@ function translit(sname) {
     if (iname.includes(tr.ua_lit))
         iname = iname.replace(tr.ua_lit, tr.en_lit_f)
     var aname = iname.split("");
-    for (chr of aname) {
+    for (var chr of aname) {
         var ochr = '';
         var tr_c = translit_maps.find(x => x.ua_cap === chr);
         var tr_l = translit_maps.find(x => x.ua_lit === chr);
@@ -62,3 +50,32 @@ function translit(sname) {
     return out;
 }
 //-----------------------------------------------------
+
+if (isLocal) {
+    var example = [
+        "Христина",
+        "Соломія Марія",
+        "Старжинський Дмитро",
+        "Рибьчинськй",
+        "Шевч'енк'о",
+        "Уляна",
+        "Іващенко",
+        "Згоран",
+        "Розгон",
+        "Жежелів"
+    ];
+
+    for (sname of example) {
+        var oname = translit(sname);
+        console.log(sname, '\n\t', oname);
+    }
+} else {
+    if (msg.in.bankid_cli.extends.nameLat === undefined) {
+        msg.in.bankid_cli.extends.nameLat =
+            translit(
+                msg.in.bankid_cli.person.lastName + ' ' +
+                msg.in.bankid_cli.person.firstName
+            );
+    }
+    return msg;
+}
