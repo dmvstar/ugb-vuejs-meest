@@ -1,6 +1,8 @@
 //@what translit-maps.js
-var isLocal = true
-if (msg !== undefined) isLocal = false;
+var isLocal = true;
+if (typeof msg != "undefined") {
+    isLocal = false;
+}
 var translit_maps;
 
 if (isLocal) {
@@ -43,6 +45,7 @@ function translit(sname) {
                 ochr = chr;
             }
         }
+        if(isLocal) console.log('['+chr+']['+ochr+']');
         out += ochr;
         if (first) first = !first;
         if (chr === ' ') first = true;
@@ -52,7 +55,9 @@ function translit(sname) {
 //-----------------------------------------------------
 
 if (isLocal) {
+    //Bukovskyi Dаnyil    
     var example = [
+        "Буковський Даниїл", //BUKOVSKYI DАNYIL
         "Христина",
         "Соломія Марія",
         "Старжинський Дмитро",
@@ -65,9 +70,16 @@ if (isLocal) {
         "Жежелів"
     ];
 
+    example = [
+        "Буковський Даниїл", //BUKOVSKYI DАNYIL
+        "Бубликов Володимир"
+    ];
+
+
+
     for (sname of example) {
         var oname = translit(sname);
-        console.log(sname, '\n\t', oname);
+        console.log(sname, '\n\t', oname, oname.toUpperCase());
     }
 } else {
     if (msg.in.bankid_cli.extends.nameLat === undefined) {
@@ -75,7 +87,7 @@ if (isLocal) {
             translit(
                 msg.in.bankid_cli.person.lastName + ' ' +
                 msg.in.bankid_cli.person.firstName
-            );
+            ).toUpperCase();
     }
     return msg;
 }
