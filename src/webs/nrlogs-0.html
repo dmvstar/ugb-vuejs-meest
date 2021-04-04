@@ -72,50 +72,48 @@
                                     </v-row>
 
                                     <v-row>
-                                        <v-col cols="12" sm="3">
+                                        <v-col cols="12" sm="4">
                                             <v-select v-model="from.database" 
                                             :items="dict.database" label="Database" required>
                                             </v-select>
                                         </v-col>
-                                        <v-col cols="12" sm="3">
+                                        <v-col cols="12" sm="4">
                                             <v-select v-model="from.table" 
                                             :items="dict.table" label="Table" required>
                                             </v-select>
                                         </v-col>
-                                        <v-col cols="12" sm="2">
+                                        <v-col cols="12" sm="4">
                                             <v-text-field v-model="from.table" 
                                             label="Table" required>
                                             </v-text-field>
                                         </v-col>
+                                    </v-row>
 
-                                        <v-col cols="12" sm="2">
-                                            <v-select v-model="from.mode" 
-                                            :items="dict.mode" label="Message" required>
-                                            </v-select>
-                                        </v-col>
-
-                                        <v-col cols="12" sm="2">
+                                    <v-row>
+                                        <v-col cols="12" sm="4">
                                             <v-select v-model="from.level" 
                                             :items="dict.level" label="Level" required>
                                             </v-select>
                                         </v-col>
-
-
-                                    </v-row>
-
-                                    <v-row>
                                         <v-col cols="12" sm="4">
                                             <v-select v-model="from.source" 
                                             :items="dict.sources" label="Sources" required>
                                             </v-select>
                                         </v-col>
+                                        <v-col cols="12" sm="4">
+                                            <v-select v-model="from.mode" 
+                                            :items="dict.mode" label="Message" required>
+                                            </v-select>
+                                        </v-col>
+                                    </v-row>
 
+                                    <v-row>
                                         <v-col cols="12" sm="4">
                                             <v-text-field v-model="from.source" :counter="50" label="Source"
                                                 required>
                                             </v-text-field>
                                         </v-col>
-                                        <v-col cols="12" sm="4">
+                                        <v-col cols="12" sm="8">
                                             <v-text-field v-model="from.search" :counter="50" label="Search"
                                                 required>
                                             </v-text-field>
