@@ -224,7 +224,7 @@
                                                     <tbody>
                                                         <tr v-for="item in result" :key="item.id">
                                                             <td>{{ item.id }}</td>
-                                                            <td>{{ item.date }}</td>
+                                                            <td>{{ localTZDates(item.date).localISODateTime }}</td>
                                                             <td>{{ item.level }}</td>
                                                             <td>{{ item.source }}</td>
                                                             <!-- td>{{ prepare_message(item.message, 1) }}</td-->
@@ -291,6 +291,39 @@
             },
 
             methods: {
+
+                localTZDatesQ: function(zdate){
+                    ret = zdate;
+                    var tzShift = -2;
+                    var ldate=new Date(zdate);
+                    console.log(ldate);
+                    return ret;
+                },
+
+                localTZDates: function(adate){
+                    // 2021-03-31T10:46:48.841Z
+                    var tzShift = -2;
+                    var zdate = new Date(adate);
+                    var ldate=new Date(zdate.getTime() - (60000*(zdate.getTimezoneOffset()+tzShift)));
+                    var ldateTime = ldate.toISOString().replace('Z', '');
+                    
+                    var ldate = ldateTime.substring(8,10)+'.'+
+                            ldateTime.substring(5,7)+'.'+
+                            ldateTime.substring(0,4)
+                            
+                    var ltime = ldateTime.substring(11,13)+':'+
+                            ldateTime.substring(14,16)+':'+
+                            ldateTime.substring(17)
+
+                    var ret = {
+                        zeroDateTime: zdate.toISOString(),
+                        localDate: ldate,
+                        localTime: ltime,
+                        localISODateTime: ldateTime,
+                        localTZDateTime:  ldate+"T"+ltime
+                    };
+                    return ret;
+                },
 
                 prepare_message: function(message, mode) {
                     var ret = message;
@@ -489,6 +522,10 @@
                 }
             },
         })
+
+
+
+
         /*
         function utf8_to_b64( str ) {
             return window.btoa(unescape(encodeURIComponent( str )));

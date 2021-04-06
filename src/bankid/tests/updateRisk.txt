@@ -1,0 +1,4 @@
+https://nr-clients.ukrgasaws.com/webbank/clients/info/risk/updateClientId=3433773
+
+INSERT INTO cfClientRisk(ClientId, Value, ClientTypeId, Status, Comment) 	
+VALUES(3433773, 0, 7,1, '1 Update Risk level from BankId');
