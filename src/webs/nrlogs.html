@@ -280,6 +280,12 @@
             }
             ),
 
+            mounted() {
+                if (localStorage.lastTemplateSQL) {
+                    this.sql.template = localStorage.lastTemplateSQL;
+                }
+            },
+
             created() {
               
             },
@@ -394,6 +400,7 @@
                     }
                 
             },
+
             watch: {
                 'from.database': function(newQuestion, oldQuestion) {
                     this.dict.table = this.dict.tables[newQuestion];
@@ -404,7 +411,15 @@
                         this.from.mode = this.dict.mode[0]
                     else
                         this.from.mode = this.dict.mode[1]
-                }       
+                },       
+                'sql.template': function(newQuestion, oldQuestion) {
+                    localStorage.lastTemplateSQL = this.sql.template;
+                    var values = {
+                        from : this.from,
+                        sql : this.sql
+                    };
+                    localStorage.lastValues = JSON.stringify(values);
+                }    
             },
 
             computed: {
@@ -463,6 +478,8 @@
                             { value: "F", text: "Жіночий" },
                         ],
                         sources: [
+                            "DEV",
+                            "PRO",
                             "Transgen XML",
                             "Card Status",
                             "depo"
