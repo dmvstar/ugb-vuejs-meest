@@ -1,0 +1,494 @@
+{
+  "code": 1200,
+  "data": {
+    "docs": {},
+    "info": {
+      "inn": "3786310351",
+      "scId": "3450137",
+      "smti": {
+        "smStates": [
+          {
+            "Date": "2021-04-08T14:07:12.207Z",
+            "Info": "Новий",
+            "SmName": "Процес Ідентифікаці клієнтів ФО",
+            "Source": "log",
+            "StateCode": "NEW_CLIENT",
+            "StateName": "Новий"
+          },
+          {
+            "Date": "2021-04-08T14:08:38.010Z",
+            "Info": "Актуальний згідно даних BankId",
+            "SmName": "Процес Ідентифікаці клієнтів ФО",
+            "Source": "log",
+            "StateCode": "COMPLETE_CLIENT",
+            "StateName": "Підтверджений, актуальний"
+          },
+          {
+            "Date": "2021-04-08T14:08:38.070Z",
+            "Info": "Підтверджений, актуальний",
+            "SmName": "Процес Ідентифікаці клієнтів ФО",
+            "Source": "state",
+            "StateCode": "COMPLETE_CLIENT",
+            "StateName": "Підтверджений, актуальний"
+          }
+        ],
+        "terCheck": "0"
+      },
+      "wbId": 3500355,
+      "scCode": "UGB.1926421307",
+      "syncCode": "Синхронизирован",
+      "syncFlag": 1,
+      "paramCode": "Customer_verification",
+      "paramDesc": "Спосіб верифікації клієнта",
+      "stateCode": "COMPLETE_CLIENT",
+      "stateName": "Підтверджений, актуальний",
+      "paramValue": "3",
+      "paramReffer": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+      "stateMashine": "Процес Ідентифікаці клієнтів ФО",
+      "cliStatusCode": "Активный",
+      "cliStatusFlag": 1
+    },
+    "orig": {
+      "person": {
+        "inn": "3786310351",
+        "sex": "M",
+        "type": "physical",
+        "phone": "380666422169",
+        "birthDay": "31.08.2003",
+        "flagPEPs": "0",
+        "lastName": "Богомолов",
+        "firstName": "Олександр",
+        "middleName": "Сергійович",
+        "flagTopLevelRisk": "0"
+      },
+      "extends": {},
+      "addresses": [
+        {
+          "area": "ОРЖИЦЬКИЙ",
+          "city": "ЛАЗІРКИ",
+          "type": "factual",
+          "state": "ПОЛТАВСЬКА",
+          "flatNo": "2",
+          "street": "ПІОНЕРСЬКИЙ",
+          "country": "UA",
+          "houseNo": "5"
+        },
+        {
+          "area": "ОРЖИЦЬКИЙ",
+          "city": "ЛАЗІРКИ",
+          "type": "juridical",
+          "state": "ПОЛТАВСЬКА",
+          "flatNo": "2",
+          "street": "ПІОНЕРСЬКИЙ",
+          "country": "UA",
+          "houseNo": "5"
+        }
+      ],
+      "documents": [
+        {
+          "type": "idpassport",
+          "issue": "5334",
+          "number": "002364731",
+          "series": "",
+          "typeName": "id-картка",
+          "dateIssue": "27.09.2018",
+          "dateExpiration": "27.09.2022",
+          "issueCountryIso2": "UA"
+        }
+      ],
+      "timestamp": "1617880028473",
+      "merchant_name": "bankid_easypay"
+    },
+    "input": {
+      "person": {
+        "inn": "3786310351",
+        "sex": "M",
+        "type": "physical",
+        "phone": "380666422169",
+        "birthDay": "31.08.2003",
+        "flagPEPs": "0",
+        "lastName": "Богомолов",
+        "firstName": "Олександр",
+        "middleName": "Сергійович",
+        "uaResident": "1",
+        "flagPersonTerror": "0",
+        "flagTopLevelRisk": "0"
+      },
+      "extends": {
+        "nameLat": "BOHOMOLOV OLЕKSANDR",
+        "photo25": "1",
+        "photo45": "1",
+        "typeCli": "клієнт з відкриттям рахунків",
+        "flagPEPs": "0",
+        "signDate": "08.04.2021",
+        "workInfo": "Безробітний",
+        "codOblRee": "53",
+        "education": "2",
+        "greenCard": "1",
+        "profitSrc": ",XX:інше",
+        "profitWay": "14430",
+        "birthPlace": "Україна",
+        "reputation": "Задовільний",
+        "uaResident": "1",
+        "verifyDate": "08.04.2021",
+        "verifyType": "3",
+        "ownFundsSrc": "9",
+        "registryUSA": "0",
+        "statusFATCA": "3",
+        "verifyType1": "1",
+        "birthCountry": "804",
+        "forTaxStatus": "0",
+        "monthAmouunt": "1",
+        "usaChiisares": "0",
+        "maritalStatus": "1",
+        "movePropAvail": "1",
+        "otherBankDepo": "0",
+        "ugbRelatePers": "2",
+        "costPaperAvail": "Відсутні",
+        "countryCitizen": "804",
+        "ownFundsAmount": "1",
+        "statusBusiness": "5",
+        "countryCitisien": "804",
+        "otherBankCredit": "0",
+        "planUseServices": "1,4,22",
+        "realEstateAvail": "1",
+        "flagTopLevelRisk": "0",
+        "otherBankAccount": "3"
+      },
+      "addresses": [
+        {
+          "area": "ОРЖИЦЬКИЙ",
+          "city": "ЛАЗІРКИ",
+          "type": "factual",
+          "state": "ПОЛТАВСЬКА",
+          "flatNo": "2",
+          "street": "ПІОНЕРСЬКИЙ",
+          "country": "UA",
+          "houseNo": "5"
+        },
+        {
+          "area": "ОРЖИЦЬКИЙ",
+          "city": "ЛАЗІРКИ",
+          "type": "juridical",
+          "state": "ПОЛТАВСЬКА",
+          "flatNo": "2",
+          "street": "ПІОНЕРСЬКИЙ",
+          "country": "UA",
+          "houseNo": "5"
+        }
+      ],
+      "documents": [
+        {
+          "type": "idpassport",
+          "issue": "5334",
+          "number": "002364731",
+          "series": "",
+          "typeName": "id-картка",
+          "dateIssue": "27.09.2018",
+          "dateExpiration": "27.09.2022",
+          "issueCountryIso2": "UA"
+        }
+      ],
+      "timestamp": "1617880028473",
+      "merchant_name": "bankid_easypay"
+    },
+    "trans": {
+      "addr": [
+        {
+          "Town": "ЛАЗІРКИ",
+          "State": "ПОЛТАВСЬКА",
+          "Region": "ОРЖИЦЬКИЙ",
+          "Street": "ПІОНЕРСЬКИЙ",
+          "Country": "UA",
+          "TypeCode": "2",
+          "FlatNumber": "2",
+          "HouseNumber": "5"
+        },
+        {
+          "Town": "ЛАЗІРКИ",
+          "State": "ПОЛТАВСЬКА",
+          "Region": "ОРЖИЦЬКИЙ",
+          "Street": "ПІОНЕРСЬКИЙ",
+          "Country": "UA",
+          "TypeCode": "1",
+          "FlatNumber": "2",
+          "HouseNumber": "5"
+        }
+      ],
+      "comm": [
+        {
+          "Value": "380666422169",
+          "TypeId": "3"
+        }
+      ],
+      "ident": [
+        {
+          "Number": "002364731",
+          "Series": "",
+          "TypeId": "55",
+          "IssueDate": "2018-09-27T00:00:00",
+          "CountryCode": "UA",
+          "Registrator": "5334",
+          "ExpirationDate": "2022-09-27T00:00:00"
+        }
+      ],
+      "indiv": {
+        "GENDER": "1",
+        "BirthDay": "2003-08-31T00:00:00",
+        "LastName": "Богомолов",
+        "FirstName": "Олександр",
+        "FatherName": "Сергійович",
+        "MarriageStatus": "1"
+      },
+      "names": {
+        "Lang": "LAT",
+        "Name": "BOHOMOLOV OLЕKSANDR"
+      },
+      "props": [
+        {
+          "Code": "GENDER",
+          "Dict": "D06",
+          "Refs": "sex",
+          "Value": "1"
+        },
+        {
+          "Code": "PUBLIC_PERSON_EXISTS",
+          "Dict": "",
+          "Refs": "peps",
+          "Value": "1"
+        },
+        {
+          "Code": "CL_FATF_CHECK_RESULT",
+          "Dict": "",
+          "Refs": "terrorist",
+          "Value": "Клиент НЕ являестя террористом соглано данных bankid"
+        },
+        {
+          "Code": "FATF_COUNTRY_CITIZEN",
+          "Dict": "KL_K040.DBF",
+          "Refs": "",
+          "Value": "804"
+        },
+        {
+          "Code": "FATF_CodObl",
+          "Dict": "",
+          "Refs": "",
+          "Value": "53"
+        },
+        {
+          "Code": "INFO_WORK_FROM",
+          "Dict": "",
+          "Refs": "",
+          "Value": "Безробітний"
+        },
+        {
+          "Code": "BIRTH_COUNTRY",
+          "Dict": "KL_K040.DBF",
+          "Refs": "",
+          "Value": "804"
+        },
+        {
+          "Code": "BIRTH_PLACE",
+          "Dict": "",
+          "Refs": "",
+          "Value": "Україна"
+        },
+        {
+          "Code": "PROFIT_WAY",
+          "Dict": "PROFIT_WAY",
+          "Refs": "",
+          "Value": "14430"
+        },
+        {
+          "Code": "BANK_PRODUCT",
+          "Dict": "FIN_DOCH",
+          "Refs": "",
+          "Value": ",XX:інше"
+        },
+        {
+          "Code": "OBSYAG_NAD",
+          "Dict": "OBSYAG_NAD_1",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "NAD_K_3",
+          "Dict": "NAD_K_3",
+          "Refs": "",
+          "Value": "9"
+        },
+        {
+          "Code": "MONTHSUMM",
+          "Dict": "SUMA_DOHOD",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "PROPETYTH_OF_CLIENT",
+          "Dict": "PROPETYTH_OF_CLIENT",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "PROPETYTH_OF_CLIENT_AVTO",
+          "Dict": "PROPETYTH_OF_CLIENT_AVTO",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "INFO_OUTER_ACC_SEL",
+          "Dict": "INFO_OUTER_ACC",
+          "Refs": "",
+          "Value": "3"
+        },
+        {
+          "Code": "EXISTS_CRED_OUT",
+          "Dict": "YESNO",
+          "Refs": "",
+          "Value": "0"
+        },
+        {
+          "Code": "EXISTS_DEPO_OUT",
+          "Dict": "YESNO",
+          "Refs": "",
+          "Value": "0"
+        },
+        {
+          "Code": "PROPETYPAP_OF_CLIENTYPE",
+          "Dict": "PROPETYPAP_OF_CLIENTYPE",
+          "Refs": "",
+          "Value": "Відсутні"
+        },
+        {
+          "Code": "BANK_SERVICES_MANUAL",
+          "Dict": "BANK_SERVICES_MANUAL",
+          "Refs": "",
+          "Value": "1,4,22"
+        },
+        {
+          "Code": "UGB_TCURelPers",
+          "Dict": "RF_UGB_TCURelPers",
+          "Refs": "",
+          "Value": "2"
+        },
+        {
+          "Code": "KL_K013FO",
+          "Dict": "KL_K013_FO",
+          "Refs": "",
+          "Value": "5"
+        },
+        {
+          "Code": "Chiisaresident_USA",
+          "Dict": "YESNO",
+          "Refs": "",
+          "Value": "0"
+        },
+        {
+          "Code": "Chiisaresident_USA",
+          "Dict": "YESNO",
+          "Refs": "",
+          "Value": "0"
+        },
+        {
+          "Code": "CUSTOMER_TYPE",
+          "Dict": "CUSTOMER_TYPE",
+          "Refs": "",
+          "Value": "клієнт з відкриттям рахунків"
+        },
+        {
+          "Code": "PASPFOTOCONTROL25",
+          "Dict": "",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "PASPFOTOCONTROL45",
+          "Dict": "",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "Verifikatsii_date ",
+          "Dict": "",
+          "Refs": "",
+          "Value": "2021-04-08T00:00:00"
+        },
+        {
+          "Code": "Education",
+          "Dict": "",
+          "Refs": "",
+          "Value": "2"
+        },
+        {
+          "Code": "CLIENT_STATUS",
+          "Dict": "",
+          "Refs": "",
+          "Value": "0"
+        },
+        {
+          "Code": "Customer_verification",
+          "Dict": "Customer_verification",
+          "Refs": "",
+          "Value": "3"
+        },
+        {
+          "Code": "Criterias",
+          "Dict": "",
+          "Refs": "",
+          "Value": "Задовільний"
+        },
+        {
+          "Code": "FATF_COUNTRY_CITIZEN",
+          "Dict": "KL_K040.DBF",
+          "Refs": "",
+          "Value": "804"
+        },
+        {
+          "Code": "CARD_GREEN",
+          "Dict": "A_GREEN_CARD",
+          "Refs": "",
+          "Value": "1"
+        },
+        {
+          "Code": "Resident_USA",
+          "Dict": "YESNO",
+          "Refs": "",
+          "Value": "0"
+        },
+        {
+          "Code": "FATCA",
+          "Dict": "FATCA",
+          "Refs": "",
+          "Value": "3"
+        },
+        {
+          "Code": "FATF_SHORT_NAME",
+          "Dict": "",
+          "Refs": "",
+          "Value": "BOHOMOLOV OLЕKSANDR"
+        }
+      ],
+      "client": {
+        "Name": "Богомолов Олександр Сергійович",
+        "Residency": "1",
+        "StateCode": "3786310351",
+        "PrevIdentDate": "2021-04-08T00:00:00"
+      }
+    },
+    "result": {
+      "client": {
+        "clientId": "3500355",
+        "scroogeId": "3450137",
+        "clientPushABS": "true"
+      },
+      "errors": "",
+      "result": "1",
+      "hasErrors": "false",
+      "requestId": "12547",
+      "responseId": "12547"
+    }
+  },
+  "path": "/api/openbanking/bankid/client",
+  "time": "Work time is: 89.504 sec.",
+  "result": "ok"
+}
