@@ -1,0 +1,45 @@
+{
+    "code": "1200",
+    "result": "ok",
+    "time": "Work time is: 5.52 msec.",
+    "path": "/webbank/clients/bankid/inn",
+    "data": {
+        "person": {
+        },
+        "addresses": [...],
+        "documents": [...],
+        "info": {
+            "wbId": 199785,
+            "scId": "362918",
+            "scCode": "UGB.165687",
+            "inn": "2949404835",
+            "paramCode": "Customer_verification",
+            "paramDesc": "Спосіб верифікації клієнта",
+            "paramValue": "1",
+            "paramReffer": "Верифікацію здійснено в особистій присутності особи",
+            "syncFlag": 4,
+            "syncCode": "Частично синхронизирован",
+            "cliStatusFlag": 1,
+            "cliStatusCode": "Активный",
+            "stateMashine": "Процес Ідентифікаці клієнтів ФО",
+            "stateCode": "COMPLETE_CLIENT",
+            "stateName": "Підтверджений, актуальний"
+        }
+    }
+}
+
+{
+    "code": "1502",
+    "result": "no",
+    "time": "Work time is: 3.68 msec.",
+    "path": "/webbank/clients/bankid/inn",
+    "error": {
+        "info": "No data for ",
+        "in": {
+            "inn": "9949404835",
+            "merchantName": "easypay_test",
+            "timestamp": 1617967515186
+        }
+    },
+    "data": {}
+}
