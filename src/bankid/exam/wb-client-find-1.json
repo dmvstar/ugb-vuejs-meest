@@ -1,0 +1,629 @@
+{
+    "Responses": {
+        "ResponseId": 0,
+        "RequestId": 0,
+        "Result": 1,
+        "HasErrors": false,
+        "Errors": []
+    },
+    "Individuals": {
+        "FirstName": "Володимир",
+        "LastName": "Бубликов",
+        "FatherName": "Марянович",
+        "Gender": 1,
+        "BirthDay": "1991-07-23T00:00:00",
+        "BirthSurname": "",
+        "MarriageStatus": 1,
+        "Note": null,
+        "Changed": "2021-04-02T15:04:46.27",
+        "Status": 1
+    },
+    "ClientId": 3433768,
+    "ScroogeId": "3385525",
+    "Clients": {
+        "StateCode": "3501414619",
+        "Name": "БУБЛИКОВ ВОЛОДИМИР МАРЯНОВИЧ",
+        "Residency": 1,
+        "Type": 1,
+        "SubType": 0,
+        "isTechFlag": 0,
+        "IsOut": 0,
+        "IsPotential": 0,
+        "IsPartner": false,
+        "TreatFlag": 0,
+        "LastChangeDate": "2021-04-02T15:06:23.447",
+        "IdentDate": null,
+        "PrevIdentDate": "2021-04-02T00:00:00",
+        "IdentInfo": "",
+        "Status": 1
+    },
+    "Properties": [
+        {
+            "TypeCode": "int",
+            "Code": "Gender",
+            "Name": "Стать",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.333"
+        },
+        {
+            "TypeCode": "int",
+            "Code": "Education",
+            "Name": "Освіта",
+            "Value": "2",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.52"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "CA_REG",
+            "Name": "код региона контрагента",
+            "Value": "26",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.087"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "INFO_WORK_FROM",
+            "Name": "Место работы",
+            "Value": "Безробітний",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.41"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "ResearchUser",
+            "Name": "Допрек клиента, для формы ввода анкеты",
+            "Value": "ukrgas\\appmb",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.55"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "FATF_SHORT_NAME",
+            "Name": "Короткое название",
+            "Value": "BUBLYKOV VOLODYMYR",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.55"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "FATF_IdenCard",
+            "Name": "Bид документа, удостоверяющего личность по справочнику финансового мониторинга",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.087"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "FATF_COUNTRY",
+            "Name": "Код страны регистрации или гражданства",
+            "Value": "804",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.087"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "CITY_CODE",
+            "Name": "Код страны",
+            "Value": "804",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.07"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "FATF_CodObl",
+            "Name": "Kод области по справочнику финансового мониторинга",
+            "Value": "46",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.393"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "CL_FATF_CHECK_RESULT",
+            "Name": "Проверка по списку террористов",
+            "Value": "Клиент НЕ являестя террористом соглано данных bankid",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.347"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "BANK_SERVICES_MANUAL",
+            "Name": "Банковские услуги, которые заполняются пользователем",
+            "Value": "1,22,4",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:06:08.29"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "PROPETYPAP_OF_CLIENTYPE",
+            "Name": "Назва цінного паперу",
+            "Value": "Відсутні",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.473"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "ECONOMY_SECTION",
+            "Name": "Институционный сектор экономики (К070)",
+            "Value": "14430",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.087"
+        },
+        {
+            "TypeCode": "int",
+            "Code": "SEASONITY",
+            "Name": "Сезонність",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.087"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "MONTHSUMM",
+            "Name": "Середньомісячна суме доходів",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.44"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "PUBLIC_PERSON_EXISTS",
+            "Name": "Інформація про осіб - публічних діячів",
+            "Value": "1;Не належить до публічних діячів;;",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:57.9"
+        },
+        {
+            "TypeCode": "datetime",
+            "Code": "First_Date",
+            "Name": "Дата первинного заповнення анкети",
+            "Value": "02.04.2021",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-03T04:17:50.503"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "BANK_PRODUCT",
+            "Name": "Основні джерела доходів",
+            "Value": ",XX:",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.427"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "PROPETYTH_OF_CLIENT",
+            "Name": "Наявність нерухомого майна у власності",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.44"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "PROPETYTH_OF_CLIENT_AVTO",
+            "Name": "Наявність рухомого майна ",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.44"
+        },
+        {
+            "TypeCode": "logic",
+            "Code": "PASPFOTOCONTROL25",
+            "Name": "Контроль за вклеюванням фотокартки 25",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.503"
+        },
+        {
+            "TypeCode": "logic",
+            "Code": "PASPFOTOCONTROL45",
+            "Name": "Контроль за вклеюванням фотокартки 45",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.503"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "Criterias",
+            "Name": "Репутація клієнта1",
+            "Value": "Задовільний",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.537"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "pidsegment2",
+            "Name": "Пiдсегмент 2 рiвня",
+            "Value": "10",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:06:23.447"
+        },
+        {
+            "TypeCode": "int",
+            "Code": "BIRTH_COUNTRY",
+            "Name": "Код країни народження",
+            "Value": "804",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.41"
+        },
+        {
+            "TypeCode": "int",
+            "Code": "CARD_GREEN",
+            "Name": "Наявність Зеленої карти",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.537"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "OBSYAG_NAD",
+            "Name": "Обсяги надходження коштів та інших цінностей на рахунки клієнта",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.427"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "CUSTOMER_TYPE",
+            "Name": "Тип клієнта",
+            "Value": "клієнт з відкриттям рахунків",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.49"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "PROFIT_WAY",
+            "Name": "Шляхи одержання доходу",
+            "Value": "14430",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.427"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "BIRTH_PLACE",
+            "Name": "Місце народження",
+            "Value": "Україна",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.41"
+        },
+        {
+            "TypeCode": "int",
+            "Code": "SM_CUSTOMER_TYPE",
+            "Name": "Тип клієнта для перехода по МС",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.053"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "EXISTS_DEPO_OUT",
+            "Name": "Наявність депозитів в інших банках",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.457"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "EXISTS_CRED_OUT",
+            "Name": "Наявність кредитів в інших банках",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.457"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "INFO_OUTER_ACC_SEL",
+            "Name": "Інформація про рахунки в інших банках",
+            "Value": "3",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.457"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "FATF_COUNTRY_CITIZEN",
+            "Name": "Код країни громадянства",
+            "Value": "804",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.393"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "CLIENT_STATUS",
+            "Name": "Статус клієнта",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.52"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "KL_K013FO",
+            "Name": "Статус підприємця або особи, яка провадить незалежну професійну діяльність",
+            "Value": "5",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.49"
+        },
+        {
+            "TypeCode": "int",
+            "Code": "Client_ZP",
+            "Name": "Клієнт по З/П або соц.виплатам",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:06:08.303"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "NAD_K_3",
+            "Name": "Джерела походження  власних коштів ",
+            "Value": "9",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.44"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "Chiisaresident_USA",
+            "Name": "Податковий резидент США",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.49"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "Resident_USA",
+            "Name": "Реєстрація/перебування в США",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.537"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "FATCA",
+            "Name": "FATCA-статус клієнта ",
+            "Value": "3",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.55"
+        },
+        {
+            "TypeCode": "datetime",
+            "Code": "Verifikatsii_date ",
+            "Name": "Дата верифікації клієнта",
+            "Value": "02.04.2021",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.007"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "Customer_verification",
+            "Name": "Спосіб верифікації клієнта",
+            "Value": "3",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.52"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "PEP_SUSPECTED",
+            "Name": "Виявлено співпадіння з ПЗО",
+            "Value": "0",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.24"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "EDDR",
+            "Name": "Номер ЄДДР",
+            "Value": " ",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:57.883"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "UGB_TCURelPers",
+            "Name": "Пов`язана особа за ПКУ",
+            "Value": "2",
+            "DateFrom": "2021-04-02T00:00:00",
+            "DateInto": "4637-11-27T00:00:00",
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.473"
+        },
+        {
+            "TypeCode": "string",
+            "Code": "K140",
+            "Name": "Код размера субъекта хозяйствования",
+            "Value": "9",
+            "DateFrom": "2021-04-02T00:00:00",
+            "DateInto": "4637-11-27T00:00:00",
+            "Status": 1,
+            "Changed": "2021-04-02T15:05:58.32"
+        }
+    ],
+    "Addresses": [
+        {
+            "Id": 7475782,
+            "TypeId": 1,
+            "TypeCode": "1",
+            "Country": "804",
+            "PostalCode": "",
+            "State": "Львівська",
+            "Region": "",
+            "TownshipType": "3508",
+            "Town": "Львув",
+            "StreetType": "3510",
+            "Street": "Пілсуцького",
+            "HouseType": "3511",
+            "HouseNumber": "34",
+            "FlatType": "3506",
+            "FlatNumber": "5",
+            "LandlinePhoneNumber": "",
+            "PropertyStatus": "",
+            "RegistrationDate": null,
+            "EndDate": null,
+            "Changed": "2021-04-02T15:05:57.883",
+            "Status": 1
+        },
+        {
+            "Id": 7475781,
+            "TypeId": 2,
+            "TypeCode": "2",
+            "Country": "804",
+            "PostalCode": "",
+            "State": "Львівська",
+            "Region": "",
+            "TownshipType": "3508",
+            "Town": "Львув",
+            "StreetType": "3510",
+            "Street": "Пілсуцького",
+            "HouseType": "3511",
+            "HouseNumber": "34",
+            "FlatType": "3506",
+            "FlatNumber": "5",
+            "LandlinePhoneNumber": "",
+            "PropertyStatus": "",
+            "RegistrationDate": null,
+            "EndDate": null,
+            "Changed": "2021-04-02T15:05:57.9",
+            "Status": 1
+        }
+    ],
+    "Communications": [
+        {
+            "Id": 4607968,
+            "TypeId": 3,
+            "TypeCode": "3",
+            "Value": "380971553054",
+            "IsMain": true,
+            "IsVerified": true,
+            "Note": "",
+            "SourceInfo": "",
+            "Changed": "2021-04-02T15:04:46.317",
+            "Status": 1
+        }
+    ],
+    "Names": [
+        {
+            "Id": 3060628,
+            "Lang": "LAT",
+            "Name": "BUBLYKOV VOLODYMYR",
+            "FullName": "BUBLYKOV VOLODYMYR",
+            "FullNameR": "",
+            "FullNameD": "",
+            "Status": 1
+        }
+    ],
+    "Identifications": [
+        {
+            "Id": 4755946,
+            "TypeId": 4,
+            "TypeCode": "4",
+            "No": 1,
+            "Series": "КС",
+            "Number": "620090",
+            "FormSeries": "",
+            "FormNumber": "",
+            "Registrator": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+            "RegistrationDate": null,
+            "IssueDate": "2008-01-17T00:00:00",
+            "ExpirationDate": "2099-01-01T00:00:00",
+            "RecordDate": null,
+            "CheckDate": null,
+            "IsMain": true,
+            "Checked": true,
+            "Changed": "2021-04-02T15:04:46.3",
+            "Status": 1
+        }
+    ],
+    "BusinessActivities": [],
+    "Relations": []
+}

@@ -1,0 +1,153 @@
+{
+    "Swagger": "https://app-front-pp.ukrgasbank.com/Webbank/swagger/ui/index#!/ClientApi/ClientApi_FindClientFL",
+    "Request": {
+        "RequestId": 1234120,
+        "UserLogin": "UKRGAS\\istest"
+    },
+    "ClientId": 3433768,
+    "SendToScrooge": 1,
+    "Individuals": {
+        "FirstName": "Володимир",
+        "LastName": "Бубликов",
+        "FatherName": "Марянович",
+        "Gender": 1,
+        "BirthDay": "1991-07-23T00:00:00",
+        "BirthSurname": "",
+        "MarriageStatus": 1,
+        "Note": null,
+        "Changed": "2021-04-02T15:04:46.27",
+        "Status": 1
+    },
+    "Clients": {
+        "StateCode": "3501414619",
+        "Name": "БУБЛИКОВ ВОЛОДИМИР МАРЯНОВИЧ",
+        "Residency": 1,
+        "Type": 1,
+        "SubType": 0,
+        "isTechFlag": 0,
+        "IsOut": 0,
+        "IsPotential": 0,
+        "IsPartner": false,
+        "TreatFlag": 0,
+        "LastChangeDate": "2021-04-02T15:06:23.447",
+        "IdentDate": null,
+        "PrevIdentDate": "2021-04-02T00:00:00",
+        "IdentInfo": "",
+        "Status": 1
+    },
+    "Properties": [
+        {
+            "Code": "Gender",
+            "Value": "1",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.333"
+        },
+        {
+            "Code": "Education",
+            "Value": "2",
+            "DateFrom": null,
+            "DateInto": null,
+            "Status": 1,
+            "Changed": "2021-04-02T15:04:46.52"
+        }
+    ],
+    "Addresses": [
+        {
+            "Id": 7475782,
+            "TypeId": 1,
+            "TypeCode": "1",
+            "Country": "804",
+            "PostalCode": "",
+            "State": "Львівська",
+            "Region": "",
+            "TownshipType": "3508",
+            "Town": "Львув",
+            "StreetType": "3510",
+            "Street": "Пілсуцького",
+            "HouseType": "3511",
+            "HouseNumber": "34",
+            "FlatType": "3506",
+            "FlatNumber": "5",
+            "LandlinePhoneNumber": "",
+            "PropertyStatus": "",
+            "RegistrationDate": null,
+            "EndDate": null,
+            "Changed": "2021-04-02T15:05:57.883",
+            "Status": 1
+        },
+        {
+            "Id": 7475781,
+            "TypeId": 2,
+            "TypeCode": "2",
+            "Country": "804",
+            "PostalCode": "",
+            "State": "Львівська",
+            "Region": "",
+            "TownshipType": "3508",
+            "Town": "Львув",
+            "StreetType": "3510",
+            "Street": "Пілсуцького",
+            "HouseType": "3511",
+            "HouseNumber": "34",
+            "FlatType": "3506",
+            "FlatNumber": "5",
+            "LandlinePhoneNumber": "",
+            "PropertyStatus": "",
+            "RegistrationDate": null,
+            "EndDate": null,
+            "Changed": "2021-04-02T15:05:57.9",
+            "Status": 1
+        }
+    ],
+    "Communications": [
+        {
+            "Id": 4607968,
+            "TypeId": 3,
+            "TypeCode": "3",
+            "Value": "380971553054",
+            "IsMain": true,
+            "IsVerified": true,
+            "Note": "",
+            "SourceInfo": "",
+            "Changed": "2021-04-02T15:04:46.317",
+            "Status": 1
+        }
+    ],
+    "Names": [
+        {
+            "Id": 3060628,
+            "Lang": "LAT",
+            "Name": "BUBLYKOV VOLODYMYR",
+            "FullName": "BUBLYKOV VOLODYMYR",
+            "FullNameR": "",
+            "FullNameD": "",
+            "Status": 1
+        }
+    ],
+    "Identifications": [
+        {
+            "Id": 4755946,
+            "TypeId": 4,
+            "TypeCode": "4",
+            "No": 1,
+            "Series": "КС",
+            "Number": "620090",
+            "FormSeries": "",
+            "FormNumber": "",
+            "Registrator": "КАМЯНКА БУЗЬКИМ РВ  Г УМВС УКРАЇНИ У ЛЬВІВСЬКІЙ ОБ",
+            "RegistrationDate": null,
+            "IssueDate": "2008-01-17T00:00:00",
+            "ExpirationDate": "2099-01-01T00:00:00",
+            "RecordDate": null,
+            "CheckDate": null,
+            "IsMain": true,
+            "Checked": true,
+            "Changed": "2021-04-02T15:04:46.3",
+            "Status": 1
+        }
+    ],
+    "BusinessActivities": [],
+    "Relations": []
+}

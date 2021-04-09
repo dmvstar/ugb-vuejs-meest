@@ -1,0 +1,128 @@
+{
+  "Individuals": {
+    "FirstName": "string",
+    "LastName": "string",
+    "FatherName": "string",
+    "Gender": 0,
+    "BirthDay": "2021-03-31T09:26:30.382Z",
+    "BirthSurname": "string",
+    "MarriageStatus": 0,
+    "Note": "string",
+    "Status": 0
+  },
+  "Request": {
+    "RequestId": 0,
+    "UserId": 0,
+    "UserLogin": "string"
+  },
+  "ClientId": 0,
+  "SendToScrooge": 0,
+  "ResearchUser": "string",
+  "CliDop": {
+    "ExtId": "string",
+    "ProviderId": 0
+  },
+  "Clients": {
+    "StateCode": "string",
+    "Name": "string",
+    "Residency": 0,
+    "IsTechFlag": true,
+    "IsOut": true,
+    "IdentDate": "2021-03-31T09:26:30.382Z",
+    "PrevIdentDate": "2021-03-31T09:26:30.382Z",
+    "Status": 0,
+    "TreatFlag": 0,
+    "IsPotential": 0,
+    "IsPartner": true
+  },
+  "Properties": [
+    {
+      "Code": "string",
+      "Value": "string",
+      "DateFrom": "2021-03-31T09:26:30.382Z",
+      "DateInto": "2021-03-31T09:26:30.382Z"
+    }
+  ],
+  "Addresses": [
+    {
+      "Id": 0,
+      "TypeId": 0,
+      "TypeCode": "string",
+      "Country": "string",
+      "PostalCode": "string",
+      "State": "string",
+      "Region": "string",
+      "TownshipType": "string",
+      "Town": "string",
+      "StreetType": "string",
+      "Street": "string",
+      "HouseType": "string",
+      "HouseNumber": "string",
+      "FlatType": "string",
+      "FlatNumber": "string",
+      "LandlinePhoneNumber": "string",
+      "PropertyStatus": "string",
+      "RegistrationDate": "2021-03-31T09:26:30.382Z",
+      "EndDate": "2021-03-31T09:26:30.382Z",
+      "Status": 0,
+      "ExtId": "string"
+    }
+  ],
+  "Communications": [
+    {
+      "Id": 0,
+      "TypeId": 0,
+      "TypeCode": "string",
+      "Value": "string",
+      "IsMain": true,
+      "IsVerified": true,
+      "Note": "string",
+      "SourceInfo": "string",
+      "Status": 0,
+      "ExtId": "string"
+    }
+  ],
+  "ClientNames": [
+    {
+      "Id": 0,
+      "Lang": "string",
+      "Name": "string",
+      "FullName": "string",
+      "FullNameR": "string",
+      "FullNameD": "string",
+      "Status": 0,
+      "ExtId": "string"
+    }
+  ],
+  "Identifications": [
+    {
+      "Id": 0,
+      "TypeId": 0,
+      "TypeCode": "string",
+      "No": 0,
+      "Series": "string",
+      "Number": "string",
+      "FormSeries": "string",
+      "FormNumber": "string",
+      "Registrator": "string",
+      "RegistrationDate": "2021-03-31T09:26:30.382Z",
+      "IssueDate": "2021-03-31T09:26:30.382Z",
+      "ExpirationDate": "2021-03-31T09:26:30.382Z",
+      "RecordDate": "2021-03-31T09:26:30.382Z",
+      "CheckDate": "2021-03-31T09:26:30.382Z",
+      "IsMain": true,
+      "Checked": true,
+      "Status": 0,
+      "ExtId": "string"
+    }
+  ],
+  "BusinessActivities": [
+    {
+      "Id": 0,
+      "ActivityTypeCode": "string",
+      "IsMain": true,
+      "Status": 0,
+      "ExtId": "string"
+    }
+  ]
+}
