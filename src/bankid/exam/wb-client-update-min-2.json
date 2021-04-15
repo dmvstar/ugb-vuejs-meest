@@ -1,0 +1,30 @@
+{
+    "Swagger": "https://app-front-pp.ukrgasbank.com/Webbank/swagger/ui/index#!/ClientApi/ClientApi_FindClientFL",
+    "Method": "POST /Api/ClientApi/ModifyClientFL",
+    "Request": {
+        "RequestId": 1234120,
+        "UserLogin": "UKRGAS\\istest"
+    },
+    "ClientId": 3433768,
+    "SendToScrooge": 1,
+  
+    "Clients": {
+        "StateCode": "3501414619"
+    },
+    "Properties": [
+        {
+            "Code": "Gender",
+            "Value": "1"
+        },
+        {
+            "Code": "Education",
+            "Value": "3"
+        }
+    ],
+    "Addresses": [],
+    "Communications": [],
+    "Names": [],
+    "Identifications": [],
+    "BusinessActivities": [],
+    "Relations": []
+}
