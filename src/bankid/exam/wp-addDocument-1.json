@@ -1,0 +1,114 @@
+{
+  "data": {
+    "documents": [
+      {
+        "externalId": "string",
+        "masterId": 0,
+        "branchId": 0,
+        "debit": {
+          "stateCode": "string",
+          "name": "string",
+          "iban": "string",
+          "code": "string",
+          "bankCode": "string",
+          "init": "string"
+        },
+        "credit": {
+          "stateCode": "string",
+          "name": "string",
+          "iban": "string",
+          "code": "string",
+          "bankCode": "string",
+          "init": "string"
+        },
+        "currencyTag": "string",
+        "mainAmount": 0,
+        "crncyAmount": 0,
+        "actionId": 0,
+        "documentState": 0,
+        "behaviorMode": 0,
+        "kind": 0,
+        "code": "string",
+        "purpose": "string",
+        "orgDate": "2021-04-09T13:51:33.907Z",
+        "dayDate": "2021-04-09T13:51:33.907Z",
+        "extDate": "2021-04-09T13:51:33.907Z",
+        "payDate": "2021-04-09T13:51:33.907Z",
+        "note": "string",
+        "info": "string",
+        "ctrls": "string",
+        "agreeActionId": 0,
+        "agreePatternId": 0,
+        "treatyId": 0,
+        "operationId": 0,
+        "occOperationId": 0,
+        "objectId": 0,
+        "reverseFlag": 0,
+        "taskFlag": 0,
+        "systemId": 0,
+        "operDate": "2021-04-09T13:51:33.907Z",
+        "cardOperationId": 0,
+        "signs": [
+          {
+            "provider": "string",
+            "version": 0,
+            "sign": "string"
+          }
+        ],
+        "connotations": [
+          {
+            "paramCode": "string",
+            "amount": 0,
+            "code": "string",
+            "flag": 0,
+            "info": "string"
+          }
+        ],
+        "goalLimits": [
+          {
+            "id": 0,
+            "limitTemplateId": 0,
+            "limitListId": 0,
+            "amount": 0,
+            "info": "string",
+            "flag": 0,
+            "status": 0
+          }
+        ],
+        "transfers": [
+          {
+            "debit": {
+              "id": 0,
+              "iban": "string",
+              "code": "string"
+            },
+            "credit": {
+              "id": 0,
+              "iban": "string",
+              "code": "string"
+            },
+            "crncyAmount": 0,
+            "currencyTag": "string",
+            "mainAmount": 0,
+            "kind": 0,
+            "code": "string",
+            "ctrls": "string",
+            "info": "string",
+            "treatyId": 0,
+            "agreeActionId": 0,
+            "agreePatternId": 0,
+            "occOperationId": 0
+          }
+        ]
+      }
+    ],
+    "key": {
+      "userCode": "string",
+      "branchId": 0,
+      "keyType": "string"
+    },
+    "userCode": "UKRGAS\\appmb"
+  },
+  "requestRef": "221133",
+  "processMode": "sync"
+}

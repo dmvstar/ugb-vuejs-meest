@@ -1,55 +1,5 @@
 [
     {
-        "name": "vBIdata",
-        "extends": {
-            "socStatus": "1",
-            "wrkPosition": "4",
-            "wrkExperience": "64",
-            "wrkCodObl": "53",
-            "countOfKeeps": "4",
-            "limitWanted": "40000",
-            "nameLat": "BOHOMOLOV OLЕKSANDR",
-            "photo25": "0",
-            "photo45": "1",
-            "typeCli": "клієнт з відкриттям рахунків",
-            "flagPEPs": "0",
-            "signDate": "08.04.2021",
-            "verifyDate": "08.04.2021",
-            "workInfo": "Безробітний",
-            "codOblRee": "53",
-            "education": "2",
-            "greenCard": "1",
-            "profitSrc": ",XX:інше",
-            "profitWay": "14430",
-            "birthPlace": "Україна",
-            "reputation": "Задовільний",
-            "uaResident": "1",
-            "verifyType": "3",
-            "ownFundsSrc": "9",
-            "registryUSA": "0",
-            "statusFATCA": "3",
-            "verifyType1": "1",
-            "birthCountry": "804",
-            "forTaxStatus": "0",
-            "monthAmouunt": "1",
-            "usaChiisares": "0",
-            "maritalStatus": "1",
-            "movePropAvail": "1",
-            "otherBankDepo": "0",
-            "ugbRelatePers": "2",
-            "costPaperAvail": "Відсутні",
-            "countryCitizen": "804",
-            "ownFundsAmount": "1",
-            "statusBusiness": "5",
-            "countryCitisien": "804",
-            "otherBankCredit": "0",
-            "planUseServices": "1,4,22",
-            "realEstateAvail": "1",
-            "flagTopLevelRisk": "0",
-            "otherBankAccount": "3"
-        }
-    },
-    {
         "name": "vBImapa",
         "extends": {
             "socStatus": {
@@ -58,39 +8,39 @@
                 "message": "Ошибка формата поля socStatus"
             },
             "wrkPosition": {
-                "needed": true,
+                "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля wrkPosition"
             },
             "wrkExperience": {
-                "needed": true,
+                "needed": false,
                 "express": "^[0-9].*$",
-                "message": "Ошибка формата поля "
+                "message": "Ошибка формата поля wrkExperience"
             },
             "wrkCodObl": {
-                "needed": true,
+                "needed": false,
                 "express": "^[0-9].*$",
-                "message": "Ошибка формата поля "
+                "message": "Ошибка формата поля wrkCodObl"
             },
             "countOfKeeps": {
-                "needed": true,
+                "needed": false,
                 "express": "^[0-9].*$",
-                "message": "Ошибка формата поля "
+                "message": "Ошибка формата поля countOfKeeps"
             },
             "limitWanted": {
-                "needed": true,
+                "needed": false,
                 "express": "^[0-9].*$",
-                "message": "Ошибка формата поля "
+                "message": "Ошибка формата поля limitWanted"
             },
             "photo25": {
-                "needed": true,
+                "needed": false,
                 "express": "^[01]$",
-                "message": "Ошибка формата поля "
+                "message": "Ошибка формата поля photo25"
             },
             "photo45": {
-                "needed": true,
+                "needed": false,
                 "express": "^[01]$",
-                "message": "Ошибка формата поля "
+                "message": "Ошибка формата поля photo45"
             },
             "typeCli": {
                 "needed": false,
@@ -310,5 +260,61 @@
                 }
             }
         }
+    },
+
+
+
+    {
+        "name": "vBIdata",
+        "extends": {
+            "socStatus": "1",
+
+            "wrkPosition": "4",
+            "wrkExperience": "64",
+            "wrkCodObl": "53",
+            "countOfKeeps": "4",
+            "limitWanted": "40000",
+            
+            "nameLat": "BOHOMOLOV OLЕKSANDR",
+            "photo25": "0",
+            "photo45": "1",
+            "typeCli": "клієнт з відкриттям рахунків",
+            "flagPEPs": "0",
+            "signDate": "08.04.2021",
+            "verifyDate": "08.04.2021",
+            "workInfo": "Безробітний",
+            "codOblRee": "53",
+            "education": "2",
+            "greenCard": "1",
+            "profitSrc": ",XX:інше",
+            "profitWay": "14430",
+            "birthPlace": "Україна",
+            "reputation": "Задовільний",
+            "uaResident": "1",
+            "verifyType": "3",
+            "ownFundsSrc": "9",
+            "registryUSA": "0",
+            "statusFATCA": "3",
+            "verifyType1": "1",
+            "birthCountry": "804",
+            "forTaxStatus": "0",
+            "monthAmouunt": "1",
+            "usaChiisares": "0",
+            "maritalStatus": "1",
+            "movePropAvail": "1",
+            "otherBankDepo": "0",
+            "ugbRelatePers": "2",
+            "costPaperAvail": "Відсутні",
+            "countryCitizen": "804",
+            "ownFundsAmount": "1",
+            "statusBusiness": "5",
+            "countryCitisien": "804",
+            "otherBankCredit": "0",
+            "planUseServices": "1,4,22",
+            "realEstateAvail": "1",
+            "flagTopLevelRisk": "0",
+            "otherBankAccount": "3"
+        }
     }
+
 ]

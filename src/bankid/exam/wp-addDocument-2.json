@@ -1,0 +1,58 @@
+{
+    "user": "test_api_user:secret",
+    "requestRef": "221133",
+    "processMode": "sync",
+    "data": {
+        "userCode": "UKRGAS\\appmb",
+        "documents": [
+            {
+                "externalId": "1233349",
+                "branchId": 1000148,
+                "debit": {
+                    "stateCode": "23697280",
+                    "name": "MoneyGram(деб.заб.перека.) В№148",
+                    "iban": "UA223204780000000000280954601",
+                    "code": "2809     46015.980.148",
+                    "bankCode": "320478",
+                    "init": "2809     46015"
+                },
+                "credit": {
+                    "stateCode": "23697280",
+                    "name": "Банкноти та монети в касі,В № 148",
+                    "iban": "UA223204780000000000280954601",
+                    "code": "1002     41010.980.148",
+                    "bankCode": "320478",
+                    "init": "1002     41010"
+                },
+                "currencyTag": "",
+                "mainAmount": 200,
+                "crncyAmount": 200,
+                "actionId": 1302,
+                "documentState": 0,
+                "kind": 18,
+                "code": "sw/04mg/123",
+                "purpose": "Виплата грошового переказу по системі MoneyGram",
+                "orgDate": "2021-04-16T13:51:33.907Z",
+                "dayDate": "2021-04-16T13:51:33.907Z",
+                "extDate": "2021-04-16T13:51:33.907Z",
+                "payDate": "2021-04-16T13:51:33.907Z",
+                "note": "Note Виплата грошового переказу по системі MoneyGram",
+                "info": "Info Виплата грошового переказу по системі MoneyGram",
+                "ctrls": "61",
+                "agreeActionId": 0,
+                "agreePatternId": 0,
+                "treatyId": 0,
+                "operationId": 0,
+                "occOperationId": 0,
+                "objectId": 0,
+                "reverseFlag": 0,
+                "taskFlag": 0,
+                "systemId": 0,
+                "operDate": "2021-04-09T13:51:33.907Z",
+                "cardOperationId": 0,
+                "signs": [],
+                "connotations": []
+            }
+        ]
+    }
+}

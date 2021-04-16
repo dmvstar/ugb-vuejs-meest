@@ -1,5 +1,6 @@
 {
-    "wbId": 3433768,
+    "wbId0": 3433770,
+    "wbId": {{payload}},
     "person": {
         "inn": "3501414619"
     },
@@ -13,14 +14,14 @@
         "countOfKeeps": "4",
         "limitWanted": "40000",
 
-        "nameLat": "BOHOMOLOV OLЕKSANDR",
+        "nameLat": "BUBLYKOV VOLODYMYR",
         "photo25": "0",
         "photo45": "1",
         "typeCli": "клієнт з відкриттям рахунків",
         "flagPEPs": "0",
         "signDate": "08.04.2021",
         "verifyDate": "08.04.2021",
-        "workInfo": "Безробітний",
+        "workInfo": "Головний фахувец",
         "codOblRee": "53",
         "education": "2",
         "greenCard": "1",
