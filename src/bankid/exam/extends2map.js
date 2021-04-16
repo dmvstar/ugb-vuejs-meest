@@ -6,6 +6,7 @@ var out = {};
 for(var o in ext){
     //console.log(o);
     out[o] = {
+            "value": ext[o],
             "needed": false,
             "express": "^[1-9]$",
             "message": "Ошибка формата поля " + o

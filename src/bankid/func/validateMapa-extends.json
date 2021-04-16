@@ -3,252 +3,304 @@
         "name": "vBImapa",
         "extends": {
             "socStatus": {
+                "value": "1",
                 "needed": true,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля socStatus"
             },
             "wrkPosition": {
+                "value": "4",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля wrkPosition"
             },
             "wrkExperience": {
+                "value": "64",
                 "needed": false,
-                "express": "^[0-9].*$",
+                "express": "^[1-9][1-9]$",
                 "message": "Ошибка формата поля wrkExperience"
             },
             "wrkCodObl": {
+                "value": "53",
                 "needed": false,
-                "express": "^[0-9].*$",
+                "express": "^[1-9][1-9]$",
                 "message": "Ошибка формата поля wrkCodObl"
             },
             "countOfKeeps": {
+                "value": "4",
                 "needed": false,
-                "express": "^[0-9].*$",
+                "express": "^[1-9]$",
                 "message": "Ошибка формата поля countOfKeeps"
             },
             "limitWanted": {
+                "value": "40000",
                 "needed": false,
                 "express": "^[0-9].*$",
                 "message": "Ошибка формата поля limitWanted"
             },
+            "nameLat": {
+                "value": "BOHOMOLOV OLЕKSANDR",
+                "needed": false,
+                "express": "^[A-Za-z].*$",
+                "message": "Ошибка формата поля nameLat"
+            },
             "photo25": {
+                "value": "0",
                 "needed": false,
                 "express": "^[01]$",
                 "message": "Ошибка формата поля photo25"
             },
             "photo45": {
+                "value": "1",
                 "needed": false,
                 "express": "^[01]$",
                 "message": "Ошибка формата поля photo45"
             },
             "typeCli": {
+                "value": "клієнт з відкриттям рахунків",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^.*$",
                 "message": "Ошибка формата поля typeCli"
             },
             "flagPEPs": {
+                "value": "0",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[01]$",
                 "message": "Ошибка формата поля flagPEPs"
             },
             "signDate": {
+                "value": "08.04.2021",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9.].*$",
                 "message": "Ошибка формата поля signDate"
             },
             "verifyDate": {
+                "value": "08.04.2021",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9.].*$",
                 "message": "Ошибка формата поля verifyDate"
             },
             "workInfo": {
+                "value": "Безробітний",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^.*$",
                 "message": "Ошибка формата поля workInfo"
             },
             "codOblRee": {
+                "value": "53",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[1-9][1-9]$",
                 "message": "Ошибка формата поля codOblRee"
             },
             "education": {
+                "value": "2",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля education"
             },
             "greenCard": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля greenCard"
             },
             "profitSrc": {
+                "value": ",XX:інше",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^.*$",
                 "message": "Ошибка формата поля profitSrc"
             },
             "profitWay": {
+                "value": "14430",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9][0-9][0-9][0-9][0-9]$",
                 "message": "Ошибка формата поля profitWay"
             },
             "birthPlace": {
+                "value": "Україна",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^.*$",
                 "message": "Ошибка формата поля birthPlace"
             },
             "reputation": {
+                "value": "Задовільний",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^.*$",
                 "message": "Ошибка формата поля reputation"
             },
             "uaResident": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля uaResident"
             },
             "verifyType": {
+                "value": "3",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля verifyType"
             },
             "ownFundsSrc": {
+                "value": "9",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля ownFundsSrc"
             },
             "registryUSA": {
+                "value": "0",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля registryUSA"
             },
             "statusFATCA": {
+                "value": "3",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля statusFATCA"
             },
             "verifyType1": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля verifyType1"
             },
             "birthCountry": {
+                "value": "804",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9][0-9][0-9]$",
                 "message": "Ошибка формата поля birthCountry"
             },
             "forTaxStatus": {
+                "value": "0",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9]$",
                 "message": "Ошибка формата поля forTaxStatus"
             },
             "monthAmouunt": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля monthAmouunt"
             },
             "usaChiisares": {
+                "value": "0",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[01]$",
                 "message": "Ошибка формата поля usaChiisares"
             },
             "maritalStatus": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля maritalStatus"
             },
             "movePropAvail": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля movePropAvail"
             },
             "otherBankDepo": {
+                "value": "0",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля otherBankDepo"
             },
             "ugbRelatePers": {
+                "value": "2",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля ugbRelatePers"
             },
             "costPaperAvail": {
+                "value": "Відсутні",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^.*$",
                 "message": "Ошибка формата поля costPaperAvail"
             },
             "countryCitizen": {
+                "value": "804",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9][0-9][0-9]$",
                 "message": "Ошибка формата поля countryCitizen"
             },
             "ownFundsAmount": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля ownFundsAmount"
             },
             "statusBusiness": {
+                "value": "5",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля statusBusiness"
             },
             "countryCitisien": {
+                "value": "804",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[0-9][0-9][0-9]$",
                 "message": "Ошибка формата поля countryCitisien"
             },
             "otherBankCredit": {
+                "value": "0",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[01]$",
                 "message": "Ошибка формата поля otherBankCredit"
             },
             "planUseServices": {
+                "value": "1,4,22",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[1-9,].*$",
                 "message": "Ошибка формата поля planUseServices"
             },
             "realEstateAvail": {
+                "value": "1",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля realEstateAvail"
             },
             "flagTopLevelRisk": {
+                "value": "0",
                 "needed": false,
-                "express": "^[1-9]$",
+                "express": "^[01]$",
                 "message": "Ошибка формата поля flagTopLevelRisk"
             },
             "otherBankAccount": {
+                "value": "3",
                 "needed": false,
                 "express": "^[1-9]$",
                 "message": "Ошибка формата поля otherBankAccount"
             },
+
+
             "sex": {
-                "needed": true,
+                "needed": false,
                 "express": "^[MFЧЖМ]$",
                 "message": "Ошибка формата поля ПОЛ"
             },
             "birthDay": {
-                "needed": true,
+                "needed": false,
                 "express": "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
                 "message": "Ошибка формата поля birthDay"
             },
             "type": {
-                "needed": true,
+                "needed": false,
                 "express": "^physical$",
                 "message": "Ошибка формата поля Тип"
             },
             "lastName": {
-                "needed": true,
+                "needed": false,
                 "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
                 "message": "Ошибка формата поля Фамилия"
             },
             "firstName": {
-                "needed": true,
+                "needed": false,
                 "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
                 "message": "Ошибка формата поля Имя"
             },
             "middleName": {
-                "needed": true,
+                "needed": false,
                 "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
                 "message": "Ошибка формата поля Отчество"
             },
@@ -261,20 +313,15 @@
             }
         }
     },
-
-
-
     {
         "name": "vBIdata",
         "extends": {
             "socStatus": "1",
-
             "wrkPosition": "4",
             "wrkExperience": "64",
             "wrkCodObl": "53",
             "countOfKeeps": "4",
             "limitWanted": "40000",
-            
             "nameLat": "BOHOMOLOV OLЕKSANDR",
             "photo25": "0",
             "photo45": "1",
@@ -316,5 +363,4 @@
             "otherBankAccount": "3"
         }
     }
-
 ]

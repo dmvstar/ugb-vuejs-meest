@@ -3,7 +3,8 @@
     "requestRef": "221133",
     "processMode": "sync",
     "data": {
-        "userCode": "UKRGAS\\appmb",
+        "userCode1": "UKRGAS\\appmb",
+        "userCode": "istest",
         "documents": [
             {
                 "externalId": "1233349",
