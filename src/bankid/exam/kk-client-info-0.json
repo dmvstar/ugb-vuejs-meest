@@ -1,0 +1,135 @@
+{
+    "person": {
+        "webbankId": 3433573,
+        "inn": "2528419726",
+        "name": "Захарченко Олександр Володимирович",
+        "scCliId": "3385332",
+        "scCliCode": "UGB.1926358854",
+        "lastName": "Захарченко",
+        "firstName": "Олександр",
+        "middleName": "Володимирович",
+        "birtDay": "15.12.1991",
+        "birthSurname": "",
+        "gender": 1,
+        "sex": "M",
+        "marriageStatus": 6,
+        "phone": "+380885554433"
+    },
+    
+    "kredit": {
+        "wrkPosition": "4",
+        "wrkExperience": "64",
+        "wrkCodObl": "53",
+        "countOfKeeps": "4",
+        "limitWanted": "40000"
+    },
+
+    "extends": {
+
+        "socStatus": "1",
+
+        "wrkPosition": "4",
+        "wrkExperience": "64",
+        "wrkCodObl": "53",
+        "countOfKeeps": "4",
+        "limitWanted": "40000",
+
+        "nameLat": "BOHOMOLOV OLЕKSANDR",
+        "photo25": "0",
+        "photo45": "1",
+        "typeCli": "клієнт з відкриттям рахунків",
+        "flagPEPs": "0",
+        "signDate": "08.04.2021",
+        "verifyDate": "08.04.2021",
+        "workInfo": "Безробітний",
+        "codOblRee": "53",
+        "education": "2",
+        "greenCard": "1",
+        "profitSrc": ",XX:інше",
+        "profitWay": "14430",
+        "birthPlace": "Україна",
+        "reputation": "Задовільний",
+        "uaResident": "1",
+        "verifyType": "3",
+        "ownFundsSrc": "9",
+        "registryUSA": "0",
+        "statusFATCA": "3",
+        "verifyType1": "1",
+        "birthCountry": "804",
+        "forTaxStatus": "0",
+        "monthAmouunt": "1",
+        "usaChiisares": "0",
+        "maritalStatus": "1",
+        "movePropAvail": "1",
+        "otherBankDepo": "0",
+        "ugbRelatePers": "2",
+        "costPaperAvail": "Відсутні",
+        "countryCitizen": "804",
+        "ownFundsAmount": "1",
+        "statusBusiness": "5",
+        "countryCitisien": "804",
+        "otherBankCredit": "0",
+        "planUseServices": "1,4,22",
+        "realEstateAvail": "1",
+        "flagTopLevelRisk": "0",
+        "otherBankAccount": "3"
+    },    
+
+    "addresses": [
+        {
+            "typeId": 1,
+            "desc": "Адреса постійного місця проживання або регістрації",
+            "type": "juridical",
+            "state": "Київська",
+            "postalCode": "",
+            "city": "Буча",
+            "street": "Шухевича Романа",
+            "houseNo": "1Г",
+            "flatNo": "",
+            "country": "UA"
+        },
+        {
+            "typeId": 2,
+            "desc": "Фактична адреса",
+            "type": "factual",
+            "state": "Київська",
+            "postalCode": "",
+            "city": "Буча",
+            "street": "Шухевича Романа",
+            "houseNo": "1Г",
+            "flatNo": "",
+            "country": "UA"
+        }
+    ],
+    "documents": [
+        {
+            "typeId": 4,
+            "typeName": "Паспорт громадянина України",
+            "type": "passport",
+            "series": "НВ",
+            "number": "498823",
+            "dateIssue": "24.07.2008",
+            "dateExpiration": "01.01.2099",
+            "documentName": "Паспорт громадянина України",
+            "issue": "Шепетівським МВ УМВС України в Хмельницькій област",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "info": {
+        "wbId": 3433573,
+        "scId": "3385332",
+        "scCode": "UGB.1926358854",
+        "inn": "2528419726",
+        "paramCode": "Customer_verification",
+        "paramDesc": "Спосіб верифікації клієнта",
+        "paramValue": "3",
+        "paramReffer": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+        "syncFlag": 1,
+        "syncCode": "Синхронизирован",
+        "cliStatusFlag": 1,
+        "cliStatusCode": "Активный",
+        "stateMashine": "Процес Ідентифікаці клієнтів ФО",
+        "stateCode": "NEW_CLIENT",
+        "stateName": "Новий"
+    }
+}

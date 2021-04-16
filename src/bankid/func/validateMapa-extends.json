@@ -1,0 +1,314 @@
+[
+    {
+        "name": "vBIdata",
+        "extends": {
+            "socStatus": "1",
+            "wrkPosition": "4",
+            "wrkExperience": "64",
+            "wrkCodObl": "53",
+            "countOfKeeps": "4",
+            "limitWanted": "40000",
+            "nameLat": "BOHOMOLOV OLЕKSANDR",
+            "photo25": "0",
+            "photo45": "1",
+            "typeCli": "клієнт з відкриттям рахунків",
+            "flagPEPs": "0",
+            "signDate": "08.04.2021",
+            "verifyDate": "08.04.2021",
+            "workInfo": "Безробітний",
+            "codOblRee": "53",
+            "education": "2",
+            "greenCard": "1",
+            "profitSrc": ",XX:інше",
+            "profitWay": "14430",
+            "birthPlace": "Україна",
+            "reputation": "Задовільний",
+            "uaResident": "1",
+            "verifyType": "3",
+            "ownFundsSrc": "9",
+            "registryUSA": "0",
+            "statusFATCA": "3",
+            "verifyType1": "1",
+            "birthCountry": "804",
+            "forTaxStatus": "0",
+            "monthAmouunt": "1",
+            "usaChiisares": "0",
+            "maritalStatus": "1",
+            "movePropAvail": "1",
+            "otherBankDepo": "0",
+            "ugbRelatePers": "2",
+            "costPaperAvail": "Відсутні",
+            "countryCitizen": "804",
+            "ownFundsAmount": "1",
+            "statusBusiness": "5",
+            "countryCitisien": "804",
+            "otherBankCredit": "0",
+            "planUseServices": "1,4,22",
+            "realEstateAvail": "1",
+            "flagTopLevelRisk": "0",
+            "otherBankAccount": "3"
+        }
+    },
+    {
+        "name": "vBImapa",
+        "extends": {
+            "socStatus": {
+                "needed": true,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля socStatus"
+            },
+            "wrkPosition": {
+                "needed": true,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля wrkPosition"
+            },
+            "wrkExperience": {
+                "needed": true,
+                "express": "^[0-9].*$",
+                "message": "Ошибка формата поля "
+            },
+            "wrkCodObl": {
+                "needed": true,
+                "express": "^[0-9].*$",
+                "message": "Ошибка формата поля "
+            },
+            "countOfKeeps": {
+                "needed": true,
+                "express": "^[0-9].*$",
+                "message": "Ошибка формата поля "
+            },
+            "limitWanted": {
+                "needed": true,
+                "express": "^[0-9].*$",
+                "message": "Ошибка формата поля "
+            },
+            "photo25": {
+                "needed": true,
+                "express": "^[01]$",
+                "message": "Ошибка формата поля "
+            },
+            "photo45": {
+                "needed": true,
+                "express": "^[01]$",
+                "message": "Ошибка формата поля "
+            },
+            "typeCli": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля typeCli"
+            },
+            "flagPEPs": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля flagPEPs"
+            },
+            "signDate": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля signDate"
+            },
+            "verifyDate": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля verifyDate"
+            },
+            "workInfo": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля workInfo"
+            },
+            "codOblRee": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля codOblRee"
+            },
+            "education": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля education"
+            },
+            "greenCard": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля greenCard"
+            },
+            "profitSrc": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля profitSrc"
+            },
+            "profitWay": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля profitWay"
+            },
+            "birthPlace": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля birthPlace"
+            },
+            "reputation": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля reputation"
+            },
+            "uaResident": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля uaResident"
+            },
+            "verifyType": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля verifyType"
+            },
+            "ownFundsSrc": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля ownFundsSrc"
+            },
+            "registryUSA": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля registryUSA"
+            },
+            "statusFATCA": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля statusFATCA"
+            },
+            "verifyType1": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля verifyType1"
+            },
+            "birthCountry": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля birthCountry"
+            },
+            "forTaxStatus": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля forTaxStatus"
+            },
+            "monthAmouunt": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля monthAmouunt"
+            },
+            "usaChiisares": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля usaChiisares"
+            },
+            "maritalStatus": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля maritalStatus"
+            },
+            "movePropAvail": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля movePropAvail"
+            },
+            "otherBankDepo": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля otherBankDepo"
+            },
+            "ugbRelatePers": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля ugbRelatePers"
+            },
+            "costPaperAvail": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля costPaperAvail"
+            },
+            "countryCitizen": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля countryCitizen"
+            },
+            "ownFundsAmount": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля ownFundsAmount"
+            },
+            "statusBusiness": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля statusBusiness"
+            },
+            "countryCitisien": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля countryCitisien"
+            },
+            "otherBankCredit": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля otherBankCredit"
+            },
+            "planUseServices": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля planUseServices"
+            },
+            "realEstateAvail": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля realEstateAvail"
+            },
+            "flagTopLevelRisk": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля flagTopLevelRisk"
+            },
+            "otherBankAccount": {
+                "needed": false,
+                "express": "^[1-9]$",
+                "message": "Ошибка формата поля otherBankAccount"
+            },
+            "sex": {
+                "needed": true,
+                "express": "^[MFЧЖМ]$",
+                "message": "Ошибка формата поля ПОЛ"
+            },
+            "birthDay": {
+                "needed": true,
+                "express": "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
+                "message": "Ошибка формата поля birthDay"
+            },
+            "type": {
+                "needed": true,
+                "express": "^physical$",
+                "message": "Ошибка формата поля Тип"
+            },
+            "lastName": {
+                "needed": true,
+                "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
+                "message": "Ошибка формата поля Фамилия"
+            },
+            "firstName": {
+                "needed": true,
+                "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
+                "message": "Ошибка формата поля Имя"
+            },
+            "middleName": {
+                "needed": true,
+                "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
+                "message": "Ошибка формата поля Отчество"
+            },
+            "ext": {
+                "num": {
+                    "needed": false,
+                    "express": "^[0-9]{10}$",
+                    "message": "Ошибка формата поля NUM"
+                }
+            }
+        }
+    }
+]

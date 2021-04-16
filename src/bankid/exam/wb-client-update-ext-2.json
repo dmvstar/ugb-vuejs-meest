@@ -6,7 +6,7 @@
     "extends": {
 
         "socStatus": "1",
-        
+
         "wrkPosition": "4",
         "wrkExperience": "64",
         "wrkCodObl": "53",
@@ -14,11 +14,12 @@
         "limitWanted": "40000",
 
         "nameLat": "BOHOMOLOV OLЕKSANDR",
-        "photo25": "1",
+        "photo25": "0",
         "photo45": "1",
         "typeCli": "клієнт з відкриттям рахунків",
         "flagPEPs": "0",
         "signDate": "08.04.2021",
+        "verifyDate": "08.04.2021",
         "workInfo": "Безробітний",
         "codOblRee": "53",
         "education": "2",
@@ -28,7 +29,6 @@
         "birthPlace": "Україна",
         "reputation": "Задовільний",
         "uaResident": "1",
-        "verifyDate": "08.04.2021",
         "verifyType": "3",
         "ownFundsSrc": "9",
         "registryUSA": "0",
