@@ -1,10 +1,7 @@
 {
-    "user": "test_api_user:secret",
-    "requestRef": "221177",
+    "requestRef": "117997",
     "processMode": "sync",
     "data": {
-        "userCode1": "UKRGAS\\appmb",
-        "readme": "Add UKRGAS\\appmb to Logins + Link to app server APP-BACK-PP + prod app server",
         "userCode": "UKRGAS\\istest",
         "documents": [
             {
@@ -29,21 +26,27 @@
                 "currencyTag": "",
                 "mainAmount": 200,
                 "crncyAmount": 200,
-                "actionId": 1302,
+                "actionId": 302,
                 "documentState": 0,
                 "kind": 18,
-                "code": "sw/04mg/123",
+                "code": "sw/04mg/8267",
                 "purpose": "Виплата грошового переказу по системі MoneyGram",
-                "orgDate": "2021-04-19T11:51:33.907Z",
-                "dayDate": "2021-04-19T11:51:33.907Z",
-                "extDate": "2021-04-19T11:51:33.907Z",
-                "payDate": "2021-04-19T11:51:33.907Z",
-                "operDate": "2021-04-19T11:51:33.907Z",
+                "orgDate": "2021-04-19T08:48:24.636Z",
+                "dayDate": "2021-04-19T08:48:24.636Z",
+                "extDate": "2021-04-19T08:48:24.636Z",
+                "payDate": "2021-04-19T08:48:24.636Z",
+                "operDate": "2021-04-19T08:48:24.636Z",
                 "note": "Note Виплата грошового переказу по системі MoneyGram",
                 "info": "Info Виплата грошового переказу по системі MoneyGram",
                 "ctrls": "61",
                 "signs": [],
-                "connotations": []
+                "connotations": [
+                    {
+                        EXT_DOC_ID
+
+                    }
+
+                ]
             }
         ]
     }

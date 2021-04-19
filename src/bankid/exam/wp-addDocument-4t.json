@@ -1,6 +1,5 @@
 {
-    "user": "test_api_user:secret",
-    "requestRef": "221177",
+    "requestRef": "{{payload.requestRef}}",
     "processMode": "sync",
     "data": {
         "userCode1": "UKRGAS\\appmb",
@@ -29,21 +28,42 @@
                 "currencyTag": "",
                 "mainAmount": 200,
                 "crncyAmount": 200,
-                "actionId": 1302,
+                "actionId": 302,
                 "documentState": 0,
                 "kind": 18,
-                "code": "sw/04mg/123",
+                "code": "sw/04mg/{{payload.num4}}",
                 "purpose": "Виплата грошового переказу по системі MoneyGram",
-                "orgDate": "2021-04-19T11:51:33.907Z",
-                "dayDate": "2021-04-19T11:51:33.907Z",
-                "extDate": "2021-04-19T11:51:33.907Z",
-                "payDate": "2021-04-19T11:51:33.907Z",
-                "operDate": "2021-04-19T11:51:33.907Z",
+                "orgDate": "{{payload.localISODateTime}}",
+                "dayDate": "{{payload.localISODateTime}}",
+                "extDate": "{{payload.localISODateTime}}",
+                "payDate": "{{payload.localISODateTime}}",
+                "operDate": "{{payload.localISODateTime}}",
                 "note": "Note Виплата грошового переказу по системі MoneyGram",
                 "info": "Info Виплата грошового переказу по системі MoneyGram",
                 "ctrls": "61",
                 "signs": [],
-                "connotations": []
+                "connotations": [
+                    {
+                        "paramCode": "EXT_DOC_ID",
+                        "code": "3211234"
+                    },
+                    {
+                        "paramCode": "EXT_FILE_NAME",
+                        "code": "transgen.api"
+                    },
+                    {
+                        "paramCode": "SENDERINFO",
+                        "info": "Баранкин Олег;ПАСПОРТ;АА;121212;Выдан,06/12/2000;19/04/2000;Адресс;0;000000000;"
+                    },
+                    {
+                        "paramCode": "CASHINFO",
+                        "info": "Бубликов Тарас;0000000000;;;;Сидоренко Вадим;2121213232;"
+                    },
+                    {
+                        "paramCode": "UGB_D060",
+                        "code": "04"
+                    }
+                ]
             }
         ]
     }
