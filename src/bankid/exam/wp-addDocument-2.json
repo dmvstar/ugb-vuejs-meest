@@ -4,7 +4,8 @@
     "processMode": "sync",
     "data": {
         "userCode1": "UKRGAS\\appmb",
-        "userCode": "istest",
+        "readme": "Add UKRGAS\\appmb to Logins + Link to app server APP-BACK-PP + prod app server",
+        "userCode": "UKRGAS\\istest",
         "documents": [
             {
                 "externalId": "1233349",
@@ -33,10 +34,11 @@
                 "kind": 18,
                 "code": "sw/04mg/123",
                 "purpose": "Виплата грошового переказу по системі MoneyGram",
-                "orgDate": "2021-04-16T13:51:33.907Z",
-                "dayDate": "2021-04-16T13:51:33.907Z",
-                "extDate": "2021-04-16T13:51:33.907Z",
-                "payDate": "2021-04-16T13:51:33.907Z",
+                "orgDate": "2021-04-19T11:51:33.907Z",
+                "dayDate": "2021-04-19T11:51:33.907Z",
+                "extDate": "2021-04-19T11:51:33.907Z",
+                "payDate": "2021-04-19T11:51:33.907Z",
+                "operDate": "2021-04-19T11:51:33.907Z",
                 "note": "Note Виплата грошового переказу по системі MoneyGram",
                 "info": "Info Виплата грошового переказу по системі MoneyGram",
                 "ctrls": "61",
@@ -49,7 +51,6 @@
                 "reverseFlag": 0,
                 "taskFlag": 0,
                 "systemId": 0,
-                "operDate": "2021-04-09T13:51:33.907Z",
                 "cardOperationId": 0,
                 "signs": [],
                 "connotations": []
