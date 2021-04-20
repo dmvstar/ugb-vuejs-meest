@@ -1,0 +1,134 @@
+[
+    {
+        "socStatus": "1",
+        "socInfo": "Найманий працівник",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "verifyDate": "now",
+            "signDate": "now",
+            "realEstateAvail": "1",
+            "movePropAvail": "1",
+            "otherBankAccount": "3",
+            "otherBankCredit": "0",
+            "otherBankDepo": "0",
+            "costPaperAvail": "Відсутні",
+            "profitWay": "14300",
+            "profitSrc": "1",
+            "ownFundsSrc": "1",
+            "forTaxStatus": "0",
+            "birthCountry": "804",
+            "typeCli": "клієнт з відкриттям рахунків",
+            "flagTopLevelRisk": "0",
+            "reputation": "Задовільний",
+            "countryCitisien": "804",
+            "planUseServices": "1,4,22",
+            "statusBusiness": "5",
+            "ugbRelatePers": "2",
+            "greenCard": "1",
+            "usaChiisares": "0",
+            "statusFATCA": "3",
+            "registryUSA": "0"
+        },
+        "extendsRest": {
+            "ownFundsAmount": "1",
+            "monthAmouunt": "1",
+            "maritalStatus": "1",
+            "uaResident": "1",
+            "codOblRee": "",
+            "workInfo": "Безробітний",
+            "birthPlace": "Україна",
+            "profitSrc": ",XX:інше",
+            "flagPEPs": "0",
+            "photo25": "1",
+            "photo45": "1"
+        }
+    },
+    {
+        "socStatus": "2",
+        "socInfo": "Приватний підприємець",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "workInfo": "Приватний підприємець",
+            "profitWay": "14430",
+            "profitSrc": "12",
+            "ownFundsSrc": "16",
+            "forTaxStatus": "1"
+        }
+    },
+    {
+        "socStatus": "3",
+        "socInfo": "Самозайнята особа",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "workInfo": "Самозайнята особа",
+            "profitWay": "14201",
+            "profitSrc": "12",
+            "ownFundsSrc": "16"
+        }
+    },
+    {
+        "socStatus": "4",
+        "socInfo": "Пенсіонер",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "workInfo": "Пенсіонер",
+            "profitWay": "14420",
+            "profitSrc": "2",
+            "ownFundsSrc": "16"
+        }
+    },
+    {
+        "socStatus": "5",
+        "socInfo": "Студент",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "workInfo": "Студент",
+            "profitWay": "14430",
+            "profitSrc": "16",
+            "ownFundsSrc": "16"
+        }
+    },
+    {
+        "socStatus": "6",
+        "socInfo": "Моряк",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "workInfo": "Моряк",
+            "profitWay": "14300",
+            "profitSrc": "1",
+            "ownFundsSrc": "1"
+        }
+    },
+    {
+        "socStatus": "7",
+        "socInfo": "Безробітний",
+        "person": {
+            "flagPEPs": "0",
+            "flagTopLevelRisk": "0"
+        },
+        "extends": {
+            "workInfo": "Безробітний",
+            "profitWay": "14430",
+            "profitSrc": "16",
+            "ownFundsSrc": "16"
+        }
+    }
+]

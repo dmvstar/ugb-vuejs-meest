@@ -40,13 +40,7 @@
                 "info": "Info Виплата грошового переказу по системі MoneyGram",
                 "ctrls": "61",
                 "signs": [],
-                "connotations": [
-                    {
-                        EXT_DOC_ID
-
-                    }
-
-                ]
+                "connotations": []
             }
         ]
     }
