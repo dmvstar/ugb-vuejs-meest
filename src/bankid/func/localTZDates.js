@@ -1,3 +1,5 @@
+//@WHAT localTZDates.js
+
 function localTZDates(zdate){
     // 2021-03-31T10:46:48.841Z
     var tzShift = -2;
@@ -11,16 +13,24 @@ function localTZDates(zdate){
     var ltime = ldateTime.substring(11,13)+':'+
               ldateTime.substring(14,16)+':'+
               ldateTime.substring(17)
-              
+    var exelDate = 25567.0 + ((zdate.getTime() - (zdate.getTimezoneOffset() * 60 * 1000)) / (1000 * 60 * 60 * 24));
+    //--44305          
     return {
         requestRef: Math.floor(100000 + Math.random() * 900000),
         num4: Math.floor(1000 + Math.random() * 9000),
         zeroDateTime: zdate.toISOString(),
+        exelDate: Math.floor(exelDate),
         localDate: ldate,
         localTime: ltime,
         localISODateTime: ldateTime,
         localTZDateTime:  ldate+"T"+ltime
     };
+}
+
+if (typeof msg === "undefined") {
+    var msg={
+        payload: {}
+    }
 }
 
 var dt = new Date();
@@ -29,4 +39,5 @@ msg.payload = {
     ldate : localTZDates(dt)
 };
 msg.payload = localTZDates(dt);
+console.log(msg);
 return msg;
