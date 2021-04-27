@@ -1,0 +1,90 @@
+{
+    "requestRef": "596307",
+    "processMode": "sync",
+    "data": {
+        "userCode": "UKRGAS\\istest",
+        "documents": [
+            {
+                "externalId": "1233349",
+                "branchId": 1000148,
+                "debit": {
+                    "stateCode": "23697280",
+                    "name": "MoneyGram(деб.заб.перека.) В№148",
+                    "iban": "UA223204780000000000280954601",
+                    "code": "2809     46015.980.148",
+                    "bankCode": "320478",
+                    "init": "2809     46015"
+                },
+                "credit": {
+                    "stateCode": "23697280",
+                    "name": "Банкноти та монети в касі,В № 148",
+                    "iban": "UA223204780000000000280954601",
+                    "code": "1002     41010.980.148",
+                    "bankCode": "320478",
+                    "init": "1002     41010"
+                },
+                "currencyTag": "",
+                "mainAmount": 200,
+                "crncyAmount": 200,
+                "actionId": 302,
+                "documentState": 0,
+                "kind": 18,
+                "code": "sw/04mg/9101",
+                "purpose": "Виплата грошового переказу по системі MoneyGram",
+                "orgDate": "2021-04-26T18:46:16.645Z",
+                "dayDate": "2021-04-26T18:46:16.645Z",
+                "extDate": "2021-04-26T18:46:16.645Z",
+                "payDate": "2021-04-26T18:46:16.645Z",
+                "operDate": "2021-04-26T18:46:16.645Z",
+                "note": "Note Виплата грошового переказу по системі MoneyGram",
+                "info": "Info Виплата грошового переказу по системі MoneyGram",
+                "ctrls": "61",
+                "signs": [],
+                "connotations": [
+                    {
+                        "paramCode": "EXT_DOC_ID",
+                        "code": "3211234"
+                    },
+                    {
+                        "paramCode": "EXT_FILE_NAME",
+                        "code": "transgen.api"
+                    },
+                    {
+                        "paramCode": "SENDERINFO",
+                        "info": "Баранкин Олег;ПАСПОРТ;АА;121212;Выдан,06/12/2000;19/04/2000;Адресс;0;000000000;"
+                    },
+                    {
+                        "paramCode": "DOCINFO",
+                        "info": "Сидоров Максим;ПАСПОРТ;АА;123456;Главным РУВД Одесса,01/01/1997;24/04/1980;Адрес;0;000000000;"
+                    },
+                    {
+                        "paramCode": "CASHINFO",
+                        "info": "Антонов Степан;1212121212;;;;Бубликов ;;"
+                    },
+                    {
+                        "paramCode": "UGB_D060",
+                        "code": "04"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+{
+    "data": {
+        "documents": [
+            {
+                "externalId": "1233349",
+                "billId": 836068144
+            }
+        ]
+    },
+    "status": "Success",
+    "processRef": "14f1d6dc-78db-42ef-a531-3cf82ff3718a",
+    "requestRef": "596307"
+}
+
+
+

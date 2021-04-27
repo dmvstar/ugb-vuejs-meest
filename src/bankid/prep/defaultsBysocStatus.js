@@ -11,6 +11,8 @@ for(var o of defaultsProp) {
     var outputProp = JSON.parse(JSON.stringify(defaultsMain));
     delete (outputProp.extendsRest);
     delete (o.extendsRest);
+    delete (outputProp.extendsOlds);
+    delete (o.extendsOlds);
 
     for(var add in o) {
         if(typeof o[add] === 'string') {
@@ -25,7 +27,7 @@ for(var o of defaultsProp) {
     }
     outputProps.push(outputProp);
 }
-console.log(outputProps);
+console.log( JSON.stringify(outputProps, null, 2));
 //msg.in.defaults_all = outputProps;
 //return msg;
 

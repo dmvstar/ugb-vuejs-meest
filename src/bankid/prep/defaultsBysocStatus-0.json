@@ -9,35 +9,6 @@
         "extends": {
             "verifyDate": "now",
             "signDate": "now",
-            "forTaxStatus": "0",
-            "realEstateAvail": "1",
-            "movePropAvail": "1",
-            "otherBankAccount": "3",
-            "otherBankCredit": "0",
-            "otherBankDepo": "0",
-            "costPaperAvail": "відсутні",
-            "profitWay": "14300",
-            "profitSrc": "1",
-            "ownFundsSrc": "1",
-            "typeCli": "Клієнт з відкриттям рахунку",
-            "flagTopLevelRisk": "Низький",
-            "reputation": "Задовільний",
-            "verifyType": "3",
-            "countryCitizen": "804",
-            "planUseServices": "1, 22, 4",
-            "statusBusiness": "5",
-            "flagPEPs": "1",
-            "ugbRelatePers": "0",
-            "greenCard": "1",
-            "usaChiisares": "0",
-            "statusFATCA": "3",
-            "registryUSA": "0"
-        },
-        "extendsOlds": {
-            "verifyDate": "now",
-            "signDate": "now",
-            "forTaxCode": null,
-            "forTaxDate": null,
             "realEstateAvail": "1",
             "movePropAvail": "1",
             "otherBankAccount": "3",
@@ -140,7 +111,10 @@
             "flagTopLevelRisk": "0"
         },
         "extends": {
-            "workInfo": "Моряк"
+            "workInfo": "Моряк",
+            "profitWay": "14300",
+            "profitSrc": "1",
+            "ownFundsSrc": "1"
         }
     },
     {
