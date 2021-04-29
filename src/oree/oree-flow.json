@@ -165,23 +165,6 @@
         ]
     },
     {
-        "id": "729a785f.b9e798",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Data b64",
-        "field": "data",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "PCEtLQppbi5vcGVyYXRpb24gCk9wZXJhdGlvbgoxINCe0YLQv9GA0LDQstC60LAKMiDQn9C+0LvRg9GH0LXQvdC40LUgINCS0YvQv9C70LDRgtCwCiAgICAxINC/0YDQvtCy0L7QtNC60LAgCiAgICDQlNGCIDI4MDkgKGFjY19kaXJlY3Rpb249MCkg0JrRgiAxMDAyIAozINCQ0L3QvdGD0LvQuNGA0L7QstCw0L3QuNC1CjQg0JLQvtC30LLRgNCw0YIKICAgIDIg0L/RgNC+0LLQvtC00LrQuAogICAg0JTRgiAyODA5INCa0YIgMTAwMiAoYWNjX2RpcmVjdGlvbj0xKSDQotC10LvQvgogICAg0JTRgiAyODA5INCa0YIgMTAwMiAoYWNjX2RpcmVjdGlvbj0xKSDQmtC+0LzQuNGB0YHQuNGPCi0tPgo8IS0tCk1vbmlrZXIJICAgICAgICAgICAgICAgIEZsYWcJQnJhbmNoSWQKMjgwOTU0NjAxLjk4MC4wNTAJICAgIDAJICAgIDEwMDA1NTAgINC00LvRjyDQstC40L/Qu9Cw0YLQuCDQv9C10YDQtdC60LDQt9GDINGDINCz0YDQuNCy0L3RliAKMjgwOTY0NjI5NzgxLjk4MC4wNTAJMQkgICAgMTAwMDU1MCAg0L/QvtCy0LXRgNC90LXQvdC90Y8g0LrQvtC80ZbRgdGW0Zcg0YMg0LPRgNC40LLQvdGWCjEwMDI3NDI0MS45ODAuMDUwICAgICAgICAgICAgICAgMTAwMDU1MCAg0JHQsNC90LrQvdC+0YLQuCDRgtCwINC80L7QvdC10YLQuCDQsiDQutCw0YHRliwg0JLihJYwNTAKLS0+Cgo8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/Pgo8c29hcDpFbnZlbG9wZSB4bWxuczpzb2FwPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSI+CiAgICA8c29hcDpCb2R5PgogICAgICAgIDxSZWdpc3Rlck9wZXJhdGlvbiB4bWxucz0iaHR0cDovL3d3dy51a3JnYXNiYW5rLmNvbSI+CiAgICAgICAgICAgIDxUcmFuc2ZlcklkPjQ2ODMzNzM0PC9UcmFuc2ZlcklkPgogICAgICAgICAgICA8VHJhbnNmZXJOdW1iZXI+NDA1MDUxODQ8L1RyYW5zZmVyTnVtYmVyPgogICAgICAgICAgICA8U3lzdGVtQ29kZT5tZzwvU3lzdGVtQ29kZT4KICAgICAgICAgICAgPFN5c3RlbU5hbWU+TW9uZXlHcmFtPC9TeXN0ZW1OYW1lPgogICAgICAgICAgICA8T3BlcmF0aW9uPjI8L09wZXJhdGlvbj4KICAgICAgICAgICAgPFR5cGU+MTwvVHlwZT4KICAgICAgICAgICAgPE9wZXJhdGlvbkRhdGU+MjAyMS0wMi0wNFQxMDo1Mzo0MCswMjowMDwvT3BlcmF0aW9uRGF0ZT4KICAgICAgICAgICAgPFBheW91dERhdGU+MjAyMS0wMi0wNFQxMDo1MToyOSswMjowMDwvUGF5b3V0RGF0ZT4KICAgICAgICAgICAgPE9wZXJhdGlvbkNhc2hEZXNrPjA8L09wZXJhdGlvbkNhc2hEZXNrPgogICAgICAgICAgICA8QUJTRGF0ZT4yMDIxLTAyLTA0VDAwOjAwOjAwKzAyOjAwPC9BQlNEYXRlPgogICAgICAgICAgICA8IS0tIDI4MDkgLSAxMDAyIDAgLS0+CiAgICAgICAgICAgIDxUcmFuc2ZlckFtb3VudD4yMDAuMDAwPC9UcmFuc2ZlckFtb3VudD4KICAgICAgICAgICAgPEZyb21Db3VudHJ5Pjg0MDwvRnJvbUNvdW50cnk+CiAgICAgICAgICAgIDxUb0NvdW50cnk+ODA0PC9Ub0NvdW50cnk+CiAgICAgICAgICAgIDxUcmFuc2ZlctChdXJyZW5jeT45ODA8L1RyYW5zZmVy0KF1cnJlbmN5PgogICAgICAgICAgICA8UG9pbnRCYW5rPjEwMDAwMTc8L1BvaW50QmFuaz4KICAgICAgICAgICAgPFBvaW50U1c+R0FTQjAyMDQ8L1BvaW50U1c+CiAgICAgICAgICAgIDxVc2VyTG9naW4+bm5pbG9zaDwvVXNlckxvZ2luPgogICAgICAgICAgICA8VXNlck5hbWU+0J3RltC70L7RiCDQndGW0LrQvtC70LXRgtGCINCi0ZbQsdC10YDRltGX0LLQvdCwPC9Vc2VyTmFtZT4KICAgICAgICAgICAgPFVzZXJJRD4xMzQ4MTwvVXNlcklEPgogICAgICAgICAgICA8U2VuZGVyPgogICAgICAgICAgICAgICAgPExhc3ROYW1lPlBPUE9WQTwvTGFzdE5hbWU+CiAgICAgICAgICAgICAgICA8Rmlyc3ROYW1lPlNWSVRMQU5BPC9GaXJzdE5hbWU+CiAgICAgICAgICAgIDwvU2VuZGVyPgogICAgICAgICAgICA8UmVjZWl2ZXI+CiAgICAgICAgICAgICAgICA8TGFzdE5hbWU+RElUWUFUS0lOPC9MYXN0TmFtZT4KICAgICAgICAgICAgICAgIDxGaXJzdE5hbWU+RElOSVM8L0ZpcnN0TmFtZT4KICAgICAgICAgICAgICAgIDxSZXNpZGVuY3k+dHJ1ZTwvUmVzaWRlbmN5PgogICAgICAgICAgICAgICAgPERvY3VtZW50TmFtZT7Qn9Cw0YHQv9C+0YDRgjwvRG9jdW1lbnROYW1lPgogICAgICAgICAgICAgICAgPERvY3VtZW50U2VyaWVzPkNFPC9Eb2N1bWVudFNlcmllcz4KICAgICAgICAgICAgICAgIDxEb2N1bWVudE51bWJlcj43NjEzMjE8L0RvY3VtZW50TnVtYmVyPgogICAgICAgICAgICAgICAgPERvY3VtZW50SXNzdWVEYXRlPjIwMTYtMDgtMjY8L0RvY3VtZW50SXNzdWVEYXRlPgogICAgICAgICAgICAgICAgPERvY3VtZW50SXNzdWVkQnk+SVZBTk8tRlJBTktJVlNLWU0gTVY8L0RvY3VtZW50SXNzdWVkQnk+CiAgICAgICAgICAgICAgICA8RGF0ZW9mQmlydGg+MTk4Ni0wMi0wNTwvRGF0ZW9mQmlydGg+CiAgICAgICAgICAgIDwvUmVjZWl2ZXI+CiAgICAgICAgPC9SZWdpc3Rlck9wZXJhdGlvbj4KICAgIDwvc29hcDpCb2R5Pgo8L3NvYXA6RW52ZWxvcGU+CgoKPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHNvYXA6RW52ZWxvcGUgeG1sbnM6c29hcD0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZlbG9wZS8iIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiPgogICAgPHNvYXA6Qm9keT4KICAgICAgICA8UmVnaXN0ZXJPcGVyYXRpb24geG1sbnM9Imh0dHA6Ly93d3cudWtyZ2FzYmFuay5jb20iPgogICAgICAgICAgICA8VHJhbnNmZXJJZD40NjYzNTI1ODwvVHJhbnNmZXJJZD4KICAgICAgICAgICAgPFRyYW5zZmVyTnVtYmVyPjE2NDA5OTQyPC9UcmFuc2Zlck51bWJlcj4KICAgICAgICAgICAgPFN5c3RlbUNvZGU+bWc8L1N5c3RlbUNvZGU+CiAgICAgICAgICAgIDxTeXN0ZW1OYW1lPk1vbmV5R3JhbTwvU3lzdGVtTmFtZT4KICAgICAgICAgICAgPE9wZXJhdGlvbj40PC9PcGVyYXRpb24+CiAgICAgICAgICAgIDxUeXBlPjE8L1R5cGU+CiAgICAgICAgICAgIDxPcGVyYXRpb25EYXRlPjIwMjEtMDEtMjhUMTU6NDI6NTIrMDI6MDA8L09wZXJhdGlvbkRhdGU+CiAgICAgICAgICAgIDxTZW5kRGF0ZT4yMDIxLTAxLTIwVDEzOjA4OjU1KzAyOjAwPC9TZW5kRGF0ZT4KICAgICAgICAgICAgPE9wZXJhdGlvbkNhc2hEZXNrPjA8L09wZXJhdGlvbkNhc2hEZXNrPgogICAgICAgICAgICA8QUJTRGF0ZT4yMDIxLTAxLTI4VDAwOjAwOjAwKzAyOjAwPC9BQlNEYXRlPgogICAgICAgICAgICA8IS0tIDEwMDIgLSAyODA5IDAgPz8/IC0tPgogICAgICAgICAgICA8VHJhbnNmZXJBbW91bnQ+MjAwLjAwMDwvVHJhbnNmZXJBbW91bnQ+CiAgICAgICAgICAgIDxGcm9tQ291bnRyeT44MDQ8L0Zyb21Db3VudHJ5PgogICAgICAgICAgICA8VG9Db3VudHJ5Pjg0MDwvVG9Db3VudHJ5PgogICAgICAgICAgICA8VHJhbnNmZXLQoXVycmVuY3k+OTgwPC9UcmFuc2ZlctChdXJyZW5jeT4KICAgICAgICAgICAgPENvbW1pc3Npb25BbW91bnQ+MTAuMDAwPC9Db21taXNzaW9uQW1vdW50PgogICAgICAgICAgICA8Q29tbWlzc2lvbtChdXJyZW5jeT45ODA8L0NvbW1pc3Npb27QoXVycmVuY3k+CiAgICAgICAgICAgIDwhLS0gMTAwMiAtIDI4MDkgMSAtLT4KICAgICAgICAgICAgPENvbW1pc3Npb25BbW91bnRFcT4xMC4wMDA8L0NvbW1pc3Npb25BbW91bnRFcT4KICAgICAgICAgICAgPFBvaW50QmFuaz4xMDAwNTUwPC9Qb2ludEJhbms+CiAgICAgICAgICAgIDxQb2ludFNXPkdBU0IwMjU4PC9Qb2ludFNXPgogICAgICAgICAgICA8VXNlckxvZ2luPm5uaWxvc2g8L1VzZXJMb2dpbj4KICAgICAgICAgICAgPFVzZXJOYW1lPtCd0ZbQu9C+0Ygg0J3RltC60L7Qu9C10YLRgiDQotGW0LHQtdGA0ZbRl9Cy0L3QsDwvVXNlck5hbWU+CiAgICAgICAgICAgIDxVc2VySUQ+MTM0ODE8L1VzZXJJRD4KICAgICAgICAgICAgPFNlbmRlcj4KICAgICAgICAgICAgICAgIDxMYXN0TmFtZT5LVkFTSElMQVZBPC9MYXN0TmFtZT4KICAgICAgICAgICAgICAgIDxGaXJzdE5hbWU+WVVMSVlBPC9GaXJzdE5hbWU+CiAgICAgICAgICAgICAgICA8UmVzaWRlbmN5PnRydWU8L1Jlc2lkZW5jeT4KICAgICAgICAgICAgICAgIDxEb2N1bWVudE5hbWU+0J/QsNGB0L/QvtGA0YI8L0RvY3VtZW50TmFtZT4KICAgICAgICAgICAgICAgIDxEb2N1bWVudFNlcmllcz5DVDwvRG9jdW1lbnRTZXJpZXM+CiAgICAgICAgICAgICAgICA8RG9jdW1lbnROdW1iZXI+MjEwNDcxPC9Eb2N1bWVudE51bWJlcj4KICAgICAgICAgICAgICAgIDxEb2N1bWVudElzc3VlRGF0ZT4yMDEwLTA4LTA1PC9Eb2N1bWVudElzc3VlRGF0ZT4KICAgICAgICAgICAgICAgIDxEYXRlb2ZCaXJ0aD4xOTg0LTExLTI4PC9EYXRlb2ZCaXJ0aD4KICAgICAgICAgICAgPC9TZW5kZXI+CiAgICAgICAgICAgIDxSZWNlaXZlcj4KICAgICAgICAgICAgICAgIDxMYXN0TmFtZT5EQU5FTElBPC9MYXN0TmFtZT4KICAgICAgICAgICAgICAgIDxGaXJzdE5hbWU+VEFNQVJJPC9GaXJzdE5hbWU+CiAgICAgICAgICAgIDwvUmVjZWl2ZXI+CiAgICAgICAgPC9SZWdpc3Rlck9wZXJhdGlvbj4KICAgIDwvc29hcDpCb2R5Pgo8L3NvYXA6RW52ZWxvcGU+Cg==",
-        "output": "str",
-        "x": 1340,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "72cc9735.11965",
         "type": "http request",
         "z": "e72aed43.e4b9b8",
@@ -478,39 +461,6 @@
         ]
     },
     {
-        "id": "674c3d83.2d6aec",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Xml Test",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<soap:Envelope xmlns:ns=\"http://oree.com.ua/etsua/soapsvc/bankaccountstatus/2020/09\" xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\">\n   <soap:Header><wsse:Security soap:mustUnderstand=\"true\" xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken wsu:Id=\"UsernameToken-3D8E495A71D1035BD516125380512321\"><wsse:Username>ukrgaz</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">WFtCRyFJt3</wsse:Password></wsse:UsernameToken></wsse:Security></soap:Header>\n   <soap:Body>\n      <ns:UploadRequest>\n         <!--Optional:-->\n         <ns:BANKLIMITS answer-required=\"true\" date-time=\"2020-10-26T18:51:13Z \" dtd-release=\"1\" dtd-version=\"1\" id=\"5654\" message-code=\"301\">\n            <!--Optional:-->\n            <ns:SenderIdentification coding-scheme=\"NAME\" id=\"UGB\"/>\n            <!--Optional:-->\n            <ns:ReceiverIdentification coding-scheme=\"EIC\" id=\"62X-OPERRYNKU--3\"/>\n            <!--Optional:-->\n            <ns:Limits date=\"2020-10-26T18:51:13Z\" title=\"FinancialLimit\">\n               <!--Zero or more repetitions:-->\n               <ns:Participant bankAccountId=\"1\" bankCode=\"320478\" dic=\"1\" ean=\"1\" edrpou=\"23697280\" eic=\"0\" iban=\"UA133204780000026007924864736\" ic=\"1\" name=\"АТ ДТЕК ДНІПРОЕНЕРГО\" particId=\"1\">\n                  <!--Zero or more repetitions:-->\n                  <ns:DataGroups>\n                     <!--Optional:-->\n                     <ns:TotalsData>\n                        <!--Zero or more repetitions:-->\n                        <ns:Data currency=\"UAH\" type=\"limit\" value=\"1121.42\"/>\n                     </ns:TotalsData>\n                  </ns:DataGroups>\n               </ns:Participant>\n            </ns:Limits>\n         </ns:BANKLIMITS>\n      </ns:UploadRequest>\n   </soap:Body>\n</soap:Envelope>",
-        "output": "str",
-        "x": 1340,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b995851f.a8bad",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "d020f6b.0ca9b08",
         "type": "debug",
         "z": "e72aed43.e4b9b8",
@@ -662,24 +612,6 @@
         ]
     },
     {
-        "id": "a1a28a62.10d2f8",
-        "type": "file",
-        "z": "e72aed43.e4b9b8",
-        "name": "~/oree-out.xml",
-        "filename": "/home/sdv/devel/node-js/workings/projects/ugb-vuejs-meest/src/bankid/exam/oree-out.xml",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 820,
-        "y": 400,
-        "wires": [
-            [
-                "b995851f.a8bad"
-            ]
-        ]
-    },
-    {
         "id": "ca70381c.78ded",
         "type": "template",
         "z": "e72aed43.e4b9b8",
@@ -696,143 +628,6 @@
             [
                 "69e9126f.57d5bc",
                 "72beb55f.8de584"
-            ]
-        ]
-    },
-    {
-        "id": "7b72f994.1802b",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1240,
-        "wires": [
-            [
-                "35930724.eb1838"
-            ]
-        ]
-    },
-    {
-        "id": "c01bfe2f.5339a8",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 850,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "faf8df09.cd731",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "mustache",
-        "func": "m = global.get('mustache');\n\nvar data = msg.data;\nvar temp = msg.temp;\nvar out = \"\";\nfor (var o of data) {\n     var payload = {};\n     payload.payload = o;\n     out += m.render(temp, payload);\n}\nmsg.payload = out;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 620,
-        "y": 1240,
-        "wires": [
-            [
-                "c01bfe2f.5339a8"
-            ]
-        ]
-    },
-    {
-        "id": "35930724.eb1838",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "data",
-        "field": "data",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "[\n    {\n        \"participant\" : {\n                        \"bankAccountId\" : \"1\" ,\n                        \"bankCode\" : \"320478\" ,\n                        \"dic\" : \"1\" ,\n                        \"ean\" : \"1\" ,\n                        \"edrpou\" : \"23697280\" ,\n                        \"eic\" : \"0\" ,\n                        \"iban\" : \"UA133204780000026007924864736\" ,\n                        \"ic\" : \"1\" ,\n                        \"name\" : \"АТ ДТЕК ДНІПРОЕНЕРГО\" ,\n                        \"particId\" : \"1\",\n\n                        \"data\" : {\n                            \"currency\" : \"UAH\" ,\n                            \"type\" : \"limit\" ,\n                            \"value\" : \"1121.42\"\n                        }\n        }\n    },\n    {\n        \"participant\" : {\n                        \"bankAccountId\" : \"1\" ,\n                        \"bankCode\" : \"320478\" ,\n                        \"dic\" : \"1\" ,\n                        \"ean\" : \"1\" ,\n                        \"edrpou\" : \"23697280\" ,\n                        \"eic\" : \"0\" ,\n                        \"iban\" : \"UA133204780000026007924864736\" ,\n                        \"ic\" : \"1\" ,\n                        \"name\" : \"АТ ДТЕК ДНІПРОЕНЕРГО\" ,\n                        \"particId\" : \"1\",\n                        \n                        \"data\" : {\n                            \"currency\" : \"UAH\" ,\n                            \"type\" : \"limit\" ,\n                            \"value\" : \"4312.42\"\n                        }\n        }\n    }\n]",
-        "output": "json",
-        "x": 290,
-        "y": 1240,
-        "wires": [
-            [
-                "bc77a998.36818"
-            ]
-        ]
-    },
-    {
-        "id": "bc77a998.36818",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "temp",
-        "field": "temp",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "                \n            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                <ns:DataGroups>\n                     <ns:TotalsData>\n                        <ns:Data \n                            currency=\"{{payload.participant.data.currency}}\" \n                            type=\"{{payload.participant.data.type}}\" \n                            value=\"{{payload.participant.data.value}}\"/>\n                     </ns:TotalsData>\n                </ns:DataGroups>\n            </ns:Participant>\n               ",
-        "output": "str",
-        "x": 450,
-        "y": 1240,
-        "wires": [
-            [
-                "faf8df09.cd731",
-                "57f5ebb7.3ae6e4"
-            ]
-        ]
-    },
-    {
-        "id": "57f5ebb7.3ae6e4",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 630,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "71cc1cc8.82d3a4",
-        "type": "file",
-        "z": "e72aed43.e4b9b8",
-        "name": "~/oree-temp.xml",
-        "filename": "/home/sdv/devel/node-js/workings/projects/ugb-vuejs-meest/src/bankid/exam/oree-temp.xml",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 660,
-        "y": 1320,
-        "wires": [
-            [
-                "c01bfe2f.5339a8"
             ]
         ]
     },
@@ -1432,141 +1227,6 @@
         ]
     },
     {
-        "id": "ba34be00.0f6098",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Xml Body Fmt",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "            <ns:Participant \n                        bankAccountId=\"{{payload.participant.bankAccountId}}\" \n                        bankCode=\"{{payload.participant.bankCode}}\" \n                        dic=\"{{payload.participant.dic}}\" \n                        ean=\"{{payload.participant.ean}}\" \n                        edrpou=\"{{payload.participant.edrpou}}\" \n                        eic=\"{{payload.participant.eic}}\" \n                        iban=\"{{payload.participant.iban}}\" \n                        ic=\"{{payload.participant.ic}}\" \n                        name=\"{{payload.participant.name}}\" \n                        particId=\"{{payload.participant.particId}}\">\n                        <ns:DataGroups>\n                            <ns:TotalsData>\n                            <ns:Data \n                                currency=\"{{payload.participant.data.currency}}\" \n                                type=\"{{payload.participant.data.type}}\" \n                                value=\"{{payload.participant.data.value}}\"/>\n                            </ns:TotalsData>\n                        </ns:DataGroups>\n            </ns:Participant>\n",
-        "output": "str",
-        "x": 1360,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3e220ce5.ee8a8c",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "trim",
-        "func": "var out = '';\n\nvar lines = msg.xml.body.split('\\n');\n\n    for (var line of lines) {\n            var trim = line.trim();\n            if( line.match(/^.*<.*$/) )\n                out += trim;\n            else \n                if(trim.length > 0)\n                out += (' '+line.trim());\n    }\n\nmsg.xml.bodyt = out;\nmsg.payload = out;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 450,
-        "y": 1380,
-        "wires": [
-            [
-                "1e59faca.f6de05",
-                "217d7faa.5d2b7"
-            ]
-        ]
-    },
-    {
-        "id": "7ce96a94.c88cc4",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1380,
-        "wires": [
-            [
-                "1c74b4b5.ecae5b"
-            ]
-        ]
-    },
-    {
-        "id": "1c74b4b5.ecae5b",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "data",
-        "field": "xml.body",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<soap:Envelope xmlns:ns=\"http://oree.com.ua/etsua/soapsvc/bankaccountstatus/2020/09\" xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\">\n   <soap:Header><wsse:Security soap:mustUnderstand=\"true\" xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">\n        <wsse:UsernameToken wsu:Id=\"UsernameToken-3D8E495A71D1035BD516125380512321\">\n        <wsse:Username>ukrgaz</wsse:Username>\n        <wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">WFtCRyFJt3</wsse:Password>\n        </wsse:UsernameToken></wsse:Security>\n        </soap:Header>\n   <soap:Body>\n      <ns:UploadRequest>\n         <ns:BANKLIMITS answer-required=\"true\" date-time=\"2020-10-26T18:51:13Z \" dtd-release=\"1\" dtd-version=\"1\" id=\"5654\" message-code=\"301\">\n            <ns:SenderIdentification coding-scheme=\"NAME\" id=\"UGB\"/>\n            <ns:ReceiverIdentification coding-scheme=\"EIC\" id=\"62X-OPERRYNKU--3\"/>\n            <ns:Limits date=\"2020-10-26T18:51:13Z\" title=\"FinancialLimit\">\n                \n            <ns:Participant \n                        bankAccountId=\"1\" \n                        bankCode=\"320478\" \n                        dic=\"1\" \n                        ean=\"1\" \n                        edrpou=\"23697280\" \n                        eic=\"0\" \n                        iban=\"UA133204780000026007924864736\" \n                        ic=\"1\" \n                        name=\"АТ ДТЕК ДНІПРОЕНЕРГО\" \n                        particId=\"1\">\n                <ns:DataGroups>\n                     <ns:TotalsData>\n                        <ns:Data \n                            currency=\"UAH\" \n                            type=\"limit\" \n                            value=\"1121.42\"/>\n                     </ns:TotalsData>\n                </ns:DataGroups>\n            </ns:Participant>\n                               \n            <ns:Participant \n                        bankAccountId=\"1\" \n                        bankCode=\"320478\" \n                        dic=\"1\" \n                        ean=\"1\" \n                        edrpou=\"23697280\" \n                        eic=\"0\" \n                        iban=\"UA133204780000026007924864736\" \n                        ic=\"1\" \n                        name=\"АТ ДТЕК ДНІПРОЕНЕРГО\" \n                        particId=\"1\">\n                <ns:DataGroups>\n                     <ns:TotalsData>\n                        <ns:Data \n                            currency=\"UAH\" \n                            type=\"limit\" \n                            value=\"4312.42\"/>\n                     </ns:TotalsData>\n                </ns:DataGroups>\n            </ns:Participant>\n               \n            </ns:Limits>\n         </ns:BANKLIMITS>\n      </ns:UploadRequest>\n   </soap:Body>\n</soap:Envelope>\n",
-        "output": "str",
-        "x": 290,
-        "y": 1380,
-        "wires": [
-            [
-                "3e220ce5.ee8a8c"
-            ]
-        ]
-    },
-    {
-        "id": "1e59faca.f6de05",
-        "type": "file",
-        "z": "e72aed43.e4b9b8",
-        "name": "~/oree-temp.xml",
-        "filename": "oree-temp.xml",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 680,
-        "y": 1420,
-        "wires": [
-            [
-                "217d7faa.5d2b7"
-            ]
-        ]
-    },
-    {
-        "id": "217d7faa.5d2b7",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 850,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "61c71318.a253cc",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Xml Body No",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<ns:Participant bankAccountId=\"{{payload.participant.bankAccountId}}\"  bankCode=\"{{payload.participant.bankCode}}\"  dic=\"{{payload.participant.dic}}\"  ean=\"{{payload.participant.ean}}\"  edrpou=\"{{payload.participant.edrpou}}\"  eic=\"{{payload.participant.eic}}\"  iban=\"{{payload.participant.iban}}\"  ic=\"{{payload.participant.ic}}\"  name=\"{{payload.participant.name}}\"  particId=\"{{payload.participant.particId}}\">\n\t<ns:DataGroups>\n\t\t<ns:TotalsData>\n\t\t\t<ns:Data currency=\"{{payload.participant.data.currency}}\" type=\"{{payload.participant.data.type}}\" value=\"{{payload.participant.data.value}}\"/>\n\t\t</ns:TotalsData>\n\t</ns:DataGroups>\n</ns:Participant>\n",
-        "output": "str",
-        "x": 1350,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "5a213ace.a5e244",
         "type": "xml",
         "z": "e72aed43.e4b9b8",
@@ -1600,63 +1260,6 @@
                 "937b6f97.562c38",
                 "e91b4934.7eba08"
             ]
-        ]
-    },
-    {
-        "id": "98f155c3.6cdc3",
-        "type": "link out",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "links": [
-            "7fcb1885.dc3b9",
-            "c6942b0a.3b454",
-            "4041ec09.943164"
-        ],
-        "x": 895,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "99797596.85aeb",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 760,
-        "y": 840,
-        "wires": [
-            [
-                "98f155c3.6cdc3"
-            ]
-        ]
-    },
-    {
-        "id": "c6942b0a.3b454",
-        "type": "link in",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "links": [
-            "98f155c3.6cdc3"
-        ],
-        "x": 995,
-        "y": 840,
-        "wires": [
-            []
         ]
     },
     {
@@ -1737,69 +1340,6 @@
         ]
     },
     {
-        "id": "9d85c594.5d4258",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1440,
-        "wires": [
-            [
-                "bd98e02c.6adeb"
-            ]
-        ]
-    },
-    {
-        "id": "bd98e02c.6adeb",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "ENV",
-        "func": "\nmsg.payload = env.get(\"ENVIRONMENT\");\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 310,
-        "y": 1440,
-        "wires": [
-            [
-                "594ab3a1.1f1d74"
-            ]
-        ]
-    },
-    {
-        "id": "594ab3a1.1f1d74",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 1440,
-        "wires": []
-    },
-    {
         "id": "6d1812df.61b22c",
         "type": "function",
         "z": "e72aed43.e4b9b8",
@@ -1817,136 +1357,6 @@
             ],
             [
                 "37a89188.997eae"
-            ]
-        ]
-    },
-    {
-        "id": "7e2adf28.3bc4c",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 1620,
-        "wires": [
-            [
-                "cc08a49a.0bbb28"
-            ]
-        ]
-    },
-    {
-        "id": "cc08a49a.0bbb28",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "/*\nSELECT '<Participant name=\"' + a.ClientName + '\" iban=\"' + a.IBAN + '\" edrpou=\"' + a.StateCode + '\" bankCode=\"300465\">' + '<DataGroups>\n<TotalsData>\n<Data value=\"' + LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) + '\" type=\"limit\" currency=\"' + CASE\n                                                                                             WHEN a.CurrencyTag = ''\n                                                                                             THEN 'UAH'\n                                                                                             ELSE a.CurrencyTag\n                                                                                         END + '\"/>\n</TotalsData>\n</DataGroups>\n</Participant>' AS XML_OUT\n*/\n\nSELECT a.ClientName ,  a.IBAN, a.StateCode \n , LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) \n , IIF( a.CurrencyTag = '', 'UAH', a.CurrencyTag) CurrencyTag\n\n\n\nFROM sv_Amounts a WITH(NOLOCK)\nWHERE a.Id IN\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328'\n\t, 'UA853204780000026025000003330'\n\t, 'UA423204780000026022000003333'\n\t, 'UA153204780000026025000003329'\n\t, 'UA603204780000026021000003334'\n\t, 'UA783204780000026020000003335'\n\t, 'UA293204780000026040924894075'\n\t, 'UA103204780000026008924894147'\n\t, 'UA883204780000026201131375159'\n\t, 'UA623204780000026080000179287'\n\t, 'UA773204780000026207131375153'\n\t, 'UA703204780000026084751101403'\n\t, 'UA773204780000026207131375153'\n\t, 'UA653204780000026033924899485'\n\t, 'UA313204780000026084751101038')\n    AND a.subcount = 0\n) \nORDER BY a.Id;\n\n/*\nSELECT * \n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328'\n\t, 'UA853204780000026025000003330')\n*/",
-        "output": "str",
-        "x": 280,
-        "y": 1620,
-        "wires": [
-            [
-                "846ac1af.b98c1"
-            ]
-        ]
-    },
-    {
-        "id": "846ac1af.b98c1",
-        "type": "MSSQL",
-        "z": "e72aed43.e4b9b8",
-        "mssqlCN": "ef456f3c.8f442",
-        "name": "",
-        "query": "",
-        "outField": "payload",
-        "returnType": "0",
-        "throwErrors": 1,
-        "x": 450,
-        "y": 1620,
-        "wires": [
-            [
-                "346e5593.74b7c2"
-            ]
-        ]
-    },
-    {
-        "id": "346e5593.74b7c2",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 1620,
-        "wires": []
-    },
-    {
-        "id": "b7f32e35.45c16",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select\n'<Participant name=\"'+c.FullName+'\" iban=\"'+a.IBAN+'\" edrpou=\"'+c.StateCode+ '\" bankCode=\"300465\">'+\n'<DataGroups>\n<TotalsData>\n<Data value=\"'+ltrim(rtrim(cast(a.Confirmed as char)))+'\" type=\"limit\" currency=\"'+\ncase when a.CurrencyTag='' then 'UAH' else a.CurrencyTag end +'\"/>\n</TotalsData>\n</DataGroups>\n</Participant>'\n\nfrom Amounts a with (nolock) \njoin clients c with (nolock) on c.id=a.ClientId\nwhere  a.Id in\n(\nselect\na.id\nfrom amounts a with (nolock)\nwhere\na.iban in\n(\n'UA943204780000026026000003328',\n'UA853204780000026025000003330',\n'UA423204780000026022000003333',\n'UA153204780000026025000003329',\n'UA603204780000026021000003334',\n'UA783204780000026020000003335',\n'UA293204780000026040924894075',\n'UA103204780000026008924894147',\n'UA883204780000026201131375159',\n'UA623204780000026080000179287',\n'UA773204780000026207131375153',\n'UA703204780000026084751101403',\n'UA773204780000026207131375153',\n'UA653204780000026033924899485',\n'UA313204780000026084751101038'\n)\nand a.subcount=0\n)\n\norder by a.Id",
-        "output": "str",
-        "x": 280,
-        "y": 1660,
-        "wires": [
-            [
-                "846ac1af.b98c1"
-            ]
-        ]
-    },
-    {
-        "id": "d990e6dc.789398",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 1660,
-        "wires": [
-            [
-                "b7f32e35.45c16"
             ]
         ]
     },
@@ -1971,45 +1381,6 @@
         "info": "msg.workDate ='2021-03-29T18:51:13Z'\n\nfunction today(){\n    var currDate = new Date();\n    out = currDate.toISOString();\n    return out;\n}\n\nmsg.workDate = today();\nmsg.payload = msg.workDate;\n\nreturn msg;"
     },
     {
-        "id": "3be622a6.a45ea6",
-        "type": "split",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 2150,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7d2d5bbb.d42004",
-        "type": "join",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "mode": "auto",
-        "build": "string",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": "false",
-        "timeout": "",
-        "count": "",
-        "reduceRight": false,
-        "x": 920,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "7314e278.357564",
         "type": "comment",
         "z": "e72aed43.e4b9b8",
@@ -2030,171 +1401,6 @@
         "wires": []
     },
     {
-        "id": "f5ee31fa.48dda",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 1700,
-        "wires": [
-            [
-                "b9f374b.221e208"
-            ]
-        ]
-    },
-    {
-        "id": "b9f374b.221e208",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select \n1 as bankAccountId,\n320478 as bankCode,\n1 as dic,\n1 as ean,\nc.statecode as edrpou,\n0 as eic,\na.iban as iban,\n1 as ic,\nc.fullname as name,\n1 as particId,\ncase when a.CurrencyTag='' then 'UAH' else a.CurrencyTag end as currency,\n'limit' as limit,\na.Confirmed as value\n\n\nfrom Amounts a with(nolock)\njoin clients c with (nolock) \n on c.id=a.ClientId\nwhere a.iban in\n(\n'UA943204780000026026000003328',\n'UA853204780000026025000003330',\n'UA423204780000026022000003333',\n'UA153204780000026025000003329',\n'UA603204780000026021000003334',\n'UA783204780000026020000003335',\n'UA293204780000026040924894075',\n'UA103204780000026008924894147',\n'UA883204780000026201131375159',\n'UA623204780000026080000179287',\n'UA773204780000026207131375153',\n'UA703204780000026084751101403',\n'UA773204780000026207131375153',\n'UA653204780000026033924899485',\n'UA313204780000026084751101038'\n)\nand a.subcount=0\n ",
-        "output": "str",
-        "x": 280,
-        "y": 1700,
-        "wires": [
-            [
-                "846ac1af.b98c1"
-            ]
-        ]
-    },
-    {
-        "id": "bfd46d6d.a2c3b8",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 116,
-        "y": 2004,
-        "wires": [
-            [
-                "4845fe49.7f682"
-            ]
-        ]
-    },
-    {
-        "id": "4845fe49.7f682",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "/*\n\"participant\" : {\n   \"bankAccountId\" : \"1\" ,\n   \"bankCode\" : \"320478\" ,\n   \"dic\" : \"1\" ,\n   \"ean\" : \"1\" ,\n   \"edrpou\" : \"23697280\" ,\n   \"eic\" : \"0\" ,\n   \"iban\" : \"UA133204780000026007924864736\" ,\n   \"ic\" : \"1\" ,\n   \"name\" : \"АТ ДТЕК ДНІПРОЕНЕРГО\" ,\n   \"particId\" : \"1\",\n\n   \"data\" : {\n       \"currency\" : \"UAH\" ,\n       \"type\" : \"limit\" ,\n       \"value\" : \"1121.42\"\n   }\n }\n}\n*/\n\nSELECT '1' AS bankAccountId\n     , '320478' AS bankCode\n     , '1' AS dic\n     , '1' AS ean\n     , c.StateCode AS edrpou\n     , '0' AS eic\n     , a.iban AS iban\n     , '1' AS ic\n     , c.name AS name\n     , '1' AS particId\n     , IIF(a.CurrencyTag = '', 'UAH', a.CurrencyTag) AS currency\n     , 'limit' AS type\n     , LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) AS value\nFROM Amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON c.id = a.ClientId\nWHERE a.Id IN\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038')\n    AND a.subcount = 0\n)\nORDER BY a.Id;\n\n/*\nSELECT * \n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328'\n\t, 'UA853204780000026025000003330')\n\t* FROM sv_Amounts\n*/\n/*\nSELECT '<Participant name=\"' + a.ClientName + '\" iban=\"' + a.IBAN + '\" edrpou=\"' + a.StateCode + '\" bankCode=\"300465\">' + '<DataGroups>\n<TotalsData>\n<Data value=\"' + LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) + '\" type=\"limit\" currency=\"' \n+ CASE\n    WHEN a.CurrencyTag = ''\n    THEN 'UAH'\n    ELSE a.CurrencyTag\n  END + '\"/>\n</TotalsData>\n</DataGroups>\n</Participant>' AS XML_OUT\n*/",
-        "output": "str",
-        "x": 296,
-        "y": 2004,
-        "wires": [
-            [
-                "3f62cecf.c397b2"
-            ]
-        ]
-    },
-    {
-        "id": "3f62cecf.c397b2",
-        "type": "MSSQL",
-        "z": "e72aed43.e4b9b8",
-        "mssqlCN": "ef456f3c.8f442",
-        "name": "",
-        "query": "",
-        "outField": "payload",
-        "returnType": "0",
-        "throwErrors": 1,
-        "x": 456,
-        "y": 2004,
-        "wires": [
-            [
-                "50e80d81.ddc3f4",
-                "df01a8ff.57d988"
-            ]
-        ]
-    },
-    {
-        "id": "d2626a1b.c6299",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 786,
-        "y": 2004,
-        "wires": []
-    },
-    {
-        "id": "50e80d81.ddc3f4",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "trans",
-        "func": "var out = [];\n\nfor (var o of msg.payload) {\n\n    var item = {\n        \"participant\": {\n            \"bankAccountId\": \"1\",\n            \"bankCode\": \"320478\",\n            \"dic\": \"1\",\n            \"ean\": \"1\",\n            \"edrpou\": o.edrpou,\n            \"eic\": \"0\",\n            \"iban\": o.iban,\n            \"ic\": \"1\",\n            \"name\": o.name,\n            \"particId\": \"1\",\n            \"data\": {\n                \"currency\": o.currency,\n                \"type\": \"limit\",\n                \"value\": o.value\n            }\n        }\n    };\n\n    out.push(item);\n}\n\nmsg.payload = out;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 606,
-        "y": 2004,
-        "wires": [
-            [
-                "d2626a1b.c6299"
-            ]
-        ]
-    },
-    {
-        "id": "df01a8ff.57d988",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 506,
-        "y": 2104,
-        "wires": []
-    },
-    {
         "id": "36f39021.399c2",
         "type": "debug",
         "z": "e72aed43.e4b9b8",
@@ -2210,54 +1416,6 @@
         "x": 1050,
         "y": 1020,
         "wires": []
-    },
-    {
-        "id": "d70a37a7.7da1c8",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 2180,
-        "wires": [
-            [
-                "1729b9bc.1b7be6"
-            ]
-        ]
-    },
-    {
-        "id": "1729b9bc.1b7be6",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Get lastRun",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "SELECT *\nfrom dbo.UGB_MONOBANK m",
-        "output": "str",
-        "x": 290,
-        "y": 2180,
-        "wires": [
-            [
-                "3e740766.b31558"
-            ]
-        ]
     },
     {
         "id": "e67e167a.dbc9",
@@ -2393,497 +1551,17 @@
         "wires": []
     },
     {
-        "id": "bdcbabde.2ea78",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "mail to",
-        "func": "\nmsg.topic = \"OREE ...\"\nmsg.to = \"akharakhordin@ukrgasbank.com\";\nmsg.from = \"ecobank@ukrgasbank.com\";\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1250,
-        "y": 560,
-        "wires": [
-            [
-                "813c901e.3caf08"
-            ]
-        ]
-    },
-    {
-        "id": "813c901e.3caf08",
-        "type": "e-mail",
-        "z": "e72aed43.e4b9b8",
-        "server": "10.1.32.22",
-        "port": "25",
-        "secure": false,
-        "tls": true,
-        "name": "",
-        "dname": "",
-        "x": 1390,
-        "y": 560,
-        "wires": []
-    },
-    {
         "id": "ad2903e3.e61518",
         "type": "link out",
         "z": "e72aed43.e4b9b8",
         "name": "",
         "links": [
             "7fcb1885.dc3b9",
-            "4041ec09.943164"
+            "4041ec09.943164",
+            "dc3859a.5c242a8"
         ],
         "x": 855,
         "y": 440,
-        "wires": []
-    },
-    {
-        "id": "4041ec09.943164",
-        "type": "link in",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "links": [
-            "98f155c3.6cdc3",
-            "ad2903e3.e61518"
-        ],
-        "x": 1115,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c6ddb48d.93f528",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "today",
-        "func": "function today(){\n    var currDate = new Date();\n    var ret = currDate.toISOString();\n    return ret;\n}\n\nmsg.workDate = today();\nmsg.payload = msg.workDate;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1710,
-        "y": 360,
-        "wires": [
-            [
-                "37cdd193.ea6556"
-            ]
-        ]
-    },
-    {
-        "id": "d0510130.08d248",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1540,
-        "y": 360,
-        "wires": [
-            [
-                "c6ddb48d.93f528"
-            ]
-        ]
-    },
-    {
-        "id": "37cdd193.ea6556",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1870,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "7905414f.0a8358",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "localTZDates",
-        "func": "function localTZDates(zdate){\n    // 2021-03-31T10:46:48.841Z\n    var tzShift = -2;\n    var ldate=new Date(zdate.getTime() - (60000*(zdate.getTimezoneOffset()+tzShift)));\n    var ldateTime = ldate.toISOString().replace('Z', '');\n    \n    var ldate = ldateTime.substring(8,10)+'.'+\n              ldateTime.substring(5,7)+'.'+\n              ldateTime.substring(0,4)\n              \n    var ltime = ldateTime.substring(11,13)+':'+\n              ldateTime.substring(14,16)+':'+\n              ldateTime.substring(17)\n              \n    return {\n        zeroDateTime: zdate.toISOString(),\n        localDate: ldate,\n        localTime: ltime,\n        localISODateTime: ldateTime,\n        localTZDateTime:  ldate+\"T\"+ltime\n    };\n}\n\nvar dt = new Date();\nmsg.payload = {\n    zdate : dt.toISOString(),\n    ldate : localTZDates(dt)\n};\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1530,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "354f0860.40c778",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "SQL new",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "--select * from  dbo.UGB_MONOBANK(Date_Amount TDate)\ndeclare @Date_amount DAteTime\n\nset @Date_amount=(select m.Date_Amount from dbo.UGB_MONOBANK m)\n\ncreate table #rez(amountid int)\ninsert into #rez(amountid)\nselect distinct\nb.DebitId\nfrom bills b with (nolock)\nwhere b.DayDate=datediff(day,0,getdate())\nand b.DebitId in\n\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038','UA363204780000026022000003344')\n    AND a.subcount = 0\n)\nand b.ProcessFlag&3=3\nand b.Changed>=@Date_amount\n\nunion all\nselect distinct\nb.CreditId\nfrom bills b with (nolock)\nwhere b.DayDate=datediff(day,0,getdate())\nand b.CreditId in\n\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038','UA363204780000026022000003344')\n    AND a.subcount = 0\n)\nand b.ProcessFlag&3=3\nand b.Changed>=@Date_amount\n\n\nSELECT '1' AS bankAccountId\n     , '320478' AS bankCode\n     , '1' AS dic\n     , '1' AS ean\n     , c.StateCode AS edrpou\n     , '0' AS eic\n     , a.iban AS iban\n     , '1' AS ic\n     , c.name AS name\n     , '1' AS particId\n     , IIF(a.CurrencyTag = '', 'UAH', a.CurrencyTag) AS currency\n     , 'limit' AS type\n     , LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) AS value\nFROM Amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON c.id = a.ClientId\nWHERE a.Id IN\n(select r.amountid from #rez r)\nORDER BY a.Id\n\n\nIf isnull((select count(1) from #rez),0)<>0\nbegin\ninsert into dbo.UGB_ENERGORINOK(Daydate,Created,IBAN,Name,Confirmed)\nselect\ndatediff(day,0,getdate()),\ngetdate(),\na.iban,\na.ShortName,\na.Confirmed\nFROM Amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON c.id = a.ClientId\nWHERE a.Id IN\n(select r.amountid from #rez r)\nORDER BY a.Id\n\n\nend\n\nupdate m\nset m.Date_Amount=getdate()\nfrom dbo.UGB_MONOBANK m\n\ndrop table #rez\n",
-        "output": "str",
-        "x": 2160,
-        "y": 80,
-        "wires": [
-            []
-        ],
-        "info": "--select * from  dbo.UGB_MONOBANK(Date_Amount TDate)\ndeclare @Date_amount DAteTime\n\nset @Date_amount=(select m.Date_Amount from dbo.UGB_MONOBANK m)\n\ncreate table #rez(amountid int)\ninsert into #rez(amountid)\nselect distinct\nb.DebitId\nfrom bills b with (nolock)\nwhere b.DayDate=datediff(day,0,getdate())\nand b.DebitId in\n\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038','UA363204780000026022000003344')\n    AND a.subcount = 0\n)\nand b.ProcessFlag&3=3\nand b.Changed>=@Date_amount\n\nunion all\nselect distinct\nb.CreditId\nfrom bills b with (nolock)\nwhere b.DayDate=datediff(day,0,getdate())\nand b.CreditId in\n\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038','UA363204780000026022000003344')\n    AND a.subcount = 0\n)\nand b.ProcessFlag&3=3\nand b.Changed>=@Date_amount\n\n\nSELECT '1' AS bankAccountId\n     , '320478' AS bankCode\n     , '1' AS dic\n     , '1' AS ean\n     , c.StateCode AS edrpou\n     , '0' AS eic\n     , a.iban AS iban\n     , '1' AS ic\n     , c.name AS name\n     , '1' AS particId\n     , IIF(a.CurrencyTag = '', 'UAH', a.CurrencyTag) AS currency\n     , 'limit' AS type\n     , LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) AS value\nFROM Amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON c.id = a.ClientId\nWHERE a.Id IN\n(select r.amountid from #rez r)\nORDER BY a.Id\n\n\nupdate m\nset m.Date_Amount=getdate()\nfrom dbo.UGB_MONOBANK m\n\ndrop table #rez\n"
-    },
-    {
-        "id": "528766b9.b181b8",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 1840,
-        "wires": [
-            [
-                "e53b4096.a738"
-            ]
-        ]
-    },
-    {
-        "id": "e53b4096.a738",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Скрипт с Логом",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "--select * from  dbo.UGB_MONOBANK(Date_Amount TDate)\ndeclare @Date_amount DAteTime\n\nset @Date_amount=(select m.Date_Amount from dbo.UGB_MONOBANK m)\n\ncreate table #rez(amountid int)\ninsert into #rez(amountid)\nselect distinct\nb.DebitId\nfrom bills b with (nolock)\nwhere b.DayDate=datediff(day,0,getdate())\nand b.DebitId in\n\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038','UA363204780000026022000003344')\n    AND a.subcount = 0\n)\nand b.ProcessFlag&3=3\nand b.Changed>=@Date_amount\n\nunion all\nselect distinct\nb.CreditId\nfrom bills b with (nolock)\nwhere b.DayDate=datediff(day,0,getdate())\nand b.CreditId in\n\n(\n    SELECT a.id\n    FROM amounts a WITH(NOLOCK)\n    WHERE a.iban IN('UA943204780000026026000003328', 'UA853204780000026025000003330', 'UA423204780000026022000003333', 'UA153204780000026025000003329', 'UA603204780000026021000003334', 'UA783204780000026020000003335', 'UA293204780000026040924894075', 'UA103204780000026008924894147', 'UA883204780000026201131375159', 'UA623204780000026080000179287', 'UA773204780000026207131375153', 'UA703204780000026084751101403', 'UA773204780000026207131375153', 'UA653204780000026033924899485', 'UA313204780000026084751101038','UA363204780000026022000003344')\n    AND a.subcount = 0\n)\nand b.ProcessFlag&3=3\nand b.Changed>=@Date_amount\n\n\nSELECT '1' AS bankAccountId\n     , '320478' AS bankCode\n     , '1' AS dic\n     , '1' AS ean\n     , c.StateCode AS edrpou\n     , '0' AS eic\n     , a.iban AS iban\n     , '1' AS ic\n     , c.name AS name\n     , '1' AS particId\n     , IIF(a.CurrencyTag = '', 'UAH', a.CurrencyTag) AS currency\n     , 'limit' AS type\n     , LTRIM(RTRIM(CAST(a.Confirmed AS CHAR))) AS value\nFROM Amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON c.id = a.ClientId\nWHERE a.Id IN\n(select r.amountid from #rez r)\nORDER BY a.Id\n\n\nIf isnull((select count(1) from #rez),0)<>0\nbegin\ninsert into dbo.UGB_ENERGORINOK(Daydate,Created,IBAN,Name,Confirmed)\nselect\ndatediff(day,0,getdate()),\ngetdate(),\na.iban,\na.ShortName,\na.Confirmed\nFROM Amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON c.id = a.ClientId\nWHERE a.Id IN\n(select r.amountid from #rez r)\nORDER BY a.Id\n\n\nend\n\nupdate m\nset m.Date_Amount=getdate()\nfrom dbo.UGB_MONOBANK m\n\ndrop table #rez\n",
-        "output": "str",
-        "x": 300,
-        "y": 1840,
-        "wires": [
-            [
-                "846ac1af.b98c1"
-            ]
-        ]
-    },
-    {
-        "id": "b3c879b1.c03d7",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "Save lastRun",
-        "func": "var metka ;\n\nmetka = msg.payload[0];\n\nmsg.payload = metka;\n/*\n{\n\"Date_Amount\":\"2021-04-23T15:17:16.010Z\"\n}\n*/\nmsg.lastRun= metka.Date_Amount;\nmsg.lastRun= metka.Date_Amount.toISOString().replace('T', ' ').replace('Z', '');\n\n\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 610,
-        "y": 2180,
-        "wires": [
-            [
-                "5aa4400a.ee7cb",
-                "4fb7a48.d7c2f5c"
-            ]
-        ]
-    },
-    {
-        "id": "3e740766.b31558",
-        "type": "MSSQL",
-        "z": "e72aed43.e4b9b8",
-        "mssqlCN": "ef456f3c.8f442",
-        "name": "",
-        "query": "",
-        "outField": "payload",
-        "returnType": "0",
-        "throwErrors": 1,
-        "x": 440,
-        "y": 2180,
-        "wires": [
-            [
-                "b3c879b1.c03d7",
-                "bec5b301.3e0708"
-            ]
-        ]
-    },
-    {
-        "id": "5aa4400a.ee7cb",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 2180,
-        "wires": []
-    },
-    {
-        "id": "bec5b301.3e0708",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 2220,
-        "wires": []
-    },
-    {
-        "id": "9f7576d2.e9b59",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Restore lastRun",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "UPDATE m \nSET m.Date_Amount = '{{{lastRun}}}'\nFROM dbo.UGB_MONOBANK m",
-        "output": "str",
-        "x": 620,
-        "y": 2300,
-        "wires": [
-            [
-                "62cbd4c5.f6c58c",
-                "1aca7ed3.5f3981"
-            ]
-        ]
-    },
-    {
-        "id": "5610684c.bf48c8",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 970,
-        "y": 2300,
-        "wires": []
-    },
-    {
-        "id": "d64f10ab.48262",
-        "type": "inject",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 2460,
-        "wires": [
-            [
-                "893582c2.974e98"
-            ]
-        ]
-    },
-    {
-        "id": "893582c2.974e98",
-        "type": "template",
-        "z": "e72aed43.e4b9b8",
-        "name": "Get lastRun",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "SELECT *\nfrom dbo.UGB_MONOBANK m",
-        "output": "str",
-        "x": 290,
-        "y": 2460,
-        "wires": [
-            [
-                "47792511.39849c"
-            ]
-        ]
-    },
-    {
-        "id": "47792511.39849c",
-        "type": "MSSQL",
-        "z": "e72aed43.e4b9b8",
-        "mssqlCN": "ef456f3c.8f442",
-        "name": "",
-        "query": "",
-        "outField": "payload",
-        "returnType": "0",
-        "throwErrors": 1,
-        "x": 440,
-        "y": 2460,
-        "wires": [
-            [
-                "5eef3dea.ceeb4c"
-            ]
-        ]
-    },
-    {
-        "id": "5eef3dea.ceeb4c",
-        "type": "function",
-        "z": "e72aed43.e4b9b8",
-        "name": "Save lastRun",
-        "func": "var metka ;\n\nmetka = msg.payload[0];\n\nmsg.payload = metka;\n/*\n{\n\"Date_Amount\":\"2021-04-23T15:17:16.010Z\"\n}\n*/\nmsg.lastRun= metka.Date_Amount;\nmsg.lastRun= metka.Date_Amount.toISOString().replace('T', ' ').replace('Z', '');\n\n\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 610,
-        "y": 2460,
-        "wires": [
-            [
-                "8e8e0320.a022a8"
-            ]
-        ]
-    },
-    {
-        "id": "8e8e0320.a022a8",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 2460,
-        "wires": []
-    },
-    {
-        "id": "1aca7ed3.5f3981",
-        "type": "MSSQL",
-        "z": "e72aed43.e4b9b8",
-        "mssqlCN": "ef456f3c.8f442",
-        "name": "",
-        "query": "",
-        "outField": "payload",
-        "returnType": "0",
-        "throwErrors": 1,
-        "x": 800,
-        "y": 2300,
-        "wires": [
-            [
-                "5610684c.bf48c8"
-            ]
-        ]
-    },
-    {
-        "id": "62cbd4c5.f6c58c",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 2240,
-        "wires": []
-    },
-    {
-        "id": "4fb7a48.d7c2f5c",
-        "type": "switch",
-        "z": "e72aed43.e4b9b8",
-        "name": "ifError",
-        "property": "ifError",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 390,
-        "y": 2300,
-        "wires": [
-            [
-                "9f7576d2.e9b59"
-            ],
-            [
-                "8ba1465c.2ec608"
-            ]
-        ]
-    },
-    {
-        "id": "8ba1465c.2ec608",
-        "type": "debug",
-        "z": "e72aed43.e4b9b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 2360,
         "wires": []
     },
     {
@@ -3136,25 +1814,7 @@
         "y": 740,
         "wires": [
             [
-                "8053d609.7cb428"
-            ]
-        ]
-    },
-    {
-        "id": "8053d609.7cb428",
-        "type": "MSSQL",
-        "z": "e72aed43.e4b9b8",
-        "mssqlCN": "ef456f3c.8f442",
-        "name": "",
-        "query": "",
-        "outField": "payload",
-        "returnType": "0",
-        "throwErrors": 1,
-        "x": 1760,
-        "y": 740,
-        "wires": [
-            [
-                "d39869ac.391248"
+                "43cbf1d4.9ad92"
             ]
         ]
     },
@@ -3170,7 +1830,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1930,
+        "x": 2070,
         "y": 740,
         "wires": []
     },
@@ -3265,6 +1925,63 @@
         "wires": [
             [
                 "e2ed95c5.dd993"
+            ]
+        ]
+    },
+    {
+        "id": "43cbf1d4.9ad92",
+        "type": "function",
+        "z": "e72aed43.e4b9b8",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1760,
+        "y": 740,
+        "wires": [
+            [
+                "f1f5680.0c9b898"
+            ],
+            [
+                "73596290.6f6a1c"
+            ]
+        ]
+    },
+    {
+        "id": "73596290.6f6a1c",
+        "type": "MSSQL",
+        "z": "e72aed43.e4b9b8",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "SC PredProd",
+        "query": "",
+        "outField": "payload",
+        "returnType": "0",
+        "throwErrors": 1,
+        "x": 1910,
+        "y": 760,
+        "wires": [
+            [
+                "d39869ac.391248"
+            ]
+        ]
+    },
+    {
+        "id": "f1f5680.0c9b898",
+        "type": "MSSQL",
+        "z": "e72aed43.e4b9b8",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "SC Prod",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 1900,
+        "y": 720,
+        "wires": [
+            [
+                "d39869ac.391248"
             ]
         ]
     },

@@ -1,0 +1,181 @@
+{
+    "id": 123205,
+    "state": 3,
+    "state_text": "припинено",
+    "code": "34964194",
+    "names": {
+        "name": "\" ЗАВОД СИЛОВІ ЦИЛІНДРИ\"",
+        "include_olf": 1,
+        "display": "ЗАКРИТЕ АКЦІОНЕРНЕ ТОВАРИСТВО \" ЗАВОД СИЛОВІ ЦИЛІНДРИ\"",
+        "short": "ЗАТ \" ЗАВОД СИЛОВІ ЦИЛІНДРИ\"",
+        "name_en": null,
+        "short_en": null
+    },
+    "olf_code": "232",
+    "olf_name": "ЗАКРИТЕ АКЦІОНЕРНЕ ТОВАРИСТВО",
+    "olf_subtype": null,
+    "founding_document": null,
+    "executive_power": {
+        "name": null,
+        "code": null
+    },
+    "object_name": "Виконавчий комітет Вінницької міської ради",
+    "founders": [
+        {
+            "id": null,
+            "name": "КРАСУЦЬКА АНТОНІНА ГЕННАДІЇВНА",
+            "code": null,
+            "address": {
+                "zip": "21000",
+                "country": "Україна",
+                "address": "Україна, 21000, Вінницька обл., місто Вінниця, 3 ПРОВУЛОК КАРБИШЕВА, будинок 9, квартира 5",
+                "parts": {
+                    "atu": "Вінницька обл., місто Вінниця",
+                    "atu_code": "0510136300",
+                    "street": "3 ПРОВУЛОК КАРБИШЕВА",
+                    "house_type": "будинок",
+                    "house": "9",
+                    "building_type": null,
+                    "building": null,
+                    "num_type": "квартира",
+                    "num": "5"
+                }
+            },
+            "capital": 500000,
+            "last_name": "КРАСУЦЬКА",
+            "first_middle_name": "АНТОНІНА ГЕННАДІЇВНА",
+            "role": 4,
+            "role_text": "засновник",
+            "url": null
+        }
+    ],
+    "authorised_capital": {
+        "value": 500000,
+        "date": "2007-02-26"
+    },
+    "management": "ЗАГАЛЬНІ ЗБОРИ",
+    "heads": [
+        {
+            "address": null,
+            "last_name": "БОГАЧ",
+            "first_middle_name": "ВОЛОДИМИР ГРИГОРОВИЧ",
+            "role": 3,
+            "role_text": "керівник",
+            "appointment_date": null,
+            "restriction": null
+        },
+        {
+            "address": null,
+            "last_name": "БОГАЧ",
+            "first_middle_name": "ВОЛОДИМИР ГРИГОРОВИЧ",
+            "role": 2,
+            "role_text": "підписант",
+            "appointment_date": null,
+            "restriction": ""
+        }
+    ],
+    "managing_paper": null,
+    "is_modal_statute": false,
+    "activity_kinds": [
+        {
+            "name": "ВИРОБНИЦТВО НАСОСІВ, КОМПРЕСОРІВ ТА ГІДРАВЛІЧНИХ СИСТЕМ",
+            "code": "29.12.1",
+            "is_primary": false
+        },
+        {
+            "name": "МОНТАЖ НАСОСІВ, КОМПРЕСОРІВ ТА ГІДРАВЛІЧНИХ СИСТЕМ",
+            "code": "29.12.3",
+            "is_primary": false
+        },
+        {
+            "name": "ВИРОБНИЦТВО ТРАКТОРІВ ДЛЯ СІЛЬСЬКОГО ТА ЛІСОВОГО ГОСПОДАРСТВА",
+            "code": "29.31.0",
+            "is_primary": true
+        },
+        {
+            "name": "ВИРОБНИЦТВО ІНШИХ МАШИН ТА УСТАТКОВАННЯ  ДЛЯ СІЛЬСЬКОГО ТА ЛІСОВОГО ГОСПОДАРСТВА",
+            "code": "29.32.1",
+            "is_primary": false
+        }
+    ],
+    "branches": [],
+    "address": {
+        "zip": "21000",
+        "country": "Україна",
+        "address": "Україна, 21000, Вінницька обл., місто Вінниця, ВУЛИЦЯ ОСТРОЗЬКОГО, будинок 3",
+        "parts": {
+            "atu": "Вінницька обл., місто Вінниця",
+            "atu_code": "0510136300",
+            "street": "ВУЛИЦЯ ОСТРОЗЬКОГО",
+            "house_type": "будинок",
+            "house": "3",
+            "building_type": null,
+            "building": null,
+            "num_type": null,
+            "num": null
+        }
+    },
+    "registration": {
+        "date": "2007-02-26",
+        "record_number": "10731020000012674",
+        "record_date": "2007-02-26",
+        "is_separation": false,
+        "is_division": false,
+        "is_merge": false,
+        "is_transformation": false
+    },
+    "bankruptcy": null,
+    "termination": {
+        "date": "2010-07-22",
+        "state": 3,
+        "state_text": "припинено",
+        "record_number": "11741120010006324",
+        "requirement_end_date": null,
+        "cause": "ДР припинення ЮО в результаті реорганізації"
+    },
+    "termination_cancel": null,
+    "assignees": [],
+    "predecessors": [],
+    "registrations": [
+        {
+            "name": null,
+            "code": null,
+            "type": 4000,
+            "description": null,
+            "reg_number": null,
+            "start_date": null,
+            "start_num": null,
+            "end_date": null,
+            "end_num": null,
+            "class": null
+        },
+        {
+            "name": null,
+            "code": null,
+            "type": 4000,
+            "description": "Реєстр платників податків",
+            "reg_number": null,
+            "start_date": null,
+            "start_num": null,
+            "end_date": null,
+            "end_num": null,
+            "class": null
+        }
+    ],
+    "primary_activity_kind": {
+        "name": "ВИРОБНИЦТВО ТРАКТОРІВ ДЛЯ СІЛЬСЬКОГО ТА ЛІСОВОГО ГОСПОДАРСТВА",
+        "code": "29.31.0",
+        "reg_number": null,
+        "class": null
+    },
+    "prev_registration_end_term": null,
+    "open_enforcements": [],
+    "contacts": {
+        "email": null,
+        "tel": [
+            "80504616992"
+        ],
+        "fax": null,
+        "web_page": null
+    }
+}

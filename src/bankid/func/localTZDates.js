@@ -13,6 +13,11 @@ function localTZDates(zdate){
     var ltime = ldateTime.substring(11,13)+':'+
               ldateTime.substring(14,16)+':'+
               ldateTime.substring(17)
+
+    var rdate = ldateTime.substring(0,4)+'-'+
+              ldateTime.substring(5,7)+'-'+
+              ldateTime.substring(8,10)
+
     var exelDate = 25567.0 + ((zdate.getTime() - (zdate.getTimezoneOffset() * 60 * 1000)) / (1000 * 60 * 60 * 24));
     //--44305          
     return {
@@ -22,6 +27,7 @@ function localTZDates(zdate){
         exelDate: Math.floor(exelDate),
         localDate: ldate,
         localTime: ltime,
+        localRevDate: rdate,
         localISODateTime: ldateTime,
         localTZDateTime:  ldate+"T"+ltime
     };

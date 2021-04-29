@@ -1,0 +1,40 @@
+{
+    "actionId": "402",
+    "branchId": "1",
+    "code": "1021211",
+    "creditCode": "26204052897013",
+    "creditCodeIBAN": "UA563348510000026203405289701",
+    "debitInit": "26009244450862",
+    "debitName": "ТОВ ПОРТ-СОЛАР",
+    "creditState": "2761526695",
+    "crncyAmount": "121.20",
+    "dayDate": "2020-04-29",
+    "debitCode": "26009244450862.980",
+    "debitCodeIBAN": "UA243204780000026002924445086",
+    "debitState": "40986357",
+    "info": "0",
+    "kind": "1",
+    "mainAmount": "121.20",
+    "masterId": "0",
+    "note": "Example add document by service",
+    "orgDate": "2020-04-29",
+    "outsideSignType": "0",
+    "payDate": "2020-04-29",
+    "processFlag": "0",
+    "purpose": "Поповнення рахунку Такач Крістіан..,2761526695, з/п за Січень 2020р. без ПДВ",
+    "sourceCode": "320478",
+    "sodeTargetCode": "334851",
+    "systemId": "808",
+    "parameters": [
+        {
+            "listId": "22222",
+            "paramCode": "DocInfo",
+            "value": "Паспорт1;;;;;"
+        },
+        {
+            "listId": 33333,
+            "paramCode": "CashInfo",
+            "value": "Паспорт1;;;;;"
+        }
+    ]
+}

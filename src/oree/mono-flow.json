@@ -1,0 +1,2354 @@
+[
+    {
+        "id": "b4d9dc73.6ac38",
+        "type": "tab",
+        "label": "Mono",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "cbe808ce.766588",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "cash/users",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "be9939b.626f9c8",
+                "d3cff947.1a34c"
+            ]
+        ],
+        "info": "http://kv-v-nr-it-t:1880/cash/users?userCode=akhara\n\nrem c&branch=TOBO24&cash=1002323212"
+    },
+    {
+        "id": "be9939b.626f9c8",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "msg.isRequest = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "7fc850fa.7580d8",
+                "7c851836.6b6fc8"
+            ]
+        ]
+    },
+    {
+        "id": "e030869a.0cc1c8",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e5f5c0b5.fbc95",
+        "type": "MSSQL",
+        "z": "b4d9dc73.6ac38",
+        "mssqlCN": "13b7eb2a.55c245",
+        "name": "PP Users",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "f58cb239.d34f2",
+                "29a25e4.0a139a2"
+            ]
+        ]
+    },
+    {
+        "id": "d3cff947.1a34c",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7fc850fa.7580d8",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7c851836.6b6fc8",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select distinct\ncv4.value as Login,\n--u.code as login,\nu.Name as FIO,\nu.Job as  Posada,\ncv3.value as BranchId,\np.name as Branch,\np.address as Adress,\ncv.Value as UAH,\ncv1.Value as USD,\ncv2.Value as EUR\nfrom users u with(nolock)\n\njoin Profiles p with(nolock)\non p.id=u.ProfileId\n\n\njoin ConnotationValues cv with(nolock)\non cv.OwnerId=u.Id \njoin ConnotationList cl with(nolock)\non cl.id =cv.ListId and cl.ParamCode='CUSTOM_DAY_CASH_UAH' and cl.TaskCode='Users' \njoin ConnotationValues cv1 with(nolock)\non cv1.OwnerId=u.Id \njoin ConnotationList cl1 with(nolock)\non cl1.id =cv1.ListId and cl1.ParamCode='CUSTOM_DAY_CASH_USD' and cl1.TaskCode='Users' \njoin ConnotationValues cv2 with(nolock)\non cv2.OwnerId=u.Id \njoin ConnotationList cl2 with(nolock)\non cl2.id =cv2.ListId and cl2.ParamCode='CUSTOM_DAY_CASH_EUR' and cl2.TaskCode='Users'\njoin ConnotationValues cv3 with(nolock)\non cv3.OwnerId=u.Id \njoin ConnotationList cl3 with(nolock)\non cl3.id =cv3.ListId and cl3.ParamCode='SecretKeyBranchId' and cl3.TaskCode='Users' \njoin ConnotationValues cv4 with(nolock)\non cv4.OwnerId=u.Id \njoin ConnotationList cl4 with(nolock)\non cl4.id =cv4.ListId and cl4.ParamCode='SecretKeyUserCode' and cl4.TaskCode='Users' \n\n\nwhere \n u.flag=7 and u.PermitFlag=0\nand cv4.value = '{{payload.userCode}}'\n",
+        "output": "str",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "e5f5c0b5.fbc95"
+            ]
+        ]
+    },
+    {
+        "id": "f58cb239.d34f2",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "29a25e4.0a139a2",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 160,
+        "wires": [
+            [
+                "e030869a.0cc1c8"
+            ]
+        ]
+    },
+    {
+        "id": "b31a4ef4.6c338",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "/scrooge/amounts",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "90920069.9fa9d",
+                "b609ba57.b83338"
+            ]
+        ],
+        "info": "http://kv-v-nr-it-t:1880/scrooge/amounts?moniker=1002\n\nkv-v-nr-it-t:1880/scrooge/amounts?moniker=100254261.980.109\n\n"
+    },
+    {
+        "id": "90920069.9fa9d",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "msg.isRequest = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 200,
+        "y": 600,
+        "wires": [
+            [
+                "848e3761.6d6d08",
+                "b7c0d88b.b912c8"
+            ]
+        ]
+    },
+    {
+        "id": "848e3761.6d6d08",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT a.moniker AS Account\n     , a.fullname AS Name\n     , 320478     AS MFO\n     , c.StateCode AS INN\n     , a.IBAN AS IBAN\nFROM amounts a WITH(NOLOCK)\n     JOIN clients c WITH(NOLOCK) ON a.ClientCode = c.code\nWHERE a.transflag = 35\n      --AND a.moniker = '100254261.980.109'\n      AND a.subcount=0\n\t  AND a.moniker = '{{payload.moniker}}'",
+        "output": "str",
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "92152143.25992"
+            ]
+        ]
+    },
+    {
+        "id": "b7c0d88b.b912c8",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "92152143.25992",
+        "type": "MSSQL",
+        "z": "b4d9dc73.6ac38",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "PP Amounts",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 550,
+        "y": 600,
+        "wires": [
+            [
+                "b37f4e0.0076db",
+                "fa273c81.fc1f2"
+            ]
+        ]
+    },
+    {
+        "id": "b37f4e0.0076db",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 480,
+        "wires": [
+            [
+                "c72ec5a0.1cd2a8"
+            ]
+        ]
+    },
+    {
+        "id": "4df4977f.023af8",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fa273c81.fc1f2",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b609ba57.b83338",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3b2930c4.e21e",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 700,
+        "wires": [
+            [
+                "af39bca.aaedfc"
+            ]
+        ]
+    },
+    {
+        "id": "af39bca.aaedfc",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "msg.payload ={};\nmsg.payload.moniker = '100254261.980.109';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 260,
+        "y": 700,
+        "wires": [
+            [
+                "848e3761.6d6d08"
+            ]
+        ]
+    },
+    {
+        "id": "bd0f481c.93f2d",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "Acc Array",
+        "field": "acc.dict",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{ \n    \"2909.980\" : \"290957501000.980.480\",\n    \"2909.840\" : \"290957501000.840.480\",\n    \"2909.978\" : \"290957501000.978.480\",\n    \"1600.980\" : \"16005012000050.980\",\n    \"1600.840\" : \"16005012000050.840\",\n    \"1600.978\" : \"16005012000050.978\",\n    \"3570.980\" : \"35709111272066.980\",\n    \"6510.980\" : \"65102023000\"\n}",
+        "output": "json",
+        "x": 260,
+        "y": 780,
+        "wires": [
+            [
+                "8642ec6d.5ef2c"
+            ]
+        ]
+    },
+    {
+        "id": "c72ec5a0.1cd2a8",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "reply ok",
+        "func": "var data = msg.payload;\n\nif(data.length !== 0){\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '200',\n        result : 'ok',\n        time: msg.workTime,\n        path: msg.req.route.path,\n        data : data\n    }\n    return msg;\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '402',\n        message : 'empty',\n        workTime: msg.workTime,\n        error: \"No data for request\",\n        data : []\n    }\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "4df4977f.023af8"
+            ]
+        ]
+    },
+    {
+        "id": "8642ec6d.5ef2c",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "msg.payload ={};\nmsg.payload.moniker = msg.acc.dict['2909.840']\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 420,
+        "y": 780,
+        "wires": [
+            [
+                "204f73c2.1c0464",
+                "848e3761.6d6d08"
+            ]
+        ]
+    },
+    {
+        "id": "58207a84.975af4",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 780,
+        "wires": [
+            [
+                "bd0f481c.93f2d"
+            ]
+        ]
+    },
+    {
+        "id": "204f73c2.1c0464",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a188df06.467a4",
+        "type": "catch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "scope": [
+            "e5f5c0b5.fbc95",
+            "9322a66b.122968",
+            "d5e9d79d.633778"
+        ],
+        "uncaught": false,
+        "x": 490,
+        "y": 880,
+        "wires": [
+            [
+                "d22575fa.9348f"
+            ]
+        ]
+    },
+    {
+        "id": "d22575fa.9348f",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 880,
+        "wires": [
+            [
+                "d32837d.1be48c8"
+            ]
+        ]
+    },
+    {
+        "id": "d32837d.1be48c8",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Reply Err",
+        "func": "var result = msg.error;\n\n\n        msg.payload = {\n            code : '500',\n            result : 'error',\n            path: msg.req.route.path,\n            error : result.message,\n            data : result\n        }\n        \nreturn msg\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 920,
+        "wires": [
+            [
+                "6a9d7955.3e3b5"
+            ]
+        ]
+    },
+    {
+        "id": "6a9d7955.3e3b5",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "3a1a7c3c.47d3f4",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "/api/scrooge/checkmoney",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 1020,
+        "wires": [
+            [
+                "5d72aa42.4de214"
+            ]
+        ],
+        "info": "POST\nURL \nhttp://kv-v-nr-it-t:1880/scrooge/checkmoney\nREQUEST\nDATA\n{\n    \"docInfo\": \"Македон Євгеній Віталійович;;;;,;;;;\",\n    \"mainAmount\": \"39000\",\n    \"currencyTag\"=\"UAH\"\n}\nRESPONSE\nOk\n{\"code\":\"200\",\"result\":\"ok\",\"path\":\"/api/scrooge/checkmoney\",\"error\":\"\",\"data\":[{\"type\":\"Day\",\"maxAmount\":400000,\"status\":1,\"mainAmount\":39000},{\"type\":\"week\",\"maxAmount\":800000,\"status\":1,\"mainAmount\":39000},{\"type\":\"month\",\"maxAmount\":3200000,\"status\":1,\"mainAmount\":39000}]}\n\nNo\n{\"code\":\"401\",\"result\":\"no\",\"path\":\"/api/scrooge/checkmoney\",\"error\":\"Max limit overflow\",\"data\":[{\"type\":\"Day\",\"maxAmount\":400000,\"status\":0,\"mainAmount\":0},{\"type\":\"week\",\"maxAmount\":800000,\"status\":1,\"mainAmount\":0},{\"type\":\"month\",\"maxAmount\":3200000,\"status\":1,\"mainAmount\":0}]}\nError\n{\"code\":\"500\",\"result\":\"error\",\"path\":\"/scrooge/checkmoney\",\"error\":\"Invalid column name 'MainAmount'.\",\"data\":{\"message\":\"Invalid column name 'MainAmount'.\",\"source\":{\"id\":\"9322a66b.122968\",\"type\":\"MSSQL\",\"name\":\"PP Money\",\"count\":1}}}\n\n"
+    },
+    {
+        "id": "5d72aa42.4de214",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "msg.isRequest = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 203,
+        "y": 1160,
+        "wires": [
+            [
+                "a3bddb8a.06bec8",
+                "f0bf001c.ef5e3"
+            ]
+        ]
+    },
+    {
+        "id": "a3bddb8a.06bec8",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 453,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "f0bf001c.ef5e3",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "DECLARE @DocInfo VARCHAR(120), @MainAmount MONEY, @Status INT, @MaxAmountDay MONEY, @MaxAmountWeek MONEY, @MaxAmountMonth MONEY;\nDECLARE @CurrencyTag VARCHAR(10)\n--SET @DocInfo = 'Македон Євгеній Віталійович;;;;,;;;;';\n--SET @MainAmount = 14000;\n--SET @CurrencyTag='USD';\nSET @DocInfo='{{payload.docInfo}}'\nSET @MainAmount='{{payload.mainAmount}}'\nSET @CurrencyTag='{{payload.currencyTag}}'\n\nIF @CurrencyTag <> 'UAH' \nBEGIN\nDECLARE @today INT\nSET @today = datediff(DD, '', GETDATE());\nSELECT @MainAmount=dbo.fn_GetCrossAmountByActionId(@today, @MainAmount,@CurrencyTag,'',0,0)\n/*\nСегодняшний экв. 100 долл\ndbo.fn_GetCrossAmountByActionId\n( @DayDate TDate , -- дата на которую проводится расчет\n  @CrncyAmount TMoney , -- исходная Сумма\n  @FromTag TTag , -- исходная Валюта\n  @IntoTag TTag  -- нужная валюта\n ,@FromActionId TRowId = 0 -- Тип операции\n ,@IntoActionId TRowId = 0 -- Тип операции\n)\n*/\nEND;\n\nSET @Status = 1;\nSET @MaxAmountDay = 400000;\nSET @MaxAmountWeek = 800000;\nSET @MaxAmountMonth = 3200000;\nCREATE TABLE #rez\n(Id          INT, \n crncyamount MONEY, \n mainamount  MONEY\n);\nCREATE TABLE #rez1\n(Id          INT, \n crncyamount MONEY, \n mainamount  MONEY\n);\nCREATE TABLE #rez2\n(Id          INT, \n crncyamount MONEY, \n mainamount  MONEY\n);\nCREATE TABLE #rez3\n(Type_      VARCHAR(6), \n MaxAmount_ MONEY, \n Status_    INT, \n MainAmount MONEY\n);\nINSERT INTO #rez\n(Id\n, mainamount\n)\n       SELECT b.Id\n            , b.mainamount\n       FROM bills b WITH(NOLOCK)\n            JOIN sv_RepoParams sv ON sv.OwnerId = b.id\n                                     AND sv.TaskCode = 'bills'\n                                     AND sv.ParamCode = 'DocInfo'\n       WHERE b.ActionId = 336\n             AND ((0 = 1\n                   OR (ProcessFlag&3 = 1)\n                   OR (ProcessFlag&3 = 3)))\n             AND sv.Param = @DocInfo\n             AND b.DayDate = DATEDIFF(day, 0, GETDATE());\nINSERT INTO #rez1\n(Id\n, mainamount\n)\n       SELECT b.Id\n            , b.mainamount\n       FROM bills b WITH(NOLOCK)\n            JOIN sv_RepoParams sv ON sv.OwnerId = b.id\n                                     AND sv.TaskCode = 'bills'\n                                     AND sv.ParamCode = 'DocInfo'\n       WHERE b.ActionId = 336\n             AND ((0 = 1\n                   OR (ProcessFlag&3 = 1)\n                   OR (ProcessFlag&3 = 3)))\n             AND sv.Param = @DocInfo\n             AND b.DayDate = DATEDIFF(day, 0, GETDATE()) - 7;\nINSERT INTO #rez2\n(Id\n, mainamount\n)\n       SELECT b.Id\n            , b.mainamount\n       FROM bills b WITH(NOLOCK)\n            JOIN sv_RepoParams sv ON sv.OwnerId = b.id\n                                     AND sv.TaskCode = 'bills'\n                                     AND sv.ParamCode = 'DocInfo'\n       WHERE b.ActionId = 336\n             AND ((0 = 1\n                   OR (ProcessFlag&3 = 1)\n                   OR (ProcessFlag&3 = 3)))\n             AND sv.Param = @DocInfo\n             AND b.DayDate = DATEDIFF(day, 0, GETDATE()) - 30;\nIF ISNULL(\n(\n    SELECT COUNT(1)\n    FROM #rez\n), 0) <> 0\n    BEGIN\n        IF\n        (\n            SELECT SUM(mainamount)\n            FROM #rez\n        ) < @MaxAmountDay\n            BEGIN\n                IF(\n                (\n                    SELECT SUM(mainamount)\n                    FROM #rez\n                ) + @MainAmount) <= @MaxAmountDay\n                    BEGIN\n                        SET @Status = 1;\n                END;\n                    ELSE\n                    BEGIN\n                        SET @MainAmount = @MaxAmountDay -\n                        (\n                            SELECT SUM(mainamount)\n                            FROM #rez\n                        ) - @MainAmount;\n                        SET @Status = 1;\n                END;\n        END;\n            ELSE\n            BEGIN\n                SET @MainAmount = 0;\n                SET @Status = 0;\n        END;\nEND;\nELSE \nBEGIN\n    IF(@MainAmount > @MaxAmountDay)\n    BEGIN\n        SET @MainAmount = 0;\n        SET @Status = 0;\n    END;\nEND;\nIF @MainAmount < 0\n    BEGIN\n        SET @MainAmount = 0;\n        SET @Status = 0;\nEND;\nINSERT INTO #rez3\n(Type_\n, MaxAmount_\n, Status_\n, MainAmount\n)\n       SELECT 'Day'\n            , @MaxAmountDay\n            , @Status\n            , @MainAmount;\nDROP TABLE #rez;\nIF ISNULL(\n(\n    SELECT COUNT(1)\n    FROM #rez1\n), 0) <> 0\n    BEGIN\n        IF\n        (\n            SELECT SUM(mainamount)\n            FROM #rez1\n        ) < @MaxAmountWeek\n            BEGIN\n                IF(\n                (\n                    SELECT SUM(mainamount)\n                    FROM #rez1\n                ) + @MainAmount) <= @MaxAmountWeek\n                    BEGIN\n                        SET @Status = 1;\n                END;\n                    ELSE\n                    BEGIN\n                        SET @MainAmount = @MaxAmountWeek -\n                        (\n                            SELECT SUM(mainamount)\n                            FROM #rez1\n                        ) - @MainAmount;\n                        SET @Status = 1;\n                END;\n        END;\n            ELSE\n            BEGIN\n                SET @MainAmount = 0;\n                SET @Status = 0;\n        END;\nEND;\nELSE \nBEGIN\n    IF(@MainAmount > @MaxAmountWeek)\n    BEGIN\n        SET @MainAmount = 0;\n        SET @Status = 0;\n    END;\nEND;\nIF @MainAmount < 0\n    BEGIN\n        SET @MainAmount = 0;\n        SET @Status = 0;\nEND;\nINSERT INTO #rez3\n(Type_\n, MaxAmount_\n, Status_\n, MainAmount\n)\n       SELECT 'week'\n            , @MaxAmountWeek\n            , @Status\n            , @MainAmount;\nDROP TABLE #rez1;\nIF ISNULL(\n(\n    SELECT COUNT(1)\n    FROM #rez2\n), 0) <> 0\n    BEGIN\n        IF\n        (\n            SELECT SUM(mainamount)\n            FROM #rez2\n        ) < @MaxAmountMonth\n            BEGIN\n                IF(\n                (\n                    SELECT SUM(mainamount)\n                    FROM #rez2\n                ) + @MainAmount) <= @MaxAmountMonth\n                    BEGIN\n                        SET @Status = 1;\n                END;\n                    ELSE\n                    BEGIN\n                        SET @MainAmount = @MaxAmountMonth -\n                        (\n                            SELECT SUM(mainamount)\n                            FROM #rez2\n                        ) - @MainAmount;\n                        SET @Status = 1;\n                END;\n        END;\n            ELSE\n            BEGIN\n                SET @MainAmount = 0;\n                SET @Status = 0;\n        END;\nEND;\nELSE \nBEGIN\n    IF(@MainAmount > @MaxAmountMonth)\n    BEGIN\n        SET @MainAmount = 0;\n        SET @Status = 0;\n    END;\nEND;\nIF @MainAmount < 0\n    BEGIN\n        SET @MainAmount = 0;\n        SET @Status = 0;\nEND;\nINSERT INTO #rez3\n(Type_\n, MaxAmount_\n, Status_\n, MainAmount\n)\n       SELECT 'month'\n            , @MaxAmountMonth\n            , @Status\n            , @MainAmount;\nDROP TABLE #rez2;\nSELECT Type_ AS type\n     , MaxAmount_ AS maxAmount\n     , Status_ AS status\n     , MainAmount AS mainAmount\nFROM #rez3;\nDROP TABLE #rez3;",
+        "output": "str",
+        "x": 360,
+        "y": 1160,
+        "wires": [
+            [
+                "f0f49a41.274078"
+            ]
+        ]
+    },
+    {
+        "id": "20c7e8e8.696da8",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "/scrooge/checkmoney",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 1080,
+        "wires": [
+            [
+                "5d72aa42.4de214"
+            ]
+        ],
+        "info": "http://kv-v-nr-it-t:1880/scrooge/money?amounts="
+    },
+    {
+        "id": "f0f49a41.274078",
+        "type": "MSSQL",
+        "z": "b4d9dc73.6ac38",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "PP Money",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 533,
+        "y": 1160,
+        "wires": [
+            [
+                "7135e942.9cb198",
+                "a3bddb8a.06bec8"
+            ]
+        ]
+    },
+    {
+        "id": "7135e942.9cb198",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 673,
+        "y": 1094,
+        "wires": [
+            [
+                "b5bd9869.439988"
+            ]
+        ]
+    },
+    {
+        "id": "b5bd9869.439988",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Reply Ok",
+        "func": "var result = msg.payload;\nvar check = result;\nvar error = false;\n\nfor(var o of check){\n    if(o.status === 0) error = true;\n}\n\nif(result.length !== 0){\n    \n    msg.statusCode = 200;\n    if(error === false)\n    {\n        msg.payload = {\n            code : '200',\n            result : 'ok',\n            path: msg.req.route.path,\n            error : \"\",\n            data : check\n        }\n    }\n    else {\n        msg.payload = {\n            code : '401',\n            result : 'no',\n            path: msg.req.route.path,\n            error : \"Max limit overflow\",\n            data : check\n        }        \n    }\n    return msg;\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        code : '402',\n        result : 'empty',\n        path: msg.req.route.path,\n        error: \"No data for request\",\n        data : {}\n    }\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 823,
+        "y": 1160,
+        "wires": [
+            [
+                "ba8ba8fc.4cebc8",
+                "2ce81a48.8f72a6"
+            ]
+        ]
+    },
+    {
+        "id": "ba8ba8fc.4cebc8",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 833,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "2ce81a48.8f72a6",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 893,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "8a19f02f.30376",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 1260,
+        "wires": [
+            [
+                "64a8e4be.d6615c"
+            ]
+        ]
+    },
+    {
+        "id": "64a8e4be.d6615c",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "39000",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"docInfo\": \"Македон Євгеній Віталійович;;;;,;;;;\",\n    \"mainAmount\": \"39000\",\n    \"currencyTag\": \"UAH\"\n}",
+        "output": "json",
+        "x": 230,
+        "y": 1260,
+        "wires": [
+            [
+                "a955a690.203508"
+            ]
+        ]
+    },
+    {
+        "id": "a955a690.203508",
+        "type": "http request",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/api/scrooge/checkmoney",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 430,
+        "y": 1260,
+        "wires": [
+            [
+                "4dd52901.024698"
+            ]
+        ]
+    },
+    {
+        "id": "4dd52901.024698",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "55512764.4e6448",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "500000",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"docInfo\": \"Македон Євгеній Віталійович;;;;,;;;;\",\n    \"mainAmount\": \"500000\",\n    \"currencyTag\": \"UAH\"\n}",
+        "output": "json",
+        "x": 240,
+        "y": 1300,
+        "wires": [
+            [
+                "a955a690.203508"
+            ]
+        ]
+    },
+    {
+        "id": "4d18fcab.ece434",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 1300,
+        "wires": [
+            [
+                "55512764.4e6448"
+            ]
+        ]
+    },
+    {
+        "id": "9399f518.713888",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 59,
+        "y": 1385,
+        "wires": [
+            [
+                "b0c9dce8.3e7a3"
+            ]
+        ]
+    },
+    {
+        "id": "b0c9dce8.3e7a3",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "15000 USD",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"docInfo\": \"Македон Євгеній Віталійович;;;;,;;;;\",\n    \"mainAmount\": \"15000\",\n    \"currencyTag\": \"USD\"\n}",
+        "output": "json",
+        "x": 250,
+        "y": 1380,
+        "wires": [
+            [
+                "a955a690.203508"
+            ]
+        ]
+    },
+    {
+        "id": "cc2d660.1919698",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 1340,
+        "wires": [
+            [
+                "58b3adca.193f34"
+            ]
+        ]
+    },
+    {
+        "id": "58b3adca.193f34",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "14000 USD",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"docInfo\": \"Македон Євгеній Віталійович;;;;,;;;;\",\n    \"mainAmount\": \"14000\",\n    \"currencyTag\": \"USD\"\n}",
+        "output": "json",
+        "x": 250,
+        "y": 1340,
+        "wires": [
+            [
+                "a955a690.203508"
+            ]
+        ]
+    },
+    {
+        "id": "3a2c469d.93796a",
+        "type": "comment",
+        "z": "b4d9dc73.6ac38",
+        "name": "Данные по кассиру",
+        "info": "Данные по кассиру",
+        "x": 140,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8dd3afb9.98f7",
+        "type": "comment",
+        "z": "b4d9dc73.6ac38",
+        "name": "Данные по счету ---------------------------------------------------",
+        "info": "",
+        "x": 240,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f89560ec.7f1ba",
+        "type": "comment",
+        "z": "b4d9dc73.6ac38",
+        "name": "Лимит на день, неделю, месяц ----------------------------------------------------------",
+        "info": "",
+        "x": 320,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "6fe478c7.a2e8a8",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "/api/monobank/rates",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1600,
+        "wires": [
+            [
+                "1434be58.a7f002"
+            ]
+        ],
+        "info": "POST\nhttp://kv-v-nr-it-t:1880/api/monobank/rates\nDATA\n{\n    \"date\": \"2021-04-26\",\n    \"type\": \"NBU\"\n}\n\n"
+    },
+    {
+        "id": "1434be58.a7f002",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Auth",
+        "func": "if (\n    msg.req.headers['x-auth-token'] == 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8') {\n    return msg;\n} else {\n    msg.error = \"Unauthorized Bad token\";\n    node.error(\"Unauthorized Bad token\", msg);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 1600,
+        "wires": [
+            [
+                "e36b0731.948d88",
+                "d58f7045.cbd5f",
+                "27688023.f26fa"
+            ]
+        ],
+        "info": "if (\n    msg.req.headers['x-auth-token'] == 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8') {\n    return msg;\n} else {\n    msg.error = \"Unauthorized Bad token\";\n    node.error(\"Unauthorized Bad token\", msg);\n}"
+    },
+    {
+        "id": "e36b0731.948d88",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:LoadExchangeRates>\n         <tem:ratesParams>\n            <scr:Date>{{payload.date}}</scr:Date>\n            <scr:Type>{{payload.type}}</scr:Type>\n         </tem:ratesParams>\n      </tem:LoadExchangeRates>\n   </soapenv:Body>\n</soapenv:Envelope>",
+        "output": "str",
+        "x": 480,
+        "y": 1600,
+        "wires": [
+            [
+                "b8228095.d1f09",
+                "d58f7045.cbd5f"
+            ]
+        ],
+        "info": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:LoadExchangeRates>\n         <tem:ratesParams>\n            <scr:Date>{{payload.date}}</scr:Date>\n            <scr:Type>{{payload.type}}</scr:Type>\n         </tem:ratesParams>\n      </tem:LoadExchangeRates>\n   </soapenv:Body>\n</soapenv:Envelope>"
+    },
+    {
+        "id": "d58f7045.cbd5f",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "27688023.f26fa",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.date",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "b8228095.d1f09",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "headers",
+        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/LoadExchangeRates';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 1600,
+        "wires": [
+            [
+                "738975da.12ec4c"
+            ]
+        ],
+        "info": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\n'application/json'\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/LoadExchangeRates';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;"
+    },
+    {
+        "id": "738975da.12ec4c",
+        "type": "http-ntlm-req",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "http://kv-v-is3-pp/ScroogeWebServices/ScroogeIBankingService.svc",
+        "method": "1",
+        "auth": "d3f898f4.8a8b7",
+        "x": 790,
+        "y": 1600,
+        "wires": [
+            [
+                "c6e4ac1a.d7948",
+                "6725c1a5.296"
+            ]
+        ]
+    },
+    {
+        "id": "c6e4ac1a.d7948",
+        "type": "xml",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 950,
+        "y": 1600,
+        "wires": [
+            [
+                "cca56ada.fc09c8"
+            ]
+        ]
+    },
+    {
+        "id": "6725c1a5.296",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "cca56ada.fc09c8",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "clear",
+        "func": "delete(msg.headers);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1030,
+        "y": 1640,
+        "wires": [
+            [
+                "5fdd65e9.5b595c"
+            ]
+        ]
+    },
+    {
+        "id": "5fdd65e9.5b595c",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 1110,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "10e1d30e.ed98fd",
+        "type": "catch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "scope": [
+            "f8f3fd30.ae59e8",
+            "ab96ca62.b9d9d"
+        ],
+        "uncaught": false,
+        "x": 710,
+        "y": 1480,
+        "wires": [
+            [
+                "6e1af56f.02f98c"
+            ]
+        ]
+    },
+    {
+        "id": "6e1af56f.02f98c",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "delete(msg.headers);\n\nmsg.payload = {\n    error: \"Запрос не авторизован\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 840,
+        "y": 1480,
+        "wires": [
+            [
+                "8d11b1e8.48401"
+            ]
+        ]
+    },
+    {
+        "id": "8d11b1e8.48401",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "401",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 980,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "8c6441a8.f1883",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "/api/monobank/xrates",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 1680,
+        "wires": [
+            [
+                "4f09fa2c.fe70b4"
+            ]
+        ],
+        "info": "POST\nhttp://kv-v-nr-it-t:1880/api/monobank/xrates\nDATA\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:LoadExchangeRates>\n         <tem:ratesParams>\n            <scr:Date>2021-04-26</scr:Date>\n            <scr:Type>NBU</scr:Type>\n         </tem:ratesParams>\n      </tem:LoadExchangeRates>\n   </soapenv:Body>\n</soapenv:Envelope>\n\n"
+    },
+    {
+        "id": "4f09fa2c.fe70b4",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Auth",
+        "func": "if (\n    msg.req.headers['x-auth-token'] == 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8') {\n    return msg;\n} else {\n    msg.error = \"Unauthorized Bad token\";\n    node.error(\"Unauthorized Bad token\", msg);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 1680,
+        "wires": [
+            [
+                "e14c2644.62ac98"
+            ]
+        ]
+    },
+    {
+        "id": "e14c2644.62ac98",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "headers",
+        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/LoadExchangeRates';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 1680,
+        "wires": [
+            [
+                "bce0d225.8dd1d"
+            ]
+        ]
+    },
+    {
+        "id": "bce0d225.8dd1d",
+        "type": "http-ntlm-req",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "http://kv-v-is3-pp/ScroogeWebServices/ScroogeIBankingService.svc",
+        "method": "1",
+        "auth": "d3f898f4.8a8b7",
+        "x": 610,
+        "y": 1680,
+        "wires": [
+            [
+                "a11743f9.d61b8"
+            ]
+        ]
+    },
+    {
+        "id": "a11743f9.d61b8",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "9679a2ff.10c8b",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 1740,
+        "wires": [
+            [
+                "4568d337.12ebec"
+            ]
+        ]
+    },
+    {
+        "id": "4568d337.12ebec",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:LoadExchangeRates>\n         <tem:ratesParams>\n            <scr:Date>2021-04-26</scr:Date>\n            <scr:Type>NBU</scr:Type>\n         </tem:ratesParams>\n      </tem:LoadExchangeRates>\n   </soapenv:Body>\n</soapenv:Envelope>\n",
+        "output": "str",
+        "x": 200,
+        "y": 1740,
+        "wires": [
+            [
+                "4a20dd33.1969e4"
+            ]
+        ]
+    },
+    {
+        "id": "4a20dd33.1969e4",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "headers",
+        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['x-auth-token'] = 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 1740,
+        "wires": [
+            [
+                "d03291bf.24fd8"
+            ]
+        ]
+    },
+    {
+        "id": "d03291bf.24fd8",
+        "type": "http request",
+        "z": "b4d9dc73.6ac38",
+        "name": "xrates",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/api/monobank/xrates",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 490,
+        "y": 1740,
+        "wires": [
+            [
+                "ddeca290.1f59d"
+            ]
+        ]
+    },
+    {
+        "id": "ddeca290.1f59d",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "aef5a62d.a8fad8",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 1800,
+        "wires": [
+            [
+                "1dd267ae.0c3748"
+            ]
+        ]
+    },
+    {
+        "id": "1dd267ae.0c3748",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"date\": \"2021-04-26\",\n    \"type\": \"NBU\"\n}",
+        "output": "json",
+        "x": 200,
+        "y": 1800,
+        "wires": [
+            [
+                "1576ed4d.8d73c3"
+            ]
+        ]
+    },
+    {
+        "id": "1576ed4d.8d73c3",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "headers",
+        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['x-auth-token'] = 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 1800,
+        "wires": [
+            [
+                "95000f3b.b403"
+            ]
+        ]
+    },
+    {
+        "id": "95000f3b.b403",
+        "type": "http request",
+        "z": "b4d9dc73.6ac38",
+        "name": "rates",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/api/monobank/rates",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 490,
+        "y": 1800,
+        "wires": [
+            [
+                "12bacd26.8623c3"
+            ]
+        ]
+    },
+    {
+        "id": "12bacd26.8623c3",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "4c4766e0.0cb368",
+        "type": "comment",
+        "z": "b4d9dc73.6ac38",
+        "name": "Авторизация по курсам валют НБУ -------------------------------------------------",
+        "info": "",
+        "x": 260,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "b8eb5b8.860cfa8",
+        "type": "comment",
+        "z": "b4d9dc73.6ac38",
+        "name": "Авторизация по Вставке документов ------------------------------------------",
+        "info": "",
+        "x": 260,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "1a2510f.ac90bef",
+        "type": "http in",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "/api/monobank/AddDocuments",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 2060,
+        "wires": [
+            [
+                "286bc357.4ded6c"
+            ]
+        ],
+        "info": "POST\nhttp://kv-v-nr-it-t:1880/api/monobank/rates\nDATA\n{\n    \"date\": \"2021-04-26\",\n    \"type\": \"NBU\"\n}\n\n"
+    },
+    {
+        "id": "5e4c2b7a.1181e4",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Auth",
+        "func": "if (\n    msg.req.headers['x-auth-token'] == 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8') {\n    return msg;\n} else {\n    msg.error = \"Unauthorized Bad token\";\n    node.error(\"Unauthorized Bad token\", msg);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 2100,
+        "wires": [
+            [
+                "8ca1cba7.129a98",
+                "72e62b40.a45f64"
+            ]
+        ],
+        "info": "if (\n    msg.req.headers['x-auth-token'] == 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8') {\n    return msg;\n} else {\n    msg.error = \"Unauthorized Bad token\";\n    node.error(\"Unauthorized Bad token\", msg);\n}"
+    },
+    {
+        "id": "8ca1cba7.129a98",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:AddDocument>\n         <tem:documentParams>\n            <scr:ActionId>{{payload.actionId}}</scr:ActionId>\n            <scr:BranchId>{{payload.branchId}}</scr:BranchId>\n            <scr:Code>{{{payload.code}}}</scr:Code>\n            \n            <scr:CreditCode>{{payload.creditCode}}</scr:CreditCode>\n            <scr:CreditCodeIBAN>{{payload.creditCodeIBAN}}</scr:CreditCodeIBAN>\n            <scr:CreditInit>{{payload.creditInit}}</scr:CreditInit>\n            <scr:CreditName>{{payload.creditName}}</scr:CreditName>\n            <scr:CreditState>{{payload.creditState}}</scr:CreditState>\n            \n            <scr:CrncyAmount>{{payload.crncyAmount}}</scr:CrncyAmount>\n            <scr:Ctrls></scr:Ctrls>\n            <scr:CurrencyTag>{{payload.currencyTag}}</scr:CurrencyTag>\n            <scr:DayDate>{{payload.dayDate}}</scr:DayDate>\n            \n            <scr:DebitCode>{{payload.debitCode}}</scr:DebitCode>\n            <scr:DebitCodeIBAN>{{payload.debitCodeIBAN}}</scr:DebitCodeIBAN>\n            <scr:DebitInit>{{payload.debitInit}}</scr:DebitInit>\n            <scr:DebitName>{{payload.debitName}}</scr:DebitName>\n            <scr:DebitState>{{payload.debitState}}</scr:DebitState>\n            \n \n            <scr:Info>{{payload.info}}</scr:Info>\n            <scr:Kind>{{payload.kind}}</scr:Kind>\n            <scr:MainAmount>{{payload.mainAmount}}</scr:MainAmount>\n            <scr:MasterId>{{payload.masterId}}</scr:MasterId>\n            <scr:Note>{{payload.note}}</scr:Note>\n            \n            <scr:OrgDate>{{payload.orgDate}}</scr:OrgDate>\n        \n            <scr:OutsideSignType>{{payload.outsideSignType}}</scr:OutsideSignType>\n            <scr:PayDate>{{payload.payDate}}</scr:PayDate>\n            <scr:ProcessFlag>{{payload.processFlag}}</scr:ProcessFlag>\n            <scr:Purpose>{{{payload.purpose}}}</scr:Purpose>\n            \n            <scr:SourceCode>{{payload.sourceCode}}</scr:SourceCode>\n    \n            <scr:TargetCode>{{payload.targetCode}}</scr:TargetCode>\n            <scr:SystemId>{{payload.systemId}}</scr:SystemId>\n\n       \n         </tem:documentParams>\n      </tem:AddDocument>\n   </soapenv:Body>\n</soapenv:Envelope>",
+        "output": "str",
+        "x": 580,
+        "y": 2100,
+        "wires": [
+            [
+                "9a3c140.89bebf",
+                "72e62b40.a45f64",
+                "9291657b.8b5b7"
+            ]
+        ],
+        "info": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:LoadExchangeRates>\n         <tem:ratesParams>\n            <scr:Date>{{payload.date}}</scr:Date>\n            <scr:Type>{{payload.type}}</scr:Type>\n         </tem:ratesParams>\n      </tem:LoadExchangeRates>\n   </soapenv:Body>\n</soapenv:Envelope>"
+    },
+    {
+        "id": "72e62b40.a45f64",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "9a3c140.89bebf",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "headers",
+        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/AddDocument';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 2100,
+        "wires": [
+            [
+                "93d1c6fe.68f0f8"
+            ]
+        ],
+        "info": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\n'application/json'\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/LoadExchangeRates';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;"
+    },
+    {
+        "id": "93d1c6fe.68f0f8",
+        "type": "http-ntlm-req",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "url": "http://kv-v-is3-pp/ScroogeWebServices/ScroogeIBankingService.svc",
+        "method": "1",
+        "auth": "d3f898f4.8a8b7",
+        "x": 890,
+        "y": 2100,
+        "wires": [
+            [
+                "7f80d5cc.65bd4c",
+                "222f819d.db99ae",
+                "36c06b97.01b3bc"
+            ]
+        ]
+    },
+    {
+        "id": "7f80d5cc.65bd4c",
+        "type": "xml",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1030,
+        "y": 2100,
+        "wires": [
+            [
+                "6102db5e.a30acc"
+            ]
+        ]
+    },
+    {
+        "id": "222f819d.db99ae",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "c14b533a.07081",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "clear",
+        "func": "delete(msg.headers);\n\nmsg.payload = {\n        billId : msg.billId\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1190,
+        "y": 2160,
+        "wires": [
+            [
+                "33908da2.b4cc72"
+            ]
+        ]
+    },
+    {
+        "id": "33908da2.b4cc72",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 1350,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "6444d3d2.3f08fc",
+        "type": "inject",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 2340,
+        "wires": [
+            [
+                "2b6b3c73.993484"
+            ]
+        ]
+    },
+    {
+        "id": "de573279.ff66a",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "document",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"actionId\": \"302\",\n    \"branchId\": \"1\",\n    \"code\": \"ws/{{payload.num4}}\",\n    \"creditCode\": \"280954601\",\n    \"creditCodeIBAN\": \"UA223204780000000000280954601\",\n    \"creditInit\": \"280954601\",\n    \"creditName\": \"Банкноти та монети в касі,В № 148\",\n    \"creditState\": \"23697280\",\n    \"currencyTag\": \"\",\n    \"crncyAmount\": \"121.20\",\n    \"dayDate\": \"{{payload.localRevDate}}\",\n    \"payDate\": \"{{payload.localRevDate}}\",\n    \"orgDate\": \"{{payload.localRevDate}}\",\n    \"debitCode\": \"280954601\",\n    \"debitCodeIBAN\": \"UA223204780000000000280954601\",\n    \"debitInit\": \"280954601\",\n    \"debitName\": \"MoneyGram(деб.заб.перека.) В№148\", \n    \"debitState\": \"23697280\",\n    \"info\": \"0\",\n    \"kind\": \"1\",\n    \"mainAmount\": \"121.20\",\n    \"masterId\": \"0\",\n    \"note\": \"Example add document by service\",\n    \"outsideSignType\": \"0\",\n    \"processFlag\": \"0\",\n    \"purpose\": \"Поповнення рахунку Такач Крістіан..,2761526695, зп за Січень 2020р. без ПДВ\",\n    \"sourceCode\": \"320478\",\n    \"targetCode\": \"320478\",\n    \"systemId\": \"808\",\n    \"params\": [\n            {\n                \"listId\" : 6066,\n                \"paramCode\": \"DOCINFO\",\n                \"value\": \"Сидоров Максим;ПАСПОРТ;АА;123456;Главным РУВД Одесса,01/01/1997;24/04/1980;Адрес;0;000000000;\"\n            },\n            {\n                \"listId\" : 263,\n                \"paramCode\": \"CASHINFO\",\n                \"value\": \"Антонов Степан;1212121212;;;;Бубликов ;;\"\n            },\n            {\n                \"listId\" : 28820,\n                \"paramCode\": \"EXT_DOC_ID\",\n                \"value\": \"{{payload.num4}}\"\n            },\n            {\n                \"listId\" : 28821,\n                \"paramCode\": \"EXT_FILE_NAME\",\n                \"value\": \"nr-document.json\"\n            }        \n    ]\n}",
+        "output": "json",
+        "x": 440,
+        "y": 2340,
+        "wires": [
+            [
+                "11224757.52d539",
+                "c37d7fad.28da8"
+            ]
+        ]
+    },
+    {
+        "id": "11224757.52d539",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "headers",
+        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['x-auth-token'] = 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 2340,
+        "wires": [
+            [
+                "49dd9b0e.073594"
+            ]
+        ]
+    },
+    {
+        "id": "49dd9b0e.073594",
+        "type": "http request",
+        "z": "b4d9dc73.6ac38",
+        "name": "AddDocuments",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/api/monobank/AddDocuments",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 800,
+        "y": 2340,
+        "wires": [
+            [
+                "afb3ca4.fe9de38"
+            ]
+        ]
+    },
+    {
+        "id": "afb3ca4.fe9de38",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "d93c0978.59f158",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "SetConnotationValue",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n\t<soapenv:Header/>\n\t<soapenv:Body>\n\t\t<tem:SetConnotationValue>\n\t\t\t<tem:ownerId>{{payload.docId}}</tem:ownerId>\n\t\t\t<tem:listId>{{payload.listId}}</tem:listId>\n\t\t\t<tem:connotationValue>{{payload.value}}</tem:connotationValue>\n\t\t</tem:SetConnotationValue>\n\t</soapenv:Body>\n</soapenv:Envelope>\n",
+        "output": "str",
+        "x": 300,
+        "y": 2260,
+        "wires": [
+            [
+                "eaa9a46d.10525"
+            ]
+        ]
+    },
+    {
+        "id": "ebba28d6.8f07d",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Params",
+        "func": "msg.payload = {\n    docId : msg.billId,\n    listId : msg.payload.listId,\n    value : msg.payload.value\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 120,
+        "y": 2260,
+        "wires": [
+            [
+                "d93c0978.59f158"
+            ]
+        ]
+    },
+    {
+        "id": "5a9cd30e.72bf84",
+        "type": "http-ntlm-req",
+        "z": "b4d9dc73.6ac38",
+        "name": "PRO ConnotationService",
+        "url": "http://10.1.16.2/FP/ScroogeConnotationService.asmx",
+        "method": "1",
+        "auth": "d3f898f4.8a8b7",
+        "x": 970,
+        "y": 2240,
+        "wires": [
+            [
+                "6eccf62e.7e7dd"
+            ]
+        ]
+    },
+    {
+        "id": "286bc357.4ded6c",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Set Env",
+        "func": "msg.isRequest = true;\nmsg.workDir = 'DEV';\nmsg.in = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 2100,
+        "wires": [
+            [
+                "5e4c2b7a.1181e4"
+            ]
+        ]
+    },
+    {
+        "id": "25174ac7.4a8fe6",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 610,
+        "y": 2260,
+        "wires": [
+            [
+                "30cb4888.454298"
+            ],
+            [
+                "c19c45ac.229528"
+            ]
+        ]
+    },
+    {
+        "id": "30cb4888.454298",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Headers PR",
+        "func": "msg.headers['Host'] = 'kv-v-is1-pr';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 2240,
+        "wires": [
+            [
+                "5a9cd30e.72bf84"
+            ]
+        ]
+    },
+    {
+        "id": "c19c45ac.229528",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Headers PP",
+        "func": "msg.headers['Host'] = 'kv-v-is3-pp';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 2280,
+        "wires": [
+            [
+                "5d3b5147.2aa59"
+            ]
+        ]
+    },
+    {
+        "id": "5d3b5147.2aa59",
+        "type": "http-ntlm-req",
+        "z": "b4d9dc73.6ac38",
+        "name": "DEV ConnotationService",
+        "url": "http://10.1.15.142/ScroogeWebServices_MB/ScroogeConnotationService.asmx",
+        "method": "1",
+        "auth": "d3f898f4.8a8b7",
+        "x": 970,
+        "y": 2280,
+        "wires": [
+            [
+                "6eccf62e.7e7dd"
+            ]
+        ]
+    },
+    {
+        "id": "c37d7fad.28da8",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "9291657b.8b5b7",
+        "type": "file",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "filename": "addDocument.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 770,
+        "y": 2020,
+        "wires": [
+            [
+                "222f819d.db99ae"
+            ]
+        ]
+    },
+    {
+        "id": "6102db5e.a30acc",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "check Result",
+        "func": "if(msg.payload[\"s:Envelope\"][\"s:Body\"][0].AddDocumentResponse !== undefined) {\n    msg.billId = msg.payload[\"s:Envelope\"][\"s:Body\"][0].AddDocumentResponse[0].AddDocumentResult[0];\n    msg.payload = {\n        billId : msg.billId\n    }\n    return msg;\n}    \nelse {\n    node.error('Error !!!!!', msg);\n}    \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1182,
+        "y": 2100,
+        "wires": [
+            [
+                "38e80ccc.09b54c"
+            ]
+        ]
+    },
+    {
+        "id": "2b6b3c73.993484",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "num4 + dates",
+        "func": "//@WHAT localTZDates.js\n\nfunction localTZDates(zdate){\n    // 2021-03-31T10:46:48.841Z\n    var tzShift = -2;\n    var ddate=new Date(zdate.getTime() - (60000*(zdate.getTimezoneOffset()+tzShift)));\n    var ldateTime = ddate.toISOString();//'.replace('Z', '');\n    \n    var ldate = ldateTime.substring(8,10)+'.'+\n              ldateTime.substring(5,7)+'.'+\n              ldateTime.substring(0,4)\n              \n    var ltime = ldateTime.substring(11,13)+':'+\n              ldateTime.substring(14,16)+':'+\n              ldateTime.substring(17)\n\n    var rdate = ldateTime.substring(0,4)+'-'+\n              ldateTime.substring(5,7)+'-'+\n              ldateTime.substring(8,10)\n\n    var exelDate = 25567.0 + ((zdate.getTime() - (zdate.getTimezoneOffset() * 60 * 1000)) / (1000 * 60 * 60 * 24));\n    //--44305          \n    return {\n        requestRef: Math.floor(100000 + Math.random() * 900000),\n        num4: Math.floor(1000 + Math.random() * 9000),\n        zeroDateTime: zdate.toISOString(),\n        exelDate: Math.floor(exelDate),\n        localDate: ldate,\n        localTime: ltime,\n        localRevDate: rdate,\n        localISODateTime: ldateTime,\n        localTZDateTime:  ldate+\"T\"+ltime\n    };\n}\n\nvar dt = new Date();\nmsg.payload\nmsg.payload = localTZDates(dt);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 280,
+        "y": 2340,
+        "wires": [
+            [
+                "de573279.ff66a"
+            ]
+        ]
+    },
+    {
+        "id": "36c06b97.01b3bc",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "66a3427b.daedf4",
+        "type": "template",
+        "z": "b4d9dc73.6ac38",
+        "name": "wp doc examle",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"requestRef\": \"{{payload.requestRef}}\",\n    \"processMode\": \"sync\",\n    \"data\": {\n        \"documents\": [\n            {\n                \"externalId\": \"1233349\",\n                \"branchId\": 1000148,\n                \"debit\": {\n                    \"stateCode\": \"23697280\",\n                    \"name\": \"MoneyGram(деб.заб.перека.) В№148\",\n                    \"iban\": \"UA223204780000000000280954601\",\n                    \"code\": \"2809     46015.980.148\",\n                    \"bankCode\": \"320478\",\n                    \"init\": \"2809     46015\"\n                },\n                \"credit\": {\n                    \"stateCode\": \"23697280\",\n                    \"name\": \"Банкноти та монети в касі,В № 148\",\n                    \"iban\": \"UA223204780000000000280954601\",\n                    \"code\": \"1002     41010.980.148\",\n                    \"bankCode\": \"320478\",\n                    \"init\": \"1002     41010\"\n                },\n                \"currencyTag\": \"\",\n                \"mainAmount\": 200,\n                \"crncyAmount\": 200,\n                \"actionId\": 302,\n                \"documentState\": 0,\n                \"kind\": 18,\n                \"code\": \"sw/04mg/{{payload.num4}}\",\n                \"purpose\": \"Виплата грошового переказу по системі MoneyGram\",\n                \"orgDate\": \"{{payload.localISODateTime}}\",\n                \"dayDate\": \"{{payload.localISODateTime}}\",\n                \"extDate\": \"{{payload.localISODateTime}}\",\n                \"payDate\": \"{{payload.localISODateTime}}\",\n                \"operDate\": \"{{payload.localISODateTime}}\",\n                \"note\": \"Note Виплата грошового переказу по системі MoneyGram\",\n                \"info\": \"Info Виплата грошового переказу по системі MoneyGram\",\n                \"ctrls\": \"61\",\n                \"signs\": [],\n                \"connotations\": [\n                    {\n                        \"paramCode\": \"EXT_DOC_ID\",\n                        \"code\": \"3211234\"\n                    },\n                    {\n                        \"paramCode\": \"EXT_FILE_NAME\",\n                        \"code\": \"transgen.api\"\n                    },\n                    {\n                        \"paramCode\": \"SENDERINFO\",\n                        \"info\": \"Баранкин Олег;ПАСПОРТ;АА;121212;Выдан,06/12/2000;19/04/2000;Адресс;0;000000000;\"\n                    },\n                    {\n                        \"paramCode\": \"DOCINFO\",\n                        \"info\": \"Сидоров Максим;ПАСПОРТ;АА;123456;Главным РУВД Одесса,01/01/1997;24/04/1980;Адрес;0;000000000;\"\n                    },\n                    {\n                        \"paramCode\": \"CASHINFO\",\n                        \"info\": \"Антонов Степан;1212121212;;;;Бубликов ;;\"\n                    },\n                    {\n                        \"paramCode\": \"UGB_D060\",\n                        \"code\": \"04\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+        "output": "json",
+        "x": 120,
+        "y": 2420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a19e3182.79b728",
+        "type": "catch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "scope": [
+            "6102db5e.a30acc"
+        ],
+        "uncaught": false,
+        "x": 90,
+        "y": 1960,
+        "wires": [
+            [
+                "3e863d11.4196a2"
+            ]
+        ]
+    },
+    {
+        "id": "3e863d11.4196a2",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 1960,
+        "wires": [
+            [
+                "238cf254.47912e"
+            ]
+        ]
+    },
+    {
+        "id": "eb03c19a.e7c128",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 520,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "238cf254.47912e",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "clear",
+        "func": "delete(msg.headers);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 1960,
+        "wires": [
+            [
+                "eb03c19a.e7c128"
+            ]
+        ]
+    },
+    {
+        "id": "682f31b4.9f1aa",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 2200,
+        "wires": [
+            [
+                "c14b533a.07081"
+            ]
+        ]
+    },
+    {
+        "id": "38e80ccc.09b54c",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "params",
+        "func": "msg.payload = msg.in.params;\nif(msg.payload !== undefined && msg.payload.length>0) {\n    return [msg, null];\n} else \n    return [null, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 2140,
+        "wires": [
+            [
+                "e80ecbae.29282"
+            ],
+            [
+                "682f31b4.9f1aa"
+            ]
+        ]
+    },
+    {
+        "id": "e80ecbae.29282",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 120,
+        "y": 2200,
+        "wires": [
+            [
+                "7b027865.6a81"
+            ]
+        ]
+    },
+    {
+        "id": "7b027865.6a81",
+        "type": "split",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 260,
+        "y": 2200,
+        "wires": [
+            [
+                "ebba28d6.8f07d",
+                "84bdfb0.e336308"
+            ]
+        ]
+    },
+    {
+        "id": "1c62ce81.5484c9",
+        "type": "join",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "mode": "auto",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 1310,
+        "y": 2260,
+        "wires": [
+            [
+                "682f31b4.9f1aa",
+                "36631440.490ccc"
+            ]
+        ]
+    },
+    {
+        "id": "6eccf62e.7e7dd",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": ">>>",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1170,
+        "y": 2260,
+        "wires": [
+            [
+                "1c62ce81.5484c9"
+            ]
+        ]
+    },
+    {
+        "id": "36631440.490ccc",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "eaa9a46d.10525",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Headers",
+        "func": "msg.headers ={};\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\nmsg.headers['SOAPAction'] = 'http://tempuri.org/SetConnotationValue';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n//msg.headers['Host'] = 'kv-v-is3-pp';\n\n//set billid\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 2260,
+        "wires": [
+            [
+                "25174ac7.4a8fe6"
+            ]
+        ]
+    },
+    {
+        "id": "84bdfb0.e336308",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "13b7eb2a.55c245",
+        "type": "MSSQL-CN",
+        "z": "",
+        "tdsVersion": "7_4",
+        "name": "C&B PreProd 10.3.6.2 (KV-S-SCDB-PP) appmb",
+        "server": "10.3.6.2",
+        "port": "1433",
+        "encyption": true,
+        "database": "CashAndBilling",
+        "useUTC": true,
+        "connectTimeout": "15000",
+        "requestTimeout": "40000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false
+    },
+    {
+        "id": "ef456f3c.8f442",
+        "type": "MSSQL-CN",
+        "z": "",
+        "tdsVersion": "7_4",
+        "name": "SC PredProd (akha)",
+        "server": "10.3.6.2",
+        "port": "1433",
+        "encyption": true,
+        "database": "scrooge",
+        "useUTC": true,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false
+    },
+    {
+        "id": "d3f898f4.8a8b7",
+        "type": "http-ntlm-req-config",
+        "z": "",
+        "name": "istest",
+        "auth": "5",
+        "user": "istest",
+        "pass": "~qwertyu8",
+        "key": "",
+        "cert": "",
+        "token": "",
+        "doman": "ukrgas"
+    }
+]
