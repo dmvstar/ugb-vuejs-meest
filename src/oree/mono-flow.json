@@ -1177,8 +1177,7 @@
         "z": "b4d9dc73.6ac38",
         "name": "",
         "scope": [
-            "f8f3fd30.ae59e8",
-            "ab96ca62.b9d9d"
+            "5e4c2b7a.1181e4"
         ],
         "uncaught": false,
         "x": 710,
@@ -1533,18 +1532,19 @@
         "type": "http in",
         "z": "b4d9dc73.6ac38",
         "name": "",
-        "url": "/api/monobank/AddDocuments",
+        "url": "/api/monobank/addDocuments",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 180,
-        "y": 2060,
+        "y": 2040,
         "wires": [
             [
-                "286bc357.4ded6c"
+                "5e4c2b7a.1181e4",
+                "a9c4ddbb.6fac98"
             ]
         ],
-        "info": "POST\nhttp://kv-v-nr-it-t:1880/api/monobank/rates\nDATA\n{\n    \"date\": \"2021-04-26\",\n    \"type\": \"NBU\"\n}\n\n"
+        "info": "POST\nhttp://kv-v-nr-it-t:1880/api/monobank//api/monobank/addDocuments\nDATA\n{\n    \"date\": \"2021-04-26\",\n    \"type\": \"NBU\"\n}\n\n"
     },
     {
         "id": "5e4c2b7a.1181e4",
@@ -1556,12 +1556,12 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 430,
-        "y": 2100,
+        "x": 230,
+        "y": 2120,
         "wires": [
             [
-                "8ca1cba7.129a98",
-                "72e62b40.a45f64"
+                "72e62b40.a45f64",
+                "317a6e2.32b6692"
             ]
         ],
         "info": "if (\n    msg.req.headers['x-auth-token'] == 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8') {\n    return msg;\n} else {\n    msg.error = \"Unauthorized Bad token\";\n    node.error(\"Unauthorized Bad token\", msg);\n}"
@@ -1570,19 +1570,18 @@
         "id": "8ca1cba7.129a98",
         "type": "template",
         "z": "b4d9dc73.6ac38",
-        "name": "",
+        "name": "AddDocument",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
         "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:scr=\"http://schemas.datacontract.org/2004/07/Scrooge.Web.WebServices.Data.IBanking\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:AddDocument>\n         <tem:documentParams>\n            <scr:ActionId>{{payload.actionId}}</scr:ActionId>\n            <scr:BranchId>{{payload.branchId}}</scr:BranchId>\n            <scr:Code>{{{payload.code}}}</scr:Code>\n            \n            <scr:CreditCode>{{payload.creditCode}}</scr:CreditCode>\n            <scr:CreditCodeIBAN>{{payload.creditCodeIBAN}}</scr:CreditCodeIBAN>\n            <scr:CreditInit>{{payload.creditInit}}</scr:CreditInit>\n            <scr:CreditName>{{payload.creditName}}</scr:CreditName>\n            <scr:CreditState>{{payload.creditState}}</scr:CreditState>\n            \n            <scr:CrncyAmount>{{payload.crncyAmount}}</scr:CrncyAmount>\n            <scr:Ctrls></scr:Ctrls>\n            <scr:CurrencyTag>{{payload.currencyTag}}</scr:CurrencyTag>\n            <scr:DayDate>{{payload.dayDate}}</scr:DayDate>\n            \n            <scr:DebitCode>{{payload.debitCode}}</scr:DebitCode>\n            <scr:DebitCodeIBAN>{{payload.debitCodeIBAN}}</scr:DebitCodeIBAN>\n            <scr:DebitInit>{{payload.debitInit}}</scr:DebitInit>\n            <scr:DebitName>{{payload.debitName}}</scr:DebitName>\n            <scr:DebitState>{{payload.debitState}}</scr:DebitState>\n            \n \n            <scr:Info>{{payload.info}}</scr:Info>\n            <scr:Kind>{{payload.kind}}</scr:Kind>\n            <scr:MainAmount>{{payload.mainAmount}}</scr:MainAmount>\n            <scr:MasterId>{{payload.masterId}}</scr:MasterId>\n            <scr:Note>{{payload.note}}</scr:Note>\n            \n            <scr:OrgDate>{{payload.orgDate}}</scr:OrgDate>\n        \n            <scr:OutsideSignType>{{payload.outsideSignType}}</scr:OutsideSignType>\n            <scr:PayDate>{{payload.payDate}}</scr:PayDate>\n            <scr:ProcessFlag>{{payload.processFlag}}</scr:ProcessFlag>\n            <scr:Purpose>{{{payload.purpose}}}</scr:Purpose>\n            \n            <scr:SourceCode>{{payload.sourceCode}}</scr:SourceCode>\n    \n            <scr:TargetCode>{{payload.targetCode}}</scr:TargetCode>\n            <scr:SystemId>{{payload.systemId}}</scr:SystemId>\n\n       \n         </tem:documentParams>\n      </tem:AddDocument>\n   </soapenv:Body>\n</soapenv:Envelope>",
         "output": "str",
-        "x": 580,
-        "y": 2100,
+        "x": 260,
+        "y": 2180,
         "wires": [
             [
                 "9a3c140.89bebf",
-                "72e62b40.a45f64",
                 "9291657b.8b5b7"
             ]
         ],
@@ -1600,25 +1599,26 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 2020,
+        "x": 470,
+        "y": 2080,
         "wires": []
     },
     {
         "id": "9a3c140.89bebf",
         "type": "function",
         "z": "b4d9dc73.6ac38",
-        "name": "headers",
-        "func": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/AddDocument';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;",
+        "name": "Headers",
+        "func": "msg.headers = {};\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/AddDocument';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 740,
-        "y": 2100,
+        "x": 420,
+        "y": 2180,
         "wires": [
             [
-                "93d1c6fe.68f0f8"
+                "9dc2456f.c17f4",
+                "4aff8e72.72052"
             ]
         ],
         "info": "msg.headers = {};\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is3-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nmsg.headers['Accept-Encoding'] = 'gzip,deflate';\nmsg.headers['Content-Type'] = 'text/xml;charset=UTF-8';\n'application/json'\nmsg.headers['SOAPAction'] = 'http://tempuri.org/IScroogeIBankingService/LoadExchangeRates';\nmsg.headers['Host'] = 'kv-v-is3-pp';\nmsg.headers['Connection'] = 'Keep-Alive';\nmsg.headers['User-Agent'] = 'Apache-HttpClient/4.1.1 (java 1.5)';\n\nreturn msg;"
@@ -1627,17 +1627,16 @@
         "id": "93d1c6fe.68f0f8",
         "type": "http-ntlm-req",
         "z": "b4d9dc73.6ac38",
-        "name": "",
+        "name": "PP ScroogeIBankingService",
         "url": "http://kv-v-is3-pp/ScroogeWebServices/ScroogeIBankingService.svc",
         "method": "1",
         "auth": "d3f898f4.8a8b7",
-        "x": 890,
-        "y": 2100,
+        "x": 960,
+        "y": 2200,
         "wires": [
             [
-                "7f80d5cc.65bd4c",
-                "222f819d.db99ae",
-                "36c06b97.01b3bc"
+                "36c06b97.01b3bc",
+                "67bf66a0.da73a"
             ]
         ]
     },
@@ -1649,8 +1648,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 1030,
-        "y": 2100,
+        "x": 230,
+        "y": 2320,
         "wires": [
             [
                 "6102db5e.a30acc"
@@ -1662,29 +1661,29 @@
         "type": "debug",
         "z": "b4d9dc73.6ac38",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 2020,
+        "x": 470,
+        "y": 2260,
         "wires": []
     },
     {
         "id": "c14b533a.07081",
         "type": "function",
         "z": "b4d9dc73.6ac38",
-        "name": "clear",
-        "func": "delete(msg.headers);\n\nmsg.payload = {\n        billId : msg.billId\n}\n\nreturn msg;",
+        "name": "Responce Ok",
+        "func": "delete(msg.headers);\nmsg.workTime = 'Work time is: ' + (\n    (Date.now() - msg.workStart) / 100\n) + ' msec.';\n\nvar data = {\n    billId : msg.billId\n}\n\nmsg.payload = {\n        result: \"ok\",\n        code: 1200,\n        works : msg.workTime,\n        data: data\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1190,
-        "y": 2160,
+        "x": 920,
+        "y": 2300,
         "wires": [
             [
                 "33908da2.b4cc72"
@@ -1700,8 +1699,8 @@
         "headers": {
             "content-type": "application/json"
         },
-        "x": 1350,
-        "y": 2160,
+        "x": 1070,
+        "y": 2300,
         "wires": []
     },
     {
@@ -1726,10 +1725,11 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 2340,
+        "y": 2600,
         "wires": [
             [
-                "2b6b3c73.993484"
+                "2b6b3c73.993484",
+                "66a3427b.daedf4"
             ]
         ]
     },
@@ -1742,10 +1742,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"actionId\": \"302\",\n    \"branchId\": \"1\",\n    \"code\": \"ws/{{payload.num4}}\",\n    \"creditCode\": \"280954601\",\n    \"creditCodeIBAN\": \"UA223204780000000000280954601\",\n    \"creditInit\": \"280954601\",\n    \"creditName\": \"Банкноти та монети в касі,В № 148\",\n    \"creditState\": \"23697280\",\n    \"currencyTag\": \"\",\n    \"crncyAmount\": \"121.20\",\n    \"dayDate\": \"{{payload.localRevDate}}\",\n    \"payDate\": \"{{payload.localRevDate}}\",\n    \"orgDate\": \"{{payload.localRevDate}}\",\n    \"debitCode\": \"280954601\",\n    \"debitCodeIBAN\": \"UA223204780000000000280954601\",\n    \"debitInit\": \"280954601\",\n    \"debitName\": \"MoneyGram(деб.заб.перека.) В№148\", \n    \"debitState\": \"23697280\",\n    \"info\": \"0\",\n    \"kind\": \"1\",\n    \"mainAmount\": \"121.20\",\n    \"masterId\": \"0\",\n    \"note\": \"Example add document by service\",\n    \"outsideSignType\": \"0\",\n    \"processFlag\": \"0\",\n    \"purpose\": \"Поповнення рахунку Такач Крістіан..,2761526695, зп за Січень 2020р. без ПДВ\",\n    \"sourceCode\": \"320478\",\n    \"targetCode\": \"320478\",\n    \"systemId\": \"808\",\n    \"params\": [\n            {\n                \"listId\" : 6066,\n                \"paramCode\": \"DOCINFO\",\n                \"value\": \"Сидоров Максим;ПАСПОРТ;АА;123456;Главным РУВД Одесса,01/01/1997;24/04/1980;Адрес;0;000000000;\"\n            },\n            {\n                \"listId\" : 263,\n                \"paramCode\": \"CASHINFO\",\n                \"value\": \"Антонов Степан;1212121212;;;;Бубликов ;;\"\n            },\n            {\n                \"listId\" : 28820,\n                \"paramCode\": \"EXT_DOC_ID\",\n                \"value\": \"{{payload.num4}}\"\n            },\n            {\n                \"listId\" : 28821,\n                \"paramCode\": \"EXT_FILE_NAME\",\n                \"value\": \"nr-document.json\"\n            }        \n    ]\n}",
+        "template": "{\n    \"actionId\": \"302\",\n    \"branchId\": \"1\",\n    \"code\": \"ws/{{payload.num4}}\",\n    \"code1\": \"ws/12342\",\n    \"creditCode\": \"280954601\",\n    \"creditCodeIBAN\": \"UA223204780000000000280954601\",\n    \"creditInit\": \"280954601\",\n    \"creditName\": \"Банкноти та монети в касі,В № 148\",\n    \"creditState\": \"23697280\",\n    \"currencyTag\": \"\",\n    \"crncyAmount\": \"121.20\",\n    \"dayDate\": \"{{payload.localRevDate}}\",\n    \"payDate\": \"{{payload.localRevDate}}\",\n    \"orgDate\": \"{{payload.localRevDate}}\",\n    \"debitCode\": \"280954601\",\n    \"debitCodeIBAN\": \"UA223204780000000000280954601\",\n    \"debitInit\": \"280954601\",\n    \"debitName\": \"MoneyGram(деб.заб.перека.) В№148\", \n    \"debitState\": \"23697280\",\n    \"info\": \"0\",\n    \"kind\": \"1\",\n    \"mainAmount\": \"121.20\",\n    \"masterId\": \"0\",\n    \"note\": \"Example add document by service\",\n    \"outsideSignType\": \"0\",\n    \"processFlag\": \"0\",\n    \"purpose\": \"Поповнення рахунку Такач Крістіан..,2761526695, зп за Січень 2020р. без ПДВ\",\n    \"sourceCode\": \"320478\",\n    \"targetCode\": \"320478\",\n    \"systemId\": \"808\",\n    \"params\": [\n            {\n                \"listId\" : 6066,\n                \"paramCode\": \"DOCINFO\",\n                \"value\": \"Сидоров Максим;ПАСПОРТ;АА;123456;Главным РУВД Одесса,01/01/1997;24/04/1980;Адрес;0;000000000;\"\n            },\n            {\n                \"listId\" : 263,\n                \"paramCode\": \"CASHINFO\",\n                \"value\": \"Антонов Степан;1212121212;;;;Бубликов ;;\"\n            },\n            {\n                \"listId\" : 28820,\n                \"paramCode\": \"EXT_DOC_ID\",\n                \"value\": \"{{payload.num4}}\"\n            },\n            {\n                \"listId\" : 28821,\n                \"paramCode\": \"EXT_FILE_NAME\",\n                \"value\": \"nr-document.json\"\n            }        \n    ]\n}",
         "output": "json",
         "x": 440,
-        "y": 2340,
+        "y": 2600,
         "wires": [
             [
                 "11224757.52d539",
@@ -1764,7 +1764,7 @@
         "initialize": "",
         "finalize": "",
         "x": 620,
-        "y": 2340,
+        "y": 2600,
         "wires": [
             [
                 "49dd9b0e.073594"
@@ -1775,17 +1775,17 @@
         "id": "49dd9b0e.073594",
         "type": "http request",
         "z": "b4d9dc73.6ac38",
-        "name": "AddDocuments",
+        "name": "addDocuments",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://localhost:1880/api/monobank/AddDocuments",
+        "url": "http://localhost:1880/api/monobank/addDocuments",
         "tls": "",
         "persist": false,
         "proxy": "",
         "authType": "",
         "x": 800,
-        "y": 2340,
+        "y": 2600,
         "wires": [
             [
                 "afb3ca4.fe9de38"
@@ -1805,8 +1805,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 2380,
+        "x": 830,
+        "y": 2640,
         "wires": []
     },
     {
@@ -1820,8 +1820,8 @@
         "syntax": "mustache",
         "template": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n\t<soapenv:Header/>\n\t<soapenv:Body>\n\t\t<tem:SetConnotationValue>\n\t\t\t<tem:ownerId>{{payload.docId}}</tem:ownerId>\n\t\t\t<tem:listId>{{payload.listId}}</tem:listId>\n\t\t\t<tem:connotationValue>{{payload.value}}</tem:connotationValue>\n\t\t</tem:SetConnotationValue>\n\t</soapenv:Body>\n</soapenv:Envelope>\n",
         "output": "str",
-        "x": 300,
-        "y": 2260,
+        "x": 280,
+        "y": 2500,
         "wires": [
             [
                 "eaa9a46d.10525"
@@ -1838,8 +1838,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 120,
-        "y": 2260,
+        "x": 240,
+        "y": 2460,
         "wires": [
             [
                 "d93c0978.59f158"
@@ -1850,33 +1850,15 @@
         "id": "5a9cd30e.72bf84",
         "type": "http-ntlm-req",
         "z": "b4d9dc73.6ac38",
-        "name": "PRO ConnotationService",
+        "name": "PR ConnotationService",
         "url": "http://10.1.16.2/FP/ScroogeConnotationService.asmx",
         "method": "1",
         "auth": "d3f898f4.8a8b7",
-        "x": 970,
-        "y": 2240,
+        "x": 950,
+        "y": 2480,
         "wires": [
             [
                 "6eccf62e.7e7dd"
-            ]
-        ]
-    },
-    {
-        "id": "286bc357.4ded6c",
-        "type": "function",
-        "z": "b4d9dc73.6ac38",
-        "name": "Set Env",
-        "func": "msg.isRequest = true;\nmsg.workDir = 'DEV';\nmsg.in = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 300,
-        "y": 2100,
-        "wires": [
-            [
-                "5e4c2b7a.1181e4"
             ]
         ]
     },
@@ -1890,8 +1872,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 610,
-        "y": 2260,
+        "x": 590,
+        "y": 2500,
         "wires": [
             [
                 "30cb4888.454298"
@@ -1911,8 +1893,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 770,
-        "y": 2240,
+        "x": 750,
+        "y": 2480,
         "wires": [
             [
                 "5a9cd30e.72bf84"
@@ -1929,8 +1911,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 770,
-        "y": 2280,
+        "x": 750,
+        "y": 2520,
         "wires": [
             [
                 "5d3b5147.2aa59"
@@ -1941,12 +1923,12 @@
         "id": "5d3b5147.2aa59",
         "type": "http-ntlm-req",
         "z": "b4d9dc73.6ac38",
-        "name": "DEV ConnotationService",
+        "name": "PP ConnotationService",
         "url": "http://10.1.15.142/ScroogeWebServices_MB/ScroogeConnotationService.asmx",
         "method": "1",
         "auth": "d3f898f4.8a8b7",
-        "x": 970,
-        "y": 2280,
+        "x": 950,
+        "y": 2520,
         "wires": [
             [
                 "6eccf62e.7e7dd"
@@ -1966,8 +1948,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 2380,
+        "x": 470,
+        "y": 2640,
         "wires": []
     },
     {
@@ -1980,8 +1962,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 770,
-        "y": 2020,
+        "x": 270,
+        "y": 2260,
         "wires": [
             [
                 "222f819d.db99ae"
@@ -1993,13 +1975,13 @@
         "type": "function",
         "z": "b4d9dc73.6ac38",
         "name": "check Result",
-        "func": "if(msg.payload[\"s:Envelope\"][\"s:Body\"][0].AddDocumentResponse !== undefined) {\n    msg.billId = msg.payload[\"s:Envelope\"][\"s:Body\"][0].AddDocumentResponse[0].AddDocumentResult[0];\n    msg.payload = {\n        billId : msg.billId\n    }\n    return msg;\n}    \nelse {\n    node.error('Error !!!!!', msg);\n}    \n",
+        "func": "if(msg.payload[\"s:Envelope\"][\"s:Body\"][0].AddDocumentResponse !== undefined) {\n    msg.billId = msg.payload[\"s:Envelope\"][\"s:Body\"][0].AddDocumentResponse[0].AddDocumentResult[0];\n    msg.payload = {\n        billId : msg.billId\n    }\n    return msg;\n}    \nelse {\n    node.error('Документ не создан', msg);\n}    \n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1182,
-        "y": 2100,
+        "x": 430,
+        "y": 2320,
         "wires": [
             [
                 "38e80ccc.09b54c"
@@ -2017,7 +1999,7 @@
         "initialize": "",
         "finalize": "",
         "x": 280,
-        "y": 2340,
+        "y": 2600,
         "wires": [
             [
                 "de573279.ff66a"
@@ -2037,8 +2019,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1150,
-        "y": 2020,
+        "x": 1170,
+        "y": 2160,
         "wires": []
     },
     {
@@ -2052,8 +2034,8 @@
         "syntax": "mustache",
         "template": "{\n    \"requestRef\": \"{{payload.requestRef}}\",\n    \"processMode\": \"sync\",\n    \"data\": {\n        \"documents\": [\n            {\n                \"externalId\": \"1233349\",\n                \"branchId\": 1000148,\n                \"debit\": {\n                    \"stateCode\": \"23697280\",\n                    \"name\": \"MoneyGram(деб.заб.перека.) В№148\",\n                    \"iban\": \"UA223204780000000000280954601\",\n                    \"code\": \"2809     46015.980.148\",\n                    \"bankCode\": \"320478\",\n                    \"init\": \"2809     46015\"\n                },\n                \"credit\": {\n                    \"stateCode\": \"23697280\",\n                    \"name\": \"Банкноти та монети в касі,В № 148\",\n                    \"iban\": \"UA223204780000000000280954601\",\n                    \"code\": \"1002     41010.980.148\",\n                    \"bankCode\": \"320478\",\n                    \"init\": \"1002     41010\"\n                },\n                \"currencyTag\": \"\",\n                \"mainAmount\": 200,\n                \"crncyAmount\": 200,\n                \"actionId\": 302,\n                \"documentState\": 0,\n                \"kind\": 18,\n                \"code\": \"sw/04mg/{{payload.num4}}\",\n                \"purpose\": \"Виплата грошового переказу по системі MoneyGram\",\n                \"orgDate\": \"{{payload.localISODateTime}}\",\n                \"dayDate\": \"{{payload.localISODateTime}}\",\n                \"extDate\": \"{{payload.localISODateTime}}\",\n                \"payDate\": \"{{payload.localISODateTime}}\",\n                \"operDate\": \"{{payload.localISODateTime}}\",\n                \"note\": \"Note Виплата грошового переказу по системі MoneyGram\",\n                \"info\": \"Info Виплата грошового переказу по системі MoneyGram\",\n                \"ctrls\": \"61\",\n                \"signs\": [],\n                \"connotations\": [\n                    {\n                        \"paramCode\": \"EXT_DOC_ID\",\n                        \"code\": \"3211234\"\n                    },\n                    {\n                        \"paramCode\": \"EXT_FILE_NAME\",\n                        \"code\": \"transgen.api\"\n                    },\n                    {\n                        \"paramCode\": \"SENDERINFO\",\n                        \"info\": \"Баранкин Олег;ПАСПОРТ;АА;121212;Выдан,06/12/2000;19/04/2000;Адресс;0;000000000;\"\n                    },\n                    {\n                        \"paramCode\": \"DOCINFO\",\n                        \"info\": \"Сидоров Максим;ПАСПОРТ;АА;123456;Главным РУВД Одесса,01/01/1997;24/04/1980;Адрес;0;000000000;\"\n                    },\n                    {\n                        \"paramCode\": \"CASHINFO\",\n                        \"info\": \"Антонов Степан;1212121212;;;;Бубликов ;;\"\n                    },\n                    {\n                        \"paramCode\": \"UGB_D060\",\n                        \"code\": \"04\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
         "output": "json",
-        "x": 120,
-        "y": 2420,
+        "x": 320,
+        "y": 2640,
         "wires": [
             []
         ]
@@ -2079,7 +2061,7 @@
         "id": "3e863d11.4196a2",
         "type": "switch",
         "z": "b4d9dc73.6ac38",
-        "name": "",
+        "name": "isRequest",
         "property": "isRequest",
         "propertyType": "msg",
         "rules": [
@@ -2090,7 +2072,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 260,
+        "x": 240,
         "y": 1960,
         "wires": [
             [
@@ -2107,21 +2089,22 @@
         "headers": {
             "content-type": "application/json"
         },
-        "x": 520,
+        "x": 630,
         "y": 1960,
-        "wires": []
+        "wires": [],
+        "info": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
     },
     {
         "id": "238cf254.47912e",
         "type": "function",
         "z": "b4d9dc73.6ac38",
-        "name": "clear",
-        "func": "delete(msg.headers);\n\nreturn msg;",
+        "name": "Responce Error 1401",
+        "func": "delete(msg.headers);\nmsg.workTime = 'Work time is: ' + (\n    (Date.now() - msg.workStart) / 100\n) + ' msec.';\n\nvar data = msg.payload;\n\nmsg.payload = {\n        result: \"no\",\n        code: 1401,\n        works : msg.workTime,\n        error: data,\n        data: {}\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 400,
+        "x": 440,
         "y": 1960,
         "wires": [
             [
@@ -2133,7 +2116,7 @@
         "id": "682f31b4.9f1aa",
         "type": "switch",
         "z": "b4d9dc73.6ac38",
-        "name": "",
+        "name": "isRequest",
         "property": "isRequest",
         "propertyType": "msg",
         "rules": [
@@ -2144,8 +2127,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1190,
-        "y": 2200,
+        "x": 900,
+        "y": 2340,
         "wires": [
             [
                 "c14b533a.07081"
@@ -2156,14 +2139,14 @@
         "id": "38e80ccc.09b54c",
         "type": "function",
         "z": "b4d9dc73.6ac38",
-        "name": "params",
+        "name": "connotationParams",
         "func": "msg.payload = msg.in.params;\nif(msg.payload !== undefined && msg.payload.length>0) {\n    return [msg, null];\n} else \n    return [null, msg];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 300,
-        "y": 2140,
+        "x": 630,
+        "y": 2320,
         "wires": [
             [
                 "e80ecbae.29282"
@@ -2177,14 +2160,14 @@
         "id": "e80ecbae.29282",
         "type": "function",
         "z": "b4d9dc73.6ac38",
-        "name": "",
+        "name": ">>>",
         "func": "\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 120,
-        "y": 2200,
+        "x": 230,
+        "y": 2380,
         "wires": [
             [
                 "7b027865.6a81"
@@ -2202,8 +2185,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 260,
-        "y": 2200,
+        "x": 410,
+        "y": 2380,
         "wires": [
             [
                 "ebba28d6.8f07d",
@@ -2227,8 +2210,8 @@
         "timeout": "",
         "count": "",
         "reduceRight": false,
-        "x": 1310,
-        "y": 2260,
+        "x": 890,
+        "y": 2380,
         "wires": [
             [
                 "682f31b4.9f1aa",
@@ -2247,7 +2230,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1170,
-        "y": 2260,
+        "y": 2500,
         "wires": [
             [
                 "1c62ce81.5484c9"
@@ -2266,8 +2249,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 2320,
+        "x": 1050,
+        "y": 2380,
         "wires": []
     },
     {
@@ -2280,8 +2263,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 480,
-        "y": 2260,
+        "x": 460,
+        "y": 2500,
         "wires": [
             [
                 "25174ac7.4a8fe6"
@@ -2300,9 +2283,265 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
-        "y": 2200,
+        "x": 590,
+        "y": 2380,
         "wires": []
+    },
+    {
+        "id": "9dc2456f.c17f4",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 590,
+        "y": 2180,
+        "wires": [
+            [
+                "a49049e9.825e48"
+            ],
+            [
+                "26e98496.c62f8c"
+            ]
+        ]
+    },
+    {
+        "id": "317a6e2.32b6692",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "DEV Set Env",
+        "func": "msg.isRequest = true;\nmsg.workDir = 'DEV';\nmsg.in = msg.payload;\nmsg.workStart = Date.now();\n\nmsg.hosts = {};\nmsg.hosts.PRO = 'kv-v-is1-pr';\nmsg.hosts.DEV = 'kv-v-is3-pp';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 2120,
+        "wires": [
+            [
+                "8ca1cba7.129a98"
+            ]
+        ]
+    },
+    {
+        "id": "67bf66a0.da73a",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": ">>>",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1170,
+        "y": 2200,
+        "wires": [
+            [
+                "7f80d5cc.65bd4c"
+            ]
+        ]
+    },
+    {
+        "id": "a504d3cb.2cf788",
+        "type": "http-ntlm-req",
+        "z": "b4d9dc73.6ac38",
+        "name": "PR ScroogeIBankingService",
+        "url": "http://10.1.16.2/FP/ScroogeIBankingService.svc",
+        "method": "1",
+        "auth": "d3f898f4.8a8b7",
+        "x": 960,
+        "y": 2160,
+        "wires": [
+            [
+                "67bf66a0.da73a",
+                "36c06b97.01b3bc"
+            ]
+        ]
+    },
+    {
+        "id": "a49049e9.825e48",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Headers PR",
+        "func": "msg.headers['Host'] = 'kv-v-is1-pr';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 750,
+        "y": 2160,
+        "wires": [
+            [
+                "a504d3cb.2cf788"
+            ]
+        ]
+    },
+    {
+        "id": "26e98496.c62f8c",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Headers PP",
+        "func": "msg.headers['Host'] = 'kv-v-is3-pp';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 750,
+        "y": 2200,
+        "wires": [
+            [
+                "93d1c6fe.68f0f8"
+            ]
+        ]
+    },
+    {
+        "id": "4aff8e72.72052",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "a9c4ddbb.6fac98",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "clog",
+        "func": "msg.headers = {};\nmsg.headers['x-auth-token'] = 'PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8';\njs = JSON.stringify(msg.payload);\nmsg.payload = \n{\n    log: {\n        level   : 'DEBUG',\n        source  : 'mono adddoc begin ',\n        message : js,\n        payload : js\n    }    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 590,
+        "y": 2040,
+        "wires": [
+            [
+                "2e0fb09d.44484"
+            ]
+        ]
+    },
+    {
+        "id": "2e0fb09d.44484",
+        "type": "http request",
+        "z": "b4d9dc73.6ac38",
+        "name": "clog",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://nr-clients.dev.ukrgasaws.com/common/logger/clilog",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 730,
+        "y": 2040,
+        "wires": [
+            [
+                "b0354549.b76c3"
+            ]
+        ]
+    },
+    {
+        "id": "b0354549.b76c3",
+        "type": "debug",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "5487877c.4bef68",
+        "type": "catch",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "scope": [
+            "a504d3cb.2cf788",
+            "93d1c6fe.68f0f8",
+            "5a9cd30e.72bf84",
+            "5d3b5147.2aa59"
+        ],
+        "uncaught": false,
+        "x": 90,
+        "y": 2000,
+        "wires": [
+            [
+                "c4713a66.4b4e8"
+            ]
+        ]
+    },
+    {
+        "id": "c4713a66.4b4e8",
+        "type": "switch",
+        "z": "b4d9dc73.6ac38",
+        "name": "isRequest",
+        "property": "isRequest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 240,
+        "y": 2000,
+        "wires": [
+            [
+                "39eb8d9e.7ebeb2"
+            ]
+        ]
+    },
+    {
+        "id": "39eb8d9e.7ebeb2",
+        "type": "function",
+        "z": "b4d9dc73.6ac38",
+        "name": "Responce Error 1501",
+        "func": "delete(msg.headers);\nmsg.workTime = 'Work time is: ' + (\n    (Date.now() - msg.workStart) / 100\n) + ' msec.';\n\nvar data = msg.payload;\n\nmsg.statusCode = 501;\n\nmsg.payload = {\n        result: \"error\",\n        code: 1501,\n        works : msg.workTime,\n        error: data,\n        data: {}\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 2000,
+        "wires": [
+            [
+                "a4b16554.002f8"
+            ]
+        ]
+    },
+    {
+        "id": "a4b16554.002f8",
+        "type": "http response",
+        "z": "b4d9dc73.6ac38",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 630,
+        "y": 2000,
+        "wires": [],
+        "info": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
     },
     {
         "id": "13b7eb2a.55c245",
