@@ -1,0 +1,50 @@
+{
+    "person": {
+        "inn": "3466311096",
+        "sex": "M",
+        "type": "physical",
+        "phone": "+380967850262",
+        "birthDay": "26.11.1994",
+        "flagPEPs": "0",
+        "lastName": "Клименко",
+        "firstName": "Дмитро",
+        "middleName": "Валерійович",
+        "flagTopLevelRisk": "0",
+        "addresses": [
+            {
+                "area": "",
+                "city": "ДНІПРО",
+                "type": "factual",
+                "state": "ДНІПРОПЕТРОВСЬКА",
+                "flatNo": "27",
+                "street": "СІЧОВИХ СТРІЛЬЦІВ",
+                "country": "UA",
+                "houseNo": "27"
+            },
+            {
+                "area": "",
+                "city": "ДНІПРО",
+                "type": "juridical",
+                "state": "ДНІПРОПЕТРОВСЬКА",
+                "flatNo": "27",
+                "street": "СІЧОВИХ СТРІЛЬЦІВ",
+                "country": "UA",
+                "houseNo": "27"
+            }
+        ],
+        "documents": [
+            {
+                "type": "passport",
+                "issue": "БАБУШКІНСЬКИМ РВДМУГУМВС УКРАЇНИ В ДНІПРОПЕТРОВСЬКІЙ ОБЛ.",
+                "number": "936555",
+                "series": "АН",
+                "typeName": "",
+                "dateIssue": "11.01.2011",
+                "dateExpiration": "",
+                "issueCountryIso2": "UA"
+            }
+        ]
+    },
+    "timestamp": "1620323622669",
+    "merchant_name": "digital_ind_test"
+}

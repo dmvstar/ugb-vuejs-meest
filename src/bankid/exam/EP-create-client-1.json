@@ -1,0 +1,40 @@
+{
+    "person": {
+        "type": "physical",
+        "lastName": "Віслоух",
+        "firstName": "Антон",
+        "middleName": "Олександрович",
+        "inn": "1232132165",
+        "birthDay": "01.08.1987",
+        "sex": "M",
+        "phone": "380638946683"
+    },
+    "extends": {},
+    "addresses": [
+        {
+            "type": "juridical",
+            "country": "Ук",
+            "state": "",
+            "area": "",
+            "city": "Київ",
+            "street": "Олеся Гончара",
+            "houseNo": "74А",
+            "flatNo": "43"
+        }
+    ],
+    "documents": [
+        {
+            "type": "passport",
+            "typeName": "",
+            "series": "ТТ",
+            "number": "317878",
+            "issue": "Шевченківським РВ ГУ ДМС України в місті Києві",
+            "dateIssue": "10.12.2015",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "nocallback": "http://localhost:1880/openbanking/bankid/client/callback",
+    "timestamp": "1617781159190",
+    "merchant_name": "bankid_easypay"
+}

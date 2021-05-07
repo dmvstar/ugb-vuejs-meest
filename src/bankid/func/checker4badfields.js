@@ -1,4 +1,4 @@
-//@what checker4badfields.js ver. 0.0.2
+//@what checker4badfields.js ver. 0.0.3
 var error = false;
 
 var regDate = "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$"
@@ -11,11 +11,13 @@ var regSDocsAll = "^(паспорт|passport|idpassport|zpassport|ident)$";
 
 var checkDate = "";
 var inn = msg.in.bankid_cli.person.inn;
+var cli = msg.in.bankid_cli;
+
 var mess = "У Клиента ["+
-msg.in.bankid_cli.person.inn+"]["
-+msg.in.bankid_cli.person.lastName + " "
-+msg.in.bankid_cli.person.firstName + " "
-+msg.in.bankid_cli.person.middleName+"]";
+cli.person.inn+"] ("
++cli.person.lastName + " "
++cli.person.firstName + " "
++cli.person.middleName+")";
 var details = "Error in checker4badfields.js..."
 
 
@@ -31,7 +33,7 @@ if( regPass.test(msg.in.bankid_cli.person.inn) |
     msg.in.bankid_cli.person.inn = '0000000000';
 }
 
-if( msg.in.bankid_cli.addresses.length === 0 ) {
+if( msg.in.bankid_cli.addresses === undefined || msg.in.bankid_cli.addresses.length === 0 ) {
     msg.errorCodeRe = 1430;
     mess += " Не задано ни одного адреса"
     msg.payload.result = "error";
@@ -40,7 +42,7 @@ if( msg.in.bankid_cli.addresses.length === 0 ) {
     error = true;
 } 
 
-if( msg.in.bankid_cli.documents.length === 0 ) {
+if( msg.in.bankid_cli.documents === undefined || msg.in.bankid_cli.documents.length === 0 ) {
     msg.errorCodeRe = 1440;
     mess += " Не задано ни одного документа"
     msg.payload.result = "error";

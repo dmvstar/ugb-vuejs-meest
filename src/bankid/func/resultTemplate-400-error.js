@@ -10,6 +10,9 @@ var errorCode = 1402;
 var result = 'error';
 var data = {};
 var error = msg.payload;
+if(msg.error !== undefined)
+    error = msg.error;
+
 
 var message = "Ошибка формата...";
 var details = "Error... Reply 400 error bad fmt or field";
