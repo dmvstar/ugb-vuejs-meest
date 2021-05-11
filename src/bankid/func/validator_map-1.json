@@ -1,0 +1,52 @@
+{
+    "type": "Object",
+    "needed": true,
+    "contents": {
+        "inn": {
+            "type": "String",
+            "needed": true,
+            "express": "(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)",
+            "message": "Ошибка формата поля ИНН"
+        },
+        "sex": {
+            "type": "String",
+            "needed": true,
+            "express": "^[MFЧЖ]$",
+            "message": "Ошибка формата поля ПОЛ"
+        },
+        "friend": {
+            "type": "Object",
+            "needed": true,
+            "contents": {
+                "inn": {
+                    "type": "String",
+                    "needed": true,
+                    "express": "(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)",
+                    "message": "Ошибка формата поля ИНН"
+                },
+                "sex": {
+                    "type": "String",
+                    "needed": true,
+                    "express": "^[MFЧЖ]$",
+                    "message": "Ошибка формата поля ПОЛ"
+                }
+            }
+        },
+        "friendArray": {
+            "type": "Array",
+            "needed": true,
+            "contents": {
+                "type": "Object",
+                "needed": true,
+                "contents": {
+                    "inn": {
+                        "type": "String",
+                        "needed": true,
+                        "express": "(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)",
+                        "message": "Ошибка формата поля ИНН"
+                    }
+                }
+            }
+        }
+    }
+}

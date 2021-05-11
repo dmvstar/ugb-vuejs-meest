@@ -1,0 +1,108 @@
+{
+    "type": "Object",
+    "needed": true,
+    "contents": {
+        "person": {
+            "type": {
+                "example": "physical1",
+                "type": "String",
+                "needed": true,
+                "express": "[physical1]",
+                "message": "Ошибка формата поля "
+            },
+            "inn": {
+                "example": "2123432343",
+                "type": "String",
+                "needed": true,
+                "express": "(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)",
+                "message": "Ошибка формата поля ИНН"
+            },
+            "sex": {
+                "example": "F",
+                "type": "String",
+                "needed": true,
+                "express": "^[MFЧЖ]$",
+                "message": "Ошибка формата поля ПОЛ"
+            },
+            "birthDay": {
+                "example": "10.09.1977",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            },
+            "lastName": {
+                "example": "Кетцалькоатль",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            },
+            "firstName": {
+                "example": "Кукумац",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            },
+            "middleName": {
+                "example": "Кукулькан",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            },
+            "phone": {
+                "example": "380631003256",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            },
+            "email": {
+                "example": "sava@mail.dot.com",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            },
+            "web": {
+                "example": "www.www.net",
+                "type": "String",
+                "needed": true,
+                "express": "^$",
+                "message": "Ошибка формата поля "
+            }
+        },
+        "documents": {
+            "type": "Array",
+            "needed": true,
+            "contents": {
+                "type": {
+                    "example": "паспортф"
+                },
+                "dateIssue": {
+                    "example": "49.07.1995"
+                },
+                "typeName": {
+                    "example": "Паспорт"
+                },
+                "series": {
+                    "example": "СН"
+                },
+                "number": {
+                    "example": "432311"
+                },
+                "issue": {
+                    "example": "Святошинське РУ ГУ МВС у м.Києві"
+                },
+                "dateExpiration": {
+                    "example": ""
+                },
+                "issueCountryIso2": {
+                    "example": "UA"
+                }
+            }
+        }
+    }
+}
