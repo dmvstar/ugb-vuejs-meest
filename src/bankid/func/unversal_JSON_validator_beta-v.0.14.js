@@ -79,6 +79,7 @@ function validateArray(arrField, arrMap, path) { // node.error("validateArray st
 function validateElement(element, elemMap, path) {
     // node.error("validateElement start");
     // node.error(path);
+    //console.log('   ',path);
     let reply;
     // check if empty and required
     let checkPresenseReply = checkPresense(element, elemMap, path);
@@ -127,7 +128,7 @@ function checkPresense(field, fieldMap, path) {
 // --------------------------------------------------------------------------------------
 
 var testNum = 0;
-var datas = [1,2]
+var datas = [2]
 
 if (!isLocalWork) {
     validateData = msg.validateData;
