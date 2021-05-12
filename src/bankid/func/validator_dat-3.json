@@ -23,7 +23,7 @@
     "addresses": [
         {
             "type": "factual",
-            "country": "Ук",
+            "country": "UA",
             "state": "Київська",
             "area": "",
             "city": "Буча",
@@ -39,7 +39,7 @@
             "city": "Буча",
             "street": "Шухевича Романа",
             "houseNo": "1Г",
-            "flatNo": ""
+            "flatNo": "2Ф"
         }
     ],
     "documents": [

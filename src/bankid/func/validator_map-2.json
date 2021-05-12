@@ -143,6 +143,72 @@
                     }
                 }
             }
-        }
+        },
+        "addresses": {
+            "type": "Array",
+            "needed": true,
+            "contents": {
+                "type": "Object",
+                "needed": true,
+                "contents": {
+                    "type": {
+                        "example": "factual",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^(factual|juridical)$",
+                        "message": "Ошибка формата адреса, поле Тип"
+                    },
+                    "country":{
+                        "example": "Ук",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^[A-ZА-яЇїІіЄєҐґ́i][A-ZА-яЇїІіЄєҐґ́i]$",
+                        "message": "Ошибка формата адреса, поле Страна"
+                    },
+                    "state": {
+                        "example":"Київська",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
+                        "message": "Ошибка формата адреса, поле Область"
+                    },
+                    "area": {
+                        "example":"Київ",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
+                        "message": "Ошибка формата адреса, поле Район"
+                    },
+                    "city": {
+                        "example":"м. Київ",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
+                        "message": "Ошибка формата адреса, поле Нас пункт"
+                    },
+                    "street": {
+                        "example":"вул. Бородинского побоища",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
+                        "message": "Ошибка формата адреса, поле Улица"
+                    },
+                    "houseNo": {
+                        "example":"21",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^()([0-9А-я]*)$",
+                        "message": "Ошибка формата адреса, поле Дом"
+                    },
+                    "flatNo": {
+                        "example":"16",
+                        "type": "String",
+                        "needed": true,
+                        "express": "^()([0-9А-я]*)$",
+                        "message": "Ошибка формата адреса, поле Помещение"
+                    }
+                }    
+            }    
+        }    
     }
 }
