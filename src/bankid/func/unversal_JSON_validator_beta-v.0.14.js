@@ -99,7 +99,8 @@ function testElement(nonObjField, fieldMap, path) {
     let regexp = new RegExp(fieldMap.express);
     let reply = {
         "ok": false,
-        "path": path
+        "path": path,
+        "value" : nonObjField
     } // test meybe || (nonObjField === undefined || nonObjField === null) is not needed
     if (regexp.test(nonObjField)) {
         ok = true;
@@ -128,7 +129,7 @@ function checkPresense(field, fieldMap, path) {
 // --------------------------------------------------------------------------------------
 
 var testNum = 0;
-var datas = [2]
+var datas = [1,2,3];
 
 if (!isLocalWork) {
     validateData = msg.validateData;
@@ -136,10 +137,11 @@ if (!isLocalWork) {
     msg.payload = validate(validateData, validateMapa, path);
     return msg;
 } else {
+    var validateMapaPath = './validator_map-2.json'
     for (t of datas) {
         testNum = t;
         var validateDataPath = './validator_dat-' + testNum + '.json'
-        var validateMapaPath = './validator_map-' + testNum + '.json'
+        // validateMapaPath = './validator_map-' + testNum + '.json'
         validateData = require(validateDataPath);
         validateMapa = require(validateMapaPath);
         msg.payload = validate(validateData, validateMapa, path);
