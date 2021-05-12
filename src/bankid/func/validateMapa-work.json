@@ -65,7 +65,8 @@ vBImapa
                 "needed" : true,
                 "express":"^(factual|juridical)$",
                 "message": "Ошибка формата адреса, поле type"
-            }
+            },
+            
         }
     ]
 }

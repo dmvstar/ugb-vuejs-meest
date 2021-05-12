@@ -99,6 +99,16 @@ if( msg.in.bankid_cli.documents === undefined || msg.in.bankid_cli.documents.len
     }
 }
 
+if( msg.in.bankid_cli.extends === undefined ) {
+    msg.errorCodeRe = 1454;
+    mess += " Не задан блок extends"
+    msg.payload.result = "error";
+    msg.payload.message = mess;
+    msg.payload.details = details;
+    error = true;
+}
+
+
 if( msg.in.bankid_cli.person.phone === undefined ) {
     msg.errorCodeRe = 1450;
     mess += " Не задан номер телефона"
