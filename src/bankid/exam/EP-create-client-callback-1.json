@@ -1,0 +1,50 @@
+{
+  "person": {
+    "inn": "3481811693",
+    "sex": "M",
+    "type": "physical",
+    "phone": "380987999866",
+    "birthDay": "30.04.1995",
+    "lastName": "КОНДРАТЮК",
+    "firstName": "ОЛЕКСАНДР",
+    "middleName": "СЕРГІЙОВИЧ"
+  },
+  "extends": {},
+  "callback": "https://bank.easypay.ua/api/issuer/client/confirm/45e12368-b0d8-4bcc-9e2c-055ab238d7c5",
+  "addresses": [
+    {
+      "area": "РІВНЕНСЬКИЙ РАЙОН",
+      "city": "С.ЗОЗІВ",
+      "type": "factual",
+      "state": "РІВНЕНСЬКА ОБЛАСТЬ",
+      "flatNo": "",
+      "street": "ВИШНЕВА",
+      "country": "UA",
+      "houseNo": "4"
+    },
+    {
+      "area": "РІВНЕНСЬКИЙ РАЙОН",
+      "city": "С.ЗОЗІВ",
+      "type": "juridical",
+      "state": "РІВНЕНСЬКА ОБЛАСТЬ",
+      "flatNo": "",
+      "street": "ВИШНЕВА",
+      "country": "UA",
+      "houseNo": "4"
+    }
+  ],
+  "documents": [
+    {
+      "type": "idpassport",
+      "issue": "5624",
+      "number": "000505776",
+      "series": "",
+      "typeName": "id-картка",
+      "dateIssue": "27.04.2017",
+      "dateExpiration": "27.04.2027",
+      "issueCountryIso2": "UA"
+    }
+  ],
+  "timestamp": "1620989845953",
+  "merchant_name": "easypay_test"
+}

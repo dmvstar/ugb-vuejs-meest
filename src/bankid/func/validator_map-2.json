@@ -81,16 +81,16 @@
         "documents": {
             "type": "Array",
             "needed": true,
-            "contents": {
+            "content": {
                 "type": "Object",
                 "needed": true,
-                "contents": {
+                "properties": {
                     "type": {
                         "example": "паспорт",
                         "type": "String",
                         "needed": true,
                         "express": "^(паспорт|passport|idpassport)$",
-                        "message": "Ошибка формата паспорта, поле Тип"
+                        "name": "Ошибка формата паспорта, поле Тип"
                     },
                     "dateIssue": {
                         "example": "01.07.1995",
