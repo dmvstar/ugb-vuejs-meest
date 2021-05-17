@@ -55,33 +55,52 @@
                     lazy-validation
                     ref="form">
                       <v-text-field
-                        label="Пользователь"
-                        name="login"
-                        v-model="user.username"
-                        placeholder="Введите имя пользователя"
+                        label="Отправитель"
+                        name="sender"
+                        v-model="mail.sender"
+                        placeholder="Введите e-mail отправителя"
                         prepend-icon="mdi-account"
+                        type="text"
+                        :rules="emailRules"
+                        required
+                      ></v-text-field>
+
+                      <v-text-field
+                        label="Получатель"
+                        name="recevier"
+                        v-model="mail.recevier"
+                        placeholder="Введите e-mail получаткля"
+                        prepend-icon="mdi-account"
+                        type="text"
+                        :rules="emailRules"
+                        required
+                      ></v-text-field>
+
+                      <v-text-field
+                        label="тема"
+                        name="subject"
+                        v-model="mail.subject"
+                        placeholder="Введите тему сообщения"
+                        prepend-icon="mdi-email"
                         type="text"
                         :rules="[loginRules.required, loginRules.min]"
                         required
                       ></v-text-field>
 
-                      <v-text-field
-                        id="password"
-                        v-model="user.password"
-                        placeholder="Введите пароль"
-                        label="Пароль"
-                        name="password"
+                    <v-textarea
+                      name="message"
+                      v-model="mail.message"
+                      filled
+                      label="сообщение"
+                      prepend-icon="mdi-email"
+                      auto-grow
+                      required
+                      :rules="[loginRules.required, loginRules.min]"
+                      clearable
+                      clear-icon="mdi-close-circle"
+                      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+                    ></v-textarea>
 
-                        prepend-icon="mdi-lock"
-                        :type="show1 ? 'text' : 'password'"
-                        @click:append="show1 = !show1"
-                        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                        :rules="[passwordRules.required, passwordRules.min]"
-                        min
-                      ></v-text-field>
-                      <!--
-                      :rules="[passwordRules.required, passwordRules.min]"
-                    -->
                     <h3 v-if="formError == true" class="mx-auto yellow--text text--darken-2">{{formMessage}}</h3>
                     </v-form>
                   </v-card-text>
@@ -122,12 +141,6 @@
           },
         }
       ),
-      computed : {
-          user_username : function(){
-              //alert("user_username "+this.user.username);
-              return this.user.username;
-          },
-      },
 
       methods:{
         resetForm: function(){
@@ -140,34 +153,17 @@
 
         submitForm: function(){
           if(this.$refs.form.validate()) {
-            this.checkLogin();
+            this.sendEmail();
           } else {
             this.verify = false;
             this.valid = false;
           }
         },
 
-        checkLogin: function(){
+        sendEmail: function(){
 
-           if(this.count==3) {
-             this.formError = false;
-             window.open("index.html","_self");
-           } else {
-             this.count++;
-             this.formError = true;
-             this.formMessage = "Логин не верен, осталось ("+(3-this.count)+") попытки."
-           }
+          alert('sendEmail');
 
-        }
-      },
-
-      watch: {
-        user_username: function(newQuestion, oldQuestion) {
-          //alert("1user_username "+ newQuestion+" "+this.verify);
-          if(newQuestion && newQuestion.length>0)
-            this.verify = true;
-          //alert("user_username "+(newQuestion)+" "+this.verify);
-          //alert("2user_username "+ newQuestion+" "+this.verify);
         }
       },
 
@@ -179,13 +175,15 @@
         verify: true,
         valid: false,
 
-        user: {
-          username: null,
-          password: null
+        mail: {
+          sender: null,
+          receiver: null,
+          subject: null,
+          message: null
         },
-        show1: false,
+
         emailRules: [
-          v => !!v || "Required",
+          v => !!v || "Поле обязательно",
           v => /.+@.+\..+/.test(v) || "E-mail must be valid"
         ],
 
