@@ -28,7 +28,7 @@
               >
                 <v-card class="elevation-12">
                   <v-toolbar
-                    color="error"
+                    color="blue"
                     dark
                     flat
                   >
@@ -67,8 +67,8 @@
 
                       <v-text-field
                         label="Получатель"
-                        name="recevier"
-                        v-model="mail.recevier"
+                        name="receiver"
+                        v-model="mail.receiver"
                         placeholder="Введите e-mail получаткля"
                         prepend-icon="mdi-account"
                         type="text"
@@ -160,11 +160,58 @@
           }
         },
 
-        sendEmail: function(){
+        sendEmail: async function(){
+          await this.exequteRequest();
+        },
 
-          alert('sendEmail');
+        exequteRequest: async function() {
+          this.loading = true;
+          var headers = {
+                    "accept": "application/json", 
+                    "Content-Type": "application/json"
+          };
+          var realUrl = "https://script.google.com/macros/s/AKfycby-I5oQj_cokcyd_1o-AERESvy9saA_IbuSueSn09DpaxqzAt9DPY6oo6LtpKRwcBsjvw/exec";
+              realUrl = "https://script.google.com/macros/s/AKfycby-I5oQj_cokcyd_1o-AERESvy9saA_IbuSueSn09DpaxqzAt9DPY6oo6LtpKRwcBsjvw/exec";
+          var result = {};
 
-        }
+          var request = {
+//            data-email : "dmvstar.devel@gmail.com",
+            email: this.mail.receiver,
+            subject: this.mail.subject,
+            message: this.mail.message,
+          };
+          alert('Send ' + JSON.stringify(request, null, ' ') + ' ');
+          const requestOptions = {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify(request)
+          };
+
+          await fetch(realUrl, requestOptions)
+            .then(async response => {
+              const bdata = await response.text();
+              this.loading = false;
+              //result = decodeURIComponent(escape(atob(bdata)));
+              const data = JSON.parse(bdata);
+              this.result = data;
+              if(this.result.length > 0) {
+              }
+              if (!response.ok) {
+                  this.loading = false;
+                  // get error message from body or default to response statusText
+                  const error = (data && data.message) || response.statusText;
+                  this.error = error;
+                  alert('E1 exequteRequest ' + JSON.stringify(response, null, ' ') + ' ');
+                  return Promise.reject(error);
+              }
+          })
+          .catch(error => {
+              this.loading = false;
+              this.error = error;
+              alert("E2 exequteRequest" + error);
+          });
+          return result;
+        }, 
       },
 
       data: function () { return {
@@ -174,12 +221,13 @@
         formMessage: "Логин не верен",
         verify: true,
         valid: false,
+        loading: false,
 
         mail: {
-          sender: null,
-          receiver: null,
-          subject: null,
-          message: null
+          sender: "dmvstar.devel@gmail.com",
+          receiver: "dmvstar@gmail.com",
+          subject: "Test gs",
+          message: "Test message"
         },
 
         emailRules: [
