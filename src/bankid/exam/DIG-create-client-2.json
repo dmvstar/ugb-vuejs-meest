@@ -1,0 +1,524 @@
+{
+  "person": {
+    "inn": "3521113190",
+    "sex": "M",
+    "type": "physical",
+    "phone": "+380986729322",
+    "birthDay": "27.05.1996",
+    "lastName": "Острянин",
+    "firstName": "Сергій",
+    "middleName": "Олександрович"
+  },
+  "extends": null,
+  "addresses": [
+    {
+      "area": "",
+      "city": "Дніпро",
+      "type": "juridical",
+      "state": "Дніпропетровська",
+      "flatNo": "57",
+      "street": "Миру",
+      "country": "UA",
+      "houseNo": "71"
+    }
+  ],
+  "documents": [
+    {
+      "type": "idpassport",
+      "issue": "1213",
+      "number": "003286686",
+      "typeName": "",
+      "dateIssue": "24.04.2019",
+      "dateExpiration": "",
+      "issueCountryIso2": "UA"
+    }
+  ],
+  "timestamp": "1620914231713",
+  "merchant_name": "digital_ind_test"
+}
+
+
+
+
+{
+    "code": 1200,
+    "data": {
+      "docs": {},
+      "info": {
+        "inn": "3521113190",
+        "scId": "3385603",
+        "smti": {
+          "smStates": [
+            {
+              "Date": "2021-05-13T19:32:24.073Z",
+              "Info": "Новий",
+              "SmName": "Процес Ідентифікаці клієнтів ФО",
+              "Source": "log",
+              "StateCode": "NEW_CLIENT",
+              "StateName": "Новий"
+            },
+            {
+              "Date": "2021-05-13T19:32:35.787Z",
+              "Info": "Актуальний згідно даних BankId",
+              "SmName": "Процес Ідентифікаці клієнтів ФО",
+              "Source": "log",
+              "StateCode": "COMPLETE_CLIENT",
+              "StateName": "Підтверджений, актуальний"
+            },
+            {
+              "Date": "2021-05-13T19:32:35.850Z",
+              "Info": "Підтверджений, актуальний",
+              "SmName": "Процес Ідентифікаці клієнтів ФО",
+              "Source": "state",
+              "StateCode": "COMPLETE_CLIENT",
+              "StateName": "Підтверджений, актуальний"
+            }
+          ],
+          "terCheck": "0"
+        },
+        "wbId": 3433850,
+        "scCode": "UGB.1926359124",
+        "syncCode": "Синхронизирован",
+        "syncFlag": 1,
+        "paramCode": "Customer_verification",
+        "paramDesc": "Спосіб верифікації клієнта",
+        "stateCode": "COMPLETE_CLIENT",
+        "stateName": "Підтверджений, актуальний",
+        "paramValue": "3",
+        "paramReffer": "Ідентифікаційні дані отримано через Систему BankID НБУ",
+        "stateMashine": "Процес Ідентифікаці клієнтів ФО",
+        "cliStatusCode": "Активный",
+        "cliStatusFlag": 1
+      },
+      "orig": {
+        "person": {
+          "inn": "3521113190",
+          "sex": "M",
+          "type": "physical",
+          "phone": "+380986729322",
+          "birthDay": "27.05.1996",
+          "lastName": "Острянин",
+          "firstName": "Сергій",
+          "middleName": "Олександрович"
+        },
+        "extends": {
+          "none": ""
+        },
+        "addresses": [
+          {
+            "area": "",
+            "city": "Дніпро",
+            "type": "juridical",
+            "state": "Дніпропетровська",
+            "flatNo": "57",
+            "street": "Миру",
+            "country": "UA",
+            "houseNo": "71"
+          }
+        ],
+        "documents": [
+          {
+            "type": "idpassport",
+            "issue": "1213",
+            "number": "003286686",
+            "typeName": "",
+            "dateIssue": "24.04.2019",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+          }
+        ],
+        "timestamp": "1620923521296",
+        "merchant_name": "digital_ind_test"
+      },
+      "input": {
+        "person": {
+          "inn": "3521113190",
+          "sex": "M",
+          "type": "physical",
+          "phone": "+380986729322",
+          "birthDay": "27.05.1996",
+          "flagPEPs": "0",
+          "lastName": "Острянин",
+          "firstName": "Сергій",
+          "middleName": "Олександрович",
+          "uaResident": "1",
+          "flagPersonTerror": "0",
+          "flagTopLevelRisk": "0"
+        },
+        "extends": {
+          "none": "",
+          "nameLat": "OSTRIANYN SЕRHII",
+          "photo25": "1",
+          "photo45": "1",
+          "typeCli": "клієнт з відкриттям рахунків",
+          "flagPEPs": "0",
+          "signDate": "13.05.2021",
+          "workInfo": "Безробітний",
+          "codOblRee": "12",
+          "education": "2",
+          "greenCard": "1",
+          "profitSrc": ",XX:інше",
+          "profitWay": "14430",
+          "birthPlace": "Україна",
+          "reputation": "Задовільний",
+          "uaResident": "1",
+          "verifyDate": "13.05.2021",
+          "verifyType": "3",
+          "ownFundsSrc": "9",
+          "registryUSA": "0",
+          "statusFATCA": "3",
+          "verifyType1": "1",
+          "birthCountry": "804",
+          "forTaxStatus": "0",
+          "monthAmouunt": "1",
+          "usaChiisares": "0",
+          "maritalStatus": "1",
+          "movePropAvail": "1",
+          "otherBankDepo": "0",
+          "ugbRelatePers": "2",
+          "costPaperAvail": "Відсутні",
+          "countryCitizen": "804",
+          "ownFundsAmount": "1",
+          "statusBusiness": "5",
+          "countryCitisien": "804",
+          "otherBankCredit": "0",
+          "planUseServices": "1,4,22",
+          "realEstateAvail": "1",
+          "flagTopLevelRisk": "0",
+          "otherBankAccount": "3"
+        },
+        "addresses": [
+          {
+            "area": "",
+            "city": "Дніпро",
+            "type": "juridical",
+            "state": "Дніпропетровська",
+            "flatNo": "57",
+            "street": "Миру",
+            "country": "UA",
+            "houseNo": "71"
+          },
+          {
+            "area": "",
+            "city": "Дніпро",
+            "type": "factual",
+            "state": "Дніпропетровська",
+            "flatNo": "57",
+            "street": "Миру",
+            "country": "UA",
+            "houseNo": "71"
+          }
+        ],
+        "documents": [
+          {
+            "type": "idpassport",
+            "issue": "1213",
+            "number": "003286686",
+            "typeName": "",
+            "dateIssue": "24.04.2019",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+          }
+        ],
+        "timestamp": "1620923521296",
+        "merchant_name": "digital_ind_test"
+      },
+      "trans": {
+        "addr": [
+          {
+            "Town": "Дніпро",
+            "State": "Дніпропетровська",
+            "Region": "",
+            "Street": "Миру",
+            "Country": "UA",
+            "TypeCode": "1",
+            "FlatNumber": "57",
+            "HouseNumber": "71"
+          },
+          {
+            "Town": "Дніпро",
+            "State": "Дніпропетровська",
+            "Region": "",
+            "Street": "Миру",
+            "Country": "UA",
+            "TypeCode": "2",
+            "FlatNumber": "57",
+            "HouseNumber": "71"
+          }
+        ],
+        "comm": [
+          {
+            "Value": "+380986729322",
+            "TypeId": "3"
+          }
+        ],
+        "ident": [
+          {
+            "Number": "003286686",
+            "TypeId": "55",
+            "IssueDate": "2019-04-24T00:00:00",
+            "CountryCode": "UA",
+            "Registrator": "1213",
+            "ExpirationDate": "2999-01-01T00:00:00"
+          }
+        ],
+        "indiv": {
+          "GENDER": "1",
+          "BirthDay": "1996-05-27T00:00:00",
+          "LastName": "Острянин",
+          "FirstName": "Сергій",
+          "FatherName": "Олександрович",
+          "MarriageStatus": "1"
+        },
+        "names": {
+          "Lang": "LAT",
+          "Name": "OSTRIANYN SЕRHII"
+        },
+        "props": [
+          {
+            "Code": "GENDER",
+            "Dict": "D06",
+            "Refs": "sex",
+            "Value": "1"
+          },
+          {
+            "Code": "CL_FATF_CHECK_RESULT",
+            "Dict": "",
+            "Refs": "terrorist",
+            "Value": "Клиент НЕ являестя террористом соглано данных bankid"
+          },
+          {
+            "Code": "PUBLIC_PERSON_EXISTS",
+            "Dict": "",
+            "Refs": "peps",
+            "Value": "1"
+          },
+          {
+            "Code": "FATF_COUNTRY_CITIZEN",
+            "Dict": "KL_K040.DBF",
+            "Refs": "",
+            "Value": "804"
+          },
+          {
+            "Code": "FATF_CodObl",
+            "Dict": "",
+            "Refs": "",
+            "Value": "12"
+          },
+          {
+            "Code": "INFO_WORK_FROM",
+            "Dict": "",
+            "Refs": "",
+            "Value": "Безробітний"
+          },
+          {
+            "Code": "BIRTH_COUNTRY",
+            "Dict": "KL_K040.DBF",
+            "Refs": "",
+            "Value": "804"
+          },
+          {
+            "Code": "BIRTH_PLACE",
+            "Dict": "",
+            "Refs": "",
+            "Value": "Україна"
+          },
+          {
+            "Code": "PROFIT_WAY",
+            "Dict": "PROFIT_WAY",
+            "Refs": "",
+            "Value": "14430"
+          },
+          {
+            "Code": "BANK_PRODUCT",
+            "Dict": "FIN_DOCH",
+            "Refs": "",
+            "Value": ",XX:інше"
+          },
+          {
+            "Code": "OBSYAG_NAD",
+            "Dict": "OBSYAG_NAD_1",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "NAD_K_3",
+            "Dict": "NAD_K_3",
+            "Refs": "",
+            "Value": "9"
+          },
+          {
+            "Code": "MONTHSUMM",
+            "Dict": "SUMA_DOHOD",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "PROPETYTH_OF_CLIENT",
+            "Dict": "PROPETYTH_OF_CLIENT",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "PROPETYTH_OF_CLIENT_AVTO",
+            "Dict": "PROPETYTH_OF_CLIENT_AVTO",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "INFO_OUTER_ACC_SEL",
+            "Dict": "INFO_OUTER_ACC",
+            "Refs": "",
+            "Value": "3"
+          },
+          {
+            "Code": "EXISTS_CRED_OUT",
+            "Dict": "YESNO",
+            "Refs": "",
+            "Value": "0"
+          },
+          {
+            "Code": "EXISTS_DEPO_OUT",
+            "Dict": "YESNO",
+            "Refs": "",
+            "Value": "0"
+          },
+          {
+            "Code": "PROPETYPAP_OF_CLIENTYPE",
+            "Dict": "PROPETYPAP_OF_CLIENTYPE",
+            "Refs": "",
+            "Value": "Відсутні"
+          },
+          {
+            "Code": "BANK_SERVICES_MANUAL",
+            "Dict": "BANK_SERVICES_MANUAL",
+            "Refs": "",
+            "Value": "1,4,22"
+          },
+          {
+            "Code": "UGB_TCURelPers",
+            "Dict": "RF_UGB_TCURelPers",
+            "Refs": "",
+            "Value": "2"
+          },
+          {
+            "Code": "KL_K013FO",
+            "Dict": "KL_K013_FO",
+            "Refs": "",
+            "Value": "5"
+          },
+          {
+            "Code": "Chiisaresident_USA",
+            "Dict": "YESNO",
+            "Refs": "",
+            "Value": "0"
+          },
+          {
+            "Code": "Chiisaresident_USA",
+            "Dict": "YESNO",
+            "Refs": "",
+            "Value": "0"
+          },
+          {
+            "Code": "CUSTOMER_TYPE",
+            "Dict": "CUSTOMER_TYPE",
+            "Refs": "",
+            "Value": "клієнт з відкриттям рахунків"
+          },
+          {
+            "Code": "PASPFOTOCONTROL25",
+            "Dict": "",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "PASPFOTOCONTROL45",
+            "Dict": "",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "Verifikatsii_date ",
+            "Dict": "",
+            "Refs": "",
+            "Value": "2021-05-13T00:00:00"
+          },
+          {
+            "Code": "Education",
+            "Dict": "",
+            "Refs": "",
+            "Value": "2"
+          },
+          {
+            "Code": "CLIENT_STATUS",
+            "Dict": "",
+            "Refs": "",
+            "Value": "0"
+          },
+          {
+            "Code": "Customer_verification",
+            "Dict": "Customer_verification",
+            "Refs": "",
+            "Value": "3"
+          },
+          {
+            "Code": "Criterias",
+            "Dict": "",
+            "Refs": "",
+            "Value": "Задовільний"
+          },
+          {
+            "Code": "FATF_COUNTRY_CITIZEN",
+            "Dict": "KL_K040.DBF",
+            "Refs": "",
+            "Value": "804"
+          },
+          {
+            "Code": "CARD_GREEN",
+            "Dict": "A_GREEN_CARD",
+            "Refs": "",
+            "Value": "1"
+          },
+          {
+            "Code": "Resident_USA",
+            "Dict": "YESNO",
+            "Refs": "",
+            "Value": "0"
+          },
+          {
+            "Code": "FATCA",
+            "Dict": "FATCA",
+            "Refs": "",
+            "Value": "3"
+          },
+          {
+            "Code": "FATF_SHORT_NAME",
+            "Dict": "",
+            "Refs": "",
+            "Value": "OSTRIANYN SЕRHII"
+          }
+        ],
+        "client": {
+          "Name": "Острянин Сергій Олександрович",
+          "Residency": "1",
+          "StateCode": "3521113190",
+          "PrevIdentDate": "2021-05-13T00:00:00"
+        }
+      },
+      "result": {
+        "client": {
+          "clientId": "3433850",
+          "scroogeId": "3385603",
+          "clientPushABS": "true"
+        },
+        "errors": "",
+        "result": "1",
+        "hasErrors": "false",
+        "requestId": "12547",
+        "responseId": "12547"
+      }
+    },
+    "path": "/openbanking/bankid/client",
+    "time": "Work time is: 34.464 sec.",
+    "result": "ok"
+  }
