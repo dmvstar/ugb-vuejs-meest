@@ -1,0 +1,39 @@
+{
+  "person": {
+    "inn": "3521113190",
+    "sex": "M",
+    "type": "physical",
+    "phone": "+380986729322",
+    "birthDay": "27.05.1996",
+    "lastName": "Острянин",
+    "firstName": "Сергій",
+    "middleName": "Олександрович"
+  },
+  "extends": {
+    "none": ""
+  },
+  "addresses": [
+    {
+      "city": "Дніпро",
+      "type": "juridical",
+      "state": "Дніпропетровська",
+      "flatNo": "57",
+      "street": "Миру",
+      "country": "UA",
+      "houseNo": "71"
+    }
+  ],
+  "documents": [
+    {
+      "type": "idpassport",
+      "issue": "1213",
+      "number": "003286686",
+      "typeName": "",
+      "dateIssue": "24.04.2019",
+      "dateExpiration": "",
+      "issueCountryIso2": "UA"
+    }
+  ],
+  "timestamp": "1621267909282",
+  "merchant_name": "digital_ind_test"
+}
