@@ -107,9 +107,10 @@
 
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn class="mr-4" color="secondary" @click="resetForm">Очистить</v-btn>
-                    <v-btn class="mr-4" @click="submitForm" :disabled="!valid" color="green darken-2">Подтвердить</v-btn>
+                    <v-btn class="mr-4" color="secondary" @click="resetForm"><v-icon left>mdi-clear</v-icon>Очистить</v-btn>
+                    <v-btn class="mr-4" @click="submitForm" :disabled="!valid" color="green darken-2"><v-icon left>mdi-send</v-icon>Отправить</v-btn>
                   </v-card-actions>
+
                 </v-card>
               </v-col>
             </v-row>
@@ -167,6 +168,53 @@
         exequteRequest: async function() {
           this.loading = true;
 
+          var headers = new Headers();
+          headers.append("Content-Type", "text/plain;charset=utf-8");
+
+          var realUrl = "https://script.google.com/macros/s/AKfycbwfFHsU5HaleJTuDSAUPo0KBub38xNvZWKVAuUxzXEBjVpQv2wfJAaQ2sjCfxR2jDcI/exec";
+          var request = {
+            name: "Hello. My name ))",
+            to: this.mail.receiver,
+            subject: this.mail.subject,
+            body: this.mail.message
+          };
+
+          var raw = JSON.stringify(request);
+
+          var requestOptions = {
+            method: 'POST',
+            headers: headers,
+            body: raw,
+            redirect: 'follow'
+          };
+
+          fetch(realUrl, requestOptions)
+            .then(response => {
+                  console.log(response);
+                  return response.text();
+                }
+            )
+            .then(result => {                  
+                  console.log("result: ",result);
+                  var jresult = JSON.parse(result);
+                  console.log("jresult: ",jresult.result);
+                  if(jresult.result === "success"){
+                    alert("Mail send Ok");
+                  }
+                  this.loading = false;
+                }
+            )
+            .catch(error => {
+                  console.log('error', error);
+                  this.loading = false;
+                }  
+            );
+
+        },
+
+        exequteRequest1: async function() {
+          this.loading = true;
+
           //var token = ScriptApp.getOAuthToken();
           //alert('token ' + token);
 
@@ -178,10 +226,8 @@
                     "Content-Type": "text/plain;charset=utf-8"
           };
 
-          var realUrl = "https://script.google.com/macros/s/AKfycbwfFHsU5HaleJTuDSAUPo0KBub38xNvZWKVAuUxzXEBjVpQv2wfJAaQ2sjCfxR2jDcI/exec";
-
           var result = {};
-
+          var realUrl = "https://script.google.com/macros/s/AKfycbwfFHsU5HaleJTuDSAUPo0KBub38xNvZWKVAuUxzXEBjVpQv2wfJAaQ2sjCfxR2jDcI/exec";
           var request = {
             name: "My name ))",
             to: this.mail.receiver,
