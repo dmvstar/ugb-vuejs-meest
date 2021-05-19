@@ -108,7 +108,7 @@
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn class="mr-4" color="secondary" @click="resetForm"><v-icon left>mdi-clear</v-icon>Очистить</v-btn>
-                    <v-btn class="mr-4" @click="submitForm" :disabled="!valid" color="green darken-2"><v-icon left>mdi-send</v-icon>Отправить</v-btn>
+                    <v-btn class="mr-4" @click="submitForm" :disabled="!valid|loading" color="green darken-2"><v-icon left>mdi-send</v-icon>Отправить</v-btn>
                   </v-card-actions>
 
                 </v-card>
@@ -148,6 +148,7 @@
           this.$refs.form.reset();
           this.verify = false;
           this.valid = false;
+          this.loading = false;
           this.count = 0;
           this.formError = false;
         },
@@ -162,6 +163,7 @@
         },
 
         sendEmail: async function(){
+          this.loading = true;
           await this.exequteRequest();
         },
 
@@ -199,14 +201,16 @@
                   var jresult = JSON.parse(result);
                   console.log("jresult: ",jresult.result);
                   if(jresult.result === "success"){
-                    alert("Mail send Ok");
+                    alert("Mail send Ok\n" + JSON.stringify(JSON.parse(jresult.data),'',2) ); //    JSON.stringify(jresult,'',2));
                   }
                   this.loading = false;
+                  this.enableSend = true;
                 }
             )
             .catch(error => {
                   console.log('error', error);
                   this.loading = false;
+                  this.enableSend = true;
                 }  
             );
 
