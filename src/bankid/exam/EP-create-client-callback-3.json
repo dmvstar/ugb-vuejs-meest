@@ -1,0 +1,50 @@
+{
+    "person": {
+        "type": "physical",
+        "lastName": "ФОРИКЕВИЧ",
+        "firstName": "ІГОР",
+        "middleName": "БОГДАНОВИЧ",
+        "inn": "2305307973",
+        "birthDay": "12.02.1963",
+        "sex": "M",
+        "phone": "380503701915"
+    },
+    "extends": {},
+    "addresses": [
+        {
+            "type": "factual",
+            "country": "UA",
+            "state": "Львівська область",
+            "area": "",
+            "city": "м.Львів",
+            "street": "вул Глібова",
+            "houseNo": "12",
+            "flatNo": "3"
+        },
+        {
+            "type": "juridical",
+            "country": "UA",
+            "state": "Львівська область",
+            "area": "",
+            "city": "м.Львів",
+            "street": "вул Глібова",
+            "houseNo": "12",
+            "flatNo": "3"
+        }
+    ],
+    "documents": [
+        {
+            "type": "ident",
+            "typeName": "Не определено",
+            "series": "КА",
+            "number": "972537",
+            "issue": "Галицьким РВ ЛМУ УМВС України у Львівській області",
+            "dateIssue": "27.10.1998",
+            "dateExpiration": "01.01.3500",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "timestamp": "1621512199994",
+    "merchant_name": "easypay_test",
+    "callback": "https://bank.easypay.ua/api/issuer/client/confirm/2acec551-c48a-4cae-b9a9-f4264aeb2cab"
+}

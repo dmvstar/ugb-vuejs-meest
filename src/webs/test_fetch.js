@@ -10,6 +10,7 @@
             .catch(error => { console.log('error', error);});
 
 
+9804425808287336
 Postman
 1)
 Req
@@ -49,4 +50,6 @@ Res
     "processRef": "7594b1bc-c43c-43fc-aeb0-0b1247ebc612",
     "requestRef": "1621451708867"
 }
+
+1469692	1000070	UGB.1176555	ГОЛУБ ВІТАЛІЙ АНАТОЛІЙОВИЧ	3013817293
 

@@ -12,9 +12,12 @@ var path = 'local';
 var data = {};
 
 var payload = msg.payload;
+var error = msg.payload;
 
-if (msg.error !== undefined) 
-    error = msg.error;
+if (msg.error !== undefined) {
+    error.source = msg.error;
+}    
+
 
 var message = "Ошибка формата...";
 var details = "Error... Reply 400 error bad fmt or field";

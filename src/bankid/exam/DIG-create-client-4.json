@@ -1,0 +1,39 @@
+{
+  "person": {
+    "inn": "{{inn}}",
+    "sex": "F",
+    "type": "physical",
+    "phone": "+380932352834",
+    "birthDay": "14.02.1996",
+    "lastName": "Федорова",
+    "firstName": "Олександра",
+    "middleName": "Вікторівна"
+  },
+  "extends": {
+    "none": ""
+  },
+  "addresses": [
+    {
+      "city": "Київ",
+      "type": "juridical",
+      "flatNo": "48",
+      "street": "Ентузіастів",
+      "country": "UA",
+      "houseNo": "47/1"
+    }
+  ],
+  "documents": [
+    {
+      "type": "passport",
+      "issue": "Дніпровське РУ ГУ МВС України в місті Києві",
+      "number": "108523",
+      "series": "ТТ",
+      "typeName": "",
+      "dateIssue": "20.03.2012",
+      "dateExpiration": "",
+      "issueCountryIso2": "UA"
+    }
+  ],
+  "timestamp": "1621523829403",
+  "merchant_name": "igital_ind"
+}
