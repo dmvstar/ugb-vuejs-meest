@@ -66,8 +66,22 @@
                                         </v-tooltip>
                                     </v-toolbar>
                                     <v-row>
-                                        <v-col cols="12" sm="4">
-                                            <h3 class="red--text">Prepare SQL</h3>
+                                        <v-col cols="12" sm="10">
+                                            <h3 class="red--text">Prepare SQL ({{ hostName }}) </h3>
+                                        </v-col>
+                                        <v-col cols="12" sm="1">
+                                            <v-checkbox
+                                                v-model="isHostIP"
+                                                label="Use IP"
+                                                color="red"                                                
+                                                hide-details></v-checkbox>
+                                        </v-col>
+                                        <v-col cols="12" sm="1">
+                                            <v-checkbox
+                                                v-model="isIgnoreSSL"
+                                                label="No SSL"
+                                                color="red"                                                
+                                                hide-details></v-checkbox>
                                         </v-col>
                                     </v-row>
 
@@ -287,7 +301,10 @@
             },
 
             created() {
-              
+                    if(this.isHostIP)
+                        this.hostName = this.hostNameI;
+                    else 
+                        this.hostName = this.hostNameA;                                
             },
 
             methods: {
@@ -360,6 +377,8 @@
                     //alert(item.message);
                     await navigator.clipboard.writeText(item.message);
                 },
+                
+                // https://learn.javascript.ru/fetch
                 exequteRequest: async function() {
 
                     this.loading = true;
@@ -374,23 +393,40 @@
                     "x-post-geturl": "https://nr-clients.dev.ukrgasaws.com/",
                     "x-post-pathto": pathTo, "x-post-method": "select"
                     };
-                    var realUrl = "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209/";
-//alert("exequteRequest");
+                    
+                    if(this.isHostIP)
+                        this.hostName = this.hostNameI;
+                    else 
+                        this.hostName = this.hostNameA;
+
+                    //var realUrl = "https://nr-gateway.dev.ukrgasaws.com/9118aabf34299ead9f57921edb7c8209";
+                    var realUrl = "https://"+this.hostName+"/9118aabf34299ead9f57921edb7c8209";
+
+//alert("exequteRequest "+ realUrl);
                     var result = {};
                     let base64data = btoa(this.sql.query);
 //alert(base64data);
                     var request = {
                         data: base64data
                     };
-
+/*
+                    const httpsAgent = new https.Agent({
+                        rejectUnauthorized: false,
+                    });
+*/
                     const requestOptions = {
                         method: "POST",
                         headers: headers,
+                        //agent: httpsAgent,
+
+                        //redirect: 'follow',
+                        //mode: "no-cors",
+
                         body: JSON.stringify(request)
                     };
 
                     await fetch(realUrl, requestOptions)
-                    .then(async response => {
+                     .then(async response => {
                         const bdata = await response.text();
 
                         this.loading = false;
@@ -418,15 +454,15 @@
                             // get error message from body or default to response statusText
                             const error = (data && data.message) || response.statusText;
                             this.error = error;
-                            alert('E1 exequteRequest ['+realUrl+'] ' + JSON.stringify(response, null, ' ') + ' ');
+                            alert('E1 fetch ['+realUrl+'] \n' + JSON.stringify(response, null, ' ') + ' ');
                             return Promise.reject(error);
                         }
                     })
                     .catch(error => {
                         this.loading = false;
-                        //alert('E2 fetch ['+realUrl+'][' + JSON.stringify(error) + '] ');
                         this.error = error;
-                        alert("E2 exequteRequest ["+realUrl+"] " + error);
+                        alert("E2 fetch ["+realUrl+"] \n" + error);
+                        console.log("E2 fetch ["+realUrl+"]", error);
                     });
 
                     return result;
@@ -452,7 +488,13 @@
                         sql : this.sql
                     };
                     localStorage.lastValues = JSON.stringify(values);
-                }    
+                },
+                isHostIP : function(newQuestion, oldQuestion) {
+                    if(this.isHostIP)
+                        this.hostName = this.hostNameI;
+                    else 
+                        this.hostName = this.hostNameA;                   
+                }   
             },
 
             computed: {
@@ -462,6 +504,11 @@
             data() {
                 return {
                     loading: false,
+                    isHostIP: false,
+                    isIgnoreSSL: false,
+                    hostName : "52.57.7.14",
+                    hostNameA : "nr-gateway.dev.ukrgasaws.com",
+                    hostNameI : "52.57.7.14",
                     result : [],
                     result_test : [
                                 { 
@@ -523,6 +570,17 @@
             },
         })
 
+
+        /*
+        Non-authoritative answer:
+        nr-gateway.dev.ukrgasaws.com    canonical name = 6f6c74f8-nodered-noderedex-10fd-1933809955.eu-central-1.elb.amazonaws.com.
+        Name:   6f6c74f8-nodered-noderedex-10fd-1933809955.eu-central-1.elb.amazonaws.com
+        Address: 35.156.29.62
+        Name:   6f6c74f8-nodered-noderedex-10fd-1933809955.eu-central-1.elb.amazonaws.com
+        Address: 52.57.7.14
+        Name:   6f6c74f8-nodered-noderedex-10fd-1933809955.eu-central-1.elb.amazonaws.com
+        Address: 52.58.236.151
+        */
 
 
 
