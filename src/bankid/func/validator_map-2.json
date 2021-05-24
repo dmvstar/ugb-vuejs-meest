@@ -1,87 +1,87 @@
 {
     "type": "Object",
     "needed": true,
-    "contents": {
+    "properties": {
         "person": {
             "type": "Object",
             "needed": true,
-            "contents": {
+            "properties": {
                 "type": {
                     "example": "physical",
                     "type": "String",
                     "needed": true,
                     "express": "^physical$",
-                    "message": "Ошибка формата поля Тип документа"
+                    "name": "Тип документа"
                 },
                 "inn": {
                     "example": "2123432343",
                     "type": "String",
                     "needed": true,
                     "express": "(^[0-9]{10}$)|(^[0-9]{9}$)|(^[А-Ю][А-Ю][0-9]{6}$)",
-                    "message": "Ошибка формата поля ИНН"
+                    "name": "ИНН"
                 },
                 "sex": {
                     "example": "F",
                     "type": "String",
                     "needed": true,
                     "express": "^[MFЧЖ]$",
-                    "message": "Ошибка формата поля ПОЛ"
+                    "name": "ПОЛ"
                 },
                 "birthDay": {
                     "example": "10.09.1977",
                     "type": "String",
                     "needed": true,
                     "express": "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
-                    "message": "Ошибка формата поля "
+                    "name": "Дата рождения"
                 },
                 "lastName": {
                     "example": "Кетцалькоатль",
                     "type": "String",
                     "needed": true,
                     "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
-                    "message": "Ошибка формата поля Фамилия"
+                    "name": "Фамилия"
                 },
                 "firstName": {
                     "example": "Кукумац",
                     "type": "String",
                     "needed": true,
                     "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
-                    "message": "Ошибка формата поля Имя"
+                    "name": "Имя"
                 },
                 "middleName": {
                     "example": "Кукулькан",
                     "type": "String",
                     "needed": true,
                     "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
-                    "message": "Ошибка формата поля Отчество"
+                    "name": "Отчество"
                 },
                 "phone": {
                     "example": "380631003256",
                     "type": "String",
                     "needed": true,
                     "express": "^[0-9]*$",
-                    "message": "Ошибка формата поля Телефрн"
+                    "name": "Телефрн"
                 },
                 "email": {
                     "example": "sava@mail.dot.com",
                     "type": "String",
                     "needed": false,
                     "express": "^[a-z0-9.@]*$",
-                    "message": "Ошибка формата поля Email"
+                    "name": "Email"
                 },
                 "web": {
                     "example": "www.www.net",
                     "type": "String",
                     "needed": false,
                     "express": "^[a-z.]*$",
-                    "message": "Ошибка формата поля Web"
+                    "name": "Web"
                 }
             }
         },
         "documents": {
             "type": "Array",
             "needed": true,
-            "content": {
+            "contents": {
                 "type": "Object",
                 "needed": true,
                 "properties": {
@@ -90,56 +90,56 @@
                         "type": "String",
                         "needed": true,
                         "express": "^(паспорт|passport|idpassport)$",
-                        "name": "Ошибка формата паспорта, поле Тип"
+                        "name": "Паспорт, поле Тип"
                     },
                     "dateIssue": {
                         "example": "01.07.1995",
                         "type": "String",
                         "needed": true,
                         "express": "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
-                        "message": "Ошибка формата паспорта, поле Дата выдачи"
+                        "name": "Паспорт, поле Дата выдачи"
                     },
                     "typeName": {
                         "example": "Паспорт",
                         "type": "String",
                         "needed": true,
                         "express": "^[А-я]*$",
-                        "message": "Ошибка формата паспорта, поле Тип 2"
+                        "name": "Паспорт, поле Тип 2"
                     },
                     "series": {
                         "example": "СН",
                         "type": "String",
                         "needed": false,
                         "express": "^()|([А-Я][А-Я])$",
-                        "message": "Ошибка формата паспорта, поле Серия"
+                        "name": "Паспорт, поле Серия"
                     },
                     "number": {
                         "example": "432311",
                         "type": "String",
                         "needed": true,
                         "express": "^[0-9]*$",
-                        "message": "Ошибка формата паспорта, поле Номер"
+                        "name": "Паспорт, поле Номер"
                     },
                     "issue": {
                         "example": "Святошинське РУ ГУ МВС у м.Києві",
                         "type": "String",
                         "needed": true,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "message": "Ошибка формата паспорта, поле "
+                        "name": "Паспорт, поле "
                     },
                     "dateExpiration": {
                         "example": "",
                         "type": "String",
                         "needed": false,
                         "express": "^()|(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$",
-                        "message": "Ошибка формата паспорта, поле Дата окончания"
+                        "name": "Паспорт, поле Дата окончания"
                     },
                     "issueCountryIso2": {
                         "example": "UA",
                         "type": "String",
                         "needed": true,
                         "express": "^(UA|Ук)$",
-                        "message": "Ошибка формата паспорта, поле "
+                        "name": "Паспорт, поле Код страны"
                     }
                 }
             }
@@ -150,62 +150,62 @@
             "contents": {
                 "type": "Object",
                 "needed": true,
-                "contents": {
+                "properties": {
                     "type": {
                         "example": "factual",
                         "type": "String",
                         "needed": true,
                         "express": "^(factual|juridical)$",
-                        "message": "Ошибка формата адреса, поле Тип"
+                        "name": "Адрес, поле Тип"
                     },
                     "country":{
                         "example": "Ук",
                         "type": "String",
                         "needed": true,
                         "express": "^[A-ZА-яЇїІіЄєҐґ́i][A-ZА-яЇїІіЄєҐґ́i]$",
-                        "message": "Ошибка формата адреса, поле Страна"
+                        "name": "Адрес, поле Страна"
                     },
                     "state": {
                         "example":"Київська",
                         "type": "String",
                         "needed": true,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "message": "Ошибка формата адреса, поле Область"
+                        "name": "Адрес, поле Область"
                     },
                     "area": {
                         "example":"Київ",
                         "type": "String",
                         "needed": true,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "message": "Ошибка формата адреса, поле Район"
+                        "name": "Адрес, поле Район"
                     },
                     "city": {
                         "example":"м. Київ",
                         "type": "String",
                         "needed": true,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "message": "Ошибка формата адреса, поле Нас пункт"
+                        "name": "Адрес, поле Нас пункт"
                     },
                     "street": {
                         "example":"вул. Бородинского побоища",
                         "type": "String",
                         "needed": true,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "message": "Ошибка формата адреса, поле Улица"
+                        "name": "Адрес, поле Улица"
                     },
                     "houseNo": {
                         "example":"21",
                         "type": "String",
                         "needed": true,
                         "express": "^()([0-9А-я]*)$",
-                        "message": "Ошибка формата адреса, поле Дом"
+                        "name": "Адрес, поле Дом"
                     },
                     "flatNo": {
                         "example":"16",
                         "type": "String",
                         "needed": true,
                         "express": "^()([0-9А-я]*)$",
-                        "message": "Ошибка формата адреса, поле Помещение"
+                        "name": "Адрес, поле Помещение"
                     }
                 }    
             }    
