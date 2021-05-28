@@ -158,6 +158,20 @@
                                             <v-btn block color="primary" v-on:click="onButtonExecuteSQL">Execute Query</v-btn>
                                         </v-col>
                                     </v-row>
+
+                                    <v-row align="center" justify="center">
+
+                                        <v-col cols="12" sm="10">
+                                            <v-btn block color="primary" v-on:click="onDownloadCSVData">Download Data</v-btn>
+                                        </v-col>
+
+                                        <v-col cols="12" sm="2">
+                                            <v-text-field v-model="exportName" :counter="50" label="Export To"
+                                                required>
+                                            </v-text-field>
+                                        </v-col>
+                                    </v-row>
+
                                     <v-row>
                                         <v-col cols="12" sm="12">
 
@@ -377,6 +391,29 @@
                     //alert(item.message);
                     await navigator.clipboard.writeText(item.message);
                 },
+
+                onDownloadCSVData: function() {
+
+                    //alert('onDownloadCSVData '+ this.result.length);
+                    let csv = 'Id,Date,Level,Source,Text\n';
+                    //alert('onDownloadCSVData '+this.result.length+'   ' +csv);
+                    this.result.forEach((row) => {
+                        //alert('onDownloadCSVData '+ row);
+                            for (i in row) {
+                                csv += row[i] + ',';
+                            }
+                            //csv += row.join(',');
+                            csv += "\n";
+                    });
+                    //alert('onDownloadCSVData '+ csv);
+                
+                    const anchor = document.createElement('a');
+                    anchor.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+                    anchor.target = '_blank';
+                    anchor.download = this.exportName;
+                    anchor.click();
+                },
+
                 
                 // https://learn.javascript.ru/fetch
                 exequteRequest: async function() {
@@ -503,6 +540,7 @@
 
             data() {
                 return {
+                    exportName: 'exportData-1.csv',
                     loading: false,
                     isHostIP: false,
                     isIgnoreSSL: false,
