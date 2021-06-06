@@ -52,8 +52,8 @@
         "ua_cap": "Е",
         "en_cap": "E",
         "ua_lit": "е",
-        "en_lit_f": "е",
-        "en_lit_o": "е"
+        "en_lit_f": "e",
+        "en_lit_o": "e"
     },
     {
         "lit": "1",

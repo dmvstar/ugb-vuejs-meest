@@ -1,0 +1,40 @@
+{
+    "person": {
+        "type": "physical",
+        "lastName": "Бабюк",
+        "firstName": "Дмитро",
+        "middleName": "Олександрович",
+        "inn": "3424011175",
+        "birthDay": "29.09.1993",
+        "sex": "M",
+        "phone": "380961678677"
+    },
+    "extends": {},
+    "addresses": [
+        {
+            "type": "juridical",
+            "country": "Ук",
+            "state": "",
+            "area": "",
+            "city": "Київ",
+            "street": "Верховинна",
+            "houseNo": "81",
+            "flatNo": "85"
+        }
+    ],
+    "documents": [
+        {
+            "type": "passport",
+            "typeName": "МЕ",
+            "series": "МЕ",
+            "number": "980630",
+            "issue": "Святошинським РУ ГУ МВС України в місті Києві",
+            "dateIssue": "18.02.2010",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "timestamp": "1622637057711",
+    "merchant_name": "bankid_easypay",
+    "callback": "https://bank.easypay.ua/api/issuer/client/confirm/58fffc36-5c8b-4eb7-8751-010dec50562b"
+}

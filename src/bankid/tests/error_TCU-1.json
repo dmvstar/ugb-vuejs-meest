@@ -1,0 +1,24 @@
+Если создание идет во вне операционное время получаем ошибку
+
+
+{
+    "result": "error",
+    "code": 1502,
+    "time": "Work time is: 8.747 sec.",
+    "path": "/openbanking/bankid/client",
+    "message": "Клиент создан с ошибками, необходимо связаться с сотрудником банка !",
+    "details": "Ошибка вставки реквизита [UGB_TCURelPers_F] значение [2], описание [Не пов'язана] в АБС",
+    "errors": {
+        "errorOperation": {
+            "code": "1059",
+            "text": "Ошибка вставки реквизита [UGB_TCURelPers_F] значение [2], описание [Не пов'язана] в АБС",
+            "isError": "true",
+            "exceptMessage": "<b>Server was unable to process request. ---> SCROOGE-III operation failed.\nУстановлен запрет на действие [работа с реквизитами объектов] для филиала [1] за [26/05/2021]\n\n</b><br/><font color='#696969'>FaultException</font><br/><div style='margin: 0px 0px 0px 20px; padding: 5px 0px 5px 10px; border-left: solid 2px #FF0000; overflow: auto;'><pre style='width: 900px; white-space: normal; word-wrap: break-word;'>\r\nServer stack trace: \r\n   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)\r\n   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)\r\n   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)\r\n\r\nException rethrown at [0]: \r\n   at System.Runtime.Remoting.Proxies.R..."
+        }
+    },
+    "statusCode": 500,
+    "timestamp": "1621585534646",
+    "requestId": 634363
+}
+
+Что с таким делать ?

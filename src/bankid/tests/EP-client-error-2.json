@@ -1,0 +1,59 @@
+{
+    "result": "error",
+    "code": 1430,
+    "time": "Work time is: 0.013 sec.",
+    "path": "/api/openbanking/bankid/client",
+    "message": "У Клиента [2837721375] (Губарєв Віталій Іванович) Не задано ни одного адреса",
+    "details": "Error in checker4badfields.js...",
+    "error": {
+        "result": "error",
+        "message": "У Клиента [2837721375] (Губарєв Віталій Іванович) Не задано ни одного адреса",
+        "details": "Error in checker4badfields.js...",
+        "data": {
+            "person": {
+                "type": "physical",
+                "lastName": "Губарєв",
+                "firstName": "Віталій",
+                "middleName": "Іванович",
+                "inn": "2837721375",
+                "birthDay": "10.09.1977",
+                "sex": "M",
+                "phone": "380931962857"
+            },
+            "extends": {},
+            "addresses": [],
+            "documents": [
+                {
+                    "type": "passport",
+                    "typeName": "МК",
+                    "series": "МК",
+                    "number": "011015",
+                    "issue": "Київським РВ ХМУ УМВС України в Харківській област",
+                    "dateIssue": "19.07.1995",
+                    "dateExpiration": "",
+                    "issueCountryIso2": "UA"
+                }
+            ],
+            "timestamp": "1622643388302",
+            "merchant_name": "easypay_test",
+            "callback": "https://bankstage.easypay.ua/api/issuer/client/confirm/c0a8c398-f41c-4ec1-9766-00347132fc74",
+            "result": "error",
+            "message": "У Клиента [2837721375] (Губарєв Віталій Іванович) Не задано ни одного адреса",
+            "details": "Error in checker4badfields.js...",
+            "info": {}
+        },
+        "source": {
+            "message": "У Клиента [2837721375] (Губарєв Віталій Іванович) Не задано ни одного адреса",
+            "source": {
+                "id": "e0c7ba65.8e313",
+                "type": "function",
+                "name": "checker4badfields.js v.0.0.3",
+                "count": 1
+            }
+        }
+    },
+    "data": {},
+    "statusCode": 400,
+    "timestamp": "1622643388302",
+    "requestId": 484826
+}

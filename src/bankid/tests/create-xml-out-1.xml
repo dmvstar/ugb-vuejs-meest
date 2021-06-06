@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <CreateClientFLResponse xmlns="http://tempuri.org/">
+            <CreateClientFLResult>
+                <ResponseId>12547</ResponseId>
+                <RequestId>12547</RequestId>
+                <Result>1</Result>
+                <HasErrors>true</HasErrors>
+                <Errors>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Во время синхронизации клиента произошла ошибка: Server was unable to process request. ---> SCROOGE-III operation failed.  Нарушение уникальности,запись существует  Команда отменена, значения восстановлены</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>
+                            <b>Server was unable to process request. ---> SCROOGE-III operation failed.  Нарушение уникальности,запись существует  Команда отменена, значения восстановлены
+                            </b><br/><font color="~#696969~">FaultException</font><br/><div style="~margin:" 0px="0px" 0px="0px" 0px="0px" 20px;="20px;" padding:="padding:" 5px="5px" 0px="0px" 5px="5px" 10px;="10px;" border-left:="border-left:" solid="solid" 2px="2px" #FF0000;="#FF0000;" overflow:="overflow:" auto;~="auto;~">
+                                <pre style=~width: 900px; white-space: normal; word-wrap: break-word;~>
+  Server stack trace: 
+     at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+     at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+     at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+     at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+  
+  Exception rethrown at [0]: 
+     at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+     at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+     at Ls.WebBank.ScroogeServices.ClientsServiceReference.ScroogeClientServiceSoap.AddClient(ScroogeClient client)
+     at Ls.WebBank.ScroogeServices.ClientsServiceReference.ScroogeClientServiceSoapClient.AddClient(ScroogeClient client)
+     at Ls.WebBank.ScroogeServices.ScroogeClientService.AddClient(AbsClient client)
+     at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.Send(Int32 clientId, Int32 branchId, WBProvider4Sync dataProvider, SyncGroup syncGroup, String groupids, Nullable`1 toprov, Nullable`1 fromProviderId, Nullable`1 sessionId, IConvertLogHelper logger, List`1 extClients, Stopwatch stopwatch)
+     at Ls.WebBank.ClientForm.Logic.Conversion.SyncHelper.LaunchSingleBranchSendProcess(Int32 clientId, String groupids, Nullable`1 toprovid, Nullable`1 fromProviderId, Nullable`1 sessionId, IConvertLogHelper logger, Stopwatch stopwatch)</pre>
+                            </div><br/></ExceptMessage>
+                    </ErrorOperation>
+                </Errors>
+                <Client>
+                    <ClientId>3542104</ClientId><ScroogeId/><ClientPushABS>false</ClientPushABS>
+                </Client>
+            </CreateClientFLResult>
+        </CreateClientFLResponse>
+    </soap:Body>
+</soap:Envelope>
