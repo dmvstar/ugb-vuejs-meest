@@ -20,11 +20,12 @@ if(msg.isDebug === undefined && msg.isDebug === false ){
 }
 var details = "";
 var errors = {};
-if(msg.payload.data.result.errors.errorOperation.text !== undefined)
-    details = msg.payload.data.result.errors.errorOperation.text;
-if(msg.payload.data.result.errors !== undefined)
-    errors = msg.payload.data.result.errors;
-msg.payload = {
+if(data.result.errors.errorOperation.text !== undefined)
+    details = data.result.errors.errorOperation.text;
+if(data.result.errors !== undefined)
+    errors = data.result.errors;
+
+    msg.payload = {
     result : 'error',
     code : 1502,
     time: msg.workTime,
@@ -35,4 +36,5 @@ msg.payload = {
     data : data
 }
 
+return msg;
 

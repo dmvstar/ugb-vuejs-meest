@@ -2,13 +2,15 @@
 // Chech has errors for reply
 // msg.out.result - result from execute LS service
 
-if(msg.out.result.hasErrors === "true" || 
-    (msg.out.result.errors !== undefined && 
-        msg.out.result.errors !== "")
-) {
-    return (null, msg);
+var result = msg.out.result;
+var isError = (result.hasErrors === "true" || 
+    (result.errors !== undefined && 
+     result.errors !== "") );
+
+if(isError) {
+    return [null, msg];
 }
 else {
-    return (msg, null);
+    return [msg, null];
 }    
 
