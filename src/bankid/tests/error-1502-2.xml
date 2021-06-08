@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <CreateClientFLResponse xmlns="http://tempuri.org/">
+            <CreateClientFLResult>
+                <ResponseId>232022</ResponseId>
+                <RequestId>232022</RequestId>
+                <Result>1</Result>
+                <HasErrors>true</HasErrors>
+                <Errors>
+                    <ErrorOperation>
+                        <Code>1051</Code>
+                        <Text>Ошибка при создании клиента StateCode = [3546303816], LastName = [Пушкарьов], FirstName = [Артем], FatherName = [Вадимович], Birthdate = [03.02.1997 0:00:00]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfIndividualsClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while creating Individual
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1067</Code>
+                        <Text>Ошибка при установке групп клиента clientId:[3552890]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfClientGroupMemberClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while creating ClientGroupMember
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1053</Code>
+                        <Text>Ошибка при вставке или обновлении инд. документов клиента clientId:[3552890], Id:[]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfIdent_ClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while creating Identification
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1054</Code>
+                        <Text>Ошибка при вставке или обновлении адреса клиента clientId:[3552890], Id:[]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfAddressesClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while creating Address
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1054</Code>
+                        <Text>Ошибка при вставке или обновлении адреса клиента clientId:[3552890], Id:[]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfAddressesClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while creating Address
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1055</Code>
+                        <Text>Ошибка при вставке или обновлении контактных данных клиента clientId:[3552890], Id:[]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfComm_ClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while creating Communication
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1075</Code>
+                        <Text>Ошибка при вставке или обновлении имен на других языках клиента clientId:[3552890], Id:[]</Text>
+                        <isError>true</isError>
+                        <ExceptMessage>The INSERT statement conflicted with the FOREIGN KEY constraint "RC_cfClientNamesClientId". The conflict occurred in database "WEBBANK", table "dbo.cfClients", column ~Id~.
+                            Error~s while updating ClientName. Id[(null)]
+                            The statement has been terminated.</ExceptMessage>
+                    </ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Клиент clientId:[3552890] не синхронизирован с АБС, т.к. были ошибки при добавилении клиента</Text>
+                        <isError>true</isError><ExceptMessage/></ErrorOperation>
+                </Errors>
+                <Client>
+                    <ClientId>3552890</ClientId>
+                    <ClientPushABS>false</ClientPushABS>
+                </Client>
+            </CreateClientFLResult>
+        </CreateClientFLResponse>
+    </soap:Body>
+</soap:Envelope>

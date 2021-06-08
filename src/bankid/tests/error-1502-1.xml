@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <CreateClientFLResponse xmlns="http://tempuri.org/">
+            <CreateClientFLResult>
+                <ResponseId>140656</ResponseId>
+                <RequestId>140656</RequestId>
+                <Result>1</Result>
+                <HasErrors>false</HasErrors>
+                <Errors>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Отправка клиента провайдеру Головной банк(HeadBank) филиал АБ "УКРГАЗБАНК", м.Київ, Україна.(BRANCHID). Группа клиентов UGB</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Вставка нового клиента в АБС BranchID=[1], Name=[Губань Данило Андрійович], Residence=[Resident], StateCode=[3835102198], ClientType=[NaturalPerson], GroupCode=[UGB], UserId=14507</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [ADDRESS], значение [Запорізька, , , м. Запоріжжя, вул. Вроцлавська, буд. 30-3, кв. 3,Україна, ,] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [INFO_HOME], значение [Запорізька, , , м. Запоріжжя, вул. Вроцлавська, буд. 30-3, кв. 3,Україна, ,] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: ATO_DateMoving значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [BIRTHDAY], значение [38350] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: CLIENT_STATUS_DATE значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: DATE_CORR_DOG значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: Date_freezing значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: Date_of_installment значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: Date_thawing значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: FinStatusClientsDt(23) значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: INFO_CORRDATA значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: PUBLIC_DATA_FACT значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: PUBLIC_DATA_PERMISSION значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: PUBLIC_DATA_RISK значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [Verifikatsii_date], значение [44352] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: BOOK_PHONE значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: BOSS_PHONE значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: E-MAIL значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: PHONE значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [PHONE_MOB], значение [380931822774] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [PHONES], значение [домашний:;рабочий:;мобильный:380931822774;дополнительный:;] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: CLNEGATIVE_STATUS значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: CUSTOMER_SEGMENT значение в анкете : 44352  значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: segment значение в анкете : 44352  значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: DATA_STOP_PEP значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: DATA_ZAX_PER значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [ECON_BRANCH_KIND], значение [00000], описание [Iнше (для фiзичних осiб (у т.ч. суб`єктів незалежної професійної діяльності) та нерезидентiв)] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: INFO_ACC_FROM значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [INFO_OUTER_ACC], значение [Карткові] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [NAD_K1], значение [інше] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [POSLUGI_1], значение [Розрахункове обслуговування;Кредитні операції;Операції з платіжними картками] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [VLASN], значение [Відсутнє у власності нерухоме майно] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: INFO_PIDPR значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [PASSPORT_DATA], значение [;Паспорт (Id-карта);;005807999;2311,03/03/2021;;03/03/2025;] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: REG_DATE_COMMIT значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: REG_NUMBER значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [PIB_IDENT], значение [Технический Пользователь WebServices МБ; ; 111] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [APEXLatName], значение [HUBAN DANYLO] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [CLIENT_STATUS], значение [0], описание [Фізична особа] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [Customer_verification], значение [3], описание [Ідентифікаційні дані отримано через Систему BankID НБУ] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [EXISTS_CRED_OUT], значение [0], описание [Ні] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [EXISTS_DEPO_OUT], значение [0], описание [Ні] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [INFO_HISTORY], значение [Задовільний] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [K013], значение [5], описание [Iншi фiзичнi особи] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [OBSYAG_NAD], значение [1], описание [До 50 тис.грн] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [SUMA_DOHOD], значение [1], описание [Дохід відсутній] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [TAX_PAYER_CODE], значение [3835102198] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [UGB_TCURelPers_F], значение [2], описание [Не пов~язана] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: BANK_MFO значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [BIRTH_COUNTRY], значение [804], описание [Україна] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: BIRTH_SURNAME значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [BIRTHPLACE], значение [Україна] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [CARD_GREEN], значение [1], описание [Ні] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [Chiisaresident_USA], значение [0], описание [Ні] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>3551594:Реквизит: Client_BIC значение в анкете :   значение в абс отсутствует</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [DATA_ZMIN], значение [07.06.2021 22:27:30] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [EDUCATION], значение [2], описание [Середня] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [FATCA], значение [3], описание [не є платником податку США] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [FATF_CODOBL], значение [23], описание [Запорізька область] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [FATF_COUNTRY_CITIZEN], значение [804], описание [Україна] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [GENDER], значение [1], описание [Чоловіча] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [INFO_PUBL], значение [1], описание [Не належить до публічних діячів] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [INFO_WORK_FROM], значение [Безробітний] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [MARITAL_STATUS], значение [1], описание [Неодружений(-на)] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [NAD_K_3], значение [9], описание [інші виплати відповідно до умов цивільно-правового правочину (договору)] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [PERSONAL_NAME], значение [Губань Данило Андрійович] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [Resident_USA], значение [0], описание [Ні] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Реквизит код: [VLASN_C_PAPIR], значение [Відсутні], описание [Відсутні] передан в АБС</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                    <ErrorOperation>
+                        <Code>1059</Code>
+                        <Text>Код клиента в АБС: [UGB.1926472214]</Text>
+                        <isError>false</isError><ExceptMessage/></ErrorOperation>
+                </Errors>
+                <Client>
+                    <ClientId>3551594</ClientId>
+                    <ScroogeId>3501416</ScroogeId>
+                    <ClientPushABS>true</ClientPushABS>
+                </Client>
+            </CreateClientFLResult>
+        </CreateClientFLResponse>
+    </soap:Body>
+</soap:Envelope>
