@@ -23,17 +23,17 @@ vBImapa
         },
         "lastName": {
             "needed" : true,
-            "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
+            "express": "^[А-Яа-яЇїІіЄєҐґ́' -]*$",
             "message": "Ошибка формата поля Фамилия"
         },
         "firstName": {
             "needed" : true,
-            "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
+            "express": "^[А-Яа-яЇїІіЄєҐґ́ ` -]*$",
             "message": "Ошибка формата поля Имя"
         },
         "middleName": {
             "needed" : true,
-            "express": "^[А-Яа-яЇїІіЄєҐґ́'-]*$",
+            "express": "^[А-Яа-яЇїІіЄєҐґ́' ‘-]*$",
             "message": "Ошибка формата поля Отчество"
         },
 
@@ -49,7 +49,7 @@ vBImapa
         {
             "type": {
                 "needed" : true,
-                "express":"^(паспорт|passport|idpassport)$",
+                "express":"^(паспорт|passport|zpassport|idpassport)$",
                 "message": "Ошибка формата паспорта, поле type"
             },
             "dateIssue": {
@@ -66,10 +66,31 @@ vBImapa
                 "express":"^(factual|juridical)$",
                 "message": "Ошибка формата адреса, поле type"
             },
+            "area": {
+                "needed" : true,
+                "express":"^.*$",
+                "message": "Ошибка формата адреса, поле area"
+            },
+            "city": {
+                "needed" : true,
+                "express":"^.+$",
+                "message": "Ошибка формата адреса, поле city"
+            },
+            "state": {
+                "needed" : true,
+                "express":"^.*$",
+                "message": "Ошибка формата адреса, поле area"
+            },
+            "street": {
+                "needed" : true,
+                "express":"^.+$",
+                "message": "Ошибка формата адреса, поле area"
+            }
             
         }
     ]
 }
+
 
 vBIdata
 {

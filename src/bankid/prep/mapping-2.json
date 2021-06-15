@@ -1,5 +1,23 @@
 [
   {
+    "cnt": 0,
+    "bankid": {
+      "block": "version",
+      "source": "../bankid/prep/mapping-2.json",
+      "code": "1.0.15",
+      "maps": "",
+      "type": "15.06.2021"
+    },
+    "webbank": {
+      "block": "",
+      "code": "",
+      "type": "",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
     "cnt": 1,
     "bankid": {
       "block": "person",
@@ -1505,5 +1523,157 @@
       "dict": "",
       "isneed": ""
     }
+  },
+  
+  {
+    "cnt": 81,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "wrkPosition",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "STAFFTYPE",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 82,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "wrkExperience",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "CLIENT_LASTWORKSTAGE",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 83,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "wrkCodObl",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "wrkCodObl",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 84,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "countofKeeps",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "COUNTOFUTRIM",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 85,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "limitWanted",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "limitWanted",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 86,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "monthAmount",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "MONTHSUMM",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 87,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "ownFundAmount",
+      "maps": "",
+      "type": "int"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "OBSYAG_NAD",
+      "type": "int",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
+  },
+  {
+    "cnt": 88,
+    "bankid": {
+      "block": "extends",
+      "source": "",
+      "code": "codProduct",
+      "maps": "",
+      "type": "string"
+    },
+    "webbank": {
+      "block": "Properties",
+      "code": "codProduct",
+      "type": "string",
+      "default": "",
+      "dict": "",
+      "isneed": ""
+    }
   }
+
+
+
 ]
+
+
+
+

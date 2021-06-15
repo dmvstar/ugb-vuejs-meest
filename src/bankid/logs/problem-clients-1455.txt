@@ -1,0 +1,129 @@
+2730518374 ERROR пробел в фамилии "lastName": "Злотар "
+2967014640 ERROR "documents" "type": "ident", "typeName": "Паспорт громадянина України у вигляді книжечки",
+3187616481 FIXED "firstName": "ДАР`Я", 
+3475414131 FIXED "lastName": "Наіт Буда",
+2366013048 ERROR "middleName": "В’ячеславівна", - і
+3772808926 FIXED "middleName": "Шахін кизи",
+2764817332 ERROR "lastName": "Стасишин ",
+2942214030 ERROR "lastName": "Лагутенко ",
+2026517552 ERROR "lastName": "Зельдес ",
+3533009573 FIXED пробел в отчестве "middleName": "АФГАН ОГЛИ"
+3719602384 FIXED "firstName": "Зу Пей Діана",
+3629312515 FIXED "middleName": "САМЕД ОГЛИ",
+2707011031 FIXED "middleName": "В‘ячеславович",
+2619904882 ERROR "sex": "?",
+2689406753 ERROR "addresses":  "city": "",
+2469007299 ERROR "addresses":  "city": "N/A",
+2834911911 ERROR "addresses":  "city": "",
+3862404191 FIXED "middleName": "Абдель Халім", 
+3244502018 ERROR "sex": "",
+3182904730 ERROR "addresses":  "city": "", "street": "", .....
+3594605774 FIXED "middleName": "Шаіг огли", 
+1382207468 ERROR "addresses":  "street": "", "area": "",
+3595313779 ERROR not in log
+3689408884 ERROR "addresses": "type": "juridical", "street": "",
+3110308756 ERROR "addresses":  "street": "", "area": "",
+2959803099 ERROR "addresses":  "street": "", "area": "",
+2839101200 ERROR "documents" "type": "ident",
+3711606216 ERROR "documents" "type": "ident",
+3008925697 FIXED "firstName": "Кармелюк Абдулла", 
+3497204513 FIXED "lastName": "Де Медічі", 
+3387711022 ERROR "addresses":  "street": "", "area": "",
+3247918438 ERROR "documents" "type": "ident",
+2866017919 ERROR "firstName": "Ярослав ",
+3449210318 FIXED "middleName": "Явер огли", 
+2251619375 ERROR "sex": "?",
+2483701212 ERROR "firstName": "Сергій ",
+
+-----------------------------------------
+PS
+Вы получали callback (example 2959803099)
+{
+    "statusCode": 400,
+    "payload": {
+        "result": "error",
+        "code": 1455,
+        "time": "Work time is: 0.013 sec.",
+        "path": "/openbanking/bankid/client",
+        "message": "Ошибка формата полей BI... ",
+        "details": "Error from checker4fmtields.js...",
+        "error": {
+            "result": "error",
+            "message": "Ошибка формата полей BI... ",
+            "details": "Error from checker4fmtields.js...",
+            "error": {
+                "hasError": true,
+                "errorCount": 2,
+                "result": [
+                    {
+                        "result": false,
+                        "path": "addresses->city",
+                        "check": "",
+                        "express": "^.+$",
+                        "message": "Ошибка формата адреса, поле city (addresses->city)[]"
+                    },
+                    {
+                        "result": false,
+                        "path": "addresses->street",
+                        "check": "",
+                        "express": "^.+$",
+                        "message": "Ошибка формата адреса, поле area (addresses->street)[]"
+                    }
+                ]
+            },
+            "data": {},
+            "source": {
+                "message": "Ошибка формата полей BI... ",
+                "source": {
+                    "id": "a8df2611.3788",
+                    "type": "function",
+                    "name": "checker4fmtields.js v.0.0.3",
+                    "count": 1
+                }
+            }
+        },
+        "data": {}
+    }
+}
+
+Вы получали callback (example 2839101200)
+{
+    "statusCode": 400,
+    "payload": {
+        "result": "error",
+        "code": 1455,
+        "time": "Work time is: 0.017 sec.",
+        "path": "/openbanking/bankid/client",
+        "message": "Ошибка формата полей BI... ",
+        "details": "Error from checker4fmtields.js...",
+        "error": {
+            "result": "error",
+            "message": "Ошибка формата полей BI... ",
+            "details": "Error from checker4fmtields.js...",
+            "error": {
+                "hasError": true,
+                "errorCount": 1,
+                "result": [
+                    {
+                        "result": false,
+                        "path": "documents->type",
+                        "check": "ident",
+                        "express": "^(паспорт|passport|zpassport|idpassport)$",
+                        "message": "Ошибка формата паспорта, поле type (documents->type)[ident]"
+                    }
+                ]
+            },
+            "data": {},
+            "source": {
+                "message": "Ошибка формата полей BI... ",
+                "source": {
+                    "id": "a8df2611.3788",
+                    "type": "function",
+                    "name": "checker4fmtields.js v.0.0.3",
+                    "count": 1
+                }
+            }
+        },
+        "data": {}
+    }
+}

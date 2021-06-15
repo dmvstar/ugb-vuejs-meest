@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>48705240</TransferId>
+            <TransferNumber>12714501792</TransferNumber>
+            <SystemCode>ri</SystemCode>
+            <SystemName>RIA</SystemName>
+            <Operation>2</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-06-11T09:40:47+03:00</OperationDate>
+            <PayoutDate>2021-06-11T09:40:38+03:00</PayoutDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-06-11T00:00:00+03:00</ABSDate>
+            <TransferAmount>984.0000</TransferAmount>
+            <FromCountry>380</FromCountry>
+            <ToCountry>804</ToCountry>
+            <TransferСurrency>978</TransferСurrency>
+            <PointBank>1000211</PointBank>
+            <PointSW>GASB0078</PointSW>
+            <UserLogin>vkhriapina</UserLogin>
+            <UserName>Хряпіна Вікторія Анатоліївна</UserName>
+            <UserID>10173</UserID>
+            <Sender>
+                <LastName>MANCHUK</LastName>
+                <FirstName>IEFROSYNIIA</FirstName>
+                <Residency>false</Residency>
+            </Sender>
+            <Receiver>
+                <LastName>MANCHUK</LastName>
+                <FirstName>MICOLAI</FirstName>
+                <Residency>true</Residency>
+                <DocumentName>PASSPORT</DocumentName>
+                <DocumentSeries>KK</DocumentSeries>
+                <DocumentNumber>608572</DocumentNumber>
+                <DocumentIssueDate>2001-03-26</DocumentIssueDate>
+                <DocumentIssuedBy>IZMAILSKIM RV UMVS UKRAINY</DocumentIssuedBy>
+                <DateofBirth>1964-12-08</DateofBirth>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>48738880</TransferId>
+            <TransferNumber>84860118</TransferNumber>
+            <SystemCode>mg</SystemCode>
+            <SystemName>MoneyGram</SystemName>
+            <Operation>2</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-06-14T10:48:49+03:00</OperationDate>
+            <PayoutDate>2021-06-14T10:48:49+03:00</PayoutDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-06-14T00:00:00+03:00</ABSDate>
+            <TransferAmount>100.000</TransferAmount>
+            <FromCountry>376</FromCountry>
+            <ToCountry>804</ToCountry>
+            <TransferСurrency>840</TransferСurrency>
+            <PointBank>1000213</PointBank>
+            <PointSW>GASB0080</PointSW>
+            <UserLogin>izholkovska</UserLogin>
+            <UserName>Жолковська Ірина Василівна</UserName>
+            <UserID>12991</UserID>
+            <Sender>
+                <LastName>KORKHIN</LastName>
+                <FirstName>LISA TAL</FirstName>
+            </Sender>
+            <Receiver>
+                <LastName>TODOROVA</LastName>
+                <FirstName>GALINA</FirstName>
+                <MiddleName>IVANOVNA</MiddleName>
+                <Residency>true</Residency>
+                <DocumentName>Паспорт</DocumentName>
+                <DocumentSeries>KK</DocumentSeries>
+                <DocumentNumber>584672</DocumentNumber>
+                <DateofBirth>1962-07-16</DateofBirth>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>48739113</TransferId>
+            <SystemCode>we</SystemCode>
+            <SystemName>Welsend</SystemName>
+            <Operation>1</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-06-14T10:48:33+03:00</OperationDate>
+            <SendDate>2021-06-14T10:48:16+03:00</SendDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-06-14T00:00:00+03:00</ABSDate>
+            <TransferAmount>2000.0000</TransferAmount>
+            <FromCountry>804</FromCountry>
+            <ToCountry>804</ToCountry>
+            <TransferСurrency>980</TransferСurrency>
+            <CommissionAmount>14.0000</CommissionAmount>
+            <CommissionСurrency>980</CommissionСurrency>
+            <CommissionAmountEq>14.0</CommissionAmountEq>
+            <PointBank>1000083</PointBank>
+            <PointSW>GASB0035</PointSW>
+            <UserLogin>iadudko</UserLogin>
+            <UserName>Дудко Ірина Анатоліївна</UserName>
+            <UserID>8409</UserID>
+            <Sender>
+                <LastName>ГРИЦЮК</LastName>
+                <FirstName>ВАЛЕНТИНА</FirstName>
+                <MiddleName>ІВАНІВНА</MiddleName>
+                <Residency>true</Residency>
+                <DocumentName>ДРУГОЙ</DocumentName>
+                <DocumentSeries>НА</DocumentSeries>
+                <DocumentNumber>768119</DocumentNumber>
+                <DocumentIssueDate>2000-02-22</DocumentIssueDate>
+                <DocumentIssuedBy>ШЕПЕТІВСЬКИМ МРВ УМВСУ В ХМЕЛЬНИЦЬКІЙ ОБЛАСТІ</DocumentIssuedBy>
+            </Sender>
+            <Receiver>
+                <LastName>КОНДИБА</LastName>
+                <FirstName>НАТАЛІЯ</FirstName>
+                <MiddleName>СЕРГІЇВНА</MiddleName>
+                <Residency>true</Residency>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
