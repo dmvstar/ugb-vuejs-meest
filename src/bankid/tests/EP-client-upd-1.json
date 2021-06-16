@@ -1,0 +1,185 @@
+Пример вызова обновления Клиента
+URL=https://nr-openbanking.dev.ukrgasaws.com/api/openbanking/bankid/client/update
+Header 'x-auth-token' = '4!Jm%8}bWsqSa?BwKjW`qfP:`gwJHYP%:!pKMrMat6' 
+
+Запрос
+{
+    "wbId": 3592648,
+    "person": {
+        "inn": "3501414619"
+    },
+    "extends": {
+        "socStatus": "1",
+        "wrkPosition": "4",
+        "wrkExperience": "64",
+        "wrkCodObl": "53",
+        "countOfKeeps": "4",
+        "limitWanted": "40000",
+        
+        "workInfo": "Головний фахувец",
+        "education": "2"
+    },
+    "addresses": [
+    {
+      "area": "",
+      "city": "Київ",
+      "city1": "",
+      "type": "juridical",
+      "state": "",
+      "flatNo": "120",
+      "street": "Агрегатна, 55",
+      "country": "UA",
+      "houseNo": "2"
+    }
+  ],
+  "documents": [
+    {
+      "type": "idpassport",
+      "issue": "8034",
+      "number": "000381959",
+      "series": "",
+      "typeName": "idpassport",
+      "dateIssue": "09.03.2017",
+      "dateExpiration": "09.03.2021",
+      "issueCountryIso2": "UA"
+    }
+    ],
+    
+    "timestamp": "1617880028473",
+    "merchant_name": "easypay_test"
+}
+
+Ответ
+{
+    "result": "ok",
+    "code": 1200,
+    "time": "Work time is: 28.579 sec.",
+    "path": "/openbanking/bankid/client/update",
+    "message": "Клиент создан успешно",
+    "data": {
+        "orig": {
+            "wbId": 3592648,
+            "person": {
+                "inn": "3501414619"
+            },
+            "extends": {
+                "socStatus": "1",
+                "wrkPosition": "4",
+                "wrkExperience": "64",
+                "wrkCodObl": "53",
+                "countOfKeeps": "4",
+                "limitWanted": "40000",
+                "workInfo": "Головний фахувец",
+                "education": "2"
+            },
+            "addresses": [
+                {
+                    "area": "",
+                    "city": "Київ",
+                    "city1": "",
+                    "type": "juridical",
+                    "state": "",
+                    "flatNo": "120",
+                    "street": "Агрегатна, 55",
+                    "country": "UA",
+                    "houseNo": "2"
+                }
+            ],
+            "documents": [
+                {
+                    "type": "idpassport",
+                    "issue": "8034",
+                    "number": "000381959",
+                    "series": "",
+                    "typeName": "idpassport",
+                    "dateIssue": "09.03.2017",
+                    "dateExpiration": "09.03.2021",
+                    "issueCountryIso2": "UA"
+                }
+            ],
+            "timestamp": "1617880028473",
+            "merchant_name": "easypay_test"
+        },
+        "input": {
+            "wbId": 3592648,
+            "person": {
+                "inn": "3501414619",
+                "flagPEPs": "1",
+                "flagTopLevelRisk": "0"
+            },
+            "extends": {
+                "socStatus": "1",
+                "wrkPosition": "4",
+                "wrkExperience": "64",
+                "wrkCodObl": "53",
+                "countOfKeeps": "4",
+                "limitWanted": "40000",
+                "workInfo": "Головний фахувец",
+                "education": "2",
+                "verifyDate": "16.06.2021",
+                "signDate": "16.06.2021",
+                "forTaxStatus": "0",
+                "realEstateAvail": "1",
+                "movePropAvail": "1",
+                "otherBankAccount": "3",
+                "otherBankCredit": "0",
+                "otherBankDepo": "0",
+                "costPaperAvail": "відсутні",
+                "profitWay": "14300",
+                "profitSrc": "1",
+                "ownFundsSrc": "1",
+                "typeCli": "Клієнт з відкриттям рахунку",
+                "reputation": "Задовільний",
+                "verifyType": "3",
+                "countryCitizen": "804",
+                "planUseServices": "1, 22, 4",
+                "statusBusiness": "5",
+                "ugbRelatePers": "0",
+                "greenCard": "1",
+                "usaChiisares": "0",
+                "statusFATCA": "3",
+                "registryUSA": "0"
+            },
+            "addresses": [
+                {
+                    "area": "",
+                    "city": "Київ",
+                    "city1": "",
+                    "type": "juridical",
+                    "state": "",
+                    "flatNo": "120",
+                    "street": "Агрегатна, 55",
+                    "country": "UA",
+                    "houseNo": "2"
+                }
+            ],
+            "documents": [
+                {
+                    "type": "idpassport",
+                    "issue": "8034",
+                    "number": "000381959",
+                    "series": "",
+                    "typeName": "idpassport",
+                    "dateIssue": "09.03.2017",
+                    "dateExpiration": "09.03.2021",
+                    "issueCountryIso2": "UA"
+                }
+            ],
+            "timestamp": "1617880028473",
+            "merchant_name": "easypay_test",
+            "verification": "3"
+        },
+        "result": {
+            "Client": {
+                "ClientId": 3592648,
+                "ScroogeId": "3542349",
+                "ClientPushABS": true
+            },
+            "ResponseId": 752220,
+            "RequestId": 752220,
+            "Result": 1,
+            "HasErrors": false,
+            "Errors": []
+        }
+    }
+}
