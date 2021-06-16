@@ -1,5 +1,5 @@
 Пример вызова обновления Клиента
-
+Вызов синхронный
 URL=https://nr-openbanking.dev.ukrgasaws.com/api/openbanking/bankid/client/update
 Header 'x-auth-token' = '4!Jm%8}bWsqSa?BwKjW`qfP:`gwJHYP%:!pKMrMat6' 
 
