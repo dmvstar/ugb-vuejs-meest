@@ -163,56 +163,56 @@
                         "type": "String",
                         "needed": false,
                         "express": "^(factual|juridical)$",
-                        "name": "Ошибка формата адреса, поле Тип"
+                        "name": "Адрес, поле Тип"
                     },
                     "country":{
                         "example": "Ук",
                         "type": "String",
                         "needed": false,
                         "express": "^[A-ZА-яЇїІіЄєҐґ́i][A-ZА-яЇїІіЄєҐґ́i]$",
-                        "name": "Ошибка формата адреса, поле Страна"
+                        "name": "Адрес, поле Страна"
                     },
                     "state": {
                         "example":"Київська",
                         "type": "String",
                         "needed": false,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "name": "Ошибка формата адреса, поле Область"
+                        "name": "Адрес, поле Область"
                     },
                     "area": {
                         "example":"Київ",
                         "type": "String",
                         "needed": false,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "name": "Ошибка формата адреса, поле Район"
+                        "name": "Адрес, поле Район"
                     },
                     "city": {
                         "example":"м. Київ",
                         "type": "String",
                         "needed": false,
                         "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "name": "Ошибка формата адреса, поле Нас пункт"
+                        "name": "Адрес, поле Нас пункт"
                     },
                     "street": {
                         "example":"вул. Бородинского побоища",
                         "type": "String",
                         "needed": false,
-                        "express": "^[.А-яЇїІіЄєҐґ́i' ]*$",
-                        "name": "Ошибка формата адреса, поле Улица"
+                        "express": "^[0-9.А-яЇїІіЄєҐґ́i' ]*$",
+                        "name": "Адрес, поле Улица"
                     },
                     "houseNo": {
                         "example":"21",
                         "type": "String",
                         "needed": false,
                         "express": "^()([0-9А-я]*)$",
-                        "name": "Ошибка формата адреса, поле Дом"
+                        "name": "Адрес, поле Дом"
                     },
                     "flatNo": {
                         "example":"16",
                         "type": "String",
                         "needed": false,
                         "express": "^()([0-9А-я]*)$",
-                        "name": "Ошибка формата адреса, поле Помещение"
+                        "name": "Адрес, поле Помещение"
                     }
                 }    
             }    
