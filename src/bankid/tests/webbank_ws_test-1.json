@@ -1,0 +1,265 @@
+WB WS Calls
+8.06.2021, 16:48:34node: 723acaba.3cf814msg.payload : Object
+{
+    "statusCode": 200,
+    "payload": {
+        "Responses": {
+            "ResponseId": 0,
+            "RequestId": 0,
+            "Result": 1,
+            "HasErrors": false,
+            "Errors": []
+        },
+        "Individuals": {
+            "FirstName": "Андрій",
+            "LastName": "Канигін",
+            "FatherName": "Ігорович",
+            "Gender": 1,
+            "BirthDay": "2000-11-28T00:00:00",
+            "BirthSurname": "",
+            "MarriageStatus": 1,
+            "Note": null,
+            "Changed": "2021-06-03T22:48:25.28",
+            "Status": 1
+        },
+        "ClientId": 3535723,
+        "ScroogeId": "3485346",
+        "Clients": {
+            "StateCode": "3775414018",
+            "Name": "Канигін Андрій Ігорович",
+            "Residency": 1,
+            "Type": 1,
+            "SubType": 0,
+            "isTechFlag": 0,
+            "IsOut": 0,
+            "IsPotential": 0,
+            "IsPartner": false,
+            "TreatFlag": 0,
+            "LastChangeDate": "2021-06-03T22:48:25.28",
+            "IdentDate": null,
+            "PrevIdentDate": "2021-06-03T00:00:00",
+            "IdentInfo": "",
+            "Status": 1
+        },
+        "Properties": [
+            {
+                "TypeCode": "int",
+                "Code": "Gender",
+                "Name": "Стать",
+                "Value": "1",
+                "DateFrom": null,
+                "DateInto": null,
+                "Status": 1,
+                "Changed": "2021-06-03T20:35:12.75"
+            },
+            {
+                "TypeCode": "int",
+                "Code": "Education",
+                "Name": "Освіта",
+                "Value": "2",
+                "DateFrom": null,
+                "DateInto": null,
+                "Status": 1,
+                "Changed": "2021-06-03T20:35:12.953"
+            },
+            .....
+            {
+                "TypeCode": "string",
+                "Code": "Customer_verification",
+                "Name": "Спосіб верифікації клієнта",
+                "Value": "3",
+                "DateFrom": null,
+                "DateInto": null,
+                "Status": 1,
+                "Changed": "2021-06-03T20:35:12.97"
+            },
+            {
+                "TypeCode": "string",
+                "Code": "PEP_SUSPECTED",
+                "Name": "Виявлено співпадіння з ПЗО",
+                "Value": "0",
+                "DateFrom": null,
+                "DateInto": null,
+                "Status": 1,
+                "Changed": "2021-06-03T20:35:12.64"
+            },
+            {
+                "TypeCode": "string",
+                "Code": "UGB_TCURelPers",
+                "Name": "Пов`язана особа за ПКУ",
+                "Value": "2",
+                "DateFrom": "2021-06-03T00:00:00",
+                "DateInto": "4637-11-27T00:00:00",
+                "Status": 1,
+                "Changed": "2021-06-03T20:35:12.907"
+            }
+        ],
+        "Addresses": [
+            {
+                "Id": 7707335,
+                "TypeId": 1,
+                "TypeCode": "1",
+                "Country": "804",
+                "PostalCode": "",
+                "State": "Київська",
+                "Region": "",
+                "TownshipType": "3508",
+                "Town": "Київ",
+                "StreetType": "3510",
+                "Street": "Агрегатна",
+                "HouseType": "3511",
+                "HouseNumber": "2",
+                "FlatType": "3506",
+                "FlatNumber": "120",
+                "LandlinePhoneNumber": "",
+                "PropertyStatus": "",
+                "RegistrationDate": null,
+                "EndDate": null,
+                "Changed": "2021-06-03T20:35:12.703",
+                "Status": 1
+            },
+            {
+                "Id": 7707336,
+                "TypeId": 2,
+                "TypeCode": "2",
+                "Country": "804",
+                "PostalCode": "",
+                "State": "Київська",
+                "Region": "",
+                "TownshipType": "3508",
+                "Town": "Київ",
+                "StreetType": "3510",
+                "Street": "Агрегатна",
+                "HouseType": "3511",
+                "HouseNumber": "2",
+                "FlatType": "3506",
+                "FlatNumber": "120",
+                "LandlinePhoneNumber": "",
+                "PropertyStatus": "",
+                "RegistrationDate": null,
+                "EndDate": null,
+                "Changed": "2021-06-03T20:35:12.72",
+                "Status": 1
+            }
+        ],
+        "Communications": [
+            {
+                "Id": 4761510,
+                "TypeId": 3,
+                "TypeCode": "3",
+                "Value": "2334455",
+                "IsMain": true,
+                "IsVerified": true,
+                "Note": "",
+                "SourceInfo": "",
+                "Changed": "2021-06-03T20:35:12.72",
+                "Status": 1
+            }
+        ],
+        "Names": [
+            {
+                "Id": 3122753,
+                "Lang": "LAT",
+                "Name": "KANYHIN ANDRII",
+                "FullName": "KANYHIN ANDRII",
+                "FullNameR": "",
+                "FullNameD": "",
+                "Status": 1
+            }
+        ],
+        "Identifications": [
+            {
+                "Id": 4923660,
+                "TypeId": 55,
+                "TypeCode": "404",
+                "No": 1,
+                "Series": "",
+                "Number": "000381959",
+                "FormSeries": "",
+                "FormNumber": "",
+                "Registrator": "8034",
+                "RegistrationDate": null,
+                "IssueDate": "2017-03-09T00:00:00",
+                "ExpirationDate": "2021-03-09T00:00:00",
+                "RecordDate": null,
+                "CheckDate": null,
+                "IsMain": true,
+                "Checked": true,
+                "Changed": "2021-06-03T20:35:12.703",
+                "Status": 1
+            }
+        ],
+        "BusinessActivities": [],
+        "Relations": []
+    }
+}
+------------------------------
+
+"JSON parse error"
+8.06.2021, 17:04:12node: 723acaba.3cf814msg.payload : Object
+
+{
+    "statusCode": 401,
+    "payload": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"/>\r\n<title>401 - Unauthorized: Access is denied due to invalid credentials.</title>\r\n<style type=\"text/css\">\r\n<!--\r\nbody{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}\r\nfieldset{padding:0 15px 10px 15px;} \r\nh1{font-size:2.4em;margin:0;color:#FFF;}\r\nh2{font-size:1.7em;margin:0;color:#CC0000;} \r\nh3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} \r\n#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:\"trebuchet MS\", Verdana, sans-serif;color:#FFF;\r\nbackground-color:#555555;}\r\n#content{margin:0 0 0 2%;position:relative;}\r\n.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}\r\n-->\r\n</style>\r\n</head>\r\n<body>\r\n<div id=\"header\"><h1>Server Error</h1></div>\r\n<div ..."
+}
+
+8.06.2021, 17:19:11node: 723acaba.3cf814
+msg.payload : Object
+{ statusCode: 200, payload: object }
+
+{
+    "statusCode": 200,
+    "payload": {
+        "Responses": {
+            "ResponseId": 0,
+            "RequestId": 0,
+            "Result": 3,
+            "HasErrors": true,
+            "Errors": [
+                {
+                    "Code": 1011,
+                    "Text": "Найдено 0 клиентов по указанным параметрам",
+                    "isError": true,
+                    "ExceptMessage": ""
+                }
+            ]
+        },
+        "Individuals": null,
+        "ClientId": 0,
+        "ScroogeId": null,
+        "Clients": null,
+        "Properties": [],
+        "Addresses": [],
+        "Communications": [],
+        "Names": [],
+        "Identifications": [],
+        "BusinessActivities": [],
+        "Relations": []
+    }
+}
+
+8.06.2021, 17:28:30node: 723acaba.3cf814msg.payload : Object
+
+{
+    "statusCode": 401,
+    "payload": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" 
+    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html 
+    xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta 
+    http-equiv=\"Content-Type\" content=\"text/html; 
+    charset=iso-8859-1\"/>\r\n
+    <title>401 - Unauthorized: Access is denied due to invalid credentials.</title>
+    \r\n<style type=\"text/css\">\r\n<!--\r\n
+    body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, 
+        sans-serif;background:#EEEEEE;}\r\nfieldset{padding:0 15px 10px 15px;} 
+        \r\nh1{font-size:2.4em;margin:0;color:#FFF;}\r\nh2{font-size:1.7em;
+            margin:0;color:#CC0000;} \r\nh3{font-size:1.2em;margin:10px 0 0 0;
+                color:#000000;} \r\n#header{width:96%;margin:0 0 0 0;
+                    padding:6px 2% 6px 2%;font-family:\"trebuchet MS\", 
+                    Verdana, sans-serif;color:#FFF;\r\nbackground-color:#555555;}\r\n
+                    #content{margin:0 0 0 2%;position:relative;}\r\n.
+                    content-container{background:#FFF;width:96%;
+                        margin-top:8px;padding:10px;position:relative;}\r\n-->\r\n
+                        </style>\r\n</head>\r\n<body>\r\n<div id=\"header\">
+                        <h1>Server Error</h1></div>\r\n<div ..."
+}
+
