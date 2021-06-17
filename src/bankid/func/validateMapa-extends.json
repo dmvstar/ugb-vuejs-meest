@@ -1,6 +1,7 @@
 [
     {
         "name": "vBImapa",
+        
         "extends": {
             "socStatus": {
                 "value": "1",
@@ -26,7 +27,7 @@
                 "express": "^[1-9][1-9]$",
                 "message": "Ошибка формата поля wrkCodObl"
             },
-            "countOfKeeps": {
+            "countofKeeps": {
                 "value": "4",
                 "needed": false,
                 "express": "^[1-9]$",
