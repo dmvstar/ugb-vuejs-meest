@@ -50,7 +50,7 @@ Header 'x-auth-token' = '4!Jm%8}bWsqSa?BwKjW`qfP:`gwJHYP%:!pKMrMat6'
     "merchant_name": "easypay_test"
 }
 
-Ответ
+Ответ 200-1200
 {
     "result": "ok",
     "code": 1200,
@@ -183,4 +183,30 @@ Header 'x-auth-token' = '4!Jm%8}bWsqSa?BwKjW`qfP:`gwJHYP%:!pKMrMat6'
             "Errors": []
         }
     }
+}
+
+
+Ответ 501-1507
+{
+    "result": "error",
+    "code": 1507,
+    "time": "Work time is: 0.135 sec.",
+    "path": "/openbanking/bankid/client/update",
+    "message": "Помилка при пошуку Клієнта. Клієнта не створено BankId від easypay_test",
+    "details": "Error from find client.",
+    "error": {
+        "code": 1410,
+        "result": "no",
+        "workTime": "Work time is: 1.21 msec.",
+        "path": "/openbanking/bankid/client/ext/check",
+        "message": "Помилка при пошуку Клієнта. Клієнта не створено BankId від easypay_test",
+        "error": [
+            "Клиент [73433768]  для [easypay_test] не найден"
+        ],
+        "data": {},
+        "statusCode": 501,
+        "codeRe": 1507,
+        "details": "Error from find client."
+    },
+    "data": {}
 }
