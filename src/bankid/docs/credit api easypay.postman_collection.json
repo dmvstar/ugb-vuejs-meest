@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "da1de19e-759c-4871-8022-d350af2b5c46",
+		"name": "credit api easypay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "STAGE /api/ccs/credit/order",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "SInCmtKHfKVHyyoK",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "easypay",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productTypeId\": 1,\r\n\"programTypeId\": 11,\r\n\"phoneCode\":\"+380\",\r\n\"phoneKindId\":1,\r\n\"phoneType\":1,\r\n\"phone\":\"+380931457919\",\r\n\"lastVerificationDate\":\"2021-04-22@14:51:17\",\r\n\"salaryPeriod\":1,\r\n\"addressTypeId\":1,\r\n\"countryId\":804,\r\n\"currency\":\"UAH\",\r\n\"term\":12,\r\n\"schedule\":\"кредитна лінія\",\r\n\"verifiedFlag\":true,\r\n\"sex\":1,\r\n\"name\":\"имя\",\r\n\"surname\":\"фамилия\",\r\n\"patronymicName\":\"отчество\",\r\n\"stateCode\":\"3121121200\",\r\n\"birthDay\":\"1994-04-24@00:00:00\",\r\n\"docTypeId\":1,\r\n\"docSeries\":\"АА\",\r\n\"docNumber\":\"123456\",\r\n\"docIssueDate\":\"2012-11-11@00:00:00\",\r\n\"dependentsNumber\":\"1\",\r\n\"liveRegionId\":6,\r\n\"educationId\":5,\r\n\"maritalId\":3,\r\n\"jobRegionId\":3,\r\n\"jobCategoryId\":1,\r\n\"positionId\":4,\r\n\"employmentMonth\":\"123\",\r\n\"salary\":\"12345\",\r\n\"amount\":\"2345\",\r\n\"isWebBankClient\": true,\r\n\"system\": \"easypay\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ccs.dev.ukrgasaws.com/api/ccs/credit/order",
+					"protocol": "http",
+					"host": [
+						"ccs",
+						"dev",
+						"ukrgasaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"ccs",
+						"credit",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
