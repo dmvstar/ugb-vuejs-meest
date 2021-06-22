@@ -1,0 +1,43 @@
+{
+    "phoneCode": "+380",
+    "phoneKindId": 1,
+    "phoneType": 1,
+    "verifiedFlag": true,
+    "salaryPeriod": 1,
+    "addressTypeId": 1,
+    "schedule": "кредитна лінія",
+    "isWebBankClient": true,
+    "system": "easypay",
+    "currency": "UAH",
+    "term": 12,
+    "countryId": 804,
+
+    "productTypeId": 1,
+    "programTypeId": 11,
+
+    "phone": "{{payload.phone}}",
+
+    "lastVerificationDate": "{{payload.}}",
+    "sex": "{{payload.sex}}",
+    "name": "{{payload.name}}",
+    "surname": "{{payload.surname}}",
+    "patronymicName": "{{payload.patronymicName}}",
+    "stateCode": "{{payload.stateCode}}",
+    "birthDay": "{{payload.birthDay}}",
+
+    "docTypeId": "{{payload.docTypeId}}",
+    "docSeries": "{{payload.docSeries}}",
+    "docNumber": "{{payload.docNumber}}",
+    "docIssueDate": "{{payload.docIssueDate}}",
+
+    "dependentsNumber": "{{payload.dependentsNumber}}", 
+    "liveRegionId": "{{payload.liveRegionId}}",
+    "educationId": "{{payload.educationId}}",
+    "maritalId": "{{payload.maritalId}}",
+    "jobRegionId": "{{payload.jobRegionId}}",
+    "jobCategoryId": "{{payload.jobCategoryId}}",
+    "positionId": "{{payload.positionId}}",
+    "employmentMonth": "{{payload.employmentMonth}}",
+    "salary": "{{payload.salary}}", 
+    "amount": "{{payload.amount}}"
+}

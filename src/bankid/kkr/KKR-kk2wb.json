@@ -1,0 +1,140 @@
+[
+    {
+        "productId": {
+            "code": "codProduct",
+            "type": "Properties"
+        }
+    },
+    {
+        "phone": {
+            "code": "Value",
+            "type": "Communications"
+        }
+    },
+    {
+        "lastVerificationDate": {
+            "code": "Verifikatsii_date ",
+            "type": "Properties"
+        }
+    },
+    {
+        "salary": {
+            "code": "MONTHSUMM",
+            "type": "Properties"
+        }
+    },
+    {
+        "surname": {
+            "code": "LastName",
+            "type": "Individuals"
+        }
+    },
+    {
+        "name": {
+            "code": "FirstName",
+            "type": "Individuals"
+        }
+    },
+    {
+        "patronymicName": {
+            "code": "FatherName",
+            "type": "Individuals"
+        }
+    },
+    {
+        "stateCode": {
+            "code": "StateCode",
+            "type": "Clients"
+        }
+    },
+    {
+        "birthDay": {
+            "code": "BirthDay",
+            "type": "Individuals"
+        }
+    },
+    {
+        "sex": {
+            "code": "GENDER",
+            "type": "Individuals"
+        }
+    },
+    {
+        "docTypeId": {
+            "code": "TypeId",
+            "type": "Identifications"
+        }
+    },
+    {
+        "docSeries": {
+            "code": "Series",
+            "type": "Identifications"
+        }
+    },
+    {
+        "docNumber": {
+            "code": "Number",
+            "type": "Identifications"
+        }
+    },
+    {
+        "docIssueDate": {
+            "code": "IssueDate",
+            "type": "Identifications"
+        }
+    },
+    {
+        "liveRegionId": {
+            "code": "FATF_CodObl",
+            "type": "Properties"
+        }
+    },
+    {
+        "maritalId": {
+            "code": "MarriageStatus",
+            "type": "Individuals"
+        }
+    },
+    {
+        "dependentsNumber": {
+            "code": "COUNTOFUTRIM",
+            "type": "Properties"
+        }
+    },
+    {
+        "educationId": {
+            "code": "Education",
+            "type": "Properties"
+        }
+    },
+    {
+        "jobCategoryId": {
+            "code": "socStatus",
+            "type": "Properties"
+        }
+    },
+    {
+        "positionId": {
+            "code": "StaffType",
+            "type": "Properties"
+        }
+    },
+    {
+        "employmentMonth": {
+            "code": "CLIENT_LASTWORKSTAGE",
+            "type": "Properties"
+        }
+    },
+    {
+        "jobRegionId": {
+            "code": "wrkCodObl",
+            "type": "Properties"
+        }
+    },
+    {
+        "amount": {
+            "code": "limitWanted",
+            "type": "Properties"
+        }
+    }
+]

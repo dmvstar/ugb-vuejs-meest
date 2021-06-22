@@ -1,0 +1,22 @@
+{
+    "name": "Андрій",
+    "surname": "Кан и гін",
+    "patronymicName": "Ігорович",
+    "birthDay": "2000-11-28@00:00:00",
+    "sex": 1,
+    "stateCode": "3501414619",
+    "phone": "2334455",
+    "docTypeId": "404",
+    "docSeries": "",
+    "docNumber": "000381959",
+    "docIssueDate": "2017-03-09@00:00:00",
+    "productId": "11",
+    "lastVerificationDate": "2021-06-22@00:00:00",
+    "salary": "120000",
+    "dependentsNumber": "4",
+    "educationId": "2",
+    "jobCategoryId": "1",
+    "employmentMonth": "64",
+    "jobRegionId": "53",
+    "amount": "400000"
+}
