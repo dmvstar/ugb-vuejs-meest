@@ -1,6 +1,7 @@
 /**
  * @WHERE bankid/kkr/KKR-transform-1.js
  * @WHAT 
+ * @VER 0.0.7-23.06.2021 08:08 
  */
 var isConsole = true;
 var isLocalWork = true;
@@ -34,6 +35,7 @@ payload.birthDay = temp.BirthDay.replace(/T/, '@');
 payload.sex = temp.Gender;
 payload.maritalId = temp.MarriageStatus;
 
+payload.stateCode = msg.kkr.webdata.data.wbcli.Clients.StateCode;
 temp =  msg.kkr.webdata.data.wbcli.Clients;
 payload.stateCode = temp.StateCode;
 
@@ -66,10 +68,10 @@ for(o of msg.kkr.kk2wb) {
             .find(x => x.Code === o[v].code);
             if(value !== undefined) {
                 var num = value.Value;
-                if(isNaN(isNaN) && !(''+value.Value).includes('.'))
+                if(!isNaN(value.Value)) // && !(''+value.Value).includes('.'))
                     num = parseInt(value.Value);
                 payload[payloadKey] = num;
-                //console.log("4Props", value.Value, num, isNaN(isNaN));
+                //console.log("4Props", value.Value, num, isNaN(value.Value));
             }
         }
     }
@@ -86,10 +88,10 @@ if(payload.lastVerificationDate !== undefined) {
 for(p of msg.kkr.kkrmapa){
     var pkey = p.kkField;    
     var oval = payload[pkey];
-    //console.log("1dicts", pkey, oval);
+    console.log("1dicts", pkey, oval);
     
     var tran = p.transform.find(x => x.from.id === ''+oval);
-    //console.log("2dicts", pkey, oval, tran);
+    console.log("2dicts", pkey, oval, tran);
     //if(tran !== undefined)
     {
         var nval = parseInt(tran.tokk.id);
@@ -138,9 +140,5 @@ var payload = {
 */
 
 msg.payload = payload;
-
-console.log(msg.payload);
-
+if(isLocalWork) console.log(JSON.stringify(msg.payload,'',4));
 return msg;
-
-

@@ -1,12 +1,12 @@
 {
     "result": "ok",
     "code": 1200,
-    "time": "Work time is: 4.658 sec.",
+    "time": "Work time is: 4.013 sec.",
     "path": "/openbanking/bankid/client/update",
     "message": "Клиент обновлен успешно",
     "data": {
         "orig": {
-            "wbId": 859978,
+            "wbId": 3592648,
             "person": {
                 "type": "physical",
                 "inn": "3501414619"
@@ -51,7 +51,7 @@
             "merchant_name": "easypay_test"
         },
         "input": {
-            "wbId": 859978,
+            "wbId": 3592648,
             "person": {
                 "type": "physical",
                 "inn": "3501414619",
@@ -68,8 +68,8 @@
                 "monthAmount": "120000",
                 "workInfo": "Головний фахувец",
                 "education": "2",
-                "verifyDate": "23.06.2021",
-                "signDate": "23.06.2021",
+                "verifyDate": "22.06.2021",
+                "signDate": "22.06.2021",
                 "forTaxStatus": "0",
                 "realEstateAvail": "1",
                 "movePropAvail": "1",
@@ -123,12 +123,12 @@
         },
         "result": {
             "Client": {
-                "ClientId": 859978,
-                "ScroogeId": "963314",
+                "ClientId": 3592648,
+                "ScroogeId": "3542349",
                 "ClientPushABS": true
             },
-            "ResponseId": 766394,
-            "RequestId": 766394,
+            "ResponseId": 191605,
+            "RequestId": 191605,
             "Result": 1,
             "HasErrors": false,
             "Errors": []
@@ -142,22 +142,22 @@
                 "Errors": []
             },
             "Individuals": {
-                "FirstName": "ВОЛОДИМИР",
-                "LastName": "ГЛУХОВСЬКИЙ",
-                "FatherName": "МИКОЛАЙОВИЧ",
+                "FirstName": "Андрій",
+                "LastName": "Кан и гін",
+                "FatherName": "Ігорович",
                 "Gender": 1,
-                "BirthDay": "1949-06-14T00:00:00",
+                "BirthDay": "2000-11-28T00:00:00",
                 "BirthSurname": "",
-                "MarriageStatus": 0,
+                "MarriageStatus": 3,
                 "Note": null,
-                "Changed": "2016-07-10T07:36:17.587",
+                "Changed": "2021-06-16T23:03:47.997",
                 "Status": 1
             },
-            "ClientId": 859978,
-            "ScroogeId": "963314",
+            "ClientId": 3592648,
+            "ScroogeId": "3542349",
             "Clients": {
                 "StateCode": "3501414619",
-                "Name": "ГЛУХОВСЬКИЙ ВОЛОДИМИР МИКОЛАЙОВИЧ",
+                "Name": "Кан и гін Андрій Ігорович",
                 "Residency": 1,
                 "Type": 1,
                 "SubType": 0,
@@ -165,11 +165,11 @@
                 "IsOut": 0,
                 "IsPotential": 0,
                 "IsPartner": false,
-                "TreatFlag": 2,
-                "LastChangeDate": "2021-06-23T12:53:25.26",
-                "IdentDate": "2021-08-29T00:00:00",
-                "PrevIdentDate": "2018-08-29T00:00:00",
-                "IdentInfo": "Дата переид.уст. на срок 36 месяцев согласно низкой категории риска",
+                "TreatFlag": 0,
+                "LastChangeDate": "2021-06-22T11:41:18.65",
+                "IdentDate": null,
+                "PrevIdentDate": "2021-06-16T00:00:00",
+                "IdentInfo": "",
                 "Status": 1
             },
             "Properties": [
@@ -181,7 +181,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.687"
+                    "Changed": "2021-06-16T23:03:49.39"
                 },
                 {
                     "TypeCode": "int",
@@ -191,27 +191,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.82"
+                    "Changed": "2021-06-16T23:03:50.423"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "CA_REG",
                     "Name": "код региона контрагента",
-                    "Value": "9",
+                    "Value": "26",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:40:50.293"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "FirstAccDate",
-                    "Name": "Допрек клиента, для формы ввода анкеты",
-                    "Value": "23.07.2015",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-03-25T20:35:26.64"
+                    "Changed": "2021-06-17T22:39:27.56"
                 },
                 {
                     "TypeCode": "string",
@@ -221,67 +211,47 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.82"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "IsInsider",
-                    "Name": "Допрек клиента, для формы ввода анкеты",
-                    "Value": "99",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-04-03T10:59:42.87"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "KOD_D8",
-                    "Name": "Код класса контрагента(для #D8)",
-                    "Value": "1",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.713"
+                    "Changed": "2021-06-17T16:49:56.28"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "ResearchUser",
                     "Name": "Допрек клиента, для формы ввода анкеты",
-                    "Value": "UKRGAS\\okernytska",
+                    "Value": "ukrgas\\appmb",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.573"
+                    "Changed": "2021-06-16T23:03:50.487"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "FATF_SHORT_NAME",
                     "Name": "Короткое название",
-                    "Value": "GLUHOVSKYY VOLODYMYR M",
+                    "Value": "BUBLYKOV VOLODYMYR",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.623"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "TAX_PAYER_CODE",
-                    "Name": "Код плательщика налогов",
-                    "Value": "001806201275",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.73"
+                    "Changed": "2021-06-17T00:06:53.393"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "FATF_IdenCard",
                     "Name": "Bид документа, удостоверяющего личность по справочнику финансового мониторинга",
-                    "Value": "1",
+                    "Value": "10",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:40:49.497"
+                    "Changed": "2021-06-17T22:39:27.557"
+                },
+                {
+                    "TypeCode": "string",
+                    "Code": "TAX_CODE",
+                    "Name": "Код налоговой",
+                    "Value": "ЦПР 2",
+                    "DateFrom": null,
+                    "DateInto": null,
+                    "Status": 1,
+                    "Changed": "2021-06-17T16:37:18.757"
                 },
                 {
                     "TypeCode": "string",
@@ -291,7 +261,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.667"
+                    "Changed": "2021-06-17T22:39:27.553"
                 },
                 {
                     "TypeCode": "string",
@@ -301,87 +271,27 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.63"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "ECONOMY_BRANCH",
-                    "Name": "Институционный сектор экономики",
-                    "Value": "99999",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.65"
-                },
-                {
-                    "TypeCode": "int",
-                    "Code": "FATF_STATUS",
-                    "Name": "Статус участника по справочнику финансового мониторинга",
-                    "Value": "2",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.677"
-                },
-                {
-                    "TypeCode": "int",
-                    "Code": "FATF_TYPE",
-                    "Name": "Тип участия по справочнику финансового мониторинга",
-                    "Value": "1",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.68"
+                    "Changed": "2021-06-17T22:39:27.55"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "FATF_CodObl",
                     "Name": "Kод области по справочнику финансового мониторинга",
-                    "Value": "44",
+                    "Value": "32",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.66"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "K013",
-                    "Name": "Вид клиентов банков",
-                    "Value": "5",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.7"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "K016",
-                    "Name": "Признак - клієнт-банк",
-                    "Value": "9",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.707"
+                    "Changed": "2021-06-17T15:25:42.303"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "CL_FATF_CHECK_RESULT",
                     "Name": "Проверка по списку террористов",
-                    "Value": "Клиент ГЛУХОВСЬКИЙ ВОЛОДИМИР МИКОЛАЙОВИЧ по состоянию на 29.08.2018 в списке террористов отсутствует.<br> Параметры поиска: [Поиск:[ГЛУХОВСЬКИЙ; ВОЛОДИМИР; МИКОЛАЙОВИЧ]: [3 записей]] [Поиск: [HLUKhOVSKYI; VOLODYMYR; MYKOLAIOVYCh]: [0 записей]]",
+                    "Value": "Клиент Кан и гін Андрій Ігорович по состоянию на 17.06.2021 в списке террористов отсутствует.<br> Параметры поиска: [Поиск:[Кан и гін; Андрій; Ігорович]: [0 записей]]",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:38:11.247"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "BANK_SERVICES_AUTO",
-                    "Name": "Банковские услуги, которыми пользуется клиент (расчет)",
-                    "Value": "CALC,CASH,DEPOSIT,",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-11-18T00:06:44.767"
+                    "Changed": "2021-06-17T22:37:39.48"
                 },
                 {
                     "TypeCode": "string",
@@ -391,7 +301,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.93"
+                    "Changed": "2021-06-17T22:47:20.643"
                 },
                 {
                     "TypeCode": "string",
@@ -401,7 +311,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.717"
+                    "Changed": "2021-06-17T00:06:53.38"
                 },
                 {
                     "TypeCode": "string",
@@ -411,17 +321,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.317"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "K050",
-                    "Name": "Организационно-правовая форма",
-                    "Value": "000",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.71"
+                    "Changed": "2021-06-16T23:03:50"
                 },
                 {
                     "TypeCode": "string",
@@ -431,7 +331,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.653"
+                    "Changed": "2021-06-17T22:39:27.56"
                 },
                 {
                     "TypeCode": "int",
@@ -441,7 +341,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:40:50.433"
+                    "Changed": "2021-06-17T22:39:27.563"
                 },
                 {
                     "TypeCode": "string",
@@ -451,17 +351,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.747"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "BIZNES",
-                    "Name": "Бізнес",
-                    "Value": "04",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-04-03T10:59:42.793"
+                    "Changed": "2021-06-17T22:47:20.597"
                 },
                 {
                     "TypeCode": "string",
@@ -471,37 +361,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.243"
+                    "Changed": "2021-06-20T08:41:48.35"
                 },
                 {
                     "TypeCode": "datetime",
                     "Code": "First_Date",
                     "Name": "Дата первинного заповнення анкети",
-                    "Value": "14.11.2015",
+                    "Value": "16.06.2021",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2016-10-07T05:49:48.503"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "K110",
-                    "Name": "Вид економічної діяльності (K110)",
-                    "Value": "00000",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.643"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "segment",
-                    "Name": "Сегмент",
-                    "Value": "06",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.723"
+                    "Changed": "2021-06-17T04:17:47.303"
                 },
                 {
                     "TypeCode": "string",
@@ -511,7 +381,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.883"
+                    "Changed": "2021-06-17T16:49:56.32"
                 },
                 {
                     "TypeCode": "string",
@@ -521,7 +391,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.067"
+                    "Changed": "2021-06-16T23:03:49.953"
                 },
                 {
                     "TypeCode": "string",
@@ -531,7 +401,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.177"
+                    "Changed": "2021-06-16T23:03:49.97"
                 },
                 {
                     "TypeCode": "logic",
@@ -541,17 +411,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:40:45.9"
+                    "Changed": "2021-06-17T00:06:53.393"
                 },
                 {
                     "TypeCode": "logic",
                     "Code": "PASPFOTOCONTROL45",
                     "Name": "Контроль за вклеюванням фотокартки 45",
-                    "Value": "0",
+                    "Value": "1",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:40:46.167"
+                    "Changed": "2021-06-16T23:03:50.407"
                 },
                 {
                     "TypeCode": "string",
@@ -561,7 +431,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.913"
+                    "Changed": "2021-06-16T23:03:50.44"
                 },
                 {
                     "TypeCode": "int",
@@ -571,7 +441,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.73"
+                    "Changed": "2021-06-17T16:37:18.77"
                 },
                 {
                     "TypeCode": "int",
@@ -581,7 +451,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.73"
+                    "Changed": "2021-06-17T00:06:53.38"
                 },
                 {
                     "TypeCode": "int",
@@ -591,7 +461,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:14.987"
+                    "Changed": "2021-06-16T23:03:49.907"
                 },
                 {
                     "TypeCode": "int",
@@ -601,17 +471,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.8"
-                },
-                {
-                    "TypeCode": "datetime",
-                    "Code": "date_ident",
-                    "Name": "Дата наступної планової ідентифікації (Конвертація)",
-                    "Value": "19.11.2018",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.69"
+                    "Changed": "2021-06-16T23:03:50.453"
                 },
                 {
                     "TypeCode": "string",
@@ -621,17 +481,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:15.72"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "S080_FM_KONVER",
-                    "Name": "Рівень ризику проведення Клієнтом операцій з легалізації доходів, одержаних злочинним шляхом(Конвертаційні дані)",
-                    "Value": "0",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.67"
+                    "Changed": "2021-06-16T23:03:49.94"
                 },
                 {
                     "TypeCode": "string",
@@ -641,7 +491,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.9"
+                    "Changed": "2021-06-17T00:28:24.95"
                 },
                 {
                     "TypeCode": "string",
@@ -651,27 +501,27 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-03-30T07:05:31.733"
+                    "Changed": "2021-06-17T16:49:56.313"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "BIRTH_PLACE",
                     "Name": "Місце народження",
-                    "Value": "смт. Успенка Луганської області",
+                    "Value": "м.Київ",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:15.13"
+                    "Changed": "2021-06-17T15:25:42.27"
                 },
                 {
                     "TypeCode": "int",
                     "Code": "SM_CUSTOMER_TYPE",
                     "Name": "Тип клієнта для перехода по МС",
-                    "Value": "1",
+                    "Value": "",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:40:49.26"
+                    "Changed": "2021-06-17T22:39:27.523"
                 },
                 {
                     "TypeCode": "string",
@@ -681,7 +531,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.677"
+                    "Changed": "2021-06-16T23:03:49.987"
                 },
                 {
                     "TypeCode": "string",
@@ -691,7 +541,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.567"
+                    "Changed": "2021-06-16T23:03:49.987"
                 },
                 {
                     "TypeCode": "string",
@@ -701,7 +551,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.853"
+                    "Changed": "2021-06-16T23:03:49.97"
                 },
                 {
                     "TypeCode": "string",
@@ -711,67 +561,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:15.253"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "crdLastNameRUS",
-                    "Name": "Фамилия(RUS) для карт",
-                    "Value": "ГЛУХОВСЬКИЙ",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-08-29T10:50:46.873"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "crdFirstNameRUS",
-                    "Name": "Имя(RUS) для карт",
-                    "Value": "ВОЛОДИМИР",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-08-29T10:50:46.89"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "crdFatherNameRUS",
-                    "Name": "Отчество(RUS) для карт",
-                    "Value": "МИКОЛАЙОВИЧ",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-08-29T10:50:46.92"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "crdLastNameTranslit",
-                    "Name": "Фамилия(транслит) для карт",
-                    "Value": "HLUKHOVSKYI",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-08-29T10:50:46.92"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "crdFirstNameTranslit",
-                    "Name": "Имя(транслит) для карт",
-                    "Value": "VOLODYMYR",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-08-29T10:50:46.937"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "crdFatherNameTranslit",
-                    "Name": "Отчество(транслит) для карт",
-                    "Value": "MYKOLAIOVYCH",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2018-08-29T10:50:46.937"
+                    "Changed": "2021-06-16T23:03:49.873"
                 },
                 {
                     "TypeCode": "string",
@@ -781,7 +571,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:22.19"
+                    "Changed": "2021-06-17T16:49:56.29"
+                },
+                {
+                    "TypeCode": "datetime",
+                    "Code": "CLIENT_STATUS_DATE",
+                    "Name": "Дата з якої клієнт проводить професійнй діяльність",
+                    "Value": "27.10.2018",
+                    "DateFrom": null,
+                    "DateInto": null,
+                    "Status": 1,
+                    "Changed": "2021-06-17T16:20:40.993"
                 },
                 {
                     "TypeCode": "string",
@@ -791,7 +591,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:22.05"
+                    "Changed": "2021-06-16T23:03:50.377"
                 },
                 {
                     "TypeCode": "int",
@@ -801,7 +601,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:50:00.59"
+                    "Changed": "2021-06-17T22:43:39.133"
                 },
                 {
                     "TypeCode": "string",
@@ -811,7 +611,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T19:01:31.937"
+                    "Changed": "2021-06-17T19:00:02.75"
                 },
                 {
                     "TypeCode": "string",
@@ -821,7 +621,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.883"
+                    "Changed": "2021-06-17T16:49:56.323"
                 },
                 {
                     "TypeCode": "string",
@@ -831,7 +631,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:16.94"
+                    "Changed": "2021-06-16T23:03:50.377"
                 },
                 {
                     "TypeCode": "string",
@@ -841,7 +641,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:17.05"
+                    "Changed": "2021-06-16T23:03:50.453"
                 },
                 {
                     "TypeCode": "string",
@@ -851,17 +651,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2018-08-29T10:42:17.143"
+                    "Changed": "2021-06-16T23:03:50.453"
                 },
                 {
                     "TypeCode": "datetime",
                     "Code": "Verifikatsii_date ",
                     "Name": "Дата верифікації клієнта",
-                    "Value": "23.06.2021",
+                    "Value": "22.06.2021",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.837"
+                    "Changed": "2021-06-22T11:01:26.36"
                 },
                 {
                     "TypeCode": "string",
@@ -871,7 +671,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:01.64"
+                    "Changed": "2021-06-16T23:03:50.423"
                 },
                 {
                     "TypeCode": "string",
@@ -881,7 +681,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:24.727"
+                    "Changed": "2021-06-17T00:06:53.3"
                 },
                 {
                     "TypeCode": "string",
@@ -891,27 +691,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.67"
+                    "Changed": "2021-06-16T23:03:47.367"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "PEP_CHECKLIST_RESULT",
                     "Name": "Результат перевірки за списками ПЗО",
-                    "Value": "{\"DateCheck\":\"2021-06-23T12:41:10.9346367+03:00\",\"Parameters\":{\"Name1\":\"ГЛУХОВСЬКИЙ ВОЛОДИМИР МИКОЛАЙОВИЧ\",\"Name2\":null,\"Name3\":null,\"BankName\":null,\"Account\":null,\"Percent\":null,\"SystemCodes\":[\"FATF:TER_REFFER_PUB_PERSONS\",\"FATF:TER_REFFER_KIS_LIST\",\"FATF:TER_REFFER_PEP_ORG_UA\",\"FATF:TER_REFFER_KIS_LINKS\"]},\"Result\":\"В списках FATF отсутствует.\",\"Items\":[],\"IsExist\":false,\"RecordCount\":0}",
+                    "Value": "{\"DateCheck\":\"2021-06-17T22:37:41.2898555+03:00\",\"Parameters\":{\"Name1\":\"Кан и гін Андрій Ігорович\",\"Name2\":null,\"Name3\":null,\"BankName\":null,\"Account\":null,\"Percent\":null,\"SystemCodes\":[\"FATF:TER_REFFER_PUB_PERSONS\",\"FATF:TER_REFFER_KIS_LIST\",\"FATF:TER_REFFER_PEP_ORG_UA\",\"FATF:TER_REFFER_KIS_LINKS\"]},\"Result\":\"В списках FATF отсутствует.\",\"Items\":[],\"IsExist\":false,\"RecordCount\":0}",
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.623"
-                },
-                {
-                    "TypeCode": "string",
-                    "Code": "CLIENT_DEPOSIT_STATUS",
-                    "Name": "Статус вкладчика",
-                    "Value": "BEGINNER,CLASSIC,LOYALTY,MAGIC_MONDAY,STABLE",
-                    "DateFrom": null,
-                    "DateInto": null,
-                    "Status": 1,
-                    "Changed": "2021-03-15T12:32:35.91"
+                    "Changed": "2021-06-17T22:37:41.17"
                 },
                 {
                     "TypeCode": "string",
@@ -921,7 +711,17 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.717"
+                    "Changed": "2021-06-17T16:49:56.26"
+                },
+                {
+                    "TypeCode": "string",
+                    "Code": "codProduct",
+                    "Name": "Код продукту для ККР",
+                    "Value": "11",
+                    "DateFrom": null,
+                    "DateInto": null,
+                    "Status": 1,
+                    "Changed": "2021-06-17T15:25:42.31"
                 },
                 {
                     "TypeCode": "string",
@@ -931,7 +731,7 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.747"
+                    "Changed": "2021-06-22T11:41:18.65"
                 },
                 {
                     "TypeCode": "string",
@@ -941,32 +741,32 @@
                     "DateFrom": null,
                     "DateInto": null,
                     "Status": 1,
-                    "Changed": "2021-06-23T12:41:10.73"
+                    "Changed": "2021-06-17T16:49:56.27"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "K140",
                     "Name": "Код размера субъекта хозяйствования",
                     "Value": "9",
-                    "DateFrom": "2019-06-25T00:00:00",
+                    "DateFrom": "2021-06-17T00:00:00",
                     "DateInto": "4637-11-27T00:00:00",
                     "Status": 1,
-                    "Changed": "2019-06-25T15:31:23.78"
+                    "Changed": "2021-06-17T22:39:27.81"
                 },
                 {
                     "TypeCode": "string",
                     "Code": "UGB_TCURelPers",
                     "Name": "Пов`язана особа за ПКУ",
                     "Value": "0",
-                    "DateFrom": "2021-06-23T00:00:00",
+                    "DateFrom": "2021-06-22T00:00:00",
                     "DateInto": "4637-11-27T00:00:00",
                     "Status": 1,
-                    "Changed": "2021-06-23T12:53:25.26"
+                    "Changed": "2021-06-22T11:01:26.407"
                 }
             ],
             "Addresses": [
                 {
-                    "Id": 1682294,
+                    "Id": 7825630,
                     "TypeId": 1,
                     "TypeCode": "1",
                     "Country": "UA",
@@ -985,53 +785,53 @@
                     "PropertyStatus": "",
                     "RegistrationDate": null,
                     "EndDate": null,
-                    "Changed": "2021-06-23T12:53:24.21",
+                    "Changed": "2021-06-20T08:41:48.067",
                     "Status": 1
                 },
                 {
-                    "Id": 1682295,
+                    "Id": 7825631,
                     "TypeId": 2,
                     "TypeCode": "2",
                     "Country": "804",
-                    "PostalCode": "09100",
-                    "State": "Київська Область",
+                    "PostalCode": "",
+                    "State": "Київська",
                     "Region": "",
                     "TownshipType": "3508",
-                    "Town": "Біла Церква",
+                    "Town": "Київ",
                     "StreetType": "3510",
-                    "Street": "Ставищанська",
+                    "Street": "Агрегатна  55",
                     "HouseType": "3511",
-                    "HouseNumber": "128",
+                    "HouseNumber": "2",
                     "FlatType": "3506",
-                    "FlatNumber": "13",
+                    "FlatNumber": "120",
                     "LandlinePhoneNumber": "",
                     "PropertyStatus": "",
                     "RegistrationDate": null,
                     "EndDate": null,
-                    "Changed": "2021-06-23T12:49:32.367",
+                    "Changed": "2021-06-16T23:03:49.063",
                     "Status": 1
                 }
             ],
             "Communications": [
                 {
-                    "Id": 2834009,
+                    "Id": 4823654,
                     "TypeId": 3,
                     "TypeCode": "3",
-                    "Value": "+380503484701",
+                    "Value": "2334455",
                     "IsMain": true,
                     "IsVerified": true,
                     "Note": "",
                     "SourceInfo": "",
-                    "Changed": "2018-08-29T10:39:00.33",
+                    "Changed": "2021-06-16T23:03:49.157",
                     "Status": 1
                 }
             ],
             "Names": [
                 {
-                    "Id": 264834,
+                    "Id": 3174851,
                     "Lang": "LAT",
-                    "Name": "GLUHOVSKYY VOLODYMYR M",
-                    "FullName": "GLUHOVSKYY VOLODYMYR M",
+                    "Name": "KAN Y HIN  ANDRII",
+                    "FullName": "KAN Y HIN  ANDRII",
                     "FullNameR": "",
                     "FullNameD": "",
                     "Status": 1
@@ -1039,27 +839,7 @@
             ],
             "Identifications": [
                 {
-                    "Id": 1052360,
-                    "TypeId": 4,
-                    "TypeCode": "4",
-                    "No": 0,
-                    "Series": "ЕМ",
-                    "Number": "361357",
-                    "FormSeries": "",
-                    "FormNumber": "",
-                    "Registrator": "АРТЕМіВСЬКИМ РВ ЛМУ УМВС УКР В ЛУГ ОБЛ",
-                    "RegistrationDate": null,
-                    "IssueDate": "1999-10-01T00:00:00",
-                    "ExpirationDate": null,
-                    "RecordDate": null,
-                    "CheckDate": null,
-                    "IsMain": true,
-                    "Checked": true,
-                    "Changed": "2018-08-29T10:38:29.75",
-                    "Status": 1
-                },
-                {
-                    "Id": 4990285,
+                    "Id": 4990244,
                     "TypeId": 55,
                     "TypeCode": "404",
                     "No": 1,
@@ -1073,21 +853,53 @@
                     "ExpirationDate": "2021-03-09T00:00:00",
                     "RecordDate": null,
                     "CheckDate": null,
+                    "IsMain": true,
+                    "Checked": true,
+                    "Changed": "2021-06-16T23:03:48.827",
+                    "Status": 1
+                },
+                {
+                    "Id": 4990246,
+                    "TypeId": 55,
+                    "TypeCode": "404",
+                    "No": 2,
+                    "Series": "",
+                    "Number": "000381959",
+                    "FormSeries": "",
+                    "FormNumber": "",
+                    "Registrator": "8034",
+                    "RegistrationDate": null,
+                    "IssueDate": "2017-03-09T00:00:00",
+                    "ExpirationDate": "2021-03-09T00:00:00",
+                    "RecordDate": null,
+                    "CheckDate": null,
                     "IsMain": false,
                     "Checked": false,
-                    "Changed": "2021-06-23T12:53:24.18",
+                    "Changed": "2021-06-17T00:06:52.457",
+                    "Status": 1
+                },
+                {
+                    "Id": 4990247,
+                    "TypeId": 55,
+                    "TypeCode": "404",
+                    "No": 3,
+                    "Series": "",
+                    "Number": "000381959",
+                    "FormSeries": "",
+                    "FormNumber": "",
+                    "Registrator": "8034",
+                    "RegistrationDate": null,
+                    "IssueDate": "2017-03-09T00:00:00",
+                    "ExpirationDate": "2021-03-09T00:00:00",
+                    "RecordDate": null,
+                    "CheckDate": null,
+                    "IsMain": false,
+                    "Checked": false,
+                    "Changed": "2021-06-17T00:23:00.867",
                     "Status": 1
                 }
             ],
-            "BusinessActivities": [
-                {
-                    "Id": 696849,
-                    "ActivityTypeCode": "00000",
-                    "IsMain": true,
-                    "Status": 1,
-                    "Changed": "2016-07-10T07:36:17.61"
-                }
-            ],
+            "BusinessActivities": [],
             "Relations": []
         }
     }
