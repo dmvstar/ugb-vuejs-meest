@@ -13,5 +13,6 @@ for(t of test){
 var dat = new Date();
 console.log(dat, dat.toISOString(), dat.toLocaleTimeString());
 var tsdat = dat.toISOString().substring(0,10).replace(/-/g,'')+'-'+
-dat.toLocaleTimeString().replace(/:/g,'');
+dat.toLocaleTimeString().replace(/:/g,'').replace(/ /g,'');
+
 console.log(tsdat);
