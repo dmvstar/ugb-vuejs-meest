@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="http://www.w3.org/2005/08/addressing" xmlns:ns2="http://oree.com.ua/etsua/soapsvc/bankaccountstatus/2020/09">
+    <env:Header>
+        <ns1:Action env:mustUnderstand="true">http://oree.com.ua/etsua/soapsvc/BankLimits/UploadResponse</ns1:Action>
+        <ns1:RelatesTo></ns1:RelatesTo>
+        <ns1:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</ns1:To>
+    </env:Header>
+    <env:Body>
+        <ns2:UploadResponse>
+            <RESPONSE message-code="501" date-time="2021-06-25T10:49:04Z" dtd-version="1" dtd-release="1"><SenderIdentification id="62X-OPERRYNKU--3" coding-scheme="EIC"/><ReceiverIdentification id="UGB" coding-scheme="NAME"/><Reference id="5654"/><Reason type="E01">Signature verification failed</Reason>
+            </RESPONSE>
+        </ns2:UploadResponse>
+    </env:Body>
+</env:Envelope>

@@ -1,0 +1,21 @@
+            <ns:Participant 
+                        bankAccountId="1" 
+                        bankCode="320478" 
+                        dic="1" 
+                        ean="1" 
+                        edrpou="43064445" 
+                        eic="0" 
+                        iban="UA103204780000026008924894147" 
+                        ic="1" 
+                        name="ДП &quot;Оператор ринку&quot;" 
+                        particId="1">
+                        <ns:DataGroups>
+                            <ns:TotalsData>
+                            <ns:Data 
+                                currency="UAH" 
+                                type="limit" 
+                                value="31465008.23"/>
+                            </ns:TotalsData>
+                        </ns:DataGroups>
+            </ns:Participant>
+
