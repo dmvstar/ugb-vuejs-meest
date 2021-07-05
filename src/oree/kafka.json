@@ -1,0 +1,216 @@
+{
+    "topic": "scrooge-documents",
+    "offset": 150342,
+    "partition": 1,
+    "highWaterOffset": 150343,
+    "key": "\u0000\u0000\u0000\u00005ɠ�",
+    "timestamp": "2021-07-02T08:33:05.227Z",
+    "jvalue": {
+        "EventUid": "05X6DZJMFSJA969N92X0F9PCSW",
+        "EventType": "DocumentConfirmed",
+        "Timestamp": "2021-07-02T11:33:01.693",
+        "Version": 1,
+        "Data": {
+            "BillId": 902406334,
+            "BranchId": 1,
+            "ActionId": 738,
+            "CurrencyTag": "UAH",
+            "MainAmount": 0.92,
+            "CrncyAmount": 0.92,
+            "Code": "TR.18584674.504846.13434",
+            "OrgDate": "2021-07-02T00:00:00",
+            "DayDate": "2021-07-02T00:00:00",
+            "Purpose": "Виплата нарахованих процентів по договору № 2021/I_C/000-001410 от 22/06/2021. Нараховано @Calculation_Amount UAH. Утримано податок @TaxOnCalc_Amount грн. Утримано воєн. збір @WarOnCalc_Amount грн.",
+            "Ctrls": "",
+            "SystemId": 0,
+            "Created": "2021-07-02T11:33:01.63",
+            "Changed": "2021-07-02T11:33:01.63",
+            "PayType": {
+                "Code": "AT4"
+            },
+            "Debit": {
+                "AccountId": 58081220,
+                "BankCode": "320478",
+                "AccountCode": "26281113658524.980",
+                "StateCode": "3306410666",
+                "Name": "ДЕМ'ЯНЕНКО АЛЛА ЛЕОНІДІВНА",
+                "ClientId": 859978,
+                "PhoneNumber": "380994561095"
+            },
+            "Credit": {
+                "AccountId": 58080405,
+                "BankCode": "320478",
+                "AccountCode": "26209921311295.509901.980",
+                "StateCode": "3306410666",
+                "Name": "ДЕМ'ЯНЕНКО АЛЛА ЛЕОНІДІВНА",
+                "ClientId": 859978,
+                "CpcAccountCode": "100000000003477564",
+                "PhoneNumber": "380994561095"
+            },
+            "Transfers": [
+                {
+                    "TransferId": 1763708310,
+                    "CrncyAmount": 0.92,
+                    "MainAmount": 0.92,
+                    "CurrencyTag": "UAH",
+                    "Purpose": "Виплата нарахованих процентів по договору № 2021/I_C/000-001410 от 22/06/2021. Нараховано @Calculation_Amount UAH. Утримано податок @TaxOnCalc_Amount грн. Утримано воєн. збір @WarOnCalc_Amount грн.",
+                    "Debit": {
+                        "AccountCode": "26281113658524.980",
+                        "AccountIban": "UA273204780000026281113658524"
+                    },
+                    "Credit": {
+                        "AccountCode": "26209921311295.509901.980",
+                        "AccountIban": "UA543204780000026209921311295"
+                    }
+                }
+            ]
+        }
+    }
+}
+{
+    "topic": "scrooge-documents",
+    "offset": 149915,
+    "partition": 0,
+    "highWaterOffset": 149916,
+    "key": "\u0000\u0000\u0000\u00005ɭ\n",
+    "timestamp": "2021-07-02T09:16:57.708Z",
+    "jvalue": {
+        "EventUid": "05X6E9M0KE6WJ1NQR6RAYD02D4",
+        "EventType": "DocumentConfirmed",
+        "Timestamp": "2021-07-02T12:16:54.427",
+        "Version": 1,
+        "Data": {
+            "BillId": 902409482,
+            "BranchId": 1,
+            "ActionId": 738,
+            "CurrencyTag": "UAH",
+            "MainAmount": 0.92,
+            "CrncyAmount": 0.92,
+            "Code": "TR.18584674.504846.13435",
+            "OrgDate": "2021-07-02T00:00:00",
+            "DayDate": "2021-07-02T00:00:00",
+            "Purpose": "Виплата нарахованих процентів по договору № 2021/I_C/000-001410 от 22/06/2021. Нараховано @Calculation_Amount UAH. Утримано податок @TaxOnCalc_Amount грн. Утримано воєн. збір @WarOnCalc_Amount грн.",
+            "Ctrls": "",
+            "SystemId": 0,
+            "Created": "2021-07-02T12:16:54.363",
+            "Changed": "2021-07-02T12:16:54.363",
+            "PayType": {
+                "Code": "AT4"
+            },
+            "Debit": {
+                "AccountId": 58081220,
+                "BankCode": "320478",
+                "AccountCode": "26281113658524.980",
+                "StateCode": "3306410666",
+                "Name": "ДЕМ'ЯНЕНКО АЛЛА ЛЕОНІДІВНА",
+                "ClientId": 859978,
+                "PhoneNumber": "380994561095"
+            },
+            "Credit": {
+                "AccountId": 58080405,
+                "BankCode": "320478",
+                "AccountCode": "26209921311295.509901.980",
+                "StateCode": "3306410666",
+                "Name": "ДЕМ'ЯНЕНКО АЛЛА ЛЕОНІДІВНА",
+                "ClientId": 859978,
+                "CpcAccountCode": "100000000003477564",
+                "PhoneNumber": "380994561095"
+            },
+            "Transfers": [
+                {
+                    "TransferId": 1763711520,
+                    "CrncyAmount": 0.92,
+                    "MainAmount": 0.92,
+                    "CurrencyTag": "UAH",
+                    "Purpose": "Виплата нарахованих процентів по договору № 2021/I_C/000-001410 от 22/06/2021. Нараховано @Calculation_Amount UAH. Утримано податок @TaxOnCalc_Amount грн. Утримано воєн. збір @WarOnCalc_Amount грн.",
+                    "Debit": {
+                        "AccountCode": "26281113658524.980",
+                        "AccountIban": "UA273204780000026281113658524"
+                    },
+                    "Credit": {
+                        "AccountCode": "26209921311295.509901.980",
+                        "AccountIban": "UA543204780000026209921311295"
+                    }
+                }
+            ]
+        }
+    }
+}
+{
+    "topic": "scrooge-documents",
+    "offset": 150343,
+    "partition": 1,
+    "highWaterOffset": 150344,
+    "key": "\u0000\u0000\u0000\u00005ɭ\f",
+    "timestamp": "2021-07-02T09:42:59.396Z",
+    "jvalue": {
+        "EventUid": "05X6EFJFHDF1031Y7YZN069VYG",
+        "EventType": "DocumentConfirmed",
+        "Timestamp": "2021-07-02T12:42:54.73",
+        "Version": 1,
+        "Data": {
+            "BillId": 902409484,
+            "BranchId": 1,
+            "ActionId": 738,
+            "CurrencyTag": "UAH",
+            "MainAmount": 0.92,
+            "CrncyAmount": 0.92,
+            "Code": "TR.18584674.504846.13436",
+            "OrgDate": "2021-07-02T00:00:00",
+            "DayDate": "2021-07-02T00:00:00",
+            "Purpose": "Виплата нарахованих процентів по договору № 2021/I_C/000-001410 от 22/06/2021. Нараховано @Calculation_Amount UAH. Утримано податок @TaxOnCalc_Amount грн. Утримано воєн. збір @WarOnCalc_Amount грн.",
+            "Ctrls": "",
+            "SystemId": 810,
+            "Created": "2021-07-02T12:40:45.447",
+            "Changed": "2021-07-02T12:42:54.683",
+            "PayType": {
+                "Code": "AT4"
+            },
+            "Debit": {
+                "AccountId": 58081220,
+                "BankCode": "320478",
+                "AccountCode": "26281113658524.980",
+                "StateCode": "3306410666",
+                "Name": "ДЕМ'ЯНЕНКО АЛЛА ЛЕОНІДІВНА",
+                "ClientId": 859978,
+                "PhoneNumber": "380994561095"
+            },
+            "Credit": {
+                "AccountId": 58080405,
+                "BankCode": "320478",
+                "AccountCode": "26209921311295.509901.980",
+                "StateCode": "3306410666",
+                "Name": "ДЕМ'ЯНЕНКО АЛЛА ЛЕОНІДІВНА",
+                "ClientId": 859978,
+                "CpcAccountCode": "100000000003477564",
+                "PhoneNumber": "380994561095"
+            },
+            "Treaty": {
+                "TreatyId": 18584674,
+                "Code": "2021/I_C/000-001410",
+                "SystemId": 9002,
+                "OrgDate": "2021-06-22T00:00:00",
+                "CurrencyTag": "UAH",
+                "CrncyAmount": 0,
+                "Rate": 0
+            },
+            "Transfers": [
+                {
+                    "TransferId": 1763711522,
+                    "CrncyAmount": 0.92,
+                    "MainAmount": 0.92,
+                    "CurrencyTag": "UAH",
+                    "Purpose": "Виплата нарахованих процентів по договору № 2021/I_C/000-001410 от 22/06/2021. Нараховано @Calculation_Amount UAH. Утримано податок @TaxOnCalc_Amount грн. Утримано воєн. збір @WarOnCalc_Amount грн.",
+                    "Debit": {
+                        "AccountCode": "26281113658524.980",
+                        "AccountIban": "UA273204780000026281113658524"
+                    },
+                    "Credit": {
+                        "AccountCode": "26209921311295.509901.980",
+                        "AccountIban": "UA543204780000026209921311295"
+                    }
+                }
+            ]
+        }
+    }
+}
