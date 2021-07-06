@@ -278,7 +278,8 @@
             [
                 "1c82ca3d.26b4ae",
                 "4804ba89.3325c4",
-                "e04903a3.5a81f8"
+                "e04903a3.5a81f8",
+                "a0463a22.53233"
             ]
         ]
     },
@@ -1030,9 +1031,74 @@
         "y": 220,
         "wires": [
             [
-                "a0463a22.53233"
+                "b5b0fa50.7bc94",
+                "ab613682.27ca68"
             ]
         ]
+    },
+    {
+        "id": "6fdb4888.5534e8",
+        "type": "inject",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 500,
+        "wires": [
+            [
+                "803f237.13b74e"
+            ]
+        ]
+    },
+    {
+        "id": "803f237.13b74e",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"topic\": \"scrooge-documents\",\n    \"offset\": 174976,\n    \"partition\": 1,\n    \"highWaterOffset\": 174977,\n    \"key\": \"\\u0000\\u0000\\u0000\\u00005Ҕ \",\n    \"timestamp\": \"2021-07-06T14:09:55.458Z\",\n    \"jvalue\": {\n        \"EventUid\": \"05X7SK1C5QQG8NBC9834V7AFXM\",\n        \"EventType\": \"DocumentConfirmed\",\n        \"Timestamp\": \"2021-07-06T17:09:53.323\",\n        \"Version\": 1,\n        \"Data\": {\n            \"BillId\": 902992928,\n            \"BranchId\": 1,\n            \"ActionId\": 738,\n            \"CurrencyTag\": \"UAH\",\n            \"MainAmount\": 137.13,\n            \"CrncyAmount\": 137.13,\n            \"Code\": \"TR.18584680.3111.1342\",\n            \"OrgDate\": \"2021-07-06T00:00:00\",\n            \"DayDate\": \"2021-07-06T00:00:00\",\n            \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2021/ОВР/000-000185 від 22/06/2021 за період з 01/08/2021 по 31/08/2021\",\n            \"Ctrls\": \"\",\n            \"SystemId\": 0,\n            \"Created\": \"2021-07-06T17:09:53.2\",\n            \"Changed\": \"2021-07-06T17:09:53.2\",\n            \"PayType\": {\n                \"Code\": \"AT2\"\n            },\n            \"Debit\": {\n                \"AccountId\": 58080413,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"26275113074910.980\",\n                \"AccountIban\": \"UA313204780000026275113074910\",\n                \"StateCode\": \"3314114440\",\n                \"Name\": \"ДЕНИСЕНКО ЄВГЕНІЯ ІГОРІВНА\",\n                \"ClientId\": 1602868,\n                \"PhoneNumber\": \"380672082225\"\n            },\n            \"Credit\": {\n                \"AccountId\": 31858903,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"60504000002\",\n                \"AccountIban\": \"UA053204780000000060504000002\",\n                \"StateCode\": \"23697280\",\n                \"Name\": \"За кредитами овердрафт, що надані фізичним особам, АС ГБ\",\n                \"ClientId\": 1\n            },\n            \"Treaty\": {\n                \"TreatyId\": 18584680,\n                \"Code\": \"2021/ОВР/000-000185\",\n                \"SystemId\": 6000,\n                \"OrgDate\": \"2021-06-22T00:00:00\",\n                \"CurrencyTag\": \"UAH\",\n                \"CrncyAmount\": 5000,\n                \"Rate\": 35.88\n            },\n            \"Transfers\": [\n                {\n                    \"TransferId\": 1765041638,\n                    \"CrncyAmount\": 137.13,\n                    \"MainAmount\": 137.13,\n                    \"CurrencyTag\": \"UAH\",\n                    \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2021/ОВР/000-000185 від 22/06/2021 за період з 01/08/2021 по 31/08/2021\",\n                    \"Debit\": {\n                        \"AccountCode\": \"26275113074910.980\",\n                        \"AccountIban\": \"UA313204780000026275113074910\"\n                    },\n                    \"Credit\": {\n                        \"AccountCode\": \"60504000002\",\n                        \"AccountIban\": \"UA053204780000000060504000002\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+        "output": "json",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "215de7ee.84bcb"
+            ]
+        ]
+    },
+    {
+        "id": "ab613682.27ca68",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 130,
+        "y": 280,
+        "wires": []
     },
     {
         "id": "b245cf7.735343",

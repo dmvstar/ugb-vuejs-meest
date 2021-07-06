@@ -2,7 +2,10 @@
  * @WHERE bankid/kkr/KKR-transform-2.js
  * @WHAT Transform data from WB to KK
  * @VERSION 0.0.8-05.07.2021 08:08 
+ * @FLOW
  * @NODE "69e9c3ff.0cfd74"
+ * @HELP
+ * @INFO
  */
  
  var error = false; 
