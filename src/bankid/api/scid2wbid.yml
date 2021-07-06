@@ -1,0 +1,155 @@
+# https://petstore.swagger.io/#/
+# https://nr-template-1.dev.ukrgasaws.com/get_swagger_config
+# Получение WebBank Id from scrooge Id
+# https://nr-openbanking.dev.ukrgasaws.com/webbank/clients/info/scid2wbid
+# msg.payload = {
+#    scId: 3282254
+# }
+#{
+#    "code": 1200,
+#    "result": "ok",
+#    "time": "Work time is: 31.3 msec.",
+#    "path": "/webbank/clients/info/wbid2scid",
+#    "data": [
+#        {
+#            "wbId": 189064,
+#            "statecode": "2588006534",
+#            "cCreated": "2012-08-09T21:38:06.430Z",
+#            "clId": 189064,
+#            "scId": "348446",
+#            "scCo": "UGB.140445",
+#            "sCreated": "2013-06-04T12:16:58.990Z"
+#        }
+#    ]
+#}
+#{
+#    "code": 1401,
+#    "result": "no",
+#    "time": "Work time is: 35 msec.",
+#    "path": "/webbank/clients/info/wbid2scid",
+#    "data": []
+#}
+#{
+#    "code": 1402,
+#    "result": "error",
+#    "time": "Work time is: 32.8 msec.",
+#    "path": "/webbank/clients/info/wbid2scid",
+#    "data": [
+#        {
+#            "wbId": 2280937,
+#            "statecode": "2780914440",
+#            "cCreated": "2018-11-12T08:27:37.247Z",
+#            "clId": null,
+#            "scId": null,
+#            "scCo": null,
+#            "sCreated": null
+#        }
+#    ]
+#}
+    get:
+      summary: Получение WebBank ID по Scrooge ID
+      security:
+        - ApiKeyAuth: [] 
+      parameters:
+            - in: path
+              name: scId
+              schema:
+                type: int
+                example: 3282254
+              required: true
+              description: Numeric Scrooge ID of the user to get WebBank ID
+      responses:
+        '200-1200':
+          description: ok data found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: ok
+                  code:
+                    type: int
+                    example: 1200
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        wbId: 
+                          type: int
+                          example: 189064
+                        statecode: 
+                          type: string
+                          example: "2588006534"
+                        cCreated: 
+                          type: string
+                          example: "2012-08-09T21:38:06.430Z"
+                        clId:
+                          type: int
+                          example: 189064
+                        scId: 
+                          type:  string
+                          example: "348446"
+                        scCo: 
+                          type: string
+                          example: "UGB.140445"
+                        sCreated: 
+                          type:  string
+                          example: "2013-06-04T12:16:58.990Z"
+        '200-1401':
+          description: no data found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: no
+                  code:
+                    type: int
+                    example: 1401
+                  data:
+                    type: array
+                    items:
+        '200-1402':
+          description: error data found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: error
+                  code:
+                    type: int
+                    example: 1402
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        wbId: 
+                          type: int
+                          example: 189064
+                        statecode: 
+                          type: string
+                          example: "2588006534"
+                        cCreated: 
+                          type: string
+                          example: "2012-08-09T21:38:06.430Z"
+                        clId:
+                          type: int
+                          example: null
+                        scId: 
+                          type:  string
+                          example: null
+                        scCo: 
+                          type: string
+                          example: null
+                        sCreated: 
+                          type:  string
+                          example: null

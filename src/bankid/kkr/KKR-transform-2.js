@@ -1,11 +1,14 @@
 /**
  * @WHERE bankid/kkr/KKR-transform-2.js
  * @WHAT Transform data from WB to KK
- * @VER 0.0.8-05.07.2021 08:08 
+ * @VERSION 0.0.8-05.07.2021 08:08 
  * @NODE "69e9c3ff.0cfd74"
  */
- var error = false 
+ 
+ var error = false; 
+ var errorCount = 0;
  var errorMessage = '';
+ var errors = [];
  
  var isConsole = true;
  var isLocalWork = true;
@@ -61,6 +64,8 @@
      errorMessage = 'Identifications У клієнта '+
      msg.kkr.webdata.data.orig.wbId +
      ' відсутні верифіковані документи'
+     errorCount++;
+     errors.push(errorMessage);
  } else {
      payload.docTypeId = temp.TypeCode;
      payload.docSeries = temp.Series;
@@ -116,7 +121,9 @@
          errorMessage = 'Transform У клієнта '+
          msg.kkr.webdata.data.orig.wbId +
          ' не заповнено параметр ' + wkey +'->' + pkey;
-         }
+         errorCount++;
+         errors.push(errorMessage);
+     }
       
  }
  
@@ -160,7 +167,8 @@
  
  msg.payload = payload;
  if(error) {
-     node.error(errorMessage, msg);
+     var errorText = '['+errorCount+'] '+ JSON.stringify(errors);
+     node.error(errorText, msg);
  } else {
      if(isLocalWork) console.log(JSON.stringify(msg.payload,'',4));
      return msg;

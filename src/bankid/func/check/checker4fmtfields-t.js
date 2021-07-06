@@ -1,12 +1,5 @@
-/**
- * @WHERE bankid/func/checker4fmtfields.js
- * @WHAT Check format fields by mapa
- * @VERSION 0.0.3
- * @FLOW BankID-C 
- * @NODE "a8df2611.3788"
- * @HELP https://regex101.com/ 
- * @INFO
- */
+//@what checker4fmtields.js ver. 0.0.3
+//https://regex101.com/ 
 //--------------------------------------------------------------------------
 
 var isConsole = true;

@@ -1,13 +1,4 @@
-/**
- * @WHERE bankid/func/checker4badfields.js
- * @WHAT Проверка плохих данных
- * @VERSION 0.0.3
- * @FLOW BankID-C 
- * @NODE "e0c7ba65.8e313"
- * @HELP
- * @INFO
-*/
-
+//@what checker4badfields.js ver. 0.0.3
 var error = false;
 
 var regDate = "^(0[1-9]|[12][0-9]|3[01])[.](0[1-9]|1[012])[.](19|20)[0-9]{2}$"

@@ -1,0 +1,1067 @@
+[
+    {
+        "id": "e2ab43a7.e61b8",
+        "type": "tab",
+        "label": "Kafka",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "56572bcd.a25c8c",
+        "type": "kafka-consumer",
+        "z": "e2ab43a7.e61b8",
+        "d": true,
+        "name": "DEV scrooge-documents-depo",
+        "broker": "b245cf7.735343",
+        "outOfRangeOffset": "earliest",
+        "fromOffset": "latest",
+        "topic": "scrooge-documents-depo",
+        "groupid": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "d76f8cf4.dd571",
+                "a0463a22.53233"
+            ]
+        ]
+    },
+    {
+        "id": "4804ba89.3325c4",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9c9f9865.239228",
+        "type": "kafka-consumer",
+        "z": "e2ab43a7.e61b8",
+        "d": true,
+        "name": "DEV LS-DM-CardStateEvents",
+        "broker": "b245cf7.735343",
+        "outOfRangeOffset": "earliest",
+        "fromOffset": "latest",
+        "topic": "LS-DM-CardStateEvents",
+        "groupid": "",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "b5b0fa50.7bc94"
+            ]
+        ]
+    },
+    {
+        "id": "1c82ca3d.26b4ae",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "log",
+        "func": "var text = JSON.stringify(msg.payload);\n\nmsg.payload = \n{\n    log: {\n        level   : 'DEBUG',\n        source  : 'kafka Card IN kv-v-nr-it-t',\n        message : text\n    }    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "a2ef733e.dbbb1"
+            ]
+        ]
+    },
+    {
+        "id": "83531122.600a4",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "log",
+        "func": "var text = JSON.stringify(msg.payload);\n\nmsg.payload = \n{\n    log: {\n        level   : 'DEBUG',\n        source  : 'kafka Docs IN kv-v-nr-it-t',\n        message : text\n    }    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 630,
+        "y": 80,
+        "wires": [
+            [
+                "a2ef733e.dbbb1"
+            ]
+        ]
+    },
+    {
+        "id": "ce923ed1.796428",
+        "type": "comment",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "info": "10.1.15.227:9092,10.13.46.2:9092,10.13.46.3:9092\n\n10.13.46.25:9092,10.13.46.2:9092,10.13.46.3:9092\n\n\n10.1.15.227:9092,\n10.13.46.2:9092,\n10.13.46.3:9092\n\nДоступ на ASA и FP открыли. За исключением - 10.1.15.227 адрес сервера\nранее заменили на - 10.13.46.25 (доступ на него открыли). ",
+        "x": 100,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e04903a3.5a81f8",
+        "type": "file",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "filename": "kafka.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 760,
+        "y": 40,
+        "wires": [
+            [
+                "a0b44cce.b67768"
+            ]
+        ]
+    },
+    {
+        "id": "a0b44cce.b67768",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a2ef733e.dbbb1",
+        "type": "http request",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://nr-clients.dev.ukrgasaws.com/common/logger/syslog",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 850,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3d42c74.60dba",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "217816f.b3503ea",
+        "type": "inject",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 40,
+        "wires": [
+            [
+                "cfa9e239.94c6a"
+            ]
+        ]
+    },
+    {
+        "id": "cfa9e239.94c6a",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "func": "msg.payload = {\n    a: \"aaaa\",\n    b: \"bbbbb\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 40,
+        "wires": [
+            [
+                "83531122.600a4"
+            ]
+        ]
+    },
+    {
+        "id": "3300227d.ede2ce",
+        "type": "kafka-consumer",
+        "z": "e2ab43a7.e61b8",
+        "name": "DEV scrooge-documents",
+        "broker": "b245cf7.735343",
+        "outOfRangeOffset": "earliest",
+        "fromOffset": "latest",
+        "topic": "scrooge-documents",
+        "groupid": "",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "d76f8cf4.dd571",
+                "215de7ee.84bcb"
+            ]
+        ]
+    },
+    {
+        "id": "d76f8cf4.dd571",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "sanity",
+        "func": "msg.payload.jvalue = JSON.parse(msg.payload.value);\ndelete(msg.payload.value);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 80,
+        "wires": [
+            [
+                "83531122.600a4",
+                "4804ba89.3325c4",
+                "e04903a3.5a81f8"
+            ]
+        ]
+    },
+    {
+        "id": "b5b0fa50.7bc94",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "sanity",
+        "func": "msg.payload.jvalue = JSON.parse(msg.payload.value);\ndelete(msg.payload.value);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "1c82ca3d.26b4ae",
+                "4804ba89.3325c4",
+                "e04903a3.5a81f8"
+            ]
+        ]
+    },
+    {
+        "id": "c74f20e9.76ad3",
+        "type": "inject",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "cc16c596.78ef78"
+            ]
+        ]
+    },
+    {
+        "id": "cc16c596.78ef78",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"topic\": \"scrooge-documents\",\n    \"offset\": 159691,\n    \"partition\": 2,\n    \"highWaterOffset\": 159700,\n    \"key\": \"\\u0000\\u0000\\u0000\\u00005Ѥ�\",\n    \"timestamp\": \"2021-07-05T14:23:14.735Z\",\n    \"jvalue\": {\n        \"EventUid\": \"05X7FCA3DV57R9RHD9YM8KZ4YG\",\n        \"EventType\": \"DocumentConfirmed\",\n        \"Timestamp\": \"2021-07-05T17:22:23.723\",\n        \"Version\": 1,\n        \"Data\": {\n            \"BillId\": 902931646,\n            \"BranchId\": 1,\n            \"ActionId\": 738,\n            \"CurrencyTag\": \"UAH\",\n            \"MainAmount\": 480.05,\n            \"CrncyAmount\": 480.05,\n            \"Code\": \"TR.11880258.26856.2980\",\n            \"OrgDate\": \"2021-09-30T00:00:00\",\n            \"DayDate\": \"2021-09-30T00:00:00\",\n            \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2019/ОВР/280-001329 від 03/07/2019 за період з 26/08/2021 по 30/09/2021\",\n            \"Ctrls\": \"\",\n            \"SystemId\": 0,\n            \"Created\": \"2021-07-05T17:22:23.677\",\n            \"Changed\": \"2021-07-05T17:22:23.677\",\n            \"PayType\": {\n                \"Code\": \"AT2\"\n            },\n            \"Debit\": {\n                \"AccountId\": 58099599,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"22085112083389.980\",\n                \"AccountIban\": \"UA503204780000022085112083389\",\n                \"StateCode\": \"3509704877\",\n                \"Name\": \"Мерзлікін Євгеній Миколайович\",\n                \"ClientId\": 2693413,\n                \"PhoneNumber\": \"380502968704\"\n            },\n            \"Credit\": {\n                \"AccountId\": 31859018,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"60507000117\",\n                \"AccountIban\": \"UA483204780000000060507000117\",\n                \"StateCode\": \"23697280\",\n                \"Name\": \"За кредитами овердрафт, що надані фізичним особам, АС 280\",\n                \"ClientId\": 1\n            },\n            \"Treaty\": {\n                \"TreatyId\": 11880258,\n                \"Code\": \"2019/ОВР/280-001329\",\n                \"SystemId\": 6000,\n                \"OrgDate\": \"2019-07-03T00:00:00\",\n                \"CurrencyTag\": \"UAH\",\n                \"CrncyAmount\": 14900,\n                \"Rate\": 36\n            },\n            \"Transfers\": [\n                {\n                    \"TransferId\": 1764829598,\n                    \"CrncyAmount\": 480.05,\n                    \"MainAmount\": 480.05,\n                    \"CurrencyTag\": \"UAH\",\n                    \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2019/ОВР/280-001329 від 03/07/2019 за період з 26/08/2021 по 30/09/2021\",\n                    \"Debit\": {\n                        \"AccountCode\": \"22085112083389.980\",\n                        \"AccountIban\": \"UA503204780000022085112083389\"\n                    },\n                    \"Credit\": {\n                        \"AccountCode\": \"60507000117\",\n                        \"AccountIban\": \"UA483204780000000060507000117\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+        "output": "json",
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "a0463a22.53233"
+            ]
+        ]
+    },
+    {
+        "id": "a0463a22.53233",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "save kafka + switch",
+        "func": "if(msg.workKafka === msg.workDir)\n{\n    msg.in = {\n        kafka : msg.payload,\n        treaty : msg.payload.jvalue.Data.Treaty,\n        treatyid : msg.payload.jvalue.Data.Treaty.TreatyId,\n        eventSum : msg.payload.jvalue.Data.Transfers[0].MainAmount\n    };  \n    return [msg, null]\n} else {\n    return [null, msg]\n}\n/*\nswitch (msg.workKafka) {\n    case 'DEV':\n    break;\n    case 'PRO':\n    break;\n}\n*/\n\n\n//msg.in.eventSum = msg.in.eventSum.replace(/./, '');\n//msg.in.eventSum = msg.in.eventSum*100;\n\n//return msg;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "9598d6b0.45f4e"
+            ],
+            [
+                "28063ecd.0e119a"
+            ]
+        ]
+    },
+    {
+        "id": "9598d6b0.45f4e",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "get clientid",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT *\nfrom treaty with(nolock)\nwhere id = {{in.treaty.TreatyId}}",
+        "output": "str",
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "a7fb2c15.84aaf"
+            ]
+        ]
+    },
+    {
+        "id": "63e62e07.892c7",
+        "type": "MSSQL",
+        "z": "e2ab43a7.e61b8",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "DEV SC",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [
+                "ff97718a.e101f",
+                "ea2788b2.c99908"
+            ]
+        ]
+    },
+    {
+        "id": "ff97718a.e101f",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ea2788b2.c99908",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "save clientid",
+        "func": "msg.in.clientid=msg.payload[0].ClientId;\nmsg.in.scroogid=msg.payload[0].ClientId;\n\nmsg.payload = {\n    scId: msg.in.clientid\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 910,
+        "y": 340,
+        "wires": [
+            [
+                "37543044.f7cba",
+                "5079e0c.9fdc8a",
+                "82d25363.e204b"
+            ]
+        ]
+    },
+    {
+        "id": "37543044.f7cba",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "in",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "cf753ff.5bb0a4",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "get card",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "DECLARE @treatyLinkId INT = {{in.treaty.TreatyId}}\nSELECT TOP 1000 c.id AS cliId\n              , tc.CardId AS cardId\n              , c.StateCode AS cliStateCode\n              , c.FullName AS cliFullName\n              , tLink.CrncyAmount AS t6000Amount\n              , dateadd(DD,tLink.DateFrom,'') AS t6000From\n              , dateadd(DD,tLink.DateInto,'') AS t6000Into\n              , tLink.ID AS t6000Id\n              , tl9003.TreatyId AS t9003Id\n              , tl6000.OwnerId AS t4200Id\n\nFROM Treaty tLink (NOLOCK)\n     JOIN clients c(NOLOCK) ON c.id = tLink.ClientId\n     LEFT JOIN sv_TreatyLinks tl6000(NOLOCK) ON tl6000.TreatyId = tLink.id\n                                                AND tl6000.KIND = 2131\n     LEFT JOIN Treaty tt ON tt.id = tl6000.ownerID\n     LEFT JOIN sv_TreatyLinks tl9003(NOLOCK) ON tl6000.ownerID = tl9003.OwnerId\n                                                AND tl9003.kind = 2132\n     LEFT JOIN TreatyCards tc(NOLOCK) ON tc.TreatyId = tl9003.TreatyId\n                                                AND tc.Status = 1\nWHERE 1 = 1\n      AND tLink.Closed = 0\n      AND tLink.Id = @treatyLinkId;\n",
+        "output": "str",
+        "x": 420,
+        "y": 500,
+        "wires": [
+            [
+                "6e700943.5d114"
+            ]
+        ]
+    },
+    {
+        "id": "9efcba2a.f10fd8",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "save card",
+        "func": "if(msg.payload.length == 1 ) {\n    if(msg.payload[0].cardId !== null)\n        msg.in.cardid = parseInt(msg.payload[0].cardId);\n    else\n        msg.in.cardid = 0;\n    return msg;\n}    \nelse {\n    node.error('Too many cards '+msg.payload.length, msg)\n}    \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 480,
+        "wires": [
+            [
+                "37543044.f7cba",
+                "39aa209b.2bfa6"
+            ]
+        ]
+    },
+    {
+        "id": "46f0b0ca.ad8a4",
+        "type": "MSSQL",
+        "z": "e2ab43a7.e61b8",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "DEV SC",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 700,
+        "y": 520,
+        "wires": [
+            [
+                "9efcba2a.f10fd8",
+                "13ba2877.7ef428"
+            ]
+        ]
+    },
+    {
+        "id": "13ba2877.7ef428",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "cd2dbc4b.99088",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"topic\": \"scrooge-documents\",\n    \"offset\": 159691,\n    \"partition\": 2,\n    \"highWaterOffset\": 159700,\n    \"key\": \"\\u0000\\u0000\\u0000\\u00005Ѥ�\",\n    \"timestamp\": \"2021-07-05T14:23:14.735Z\",\n    \"jvalue\": {\n        \"EventUid\": \"05X7FCA3DV57R9RHD9YM8KZ4YG\",\n        \"EventType\": \"DocumentConfirmed\",\n        \"Timestamp\": \"2021-07-05T17:22:23.723\",\n        \"Version\": 1,\n        \"Data\": {\n            \"BillId\": 902931646,\n            \"BranchId\": 1,\n            \"ActionId\": 738,\n            \"CurrencyTag\": \"UAH\",\n            \"MainAmount\": 480.05,\n            \"CrncyAmount\": 480.05,\n            \"Code\": \"TR.11880258.26856.2980\",\n            \"OrgDate\": \"2021-09-30T00:00:00\",\n            \"DayDate\": \"2021-09-30T00:00:00\",\n            \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2019/ОВР/280-001329 від 03/07/2019 за період з 26/08/2021 по 30/09/2021\",\n            \"Ctrls\": \"\",\n            \"SystemId\": 0,\n            \"Created\": \"2021-07-05T17:22:23.677\",\n            \"Changed\": \"2021-07-05T17:22:23.677\",\n            \"PayType\": {\n                \"Code\": \"AT2\"\n            },\n            \"Debit\": {\n                \"AccountId\": 58099599,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"22085112083389.980\",\n                \"AccountIban\": \"UA503204780000022085112083389\",\n                \"StateCode\": \"3509704877\",\n                \"Name\": \"Мерзлікін Євгеній Миколайович\",\n                \"ClientId\": 2693413,\n                \"PhoneNumber\": \"380502968704\"\n            },\n            \"Credit\": {\n                \"AccountId\": 31859018,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"60507000117\",\n                \"AccountIban\": \"UA483204780000000060507000117\",\n                \"StateCode\": \"23697280\",\n                \"Name\": \"За кредитами овердрафт, що надані фізичним особам, АС 280\",\n                \"ClientId\": 1\n            },\n            \"Treaty\": {\n                \"TreatyId\": 11880278,\n                \"Code\": \"2019/ОВР/280-001329\",\n                \"SystemId\": 6000,\n                \"OrgDate\": \"2019-07-03T00:00:00\",\n                \"CurrencyTag\": \"UAH\",\n                \"CrncyAmount\": 14900,\n                \"Rate\": 36\n            },\n            \"Transfers\": [\n                {\n                    \"TransferId\": 1764829598,\n                    \"CrncyAmount\": 480.05,\n                    \"MainAmount\": 480.05,\n                    \"CurrencyTag\": \"UAH\",\n                    \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2019/ОВР/280-001329 від 03/07/2019 за період з 26/08/2021 по 30/09/2021\",\n                    \"Debit\": {\n                        \"AccountCode\": \"22085112083389.980\",\n                        \"AccountIban\": \"UA503204780000022085112083389\"\n                    },\n                    \"Credit\": {\n                        \"AccountCode\": \"60507000117\",\n                        \"AccountIban\": \"UA483204780000000060507000117\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+        "output": "json",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "a0463a22.53233"
+            ]
+        ]
+    },
+    {
+        "id": "f4fe91ba.2576f8",
+        "type": "inject",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 380,
+        "wires": [
+            [
+                "cd2dbc4b.99088"
+            ]
+        ]
+    },
+    {
+        "id": "39aa209b.2bfa6",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "make event",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"clientId\" : {{in.clientid}},\n    \"scroogId\" : {{in.scroogid}},\n    \"cardId\" : {{in.cardid}},\n    \"treatyId\" : {{in.treatyid}},\n    \n    \"eventType\" : \"{{in.kafka.jvalue.Data.PayType.Code}}\",\n    \n    \"eventDate\" : \"{{in.kafka.jvalue.Timestamp}}\",\n    \"eventSum\" : {{in.eventSum}}\n\n}",
+        "output": "json",
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "d88bf7d5.9795d8",
+                "625ddf82.81f5d8"
+            ]
+        ]
+    },
+    {
+        "id": "d88bf7d5.9795d8",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "58023a1b.12cdfc",
+        "type": "http request",
+        "z": "e2ab43a7.e61b8",
+        "name": "DEV easypay infoExchange",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://bank.easypay.ua/api/issuer/infoExchange",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 760,
+        "y": 640,
+        "wires": [
+            [
+                "41cba01b.4da1c"
+            ]
+        ]
+    },
+    {
+        "id": "4266cd8e.e3efd4",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "835c85d2.1d2688",
+        "type": "inject",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "8579bfcd.09c35"
+            ]
+        ]
+    },
+    {
+        "id": "8579bfcd.09c35",
+        "type": "template",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"topic\": \"scrooge-documents\",\n    \"offset\": 159691,\n    \"partition\": 2,\n    \"highWaterOffset\": 159700,\n    \"key\": \"\\u0000\\u0000\\u0000\\u00005Ѥ�\",\n    \"timestamp\": \"2021-07-05T14:23:14.735Z\",\n    \"jvalue\": {\n        \"EventUid\": \"05X7FCA3DV57R9RHD9YM8KZ4YG\",\n        \"EventType\": \"DocumentConfirmed\",\n        \"Timestamp\": \"2021-07-05T17:22:23.723\",\n        \"Version\": 1,\n        \"Data\": {\n            \"BillId\": 902931646,\n            \"BranchId\": 1,\n            \"ActionId\": 738,\n            \"CurrencyTag\": \"UAH\",\n            \"MainAmount\": 480.05,\n            \"CrncyAmount\": 480.05,\n            \"Code\": \"TR.11880258.26856.2980\",\n            \"OrgDate\": \"2021-09-30T00:00:00\",\n            \"DayDate\": \"2021-09-30T00:00:00\",\n            \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2019/ОВР/280-001329 від 03/07/2019 за період з 26/08/2021 по 30/09/2021\",\n            \"Ctrls\": \"\",\n            \"SystemId\": 0,\n            \"Created\": \"2021-07-05T17:22:23.677\",\n            \"Changed\": \"2021-07-05T17:22:23.677\",\n            \"PayType\": {\n                \"Code\": \"AT2\"\n            },\n            \"Debit\": {\n                \"AccountId\": 58099599,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"22085112083389.980\",\n                \"AccountIban\": \"UA503204780000022085112083389\",\n                \"StateCode\": \"3509704877\",\n                \"Name\": \"Мерзлікін Євгеній Миколайович\",\n                \"ClientId\": 2693413,\n                \"PhoneNumber\": \"380502968704\"\n            },\n            \"Credit\": {\n                \"AccountId\": 31859018,\n                \"BankCode\": \"320478\",\n                \"AccountCode\": \"60507000117\",\n                \"AccountIban\": \"UA483204780000000060507000117\",\n                \"StateCode\": \"23697280\",\n                \"Name\": \"За кредитами овердрафт, що надані фізичним особам, АС 280\",\n                \"ClientId\": 1\n            },\n            \"Treaty\": {\n                \"TreatyId\": 2078765,\n                \"Code\": \"2019/ОВР/280-001329\",\n                \"SystemId\": 6000,\n                \"OrgDate\": \"2019-07-03T00:00:00\",\n                \"CurrencyTag\": \"UAH\",\n                \"CrncyAmount\": 14900,\n                \"Rate\": 36\n            },\n            \"Transfers\": [\n                {\n                    \"TransferId\": 1764829598,\n                    \"CrncyAmount\": 480.05,\n                    \"MainAmount\": 480.05,\n                    \"CurrencyTag\": \"UAH\",\n                    \"Purpose\": \"Нарахування відсотків за користування кредитною лінією по договору овердрафту № 2019/ОВР/280-001329 від 03/07/2019 за період з 26/08/2021 по 30/09/2021\",\n                    \"Debit\": {\n                        \"AccountCode\": \"22085112083389.980\",\n                        \"AccountIban\": \"UA503204780000022085112083389\"\n                    },\n                    \"Credit\": {\n                        \"AccountCode\": \"60507000117\",\n                        \"AccountIban\": \"UA483204780000000060507000117\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+        "output": "json",
+        "x": 240,
+        "y": 440,
+        "wires": [
+            [
+                "a0463a22.53233"
+            ]
+        ]
+    },
+    {
+        "id": "41cba01b.4da1c",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "payload",
+        "func": "msg.payload = {\n    statusCode: msg.statusCode,\n    payload : msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1020,
+        "y": 620,
+        "wires": [
+            [
+                "4266cd8e.e3efd4"
+            ]
+        ]
+    },
+    {
+        "id": "29f761ca.1f72a6",
+        "type": "http request",
+        "z": "e2ab43a7.e61b8",
+        "name": "DEV scid2wbid",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "https://nr-openbanking.dev.ukrgasaws.com/webbank/clients/info/scid2wbid",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "a82ca5c.d9321d8"
+            ]
+        ]
+    },
+    {
+        "id": "a82ca5c.d9321d8",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "? 200 & ok",
+        "func": "/*\n1 all ok\n2 not ok\n3 all bad\n*/\nif(msg.statusCode === 200 \n&& msg.payload.result === \"ok\") {\n    return [msg, null, null];\n} else {\n    if(msg.statusCode === 200 \n        && msg.payload.result !== \"ok\") {\n        return [null, msg, null];\n    } else {\n        return [null, null, msg];\n    }    \n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 420,
+        "wires": [
+            [
+                "180b8c08.34b544",
+                "e496bd65.9c236"
+            ],
+            [
+                "e496bd65.9c236"
+            ],
+            [
+                "e496bd65.9c236"
+            ]
+        ]
+    },
+    {
+        "id": "e496bd65.9c236",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "180b8c08.34b544",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "save webid",
+        "func": "msg.in.clientid=msg.payload.data[0].wbId;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 990,
+        "y": 400,
+        "wires": [
+            [
+                "cf753ff.5bb0a4"
+            ]
+        ]
+    },
+    {
+        "id": "5079e0c.9fdc8a",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a7fb2c15.84aaf",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "f8986951.6a0778"
+            ],
+            [
+                "63e62e07.892c7"
+            ]
+        ]
+    },
+    {
+        "id": "82d25363.e204b",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "78851f8.fa53ce"
+            ],
+            [
+                "29f761ca.1f72a6"
+            ]
+        ]
+    },
+    {
+        "id": "6e700943.5d114",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "9a5cb135.975b6"
+            ],
+            [
+                "46f0b0ca.ad8a4"
+            ]
+        ]
+    },
+    {
+        "id": "625ddf82.81f5d8",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "🡹P/D🡻",
+        "func": "if(env.get(\"ENVIRONMENT\") !== undefined) \n    msg.workDir = env.get(\"ENVIRONMENT\").substring(0,3).toUpperCase();\n\nif (msg.workDir == \"PRO\") {\n    return [msg, null];\n} else if (msg.workDir == \"DEV\") {\n    return [null, msg];\n} ",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 620,
+        "wires": [
+            [
+                "5a44b8a7.30f638"
+            ],
+            [
+                "58023a1b.12cdfc"
+            ]
+        ]
+    },
+    {
+        "id": "5a44b8a7.30f638",
+        "type": "http request",
+        "z": "e2ab43a7.e61b8",
+        "name": "PRO easypay infoExchange",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://bank.easypay.ua/api/issuer/infoExchange",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 760,
+        "y": 600,
+        "wires": [
+            [
+                "41cba01b.4da1c"
+            ]
+        ]
+    },
+    {
+        "id": "78851f8.fa53ce",
+        "type": "http request",
+        "z": "e2ab43a7.e61b8",
+        "name": "PRO scid2wbid",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "https://nr-openbanking.ukrgasaws.com/webbank/clients/info/scid2wbid",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "a82ca5c.d9321d8"
+            ]
+        ]
+    },
+    {
+        "id": "f8986951.6a0778",
+        "type": "MSSQL",
+        "z": "e2ab43a7.e61b8",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "PRO SC",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "ea2788b2.c99908"
+            ]
+        ]
+    },
+    {
+        "id": "9a5cb135.975b6",
+        "type": "MSSQL",
+        "z": "e2ab43a7.e61b8",
+        "mssqlCN": "ef456f3c.8f442",
+        "name": "PRO SC",
+        "query": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "x": 700,
+        "y": 480,
+        "wires": [
+            [
+                "9efcba2a.f10fd8"
+            ]
+        ]
+    },
+    {
+        "id": "215de7ee.84bcb",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "DEV",
+        "func": "msg.workKafka = \"DEV\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "b74db5fb.48abd8"
+            ]
+        ]
+    },
+    {
+        "id": "28063ecd.0e119a",
+        "type": "debug",
+        "z": "e2ab43a7.e61b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f076aa15.d82228",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "PRO",
+        "func": "msg.workKafka = \"PRO\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "b74db5fb.48abd8"
+            ]
+        ]
+    },
+    {
+        "id": "b74db5fb.48abd8",
+        "type": "function",
+        "z": "e2ab43a7.e61b8",
+        "name": "ENV",
+        "func": "msg.workDir = 'DEV';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "a0463a22.53233"
+            ]
+        ]
+    },
+    {
+        "id": "b245cf7.735343",
+        "type": "kafka-broker",
+        "z": "",
+        "name": "UGB",
+        "hosts": "10.13.46.2:9092,10.13.46.3:9092, 10.13.46.25:9092",
+        "selfsign": false,
+        "usetls": false,
+        "cacert": "",
+        "clientcert": "",
+        "privatekey": "",
+        "passphrase": ""
+    },
+    {
+        "id": "ef456f3c.8f442",
+        "type": "MSSQL-CN",
+        "z": "",
+        "tdsVersion": "7_4",
+        "name": "SC PredProd (akha)",
+        "server": "10.3.6.2",
+        "port": "1433",
+        "encyption": true,
+        "database": "scrooge",
+        "useUTC": true,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false
+    }
+]

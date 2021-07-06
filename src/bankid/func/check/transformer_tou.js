@@ -1,12 +1,4 @@
-/**
- * @WHERE bankid/transformer_to.js
- * @WHAT Прямое преобразование из структуры типа BankId в WebBank XML 
- * @VERSION 0.1.44
- * @NODE 
- * @HELP
- * @INFO
- */
-// @what transformer_to.js
+// Прямое преобразование из структуры типа BankId в WebBank XML 
 // RUN 
 // export NODE_PATH="$(npm root -g)"
 // node retransformer.js  totransformer.js

@@ -1,4 +1,11 @@
-//@WHAT localTZDates.js
+/**
+ * @WHERE bankid/func/localTZDates.js 
+ * @WHAT Date transform
+ * @VERSION 0.0.1
+ * @NODE "6e4be5f7.c3ae24"
+ */
+
+
 
 function localTZDates(zdate){
     // 2021-03-31T10:46:48.841Z
