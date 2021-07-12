@@ -1,0 +1,244 @@
+{
+    "client": {
+        "StateCode": "3364208276",
+        "PrevIdentDate": "2021-07-09T00:00:00",
+        "Name": "undefined undefined undefined"
+    },
+    "indiv": {
+        "MarriageStatus": "1"
+    },
+    "names": {},
+    "ident": [],
+    "addr": [],
+    "comm": [],
+    "props": [
+        {
+            "Refs": "peps",
+            "Code": "PUBLIC_PERSON_EXISTS",
+            "Dict": "",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "INFO_WORK_FROM",
+            "Dict": "",
+            "Value": "ТОВ Кабанчик"
+        },
+        {
+            "Refs": "",
+            "Code": "FATF_CodObl",
+            "Dict": "",
+            "Value": "32"
+        },
+        {
+            "Refs": "",
+            "Code": "Education",
+            "Dict": "",
+            "Value": "2"
+        },
+        {
+            "Refs": "",
+            "Code": "socStatus",
+            "Dict": "",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "wrkCodObl",
+            "Dict": "",
+            "Value": "53"
+        },
+        {
+            "Refs": "",
+            "Code": "BIRTH_PLACE",
+            "Dict": "",
+            "Value": "Мінськ"
+        },
+        {
+            "Refs": "",
+            "Code": "codProduct",
+            "Dict": "",
+            "Value": "11"
+        },
+        {
+            "Refs": "",
+            "Code": "limitWanted",
+            "Dict": "",
+            "Value": "1000"
+        },
+        {
+            "Refs": "",
+            "Code": "MONTHSUMM",
+            "Dict": "",
+            "Value": "10000"
+        },
+        {
+            "Refs": "",
+            "Code": "StaffType",
+            "Dict": "",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "BIRTH_COUNTRY",
+            "Dict": "KL_K040.DBF",
+            "Value": "112"
+        },
+        {
+            "Refs": "",
+            "Code": "COUNTOFUTRIM",
+            "Dict": "",
+            "Value": "5"
+        },
+        {
+            "Refs": "",
+            "Code": "CLIENT_STATUS",
+            "Dict": "",
+            "Value": "0"
+        },
+        {
+            "Refs": "",
+            "Code": "OBSYAG_NAD",
+            "Dict": "",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": " LABOUR_WORK_EXP",
+            "Dict": "",
+            "Value": "20"
+        },
+        {
+            "Refs": "",
+            "Code": "Verifikatsii_date ",
+            "Dict": "",
+            "Value": "2021-07-09T00:00:00"
+        },
+        {
+            "Refs": "",
+            "Code": "PROPETYTH_OF_CLIENT",
+            "Dict": "PROPETYTH_OF_CLIENT",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "PROPETYTH_OF_CLIENT_AVTO",
+            "Dict": "PROPETYTH_OF_CLIENT_AVTO",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "INFO_OUTER_ACC_SEL",
+            "Dict": "INFO_OUTER_ACC",
+            "Value": "3"
+        },
+        {
+            "Refs": "",
+            "Code": "EXISTS_CRED_OUT",
+            "Dict": "YESNO",
+            "Value": "0"
+        },
+        {
+            "Refs": "",
+            "Code": "EXISTS_DEPO_OUT",
+            "Dict": "YESNO",
+            "Value": "0"
+        },
+        {
+            "Refs": "",
+            "Code": "PROPETYPAP_OF_CLIENTYPE",
+            "Dict": "PROPETYPAP_OF_CLIENTYPE",
+            "Value": "відсутні"
+        },
+        {
+            "Refs": "",
+            "Code": "PROFIT_WAY",
+            "Dict": "PROFIT_WAY",
+            "Value": "14300"
+        },
+        {
+            "Refs": "",
+            "Code": "BANK_PRODUCT",
+            "Dict": "FIN_DOCH",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "NAD_K_3",
+            "Dict": "NAD_K_3",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "CUSTOMER_TYPE",
+            "Dict": "CUSTOMER_TYPE",
+            "Value": "Клієнт з відкриттям рахунку"
+        },
+        {
+            "Refs": "",
+            "Code": "Criterias",
+            "Dict": "",
+            "Value": "Задовільний"
+        },
+        {
+            "Refs": "",
+            "Code": "Customer_verification",
+            "Dict": "Customer_verification",
+            "Value": "3"
+        },
+        {
+            "Refs": "",
+            "Code": "FATF_COUNTRY_CITIZEN",
+            "Dict": "KL_K040.DBF",
+            "Value": "804"
+        },
+        {
+            "Refs": "",
+            "Code": "BANK_SERVICES_MANUAL",
+            "Dict": "BANK_SERVICES_MANUAL",
+            "Value": "1, 22, 4"
+        },
+        {
+            "Refs": "",
+            "Code": "KL_K013FO",
+            "Dict": "KL_K013_FO",
+            "Value": "5"
+        },
+        {
+            "Refs": "",
+            "Code": "UGB_TCURelPers",
+            "Dict": "RF_UGB_TCURelPers",
+            "Value": "0"
+        },
+        {
+            "Refs": "",
+            "Code": "CARD_GREEN",
+            "Dict": "A_GREEN_CARD",
+            "Value": "1"
+        },
+        {
+            "Refs": "",
+            "Code": "Chiisaresident_USA",
+            "Dict": "YESNO",
+            "Value": "0"
+        },
+        {
+            "Refs": "",
+            "Code": "Chiisaresident_USA",
+            "Dict": "YESNO",
+            "Value": "0"
+        },
+        {
+            "Refs": "",
+            "Code": "FATCA",
+            "Dict": "FATCA",
+            "Value": "3"
+        },
+        {
+            "Refs": "",
+            "Code": "Resident_USA",
+            "Dict": "YESNO",
+            "Value": "0"
+        }
+    ]
+}

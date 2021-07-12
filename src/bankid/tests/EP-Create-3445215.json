@@ -1,0 +1,40 @@
+{
+    "person": {
+        "inn": "3364208276",
+        "sex": "M",
+        "type": "physical",
+        "phone": "380635849966",
+        "birthDay": "09.02.1992",
+        "lastName": "Ільченко",
+        "firstName": "Максим",
+        "middleName": "Петрович"
+    },
+    "extends": {},
+    "callback1": "https://banktest.easypay.ua/api/issuer/client/confirm/05d3a775-63cd-4271-badc-b58f3a068b86",
+    "addresses": [
+        {
+            "area": "Бородянський р-н",
+            "city": "смт. Бабинці",
+            "type": "juridical",
+            "state": "Київська обл.",
+            "flatNo": "",
+            "street": "вул. Шевченка",
+            "country": "UA",
+            "houseNo": "48А"
+        }
+    ],
+    "documents": [
+        {
+            "type": "passport",
+            "issue": "Бородянським РВ ГУ МВС України в Київській області",
+            "number": "029302",
+            "series": "СТ",
+            "typeName": "паспорт",
+            "dateIssue": "18.04.2008",
+            "dateExpiration": "",
+            "issueCountryIso2": "UA"
+        }
+    ],
+    "timestamp": "1625811395846",
+    "merchant_name": "easypay_test"
+}

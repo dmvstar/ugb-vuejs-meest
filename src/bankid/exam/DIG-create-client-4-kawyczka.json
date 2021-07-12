@@ -1,0 +1,40 @@
+{
+  "person": {
+    "inn": "2715516515",
+    "sex": "M",
+    "type": "physical",
+    "phone": "380662254494",
+    "birthDay": "07.05.1974",
+    "lastName": "АРАБСЬКИЙ",
+    "firstName": "ЮРІЙ",
+    "middleName": "МАР`ЯНОВИЧ"
+  },
+  "extends": {},
+  "callback": "https://bank.easypay.ua/api/issuer/client/confirm/17fe5096-3189-4af6-81bc-e4a0976bc723",
+  "addresses": [
+    {
+      "area": "Львів",
+      "city": "м. Винники",
+      "type": "juridical",
+      "state": "Львівська обл.",
+      "flatNo": "24",
+      "street": "вул. Івасюка",
+      "country": "UA",
+      "houseNo": "50"
+    }
+  ],
+  "documents": [
+    {
+      "type": "passport",
+      "issue": "Галицьким РВ ЛМУ УМВС України у Львівській області",
+      "number": "541273",
+      "series": "КА",
+      "typeName": "паспорт",
+      "dateIssue": "22.07.1997",
+      "dateExpiration": "",
+      "issueCountryIso2": "UA"
+    }
+  ],
+  "timestamp": "1626077281443",
+  "merchant_name": "bankid_easypay"
+}
