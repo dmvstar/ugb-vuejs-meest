@@ -1,0 +1,1531 @@
+{
+    "result": "ok",
+    "data": {
+        "user": "ysukiiasov",
+        "find": true,
+        "message": {
+            "dn": "CN=Сукіясов Євген Юрійович,OU=USERS,OU=02_BANK,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+            "controls": [],
+            "sn": "Сукіясов",
+            "title": "Начальник відділу",
+            "givenName": "Євген Юрійович",
+            "memberOf": [
+                "CN=grp-crm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=grp-crm-adm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=API_rw,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Vpn_Check_Point,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=grp.user.tls.test,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=GO_USERS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ukrgas_all_users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Керівники підрозділів ГО та директора дирекцій,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ЗК_БЗ,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ДКПтаАКП,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=SET_IE_Proxy_5_3,OU=_Delegating_to_bezpeka,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Scrooge,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local"
+            ],
+            "objectGUID": "tc�N���E��\u001bk�t�s",
+            "userPrincipalName": "ysukiiasov@ukrgas.bank.local",
+            "mail": "ysukiiasov@ukrgasbank.com",
+            "departmentNumber": "7р31"
+        }
+    }
+}
+
+{
+    "result": "ok",
+    "data": {
+        "user": "vchebotarov",
+        "find": true,
+        "message": {
+            "dn": "CN=Чеботарьов Вікентій Геннадійович,OU=it_department,OU=USERS,OU=02_BANK,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+            "controls": [],
+            "sn": "Чеботарьов",
+            "title": "Начальник управління",
+            "givenName": "Вікентій Геннадійович",
+            "memberOf": [
+                "CN=grp-crm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=grp-crm-adm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=API_rw,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=grp.user.tls.test,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=АНПД_та_відділень_rw,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=АНПД_та_відділень_r,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ukrgas_all_users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Керівники підрозділів ГО та директора дирекцій,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ДКПтаАКП_УКП,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ДКПтаАКП_Бюджет,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ДКПтаАКП_УКП_КПСБУ,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ДКПтаАКП_Договори та розрахунки,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ДКПтаАКП,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=VPN_Contractors,OU=_Cisco_ACS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=_13823,OU=M,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Технологiчний комiтет_R,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Scrooge,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local"
+            ],
+            "objectGUID": "����6�FI�KV��Rh\u0018",
+            "userPrincipalName": "vchebotarov@ukrgas.bank.local",
+            "mail": "vchebotarov@ukrgasbank.com",
+            "departmentNumber": "7р3"
+        }
+    }
+}
+
+
+{
+    "result": "ok",
+    "data": {
+        "user": "dstarzhynskyi",
+        "find": true,
+        "message": {
+            "dn": "CN=Старжинський Дмитро Валентинович,OU=it_department,OU=USERS,OU=02_BANK,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+            "controls": [],
+            "sn": "Старжинський",
+            "title": "Головний фахівець",
+            "givenName": "Дмитро Валентинович",
+            "memberOf": [
+                "CN=grp-crm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=jira-users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=API_rw,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Vpn_Check_Point,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=FINIK.PRO_RW,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Екобум_RW,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=CPCapsule,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=GO_USERS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ukrgas_all_users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Кредитная фабрика,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=X_HELP_WB,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=wb_fatf_01,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=dbo,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=AlertBadSyncClients,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=scrooge_3220,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=VPN_Contractors,OU=_Cisco_ACS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=SET_IE_Proxy_5_3,OU=_Delegating_to_bezpeka,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=sc3_ЦБ,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=_13813,OU=M,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=kv00-s-appl-pr5_scroog,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=_115-630,OU=_OLD_from_UGB,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Scrooge,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local"
+            ],
+            "objectGUID": "��[vBV�E��\u0011����",
+            "userPrincipalName": "dstarzhynskyi@ukrgas.bank.local",
+            "mail": "dstarzhynskyi@ukrgasbank.com",
+            "departmentNumber": "7р32"
+        }
+    }
+}
+
+
+{
+    "_msgid": "af9fee02.12504",
+    "payload": {
+        "user": "dstarzhynskyi",
+        "find": true,
+        "message": {
+            "dn": "CN=Старжинський Дмитро Валентинович,OU=it_department,OU=USERS,OU=02_BANK,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+            "controls": [],
+            "sn": "Старжинський",
+            "title": "Головний фахівець",
+            "givenName": "Дмитро Валентинович",
+            "memberOf": [
+                "CN=grp-crm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=jira-users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=API_rw,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Vpn_Check_Point,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=FINIK.PRO_RW,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Екобум_RW,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=CPCapsule,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=GO_USERS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ukrgas_all_users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Кредитная фабрика,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=X_HELP_WB,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=wb_fatf_01,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=dbo,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=AlertBadSyncClients,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=scrooge_3220,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=VPN_Contractors,OU=_Cisco_ACS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=SET_IE_Proxy_5_3,OU=_Delegating_to_bezpeka,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=sc3_ЦБ,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=_13813,OU=M,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=kv00-s-appl-pr5_scroog,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=_115-630,OU=_OLD_from_UGB,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Scrooge,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local"
+            ],
+            "objectGUID": "��[vBV�E��\u0011����",
+            "userPrincipalName": "dstarzhynskyi@ukrgas.bank.local",
+            "mail": "dstarzhynskyi@ukrgasbank.com",
+            "departmentNumber": "7р32"
+        }
+    },
+    "req": {
+        "_readableState": {
+            "objectMode": false,
+            "highWaterMark": 16384,
+            "buffer": {
+                "head": null,
+                "tail": null,
+                "length": 0
+            },
+            "length": 0,
+            "pipes": null,
+            "pipesCount": 0,
+            "flowing": true,
+            "ended": true,
+            "endEmitted": true,
+            "reading": false,
+            "sync": false,
+            "needReadable": false,
+            "emittedReadable": false,
+            "readableListening": false,
+            "resumeScheduled": false,
+            "emitClose": true,
+            "autoDestroy": false,
+            "destroyed": false,
+            "defaultEncoding": "utf8",
+            "awaitDrainWriters": null,
+            "multiAwaitDrain": false,
+            "readingMore": false,
+            "decoder": null,
+            "encoding": null
+        },
+        "readable": false,
+        "_events": {},
+        "_eventsCount": 0,
+        "socket": "[internal]",
+        "connection": "[internal]",
+        "httpVersionMajor": 1,
+        "httpVersionMinor": 1,
+        "httpVersion": "1.1",
+        "complete": true,
+        "headers": {
+            "x-forwarded-for": "10.3.5.79",
+            "x-forwarded-proto": "https",
+            "x-forwarded-port": "443",
+            "host": "nr-clients.ukrgasaws.com",
+            "x-amzn-trace-id": "Root=1-60e7734a-68b64e85477131394ca5759c",
+            "content-length": "26",
+            "accept": "text/plain, application/json, application/*+json, */*",
+            "content-type": "application/json",
+            "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "x-b3-traceid": "3050933c9a526f9d",
+            "x-b3-spanid": "7818cad54e22849a",
+            "x-b3-parentspanid": "3050933c9a526f9d",
+            "x-b3-sampled": "1",
+            "user-agent": "Java/1.8.0_111-internal"
+        },
+        "rawHeaders": [
+            "X-Forwarded-For",
+            "10.3.5.79",
+            "X-Forwarded-Proto",
+            "https",
+            "X-Forwarded-Port",
+            "443",
+            "Host",
+            "nr-clients.ukrgasaws.com",
+            "X-Amzn-Trace-Id",
+            "Root=1-60e7734a-68b64e85477131394ca5759c",
+            "Content-Length",
+            "26",
+            "Accept",
+            "text/plain, application/json, application/*+json, */*",
+            "Content-Type",
+            "application/json",
+            "x-auth-token",
+            "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "X-B3-TraceId",
+            "3050933c9a526f9d",
+            "X-B3-SpanId",
+            "7818cad54e22849a",
+            "X-B3-ParentSpanId",
+            "3050933c9a526f9d",
+            "X-B3-Sampled",
+            "1",
+            "User-Agent",
+            "Java/1.8.0_111-internal"
+        ],
+        "trailers": {},
+        "rawTrailers": [],
+        "aborted": false,
+        "upgrade": false,
+        "url": "/api/isa/userInfo",
+        "method": "POST",
+        "statusCode": null,
+        "statusMessage": null,
+        "client": "[internal]",
+        "_consuming": true,
+        "_dumped": false,
+        "baseUrl": "",
+        "originalUrl": "/api/isa/userInfo",
+        "_parsedUrl": {
+            "protocol": null,
+            "slashes": null,
+            "auth": null,
+            "host": null,
+            "port": null,
+            "hostname": null,
+            "hash": null,
+            "search": null,
+            "query": null,
+            "pathname": "/api/isa/userInfo",
+            "path": "/api/isa/userInfo",
+            "href": "/api/isa/userInfo",
+            "_raw": "/api/isa/userInfo"
+        },
+        "params": {},
+        "query": {},
+        "res": "[internal]",
+        "body": {
+            "userId": "dstarzhynskyi"
+        },
+        "_body": true,
+        "_passport": {
+            "instance": {
+                "_key": "passport",
+                "_strategies": {
+                    "session": {
+                        "name": "session"
+                    },
+                    "bearer": {
+                        "name": "bearer",
+                        "_realm": "Users"
+                    },
+                    "oauth2-client-password": {
+                        "name": "oauth2-client-password"
+                    },
+                    "anon": {
+                        "name": "anon"
+                    },
+                    "tokens": {
+                        "name": "tokens"
+                    }
+                },
+                "_serializers": [],
+                "_deserializers": [],
+                "_infoTransformers": [],
+                "_framework": {},
+                "_userProperty": "user",
+                "_sm": {
+                    "_key": "passport"
+                },
+                "strategies": {}
+            }
+        },
+        "route": {
+            "path": "/api/isa/userInfo",
+            "stack": [
+                {
+                    "name": "cookieParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "httpMiddleware",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "corsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "metricsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "jsonParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "urlencodedParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "multipartParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "rawBodyParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                }
+            ],
+            "methods": {
+                "post": true
+            }
+        },
+        "cookies": {},
+        "signedCookies": {}
+    },
+    "res": {}
+}
+
+
+
+
+{
+    "_msgid": "bd5b259.30ad0d8",
+    "payload": {
+        "userId": "vpiskovets@ukrgasbank.com",
+        "pass": "!asdfgh123"
+    },
+    "req": {
+        "_readableState": {
+            "objectMode": false,
+            "highWaterMark": 16384,
+            "buffer": {
+                "head": null,
+                "tail": null,
+                "length": 0
+            },
+            "length": 0,
+            "pipes": null,
+            "pipesCount": 0,
+            "flowing": true,
+            "ended": true,
+            "endEmitted": true,
+            "reading": false,
+            "sync": false,
+            "needReadable": false,
+            "emittedReadable": false,
+            "readableListening": false,
+            "resumeScheduled": false,
+            "emitClose": true,
+            "autoDestroy": false,
+            "destroyed": false,
+            "defaultEncoding": "utf8",
+            "awaitDrainWriters": null,
+            "multiAwaitDrain": false,
+            "readingMore": false,
+            "decoder": null,
+            "encoding": null
+        },
+        "readable": false,
+        "_events": {},
+        "_eventsCount": 0,
+        "socket": "[internal]",
+        "connection": "[internal]",
+        "httpVersionMajor": 1,
+        "httpVersionMinor": 1,
+        "httpVersion": "1.1",
+        "complete": true,
+        "headers": {
+            "x-forwarded-for": "10.3.5.79",
+            "x-forwarded-proto": "https",
+            "x-forwarded-port": "443",
+            "host": "nr-clients.ukrgasaws.com",
+            "x-amzn-trace-id": "Root=1-60e7df8e-1003cdbb1edb19ec0aac8899",
+            "content-length": "58",
+            "accept": "text/plain, application/json, application/*+json, */*",
+            "content-type": "application/json",
+            "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "x-b3-traceid": "0df744a17620f4bd",
+            "x-b3-spanid": "182e11ac62bc33ed",
+            "x-b3-parentspanid": "0df744a17620f4bd",
+            "x-b3-sampled": "1",
+            "user-agent": "Java/1.8.0_111-internal"
+        },
+        "rawHeaders": [
+            "X-Forwarded-For",
+            "10.3.5.79",
+            "X-Forwarded-Proto",
+            "https",
+            "X-Forwarded-Port",
+            "443",
+            "Host",
+            "nr-clients.ukrgasaws.com",
+            "X-Amzn-Trace-Id",
+            "Root=1-60e7df8e-1003cdbb1edb19ec0aac8899",
+            "Content-Length",
+            "58",
+            "Accept",
+            "text/plain, application/json, application/*+json, */*",
+            "Content-Type",
+            "application/json",
+            "x-auth-token",
+            "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "X-B3-TraceId",
+            "0df744a17620f4bd",
+            "X-B3-SpanId",
+            "182e11ac62bc33ed",
+            "X-B3-ParentSpanId",
+            "0df744a17620f4bd",
+            "X-B3-Sampled",
+            "1",
+            "User-Agent",
+            "Java/1.8.0_111-internal"
+        ],
+        "trailers": {},
+        "rawTrailers": [],
+        "aborted": false,
+        "upgrade": false,
+        "url": "/api/isa/checkCredentials",
+        "method": "POST",
+        "statusCode": null,
+        "statusMessage": null,
+        "client": "[internal]",
+        "_consuming": true,
+        "_dumped": false,
+        "baseUrl": "",
+        "originalUrl": "/api/isa/checkCredentials",
+        "_parsedUrl": {
+            "protocol": null,
+            "slashes": null,
+            "auth": null,
+            "host": null,
+            "port": null,
+            "hostname": null,
+            "hash": null,
+            "search": null,
+            "query": null,
+            "pathname": "/api/isa/checkCredentials",
+            "path": "/api/isa/checkCredentials",
+            "href": "/api/isa/checkCredentials",
+            "_raw": "/api/isa/checkCredentials"
+        },
+        "params": {},
+        "query": {},
+        "res": "[internal]",
+        "body": {
+            "userId": "vpiskovets@ukrgasbank.com",
+            "pass": "!asdfgh123"
+        },
+        "_body": true,
+        "_passport": {
+            "instance": {
+                "_key": "passport",
+                "_strategies": {
+                    "session": {
+                        "name": "session"
+                    },
+                    "bearer": {
+                        "name": "bearer",
+                        "_realm": "Users"
+                    },
+                    "oauth2-client-password": {
+                        "name": "oauth2-client-password"
+                    },
+                    "anon": {
+                        "name": "anon"
+                    },
+                    "tokens": {
+                        "name": "tokens"
+                    }
+                },
+                "_serializers": [],
+                "_deserializers": [],
+                "_infoTransformers": [],
+                "_framework": {},
+                "_userProperty": "user",
+                "_sm": {
+                    "_key": "passport"
+                },
+                "strategies": {}
+            }
+        },
+        "route": {
+            "path": "/api/isa/checkCredentials",
+            "stack": [
+                {
+                    "name": "cookieParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "httpMiddleware",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "corsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "metricsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "jsonParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "urlencodedParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "multipartParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "rawBodyParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                }
+            ],
+            "methods": {
+                "post": true
+            }
+        },
+        "cookies": {},
+        "signedCookies": {}
+    },
+    "res": {}
+}
+
+
+
+{
+    "_msgid": "95d87085.dafc8",
+    "payload": {
+        "user": "vpiskovets",
+        "find": true,
+        "message": {
+            "dn": "CN=Пісковець Віталій Олегович,OU=contact_center,OU=USERS,OU=02_BANK,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+            "controls": [],
+            "sn": "Пісковець",
+            "title": "Головний фахівець КЦ",
+            "givenName": "Віталій Олегович",
+            "memberOf": [
+                "CN=grp-crm,OU=CRM,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Звіти_та_документи_Deny,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Vpn_Check_Point,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=grp.user.tls.test,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=GO_USERS,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=ukrgas_all_users,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=cc_deposits,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=cc_feedback,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Shortcut_Firefox_Remote,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ЗД_R,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=contactcentre,OU=04_GROUPS_Distrib,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ВОП,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ЗК_БЗ,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ВОП_ВОП,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ЗК,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=SET_IE_Proxy_5_1,OU=_Delegating_to_bezpeka,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Контакт-центр_ВСК,OU=N,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Реэстр фiзичних осiб - VIP-клiэнтiв_R,OU=L,OU=net_disks_HO_access_rights,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local",
+                "CN=Scrooge,OU=05_GROUPS_Security,OU=_KV00_,DC=ukrgas,DC=bank,DC=local"
+            ],
+            "objectGUID": ";\u0011B{Ź�@�\u0005�zn���",
+            "userPrincipalName": "vpiskovets@ukrgas.bank.local",
+            "mail": "vpiskovets@ukrgasbank.com",
+            "departmentNumber": "563"
+        }
+    },
+    "req": {
+        "_readableState": {
+            "objectMode": false,
+            "highWaterMark": 16384,
+            "buffer": {
+                "head": null,
+                "tail": null,
+                "length": 0
+            },
+            "length": 0,
+            "pipes": null,
+            "pipesCount": 0,
+            "flowing": true,
+            "ended": true,
+            "endEmitted": true,
+            "reading": false,
+            "sync": false,
+            "needReadable": false,
+            "emittedReadable": false,
+            "readableListening": false,
+            "resumeScheduled": false,
+            "emitClose": true,
+            "autoDestroy": false,
+            "destroyed": false,
+            "defaultEncoding": "utf8",
+            "awaitDrainWriters": null,
+            "multiAwaitDrain": false,
+            "readingMore": false,
+            "decoder": null,
+            "encoding": null
+        },
+        "readable": false,
+        "_events": {},
+        "_eventsCount": 0,
+        "socket": "[internal]",
+        "connection": "[internal]",
+        "httpVersionMajor": 1,
+        "httpVersionMinor": 1,
+        "httpVersion": "1.1",
+        "complete": true,
+        "headers": {
+            "x-forwarded-for": "10.3.5.79",
+            "x-forwarded-proto": "https",
+            "x-forwarded-port": "443",
+            "host": "nr-clients.ukrgasaws.com",
+            "x-amzn-trace-id": "Root=1-60e7dfbd-2cd09c1b2f98386f64b723dc",
+            "content-length": "23",
+            "accept": "text/plain, application/json, application/*+json, */*",
+            "content-type": "application/json",
+            "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "x-b3-traceid": "2cbad2caaa372dac",
+            "x-b3-spanid": "d5c36c42addfbebd",
+            "x-b3-parentspanid": "2cbad2caaa372dac",
+            "x-b3-sampled": "1",
+            "user-agent": "Java/1.8.0_111-internal"
+        },
+        "rawHeaders": [
+            "X-Forwarded-For",
+            "10.3.5.79",
+            "X-Forwarded-Proto",
+            "https",
+            "X-Forwarded-Port",
+            "443",
+            "Host",
+            "nr-clients.ukrgasaws.com",
+            "X-Amzn-Trace-Id",
+            "Root=1-60e7dfbd-2cd09c1b2f98386f64b723dc",
+            "Content-Length",
+            "23",
+            "Accept",
+            "text/plain, application/json, application/*+json, */*",
+            "Content-Type",
+            "application/json",
+            "x-auth-token",
+            "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "X-B3-TraceId",
+            "2cbad2caaa372dac",
+            "X-B3-SpanId",
+            "d5c36c42addfbebd",
+            "X-B3-ParentSpanId",
+            "2cbad2caaa372dac",
+            "X-B3-Sampled",
+            "1",
+            "User-Agent",
+            "Java/1.8.0_111-internal"
+        ],
+        "trailers": {},
+        "rawTrailers": [],
+        "aborted": false,
+        "upgrade": false,
+        "url": "/api/isa/userInfo",
+        "method": "POST",
+        "statusCode": null,
+        "statusMessage": null,
+        "client": "[internal]",
+        "_consuming": true,
+        "_dumped": false,
+        "baseUrl": "",
+        "originalUrl": "/api/isa/userInfo",
+        "_parsedUrl": {
+            "protocol": null,
+            "slashes": null,
+            "auth": null,
+            "host": null,
+            "port": null,
+            "hostname": null,
+            "hash": null,
+            "search": null,
+            "query": null,
+            "pathname": "/api/isa/userInfo",
+            "path": "/api/isa/userInfo",
+            "href": "/api/isa/userInfo",
+            "_raw": "/api/isa/userInfo"
+        },
+        "params": {},
+        "query": {},
+        "res": "[internal]",
+        "body": {
+            "userId": "vpiskovets"
+        },
+        "_body": true,
+        "_passport": {
+            "instance": {
+                "_key": "passport",
+                "_strategies": {
+                    "session": {
+                        "name": "session"
+                    },
+                    "bearer": {
+                        "name": "bearer",
+                        "_realm": "Users"
+                    },
+                    "oauth2-client-password": {
+                        "name": "oauth2-client-password"
+                    },
+                    "anon": {
+                        "name": "anon"
+                    },
+                    "tokens": {
+                        "name": "tokens"
+                    }
+                },
+                "_serializers": [],
+                "_deserializers": [],
+                "_infoTransformers": [],
+                "_framework": {},
+                "_userProperty": "user",
+                "_sm": {
+                    "_key": "passport"
+                },
+                "strategies": {}
+            }
+        },
+        "route": {
+            "path": "/api/isa/userInfo",
+            "stack": [
+                {
+                    "name": "cookieParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "httpMiddleware",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "corsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "metricsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "jsonParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "urlencodedParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "multipartParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "rawBodyParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                }
+            ],
+            "methods": {
+                "post": true
+            }
+        },
+        "cookies": {},
+        "signedCookies": {}
+    },
+    "res": {}
+}
+
+
+
+
+{
+    "statusCode": 200,
+    "re": {
+        "result": "ok",
+        "data": {
+            "user": "dstarzhynskyi@ukrgas.bank.local",
+            "login": true,
+            "message": ""
+        }
+    },
+    "in": {
+        "userId": "dstarzhynskyi",
+        "pass": "(,julfyf0"
+    }
+}
+
+
+{
+    "statusCode": 200,
+    "re": {
+        "result": "no",
+        "data": {
+            "user": "ysukiiasov@ukrgas.bank.local",
+            "login": false
+        }
+    },
+    "in": {
+        "userId": "ysukiiasov",
+        "pass": "******"
+    }
+}
+
+
+
+{
+    "_msgid": "cfb0cd7.8ca083",
+    "payload": {
+        "user": "istest@ukrgas.bank.local",
+        "login": true,
+        "message": ""
+    },
+    "in": {
+        "userId": "istest",
+        "pass": "~qwertyu8"
+    },
+    "req": {
+        "_readableState": {
+            "objectMode": false,
+            "highWaterMark": 16384,
+            "buffer": {
+                "head": null,
+                "tail": null,
+                "length": 0
+            },
+            "length": 0,
+            "pipes": null,
+            "pipesCount": 0,
+            "flowing": true,
+            "ended": true,
+            "endEmitted": true,
+            "reading": false,
+            "sync": false,
+            "needReadable": false,
+            "emittedReadable": false,
+            "readableListening": false,
+            "resumeScheduled": false,
+            "emitClose": true,
+            "autoDestroy": false,
+            "destroyed": false,
+            "defaultEncoding": "utf8",
+            "awaitDrainWriters": null,
+            "multiAwaitDrain": false,
+            "readingMore": false,
+            "decoder": null,
+            "encoding": null
+        },
+        "readable": false,
+        "_events": {},
+        "_eventsCount": 0,
+        "socket": "[internal]",
+        "connection": "[internal]",
+        "httpVersionMajor": 1,
+        "httpVersionMinor": 1,
+        "httpVersion": "1.1",
+        "complete": true,
+        "headers": {
+            "x-forwarded-for": "10.170.18.199",
+            "x-forwarded-proto": "https",
+            "x-forwarded-port": "443",
+            "host": "nr-clients.dev.ukrgasaws.com",
+            "x-amzn-trace-id": "Root=1-60e7e8da-78ef1c00413b108f52318e2c",
+            "content-length": "38",
+            "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "content-type": "application/json"
+        },
+        "rawHeaders": [
+            "X-Forwarded-For",
+            "10.170.18.199",
+            "X-Forwarded-Proto",
+            "https",
+            "X-Forwarded-Port",
+            "443",
+            "Host",
+            "nr-clients.dev.ukrgasaws.com",
+            "X-Amzn-Trace-Id",
+            "Root=1-60e7e8da-78ef1c00413b108f52318e2c",
+            "Content-Length",
+            "38",
+            "x-auth-token",
+            "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "Content-Type",
+            "application/json"
+        ],
+        "trailers": {},
+        "rawTrailers": [],
+        "aborted": false,
+        "upgrade": false,
+        "url": "/api/isa/checkCredentials",
+        "method": "POST",
+        "statusCode": null,
+        "statusMessage": null,
+        "client": "[internal]",
+        "_consuming": true,
+        "_dumped": false,
+        "baseUrl": "",
+        "originalUrl": "/api/isa/checkCredentials",
+        "_parsedUrl": {
+            "protocol": null,
+            "slashes": null,
+            "auth": null,
+            "host": null,
+            "port": null,
+            "hostname": null,
+            "hash": null,
+            "search": null,
+            "query": null,
+            "pathname": "/api/isa/checkCredentials",
+            "path": "/api/isa/checkCredentials",
+            "href": "/api/isa/checkCredentials",
+            "_raw": "/api/isa/checkCredentials"
+        },
+        "params": {},
+        "query": {},
+        "res": "[internal]",
+        "body": {
+            "userId": "istest",
+            "pass": "~qwertyu8"
+        },
+        "_body": true,
+        "_passport": {
+            "instance": {
+                "_key": "passport",
+                "_strategies": {
+                    "session": {
+                        "name": "session"
+                    },
+                    "bearer": {
+                        "name": "bearer",
+                        "_realm": "Users"
+                    },
+                    "oauth2-client-password": {
+                        "name": "oauth2-client-password"
+                    },
+                    "anon": {
+                        "name": "anon"
+                    },
+                    "tokens": {
+                        "name": "tokens"
+                    }
+                },
+                "_serializers": [],
+                "_deserializers": [],
+                "_infoTransformers": [],
+                "_framework": {},
+                "_userProperty": "user",
+                "_sm": {
+                    "_key": "passport"
+                },
+                "strategies": {}
+            }
+        },
+        "route": {
+            "path": "/api/isa/checkCredentials",
+            "stack": [
+                {
+                    "name": "cookieParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "httpMiddleware",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "corsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "metricsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "jsonParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "urlencodedParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "multipartParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "rawBodyParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                }
+            ],
+            "methods": {
+                "post": true
+            }
+        },
+        "cookies": {},
+        "signedCookies": {}
+    },
+    "res": {}
+}
+
+
+
+
+{
+    "_msgid": "cfb0cd7.8ca083",
+    "payload": {
+        "userId": "istest",
+        "pass": "~qwertyu8"
+    },
+    "req": {
+        "_readableState": {
+            "objectMode": false,
+            "highWaterMark": 16384,
+            "buffer": {
+                "head": null,
+                "tail": null,
+                "length": 0
+            },
+            "length": 0,
+            "pipes": null,
+            "pipesCount": 0,
+            "flowing": true,
+            "ended": true,
+            "endEmitted": true,
+            "reading": false,
+            "sync": false,
+            "needReadable": false,
+            "emittedReadable": false,
+            "readableListening": false,
+            "resumeScheduled": false,
+            "emitClose": true,
+            "autoDestroy": false,
+            "destroyed": false,
+            "defaultEncoding": "utf8",
+            "awaitDrainWriters": null,
+            "multiAwaitDrain": false,
+            "readingMore": false,
+            "decoder": null,
+            "encoding": null
+        },
+        "readable": false,
+        "_events": {},
+        "_eventsCount": 0,
+        "socket": "[internal]",
+        "connection": "[internal]",
+        "httpVersionMajor": 1,
+        "httpVersionMinor": 1,
+        "httpVersion": "1.1",
+        "complete": true,
+        "headers": {
+            "x-forwarded-for": "10.170.18.199",
+            "x-forwarded-proto": "https",
+            "x-forwarded-port": "443",
+            "host": "nr-clients.dev.ukrgasaws.com",
+            "x-amzn-trace-id": "Root=1-60e7e8da-78ef1c00413b108f52318e2c",
+            "content-length": "38",
+            "x-auth-token": "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "content-type": "application/json"
+        },
+        "rawHeaders": [
+            "X-Forwarded-For",
+            "10.170.18.199",
+            "X-Forwarded-Proto",
+            "https",
+            "X-Forwarded-Port",
+            "443",
+            "Host",
+            "nr-clients.dev.ukrgasaws.com",
+            "X-Amzn-Trace-Id",
+            "Root=1-60e7e8da-78ef1c00413b108f52318e2c",
+            "Content-Length",
+            "38",
+            "x-auth-token",
+            "PTzQlEIYZVslkOyzKh41cJCfJCSuhJJ8",
+            "Content-Type",
+            "application/json"
+        ],
+        "trailers": {},
+        "rawTrailers": [],
+        "aborted": false,
+        "upgrade": false,
+        "url": "/api/isa/checkCredentials",
+        "method": "POST",
+        "statusCode": null,
+        "statusMessage": null,
+        "client": "[internal]",
+        "_consuming": true,
+        "_dumped": false,
+        "baseUrl": "",
+        "originalUrl": "/api/isa/checkCredentials",
+        "_parsedUrl": {
+            "protocol": null,
+            "slashes": null,
+            "auth": null,
+            "host": null,
+            "port": null,
+            "hostname": null,
+            "hash": null,
+            "search": null,
+            "query": null,
+            "pathname": "/api/isa/checkCredentials",
+            "path": "/api/isa/checkCredentials",
+            "href": "/api/isa/checkCredentials",
+            "_raw": "/api/isa/checkCredentials"
+        },
+        "params": {},
+        "query": {},
+        "res": "[internal]",
+        "body": {
+            "userId": "istest",
+            "pass": "~qwertyu8"
+        },
+        "_body": true,
+        "_passport": {
+            "instance": {
+                "_key": "passport",
+                "_strategies": {
+                    "session": {
+                        "name": "session"
+                    },
+                    "bearer": {
+                        "name": "bearer",
+                        "_realm": "Users"
+                    },
+                    "oauth2-client-password": {
+                        "name": "oauth2-client-password"
+                    },
+                    "anon": {
+                        "name": "anon"
+                    },
+                    "tokens": {
+                        "name": "tokens"
+                    }
+                },
+                "_serializers": [],
+                "_deserializers": [],
+                "_infoTransformers": [],
+                "_framework": {},
+                "_userProperty": "user",
+                "_sm": {
+                    "_key": "passport"
+                },
+                "strategies": {}
+            }
+        },
+        "route": {
+            "path": "/api/isa/checkCredentials",
+            "stack": [
+                {
+                    "name": "cookieParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "httpMiddleware",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "corsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "metricsHandler",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "jsonParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "urlencodedParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "multipartParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "rawBodyParser",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                },
+                {
+                    "name": "<anonymous>",
+                    "keys": [],
+                    "regexp": {
+                        "fast_star": false,
+                        "fast_slash": false
+                    },
+                    "method": "post"
+                }
+            ],
+            "methods": {
+                "post": true
+            }
+        },
+        "cookies": {},
+        "signedCookies": {}
+    },
+    "res": {}
+}
+
+
+{
+    "statusCode": 200,
+    "re": {
+        "result": "ok",
+        "data": {
+            "user": "istest@ukrgas.bank.local",
+            "login": true,
+            "message": ""
+        }
+    },
+    "in": {
+        "userId": "istest",
+        "pass": "~qwertyu8"
+    }
+}

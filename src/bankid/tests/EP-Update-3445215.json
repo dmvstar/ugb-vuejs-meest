@@ -1,0 +1,27 @@
+{
+  "wbId": 3445215,
+  "person": {
+    "inn": "3364208276",
+    "type": "physical"
+  },
+  "extends": {
+    "workInfo": "ТОВ Кабанчик",
+    "codOblRee": "32",
+    "education": "2",
+    "socStatus": "1",
+    "wrkCodObl": "53",
+    "birthPlace": "Мінськ",
+    "codProduct": "11",
+    "limitWanted": "1000",
+    "monthAmount": "10000",
+    "wrkPosition": "1",
+    "birthCountry": "112",
+    "countofKeeps": "5",
+    "forTaxStatus": "0",
+    "maritalStatus": "1",
+    "ownFundAmount": "1",
+    "wrkExperience": "20"
+  },
+  "timestamp": "1625046385522",
+  "merchant_name": "easypay_test"
+}

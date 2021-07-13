@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <RegisterOperation xmlns="http://www.ukrgasbank.com">
+            <TransferId>49142303</TransferId>
+            <TransferNumber>12735938597</TransferNumber>
+            <SystemCode>ri</SystemCode>
+            <SystemName>RIA</SystemName>
+            <Operation>2</Operation>
+            <Type>1</Type>
+            <OperationDate>2021-07-12T09:51:13+03:00</OperationDate>
+            <PayoutDate>2021-07-12T09:50:57+03:00</PayoutDate>
+            <OperationCashDesk>0</OperationCashDesk>
+            <ABSDate>2021-07-12T00:00:00+03:00</ABSDate>
+            <TransferAmount>400.0000</TransferAmount>
+            <FromCountry>056</FromCountry>
+            <ToCountry>804</ToCountry>
+            <TransferСurrency>978</TransferСurrency>
+            <PointBank>1000142</PointBank>
+            <PointSW>GASB0003</PointSW>
+            <UserLogin>yukukushkina</UserLogin>
+            <UserName>Кукушкіна Юлія Сергіївна</UserName>
+            <UserID>5247</UserID>
+            <Sender>
+                <LastName>DOROFII</LastName>
+                <FirstName>VOLODYMYR</FirstName>
+                <Residency>false</Residency>
+                <DocumentName>PASSEPORT</DocumentName>
+                <DocumentNumber>1969062505874</DocumentNumber>
+                <DocumentIssuedBy>UA</DocumentIssuedBy>
+                <DateofBirth>1969-06-25</DateofBirth>
+                <Country>804</Country>
+                <State>BRU</State>
+                <City>EVERE</City>
+                <ZipCode>1140</ZipCode>
+                <Address>Belgium, 1140, BRU, EVERE, AVENUE DU RENOUVEAU 33</Address>
+            </Sender>
+            <Receiver>
+                <LastName>DOROFII</LastName>
+                <FirstName>IRYNA</FirstName>
+                <Residency>true</Residency>
+                <DocumentName>NATIONAL ID CARD</DocumentName>
+                <DocumentNumber>005966597</DocumentNumber>
+                <DocumentIssueDate>2021-04-12</DocumentIssueDate>
+                <DocumentIssuedBy>7118</DocumentIssuedBy>
+                <DateofBirth>1976-01-23</DateofBirth>
+            </Receiver>
+        </RegisterOperation>
+    </soap:Body>
+</soap:Envelope>
