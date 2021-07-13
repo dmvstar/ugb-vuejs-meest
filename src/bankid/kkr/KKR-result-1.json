@@ -1,0 +1,11 @@
+{
+    "statusCode": 200,
+    "payload": "request to create application processed successfully, applicationId=1001799"
+}
+
+{
+    "statusCode": 400,
+    "payload": "{\"status\":400,\"message\":\"client can not order application\",\"trace\":\"1dbfb480bf67176f\"}"
+}
+
+
